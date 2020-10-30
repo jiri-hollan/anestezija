@@ -1,0 +1,32 @@
+.mesecni {
+   
+  position: absolute;
+  left: 220px;
+  top: 5px;
+  
+
+}
+
+#tabela {
+position:relative;
+//float: left;
+left: 1px;
+width: 1000px; 
+height: 1000px;
+padding: 1px;
+}
+
+li:hover {
+  color: red;
+}
+
+li:active {
+   font-weight: bold;
+}
+
+
+#meseci {
+  position: fixed;
+  font-size: 2em;
+
+}
