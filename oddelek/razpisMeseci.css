@@ -8,12 +8,12 @@
 }
 
 #tabela {
-position:relative;
-//float: left;
-left: 1px;
-width: 1000px; 
-height: 1000px;
-padding: 1px;
+   position:relative;
+   //float: left;
+   left: 1px;
+   width: 1000px; 
+   height: 1000px;
+   padding: 1px;
 }
 
 li:hover {
@@ -29,4 +29,19 @@ li:active {
   position: fixed;
   font-size: 2em;
 
+}
+
+#buttonDomov {
+   border: none;
+  color: white;
+  background-color:red;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 0px;
+  cursor: pointer;
+    //outline: #4CAF50 solid 3px;
+border-radius: 12%;  
 }
