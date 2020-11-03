@@ -14,9 +14,10 @@ border-radius: 12%;
 }
 #navodilaId {
   position: fixed;
-  font-size: 2em;
-
+  font-size: 3em;
+  list-style-type: none;
 }
+
 
 a:hover {
   color: red;
