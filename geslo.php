@@ -6,8 +6,12 @@
 
 <?php
 
-if(isset($_GET['psw'])){
-   $geslo = $_POST["psw"];       
+if(isset($_POST['psw'])){
+	
+   $geslo = $_POST["psw"];
+        
+}else{
+	echo "geslo ni definirano";
 }
 
  if ($geslo == "bridion123") {
