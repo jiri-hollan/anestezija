@@ -10,14 +10,15 @@ if(isset($_POST['psw'])){
 	  $geslo = $_POST["psw"];        
 }else{
 	//echo "geslo ni definirano";
+$pojdi = 'menuFile.html';
 	}
 
  if ($geslo == "bridion@123?") {
 //sem pride peklop na razpored
-//include 'oddelek/razpisMeseci.php';
 $pojdi = 'oddelek/razpisMeseci.html';
 }else{
 //echo "napačno geslo: " . $geslo;
+$pojdi = 'menuFile.html';
 }
 
 ?>
