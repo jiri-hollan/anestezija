@@ -1,0 +1,17 @@
+#prijava {
+position: relative;
+height: 6cm;
+width: 10cm;
+background-color: wheat;
+padding: 40px;
+}
+
+#x {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+   background-color: yellow;
+   color: red; 
+   font-size: 2.0em;
+   width: 25px;
+}

@@ -1,0 +1,277 @@
+/* CSS za novPolnjenje.HTML*/
+
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center; 
+}
+
+input:required:invalid{
+  background-color: yellow;
+}
+#druga input:hover {
+  /*border: 3px solid #555;*/
+  background-color: LightYellow;
+}
+#druga input:focus {
+  border: 3px solid #555;
+  /*background-color: LightYellow;*/
+}
+fieldset {
+  padding: 20px 2px;
+  width:99%; 
+}
+
+fieldset.novBolnik  {
+   padding: 20px 20px;
+  width:500px; 
+  margin-top: 80px;
+  background-color: lightblue; 
+
+}
+fieldset.novBolnik legend {
+   background-color: navy;
+   color: yellow; 
+   font-size: 2.0em;
+}    
+
+fieldset.novBolnik label {
+  width:180px;
+  display: inline-block;
+  text-align: right;
+}
+
+fieldset.novBolnik input {
+
+ font-size: 20px;
+ padding: 5px 5px;
+ margin: 5px 5px;
+ box-sizing: border-box;
+ border: 3px solid #ccc;
+ webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+fieldset.novBolnik input:hover {
+  border: 3px solid #555;
+  background-color: LightYellow;
+}
+
+fieldset.zacetek  {
+  padding: 20px 2px;
+      
+}
+
+div.glavna {
+  position: relative;
+  margin-top: 50px;
+  padding: 0px 20px;
+  max-width:1000px; 
+  background-color: lightblue;  
+
+  
+}
+
+fieldset.zacetek  label  {
+  width:auto;
+  display: inline-block;
+  text-align: right;
+}
+
+
+fieldset.diagnoze {
+  padding: 1px 2px;    
+}
+
+fieldset.diagnoze  label  {
+  width:150px;
+  display: inline-block;
+  text-align: right;
+}
+
+fieldset.diagnoze  input  {
+  width:80%;
+
+}
+fieldset.meritve {
+  padding: 20px 2px;   
+}
+
+fieldset.meritve  label  {
+  width:auto;
+  display: inline-block;
+  text-align: right;   
+  padding: 1px 0px 1px 20px;
+}
+fieldset.meritve  input  {
+  width:50px; 
+}
+
+#lab {
+  position: relative;
+  padding: 20px 2px;  
+  height: 120px;  
+}
+
+#lab  label  {
+  width:100px;
+  display: inline-block;
+  text-align: right;   
+  padding: 1px 1px 1px 2px;
+}
+
+#lab  input  {
+  width:80px;
+}
+
+#stolpec1  {
+    position: absolute;
+    width:220px;  
+}
+
+#stolpec2  {
+  position: absolute;
+  left: 250px;
+  width:220px; 
+}
+#stolpec3  {
+  position: absolute;
+  left: 500px;
+  width:220px; 
+}
+#stolpec3  label  {
+  width:1px;
+  display: inline-block;
+  text-align: right;   
+  padding: 1px 1px 1px 1px;
+}
+#stolpec3   input  {
+  width:150px;
+}
+
+fieldset.ekg {
+  padding: 1px 2px;    
+}
+fieldset.ekg  label  {
+  width:50px;
+  display: inline-block;
+  text-align: right;
+}
+
+fieldset.ekg  input  {
+  width:90%;  
+}
+
+fieldset.alergija  {
+ padding: 20px 2px;  
+}
+  
+ 
+fieldset.alergija label {
+  width:auto;
+  display: inline-block;
+  text-align: left;    
+  /*padding: 1px 1px 1px 10px;*/
+ }
+ 
+fieldset.alergija #alergija {
+  width:700px;
+  display: inline-box;
+  text-align: left;   
+  /*padding: 1px 1px 1px 20px;*/
+ }
+ 
+ .kvadrat{
+  border: 1px solid black; 
+  padding-left:5px; 
+  padding-right:5px;
+ }
+ 
+fieldset.zaklucek  {
+  padding: 5px 2px;   
+}
+
+textarea.mala {
+  width: 100%;
+  height: 50px;
+
+    padding: 4px 2px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+textarea.mikro {
+  width: 60%;
+  height: 80x;
+  rows: 3;
+  padding: 4px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+textarea.velka {
+  width: 100%;
+  height: 200px;
+  padding: 4px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+#navodila {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+
+#sklep {
+width:95%;	
+}	
+
+#zaklucek {
+  position: relative;
+  top: 5px;
+  right: 2px;
+  
+}
+
+
+
+.navbar {
+  overflow: hidden;
+  background-color: blue;
+  position: fixed;
+  top: 0;
+  width:600px;
+  ​​z-index: 60;
+  
+}
+
+.navbar span {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar span:hover {
+  background: #ddd;
+  color: black;
+  max-width:1000px; 
+}
+
+
