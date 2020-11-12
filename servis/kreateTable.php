@@ -46,11 +46,11 @@ echo "<br>";
 
 <?php
 function naredi($ime) {
-
-$servername = "sh17.neoserv.si";
+include 'prijavniWeb.php';
+/*$servername = "sh17.neoserv.si";
 $username = "anestiz";
 $password = "laringoskop";
-$dbname = "anestiz_premedikacija";
+$dbname = "anestiz_premedikacija";*/
 $ime ;
 
 try {
