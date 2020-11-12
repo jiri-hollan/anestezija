@@ -65,11 +65,7 @@ class TableRows extends RecursiveIteratorIterator {
         echo "</tr>" . "\n";
     }
 }
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "premedikacija";
+include 'prijavniWeb.php';
 $ime ;
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

@@ -14,8 +14,6 @@ $name  = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
   $name = naredi($_POST["name"]);
-  
-
 }
 
 function test_input($data) {
@@ -38,19 +36,11 @@ function test_input($data) {
 <?php
 echo "<h2>Your Input:</h2>";
 echo "<br>";
-
-
 ?>
-
-
 
 <?php
 function naredi($ime) {
 include 'prijavniWeb.php';
-/*$servername = "sh17.neoserv.si";
-$username = "anestiz";
-$password = "laringoskop";
-$dbname = "anestiz_premedikacija";*/
 $ime ;
 
 try {
@@ -68,7 +58,7 @@ try {
 
     // use exec() because no results are returned
     $conn->exec($sql);
-    echo "Table" . " " . $ime . " created successfully";
+    echo "Tabela" . " " . $ime . " uspešno narejena";
     }
 catch(PDOException $e)
     {

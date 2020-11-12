@@ -7,9 +7,7 @@
 </head>
 <body>
 <?php
-$servername = "sh17.neoserv.si";
-$username = "anestiz";
-$password = "laringoskop";
+include 'prijavniWeb.php';
 $imeBase ="";
 
 try {

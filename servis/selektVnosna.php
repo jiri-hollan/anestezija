@@ -12,12 +12,7 @@
 <?php
 
 
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "premedikacija";
-
+include 'prijavniWeb.php';
 
 
 try {
@@ -25,7 +20,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  // $stmt = $conn->prepare("SELECT id, ime, priimek, datRojstva, stevMaticna,  FROM novbolniktab");
  // $stmt = $conn->prepare("SELECT *  FROM novbolniktab");
-	$stmt = $conn->prepare("SELECT id, ime, priimek, datRojstva, stevMaticna  FROM novbolniktab");
+	$stmt = $conn->prepare("SELECT id, ime, priimek, datRojstva, stevMaticna  FROM poskusna");
     $stmt->execute();
 	
 	/* Exercise PDOStatement::fetch styles   */

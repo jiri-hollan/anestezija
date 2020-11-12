@@ -61,10 +61,8 @@ echo $nameTable . "<br>" . $imeZdr . " " . $priimekZdr;
 
 
 function vstavi($nameTable,$imeZdr,$priimekZdr) {
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "premedikacija";
+	include 'prijavniWeb.php';
+
 $nameTable;
 $imeZdr;
 $priimekZdr;

@@ -62,11 +62,8 @@ echo $nameTable . "<br> " . $polja;
 
 <?php
 function naredi($imeTable,$polja) {
+include 'prijavniWeb.php';
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "premedikacija";
 
 
 try {
