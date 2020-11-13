@@ -8,16 +8,11 @@
 <body>
 <?php
 // define variables and set to empty values
-$ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
+$najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
 //$imeTable = 'novBolnikTab';
 $imeTable = 'bolnikTable';
 
-/*$polja = implode(',', array_keys($_POST));
-echo $polja . "1 "; */
-
-//$stolpci = array("id", "datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "Hb", "Ks", "INR", "aPTC", "trombociti", "kreatinin", "drugiIzvidi", "EKG", "RTG", "dgPridruzene", "terPredhodna", "ASA", "Mallapati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp, navodila", "status", "sklepNo", "sklep"); 
-
-$stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO","datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
+$stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
 
 
 

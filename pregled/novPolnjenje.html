@@ -30,13 +30,13 @@
     <label for="ime">Ime:</label>  
     <input id="ime" type="text" name="ime" pattern="[A-Za-zŽžšŠđĐćĆčČ]{1,}" required><br>    
     <label for="priimek">Priimek:</label>
-    <input id="priimek" type="text" name="priimek"​ pattern="[A-Za-z]{1,}" required><br>     
+    <input id="priimek" type="text" name="priimek" pattern="[A-Za-z]{1,}" required><br>     
     <label for="dan">Datum rojstva:</label>
     <input id="dan" type="text"   list="dnevi"  name="dan" size="1" maxlength="2"  onfocus="stevilkaFunction(32, 'dan', 'dnevi')"  onkeyup="starostFunction()" required > . 
     <datalist id="dnevi">
     <option value='dan Meseca'>
     </datalist>
-   <input id="mesec" type="text"   list="meseci"  name="mesec" size="1" maxlength="2"  onfocus="stevilkaFunction(13, 'mesec', 'meseci')"  onkeyup="starostFunction()" required > . 
+   <input id="mesec" type="text"   list="meseci"  name="mesec" size="1" maxlength="2"  onfocus="stevilkaFunction(13, 'mesec', 'meseci')"  onkeyup="starostFunction()" required >  
     <datalist id="meseci">
     <option value='mesec leta'>
     </datalist>
@@ -54,7 +54,7 @@
   <br>
 
   
-     <button ​ime = naprej style="background-color:blue; color:white;" onclick = "return osebniFunction()"><b>Naprej</b></button>
+     <button ime = naprej style="background-color:blue; color:white;" onclick = "return osebniFunction()"><b>Naprej</b></button>
 
 
            <!-- <p ime = naprej style="background-color:blue; color:white;" onclick = "return osebniFunction()"><b>Naprej</b></p>-->
@@ -146,7 +146,7 @@
 </div>
 <div id="stolpec3">
     Drugi izvidi<br>
-   <label for="x1"></label>  
+  <label for="x1"></label>  
     <input id="x1" type="text" name="x1" size="1" onkeyup= "drugiIzvidiFunction()" ><br>
    <label for="x2"></label>  
     <input id="x2" type="text" name="x2" size="1"onkeyup= "drugiIzvidiFunction()"  ><br>
@@ -157,6 +157,10 @@
    <label for="x5"></label>  
     <input id="x5" type="text" name="x5" size="1" onkeyup= "drugiIzvidiFunction()"><br>
 	<input id="drugiIzvidi" type="hidden" name="drugiIzvidi" readonly>
+	
+	
+	
+	
 </div>
  </fieldset>
 
@@ -216,7 +220,7 @@
  
 
 	
-  <!--<p> <button type="submit">Shrani</button>-->           
+  <p> <button type="submit">Shrani</button>        
      
 	  
   </p>	
