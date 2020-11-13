@@ -45,12 +45,12 @@ function test_input($data) {
   return $data;
 }
 
-function napolni($imeTable,$vnasanjePolja,$zaporednaId)
- {
-$servername = "localhost";
+function napolni($imeTable,$vnasanjePolja,$zaporednaId) {
+include '../servis/prijavniWeb.php';	
+/*$servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "premedikacija";
+$dbname = "premedikacija";*/
 
 
 try {

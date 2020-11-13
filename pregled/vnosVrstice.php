@@ -62,10 +62,11 @@ vstavi($imeTable, $vrednosti, $polja);
 
 
 function vstavi($imeTable,$c,$polja)  {
-$servername = "localhost";
+include '../servis/prijavniWeb.php';	
+/*$servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "premedikacija";
+$dbname = "premedikacija";*/
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
