@@ -43,6 +43,7 @@ $najdene = $najdene . '"' .  $_POST[$keys[$i]] . '"' .  ",";
 
 
 $vrednosti = rtrim($najdene,",");
+echo $najdene ;
 
 //$vrednosti = '"' . implode('","', $_POST) . '"';
 
@@ -63,7 +64,6 @@ vstavi($imeTable, $vrednosti, $polja);
 
 function vstavi($imeTable,$c,$polja)  {
 include '../servis/prijavniWeb.php';	
-/*$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "premedikacija";*/
