@@ -26,7 +26,7 @@ $polja = implode(',', $stolpci);
 //echo $polja . " ";
 
 // Looping through an array using for 
-echo "\nLooping using for: \n"; 
+echo "\nLOOPING array z uporabo for: \n"; 
 
 
 $keys = ($stolpci); 
