@@ -46,9 +46,7 @@ function test_input($data) {
 }
 
 include '../servis/prijavniWeb.php';	
-$username = "root";
-$password = "";
-$dbname = "premedikacija";*/
+
 
 
 try {
