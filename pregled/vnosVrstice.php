@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Novi bolnik</title>
+<script src="js/report.js"></script>
 </head>
 
 <body>
@@ -21,14 +22,14 @@ $polja = implode(',', $stolpci);
 //echo $polja . " ";
 
 // Looping through an array using for 
-echo "\nLOOPING array z uporabo for: \n"; 
+//echo "\nLOOPING array z uporabo for: \n"; 
 
 
 $keys = ($stolpci); 
 $round = count($stolpci);  
 for($i=0; $i < $round; ++$i) { 
 
-echo $keys[$i] . ' ' . $_POST[$keys[$i]] . "\n"; 
+//echo $keys[$i] . ' ' . $_POST[$keys[$i]] . "\n"; 
 $najdene = $najdene . '"' .  $_POST[$keys[$i]] . '"' .  ",";
 
 //$najdene = $najdene . array('"' .  $_POST[$keys[$i]] . '"' .  '","');
@@ -38,7 +39,7 @@ $najdene = $najdene . '"' .  $_POST[$keys[$i]] . '"' .  ",";
 
 
 $vrednosti = rtrim($najdene,",");
-echo $najdene ;
+//echo $najdene ;
 
 //$vrednosti = '"' . implode('","', $_POST) . '"';
 
@@ -63,14 +64,17 @@ include '../servis/prijavniWeb.php';
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDO::ERRMODE_EXCEPTION ERRMODE_SILENT
     $sql = "INSERT INTO " . $imeTable . " ($polja) VALUES ($c)";
     // (ime, priimek, datRojstva, stevMaticna, EMSO)
 	//echo $_SERVER["REQUEST_METHOD"];
 
     // use exec() because no results are returned
     $conn->exec($sql);
-    echo "New record created successfully";
+   echo "Vložena nova vrstica v podatkovno bazo";
+	//echo "<script>reportFunction('p')</script>";
+	//"reportFunction('p')"
+	//include ("novPolnjenje.html");
     }
     catch(PDOException $e)
     { 
