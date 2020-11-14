@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="UTF-8">
 <title>Novi bolnik</title>
-<script src="js/report.js"></script>
+<script src="js/vpis.js"></script>
 </head>
 
 <body>
@@ -72,9 +73,11 @@ try {
     // use exec() because no results are returned
     $conn->exec($sql);
    echo "Vložena nova vrstica v podatkovno bazo";
-	//echo "<script>reportFunction('p')</script>";
-	//"reportFunction('p')"
+	//echo "<script>naprejFunction</script>";
+
 	//include ("novPolnjenje.html");
+header('Location: novPolnjenje.html');
+ exit;
     }
     catch(PDOException $e)
     { 

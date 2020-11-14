@@ -23,7 +23,7 @@
  
 
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
-<form id="frm" method="post" action="vnosVrstice.php"> 
+<form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php"> 
 <fieldset class="novBolnik" id="prva">
     <legend>Nov bolnik</legend>
     <h2 id="lab6"> </h2>
@@ -219,10 +219,9 @@
   </fieldset>
  
 
-	
+	<p> <button type="submit"  onclick="naprejFunction()">Shrani</button> 
   <!--<p> <button type="submit">Shrani</button>  -->      
-     
-	  
+       
   </p>	
  </fieldset>	
 </div>
@@ -266,12 +265,15 @@
 	
  <div class="navbar" id="navbar" style='display:z-index:1;'>
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
-     <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>
+	 <span class="navSpan" id="novB" onclick="novBolnikFunction() ";>Nov bolnik</span>
+    <!-- <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>-->
      <span class="navSpan" id="nazaj" onclick="nazajFunction()">nazaj</span>
      <span class="navSpan" id="predogled" onclick="reportFunction('p')">predogled</span>
      <span class="navSpan" id="natisni" onclick="reportFunction('t')">natisni</span>     
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
-     <span class="navSpan" id="klous" onclick="klousFunction()">x</span>
+  <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->
+	
+	
  </div>	 
 
 </body>
