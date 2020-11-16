@@ -6,6 +6,7 @@
 <title></title>
 </head>
 <body>
+//odklop od strežnika
 <?php
 
 $conn = null;

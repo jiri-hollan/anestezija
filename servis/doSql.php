@@ -67,12 +67,12 @@ echo $kodaSql;
 
 
 function mojSql($kodaSql) {
-$servername = "localhost";
+/*$servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "premedikacija";
+$dbname = "premedikacija";*/
 
-
+include 'prijavniWeb.php';
 
 
 try {
