@@ -15,7 +15,7 @@ $name  = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
 
-   prikazi($_POST["name"]);
+   prikazi($name);
 }
 
 function test_input($data) {
