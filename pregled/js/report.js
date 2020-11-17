@@ -276,6 +276,7 @@ function nazajFunction() {
     document.getElementById("tretja").style.display = "none";
     document.getElementById("nazaj").style.visibility = "hidden";
     document.getElementById("predogled").style.visibility = "visible";
+	document.getElementById("submitFrm").style.visibility = "hidden";
 }
 
 function ogledFunction() {
@@ -286,6 +287,7 @@ function ogledFunction() {
   document.getElementById("tretja").style.display = "block";
   document.getElementById("predogled").style.visibility = "hidden";
   document.getElementById("nazaj").style.visibility = "visible";
+  document.getElementById("submitFrm").style.visibility = "visible";
 }
 
 function pomocFunction() {
