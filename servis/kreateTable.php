@@ -13,7 +13,7 @@ $name  = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
-  $name = naredi($_POST["name"]);
+  $name = naredi($name);
 }
 
 function test_input($data) {
