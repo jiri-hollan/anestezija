@@ -274,4 +274,14 @@ width:95%;
   max-width:1000px; 
 }
 
+#bolnikButon {
+background-color: red;
+  position: fixed;
+  top: 0px;
+  left: 600px; 
+  display: block;
+  visibility: visible;
+  
+}
+
 
