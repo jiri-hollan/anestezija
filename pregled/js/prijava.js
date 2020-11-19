@@ -21,14 +21,14 @@ function sbFunction(bol) {
 
 switch (bol) {
   case "i":
-    localStorage.setItem("aktivnaBolnica","sbIzola");
+    localStorage.setItem("aktivnaBolnica","logoSBI.png");
     text = localStorage.getItem("aktivnaBolnica");
-	alert (text);
+	alert ("Formular za S.B. Izola");
     break;
   case "j":
-    localStorage.setItem("aktivnaBolnica","sbJesenice");
+    localStorage.setItem("aktivnaBolnica","logoSBJ.png");
     text = localStorage.getItem("aktivnaBolnica");
-	alert (text);
+	alert ("Formular za S,B,Jesenice");
     break;
   default:
     text = "No value found";	

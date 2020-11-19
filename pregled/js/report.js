@@ -68,24 +68,22 @@ else if (x4 == "") {
      document.getElementById("tretja").style.display = "block";
 
 
-//preiskava = document.​forms["frm1"].fieldset["lab"]. ​getElementsByTagName("input")[0].name;
-//alert(preiskava);<img src="logoSBI.png" alt="logo SBI" width="200" height="100">
+  if (!localStorage.getItem("aktivnaBolnica") == "") {
 logo = document.getElementById("logo").innerHTML;
-alert (logo);
-boln = 'localStorage.getItem("aktivnaBolnica")';
-logo = '<img src=';
-logo = logo + '"' + boln + '"';
-logo = logo + '>';
+//alert (logo);
+boln = localStorage.getItem("aktivnaBolnica");
+//alert (boln);
 
-//logo = '<"img src=" + boln + ">" ';
-
-
-//logo = '<img src="' + boln + '" width="' + '200" height="' + '100">';
+logo = '<img  id="';
+logo = logo + 'imgBol"';
+logo = logo + '<img src="' + boln + '">';
 
 
-alert (logo);
-dokument.getdokumentById("logo")= logo;
-
+//logo = '<img src="logoSBI.png" alt="logo SBI" width="200" height="100">';
+//alert (logo);
+document.getElementById("logo").innerHTML = logo;
+  }
+  
 nalepka = document.getElementById("priimek").value;
 nalepka = "priimek in ime:.... " + "<b>" + nalepka + " " + document.getElementById("ime").value + "</b>" + "<br>";
 nalepka = nalepka + "datum rojstva:..... " +  "<b>" + datRojstva + "</b>" + "<br>" ;
@@ -272,7 +270,6 @@ else {
 return m;
 
 }
-
 function natisniFunction() {
   if (confirm("natisni! bolnik= " + document.title)){
   document.getElementById("navbar").style.display = "none"; 
