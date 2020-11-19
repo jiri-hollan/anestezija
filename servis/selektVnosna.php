@@ -18,25 +18,36 @@ include 'prijavniWeb.php';
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
- // $stmt = $conn->prepare("SELECT id, ime, priimek, datRojstva, stevMaticna,  FROM novbolniktab");
+ // $stmt = $conn->prepare("SELECT id, ime, priimek, datRojstva, stevMaticna,  FROM bolniktab");
  // $stmt = $conn->prepare("SELECT *  FROM novbolniktab");
-	$stmt = $conn->prepare("SELECT id, ime, priimek, datRojstva, stevMaticna  FROM poskusna");
+	$stmt = $conn->prepare("SELECT pregledId, ime, priimek, datRojstva, stevMaticna  FROM bolnikTable");
     $stmt->execute();
 	
 	/* Exercise PDOStatement::fetch styles   */
 
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-print_r($result);
-print("\n"); 
 
+/*print_r($result);
+print("\n"); 
+print "<br>";*/
 
    
-    foreach ($stmt as $row) {
-        print $row["ime"] . "-" . $row["priimek"] ."<br/>";
+ foreach ($stmt as $row) {
+       //print "<br>" . $row["ime"] . " " . $row["priimek"] ."<br/>";
+		echo "<br>" . $row["ime"] . " " . $row["priimek"] ."<br/>";
+		
     }
 
-extract($result);
-echo "\$ime = $ime; \$priimek = $priimek; \$stevMaticna = $stevMaticna";
+
+ /*foreach ($stmt as $row) {
+        print "<br>" . $row["priimek"] ."<br/>";
+    }*/
+
+
+/*extract($result);
+echo "\$ime = $ime \$priimek = $priimek \$stevMaticna = $stevMaticna";
+echo "<br>";
+echo "$ime $priimek  $stevMaticna";*/
 
 
  /* 
