@@ -1,6 +1,10 @@
 function odjavaFunction() { 
 	 localStorage.setItem("imeZdravnika", "");
-     window.open("zdravnik.html", "_self");             
+	 localStorage.setItem("aktivnaBolnica","");
+
+     window.open("zdravnik.html", "_self");
+	 //alert ("odjava");
+     sbFunction();	 
  }
 
 function klousFunction(){

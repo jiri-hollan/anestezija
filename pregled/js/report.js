@@ -69,7 +69,23 @@ else if (x4 == "") {
 
 
 //preiskava = document.​forms["frm1"].fieldset["lab"]. ​getElementsByTagName("input")[0].name;
-//alert(preiskava);
+//alert(preiskava);<img src="logoSBI.png" alt="logo SBI" width="200" height="100">
+logo = document.getElementById("logo").innerHTML;
+alert (logo);
+boln = 'localStorage.getItem("aktivnaBolnica")';
+logo = '<img src=';
+logo = logo + '"' + boln + '"';
+logo = logo + '>';
+
+//logo = '<"img src=" + boln + ">" ';
+
+
+//logo = '<img src="' + boln + '" width="' + '200" height="' + '100">';
+
+
+alert (logo);
+dokument.getdokumentById("logo")= logo;
+
 nalepka = document.getElementById("priimek").value;
 nalepka = "priimek in ime:.... " + "<b>" + nalepka + " " + document.getElementById("ime").value + "</b>" + "<br>";
 nalepka = nalepka + "datum rojstva:..... " +  "<b>" + datRojstva + "</b>" + "<br>" ;

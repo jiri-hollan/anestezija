@@ -4,10 +4,13 @@
 <meta charset="UTF-8">
 
 <head>
+<script src="js/prijava.js?<?php echo time(); ?>"></script> 
 <script src="js/odjava.js?<?php echo time(); ?>"></script>
 <link rel="stylesheet" type="text/css" href="css/zdravnik.css">
 </head>
+<!--<body onload "listaZdravnikovFunction()">-->
 <body>
+
 Če niste odprli program v Google Chromu, ne bo delal pravilno
 <!--[if IE]>
     <div class="IE" style="
@@ -24,25 +27,33 @@
 ">Ta brskalnik ni podprt. Uporabite Google Chrome</div>
 [endif]-->
 
-<div id="prijava">
+<div id="prijava" >
 <!--<span id="x" onclick="klousFunction()">X</span> v resnici ne zapira-->
+
 <h1>Prijava</h1>
-<label for="zdravnik">Zdravnik:</label> 
-<input id="zdravnik"  list="zdravniki" name="zdravnik" onfocusout="zdravnikFunction()" required> 
+
+<label for="zdravnik" >Zdravnik:</label> 
+
+<input id="zdravnik"  list="zdravniki" name="zdravnik"  onfocusout="zdravnikFunction()" required> 
+
   <datalist id="zdravniki">
+  
     <option value='ime zdravnika'>
     
   </datalist>
+
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
+
 <p id="result"> </p>
 
+  <script>listaZdravnikovFunction();</script>
 
-<script src="js/prijava.js"></script> 
 </div>
 <div class="navbar" id="navBolnice" style='display:z-index:1;'>
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
-	 <!-- Funkcija novBolnikFunction shrani formu u bazo in skoči na vpis novega bolnika -->
-	<!-- <span class="navSpan" id="novB" onclick="novBolnikFunction() ">Nov bolnik</span>-->
+	 <!-- Preklapljanje med bolnišnicami -->
+	<span class="navSpan" id="sbi" onclick="sbFunction('i')">S.B. Izola</span>
+	<span class="navSpan" id="sbj" onclick="sbFunction('j')">S.B. Jesenice</span>	
     <!-- <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>
      <span class="navSpan" id="nazaj" onclick="nazajFunction()">nazaj</span>
      <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>

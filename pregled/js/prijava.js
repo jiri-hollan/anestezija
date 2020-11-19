@@ -1,4 +1,4 @@
-document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
+//document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 function zdravnikFunction() {  
 // Check browser support
 if (typeof(Storage) !== "undefined") {
@@ -15,7 +15,30 @@ document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podp
    }
 }
 
+function sbFunction(bol) {
+	if (!bol=="") {
+	//var bol = "";
 
+switch (bol) {
+  case "i":
+    localStorage.setItem("aktivnaBolnica","sbIzola");
+    text = localStorage.getItem("aktivnaBolnica");
+	alert (text);
+    break;
+  case "j":
+    localStorage.setItem("aktivnaBolnica","sbJesenice");
+    text = localStorage.getItem("aktivnaBolnica");
+	alert (text);
+    break;
+  default:
+    text = "No value found";	
+	//alert (text);	
+    }
+}    
+else {
+	 // alert ("bolnica ni aktivirana");	
+	}
+}
 function naprejFunction() { 
  if (localStorage.getItem("imeZdravnika").length < 3) {
     alert("zdravnik ni prijavljen");
@@ -24,7 +47,9 @@ function naprejFunction() {
      window.open("novPolnjenje.html", "_self");             
 }
 
-
+function listaZdravnikovFunction() {
+	//alert ("lista zdravnikov function");
+document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
 var zdravList  =[
 "Nadežda&nbsp;Crnić&nbsp;Tokić",
@@ -52,3 +77,4 @@ for (i = 0; i < zdravList.length; i++) {
 }
 document.getElementById("zdravniki").innerHTML = text;
 
+}
