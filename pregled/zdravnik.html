@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 
 <head>
-<script src="js/odjava.js<?php echo time(); ?>"></script>
+<script src="js/odjava.js?<?php echo time(); ?>"></script>
 <link rel="stylesheet" type="text/css" href="css/zdravnik.css">
 </head>
 <body>
@@ -39,5 +39,23 @@
 
 <script src="js/prijava.js"></script> 
 </div>
+<div class="navbar" id="navBolnice" style='display:z-index:1;'>
+     <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
+	 <!-- Funkcija novBolnikFunction shrani formu u bazo in skoči na vpis novega bolnika -->
+	<!-- <span class="navSpan" id="novB" onclick="novBolnikFunction() ">Nov bolnik</span>-->
+    <!-- <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>
+     <span class="navSpan" id="nazaj" onclick="nazajFunction()">nazaj</span>
+     <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>
+     <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span>     
+     <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
+	 <span class="navspan" id="spanButon" <button type="submit" form="frm" value="Submit">Submit</button></span>
+	 <button id="submitFrm" type="submit" form="frm" value="Submit">Shrani</button>-->
+  <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->
+	
+	
+ </div>	 
+
+
+
 </body>
 </html>
