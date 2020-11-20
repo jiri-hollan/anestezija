@@ -18,6 +18,7 @@ padding: 40px;
 
 
 .navbar {
+	  float: left;
   overflow: hidden;
   background-color: blue;
   position: fixed;
@@ -43,5 +44,19 @@ padding: 40px;
   max-width:1000px; 
 }
 
-
-
+#buttonDomov {
+	
+  float: left;
+  border: none;
+  color: white;
+  background-color:red;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 0px;
+  cursor: pointer;
+    //outline: #4CAF50 solid 3px;
+border-radius: 12%;  
+}
