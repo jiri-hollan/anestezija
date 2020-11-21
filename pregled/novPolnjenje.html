@@ -24,7 +24,7 @@
  
 
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
-<form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php"> 
+<form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" autocomplete="off"> 
 <fieldset class="novBolnik" id="prva">
     <legend>Nov bolnik</legend>
     <h2 id="lab6"> </h2>
@@ -128,8 +128,7 @@
     <input id="trombociti" type="text" name="trombociti" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="kreatinin">Kreatinin:</label>  
     <input id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
-   <!--<label for="drugiIzvidi">Drugi izvidi:</label> 
-    <input id="drugiIzvidi" type="textarea" name="drugiIzvidi" size="50" ><br> -->
+   
 </div>
 <div id="stolpec2">
     <label for="laktat">laktat:</label>  
