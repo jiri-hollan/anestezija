@@ -14,15 +14,44 @@ var na = {min:136, max:145};
 var k = {min:3.8, max:5};
 
  function laborFunction(ime,vrednost)
-{
-  min = window[ime]["min"];
-  if(vrednost !="" && vrednost<min){
-    alert (ime + " je pod spodnjo mejo mormale");
-  }
-
+{	
   max = window[ime]["max"];
-  if(vrednost != "" && vrednost>max){
-   alert (ime + " je nad zgornjo mejo mormale");
-  }
+  min = window[ime]["min"];
+
+if(vrednost !="" && vrednost<min) {
+    //alert (ime + " je pod spodnjo mejo mormale");
+    pozorFunction(ime, 0);	
+	
+  } else if(vrednost != "" && vrednost>max) {
+     //alert (ime + " je nad zgornjo mejo mormale");
+     pozorFunction(ime, 1);	
+	 
+  } else {
+    pozorFunction(ime, 2);	
+ }
+
+}
+
+
+
+function pozorFunction(ime, x) { 
+   //alert (x);
+   
+switch (x) {
+  case 0:
+  document.getElementById(ime).style.color = "#ff0000"; 
+  document.getElementById(ime).style.fontWeight = "900";
+    break;
+	
+  case 1:
+  document.getElementById(ime).style.color = "Crimson"; 
+  document.getElementById(ime).style.fontWeight = "900";
+   break;
+   
+   default:
+    document.getElementById(ime).style.color = "";
+    document.getElementById(ime).style.fontWeight = "";
+    
+}
 
 }
