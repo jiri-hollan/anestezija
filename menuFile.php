@@ -12,7 +12,7 @@
 <ul>
   <li><a href="geslo.php">Razpored</a> </li>
   <li><a href="navodila/navodilaKovid.php">Navodila</a> </li>
-  <li><a href="pregled/zdravnik.PHP">Pregled</a> </li>
+  <li><a href="pregled/zdravnik.php">Pregled</a> </li>
   <!-- <a href="/python/">Python</a>-->
 </ul>
 </nav>
