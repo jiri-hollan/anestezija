@@ -47,7 +47,7 @@ if(isset($_POST['psw'])){
 
 
 echo $opozorilo;
-$pojdi = 'menuFile.php';
+//$pojdi = 'menuFile.php';
 	}
 
  if ($geslo == "bridion@123?") {
