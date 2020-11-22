@@ -2,7 +2,7 @@ function odjavaFunction() {
 	 localStorage.setItem("imeZdravnika", "");
 	 localStorage.setItem("aktivnaBolnica","");
 
-     window.open("zdravnik.html", "_self");
+     window.open("zdravnik.php", "_self");
 	 //alert ("odjava");
      sbFunction();	 
  }

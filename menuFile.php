@@ -10,9 +10,9 @@
 <body>
 <nav id= "glavnaNav">
 <ul>
-  <li><a href="geslo.html">Razpored</a> </li>
-  <li><a href="navodila/navodilaKovid.html">Navodila</a> </li>
-  <li><a href="pregled/zdravnik.html">Pregled</a> </li>
+  <li><a href="geslo.php">Razpored</a> </li>
+  <li><a href="navodila/navodilaKovid.php">Navodila</a> </li>
+  <li><a href="pregled/zdravnik.PHP">Pregled</a> </li>
   <!-- <a href="/python/">Python</a>-->
 </ul>
 </nav>

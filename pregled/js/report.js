@@ -311,6 +311,6 @@ function pomocFunction() {
 
 /*function odjavaFunction() { 
 	 localStorage.setItem("imeZdravnika", "");
-     window.open("zdravnik.html", "_self");             
+     window.open("zdravnik.php", "_self");             
 }*/
 
