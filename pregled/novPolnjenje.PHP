@@ -17,6 +17,7 @@
 <script src="js/prijava.js?<?php echo time(); ?>"></script>
 <link rel="stylesheet" type="text/css" href="css/novPolnjenje.css">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css">
+
 </head>
 
 <!-- <body onload="danesFunction()">  -->
