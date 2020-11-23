@@ -40,12 +40,12 @@ function pozorFunction(ime, x) {
 switch (x) {
   case 0:
   document.getElementById(ime).style.color = "#ff0000"; 
-  document.getElementById(ime).style.fontWeight = "900";
+  document.getElementById(ime).style.fontWeight = "bolder";
     break;
 	
   case 1:
   document.getElementById(ime).style.color = "Crimson"; 
-  document.getElementById(ime).style.fontWeight = "900";
+  document.getElementById(ime).style.fontWeight = "bold";
    break;
    
    default:
