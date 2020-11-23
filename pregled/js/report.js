@@ -141,13 +141,15 @@ document.getElementById("meritveR").innerHTML=meritve;
 //........laboratorij...................................................................................
 var text = "Lab.: ";
 var i;
+var videz;
 var lab = document.getElementById("lab").getElementsByTagName("label");
 var vred =document.getElementById("lab").getElementsByTagName("input"); 
 for (i = 0; i < lab.length; i++) 
 {  
 if (vred[i].value.length > 0)
    {
-   text += lab[i].innerHTML + vred[i].value + "," + "&nbsp" + " ";
+	var videz = vred[i].style.fontWeight;	   
+   text += '<span style= "font-weight:' + videz + '">' + lab[i].innerHTML + vred[i].value + "</span>," + "&nbsp" + " ";
    }
 }
 document.getElementById("labR").innerHTML = text;
