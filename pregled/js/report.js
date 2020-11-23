@@ -141,6 +141,7 @@ document.getElementById("meritveR").innerHTML=meritve;
 //........laboratorij...................................................................................
 var text = "Lab.: ";
 var i;
+var videz;
 var lab = document.getElementById("lab").getElementsByTagName("label");
 var vred =document.getElementById("lab").getElementsByTagName("input"); 
 for (i = 0; i < lab.length; i++) 
