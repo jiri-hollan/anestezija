@@ -88,7 +88,7 @@
     <option value="RTG">
   </datalist>
   
-  <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika" readonly></label>
+  <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika" readonly tabindex="-1"></label>
     <br> 
  </fieldset>
 
@@ -106,10 +106,10 @@
 
   <fieldset class="meritve">
     <legend></legend>	
-    <label for="starost">Starost:<input  id="starost" type="text" name="starost" size="1" readonly></label>      
+    <label for="starost">Starost:<input  id="starost" type="text" name="starost" size="1" readonly tabindex="-1"></label>      
     <label for = "teza">Teža:<input id = "teza" type = "text" name = "teza" onkeyup="bmiFunction()" required>kg</label>
     <label for = "visina">Višina:<input id = "visina" type = "text" name = "visina" size="1" onkeyup="bmiFunction()" required>m</label> 
-    <label for = "bmi">BMI: <input id = "bmi" type = "text" name = "bmi" id = "bmi" onclick = "bmiFunction()" readonly></label>  
+    <label for = "bmi">BMI: <input id = "bmi" type = "text" name = "bmi" id = "bmi" onclick = "bmiFunction()" readonly tabindex="-1"></label>  
     <label for = "krvniTlak">Krvni Tlak:<input id = "krTlak" type="text" name="krvniTlak" size="1" ></label>    
     <label for = "pulz">Pulz:<input id = "pulz" type="text" name="pulz" size="1" ></label>  
     <br> 
