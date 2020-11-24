@@ -838,3 +838,17 @@
 [05-Nov-2020 11:48:22 Europe/Ljubljana] PHP Parse error:  syntax error, unexpected '+', expecting '[' in /home/anestiz/public_html/geslo.php on line 14
 [05-Nov-2020 11:48:25 Europe/Ljubljana] PHP Parse error:  syntax error, unexpected '+', expecting '[' in /home/anestiz/public_html/geslo.php on line 14
 [05-Nov-2020 12:06:24 Europe/Ljubljana] PHP Parse error:  syntax error, unexpected '&' in /home/anestiz/public_html/geslo.php on line 20
+[22-Nov-2020 18:46:51 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[22-Nov-2020 18:46:53 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[22-Nov-2020 18:46:54 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[22-Nov-2020 18:47:11 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[22-Nov-2020 19:34:12 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[22-Nov-2020 19:34:25 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[23-Nov-2020 09:39:20 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[23-Nov-2020 09:39:39 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[23-Nov-2020 09:44:37 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[23-Nov-2020 09:44:49 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[23-Nov-2020 09:45:37 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[23-Nov-2020 09:46:41 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[23-Nov-2020 11:25:13 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
+[23-Nov-2020 11:25:24 Europe/Ljubljana] PHP Notice:  Undefined index: pojdi in /home/anestiz/public_html/geslo.php on line 68
