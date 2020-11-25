@@ -52,7 +52,7 @@ function naprejFunction() {
 function listaZdravnikovFunction() {
 	//alert ("lista zdravnikov function");
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-
+document.getElementById("aktBolnica").innerHTML = "Za:  " + localStorage.getItem("aktivnaBolnica");
     text = localStorage.getItem("aktivnaBolnica");
 	//alert("lista zdravnikov " + text);
 switch (text) {

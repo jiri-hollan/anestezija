@@ -14,7 +14,7 @@ ZA DOLOČITEV BOLNIŠNICE JE POTREBNO VPISATI PARAMETR FUNKCIJE sbFunction ZA IZ
 oziroma to določi izbira NAV bara, če je ta aktivirana
 ________________________________________________________________________________________________________________________
 -->
-<br><br><br>
+
 <script>sbFunction()</script>
 <!--<script>sbFunction('i')</script>-->
 Če niste odprli program v Google Chromu, ne bo delal pravilno
@@ -44,6 +44,7 @@ ________________________________________________________________________________
   </datalist>
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
 <p id="result"> </p>
+<p id="aktBolnica">.</p>
   <script>listaZdravnikovFunction();</script>
 
 </div>
