@@ -23,12 +23,14 @@ switch (bol) {
   case "i":
     localStorage.setItem("aktivnaBolnica","SBI");
     text = localStorage.getItem("aktivnaBolnica");
-	alert ("Formular za S.B. Izola");
+	//alert ("Formular za S.B. Izola");
+	location.reload();
     break;
   case "j":
     localStorage.setItem("aktivnaBolnica","SBJ");
     text = localStorage.getItem("aktivnaBolnica");
-	alert ("Formular za S,B,Jesenice");
+	//alert ("Formular za S,B,Jesenice");
+	location.reload();
     break;
   default:
     text = "No value found";	
@@ -41,7 +43,7 @@ else {
 }
 function naprejFunction() { 
  if (localStorage.getItem("imeZdravnika").length < 3) {
-    alert("zdravnik ni prijavljen");
+    //alert("zdravnik ni prijavljen");
     return false;
   }
      window.open("novPolnjenje.html", "_self");             
@@ -52,7 +54,7 @@ function listaZdravnikovFunction() {
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
     text = localStorage.getItem("aktivnaBolnica");
-	//alert(text);
+	//alert("lista zdravnikov " + text);
 switch (text) {
    case "SBI":	
 var zdravList  =[
@@ -80,7 +82,8 @@ var zdravList  =[
 	default:
     var zdravList  =[
 	
-	];	
+	];
+	//alert ("bolnišnica ni določena");
 }
 
 var text = "";

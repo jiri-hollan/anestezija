@@ -9,7 +9,14 @@
 <link rel="stylesheet" type="text/css" href="css/zdravnik.css?<?php echo time(); ?>">
 </head>
 <body>
-
+<!--_____________________________________________________________________________________________________________________
+ZA DOLOČITEV BOLNIŠNICE JE POTREBNO VPISATI PARAMETR FUNKCIJE sbFunction ZA IZOLO "i" ZA JESENICE "j"
+oziroma to določi izbira NAV bara, če je ta aktivirana
+________________________________________________________________________________________________________________________
+-->
+<br><br><br>
+<script>sbFunction()</script>
+<!--<script>sbFunction('i')</script>-->
 Če niste odprli program v Google Chromu, ne bo delal pravilno
 <!--[if IE]>
     <div class="IE" style="
