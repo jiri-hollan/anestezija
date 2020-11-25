@@ -21,12 +21,12 @@ function sbFunction(bol) {
 
 switch (bol) {
   case "i":
-    localStorage.setItem("aktivnaBolnica","SBI");
+    localStorage.setItem("aktivnaBolnica","logoSBI.png");
     text = localStorage.getItem("aktivnaBolnica");
 	alert ("Formular za S.B. Izola");
     break;
   case "j":
-    localStorage.setItem("aktivnaBolnica","SBJ");
+    localStorage.setItem("aktivnaBolnica","logoSBJ.png");
     text = localStorage.getItem("aktivnaBolnica");
 	alert ("Formular za S,B,Jesenice");
     break;
@@ -36,7 +36,7 @@ switch (bol) {
     }
 }    
 else {
-	 // alert ("nobena bolnišnica ni aktivirana");	
+	 // alert ("bolnica ni aktivirana");	
 	}
 }
 function naprejFunction() { 
@@ -51,10 +51,6 @@ function listaZdravnikovFunction() {
 	//alert ("lista zdravnikov function");
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
-    text = localStorage.getItem("aktivnaBolnica");
-	//alert(text);
-switch (text) {
-   case "SBI":	
 var zdravList  =[
 "Nadežda&nbsp;Crnić&nbsp;Tokić",
 "Damjan&nbsp;Polh",
@@ -71,18 +67,6 @@ var zdravList  =[
 "David&nbsp;Hrvatin",
 "Jiří&nbsp;Hollan",
 ];
-       break;
-    case "SBJ":
-	var zdravList  =[
-	"Hana&nbsp;Hollan",
-	];
-	   break;
-	default:
-    var zdravList  =[
-	
-	];	
-}
-
 var text = "";
 var naslov="&nbsp;dr.med";
 var i;

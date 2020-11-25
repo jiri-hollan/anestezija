@@ -233,7 +233,7 @@
 ...........................Tretji del TISK................................-->
 
 <div class="celaStran" id="tretja">
-  <div id="logo"><img  id="imgBol" src=""></div>
+  <div id="logo"><img  id="imgBol" src="logoSBI.png"></div>
   
  <!-- <div id="logo"><img  id="imgBol" src="logoSBI.png" alt="logo SBI" width="200" height="100"></div> -->
 <!-- <div id="logo"><img id="imgBol" src="logoSBj.png" alt="logo SBI" width="200" height="100"></div>-->
