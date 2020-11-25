@@ -76,7 +76,7 @@ boln = localStorage.getItem("aktivnaBolnica");
 
 logo = '<img  id="';
 logo = logo + 'imgBol"';
-logo = logo + '<img src="' + boln + '">';
+logo = logo + '<img src="logo' + boln + '.png">';
 
 
 //logo = '<img src="logoSBI.png" alt="logo SBI" width="200" height="100">';
