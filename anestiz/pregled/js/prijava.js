@@ -52,8 +52,9 @@ function naprejFunction() {
 function listaZdravnikovFunction() {
 	//alert ("lista zdravnikov function");
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-document.getElementById("aktBolnica").innerHTML = "Za:  " + localStorage.getItem("aktivnaBolnica");
-    text = localStorage.getItem("aktivnaBolnica");
+//document.getElementById("aktBolnica").innerHTML = "Za:  " + localStorage.getItem("aktivnaBolnica");
+
+    text = localStorage.getItem("aktivnaBolnica");	
 	//alert("lista zdravnikov " + text);
 switch (text) {
    case "SBI":	
@@ -73,17 +74,18 @@ var zdravList  =[
 "David&nbsp;Hrvatin",
 "Jiří&nbsp;Hollan",
 ];
+document.getElementById("aktBolnica").innerHTML = "S.B.Izola "; 
        break;
     case "SBJ":
 	var zdravList  =[
 	"Hana&nbsp;Hollan",
 	"Vladimir&nbsp;Jurekovič",
 	];
+document.getElementById("aktBolnica").innerHTML = "S.B.Jesenice "; 	
 	   break;
 	default:
-    var zdravList  =[
-	
-	];
+    var zdravList  =[];
+document.getElementById("aktBolnica").innerHTML = "Bolnišnica ni določena"; 	
 	//alert ("bolnišnica ni določena");
 }
 

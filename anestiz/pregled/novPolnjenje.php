@@ -279,7 +279,10 @@
      <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span>     
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
 	<!-- <span class="navspan" id="spanButon" <button type="submit" form="frm" value="Submit">Submit</button></span>-->
-	 <button id="submitFrm" type="submit" form="frm" value="Submit">Shrani</button>
+	<!-- ________________________________________________________________________________________
+	     dokler ni databaze, ostane "submitForm" zakomentiran
+	    __________________________________________________________________________________________
+	 <button id="submitFrm" type="submit" form="frm" value="Submit">Shrani</button>-->
   <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->
 	
 	
