@@ -77,6 +77,7 @@ var zdravList  =[
     case "SBJ":
 	var zdravList  =[
 	"Hana&nbsp;Hollan",
+	"Vladimir&nbsp;Jurekovič",
 	];
 	   break;
 	default:
