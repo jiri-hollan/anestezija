@@ -73,20 +73,21 @@ var zdravList  =[
 "David&nbsp;Hrvatin",
 "Jiří&nbsp;Hollan",
 ];
-document.getElementById("aktBolnica").innerHTML = "S.B.<b>Izola</b> "; 
+document.getElementById("aktBolnica").innerHTML = "S.B.<h1>Izola</h1> "; 
        break;
     case "SBJ":
 	var zdravList  =[
 	"Hana&nbsp;Hollan",
 	"Vladimir&nbsp;Jurekovič",
 	];
-document.getElementById("aktBolnica").innerHTML = "S.B.<b>Jesenice</b> "; 	
+document.getElementById("aktBolnica").innerHTML = "S.B.<h1>Jesenice</h1> "; 	
 	   break;
 	default:
     var zdravList  =[
 	
 	];
 	//alert ("bolnišnica ni določena");
+ document.getElementById("aktBolnica").innerHTML = "Bolnišnica ni določena" ;  
 }
 
 var text = "";
