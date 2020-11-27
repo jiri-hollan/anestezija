@@ -74,14 +74,14 @@ var zdravList  =[
 "David&nbsp;Hrvatin",
 "Jiří&nbsp;Hollan",
 ];
-document.getElementById("aktBolnica").innerHTML = "S.B.Izola "; 
+document.getElementById("aktBolnica").innerHTML = "S.B.<b>Izola</b> "; 
        break;
     case "SBJ":
 	var zdravList  =[
 	"Hana&nbsp;Hollan",
 	"Vladimir&nbsp;Jurekovič",
 	];
-document.getElementById("aktBolnica").innerHTML = "S.B.Jesenice "; 	
+document.getElementById("aktBolnica").innerHTML = "S.B.<b>Jesenice</b> "; 	
 	   break;
 	default:
     var zdravList  =[];
