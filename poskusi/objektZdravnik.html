@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="sem"></p>
+<script>
+
+var zdravnik0 = {
+   ime: "Mara",
+   priimek: "Škoti",
+   priimek1: "Bončina",
+   celoIme: function() {
+     return this.ime + " " + this.priimek + " " + this.priimek1;
+   }
+};
+
+var zdravnik1 = {
+   ime: "Tea",
+   priimek: "Priman",
+   priimek1: "",
+   celoIme: function() {
+     return this.ime + " " + this.priimek + " " + this.priimek1;
+   }
+};
+
+document.getElementById("sem").innerHTML = zdravnik0.celoIme() + "<br>" +
+zdravnik1.celoIme();
+</script>
+</body>
+</html>

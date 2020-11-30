@@ -4,15 +4,16 @@
 <p id="sem"></p>
 <script>
 class Bolnica {
-constructor(ime, oznaka) {
+constructor(ime, oznaka,zdravniki) {
     this.ime = ime;
     this.oznaka = oznaka;
+	this.zdravniki = zdravniki;
   }
 
 }
 
-izola = new Bolnica("S.B.Izola", "sbi");
-jesenice = new Bolnica("S.B.Jesenice", "sbj");
+izola = new Bolnica("S.B.Izola", "sbi", {ime:"Alja"});
+jesenice = new Bolnica("S.B.Jesenice", "sbj", {ime:"Hana"});
 document.getElementById("sem").innerHTML =
 "bolnica je: " + izola.ime ;
 
