@@ -65,7 +65,7 @@ header('Location: menuFile.php');
 
  
 	<!-- <script>		  
-   window.location.assign("<?php echo $GLOBALS ['pojdi'] ?>");
+   window.location.assign("<?php //echo $GLOBALS ['pojdi'] ?>");
 	</script> -->
 
 </body>

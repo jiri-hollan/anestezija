@@ -13,6 +13,8 @@
 <li><a href= "../besedila/hitriTest.pdf" >SARS hitri test</a></li>
 <li><a href="../besedila/diagramTest.pdf" >Diagram hitri testi</a></li>
 <li><a href="../besedila/diagramHitriTestiUci.pdf" >Hitri testi UCI</a></li>
+<li><a href="../besedila/algoritemKirurgijaElektiva.pdf" >Algoritem kirurgija elektiva</a></li>
+
 <!--<li onclick="myFunction('marec')">Marec
 <li  onclick="myFunction('april')">April
 <li onclick="myFunction('maj')">Maj
