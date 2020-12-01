@@ -3,20 +3,34 @@
 <body>
 <p id="sem"></p>
 <script>
-class Bolnica {
-constructor(ime, oznaka,zdravniki) {
-    this.ime = ime;
-    this.oznaka = oznaka;
-	this.zdravniki = zdravniki;
-  }
+var bolnica0 = {
+   imeB : "S.B.Izola",
+   oznakaB : "sbi",
+   
+      zdravnik0 : {
+   ime: "Mara",
+   priimek: "Škoti",
+   priimek1: "Bončina",
+   celoIme: function() {
+     return this.ime + " " + this.priimek + " " + this.priimek1;
+   }
+}, 
 
+      zdravnik1 : {
+   ime: "Tea",
+   priimek: "Priman",
+   priimek1: "",
+   celoIme: function() {
+     return this.ime + " " + this.priimek + " " + this.priimek1;
+   }
 }
-
-izola = new Bolnica("S.B.Izola", "sbi", {ime:"Alja"});
-jesenice = new Bolnica("S.B.Jesenice", "sbj", {ime:"Hana"});
-document.getElementById("sem").innerHTML =
-"bolnica je: " + izola.ime ;
-
+}
+var bolnica1 = {
+   imeB : "S.B.Jesenice",
+   oznakaB : "sbj"
+}
+document.getElementById("sem").innerHTML = bolnica0.imeB + ": " + bolnica0.zdravnik0.celoIme() + bolnica0.zdravnik1.celoIme() + "<br>" +
+bolnica1.imeB;
 </script>
 </body>
 </html>
