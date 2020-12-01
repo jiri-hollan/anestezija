@@ -11,18 +11,18 @@
 
 <a id="buttonDomov" href="../menuFile.php" >Domov</a>
 <ul id= "meseci">
-<li onclick="myFunction('januar')">Januar</li>
-<li  onclick="myFunction('februar')">Februar
-<li onclick="myFunction('marec')">Marec
-<li  onclick="myFunction('april')">April
-<li onclick="myFunction('maj')">Maj
-<li  onclick="myFunction('junij')">Junij
-<li onclick="myFunction('julij')">Julij
-<li  onclick="myFunction('avgust')">Avgust
-<li onclick="myFunction('september')">September
-<li  onclick="myFunction('oktober')">Oktober
-<li onclick="myFunction('november')">November
-<li  onclick="myFunction('december')">December
+<li onclick="myFunction('januar', 'raz')">Januar</li>
+<li  onclick="myFunction('februar', 'raz')">Februar
+<li onclick="myFunction('marec', 'raz')">Marec
+<li  onclick="myFunction('april', 'raz')">April
+<li onclick="myFunction('maj', 'raz')">Maj
+<li  onclick="myFunction('junij', 'raz')">Junij
+<li onclick="myFunction('julij', 'raz')">Julij
+<li  onclick="myFunction('avgust', 'raz')">Avgust
+<li onclick="myFunction('september', 'raz')">September
+<li  onclick="myFunction('oktober', 'raz')">Oktober
+<li onclick="myFunction('november', 'raz')">November
+<li  onclick="myFunction('december', 'raz')">December
 
 </ul>
 
