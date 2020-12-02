@@ -2,9 +2,11 @@
    
   position: absolute;
   left: 220px;
-  top: 5px;
-  
+  top: 5px; 
+}
 
+#dezurstva {
+  background-color: lightblue;
 }
 
 #tabela {

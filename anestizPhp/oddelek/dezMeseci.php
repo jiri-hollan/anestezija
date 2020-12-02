@@ -7,7 +7,7 @@
 <script src="js/razpisMeseci.js?<?php echo time(); ?>"></script> 
 <link rel="stylesheet" href="../css/razpisMeseci.css">
 </head>
-<body>
+<body id="dezurstva">
 
 <a id="buttonDomov" href="../menuFile.php" >Domov</a>
 <ul id= "meseci">
