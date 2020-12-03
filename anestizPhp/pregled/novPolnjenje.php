@@ -56,7 +56,7 @@
   <br>
 
   
-     <button ime = naprej style="background-color:blue; color:white;" onclick = "return osebniFunction()"><b>Naprej</b></button>
+     <button class="naprej" id="naprej" ime = naprej  onclick = "return osebniFunction()"><b>Naprej</b></button>
 
 
            <!-- <p ime = naprej style="background-color:blue; color:white;" onclick = "return osebniFunction()"><b>Naprej</b></p>-->
