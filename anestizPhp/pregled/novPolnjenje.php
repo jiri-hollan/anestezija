@@ -15,8 +15,8 @@
 <script src="js/evaluacija.js?<?php echo time(); ?>"></script>
 <script src="js/drugiIzvidi.js?<?php echo time(); ?>"></script>
 <script src="js/prijava.js?<?php echo time(); ?>"></script>
-<link rel="stylesheet" type="text/css" href="css/novPolnjenje.css">
-<link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css">
+<link rel="stylesheet" type="text/css" href="css/novPolnjenje.css?<?php echo time(); ?>">
+<link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css?<?php echo time(); ?>">
 
 </head>
 

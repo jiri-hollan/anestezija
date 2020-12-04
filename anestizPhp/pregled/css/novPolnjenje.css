@@ -60,19 +60,19 @@ fieldset.novBolnik input:hover {
   border: 3px solid #555;
   background-color: LightYellow;
 }
+
 #naprej  {
 width: 100%;
 padding: 25px 0px;
 background-color:blue; 
 color:white;
 }
+
 #naprej:hover  {
 background-color:SlateBlue; 
 color:red;
 font-size: 1.5em;
 }
-
-
 
 fieldset.zacetek  {
   padding: 20px 2px;
