@@ -4,7 +4,7 @@
 
 <?php
 
-echo "Naložen bo: " . $_POST["meseci"]. "<br>";
+echo "<h2>Tarčna datoteka: " . $_POST["meseci"]. "</h2><br>";
 $target_dir = "../mesPdf/";
 $target_fileIme = $_POST["meseci"];
 $target_file = $target_dir . $target_fileIme;
@@ -16,7 +16,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if file already exists
 if (file_exists($target_file)) {
 
-echo $target_file . " že obstaja.<br> ";
+echo "<h2>" . $target_file . " že obstaja.</h2><br> ";
    if (!empty($_POST["obstojeca"] )){
 	   $uploadOk = $_POST["obstojeca"] ;
 	
@@ -27,7 +27,7 @@ echo $target_file . " že obstaja.<br> ";
 
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000) {
-  echo "Sorry, your file is too large.";
+  echo "<h2>Sorry, your file is too large.</h2>";
   $uploadOk = 0;
 }
 
@@ -45,13 +45,13 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
                 }} //this bracket was missing I think
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-  echo "Sorry, your file was not uploaded.";
+  echo "<h1>Sorry, your file was not uploaded.</h1>";
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded as: " . $target_fileIme;
+    echo "<h1>The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " je bila naložena kot: " . $target_fileIme . "</h1>";
   } else {
-    echo "Sorry, there was an error uploading your file.";
+    echo "<h1>Sorry, there was an error uploading your file.</h1>";
   }
 }
 ?>

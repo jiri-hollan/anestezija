@@ -10,7 +10,7 @@
  <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-              <li class=""><a href="dezurstva/upload/formUpload.html">naložiFajl</a></li>
+              <li class=""><a href="dezurstva/upload/formUpload.html"><h1>naložiFajl</h1></a></li>
               
           </ul>
         </section>
