@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="sl-SI">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
 
 <?php
 
 echo "<h2>Tarčna datoteka: " . $_POST["meseci"]. "</h2><br>";
-$target_dir = "../../oddelek/dezurstva/mesPdf/";
+//$target_dir = "../../oddelek/dezurstva/mesPdf/";
+$target_dir = $_POST["direktorij"];
 $target_fileIme = $_POST["meseci"];
 $target_file = $target_dir . $target_fileIme;
 //$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
