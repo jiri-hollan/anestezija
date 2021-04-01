@@ -10,7 +10,11 @@
 
 
 <h1><form action="upload.php" method="post" enctype="multipart/form-data">
-    <input type="text" name="direktorij" value="../../oddelek/dezurstva/mesPdf/" required><br>
+
+	<?php
+	//"$_GETrazpored" določi, kam se pdf naloži
+	echo '<input type="text" name="direktorij" value="' . $_GET["razpored"] . '" required><br>';
+	?>
 <label for="meseci">Izberi mesec:</label>
   <select id="meseci" name="meseci" required>
     <option value=""></option>

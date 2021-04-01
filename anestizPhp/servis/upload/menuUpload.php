@@ -11,8 +11,8 @@
  <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-              <li class=""><a href="formUpload.html"><h1>naloži dežurstva</h1></a></li>
-              <li class=""><a href="formUpload1.html"><h1>naloži predstojnikov razpis</h1></a></li>             
+              <li class=""><a href="formUpload.php?razpored=../../oddelek/dezurstva/mesPdf/"><h1>naloži dežurstva</h1></a></li>
+              <li class=""><a href="formUpload.php?razpored=../../oddelek/razpis/mesPdf/"><h1>naloži predstojnikov razpis</h1></a></li>       
           </ul>
         </section>
 </body>
