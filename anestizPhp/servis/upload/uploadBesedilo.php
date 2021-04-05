@@ -8,13 +8,17 @@
 <body>
 
 <?php
-echo "<h2>Naslov prispevka: " . $_POST["besediloNaslov"]. "</h2><br>";
-//$target_dir = "../../besedila/";
-$target_dir = $_POST["direktorij"];
+$nalozi['naslov'] = $_POST["besediloNaslov"];
+$nalozi['direktorij'] = $_POST["direktorij"];
+$nalozi['file'] = basename($_FILES["fileToUpload"]["name"]);
+//$nalozi[''] = '';
+//$nalozi[''] = '';
 
-$target_fileIme = basename($_FILES["fileToUpload"]["name"]);
-$target_file = $target_dir . $target_fileIme;
+echo "<h2>Naslov prispevka: " . $_POST["besediloNaslov"]. "</h2><br>";
+
 //$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $nalozi['direktorij'] . $nalozi['file'];
+
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 

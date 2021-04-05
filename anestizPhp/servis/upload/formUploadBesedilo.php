@@ -25,7 +25,7 @@
   <label for="zamenjaj">Zamenjaj</label><br>
   <input type="radio" id="pusti" name="obstojeca" value=0>
   <label for="pusti">Pusti obstoječo</label><br>
-  <input type="submit" value="Naloži mesečni razpis dežurstev" name="submit">
+  <input type="submit" value="Naloži besedilo" name="submit">
 </form></h1>
 
 </body>
