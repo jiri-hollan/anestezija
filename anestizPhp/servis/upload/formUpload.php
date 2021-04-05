@@ -13,7 +13,7 @@
 
 	<?php
 	//"$_GETrazpored" določi, kam se pdf naloži
-	echo '<input type="text" name="direktorij" value="' . $_GET["razpored"] . '" required><br>';
+	echo '<input type="text" name="direktorij" value="' . $_GET["direktorij"] . '" required><br>';
 	?>
 <label for="meseci">Izberi mesec:</label>
   <select id="meseci" name="meseci" required>
