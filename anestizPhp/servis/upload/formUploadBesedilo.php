@@ -10,13 +10,13 @@
 
 
 <h1><form action="uploadBesedilo.php" method="post" enctype="multipart/form-data">
-
+  <label for="direktorij">Ciljni direktorij: </label>
 	<?php
-	//"$_GETrazpored" določi, kam se pdf naloži
-	echo '<input type="text" name="direktorij" value="' . $_GET["direktorij"] . '" required><br>';
+	//"$_GETrazpored" določi, kam se pdf naloži	
+	echo '<input type="text" name="direktorij" id="direktorij" value="' . $_GET["direktorij"] . '" readonly><br>';
 	?>
 
-  <label for="besediloNaslov">Naslov besedila:</label><br>
+  <label for="besediloNaslov">Naslov besedila: </label>
   <input type="text" name="besediloNaslov" id="besediloNaslov" value="a" required><br>
 
  <br>Izberi pdf za naložiti:
