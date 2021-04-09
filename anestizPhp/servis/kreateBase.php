@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php
-include 'prijavniWeb.php';
+include '../skupne/prijavniWeb.php';
 $imeBase ="";
 
 try {

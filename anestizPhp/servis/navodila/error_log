@@ -1,0 +1,49 @@
+[09-Apr-2021 18:19:19 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:20:13 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:24:47 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:27:39 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:33:50 Europe/Ljubljana] PHP Warning:  include(../skupne/prijavniWeb.php): failed to open stream: No such file or directory in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 43
+[09-Apr-2021 18:33:50 Europe/Ljubljana] PHP Warning:  include(): Failed opening '../skupne/prijavniWeb.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 43
+[09-Apr-2021 18:33:50 Europe/Ljubljana] PHP Notice:  Undefined variable: servername in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 47
+[09-Apr-2021 18:33:50 Europe/Ljubljana] PHP Notice:  Undefined variable: username in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 47
+[09-Apr-2021 18:33:50 Europe/Ljubljana] PHP Notice:  Undefined variable: password in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 47
+[09-Apr-2021 18:33:50 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:34:20 Europe/Ljubljana] PHP Warning:  include(../skupne/prijavniWeb.php): failed to open stream: No such file or directory in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 43
+[09-Apr-2021 18:34:20 Europe/Ljubljana] PHP Warning:  include(): Failed opening '../skupne/prijavniWeb.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 43
+[09-Apr-2021 18:34:20 Europe/Ljubljana] PHP Notice:  Undefined variable: servername in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 47
+[09-Apr-2021 18:34:20 Europe/Ljubljana] PHP Notice:  Undefined variable: username in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 47
+[09-Apr-2021 18:34:20 Europe/Ljubljana] PHP Notice:  Undefined variable: password in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 47
+[09-Apr-2021 18:34:20 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:40:00 Europe/Ljubljana] PHP Warning:  include(../skupne/prijavniWeb.php): failed to open stream: No such file or directory in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 43
+[09-Apr-2021 18:40:00 Europe/Ljubljana] PHP Warning:  include(): Failed opening '../skupne/prijavniWeb.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 43
+[09-Apr-2021 18:40:00 Europe/Ljubljana] PHP Notice:  Undefined variable: servername in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 47
+[09-Apr-2021 18:40:00 Europe/Ljubljana] PHP Notice:  Undefined variable: username in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 47
+[09-Apr-2021 18:40:00 Europe/Ljubljana] PHP Notice:  Undefined variable: password in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 47
+[09-Apr-2021 18:40:00 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:44:03 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:46:27 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:48:46 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:48:56 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:49:24 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 18:56:26 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/kreateTableBesedila.php on line 66
+[09-Apr-2021 19:06:05 Europe/Ljubljana] PHP Warning:  include(prijavniWeb.php): failed to open stream: No such file or directory in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 64
+[09-Apr-2021 19:06:05 Europe/Ljubljana] PHP Warning:  include(): Failed opening 'prijavniWeb.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 64
+[09-Apr-2021 19:06:05 Europe/Ljubljana] PHP Notice:  Undefined variable: servername in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 19:06:05 Europe/Ljubljana] PHP Notice:  Undefined variable: dbname in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 19:06:05 Europe/Ljubljana] PHP Notice:  Undefined variable: username in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 19:06:05 Europe/Ljubljana] PHP Notice:  Undefined variable: password in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 19:06:05 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 88
+[09-Apr-2021 20:18:19 Europe/Ljubljana] PHP Warning:  include(prijavniWeb.php): failed to open stream: No such file or directory in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 64
+[09-Apr-2021 20:18:19 Europe/Ljubljana] PHP Warning:  include(): Failed opening 'prijavniWeb.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 64
+[09-Apr-2021 20:18:19 Europe/Ljubljana] PHP Notice:  Undefined variable: servername in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 20:18:19 Europe/Ljubljana] PHP Notice:  Undefined variable: dbname in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 20:18:19 Europe/Ljubljana] PHP Notice:  Undefined variable: username in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 20:18:19 Europe/Ljubljana] PHP Notice:  Undefined variable: password in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 20:18:19 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 88
+[09-Apr-2021 20:18:33 Europe/Ljubljana] PHP Warning:  include(prijavniWeb.php): failed to open stream: No such file or directory in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 64
+[09-Apr-2021 20:18:33 Europe/Ljubljana] PHP Warning:  include(): Failed opening 'prijavniWeb.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 64
+[09-Apr-2021 20:18:33 Europe/Ljubljana] PHP Notice:  Undefined variable: servername in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 20:18:33 Europe/Ljubljana] PHP Notice:  Undefined variable: dbname in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 20:18:33 Europe/Ljubljana] PHP Notice:  Undefined variable: username in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 20:18:33 Europe/Ljubljana] PHP Notice:  Undefined variable: password in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 74
+[09-Apr-2021 20:18:33 Europe/Ljubljana] PHP Notice:  Undefined variable: sql in /home/anestiz/public_html/servis/navodila/novoBesedilo.php on line 88

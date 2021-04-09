@@ -4,10 +4,12 @@
 
 <?php
 
-$servername = "localhost";
+/*$servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "navodila";
+$dbname = "navodila";*/
+
+require '../skupne/prijavniWeb.php';
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

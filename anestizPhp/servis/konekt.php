@@ -9,7 +9,7 @@
 
 <?php
 
-include 'prijavniWeb.php';
+include '../skupne/prijavniWeb.php';
 
 try {
     $conn = new PDO("mysql:host=$servername", $username, $password);

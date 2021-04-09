@@ -12,7 +12,7 @@
 <?php
 
 
-include 'prijavniWeb.php';
+include '../skupne/prijavniWeb.php';
 
 
 try {

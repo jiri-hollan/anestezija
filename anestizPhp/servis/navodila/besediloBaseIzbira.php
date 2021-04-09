@@ -8,10 +8,7 @@ echo "poskus izbire iz baze <br>";
 
 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "navodila";
+require '../../skupne/prijavniWeb.php';
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

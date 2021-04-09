@@ -4,7 +4,7 @@
 
 <?php
 echo "<table style='border: solid 1px black;'>";
- echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
+ echo "<tr><th>Id</th><th>naslov</th><th>direktorij</th><th>fajl</th><th>datum</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
@@ -24,15 +24,11 @@ class TableRows extends RecursiveIteratorIterator {
     }
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "navodila";
-
+include '../../skupne/prijavniWeb.php';
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT id, naslov, direktorij, fajl FROM besedilaTbl");
+    $stmt = $conn->prepare("SELECT id, naslov, direktorij, fajl, reg_date FROM besedilaTbl");
     $stmt->execute();
 
     // set the resulting array to associative

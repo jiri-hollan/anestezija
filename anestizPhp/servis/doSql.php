@@ -72,7 +72,7 @@ $username = "root";
 $password = "";
 $dbname = "premedikacija";*/
 
-include 'prijavniWeb.php';
+include '../skupne/prijavniWeb.php';
 
 
 try {

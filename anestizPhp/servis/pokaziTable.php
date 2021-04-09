@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
- include 'prijavniWeb.php';
+ include '../skupne/prijavniWeb.php';
 //Connect to MySQL using the PDO object.
  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 //Our SQL statement, which will select a list of tables from the current MySQL database.

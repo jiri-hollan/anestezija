@@ -40,9 +40,9 @@ echo "<br>";
 
 <?php
 function naredi($ime) {
-include 'prijavniWeb.php';
+include '../../skupne/prijavniWeb.php';
 $ime ;
-$dbname="navodila";
+//$dbname="navodila";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
