@@ -8,6 +8,7 @@
 <body>
 
 <?php
+//----naloži datoteko besedila pod originalnim imenom----
 $nalozi['naslov'] = $_POST["besediloNaslov"];
 $nalozi['direktorij'] = $_POST["direktorij"];
 $nalozi['file'] = basename($_FILES["fileToUpload"]["name"]);
@@ -59,7 +60,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    echo "<h1>The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " je bila naložena kot: " . $target_fileIme . "</h1>";
+    echo "<h1>The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " je bila naložena kot: " . $target_file . "</h1>";
   } else {
     echo "<h1>Sorry, there was an error uploading your file.</h1>";
   }

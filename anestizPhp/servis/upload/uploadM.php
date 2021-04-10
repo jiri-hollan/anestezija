@@ -8,7 +8,7 @@
 <body>
 
 <?php
-
+//---------spremeni ime datoteke na ime izbranega meseca-------
 echo "<h2>Tarčna datoteka: " . $_POST["meseci"]. "</h2><br>";
 //$target_dir = "../../oddelek/dezurstva/mesPdf/";
 $target_dir = $_POST["direktorij"];
