@@ -9,27 +9,28 @@
 
 
 
-<h1><form action="uploadBesedilo.php" method="post" enctype="multipart/form-data">
-  <label for="direktorij">Ciljni direktorij: </label>
+<h1> Nalaganje besedila <br>
+<form action="uploadBesedilo.php" method="post" enctype="multipart/form-data">
+  <!--<label for="direktorij">Ciljni direktorij: </label>-->
 	<?php
 	//"$_GETrazpored" določi, kam se pdf naloži	
-	echo '<input type="text" name="direktorij" id="direktorij" value="' . $_GET["direktorij"] . '" readonly><br>';
+	echo '<input type="hidden" name="direktorij" id="direktorij" value="' . $_GET["direktorij"] . '" readonly><br>';
 	?>
 
   <label for="besediloNaslov">Naslov besedila: </label>
   <input type="text" name="naslov" id="besediloNaslov" value="b" required><br>
 
- <br>Izberi pdf za naložiti:
+ <br>Izberi pdf ali slikovno datoteko za naložiti:<br>
 
-  <label for="nameTable">nameTable</label><br>
-  <input type="text" name="nameTable" id="nameTable" value="besedilaTbl">
+  <input type="hidden" name="nameTable" id="nameTable" value="besedilaTbl">
   <input type="file" name="fileToUpload" id="fileToUpload" required><br>
   <input type="radio" id="zamenjaj" name="obstojeca" value=1>
   <label for="zamenjaj">Zamenjaj</label><br>
   <input type="radio" id="pusti" name="obstojeca" value=0>
   <label for="pusti">Pusti obstoječo</label><br>
   <input type="submit" value="Naloži besedilo" name="submit">
-</form></h1>
+</form>
+</h1>
 
 </body>
 </html>
