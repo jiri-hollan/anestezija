@@ -46,7 +46,7 @@ echo '<li><a href= "' . $moznosti[3]["direktorij"] . $moznosti[3]["fajl"] . '" >
 
   //var_dump($value);
 
-  echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
+  echo '<li><a href= "' . '../' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
 
 }
  
