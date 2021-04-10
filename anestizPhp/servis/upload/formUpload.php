@@ -9,7 +9,7 @@
 
 
 
-<h1><form action="upload.php" method="post" enctype="multipart/form-data">
+<h1><form action="uploadM.php" method="post" enctype="multipart/form-data">
 
 	<?php
 	//"$_GETrazpored" določi, kam se pdf naloži
