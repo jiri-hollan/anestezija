@@ -18,7 +18,7 @@
 	?>
 
   <label for="besediloNaslov">Naslov besedila: </label>
-  <input type="text" name="naslov" id="besediloNaslov" value="b" required><br>
+  <input type="text" name="naslov" id="besediloNaslov" value="" placeholder="smiselni naslov"  required><br>
 
  <br>Izberi pdf ali slikovno datoteko za naložiti:<br>
 

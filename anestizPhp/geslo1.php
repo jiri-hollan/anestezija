@@ -19,13 +19,6 @@
 <!--<h1>Razpored</h1>-->
 
 <?php
-/*echo "na zacetku";
-$opozorilo= '<script>';
-$opozorilo.= 'alert';
-$opozorilo.= '("';
-$opozorilo.= 'napačno geslo")';
-$opozorilo.= ';';
-$opozorilo.= '</script>';*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	gesloFunction();
@@ -39,9 +32,11 @@ $opozorilo.= '("';
 $opozorilo.= 'napačno geslo")';
 $opozorilo.= ';';
 $opozorilo.= '</script>';	
-	
+
 if(isset($_POST['psw'])){
-	  $geslo = $_POST["psw"];        
+	  $geslo = $_POST["psw"];
+echo "na zacetku1";	 
+
 }else{
 	//echo "geslo ni definirano";
 
