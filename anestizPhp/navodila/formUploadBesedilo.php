@@ -4,9 +4,10 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/navodila.css">
 </head>
 <body>
-
+<a id="buttonDomov" href="../menuFile.php" >Domov</a>
 
 
 <h1> Nalaganje besedila <br>

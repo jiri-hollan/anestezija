@@ -43,30 +43,21 @@ $opozorilo.= '</script>';
 if(isset($_POST['psw'])){
 	  $geslo = $_POST["psw"];        
 }else{
-	//echo "geslo ni definirano";
-
-
+//-----------naj bi izpisalo pozorilo----------------
 echo $opozorilo;
-//$pojdi = 'menuFile.php';
 	}
 
  if ($geslo == "bridion@123?") {
-//sem pride peklop na razpored
-//$pojdi = 'oddelek/razpisMeseci.php';
+//---------------------sem pride peklop na razpored-----------------------------
 header('Location: oddelek/razpisMeseci.php');
 }else{
+//--------------------naj bi izpisalo "napačno geslo: "in vrnilo na menuFile.php----------------
 echo $opozorilo;
-//echo "napačno geslo: " . $geslo;
-//$pojdi = 'menuFile.php';
 header('Location: menuFile.php');
 }
 }
 ?>
 
- 
-	<!-- <script>		  
-   window.location.assign("<?php //echo $GLOBALS ['pojdi'] ?>");
-	</script> -->
 
 </body>
 </html>
