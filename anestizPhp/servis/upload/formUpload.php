@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../../css/navodila.css">
+<link rel="stylesheet" href="../../css/vnos.css">
 </head>
 <body>
 <a id="buttonDomov" href="../../menuFile.php" >Domov</a>
@@ -16,8 +17,8 @@
 	//"$_GETrazpored" določi, kam se pdf naloži
 	echo '<input type="hidden" name="direktorij" value="' . $_GET["direktorij"] . '" required><br>';
 	?>
-<label for="meseci">Izberi mesec:</label>
-  <select id="meseci" name="meseci" required>
+<label for="meseci">Izberi mesec:</label><br>
+  <select id="meseci" name="meseci"  required>
     <option value=""></option>
     <option value="januar.pdf">Januar</option>
     <option value="februar.pdf">Februar</option>
