@@ -1,5 +1,5 @@
 input[type=text],select {
-  width: 25%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -14,7 +14,7 @@ input[type=text]:focus,select:focus {
 
 
 input[type=file] {
-  width: 25%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
