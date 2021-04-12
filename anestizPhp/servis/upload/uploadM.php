@@ -41,7 +41,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
             if (!empty($_FILES['fileToUpload']['tmp_name'])) {
                 $finfo = finfo_open(FILEINFO_MIME_TYPE);
                 $mime = finfo_file($finfo, $_FILES['fileToUpload']['tmp_name']);
-                if (($mime != 'application/pdf') && ($mime != 'image/jpg') && ($mime != 'image/jpeg') && ($mime != 'image/gif') && ($mime != 'image/png')) {
+                if (($mime != 'application/pdf') /*&& ($mime != 'image/jpg') && ($mime != 'image/jpeg') && ($mime != 'image/gif') && ($mime != 'image/png')*/) {
 
                     $uploadOk = 0;
                     echo "<div class=\"alert alert-danger\" role=\"alert\"><strong>This file is not a valid file.</strong></div>";
