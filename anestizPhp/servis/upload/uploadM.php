@@ -37,7 +37,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
   $uploadOk = 0;
 }
 
- //Check for pdf format
+ //Check for pdf format---zakomentirani so slikovni formati-----
             if (!empty($_FILES['fileToUpload']['tmp_name'])) {
                 $finfo = finfo_open(FILEINFO_MIME_TYPE);
                 $mime = finfo_file($finfo, $_FILES['fileToUpload']['tmp_name']);
