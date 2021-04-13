@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-$pogled=$_GET(pogled);
+$pogled=$_GET("pogled");
 
 ?>
 <a id="buttonDomov" href="../menuFile.php" >Domov</a>

@@ -47,7 +47,7 @@ header('Location: oddelek/razpisMeseci.php');
 }else{
 //--------------------naj bi izpisalo "napačno geslo: "in vrnilo na menuFile.php----------------
 echo $opozorilo;
-header('Location: menuFile.php');
+header('Location: menuFile.php?pogled="raz"');
 }
 }
 ?>
