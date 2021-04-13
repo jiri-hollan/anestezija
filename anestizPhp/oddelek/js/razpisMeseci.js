@@ -1,6 +1,7 @@
 
 //izbira meseca
 
+ 
 function myFunction(a, b) {
   //document.getElementById("demo").innerHTML = '<iframe id="tabela"  name="plugin" src=" ' + 'razpis/mespdf/' + a + '.pdf ">' +  '</iframe> ' ;
 

@@ -8,30 +8,39 @@
 <link rel="stylesheet" href="../css/razpisMeseci.css?<?php echo time(); ?>">
 </head>
 <body>
-<?php
-$pogled=$_GET['pogled'];
-//echo $_GET['pogled'];
-?>
+
 
 <a id="buttonDomov" href="../menuFile.php" >Domov</a>
 <ul id= "meseci">
-<li onclick="myFunction('januar', '<?php echo $pogled;?>')">Januar</li>
-<li  onclick="myFunction('februar', 'raz')">Februar
-<li onclick="myFunction('marec', 'raz')">Marec
-<li  onclick="myFunction('april', 'raz')">April
-<li onclick="myFunction('maj', 'raz')">Maj
-<li  onclick="myFunction('junij', 'raz')">Junij
-<li onclick="myFunction('julij', 'raz')">Julij
-<li  onclick="myFunction('avgust', 'raz')">Avgust
-<li onclick="myFunction('september', 'raz')">September
-<li  onclick="myFunction('oktober', 'raz')">Oktober
-<li onclick="myFunction('november', 'raz')">November
-<li  onclick="myFunction('december', 'raz')">December
+<?php
+$pogled= $_GET['pogled'];
+$mesec = array("januar"=>"Januar", "februar"=>"Februar", "marec"=>"Marec", "april"=>"April", "maj"=>"Maj", "junij"=>"Junij", "julij"=>"Julij", "avgust"=>"Avgust", "september"=>"September", "oktober"=>"Oktober", "november"=>"November", "december"=>"December");
+
+foreach($mesec as $x => $val) {
+  echo '<li onclick="myFunction(' . "'" . $x . "'" . ',' . "'" . $pogled . "'" . ')">' . $val;   //$x = $val<br>";
+}
+
+ 
+switch ($pogled) {
+  case "raz":
+    $slika ="slike/vOp.jpg" ;
+    break;
+  case "dez":
+   $slika="slike/zahod.jpg";
+    break;
+  
+  default:
+    echo "nekje je prišlo do napake!";
+}
+ 
+ 
+ 
+?>
 
 </ul>
 
-<p id=demo class=mesecni><img src="slike/vOp.jpg" alt="Standardna oprema" width="460" height="600"></p>
-
+<!--<p id=demo class=mesecni><img src="slike/vOp.jpg" alt="Standardna oprema" width="460" height="600"></p>-->
+<p id=demo class=mesecni><img src="<?php echo $slika;?>" alt="Standardna oprema" width="460" height="600"></p>
 
 </body>
 </html>
