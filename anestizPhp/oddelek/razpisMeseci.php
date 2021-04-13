@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../css/razpisMeseci.css?<?php echo time(); ?>">
 </head>
 <body>
-
+<h2>Razpis na anesteziji in kovid odd</h2>
 <a id="buttonDomov" href="../menuFile.php" >Domov</a>
 <ul id= "meseci">
 <li onclick="myFunction('januar', 'raz')">Januar</li>
