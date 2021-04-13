@@ -9,12 +9,13 @@
 </head>
 <body>
 <?php
-$pogled=$_GET("pogled");
-
+$pogled=$_GET['pogled'];
+//echo $_GET['pogled'];
 ?>
+
 <a id="buttonDomov" href="../menuFile.php" >Domov</a>
 <ul id= "meseci">
-<li onclick="myFunction('januar', 'raz')">Januar</li>
+<li onclick="myFunction('januar', '<?php echo $pogled;?>')">Januar</li>
 <li  onclick="myFunction('februar', 'raz')">Februar
 <li onclick="myFunction('marec', 'raz')">Marec
 <li  onclick="myFunction('april', 'raz')">April

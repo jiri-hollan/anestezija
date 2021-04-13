@@ -43,11 +43,13 @@ echo $opozorilo;
 
  if ($geslo == "bridion@123?") {
 //---------------------sem pride peklop na razpored-----------------------------
-header('Location: oddelek/razpisMeseci.php');
+
+header('Location: oddelek/razpisMeseci.php?pogled=raz');
 }else{
 //--------------------naj bi izpisalo "napačno geslo: "in vrnilo na menuFile.php----------------
 echo $opozorilo;
-header('Location: menuFile.php?pogled="raz"');
+
+header('Location: menuFile.php');
 }
 }
 ?>
