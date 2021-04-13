@@ -8,7 +8,10 @@
 <link rel="stylesheet" href="../css/razpisMeseci.css?<?php echo time(); ?>">
 </head>
 <body>
+<?php
+$pogled=$_GET(pogled);
 
+?>
 <a id="buttonDomov" href="../menuFile.php" >Domov</a>
 <ul id= "meseci">
 <li onclick="myFunction('januar', 'raz')">Januar</li>
