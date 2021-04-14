@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<p>Vnos novega besedila v tabelo:</p>
+<!--<p>Vnos novega besedila v tabelo:</p>-->
 
 <?php
 // define variables and set to empty values
@@ -34,19 +34,6 @@ function test_input($data) {
   return $data;
 }
 ?>
-
-<h2>PHP Form Vpis Vrstice</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  ime tabele: <input type="text" name="nameTable" value="besedilaTbl">
-  <br><br>
- Naslov besedila: <input type="text" name="naslov">
-  <br><br>
- Direktorij: <input type="text" name="direktorij">
- <br><br>
- Fajl: <input type="text" name="fajl">
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
-</form>
 
 <?php
 echo "<h2>Your Input:</h2>";
