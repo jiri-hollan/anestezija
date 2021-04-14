@@ -39,8 +39,8 @@
 <ul id="linky2">
 <!--<li><a href="pregled/vnosBolnika.html">Vnos bolnika</a></li>
 <li><a href="pregled/vsiPolnjenje.html">Vnos vsega</a></li>-->
-<li><a href="../pregled/novPolnjenje.html">polnjenje Nov bolnik</a></li>
-<li><a href="../pregled/zdravnik.html">vnos zdravnika</a></li>
+<li><a href="../pregled/novPolnjenje.php">polnjenje Nov bolnik</a></li>
+<li><a href="../pregled/zdravnik.php">vnos zdravnika</a></li>
 
 </body>
 </html>
