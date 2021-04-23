@@ -35,6 +35,10 @@
 <li><a href="navodila/besediloBase.php">prikaži besedila</a></li>
 <li><a href="navodila/besediloBaseIzbira.php">prikaži besedila kot izbiro</a></li>
 
+<h1>Menu uporabniki</h1>
+<ul id="linky3">
+<li><a href="navodila/kreateTableUporabniki.php">naredi tabelo: uporabnikiTbl</a></li>
+
 <h1>Menu pregled</h1>
 <ul id="linky2">
 <!--<li><a href="pregled/vnosBolnika.html">Vnos bolnika</a></li>
