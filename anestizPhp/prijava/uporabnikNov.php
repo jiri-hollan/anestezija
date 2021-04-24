@@ -1,14 +1,36 @@
+<!DOCTYPE html>
+<html lang="sl-SI">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
 <?php
-function vstavi($email,$geslo,$ime,$priimek) {
-	include '../skupne/prijavniWeb.php';
 
-$nameTable = "uporabnikiTbl";
-$email = $_POST["email"];
-$geslo = $_POST["geslo"];
-$ime = $_POST["ime"];
-$priimek = $_POST["priimek"];
+
+
+//vstavi($email,$geslo,$ime,$priimek,$status) 
+
+$email=$geslo=$ime=$priimek=$status=0;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	echo $_POST["ime"];
+  $ime = test_input($_POST["ime"]);
+  $priimek = test_input($_POST["priimek"]);  
+  $email = test_input($_POST["email"]);
+  $geslo = test_input($_POST["geslo"]);
+}
 $status = 1;
+$nameTable = "uporabnikiTbl";
 
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+
+	include '../skupne/prijavniWeb.php';
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
@@ -23,5 +45,8 @@ try {
 }
 
 $conn = null;
-}
+
 ?>
+
+</body>
+</html>
