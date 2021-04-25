@@ -4,11 +4,10 @@
 
 <?php
 //----------prijavni podatki za podatkovno bazo odvisno od uporabljenega strežnika------
-require '../skupne/prijavniWeb.php';
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	require '../skupne/prijavniWeb.php';
+
     $stmt = $conn->prepare("SELECT id, naslov, direktorij, fajl FROM besedilaTbl");
     $stmt->execute();
 
