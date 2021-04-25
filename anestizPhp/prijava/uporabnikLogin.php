@@ -44,13 +44,26 @@ function test_input($data) {
 	
 try {
 	
-  include '../skupne/prijavniWeb.php';
+  require '../skupne/prijavniWeb.php';
+
+ // $sql = "SELECT email,geslo,status FROM $nameTable WHERE email='$email' AND geslo='$geslo' ";
  
-  $sql = "SELECT". " " . $nameTable . " " . " (email,geslo,status)
-  WHERE('$email','$geslo')";
   // use exec() because no results are returned
-  $conn->exec($sql);
-  echo "Uporabnik je registriran";
+//$conn->exec($sql);
+  
+  $stmt = $conn->prepare("SELECT email,geslo,status FROM $nameTable WHERE email='$email' AND geslo='$geslo' ");
+  $stmt->execute();
+
+  // set the resulting array to associative
+  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  var_dump ($stmt->fetchAll());
+  
+  foreach($stmt->fetchAll() as $k=>$v) {
+    echo $v;
+  }   
+  
+
+  echo "Uporabnik je prijavljen";
 } catch(PDOException $e) {
   echo $sql . "<br>" . $e->getMessage();
 }
