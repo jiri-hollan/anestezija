@@ -58,7 +58,7 @@ try {
   VALUES ('$email','$geslo','$ime','$priimek','$status')";
   // use exec() because no results are returned
   $conn->exec($sql);
-  echo "New record created successfully";
+  echo "Uporabnik je registriran";
 } catch(PDOException $e) {
   echo $sql . "<br>" . $e->getMessage();
 }
