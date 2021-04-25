@@ -13,11 +13,30 @@
 
 $email=$geslo=$ime=$priimek=$status=0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	echo $_POST["ime"];
-  $ime = test_input($_POST["ime"]);
-  $priimek = test_input($_POST["priimek"]);  
-  $email = test_input($_POST["email"]);
-  $geslo = test_input($_POST["geslo"]);
+	//echo $_POST["ime"];	
+if (empty($_POST["ime"])) {
+    echo"ime is required";
+  } else {
+    $ime = test_input($_POST["ime"]);
+  }	
+
+if (empty($_POST["priimek"])) {
+    echo "priimek is required";
+  } else {
+    $priimek = test_input($_POST["priimek"]);  
+  }
+if (empty($_POST["email"])) {
+    echo "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+  }
+
+if (empty($_POST["email"])) {
+    echo "Email is required";
+  } else {
+    $geslo = test_input($_POST["geslo"]);
+  }
+  
 }
 $status = 1;
 $nameTable = "uporabnikiTbl";
@@ -47,6 +66,7 @@ try {
 $conn = null;
 
 ?>
+
 
 </body>
 </html>
