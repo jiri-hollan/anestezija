@@ -101,7 +101,7 @@ vstavi($nameTable,$nalozi['naslov'] ,$nalozi['direktorij'],$nalozi['file']);
 
 
 function vstavi($nameTable,$naslov,$direktorij,$fajl) {
-	include '../skupne/prijavniWeb.php';
+
 
 $nameTable;
 $naslov;
@@ -109,7 +109,7 @@ $direktorij;
 $fajl;
 
 
-
+	include '../skupne/prijavniWeb.php';
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
