@@ -53,20 +53,35 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+$uporabnik['email'] = $email;
+$uporabnik['geslo'] = $geslo;
+$uporabnik['ime'] = $ime;
+$uporabnik['priimek'] = $priimek;
+$uporabnik['status'] = $status;
+
+
+global $keys;
+global $values;
+   $keys = implode(", ",array_keys($uporabnik));
+
+$values= "'" . implode("','",array_values($uporabnik)) . "'";
+//echo "<br>".$keys ."<br>";
+//echo $values;
 
 if ($registracija){
-	registracija($nameTable,$email,$geslo,$ime,$priimek,$status);
+
+	registracija($nameTable,$keys,$values);	
 	}
-
-
-function registracija($nameTable,$email,$geslo,$ime,$priimek,$status) {
+function registracija($nameTable,$keys,$values) {
 	
 try {
-	
+//$email=$geslo=$ime=$priimek=$status="";	
   include '../skupne/prijavniWeb.php';
  
-  $sql = "INSERT INTO". " " . $nameTable . " " . " (email,geslo,ime,priimek,status)
-  VALUES ('$email','$geslo','$ime','$priimek','$status')";
+  $sql = "INSERT INTO". " " . $nameTable . " " . " ($keys)
+  VALUES ($values)";
+ 
+ 
   // use exec() because no results are returned
   $conn->exec($sql);
   echo "Uporabnik je registriran";
