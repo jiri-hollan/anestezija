@@ -10,29 +10,35 @@
 
 
 //vstavi($email,$geslo,$ime,$priimek,$status) 
-
+$registracija=true;
 $email=$geslo=$ime=$priimek=$status=0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	//echo $_POST["ime"];	
 if (empty($_POST["ime"])) {
     echo"ime is required";
+	$registracija=false;
+	
+	
   } else {
     $ime = test_input($_POST["ime"]);
   }	
 
 if (empty($_POST["priimek"])) {
     echo "priimek is required";
+	$registracija=false;
   } else {
     $priimek = test_input($_POST["priimek"]);  
   }
 if (empty($_POST["email"])) {
     echo "Email is required";
+	$registracija=false;	
   } else {
     $email = test_input($_POST["email"]);
   }
 
-if (empty($_POST["email"])) {
-    echo "Email is required";
+if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
+    echo "napačen vnos gesla";
+	$registracija=false;	
   } else {
     $geslo = test_input($_POST["geslo"]);
   }
@@ -48,7 +54,12 @@ function test_input($data) {
   return $data;
 }
 
+if ($registracija){
+	registracija($nameTable,$email,$geslo,$ime,$priimek,$status);
+	}
 
+
+function registracija($nameTable,$email,$geslo,$ime,$priimek,$status) {
 	
 try {
 	
@@ -64,7 +75,7 @@ try {
 }
 
 $conn = null;
-
+}
 ?>
 
 
