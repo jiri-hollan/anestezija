@@ -56,14 +56,16 @@ try {
 
   // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-  var_dump ($stmt->fetchAll());
-  
-  foreach($stmt->fetchAll() as $k=>$v) {
-    echo $v;
-  }   
-  
+  //var_dump ($stmt->fetchAll());
+    echo $stmt->rowCount() . " zapisov<br>";
+   
+  if ($stmt->rowCount()>0){
+	  echo "Uporabnik je prijavljen";  
+  }else{
+	  echo "geslo ali username ni pravilno";
+  }
 
-  echo "Uporabnik je prijavljen";
+  
 } catch(PDOException $e) {
   echo $sql . "<br>" . $e->getMessage();
 }
