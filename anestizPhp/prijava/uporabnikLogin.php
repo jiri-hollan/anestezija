@@ -27,6 +27,7 @@ if (empty($_POST["geslo"])) {
     echo "geslo is required";
   } else {
     $geslo = test_input($_POST["geslo"]);
+	$geslo = md5($geslo);
   }
   
 }

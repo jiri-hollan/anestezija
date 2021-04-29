@@ -41,6 +41,7 @@ if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
 	$registracija=false;	
   } else {
     $geslo = test_input($_POST["geslo"]);
+	$geslo = md5($geslo);
   }
   
 }
