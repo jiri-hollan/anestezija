@@ -40,7 +40,7 @@ echo "<br>";
 
 <?php
 function naredi($ime) {
-include '../skupne/prijavniWeb.php';
+include '../skupne/streznik.php';
 $ime ;
 
 try {

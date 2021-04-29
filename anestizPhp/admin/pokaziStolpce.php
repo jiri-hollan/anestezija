@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   return $data;
 } 
 function pokaziStolpce($ime) {
-include '../skupne/prijavniWeb.php';	
+include '../skupne/streznik.php';	
 	    echo $ime, '<br>';
 //Connect to MySQL using the PDO object.
 //$pdo = new PDO('mysql:host=sh17.neoserv.si;dbname=anestiz_premedikacija', 'anestiz', 'laringoskop');

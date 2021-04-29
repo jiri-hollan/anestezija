@@ -8,7 +8,7 @@ echo "poskus izbire iz baze <br>";
 
 
 
-require '../../skupne/prijavniWeb.php';
+require '../../skupne/streznik.php';
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

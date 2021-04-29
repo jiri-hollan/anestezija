@@ -61,7 +61,7 @@ echo $nameTable . "<br>" . $naslov . " " . $direktorij . " " . $fajl;
 
 
 function vstavi($nameTable,$naslov,$direktorij,$fajl) {
-	include '../../skupne/prijavniWeb.php';
+	include '../../skupne/streznik.php';
 
 $nameTable;
 $naslov;

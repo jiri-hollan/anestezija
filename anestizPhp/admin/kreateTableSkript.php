@@ -62,7 +62,7 @@ echo $nameTable . "<br> " . $polja;
 
 <?php
 function naredi($imeTable,$polja) {
-include '../skupne/prijavniWeb.php';
+include '../skupne/streznik.php';
 
 
 

@@ -61,7 +61,7 @@ echo $nameTable . "<br>" . $imeZdr . " " . $priimekZdr;
 
 
 function vstavi($nameTable,$imeZdr,$priimekZdr) {
-	include '../skupne/prijavniWeb.php';
+	include '../skupne/streznik.php';
 
 $nameTable;
 $imeZdr;
