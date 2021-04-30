@@ -4,51 +4,23 @@
 <body>
 <?php
 
-
-
-//vstavi($email,$geslo,$ime,$priimek,$status) 
-$registracija=true;
-$email=0;
-
-
-
-if (empty($_POST["email"])) {
-    echo "Email is required";
-	$registracija=false;	
-  } else {
-     $email = test_input($_POST["email"]);;
-  }
-
-$nameTable = "uporabnikiTbl";
-
-function test_input1($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-//echo "<br>".$keys ."<br>";
-//echo $values;
-
 if ($registracija){
     $edini=preveriUnique($nameTable,$email);
-	echo $edini . "ta uporabnik že obstaja";
-	
-	//registracija($nameTable,$keys,$values);	
-	}else  {
+	if ($edini){
+			echo $edini . "ta uporabnik že obstaja";
+	$registracija=false;
 		
+	}else  {
+	$registracija=true;	
 	}
-	
+}	
 	
 function preveriUnique($nameTable,$email) {
 	
 try {
-//$email=$geslo=$ime=$priimek=$status="";	
+
   include '../skupne/prijavniWeb.php';
- 
- /*$sql = "SELECT * FROM". " " . $nameTable . " " . " 
-  WHERE email='$email'";*/
+
    $stmt = $conn->prepare("SELECT email,geslo,status FROM $nameTable WHERE email='$email'");
   $stmt->execute();
  
