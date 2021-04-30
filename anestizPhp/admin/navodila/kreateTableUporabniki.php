@@ -51,11 +51,12 @@ try {
     // sql to create table
     $sql = "CREATE TABLE". " " . $ime . " " . " (
     id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	`email` text CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
-	`geslo` text CHARACTER SET utf8 COLLATE utf8_slovenian_ci NOT NULL,
-	`ime` text CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
-	`priimek` text CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+	`email` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+	`geslo` varchar(255) CHARACTER SET utf8 COLLATE utf8_slovenian_ci NOT NULL,
+	`ime` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+	`priimek` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
     `status` int(3) NOT NULL
+	UNIQUE (email)
     )";
 
     // use exec() because no results are returned
