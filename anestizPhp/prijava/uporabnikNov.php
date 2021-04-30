@@ -13,12 +13,12 @@
 $registracija=true;
 $email=$geslo=$ime=$priimek=$status=0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	
+include 'uporabnikNovPreveri.php';	
 	//echo $_POST["ime"];	
 if (empty($_POST["ime"])) {
     echo"ime is required";
-	$registracija=false;
-	
-	
+	$registracija=false;	
   } else {
     $ime = test_input($_POST["ime"]);
   }	
