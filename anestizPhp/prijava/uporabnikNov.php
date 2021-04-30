@@ -11,10 +11,13 @@
 
 //vstavi($email,$geslo,$ime,$priimek,$status) 
 $registracija=true;
-$email=$geslo=$ime=$priimek=$status=0;
+$email=$geslo=$ime=$priimek=0;
+$status = 1;
+$nameTable = "uporabnikiTbl";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
-include 'uporabnikNovPreveri.php';	
+
 	//echo $_POST["ime"];	
 if (empty($_POST["ime"])) {
     echo"ime is required";
@@ -43,10 +46,9 @@ if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
     $geslo = test_input($_POST["geslo"]);
 	$geslo = md5($geslo);
   }
-  
+ include 'uporabnikNovPreveri.php';	 
 }
-$status = 1;
-$nameTable = "uporabnikiTbl";
+
 
 function test_input($data) {
   $data = trim($data);
@@ -76,18 +78,16 @@ if ($registracija){
 function registracija($nameTable,$keys,$values) {
 	
 try {
-//$email=$geslo=$ime=$priimek=$status="";	
+	
   include '../skupne/prijavniWeb.php';
- 
-  $sql = "INSERT INTO". " " . $nameTable . " " . " ($keys)
+  //$sql = "INSERT INTO". " " . $nameTable . " " . " ($keys)
+  $sql = "INSERT INTO $nameTable ($keys)
   VALUES ($values)";
- 
- 
   // use exec() because no results are returned
   $conn->exec($sql);
   echo "Uporabnik je registriran";
 } catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
+  echo "<br>email  " .  $e->getMessage();
 }
 
 $conn = null;
