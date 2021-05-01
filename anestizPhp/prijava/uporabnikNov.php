@@ -14,6 +14,8 @@ $registracija=true;
 $email=$geslo=$ime=$priimek=0;
 $status = 1;
 $nameTable = "uporabnikiTbl";
+global $keys;
+global $values;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
@@ -56,6 +58,7 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+
 $uporabnik['email'] = $email;
 $uporabnik['geslo'] = $geslo;
 $uporabnik['ime'] = $ime;
@@ -63,8 +66,6 @@ $uporabnik['priimek'] = $priimek;
 $uporabnik['status'] = $status;
 
 
-global $keys;
-global $values;
    $keys = implode(", ",array_keys($uporabnik));
 
 $values= "'" . implode("','",array_values($uporabnik)) . "'";
@@ -80,7 +81,7 @@ function registracija($nameTable,$keys,$values) {
 try {
 	
   include '../skupne/prijavniWeb.php';
-  //$sql = "INSERT INTO". " " . $nameTable . " " . " ($keys)
+
   $sql = "INSERT INTO $nameTable ($keys)
   VALUES ($values)";
   // use exec() because no results are returned
