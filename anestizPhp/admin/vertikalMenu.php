@@ -26,6 +26,7 @@
 <li><a href="pokaziStolpce.php">pokaži Stolpce</a></li>
 <li><a href="selektVnosna.php">pokaži vnešenega bolnika</a></li>
 <li><a href="serverInformace.php">Informace o serveru</a></li>
+<li><a href="../skupne/database.php">Zgon poskusnega objekta database</a></li>
 
 <h1>Menu navodila</h1>
 <ul id="linky3">

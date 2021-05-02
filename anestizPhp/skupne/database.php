@@ -22,12 +22,12 @@ class Database {
               $this->dbname = "navodila";
             }
 		$this->con = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname . $this->username . $this->password);
-        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
+        $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
 //uzavírací zavorky __construct		
 	}
 	
 	public function vyber($tabulka, $sloupce, $podminka = NULL){
-	$sloupceSQL = implode(', '), $sloupce;
+	$sloupceSQL = implode(', ', $sloupce);
 	$podminkaSQL = '';
 	$parametry = array();
 	if (is_array($podminka)){
@@ -59,7 +59,7 @@ class Database {
 	public function  vloz($tabulka,$data){		
 	}		
 	
-	public function aktualizuj($tabulka,data, $podminka){
+	public function aktualizuj($tabulka,$data,$podminka){
 	}		
 	
 	public function odsrani($tabulka,$podminka){		
