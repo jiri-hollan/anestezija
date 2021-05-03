@@ -6,8 +6,8 @@ Class Prihlaseni {
 	public $con;
 	public $zaklad;
 	
-	public function__construct() {
-	  $this->con = nev Database();
+	public function __construct() {
+	  $this->con = new Database();
 	  $this->zaklad = new stdClass();
 	  $this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'anestiz/admin/';
 	  $this->inicializuj();
@@ -27,19 +27,19 @@ Class Prihlaseni {
 	   haeder('Location: ' . $this->zaklad->url . 'prispevki.php');
 	}
 	
-	public function_prihlaseniSelhalo() {
+	public function prihlaseniSelhalo() {
 	   return 'Napačno uporabniško ime ali geslo. ';
 	}
 	
 	private function ovrUdaje() {
-		if (!empty($_POST['jmeno']) && !empty($_POST'geslo')){
+		if (!empty($_POST['jmeno']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
 			$uzivatele = $this->con->vyber('uzivatele', array('id'),
 			   array('jmeno'=>$_POST['jmeno'], 'geslo'=>$geslo));
 		if (count($uzivatele) > 0)	{
 			$this->prihlaseniUspesne();
 		} else {
-			retur $this->prihlaseniSelhalo();
+			return $this->prihlaseniSelhalo();
 		}   
 	  }
 	}

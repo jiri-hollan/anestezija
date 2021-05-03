@@ -5,10 +5,11 @@ class Administrace {
 	public $con;
 	public $zaklad;
 	
-	public function__construct() {
+	public function __construct() {
 	  $this->con = new Database();
       $this->zaklad = new stdClass();
-      $this->zklad->url ="http.//".$_SERVER['SERVER_NAME'].'/anestiz/admin/';	  
+      $this->zklad->url ="http.//".$_SERVER['SERVER_NAME'].'/anestiz/admin/';
+	
 	}
 //0d class administrace	
 }

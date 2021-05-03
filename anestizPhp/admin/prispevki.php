@@ -1,12 +1,12 @@
 <?php
 
-recuire_once('administrace.php');
+require_once('administrace.php');
 
 class Prispevki extends Administrace {
-   public function__construct() {
+   public function __construct() {
 	   parent::__construct();
 	   if (!empty($_GET['akce'])) {
-		   swith ($_GET['akce']) {
+		   switch ($_GET['akce']) {
 			   case 'pridej':
 			     $this->pridejPrispevek();
 				 brek;
@@ -23,7 +23,7 @@ class Prispevki extends Administrace {
    }
    
    public function vipisPrispevki() {
-	  $prispevki = $this->con->vyber('prispevki', array(*));
+	  $prispevki = $this->con->vyber('prispevki', array('*'));
       require_once 'sablony/sprava-prispevku.php';	  
    }
    
@@ -59,7 +59,7 @@ class Prispevki extends Administrace {
        if (empty($podminka)) {
 		   $ulozeno = $this->con->vloz('prispevky', $data);
 	   } else {
-		   $ulozeno = $this->con->aktualizuj('prispevki', '$data', '$podminka')
+		   $ulozeno = $this->con->aktualizuj('prispevki', '$data', '$podminka');
 	   }
 	   
 	   if ($ulozeno !== false) {
