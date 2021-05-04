@@ -23,7 +23,7 @@ class Prispevki extends Administrace {
    }
    
    public function vipisPrispevki() {
-	  $prispevki = $this->con->vyber('prispevki', array('*'));
+	  $prispevki = $this->conn->vyber('prispevki', array('*'));
       require_once 'sablony/sprava-prispevku.php';	  
    }
    
@@ -57,14 +57,14 @@ class Prispevki extends Administrace {
 		  $data['nadpis'] = $prispevek['nadpis'];
 	  }	
        if (empty($podminka)) {
-		   $ulozeno = $this->con->vloz('prispevky', $data);
+		   $ulozeno = $this->conn->vloz('prispevky', $data);
 	   } else {
-		   $ulozeno = $this->con->aktualizuj('prispevki', '$data', '$podminka');
+		   $ulozeno = $this->conn->aktualizuj('prispevki', '$data', '$podminka');
 	   }
 	   
 	   if ($ulozeno !== false) {
 		   $oznameni = 'Příspěvek byl uspěšně uložen. ';
-		   header('Location. ' .$this->zaklad->con . 'prispevki.php?oznameni=' .
+		   header('Location. ' .$this->zaklad->conn . 'prispevki.php?oznameni=' .
 		   urencode($oznameni));
 		   exit();
 	   } else {

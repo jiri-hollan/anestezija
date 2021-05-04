@@ -3,11 +3,11 @@
 require_once('../skupne/database.php');
 
 Class Prihlaseni {
-	public $con;
+	public $conn;
 	public $zaklad;
 	
 	public function __construct() {
-	  $this->con = new Database();
+	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();
 	  $this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'anestiz/admin/';
 	  $this->inicializuj();
@@ -34,7 +34,7 @@ Class Prihlaseni {
 	private function ovrUdaje() {
 		if (!empty($_POST['jmeno']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
-			$uzivatele = $this->con->vyber('uzivatele', array('id'),
+			$uzivatele = $this->conn->vyber('uzivatele', array('id'),
 			   array('jmeno'=>$_POST['jmeno'], 'geslo'=>$geslo));
 		if (count($uzivatele) > 0)	{
 			$this->prihlaseniUspesne();
