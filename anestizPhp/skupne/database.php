@@ -6,7 +6,7 @@ class Database {
 	public $username = '';
 	public $password = '';
 	public $dbname = '';
-	public $con = '';
+	public $connn = '';
 	
 	public Function __construct(){
 	
@@ -21,8 +21,8 @@ class Database {
               $this->password = "";
               $this->dbname = "navodila";
             }
-		$this->con = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname . $this->username . $this->password);
-        $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
+		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname, . $this->username, . $this->password);
+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
 //uzavírací zavorky __construct		
 	}
 	
@@ -42,7 +42,7 @@ class Database {
 		}
 	}
 	
-	$dotaz = $this->con->prepare("SELECT $sloupceSQL FROM '$tabulka'". $podminkaSQL);
+	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM '$tabulka'". $podminkaSQL);
 	
 	try {
 		$dotaz->execute($parametry);
