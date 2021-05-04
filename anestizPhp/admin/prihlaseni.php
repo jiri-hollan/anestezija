@@ -14,12 +14,12 @@ Class Prihlaseni {
 	}
 	
 	public function inicializuj() {
-	  if ($_SERVER['REQUEST_METOD'] == 'POST') {
+	  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		  $chiba = $this->overUdaje();
-	  }else if (!empty($_GET['stav'] && $_GET[stav] == 'neaktivni')){
+	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
 		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' + 'Ponovno se prijavite.';		  
 	  }
-	  require_once(sabloni/prihlasovaci-formular.php);
+	  require_once('sabloni/prihlasovaci-formular.php');
 	//od function inicializuj
 	}
 	
