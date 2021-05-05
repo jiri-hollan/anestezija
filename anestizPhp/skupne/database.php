@@ -30,19 +30,24 @@ class Database {
 	$sloupceSQL = implode(', ', $sloupce);
 	$podminkaSQL = '';
 	$parametry = array();
+	
 	if (is_array($podminka)){
 		$i = 0;
 		foreach ($podminka as $sloupec=>$hodnota){
 			if ($i == 0){
-				$podminkaSQL .=" WHERE '$sloupec' = ?";				
+				$podminkaSQL .=" WHERE $sloupec = ?";				
 			}else {
-				$podminkaSQL .= " AND '$sloupec' = ?";
+				$podminkaSQL .= " AND $sloupec = ?";
 			}
 			$parametry[$i] = $hodnota;
+			$i++;
 		}
 	}
 	
-	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM '$tabulka'". $podminkaSQL);
+	/*echo var_dump($parametry) . "<br>";
+	echo var_dump($podminka) . "<br>";
+	echo var_dump($podminkaSQL . "<br>");*/
+	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
 	
 	try {
 		$dotaz->execute($parametry);

@@ -32,11 +32,10 @@ Class Prihlaseni {
 	}
 	
 	private function overUdaje() {
-		if (!empty($_POST['jmeno']) && !empty($_POST['geslo'])){
+		if (!empty($_POST['email']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
-			$uzivatele = $this->conn->vyber('uzivatele', array('id'),
-			   array('jmeno'=>$_POST['jmeno'], 'geslo'=>$geslo));
-		if (count($uzivatele) > 0)	{
+			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('id'), array('email'=>$_POST['email'], 'geslo'=>$geslo));
+		if (count($uporabnikiTbl) > 0)	{
 			$this->prihlaseniUspesne();
 		} else {
 			return $this->prihlaseniSelhalo();
