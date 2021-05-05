@@ -18,7 +18,7 @@
 
 <div id="id01" class="modal">
   <!--<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>-->
-  <form class="modal-content animate" action="uporabnikNov.php" method="post">
+  <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
     <div class="container">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
@@ -55,7 +55,7 @@
 <!-- ________________________________________________________________________________-->
 <div id="id02" class="modal">
   
-  <form class="modal-content animate" action="uporabnikLogin.php" method="post">
+  <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
     
 
     <div class="container">
