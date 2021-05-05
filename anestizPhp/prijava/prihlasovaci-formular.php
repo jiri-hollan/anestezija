@@ -4,8 +4,8 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="sabloni/uporabnikiVse.js?<?php echo time(); ?>"></script> 
-<link rel="stylesheet" href="sabloni/uporabnikiNov.css?<?php echo time(); ?>">
+<script src="uporabnikiVse.js?<?php echo time(); ?>"></script> 
+<link rel="stylesheet" href="uporabnikiNov.css?<?php echo time(); ?>">
 <!--<link rel="stylesheet" href="uporabnikiLogin.css?<?php echo time(); ?>">-->
 </head>
 <body>
