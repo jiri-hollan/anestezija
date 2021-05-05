@@ -24,10 +24,14 @@ Class Prihlaseni {
 	}
 	
 	public function prihlaseniUspesne(){
+	   $_SESSION['blog_prihasen'] = true;
+	   $_SESSION["casova_znamka"] = time();
 	   haeder('Location: ' . $this->zaklad->url . 'prispevki.php');
+	   exit();
 	}
 	
 	public function prihlaseniSelhalo() {
+		echo 'iz funkcije prihlaseniSelhalo';
 	   return 'Napačno uporabniško ime ali geslo. ';
 	}
 	

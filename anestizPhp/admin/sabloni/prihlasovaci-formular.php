@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h2>Modal Signup Form</h2>
+<h2>Registracija in prijava</h2>
 
 <button onclick="schovej('id01')"style="width:auto;">Sign Up</button>
 <!--<button onclick="document.getElementById('id01').style.display='block'"style="width:auto;">Sign Up</button>-->
@@ -18,9 +18,12 @@
 
 <div id="id01" class="modal">
   <!--<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>-->
+  
+<!-- ---------------------------------Registracija-------------------- 
+--------------------------------------------------------------------- -->  
   <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
     <div class="container">
-      <h1>Sign Up</h1>
+      <h1>Registracija</h1>
       <p>Please fill in this form to create an account.</p>
       <hr>
       <label for="ime"><b>Ime in priimek</b></label><br>
@@ -52,7 +55,7 @@
 
 
 
-<!-- ________________________________________________________________________________-->
+<!-- ___________________________   Prijava       ___________________________________________-->
 <div id="id02" class="modal">
   
   <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
