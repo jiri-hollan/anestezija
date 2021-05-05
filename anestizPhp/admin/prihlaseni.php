@@ -31,7 +31,7 @@ Class Prihlaseni {
 	   return 'Napačno uporabniško ime ali geslo. ';
 	}
 	
-	private function ovrUdaje() {
+	private function overUdaje() {
 		if (!empty($_POST['jmeno']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
 			$uzivatele = $this->conn->vyber('uzivatele', array('id'),
