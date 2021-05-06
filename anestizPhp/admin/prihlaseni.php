@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once('../skupne/database.php');
 
 Class Prihlaseni {
@@ -24,7 +24,7 @@ Class Prihlaseni {
 	}
 	
 	public function prihlaseniUspesne(){
-	   $_SESSION['blog_prihasen'] = true;
+	   $_SESSION['blog_prihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
 	   header('Location: ' . $this->zaklad->url . 'prispevki.php');
 	   exit();
