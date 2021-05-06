@@ -1,7 +1,9 @@
 <?php
+echo 'PRISPEVKI';
 
 require_once('administrace.php');
-
+session_destroy();
+ /* 
 class Prispevki extends Administrace {
    public function __construct() {
 	   parent::__construct();
@@ -16,15 +18,16 @@ class Prispevki extends Administrace {
 			   default:
 			     $this->vypisPrispevki();
 				 break;
+ 
 		   }
 	   } else {
-		   $this->vypisPispevki();
+		   $this->vypisPrispevki();
 	   }
    }
-   
+
    public function vipisPrispevki() {
 	  $prispevki = $this->conn->vyber('prispevki', array('*'));
-      require_once 'sablony/sprava-prispevku.php';	  
+     // require_once 'sablony/sprava-prispevku.php';	  
    }
    
    public function pridejPrispevek() {
@@ -81,3 +84,4 @@ class Prispevki extends Administrace {
 }
 
 $adminPrispevki = new Prispevki();
+*/
