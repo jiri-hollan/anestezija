@@ -16,9 +16,9 @@ Class Prihlaseni {
 	public function inicializuj() {
 	  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		  $chiba = $this->overUdaje();
-	  }/*else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
+	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
 		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' + 'Ponovno se prijavite.';		  
-	  }*/
+	  }
 	  require_once('sabloni/prihlasovaci-formular.php');
 	//od function inicializuj
 	}
@@ -26,7 +26,7 @@ Class Prihlaseni {
 	public function prihlaseniUspesne(){
 	   $_SESSION['blog_prihasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
-	   haeder('Location: ' . $this->zaklad->url . 'prispevki.php');
+	   header('Location: ' . $this->zaklad->url . 'prispevki.php');
 	   exit();
 	}
 	
@@ -42,6 +42,7 @@ Class Prihlaseni {
 		if (count($uporabnikiTbl) > 0)	{
 			$this->prihlaseniUspesne();
 		} else {
+			echo 'iz funkcije overUdaje';
 			return $this->prihlaseniSelhalo();
 		}   
 	  }

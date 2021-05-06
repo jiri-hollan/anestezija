@@ -50,7 +50,7 @@ class Database {
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
 	
 	try {
-		$dotaz->execute($parametry);
+		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
