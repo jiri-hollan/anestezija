@@ -9,7 +9,7 @@ Class Prihlaseni {
 	public function __construct() {
 	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();
-	  $this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'anestiz/admin/';
+	  $this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'/anestiz/admin/';
 	  $this->inicializuj();
 	}
 	

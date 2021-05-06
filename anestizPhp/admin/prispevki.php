@@ -64,7 +64,7 @@ class Prispevki extends Administrace {
 	   
 	   if ($ulozeno !== false) {
 		   $oznameni = 'Příspěvek byl uspěšně uložen. ';
-		   header('Location. ' .$this->zaklad->conn . 'prispevki.php?oznameni=' .
+		   header('Location :' .$this->zaklad->conn . 'prispevki.php?oznameni=' .
 		   urencode($oznameni));
 		   exit();
 	   } else {
