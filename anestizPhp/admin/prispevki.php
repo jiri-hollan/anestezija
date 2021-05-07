@@ -1,6 +1,6 @@
 <?php
 echo 'PRISPEVKI';
-
+require_once('sabloni/vkladane/zahlavi.php');
 require_once('administrace.php');
 session_destroy();
  /* 
