@@ -2,7 +2,7 @@
 echo 'PRISPEVKI';
 require_once('sabloni/vkladane/zahlavi.php');
 require_once('administrace.php');
-session_destroy();
+//session_destroy();
  /* 
 class Prispevki extends Administrace {
    public function __construct() {
