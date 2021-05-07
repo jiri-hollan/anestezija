@@ -16,11 +16,15 @@ Class Odhlaseni {
 		 session_unset();
 			  session_destroy();
 			  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
-			  exit();
-		
+			  //exit();
+
+      if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
+		  $oznameni = 'Ste odjavljeni, ' . 'ponovno se prijavite.';		  
+	  }
 	  require_once('sabloni/prihlasovaci-formular.php');
-	//od function inicializuj
+	//od function odhlasi
 	}
+	
 	//od class odhlaseni	
 }
 	$odhlaseni = new Odhlaseni;
