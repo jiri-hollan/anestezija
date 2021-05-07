@@ -10,7 +10,7 @@
 
 <div class="topnav">
   <a class="active" href="../menuFile.php">Domov</a>
-  <a href="#news">Prijava</a>
+  <a href="../admin/index.php">Administrace</a>
   <a href="../admin/odhlaseni.php?stav=odhlasen">Odjava</a>
   <!--<a href="#about">About</a>-->
 </div>
