@@ -11,7 +11,7 @@
 <div class="topnav">
   <a class="active" href="../menuFile.php">Domov</a>
   <a href="#news">Prijava</a>
-  <a href="<?php echo $this->zaklad->url . 'prihlaseni.php?stav=odhlasit';  ?>">Odjava</a>
+  <a href="<?php echo $this->zaklad->url . 'odhlaseni.php?stav=odhlasi';  ?>">Odjava</a>
   <!--<a href="#about">About</a>-->
 </div>
 
