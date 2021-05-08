@@ -16,6 +16,6 @@
 </div>
 
 
- <?php require_once('../skupne/sabloni/oznamovaci-oblast.php');  ?> 
+ <?php require_once('sabloni/oznamovaci-oblast.php');  ?> 
 </body>
 </html>
