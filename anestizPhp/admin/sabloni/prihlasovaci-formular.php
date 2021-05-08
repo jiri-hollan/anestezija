@@ -21,7 +21,7 @@
   
 <!-- ---------------------------------Registracija-------------------- 
 --------------------------------------------------------------------- -->  
-  <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+  <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF'] . '?r=singin'?>" method="post">
     <div class="container">
       <h1>Registracija</h1>
       <p>Please fill in this form to create an account.</p>
@@ -58,7 +58,7 @@
 <!-- ___________________________   Prijava       ___________________________________________-->
 <div id="id02" class="modal">
   
-  <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+  <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF'] . '?r=login'?>" method="post">
     
 
     <div class="container">
