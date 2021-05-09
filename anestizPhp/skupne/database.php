@@ -60,10 +60,33 @@ class Database {
 	  $dotaz->closeCursor();
 	  return $zaznamy;
 	}
-	
-	public function  vloz($tabulka,$data){		
-	}		
-	
+//..................................................................................	
+	public function  vloz($tabulka,$data){
+       $sloupce = array();
+	   $hodnoty = array();
+	   $parametry = array();
+	   if (is_array($data)) {
+		foreach ($data as $sloupec => $hodnota) { 
+		 array_push($sloupce, "'$sloupec'");
+         array_push($hodnoty, '?');
+		 array_push($parametry, $hodnota);		   
+	   }		
+	}
+    $sloupceSQL = implode(', ', $sloupce);
+    $hodnotySQL = implode(',  ', $hodnoty);
+    $dotaz = $this->conn->prepare("INSERT INTO '$tabulka'($sloupceSQL) VALUES ($hodnotySQL)");
+
+  try {
+	  $dotaz->execute($parametry);
+	  $pocetVlozenych = $dotaz->rowCount();	  
+  } catch (PDOException $e) {
+	  echo $e->getMessage();
+	  $pocetVlozenych = false;
+  }
+  
+  return $pocetVlozenych;
+}
+//.......................................................................................
 	public function aktualizuj($tabulka,$data,$podminka){
 	}		
 	

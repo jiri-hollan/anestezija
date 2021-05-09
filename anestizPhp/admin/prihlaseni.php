@@ -63,8 +63,116 @@ Class Prijava extends Prihlaseni {
 // od class Prijava	
 }
 //_____________________________________konec Prijava_______________________________________________
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Class Registrace extends Prihlaseni {
+
+public $keys;
+public $values;
+public $nameTable;
+	public function __construct() {
+$registracija=true;
+$email=$geslo=$ime=$priimek=0;
+$status = 1;
+$nameTable = "uporabnikiTbl";
+
+$uporabnik['email'] = $email;
+$uporabnik['geslo'] = $geslo;
+$uporabnik['ime'] = $ime;
+$uporabnik['priimek'] = $priimek;
+$uporabnik['status'] = $status;
+
+
+   $keys = implode(", ",array_keys($uporabnik));
+	
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	
+
+	//echo $_POST["ime"];	
+if (empty($_POST["ime"])) {
+    echo"ime is required";
+	$registracija=false;	
+  } else {
+    $ime = $this->test_input($_POST["ime"]);
+  }	
+
+if (empty($_POST["priimek"])) {
+    echo "priimek is required";
+	$registracija=false;
+  } else {
+    $priimek = $this->test_input($_POST["priimek"]);  
+  }
+if (empty($_POST["email"])) {
+    echo "Email is required";
+	$registracija=false;	
+  } else {
+    $email = $this->test_input($_POST["email"]);
+  }
+  
+  
+if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
+    echo "napačen vnos gesla";
+	$registracija=false;	
+  } else {
+    $geslo = $this->test_input($_POST["geslo"]);
+	$geslo = md5($geslo);
+  }
+$uporabnik['email'] = $email;
+$uporabnik['geslo'] = $geslo;
+$uporabnik['ime'] = $ime;
+$uporabnik['priimek'] = $priimek;
+$uporabnik['status'] = $status;
+
+ $values= "'" . implode("','",array_values($uporabnik)) . "'";
+//echo "<br>".$keys ."<br>";
+//  echo $values; 
+ //include 'uporabnikNovPreveri.php';	 
+}
+
+
+
+if ($registracija){
+	//echo $values.'<br>'; 
+	 echo 'V if registracija'.$nameTable.'<br>';
+    $this->registracija($nameTable,$keys,$values);
+//	$this->registracija();	
+	}
+// od construct
+}
+	
+function registracija($nameTable,$keys,$values) {
+	
+try {
+	
+ // require_once '../skupne/prijavniWeb.php';
+  echo 'v registraciji'.$nameTable . '<br>';
+  
+  $sql = "INSERT INTO $nameTable ($keys)  VALUES ($values)";
+
+  echo  $sql.'<br>';
+  // use exec() because no results are returned
+  $this->conn->exec($sql);
+  echo "Uporabnik je registriran";
+} catch(PDOException $e) {
+  echo "<br>email  " .  $e->getMessage();
+}
+
+$conn = null;
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+
+
+// od class Registrace	
+}
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Class Registracex extends Prihlaseni {
 	/*	public function prihlaseniUspesne(){
 	   $_SESSION['blog_prihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
