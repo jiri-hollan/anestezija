@@ -65,28 +65,29 @@ Class Prijava extends Prihlaseni {
 //_____________________________________konec Prijava_______________________________________________
 
 Class Registrace extends Prihlaseni {
-		public function prihlaseniUspesne(){
+	/*	public function prihlaseniUspesne(){
 	   $_SESSION['blog_prihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
 	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
 	  header('Location: ' .  'prispevki.php');
 	   exit();
-	}
+	}*/
 	
-	public function prihlaseniSelhalo() {
-		echo 'iz funkcije prihlaseniSelhalo';
-	   return 'Napačno uporabniško ime ali geslo. ';
+	public function prihlaseniNadaljuj() {
+		echo 'iz funkcije prihlaseniNadaljuj';
+	   return 'uporabniško ime še ni v bazi ';
 	}
 	
 	public function overUdaje() {
-		if (!empty($_POST['email']) && !empty($_POST['geslo'])){
-			$geslo = md5($_POST['geslo']);
-			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('id'), array('email'=>$_POST['email'], 'geslo'=>$geslo));
+		if (!empty($_POST['email'])){
+			
+			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('id'), array('email'=>$_POST['email']));
 		if (count($uporabnikiTbl) > 0)	{
-			$this->prihlaseniUspesne();
+					echo 'iz funkcije overUdaje uporabnik obstaja';
+			//$this->prihlaseniUspesne();
 		} else {
 			echo 'iz funkcije overUdaje';
-			return $this->prihlaseniSelhalo();
+			return $this->prihlaseniNadaljuj();
 		}   
 	  }
 	}
@@ -112,7 +113,7 @@ switch ($r) {
 
    break;
  case "singin":
-  $registrace = new Registrace;
+  $prihlaseni = new Registrace;
     echo "Poskušate se registrirati!";
     //$prihlaseni = new Prihlaseni;
    break;  
