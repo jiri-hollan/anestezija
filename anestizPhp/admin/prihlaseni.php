@@ -67,6 +67,7 @@ Class Registrace {
 	
 	public function inicializuj() {
 	  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		  echo $this->overUdaje();
 		  $chiba = $this->overUdaje();
 	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
 		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' . 'Ponovno se prijavite.';		  
