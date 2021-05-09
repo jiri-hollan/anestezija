@@ -104,13 +104,23 @@ Class Registrace {
 }
 //___________________________________- potomstvo_______________________________________________
 
-Class Singin extend Prijava {
+Class Prijavax extend Prijava {
 	
 	
 	
-// od class singin	
+// od class Prijavax	
 }
-//_____________________________________konec Singin_______________________________________________
+//_____________________________________konec Prijavax_______________________________________________
+
+Class Registracex extend Prijava {
+	
+	
+	
+// od class Registracex	
+}
+//_____________________________________konec Registracex_______________________________________________
+
+
 
 //$prihlaseni = new Prihlaseni;
 if (isset($_GET['r'])) {
