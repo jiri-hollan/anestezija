@@ -104,7 +104,7 @@ Class Registrace {
 }
 //___________________________________- potomstvo_______________________________________________
 
-Class Prijavax extend Prijava {
+Class Prijava extends Prihlaseni {
 	
 	
 	
@@ -112,7 +112,7 @@ Class Prijavax extend Prijava {
 }
 //_____________________________________konec Prijavax_______________________________________________
 
-Class Registracex extend Prijava {
+Class Registracex extends Prihlaseni {
 	
 	
 	
@@ -129,7 +129,7 @@ if (isset($_GET['r'])) {
 switch ($r) {
   case "login":
     // echo "poskušate se logirati!"; ta vrstica povzroči napako 
-      $prihlaseni = new Prihlaseni;
+      $prihlaseni = new Prijava;
     echo "poskušate se logirati!"; 
 
    break;
