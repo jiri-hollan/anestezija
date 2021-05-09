@@ -102,6 +102,16 @@ Class Registrace {
 	
 	//od class registrace
 }
+//___________________________________- potomstvo_______________________________________________
+
+Class Singin extend Prijava {
+	
+	
+	
+// od class singin	
+}
+//_____________________________________konec Singin_______________________________________________
+
 //$prihlaseni = new Prihlaseni;
 if (isset($_GET['r'])) {
 	 // echo 'poskus GET' . $_GET['r'];
