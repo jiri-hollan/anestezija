@@ -11,19 +11,20 @@ Class Prihlaseni {
 	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();
 	  $this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'/anestiz/admin/';
-	  $this->inicializuj();
+	  //$this->inicializuj();
 
 	}
 	
-	public function inicializuj() {
+	/*public function inicializuj() {
 	  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		  $chiba = $this->overUdaje();
+		  echo var_dump($chiba);
 	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
 		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' . 'Ponovno se prijavite.';		  
 	  }
 	  require_once('sabloni/prihlasovaci-formular.php');
 	//od function inicializuj
-	}
+	}  */
 	
 
 	
@@ -33,6 +34,19 @@ Class Prihlaseni {
 //___________________________________- potomstvo_______________________________________________
 
 Class Prijava extends Prihlaseni {
+	
+	
+	public function __construct() {
+		    parent::__construct();
+	 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		  $chiba = $this->overUdaje();
+		  echo var_dump($chiba);
+	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
+		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' . 'Ponovno se prijavite.';		  
+	  }
+	  require_once('sabloni/prihlasovaci-formular.php');
+	//od function inicializuj		
+	}
 	
 	public function prihlaseniUspesne(){
 	   $_SESSION['blog_prihlasen'] = true;
