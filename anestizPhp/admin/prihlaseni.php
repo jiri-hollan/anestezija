@@ -72,6 +72,7 @@ Class Registrace extends Prihlaseni {
     public $nameTable;
    
 	public function __construct() {
+		    parent::__construct();
 $registracija=true;
 $email=$geslo=$ime=$priimek=0;
 $status = 1;
