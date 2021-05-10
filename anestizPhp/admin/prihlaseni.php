@@ -132,6 +132,9 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+public function overUdaje() {
+	
+}
 
 // od class Registrace	
 }

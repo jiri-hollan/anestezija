@@ -74,7 +74,10 @@ class Database {
 	}
     $sloupceSQL = implode(', ', $sloupce);
     $hodnotySQL = implode(',  ', $hodnoty);
-    $dotaz = $this->conn->prepare("INSERT INTO '$tabulka'($sloupceSQL) VALUES ($hodnotySQL)");
+	echo $sloupceSQL.'<br>';
+	echo $hodnotySQL.'<br>';
+	echo var_dump($parametry).'<br>';
+    $dotaz = $this->conn->prepare("INSERT INTO '$tabulka' ($sloupceSQL) VALUES ($hodnotySQL)");
 
   try {
 	  $dotaz->execute($parametry);
