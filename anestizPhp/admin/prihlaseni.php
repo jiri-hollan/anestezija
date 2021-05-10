@@ -43,7 +43,7 @@ Class Prijava extends Prihlaseni {
 	}
 	
 	public function prihlaseniSelhalo() {
-		echo 'iz funkcije prihlaseniSelhalo';
+		//echo 'iz funkcije prihlaseniSelhalo';
 	   return 'Napačno uporabniško ime ali geslo. ';
 	}
 	
@@ -55,7 +55,7 @@ Class Prijava extends Prihlaseni {
 		if (count($uporabnikiTbl) > 0)	{
 			$this->prihlaseniUspesne();
 		} else {
-			echo 'iz funkcije overUdaje';
+			//echo 'iz funkcije overUdaje';
 			return $this->prihlaseniSelhalo();
 		}   
 	  }
@@ -119,7 +119,7 @@ if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
 
 if ($registracija){
 	//echo $values.'<br>'; 
-	 echo '<br>'.'V if registracija: '.$nameTable.var_dump($data).'<br>';
+	 //echo '<br>'.'V if registracija: '.$nameTable.var_dump($data).'<br>';
   //  $this->registracija($nameTable,$keys,$values);
       $ulozeno = $this->conn->vloz($nameTable, $data);
 	}
