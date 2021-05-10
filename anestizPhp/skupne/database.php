@@ -67,7 +67,7 @@ class Database {
 	   $parametry = array();
 	   if (is_array($data)) {
 		foreach ($data as $sloupec => $hodnota) { 
-		 array_push($sloupce, "'$sloupec'");
+		 array_push($sloupce, $sloupec);
          array_push($hodnoty, '?');
 		 array_push($parametry, $hodnota);		   
 	   }		
@@ -77,7 +77,7 @@ class Database {
 	echo $sloupceSQL.'<br>';
 	echo $hodnotySQL.'<br>';
 	echo var_dump($parametry).'<br>';
-    $dotaz = $this->conn->prepare("INSERT INTO '$tabulka' ($sloupceSQL) VALUES ($hodnotySQL)");
+    $dotaz = $this->conn->prepare("INSERT INTO $tabulka ($sloupceSQL) VALUES ($hodnotySQL)");
 
   try {
 	  $dotaz->execute($parametry);
