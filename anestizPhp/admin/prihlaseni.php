@@ -118,9 +118,9 @@ if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
 
 if ($registracija){
 	//echo $values.'<br>'; 
-	 echo 'V if registracija'.$nameTable.'<br>';
+	 echo '<br>'.'V if registracija: '.$nameTable.var_dump($data).'<br>';
   //  $this->registracija($nameTable,$keys,$values);
-	$ulozeno = $this->conn->vloz($nameTable, $data);
+      $ulozeno = $this->conn->vloz($nameTable, $data);
 	}
 // od construct
 }
