@@ -135,7 +135,8 @@ if ($registracija){
 	//echo $values.'<br>'; 
 	 //echo '<br>'.'V if registracija: '.$nameTable.var_dump($data).'<br>';
   //  $this->registracija($nameTable,$keys,$values);
-      $ulozeno = $this->conn->vloz($nameTable, $data);
+      $chiba = $this->overUdaje($nameTable, $data);
+     // $ulozeno = $this->conn->vloz($nameTable, $data);
 	}
 // od construct
 }
@@ -146,8 +147,21 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-public function overUdaje() {
-	
+public function overUdaje($nameTable, $data) {
+	if (!empty($data['email'])){
+			
+			//$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('id'), array('email'=>$_POST['email']));
+            $uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), $data['email']);
+		if (count($uporabnikiTbl) > 0)	{
+			//$this->prihlaseniUspesne();
+			echo 'to uporabniško ime že obstaja';
+			
+		} else {
+			//echo 'iz funkcije overUdaje';
+			//return $this->prihlaseniSelhalo();
+			$ulozeno = $this->conn->vloz($nameTable, $data);
+		}   
+	  }
 }
 
 // od class Registrace	
