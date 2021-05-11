@@ -150,8 +150,8 @@ function test_input($data) {
 public function overUdaje($nameTable, $data) {
 	if (!empty($data['email'])){
 			
-			//$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('id'), array('email'=>$_POST['email']));
-            $uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), $data['email']);
+			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('id'), array('email'=>$_POST['email']));
+            //$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), $data['email']);
 		if (count($uporabnikiTbl) > 0)	{
 			//$this->prihlaseniUspesne();
 			echo 'to uporabniško ime že obstaja';
@@ -160,6 +160,7 @@ public function overUdaje($nameTable, $data) {
 			//echo 'iz funkcije overUdaje';
 			//return $this->prihlaseniSelhalo();
 			$ulozeno = $this->conn->vloz($nameTable, $data);
+			echo 'uspešno ste se registrirali';
 		}   
 	  }
 }
