@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sl-SI">
+<html lang="cs-SI">
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8">

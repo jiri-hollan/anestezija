@@ -149,8 +149,9 @@ function test_input($data) {
 }
 public function overUdaje($nameTable, $data) {
 	if (!empty($data['email'])){
-			
-			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('id'), array('email'=>$_POST['email']));
+		echo $data['ime'] .' '. $data['priimek'].', ';
+			//$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), array('email'=>$_POST['email']));
+			$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), array('email'=>$data['email']));
             //$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), $data['email']);
 		if (count($uporabnikiTbl) > 0)	{
 			//$this->prihlaseniUspesne();
@@ -178,15 +179,15 @@ if (isset($_GET['r'])) {
 	  $r = $_GET['r'];
 switch ($r) {
   case "login":
-    // echo "poskušate se logirati!"; ta vrstica povzroči napako 
+    
       $prihlaseni = new Prijava;
-    echo "poskušate se logirati!"; 
+    //echo "poskušate se logirati!"; 
 
    break;
  case "singin":
   $prihlaseni = new Registrace;
-    echo "Poskušate se registrirati!";
-    //$prihlaseni = new Prihlaseni;
+    //echo "Poskušate se registrirati!";
+ 
    break;  
   default:
     echo "Your favorite color is neither red, blue, nor green!";
