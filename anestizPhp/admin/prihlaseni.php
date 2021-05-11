@@ -46,7 +46,7 @@ Class Prijava extends Prihlaseni {
 		    parent::__construct();
 	 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		  $chiba = $this->overUdaje();
-		  echo var_dump($chiba);
+		  //echo var_dump($chiba);
 	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
 		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' . 'Ponovno se prijavite.';		  
 	  }
@@ -93,6 +93,8 @@ Class Registrace extends Prihlaseni {
    
 	public function __construct() {
 		    parent::__construct();
+			
+			
 $registracija=true;
 $email=$geslo=$ime=$priimek=0;
 $status = 1;
@@ -133,7 +135,8 @@ if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
 	$data['geslo'] = md5($geslo);
   }
     $data['status'] = $status;
-  
+  //echo '<br>status: ' .$status;
+  //echo'<br>data: '. $data["status"].'<br>';
 }
 
 

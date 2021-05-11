@@ -45,8 +45,8 @@ class Database {
 	}
 	
 	/*echo var_dump($parametry) . "<br>";
-	echo var_dump($podminka) . "<br>";
-	echo var_dump($podminkaSQL . "<br>");*/
+	  echo var_dump($podminka) . "<br>";
+	  echo var_dump($podminkaSQL . "<br>");*/
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
 	
 	try {
@@ -74,9 +74,10 @@ class Database {
 	}
     $sloupceSQL = implode(', ', $sloupce);
     $hodnotySQL = implode(',  ', $hodnoty);
-	/*echo $sloupceSQL.'<br>';
-	echo $hodnotySQL.'<br>';
-	echo var_dump($parametry).'<br>';*/
+/*	echo '<br>sloupce: '.$sloupceSQL.'<br>';
+	echo 'hodnotySQL: '.$hodnotySQL.'<br>';
+	echo 'parametry: '.var_dump($parametry).'<br>';
+	*/
     $dotaz = $this->conn->prepare("INSERT INTO $tabulka ($sloupceSQL) VALUES ($hodnotySQL)");
 
   try {

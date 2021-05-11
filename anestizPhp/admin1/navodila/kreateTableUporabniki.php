@@ -55,9 +55,9 @@ try {
 	`geslo` varchar(255) CHARACTER SET utf8 COLLATE utf8_slovenian_ci NOT NULL,
 	`ime` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
 	`priimek` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
-    `status` int(3) NOT NULL
+    `status` int(3) NOT NULL,
 	UNIQUE (email)
-    )TYPE = MYISAM CHARACTER SET utf8 COLLATE utf8_czech_ci";
+    )";
 
     // use exec() because no results are returned
     $conn->exec($sql);
