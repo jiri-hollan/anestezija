@@ -12,6 +12,7 @@
 </style>
 <body>
 
+
 <h1>Menu servis</h1>
 <ul id="linky1">
 <li><a href="konekt.php">Pripoji se na server</a></li>

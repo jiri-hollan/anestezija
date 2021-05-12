@@ -58,7 +58,8 @@ Class Prijava extends Prihlaseni {
 	   $_SESSION['blog_prihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
 	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
-	  header('Location: ' .  'prispevki.php');
+	 // header('Location: ' .  'prispevki.php');
+	 header('Location: ' .  'vertikalMenu.php');
 	   exit();
 	}
 	
