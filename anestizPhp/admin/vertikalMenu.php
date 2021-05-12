@@ -13,10 +13,14 @@
 <body>
 <?php
 
-echo 'PRISPEVKI';
+echo 'Menipulacija z bazo';
 require_once('sabloni/vkladane/zahlavi.php');
 require_once('administrace.php');
-?>
+
+class Vertikal extends Administrace {
+   public function __construct() {
+	       parent::__construct();   
+echo '
 
 <h1>Menu servis</h1>
 <ul id="linky1">
@@ -52,6 +56,11 @@ require_once('administrace.php');
 <li><a href="pregled/vsiPolnjenje.html">Vnos vsega</a></li>-->
 <li><a href="../pregled/novPolnjenje.php">polnjenje Nov bolnik</a></li>
 <li><a href="../pregled/zdravnik.php">vnos zdravnika</a></li>
-
+';
+   }
+//od class vertikal   
+}
+ $adminVnertikal = new Vertikal();  
+?>
 </body>
 </html>
