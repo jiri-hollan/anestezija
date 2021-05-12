@@ -6,6 +6,7 @@ global $r;
 Class Prihlaseni {
 	public $conn;
 	public $zaklad;
+	public $status;
 	
 	public function __construct() {
 	  $this->conn = new Database();
@@ -59,7 +60,8 @@ Class Prijava extends Prihlaseni {
 	   $_SESSION["casova_znamka"] = time();
 	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
 	 // header('Location: ' .  'prispevki.php');
-	 header('Location: ' .  'vertikalMenu.php');
+	
+	 //header('Location: ' .  'vertikalMenu.php');
 	   exit();
 	}
 	
@@ -71,8 +73,13 @@ Class Prijava extends Prihlaseni {
 	public function overUdaje() {
 		if (!empty($_POST['email']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
-			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('id'), array('email'=>$_POST['email'], 'geslo'=>$geslo));
-
+			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('status'), array('email'=>$_POST['email'], 'geslo'=>$geslo));
+         //echo $uporabnikiTbl[0]['status'];
+		 $status=$uporabnikiTbl[0]['status'];
+		 echo $status;
+		//echo var_dump($uporabnikiTbl) .'<br>';
+	
+		
 		if (count($uporabnikiTbl) > 0)	{
 			$this->prihlaseniUspesne();
 		} else {
