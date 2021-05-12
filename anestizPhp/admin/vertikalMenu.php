@@ -29,8 +29,8 @@ require_once('administrace.php');
 <li><a href="../admin1/selektPrikazi.php">prikazi izbrano tabelo</a></li>
 <li><a href="../admin1/doSql.php">vnesi in poženi SQL</a></li>
 <li><a href="../admin1/pokaziTable.php">pokaži Table</a></li>
-<li><a href="../admin1/pokaziStolpce.php"../admin1/>pokaži Stolpce</a></li>
-<li><a href="selektVnosna.php"../admin1/>pokaži vnešenega bolnika</a></li>
+<li><a href="../admin1/pokaziStolpce.php">pokaži Stolpce</a></li>
+<li><a href="selektVnosna.php">pokaži vnešenega bolnika</a></li>
 <li><a href="serverInformace.php">Informace o serveru</a></li>
 <li><a href="../skupne/database.php">Zagon poskusnega objekta database</a></li>
 
