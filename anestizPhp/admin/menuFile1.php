@@ -8,6 +8,16 @@
 <link rel="stylesheet" href="css/menuFile.css?<?php echo time(); ?>">
 </head>
 <body>
+<?php
+echo 'Menu anestiz';
+require_once('sabloni/vkladane/zahlavi.php');
+require_once('administrace.php');
+
+class MenuAnestiz extends Administrace {
+   public function __construct() {
+	       parent::__construct();   
+echo '
+
 <nav id= "glavnaNav">
 <ul>
   <li><a href="../oddelek/razpisMeseci.php?pogled=raz">Razpored</a> </li>
@@ -18,7 +28,12 @@
   <!-- <a href="/python/">Python</a>-->
 </ul>
 </nav>
-
+';
+   }
+//od class MenuAnestiz  
+}
+ $adminAnestiz = new MenuAnestiz();  
+?>
 </body>
 </html>
 
