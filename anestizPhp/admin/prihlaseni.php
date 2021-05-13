@@ -61,7 +61,8 @@ Class Prijava extends Prihlaseni {
 	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
 	 // header('Location: ' .  'prispevki.php');
 	
-	 header('Location: ' .  'vertikalMenu.php');
+	 header('Location: ' .  'menuFile1.php'); 
+	// header('Location: ' .  'vertikalMenu.php');
 	   exit();
 	}
 	
