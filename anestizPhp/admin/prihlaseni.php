@@ -80,7 +80,7 @@ Class Prijava extends Prihlaseni {
 		//echo var_dump($uporabnikiTbl) .'<br>';
 	
 		
-		if (count($uporabnikiTbl) > 0)	{
+		if (count($uporabnikiTbl) == 1)	{
 			$status=$uporabnikiTbl[0]['status'];
 		 echo $status;
 			$this->prihlaseniUspesne();
