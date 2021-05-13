@@ -50,7 +50,16 @@ ________________________________________________________________________________
 </div>
 
 <div class="navbar" id="navBolnice" style='display:z-index:1;'>
-     <button id="buttonDomov" onclick="window.location.href='../menuFile.php';"> Domov </button>
+<?php
+
+require_once('../frontend/home.php');
+
+//echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
+echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
+?>
+
+
+    <!-- <button id="buttonDomov" onclick="window.location.href='../menuFile.php';"> Domov </button>-->
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 	 <!-- Preklapljanje med bolnišnicami -->
 	<span class="navSpan" id="sbi" onclick="sbFunction('i')">S.B. Izola</span>

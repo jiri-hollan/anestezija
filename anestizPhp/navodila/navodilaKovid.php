@@ -9,8 +9,11 @@
 <body>
 <?php
 
+require_once('../frontend/home.php');
+
+echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 ?>
-<a id="buttonDomov" href="../menuFile.php" >Domov</a>
+<!--<a id="buttonDomov" href="../menuFile.php" >Domov</a>-->
 
 <?php
 

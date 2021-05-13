@@ -8,9 +8,14 @@
 <link rel="stylesheet" href="../css/razpisMeseci.css?<?php echo time(); ?>">
 </head>
 <body>
+<?php
 
+require_once('../frontend/home.php');
 
-<a id="buttonDomov" href="../menuFile.php" >Domov</a>
+echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
+?>
+
+<!--<a id="buttonDomov" href="../menuFile.php" >Domov</a>-->
 <ul id= "meseci">
 <?php
 
