@@ -180,7 +180,7 @@ public function overUdaje($nameTable, $data) {
 			//echo 'iz funkcije overUdaje';
 			//return $this->prihlaseniSelhalo();
 			$ulozeno = $this->conn->vloz($nameTable, $data);
-			echo 'uspešno ste se registrirali';
+			echo 'uspešno ste se registrirali,<br> pravice do dostopa vam bodo dodeljene po posvetu <br>z obveščevalnimi agencijami.';
 		}   
 	  }
 }
