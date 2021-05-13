@@ -75,12 +75,14 @@ Class Prijava extends Prihlaseni {
 			$geslo = md5($_POST['geslo']);
 			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('status'), array('email'=>$_POST['email'], 'geslo'=>$geslo));
          //echo $uporabnikiTbl[0]['status'];
-		 $status=$uporabnikiTbl[0]['status'];
-		 echo $status;
+		 //$status=$uporabnikiTbl[0]['status'];
+		// echo $status;
 		//echo var_dump($uporabnikiTbl) .'<br>';
 	
 		
 		if (count($uporabnikiTbl) > 0)	{
+			$status=$uporabnikiTbl[0]['status'];
+		 echo $status;
 			$this->prihlaseniUspesne();
 		} else {
 			//echo 'iz funkcije overUdaje';
