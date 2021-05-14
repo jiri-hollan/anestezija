@@ -55,9 +55,11 @@ Class Prijava extends Prihlaseni {
 	//od function inicializuj		
 	}
 	
-	public function prihlaseniUspesne(){
+	public function prihlaseniUspesne($status){
 	   $_SESSION['blog_prihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
+	   $_SESSION["status"] = $status;
+	  //echo $status;
 	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
 	 // header('Location: ' .  'prispevki.php');
 	
@@ -83,8 +85,8 @@ Class Prijava extends Prihlaseni {
 		
 		if (count($uporabnikiTbl) == 1)	{
 			$status=$uporabnikiTbl[0]['status'];
-		 echo $status;
-			$this->prihlaseniUspesne();
+		// echo $status;
+			$this->prihlaseniUspesne($status);
 		} else {
 			//echo 'iz funkcije overUdaje';
 			return $this->prihlaseniSelhalo();
