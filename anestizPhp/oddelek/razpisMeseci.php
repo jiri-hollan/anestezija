@@ -15,7 +15,6 @@ require_once('../frontend/home.php');
 echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 ?>
 
-<!--<a id="buttonDomov" href="../menuFile.php" >Domov</a>-->
 <ul id= "meseci">
 <?php
 
@@ -47,7 +46,8 @@ switch ($pogled) {
 }
 }else {
  //---------------če ni definiran $pogled, vrne se v osnovni menu--------
-  header('Location: ../menuFile.php');
+ // header('Location: ../menuFile.php');
+  header('Location: ../admin/menuFile1.php');
 }
 
 ?>
