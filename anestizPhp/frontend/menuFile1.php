@@ -28,11 +28,13 @@ echo '
   if (isset($_SESSION["status"]))  {
 	   switch ($_SESSION["status"]) {
 		   
-	case 1:
+	case 1:	
      echo '<li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>';
     break;   
  
      case 2:
+	 case 3:
+    echo '<li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>';
     echo '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>';
     break;
    
