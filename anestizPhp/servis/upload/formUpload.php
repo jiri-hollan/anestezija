@@ -12,7 +12,7 @@
     <a id="buttonDomov" href="../../admin/menuFile1.php" >Domov</a>-->
 <?php
 
-require_once('../../frontend/home.php');
+require_once('../../skupne/home.php');
 
 echo '<a id="buttonDomov" href="../' . $home . '" >Domov</a>';
 ?>

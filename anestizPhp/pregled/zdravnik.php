@@ -52,7 +52,7 @@ ________________________________________________________________________________
 <div class="navbar" id="navBolnice" style='display:z-index:1;'>
 <?php
 
-require_once('../frontend/home.php');
+require_once('../skupne/home.php');
 
 //echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
