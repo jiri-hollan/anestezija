@@ -11,11 +11,11 @@
 <?php
 echo 'Menu anestiz';
 require_once('sabloni/vkladane/zahlavi.php');
-require_once('administrace.php');
+//require_once('administrace.php');
 
-class MenuAnestiz extends Administrace {
+class MenuAnestiz  {
    public function __construct() {
-	       parent::__construct();   
+	         
 echo '
 
 <nav id= "glavnaNav">
