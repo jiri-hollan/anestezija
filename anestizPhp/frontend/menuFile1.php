@@ -25,12 +25,20 @@ echo '
   <li><a href="../pregled/zdravnik.php?doma=frontend">Pregled</a> </li>
   <li><a href="../oddelek/razpisMeseci.php?pogled=dez&doma=frontend">Dežurstva</a> </li>';
   
-  if (isset($_SESSION["status"]) && $_SESSION["status"] == 1)  {
-  echo '<li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>';
-   } 
-  
-  if (isset($_SESSION["status"]) && $_SESSION["status"] == 2)  {
-  echo '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>';
+  if (isset($_SESSION["status"]))  {
+	   switch ($_SESSION["status"]) {
+		   
+	case 1:
+     echo '<li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>';
+    break;   
+ 
+     case 2:
+    echo '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>';
+    break;
+   
+    default:
+	   }
+	   //od switch
    }
    
    echo '
