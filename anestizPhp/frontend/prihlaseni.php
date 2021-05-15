@@ -3,7 +3,7 @@ session_start();
 require_once('../skupne/database.php');
 global $r;
 	  //require_once('sabloni/prihlasovaci-formular.php');
-	  require_once('../frontend/menuFile.php');
+	  require_once('menuFile.php');
 	  
 Class Prihlaseni {
 	public $conn;
