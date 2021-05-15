@@ -18,7 +18,7 @@ Class Odhlaseni {
 	  
 	  //$this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'/anestiz/admin/';
 	  echo 'odhlašovani';
-	  if (null !== ($_GET['stav'] || $_GET['stav'] == 'odhlasen')) {
+	  if (null !== ($_GET['stav'] || $_GET['stav'] == 'odhlasit')) {
 	  $this->odhlasi();
      }	
 	
@@ -30,9 +30,9 @@ Class Odhlaseni {
 
 			  //exit();
          //echo 'STAV' . $_GET['stav'];
-     // if (!empty($_GET['stav'] && $_GET['stav'] == 'odhlasen')){
+     // if (!empty($_GET['stav'] && $_GET['stav'] == 'odhlasit')){
 		  $oznameni = 'Ste odjavljeni, ' . 'ponovno se prijavite.';	
-		header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasen');  
+		header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');  
 	  //}
 	  require_once('sabloni/prihlasovaci-formular.php');
 	//od function odhlasi

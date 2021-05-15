@@ -32,9 +32,9 @@ class Administrace {
 	  if (empty($prihlasen)) {
 		  session_unset();
 		  session_destroy();
-		  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasen');
+		  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');
 		   
-	// header('Location: localhost/anestiz/admin/prihlaseni.php?stav=odhlasen');
+	// header('Location: localhost/anestiz/admin/prihlaseni.php?stav=odhlasit');
 		   
 		   exit();
 	  } else {
