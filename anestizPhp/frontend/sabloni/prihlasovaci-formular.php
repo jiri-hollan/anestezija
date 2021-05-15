@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php require_once('vkladane/zahlavi.php');?>
-<h2>Registracija in prijava</h2>
+
 
 <button onclick="schovej('id01')"style="width:auto;">Sign Up</button>
 <!--<button onclick="document.getElementById('id01').style.display='block'"style="width:auto;">Sign Up</button>-->
