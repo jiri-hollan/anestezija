@@ -15,7 +15,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8_general_ci" />
 
   <meta name="keywords" content="anestezija,Izola,hollan" />
-  <meta http-equiv="refresh" content="0;url=menuFile.php" />
+  <meta http-equiv="refresh" content="0;url=frontend/menuFile1.php" />
 
   <title>Anestezija Izola</title>
 </head>
