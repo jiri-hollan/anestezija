@@ -39,7 +39,20 @@ Class Prihlaseni {
 }
 
 //___________________________________- potomstvo_______________________________________________
+Class Odjava extends Prihlaseni {
+	public function __construct() {
+		    parent::__construct();
+	  if (!empty($_GET['stav']) && $_GET['stav'] == 'odhlasit')	{
+		  session_unset();
+		  session_destroy();
+		  $oznameni = 'Uspešno ste se odhlasili.';
+		  require_once('sabloni/prihlasovaci-formular.php');
+	  }
+	}//od construct	
+}//od Odjava
 
+// //////////////////////////// konec odjava//////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////
 Class Prijava extends Prihlaseni {
 	
 	
@@ -209,6 +222,11 @@ switch ($r) {
  case "singin":
   $prihlaseni = new Registrace;
     //echo "Poskušate se registrirati!";
+ 
+   break;  
+   case "logout":
+  $prihlaseni = new Odjava;
+    //echo "Odjavili ste se!";
  
    break;  
   default:

@@ -11,7 +11,8 @@
 <div class="topnav">
   <a class="active" href="../admin/menuFile1.php">Domov</a>
   <a href="../admin/index.php">Administrace</a>
-  <a href="../admin/odhlaseni.php?stav=odhlasit">Odjava</a>
+  <a href="../admin/prihlaseni.php?stav=odhlasit&r=logout">Odjava</a>
+  <!--<a href="../admin/odhlaseni.php?stav=odhlasit">Odjava</a>-->
   <!--<a href="#about">About</a>-->
 </div>
 
