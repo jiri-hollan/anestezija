@@ -11,12 +11,12 @@ Class Odhlaseni {
 	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();
 	   if ($_SERVER['SERVER_NAME']=="localhost"){
-		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/admin/'; 
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/frontend/'; 
 	  }else {
-		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/admin/';  
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
 	  
-	  //$this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'/anestiz/admin/';
+	  //$this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'/anestiz/frontend/';
 	  echo 'odhlašovani';
 	  if (null !== ($_GET['stav'] || $_GET['stav'] == 'odhlasit')) {
 	  $this->odhlasi();

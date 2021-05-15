@@ -10,12 +10,12 @@ class Administrace {
 	  $this->conn = new Database();
       $this->zaklad = new stdClass();
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
-		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/admin/'; 
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/frontend/'; 
 	  }else {
-		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/admin/';  
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
 		  
-      //$this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/admin/';
+      //$this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/frontend/';
 	  //echo $this->zaklad->url;
 	  $casoviLimit = 600;
 	  if (isset($_SESSION["blog_prihlasen"])) {
@@ -34,7 +34,7 @@ class Administrace {
 		  session_destroy();
 		  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');
 		   
-	// header('Location: localhost/anestiz/admin/prihlaseni.php?stav=odhlasit');
+	// header('Location: localhost/anestiz/frontend/prihlaseni.php?stav=odhlasit');
 		   
 		   exit();
 	  } else {

@@ -9,9 +9,9 @@
 <body>
 
 <div class="topnav">
-  <a class="active" href="../admin/menuFile1.php">Domov</a>
-  <a href="../admin/index.php">Administrace</a>
-  <a href="../admin/odhlaseni.php?stav=odhlasit">Odjava</a>
+  <a class="active" href="../frontend/menuFile1.php">Domov</a>
+  <a href="../frontend/index.php">Administrace</a>
+  <a href="../frontend/odhlaseni.php?stav=odhlasit">Odjava</a>
   <!--<a href="#about">About</a>-->
 </div>
 
