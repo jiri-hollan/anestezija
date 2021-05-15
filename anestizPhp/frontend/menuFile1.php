@@ -11,7 +11,7 @@
 <?php
 echo 'Menu anestiz';
 require_once('sabloni/vkladane/zahlavi.php');
-//require_once('administrace.php');
+require_once('administrace.php');
 
 class MenuAnestiz  {
    public function __construct() {
@@ -20,10 +20,14 @@ echo '
 
 <nav id= "glavnaNav">
 <ul>
-  <li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>
+  <!--<li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>-->
   <li><a href="../navodila/navodilaKovid.php?doma=frontend">Navodila</a> </li>
   <li><a href="../pregled/zdravnik.php?doma=frontend">Pregled</a> </li>
   <li><a href="../oddelek/razpisMeseci.php?pogled=dez&doma=frontend">Dežurstva</a> </li>';
+  
+  if (isset($_SESSION["status"]) && $_SESSION["status"] == 1)  {
+  echo '<li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>';
+   } 
   
   if (isset($_SESSION["status"]) && $_SESSION["status"] == 2)  {
   echo '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>';
