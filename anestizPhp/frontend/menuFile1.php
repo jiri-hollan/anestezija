@@ -24,12 +24,10 @@ echo '
   <li><a href="../navodila/navodilaKovid.php">Navodila</a> </li>
   <li><a href="../pregled/zdravnik.php">Pregled</a> </li>
   <li><a href="../oddelek/razpisMeseci.php?pogled=dez">Dežurstva</a> </li>
-  if (isset($_SESSION["status"] && $_SESSION["status"] == 2)  )
+
   <li><a href="../servis/upload/menuUpload.php">servis</a> </li>
-   };
   
-  
-  <!-- <a href="/python/">Python</a>-->
+    <!-- <a href="/python/">Python</a>-->
 </ul>
 </nav>
 ';
