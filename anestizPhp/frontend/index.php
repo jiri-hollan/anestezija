@@ -1,5 +1,5 @@
 <?php
 
-require_once('administrace.php');
+require_once('menuFile1.php');
 
-$admin = new Administrace();
+//$admin = new Administrace();
