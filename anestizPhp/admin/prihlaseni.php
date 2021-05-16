@@ -74,9 +74,9 @@ Class Prijava extends Prihlaseni {
 	}
 	
 	public function overUdaje() {
-		if (!empty($_POST['email']) && !empty($_POST['geslo'])){
+		if (!empty($_POST['uname']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
-			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('status'), array('email'=>$_POST['email'], 'geslo'=>$geslo));
+			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('status'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
          //echo $uporabnikiTbl[0]['status'];
 		 //$status=$uporabnikiTbl[0]['status'];
 		// echo $status;
@@ -109,7 +109,7 @@ Class Registrace extends Prihlaseni {
 			
 			
 $registracija=true;
-$email=$geslo=$ime=$priimek=0;
+$uname=$geslo=$ime=$priimek=0;
 $status = 1;
 $nameTable = "uporabnikiTbl";
 
@@ -138,7 +138,12 @@ if (empty($_POST["email"])) {
   } else {
     $data['email'] = $this->test_input($_POST["email"]);
   }
-  
+  if (empty($_POST["uname"])) {
+    echo "Uporabniško ime is required";
+	$registracija=false;	
+  } else {
+    $data['uname'] = $this->test_input($_POST["uname"]);
+  }
   
 if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
     echo "napačen vnos gesla";
@@ -170,11 +175,11 @@ function test_input($data) {
   return $data;
 }
 public function overUdaje($nameTable, $data) {
-	if (!empty($data['email'])){
+	if (!empty($data['uname'])){
 		echo $data['ime'] .' '. $data['priimek'].', ';
-			//$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), array('email'=>$_POST['email']));
-			$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), array('email'=>$data['email']));
-            //$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), $data['email']);
+			//$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), array('uname'=>$_POST['uname']));
+			$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), array('uname'=>$data['uname']));
+            //$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), $data['uname']);
 		if (count($uporabnikiTbl) > 0)	{
 			//$this->prihlaseniUspesne();
 			echo 'to uporabniško ime že obstaja';

@@ -31,8 +31,8 @@
       <input type="text" class="imePriimek" placeholder=" Ime" name="ime" required>	  
       <input type="text" class="imePriimek" placeholder="Priimek" name="priimek" required><br>	  
 	  </span>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder=" Email" name="email" required>
+      <label for="uname"><b>uname</b></label>
+      <input type="text" placeholder=" Uporabniško ime" name="uname" required>
 
       <label for="geslo"><b>Geslo</b></label>
       <input type="password" placeholder="geslo" name="geslo" required>
@@ -62,8 +62,8 @@
     
 
     <div class="container">
-      <label for="email"><b>Uporabniško ime</b></label>
-      <input type="text" placeholder="Enter Username" name="email" required>
+      <label for="uname"><b>Uporabniško ime</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="geslo"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="geslo" required>
