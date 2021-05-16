@@ -40,6 +40,7 @@
 <h1>Menu uporabniki</h1>
 <ul id="linky3">
 <li><a href="navodila/kreateTableUporabniki.php">naredi tabelo: uporabnikiTbl</a></li>
+<li><a href="navodila/kreateTableUporabniki2.php">naredi tabelo: uporabnikiTbl2</a></li>
 
 <h1>Menu pregled</h1>
 <ul id="linky2">
