@@ -43,6 +43,6 @@ echo '
 //od class MenuAnestiz  
 }
  $adminAnestiz = new MenuAnestiz(); 
-require_once('vkladane/zapati.php'); 
+require_once('sabloni/vkladane/zapati.php'); 
 ?>
 
