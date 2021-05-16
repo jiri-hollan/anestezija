@@ -17,5 +17,5 @@
 
 
  <?php require_once('sabloni/oznamovaci-oblast.php');  ?> 
-</body>
-</html>
+
+
