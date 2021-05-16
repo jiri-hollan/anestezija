@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-echo 'Menu anestiz';
+//echo 'Menu anestiz';
 require_once('sabloni/vkladane/zahlavi.php');
 require_once('administrace.php');
 
