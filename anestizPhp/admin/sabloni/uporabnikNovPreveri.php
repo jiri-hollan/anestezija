@@ -21,7 +21,7 @@ try {
 
   include '../skupne/prijavniWeb.php';
 
-   $stmt = $conn->prepare("SELECT email,uname,geslo,status FROM $nameTable WHERE email='$email' OR uname=$uname");
+   $stmt = $conn->prepare("SELECT email,uname,geslo,status FROM $nameTable WHERE email='$email' OR uname='$uname'");
   $stmt->execute();
  
   $edini = $stmt->rowCount()>0;
