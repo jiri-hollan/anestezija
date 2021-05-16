@@ -1,18 +1,9 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--<script src="js/razpisMeseci.js"></script>-->
-<link rel="stylesheet" href="../css/menuFile.css?<?php echo time(); ?>">
-</head>
-<body>
 <?php
-echo 'Menu anestiz';
+
 require_once('sabloni/vkladane/zahlavi.php');
 require_once('administrace.php');
-
+echo 'Menu anestiz';
 class MenuAnestiz  {
    public function __construct() {
 	         
