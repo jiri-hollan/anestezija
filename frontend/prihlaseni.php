@@ -110,7 +110,7 @@ Class Registrace extends Prihlaseni {
 			
 $registracija=true;
 $email=$geslo=$ime=$priimek=$uname=0;
-$status = 1;
+$status = 0;
 $nameTable = "uporabnikiTbl2";
 
 	
