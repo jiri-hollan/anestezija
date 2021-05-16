@@ -24,13 +24,13 @@
       <input type="text" placeholder=" Email je potreben" name="email" required>
 	  
       <label for="uname"><b>uname</b></label>
-      <input type="text" placeholder=" Uporabniško ime" name="uname" required>
+      <input type="text" placeholder=" Uporabniško ime" name="uname" autocomplete="off" required>
 
       <label for="geslo"><b>Geslo</b></label>
-      <input type="password" placeholder="geslo" name="geslo" required>
+      <input type="password" placeholder="geslo" name="geslo" autocomplete="off" required>
 
       <label for="psw-repeat"><b>Ponovi geslo</b></label>
-      <input type="password" placeholder="Ponovi geslo" name="psw-repeat" required>
+      <input type="password" placeholder="Ponovi geslo" name="psw-repeat" autocomplete="off" required>
       <button type="submit" class="signupbtn">Sign Up</button>    
  
     </div>
@@ -51,10 +51,10 @@
 
     <div class="container">
       <label for="uname"><b>Uporabniško ime</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="uname" autocomplete="off" required>
 
       <label for="geslo"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="geslo" required>
+      <input type="password" placeholder="Enter Password" name="geslo" autocomplete="off" required>
         
       <button type="submit" class="signupbtn" >Login</button>
  <!--     <label>
