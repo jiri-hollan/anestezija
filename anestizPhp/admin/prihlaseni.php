@@ -76,15 +76,15 @@ Class Prijava extends Prihlaseni {
 	public function overUdaje() {
 		if (!empty($_POST['uname']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
-			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('status'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
-         //echo $uporabnikiTbl[0]['status'];
-		 //$status=$uporabnikiTbl[0]['status'];
+			$uporabnikiTbl2 = $this->conn->vyber('uporabnikiTbl2', array('status'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
+         //echo $uporabnikiTbl2[0]['status'];
+		 //$status=$uporabnikiTbl2[0]['status'];
 		// echo $status;
-		//echo var_dump($uporabnikiTbl) .'<br>';
+		//echo var_dump($uporabnikiTbl2) .'<br>';
 	
 		
-		if (count($uporabnikiTbl) == 1)	{
-			$status=$uporabnikiTbl[0]['status'];
+		if (count($uporabnikiTbl2) == 1)	{
+			$status=$uporabnikiTbl2[0]['status'];
 		// echo $status;
 			$this->prihlaseniUspesne($status);
 		} else {
@@ -111,7 +111,7 @@ Class Registrace extends Prihlaseni {
 $registracija=true;
 $uname=$geslo=$ime=$priimek=0;
 $status = 1;
-$nameTable = "uporabnikiTbl";
+$nameTable = "uporabnikiTbl2";
 
 	
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -177,10 +177,10 @@ function test_input($data) {
 public function overUdaje($nameTable, $data) {
 	if (!empty($data['uname'])){
 		echo $data['ime'] .' '. $data['priimek'].', ';
-			//$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), array('uname'=>$_POST['uname']));
-			$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), array('uname'=>$data['uname']));
-            //$uporabnikiTbl = $this->conn->vyber($nameTable, array('id'), $data['uname']);
-		if (count($uporabnikiTbl) > 0)	{
+			//$uporabnikiTbl2 = $this->conn->vyber($nameTable, array('id'), array('uname'=>$_POST['uname']));
+			$uporabnikiTbl2 = $this->conn->vyber($nameTable, array('id'), array('uname'=>$data['uname']));
+            //$uporabnikiTbl2 = $this->conn->vyber($nameTable, array('id'), $data['uname']);
+		if (count($uporabnikiTbl2) > 0)	{
 			//$this->prihlaseniUspesne();
 			echo 'to uporabniško ime že obstaja';
 			

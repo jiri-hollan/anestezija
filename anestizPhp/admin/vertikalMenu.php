@@ -48,7 +48,7 @@ echo '
 
 <h1>Menu uporabniki</h1>
 <ul id="linky3">
-<li><a href="../admin1/navodila/kreateTableUporabniki.php">naredi tabelo: uporabnikiTbl</a></li>
+<li><a href="../admin1/navodila/kreateTableUporabniki.php">naredi tabelo: uporabnikiTbl2</a></li>
 
 <h1>Menu pregled</h1>
 <ul id="linky2">
