@@ -3,12 +3,11 @@
 
 
 <button onclick="schovej('id01')"style="width:auto;">Sign Up</button>
-<!--<button onclick="document.getElementById('id01').style.display='block'"style="width:auto;">Sign Up</button>-->
+
 <button onclick="schovej('id02')" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
-  <!--<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>-->
-  
+
 <!-- ---------------------------------Registracija-------------------- 
 --------------------------------------------------------------------- -->  
   <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF'] . '?r=singin'?>" method="post">
@@ -33,11 +32,7 @@
       <label for="psw-repeat"><b>Ponovi geslo</b></label>
       <input type="password" placeholder="Ponovi geslo" name="psw-repeat" required>
       <button type="submit" class="signupbtn">Sign Up</button>    
-  <!--    <label>
-    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>-->
-
-     <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>-->
+ 
     </div>
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
