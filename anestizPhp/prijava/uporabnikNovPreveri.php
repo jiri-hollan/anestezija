@@ -5,7 +5,7 @@
 <?php
 
 if ($registracija){
-    $edini=preveriUnique($nameTable,$email);
+    $edini=preveriUnique($nameTable,$email,$uname);
 	if ($edini){
 			echo $edini . "ta uporabnik že obstaja";
 	$registracija=false;
@@ -15,13 +15,13 @@ if ($registracija){
 	}
 }	
 	
-function preveriUnique($nameTable,$email) {
+function preveriUnique($nameTable,$email,$uname) {
 	
 try {
 
   include '../skupne/prijavniWeb.php';
 
-   $stmt = $conn->prepare("SELECT email,geslo,status FROM $nameTable WHERE email='$email'");
+   $stmt = $conn->prepare("SELECT email,uname,geslo,status FROM $nameTable WHERE email='$email' OR uname='$uname'");
   $stmt->execute();
  
   $edini = $stmt->rowCount()>0;
