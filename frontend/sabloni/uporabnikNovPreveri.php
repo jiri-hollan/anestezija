@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="sl-SI">
 
-<body>
 <?php
 
 if ($registracija){
@@ -39,6 +36,3 @@ $conn = null;
 }
 ?>
 
-
-</body>
-</html>

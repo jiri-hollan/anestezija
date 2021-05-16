@@ -42,8 +42,7 @@ echo '
    }
 //od class MenuAnestiz  
 }
- $adminAnestiz = new MenuAnestiz();  
+ $adminAnestiz = new MenuAnestiz(); 
+require_once('vkladane/zapati.php'); 
 ?>
-</body>
-</html>
 
