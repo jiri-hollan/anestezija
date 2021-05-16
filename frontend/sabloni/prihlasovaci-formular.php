@@ -75,7 +75,4 @@
   </form>
 </div>
 
-
-
-</body>
-</html>
+<?php require_once('vkladane/zapati.php'); ?>
