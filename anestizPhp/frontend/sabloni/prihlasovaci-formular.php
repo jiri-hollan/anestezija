@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="sabloni/js/uporabnikiVse.js?<?php echo time(); ?>"></script> 
 <link rel="stylesheet" href="sabloni/css/uporabnikiNov.css?<?php echo time(); ?>">
-<!--<link rel="stylesheet" href="uporabnikiLogin.css?<?php echo time(); ?>">-->
+<!--<link rel="stylesheet" href="uporabnikiLogin.css?<?php// echo time(); ?>">-->
 </head>
 <body>
 <?php require_once('vkladane/zahlavi.php');?>

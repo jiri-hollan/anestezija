@@ -63,7 +63,7 @@ Class Prijava extends Prihlaseni {
 	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
 	 // header('Location: ' .  'prispevki.php');
 	
-	 header('Location: ' .  'menuFile1.php'); 
+	 header('Location: '.'menuFile1.php'); 
 	// header('Location: ' .  'vertikalMenu.php');
 	   exit();
 	}
@@ -217,6 +217,6 @@ switch ($r) {
  
    break;  
   default:
-    echo "Your favorite color is neither red, blue, nor green!";
+    //echo "Your favorite color is neither red, blue, nor green!";
 }
 }
