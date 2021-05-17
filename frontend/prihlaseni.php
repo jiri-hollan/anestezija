@@ -177,12 +177,12 @@ function test_input($data) {
 public function overUdaje($nameTable, $data) {
 	if (!empty($data['uname'])){
 		echo $data['ime'] .' '. $data['priimek'].', ';
-			//$uporabnikiTbl2 = $this->conn->vyber($nameTable, array('id'), array('uname'=>$_POST['uname']));
-			$uporabnikiTbl2 = $this->conn->vyber($nameTable, array('id'), array('uname'=>$data['uname']));
-            //$uporabnikiTbl2 = $this->conn->vyber($nameTable, array('id'), $data['uname']);
+
+			$uporabnikiTbl2 = $this->conn->vyberOr($nameTable, array('id'), array('uname'=>$data['uname'], 'email'=>$data['email'] ));
+
 		if (count($uporabnikiTbl2) > 0)	{
 			//$this->prihlaseniUspesne();
-			echo 'to uporabniško ime že obstaja';
+			echo 'To uporabniško ime ali email je že v upoabi.';
 			
 		} else {
 			//echo 'iz funkcije overUdaje';

@@ -19,7 +19,7 @@ function preveriUnique($nameTable,$email,$uname) {
 	
 try {
 
-  include '../skupne/prijavniWeb.php';
+  require_once '../skupne/prijavniWeb.php';
 
    $stmt = $conn->prepare("SELECT email,uname,geslo,status FROM $nameTable WHERE email='$email' OR uname='$uname'");
   $stmt->execute();
