@@ -21,7 +21,7 @@
       <input type="text" class="imePriimek" placeholder="Priimek" name="priimek" required><br>	  
 	  </span>
 	  <label for="email"><b>email</b></label>
-      <input type="text" placeholder=" Email je potreben" name="email" required>
+      <input type="text" placeholder=" Email je potreben" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ni veljaven email naslov" required>
 	  
       <label for="uname"><b>uname</b></label>
       <input type="text" placeholder=" Uporabniško ime" name="uname" autocomplete="off" required>
