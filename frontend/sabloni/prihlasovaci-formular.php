@@ -12,8 +12,6 @@
   <form class="modal-content animate" autocomplete="off" action="<?php echo $_SERVER['PHP_SELF'] . '?r=singin'?>" method="post">
     <div class="container">
       <h1>Registracija</h1>
-      <p>Please fill in this form to create an account.</p>
-      <hr>
       <label for="ime"><b>Ime in priimek</b></label><br>
 	  <span>
       <input type="text" class="imePriimek" placeholder=" Ime" name="ime" required>	  
