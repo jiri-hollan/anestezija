@@ -27,7 +27,7 @@
       <input type="text" placeholder=" Uporabniško ime" name="uname" autocomplete="off" required>
 
       <label for="geslo"><b>Geslo</b></label>
-      <input type="password" placeholder="geslo" name="geslo" autocomplete="off" required>
+      <input type="password" placeholder="geslo" name="geslo" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z]).{8,}" title="Mora vsebovati vsaj številke in male črke skupaj najmanj 8 znakov" required>
 
       <label for="psw-repeat"><b>Ponovi geslo</b></label>
       <input type="password" placeholder="Ponovi geslo" name="psw-repeat" autocomplete="off" required>
