@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <?php
 
 require_once('sabloni/vkladane/zahlavi.php');
