@@ -17,26 +17,10 @@ Class Prihlaseni {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
 	  
-	  //$this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'/anestiz/frontend/';
-	  //$this->inicializuj();
 
-	}
+	}	
 	
-	/*public function inicializuj() {
-	  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-		  $chiba = $this->overUdaje();
-		  echo var_dump($chiba);
-	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
-		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' . 'Ponovno se prijavite.';		  
-	  }
-	  require_once('sabloni/prihlasovaci-formular.php');
-	//od function inicializuj
-	}  */
-	
-
-	
-	//od class prihlaseni
-}
+}//od class prihlaseni
 
 //___________________________________- potomstvo_______________________________________________
 
