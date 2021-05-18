@@ -24,7 +24,7 @@ echo '
 ';
      } else {
 	echo	' <h2>za ta del niste pooblaščeni</h2>';
-	 }
+	}
    }//od construct 
 }//od class MenuAnestiz 
  $adminAnestiz = new MenuAnestiz(); 

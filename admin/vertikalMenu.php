@@ -1,25 +1,13 @@
-<!Doctype html>
-<html>
-<head>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta charset="UTF-8">
-<title>Menu</title>
-</head>
-
-
-<style>
-
-</style>
-<body>
 <?php
-
 echo 'Menipulacija z bazo';
 require_once('sabloni/vkladane/zahlavi.php');
 require_once('administrace.php');
 
 class Vertikal extends Administrace {
    public function __construct() {
-	       parent::__construct();   
+	       parent::__construct();
+		   
+  if (isset($_SESSION["status"]) && $_SESSION["status"] == 2)  {			   
 echo '
 
 <h1>Menu servis</h1>
@@ -57,10 +45,11 @@ echo '
 <li><a href="../pregled/novPolnjenje.php">polnjenje Nov bolnik</a></li>
 <li><a href="../pregled/zdravnik.php">vnos zdravnika</a></li>
 ';
-   }
-//od class vertikal   
-}
- $adminVnertikal = new Vertikal();  
+     } else {
+	echo	' <h2>za ta del niste pooblaščeni</h2>';
+	}
+   }//od construct 
+}//od class vertikal  
+ $adminVnertikal = new Vertikal(); 
+require_once('sabloni/vkladane/zapati.php'); 
 ?>
-</body>
-</html>
