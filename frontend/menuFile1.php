@@ -1,9 +1,8 @@
-
 <?php
-
+//echo 'Menu anestiz';
 require_once('sabloni/vkladane/zahlavi.php');
 require_once('administrace.php');
-//echo 'Menu anestiz';
+
 class MenuAnestiz  {
    public function __construct() {
 	         
