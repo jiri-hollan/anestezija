@@ -4,7 +4,7 @@ if (isset($_GET['doma'])) {
 	$doma=$_GET['doma'];
 	$home = '../' . $doma . '/menuFile1.php';
 } else {
-	$home = '../admin/menuFile1.php';
+	$home = '../frontend/menuFile1.php';
 }
 		
 
