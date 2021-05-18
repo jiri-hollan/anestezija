@@ -1,4 +1,4 @@
- <?php
+<?php
 session_start();
 require_once('../skupne/database.php');
 global $r;
@@ -17,29 +17,46 @@ Class Prihlaseni {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/admin/';  
 	  }
 	  
-	  //$this->zaklad->url = 'http://'.$_SERVER['SERVER_NAME'].'/anestiz/admin/';
-	  //$this->inicializuj();
 
-	}
+	}	
 	
-	/*public function inicializuj() {
-	  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-		  $chiba = $this->overUdaje();
-		  echo var_dump($chiba);
-	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
-		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' . 'Ponovno se prijavite.';		  
-	  }
-	  require_once('sabloni/prihlasovaci-formular.php');
-	//od function inicializuj
-	}  */
-	
-
-	
-	//od class prihlaseni
-}
+}//od class prihlaseni
 
 //___________________________________- potomstvo_______________________________________________
+Class odjava extends Prihlaseni {
+		
+	public function __construct() {
+		    parent::__construct();
+	
+ $this->conn = new Database();
+	  $this->zaklad = new stdClass();
+	   if ($_SERVER['SERVER_NAME']=="localhost"){
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/admin/'; 
+	  }else {
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/admin/';  
+	  }
 
+	  //echo 'odhlašovani';
+	  if (null !== ($_GET['stav'] || $_GET['stav'] == 'odhlasit')) {
+	  $this->odhlasi();
+     }	
+		}//od __construct	
+		
+		 public function odhlasi() {
+			//echo 'Odhlasi';
+		 session_unset();
+		 session_destroy();
+            echo 'Odhlašen';
+		  $oznameni = 'Ste odjavljeni, ' . 'ponovno se prijavite.';	
+//		header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');  
+
+	  require_once('sabloni/prihlasovaci-formular.php');
+	
+	}//od function odhlasi		
+	}//od clas odjava
+
+
+//____________________________________konec clas odjava_______________________________________
 Class Prijava extends Prihlaseni {
 	
 	
@@ -63,7 +80,7 @@ Class Prijava extends Prihlaseni {
 	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
 	 // header('Location: ' .  'prispevki.php');
 	
-	 header('Location: ' .  'menuFile1.php'); 
+	 header('Location: '.'menuFile1.php'); 
 	// header('Location: ' .  'vertikalMenu.php');
 	   exit();
 	}
@@ -109,7 +126,7 @@ Class Registrace extends Prihlaseni {
 			
 			
 $registracija=true;
-$uname=$geslo=$ime=$priimek=0;
+$email=$geslo=$ime=$priimek=$uname=0;
 $status = 0;
 $nameTable = "uporabnikiTbl2";
 
@@ -139,7 +156,7 @@ if (empty($_POST["email"])) {
     $data['email'] = $this->test_input($_POST["email"]);
   }
   if (empty($_POST["uname"])) {
-    echo "Uporabniško ime is required";
+    echo "Uporabniško ime je obvezno";
 	$registracija=false;	
   } else {
     $data['uname'] = $this->test_input($_POST["uname"]);
@@ -177,12 +194,12 @@ function test_input($data) {
 public function overUdaje($nameTable, $data) {
 	if (!empty($data['uname'])){
 		echo $data['ime'] .' '. $data['priimek'].', ';
-			//$uporabnikiTbl2 = $this->conn->vyber($nameTable, array('id'), array('uname'=>$_POST['uname']));
-			$uporabnikiTbl2 = $this->conn->vyber($nameTable, array('id'), array('uname'=>$data['uname']));
-            //$uporabnikiTbl2 = $this->conn->vyber($nameTable, array('id'), $data['uname']);
+
+			$uporabnikiTbl2 = $this->conn->vyberOr($nameTable, array('id'), array('uname'=>$data['uname'], 'email'=>$data['email'] ));
+
 		if (count($uporabnikiTbl2) > 0)	{
 			//$this->prihlaseniUspesne();
-			echo 'to uporabniško ime že obstaja';
+			echo 'To uporabniško ime ali email je že v upoabi.';
 			
 		} else {
 			//echo 'iz funkcije overUdaje';
@@ -209,14 +226,19 @@ switch ($r) {
     
       $prihlaseni = new Prijava;
     //echo "poskušate se logirati!"; 
-
    break;
+   
  case "singin":
   $prihlaseni = new Registrace;
     //echo "Poskušate se registrirati!";
- 
+   break;
+   
+case "logout":
+  $prihlaseni = new Odjava;
+    //echo "Poskušate se odjaviti!"; 
    break;  
+   
   default:
-    echo "Your favorite color is neither red, blue, nor green!";
+    //echo "Your favorite color is neither red, blue, nor green!";
 }
 }
