@@ -1,4 +1,4 @@
- <?php
+<?php
 session_start();
 require_once('../skupne/database.php');
 global $r;
@@ -23,7 +23,40 @@ Class Prihlaseni {
 }//od class prihlaseni
 
 //___________________________________- potomstvo_______________________________________________
+Class odjava extends Prihlaseni {
+		
+	public function __construct() {
+		    parent::__construct();
+	
+ $this->conn = new Database();
+	  $this->zaklad = new stdClass();
+	   if ($_SERVER['SERVER_NAME']=="localhost"){
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/frontend/'; 
+	  }else {
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
+	  }
 
+	  echo 'odhlašovani';
+	  if (null !== ($_GET['stav'] || $_GET['stav'] == 'odhlasit')) {
+	  $this->odhlasi();
+     }	
+		}//od __construct	
+		
+		 public function odhlasi() {
+			echo 'Odhlasi';
+		 session_unset();
+		 session_destroy();
+
+		  $oznameni = 'Ste odjavljeni, ' . 'ponovno se prijavite.';	
+		header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');  
+
+	  require_once('sabloni/prihlasovaci-formular.php');
+	
+	}//od function odhlasi		
+	}//od clas odjava
+
+
+//____________________________________konec clas odjava_______________________________________
 Class Prijava extends Prihlaseni {
 	
 	
@@ -193,13 +226,18 @@ switch ($r) {
     
       $prihlaseni = new Prijava;
     //echo "poskušate se logirati!"; 
-
    break;
+   
  case "singin":
   $prihlaseni = new Registrace;
     //echo "Poskušate se registrirati!";
- 
+   break;
+   
+case "logout":
+  $prihlaseni = new Odjava;
+    //echo "Poskušate se odjaviti!"; 
    break;  
+   
   default:
     //echo "Your favorite color is neither red, blue, nor green!";
 }
