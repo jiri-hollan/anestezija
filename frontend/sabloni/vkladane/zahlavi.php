@@ -16,7 +16,8 @@
 <div class="topnav">
   <a class="active" href="../frontend/menuFile1.php">Domov</a>
   <!--<a href="../frontend/index.php">Administrace</a>-->
-  <a href="../frontend/odhlaseni.php?stav=odhlasit">Odjava in prijava</a>
+<!--<a href="../frontend/odhlaseni.php?stav=odhlasit">Odjava in prijava</a>-->
+    <a href="../frontend/prihlaseni.php?r=logout&stav=odhlasit">Odjava in prijava</a>
   <!--<a href="#about">About</a>-->
 </div>
 

@@ -36,17 +36,17 @@ Class odjava extends Prihlaseni {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
 
-	  echo 'odhlašovani';
+	  //echo 'odhlašovani';
 	  if (null !== ($_GET['stav'] || $_GET['stav'] == 'odhlasit')) {
 	  $this->odhlasi();
      }	
 		}//od __construct	
 		
 		 public function odhlasi() {
-			echo 'Odhlasi';
+			//echo 'Odhlasi';
 		 session_unset();
 		 session_destroy();
-
+            echo 'Odhlašen';
 		  $oznameni = 'Ste odjavljeni, ' . 'ponovno se prijavite.';	
 //		header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');  
 
