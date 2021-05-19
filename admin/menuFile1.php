@@ -7,7 +7,11 @@ class MenuAnestiz extends Administrace {
    public function __construct() {
 	       parent::__construct();  
 
-  if (isset($_SESSION["status"]) && $_SESSION["status"] == 2)  {		   
+  if (isset($_SESSION["status"]))  {
+	   switch ($_SESSION["status"]) {
+		   
+	case 2:	
+    case 3:	
 echo '
 
 <nav id= "glavnaNav">
@@ -22,8 +26,12 @@ echo '
 </ul>
 </nav>
 ';
-     } else {
+
+    break; 		
+     default:
+	
 	echo	' <h2>za ta del niste pooblaščeni</h2>';
+	   }
 	}
    }//od construct 
 }//od class MenuAnestiz 
