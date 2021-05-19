@@ -10,22 +10,25 @@ echo '
 
 <nav id= "glavnaNav">
 <ul>
-  <!--<li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>-->
+
   <li><a href="../navodila/navodilaKovid.php?doma=frontend">Navodila</a> </li>
   <li><a href="../pregled/zdravnik.php?doma=frontend">Pregled</a> </li>
   <li><a href="../oddelek/razpisMeseci.php?pogled=dez&doma=frontend">Dežurstva</a> </li>';
   
   if (isset($_SESSION["status"]))  {
+	  require_once('../skupne/menu-items.php'); 
 	   switch ($_SESSION["status"]) {
 		   
-	case 1:	
-     echo '<li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>';
+	case 1:
+	  echo $a1;
     break;   
  
      case 2:
+	   echo $a1.$a2;
+	 break;
+	 
 	 case 3:
-    echo '<li><a href="../oddelek/razpisMeseci.php?pogled=raz&doma=frontend">Razpored</a> </li>';
-    echo '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>';
+	   echo $a1.$a2;
     break;
    
     default:
