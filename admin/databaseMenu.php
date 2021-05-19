@@ -7,7 +7,7 @@ class Manipulace extends Administrace {
    public function __construct() {
 	       parent::__construct();
 		   
-  if (isset($_SESSION["status"]) && $_SESSION["status"] == 2)  {			   
+  if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {			   
 echo '
 <div id="manipulace">
 <h1>Menu servis</h1>

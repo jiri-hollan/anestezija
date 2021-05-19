@@ -8,37 +8,35 @@ class MenuAnestiz extends Administrace {
 	       parent::__construct();  
 
   if (isset($_SESSION["status"]))  {
-	 $a0= '<li><a href="../navodila/navodilaKovid.php">Navodila</a> </li>
-  <li><a href="../pregled/zdravnik.php">Pregled</a> </li>
-  <li><a href="../oddelek/razpisMeseci.php?pogled=dez">Dežurstva</a> </li>'; 
+	 $a0= '
+	   <li><a href="../navodila/navodilaKovid.php">Navodila</a> </li>
+       <li><a href="../pregled/zdravnik.php">Pregled</a> </li>
+       <li><a href="../oddelek/razpisMeseci.php?pogled=dez">Dežurstva</a> </li>'; 
 	 $a1= '<li><a href="../oddelek/razpisMeseci.php?pogled=raz">Razpored</a> </li>'; 
 	 $a2= '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>';
-	 $a0= ' <li><a href="databaseMenu.php">database</a> </li>'; 
+	 $a3= ' <li><a href="databaseMenu.php">database</a> </li>'; 
+	 
+	 echo '
+       <nav id= "glavnaNav">
+       <ul>';
 	   switch ($_SESSION["status"]) {
-		   
-	case 2:	
+		   	   
+	case 2:
+	  echo $a0.$a1.$a2;
+	  break;
     case 3:	
-echo '
+	  echo $a0.$a1.$a2.$a3;
 
-<nav id= "glavnaNav">
-<ul>
-  <li><a href="../navodila/navodilaKovid.php">Navodila</a> </li>
-  <li><a href="../pregled/zdravnik.php">Pregled</a> </li>
-  <li><a href="../oddelek/razpisMeseci.php?pogled=dez">Dežurstva</a> </li>  
-  <li><a href="../oddelek/razpisMeseci.php?pogled=raz">Razpored</a> </li>
-  <li><a href="../servis/upload/menuUpload.php">servis</a> </li>
-  <li><a href="databaseMenu.php">database</a> </li>
-  <!-- <a href="/python/">Python</a>-->
-</ul>
-</nav>
-';
-
-    break; 		
-     default:
+      break; 		
+    default:
 	
-	echo	' <h2>za ta del niste pooblaščeni</h2>';
-	   }
-	}
+	  echo	' <h2>za ta del niste pooblaščeni</h2>';
+	   }//od switch
+	  echo '
+	  </ul>
+      </nav>';  
+	   
+	}//od if
    }//od construct 
 }//od class MenuAnestiz 
  $adminAnestiz = new MenuAnestiz(); 
