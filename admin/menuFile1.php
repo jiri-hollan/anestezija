@@ -17,7 +17,7 @@ echo '
   <li><a href="../pregled/zdravnik.php">Pregled</a> </li>
   <li><a href="../oddelek/razpisMeseci.php?pogled=dez">Dežurstva</a> </li>
   <li><a href="../servis/upload/menuUpload.php">servis</a> </li>
-  <li><a href="../servis/upload/menuUpload.php">database</a> </li>
+  <li><a href="databaseMenu.php">database</a> </li>
   <!-- <a href="/python/">Python</a>-->
 </ul>
 </nav>
