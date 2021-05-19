@@ -8,14 +8,16 @@ class MenuAnestiz extends Administrace {
 	       parent::__construct();  
 
   if (isset($_SESSION["status"]))  {
-	 $a0= '
+	require_once('../skupne/menu-items.php'); 
+	  
+	/* $a0= '
 	   <li><a href="../navodila/navodilaKovid.php">Navodila</a> </li>
        <li><a href="../pregled/zdravnik.php">Pregled</a> </li>
        <li><a href="../oddelek/razpisMeseci.php?pogled=dez">Dežurstva</a> </li>'; 
 	 $a1= '<li><a href="../oddelek/razpisMeseci.php?pogled=raz">Razpored</a> </li>'; 
 	 $a2= '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>';
 	 $a3= ' <li><a href="databaseMenu.php">database</a> </li>'; 
-	 
+	 */
 	 echo '
        <nav id= "glavnaNav">
        <ul>';
