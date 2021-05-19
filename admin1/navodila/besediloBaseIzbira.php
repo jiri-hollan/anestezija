@@ -31,7 +31,7 @@ try {
 
 
 ?>
-//<a id="buttonDomov" href="../menuFile.php" >Domov</a>
+<a id="buttonDomov" href="../menuFile.php" >Domov</a>
 <ul id= "navodilaId">
 <?php
 

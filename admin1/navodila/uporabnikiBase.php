@@ -1,6 +1,7 @@
 <?php
+
 echo "<table style='border: solid 1px black;'>";
- echo "<tr><th>Id</th><th>naslov</th><th>direktorij</th><th>fajl</th><th>datum</th></tr>";
+ echo "<tr><th>Id</th><th>email</th><th>username</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
@@ -8,7 +9,7 @@ class TableRows extends RecursiveIteratorIterator {
     }
 
     function current() {
-        return "<td style='width: 150px; border: 1px solid black;'>" . parent::current(). "</td>";
+        return "<td style='width: 150px;border:1px solid black;'>" . parent::current(). "</td>";
     }
 
     function beginChildren() {
@@ -23,7 +24,7 @@ include '../../skupne/streznik.php';
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT id, naslov, direktorij, fajl, reg_date FROM besedilaTbl");
+    $stmt = $conn->prepare("SELECT * FROM" . " uporabnikiTbl2" );
     $stmt->execute();
 
     // set the resulting array to associative
@@ -37,4 +38,6 @@ catch(PDOException $e) {
 }
 $conn = null;
 echo "</table>";
+
 ?>
+
