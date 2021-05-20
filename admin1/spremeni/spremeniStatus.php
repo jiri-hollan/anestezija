@@ -10,12 +10,12 @@
 
 <?php
 // define variables and set to empty values
-$name  = "";
+$id  = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = test_input($_POST["name"]);
+  $id = test_input($_POST["id"]);
 
-   prikazi($name);
+   prikazi($id);
 }
 
 function test_input($data) {
@@ -28,28 +28,17 @@ function test_input($data) {
 
 <h2>PHP Form Validation Example</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name">
+  id: <input type="text" name="id">
   <br><br>
- 
+   uname <input type="text" name="uname">
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
 
-<?php
-echo "<h2>Your Input:</h2>";
-echo "ime table=   " . $name;
-
-
-?>
 
 
 <?php
 function prikazi($ime) {
-echo "<table style='border: solid 1px black;'>";
-
-
-<?php
-
 echo "<table style='border: solid 1px black;'>";
  echo "<tr><th>Id</th><th>email</th><th>username</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th></tr>";
 
@@ -74,7 +63,7 @@ include '../../skupne/streznik.php';
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT * FROM" . " uporabnikiTbl2" . "WHERE id=" .$_POST['id']. "AND uname=" . $_POST['uname']);
+    $stmt = $conn->prepare("SELECT * FROM" . " uporabnikiTbl2" . "WHERE id=" .$_POST['id']. " AND uname=" . $_POST['uname']);
     $stmt->execute();
 
     // set the resulting array to associative
@@ -88,7 +77,7 @@ catch(PDOException $e) {
 }
 $conn = null;
 echo "</table>";
-
+}
 ?>
 
 </body>
