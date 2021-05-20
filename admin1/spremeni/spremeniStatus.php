@@ -10,13 +10,13 @@
 
 <?php
 // define variables and set to empty values
-$id  =  $lanhol = "";
+$id  =  $uname = $status ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $id = test_input($_POST["id"]);
-  $uname = test_input($_POST["uname"]);
-
-   prikazi($id,$uname);
+          $id = test_input($_POST["id"]);
+    $uname = test_input($_POST["uname"]);
+  $status = test_input($_POST["status"]);
+   prikazi($id,$uname,$status);
 }
 
 function test_input($data) {
@@ -32,6 +32,8 @@ function test_input($data) {
       id: <input type="text" name="id">
   <br><br>
    uname: <input type="text" name="uname">
+  <br><br>    
+   status: <input type="text" name="status">
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
@@ -39,7 +41,7 @@ function test_input($data) {
 
 
 <?php
-function prikazi($id, $uname) {
+function prikazi($id, $uname, $status) {
 echo "<table style='border: solid 1px black;'>";
  echo "<tr><th>Id</th><th>email</th><th>username</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th></tr>";
 
@@ -66,7 +68,27 @@ try {
 	//echo $_POST['uname'];
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //$stmt = $conn->prepare("SELECT * FROM uporabnikiTbl2 WHERE id='$id' AND uname='$uname'");
+	$stmt = $conn->prepare("UPDATE uporabnikiTbl2 SET status='$status' WHERE id='$id' AND uname='$uname'");
+    $stmt->execute();
+
+    // set the resulting array to associative
+   // $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+   /* foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+        echo $v;
+    }*/
+}
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+
+try {
+	
+	//echo $_POST['uname'];
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $conn->prepare("SELECT * FROM uporabnikiTbl2 WHERE id='$id' AND uname='$uname'");
+	//$stmt = $conn->prepare("UPDATE uporabnikiTbl2 SET status='$status' WHERE id='$id' AND uname='$uname'");
     $stmt->execute();
 
     // set the resulting array to associative
@@ -78,6 +100,7 @@ try {
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
+
 $conn = null;
 echo "</table>";
 }
