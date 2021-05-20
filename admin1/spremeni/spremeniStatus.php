@@ -10,12 +10,13 @@
 
 <?php
 // define variables and set to empty values
-$id  = "";
+$id  =  $lanhol = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $id = test_input($_POST["id"]);
+  $uname = test_input($_POST["uname"]);
 
-   prikazi($id);
+   prikazi($id,$uname);
 }
 
 function test_input($data) {
@@ -28,9 +29,9 @@ function test_input($data) {
 
 <h2>PHP Form Validation Example</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  id: <input type="text" name="id">
+      id: <input type="text" name="id">
   <br><br>
-   uname <input type="text" name="uname">
+   uname: <input type="text" name="uname">
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
@@ -38,7 +39,7 @@ function test_input($data) {
 
 
 <?php
-function prikazi($ime) {
+function prikazi($id, $uname) {
 echo "<table style='border: solid 1px black;'>";
  echo "<tr><th>Id</th><th>email</th><th>username</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th></tr>";
 
@@ -61,9 +62,11 @@ class TableRows extends RecursiveIteratorIterator {
 }
 include '../../skupne/streznik.php';
 try {
+	
+	//echo $_POST['uname'];
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT * FROM" . " uporabnikiTbl2" . " WHERE id=" .$_POST['id']. " AND uname=" . $_POST['uname']);
+    $stmt = $conn->prepare("SELECT * FROM uporabnikiTbl2 WHERE id='$id' AND uname='$uname'");
     $stmt->execute();
 
     // set the resulting array to associative
