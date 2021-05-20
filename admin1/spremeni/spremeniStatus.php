@@ -1,3 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+<p>vnesi ime tabele and click OK:</p>
+
+<?php
+// define variables and set to empty values
+$name  = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["name"]);
+
+   prikazi($name);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<h2>PHP Form Validation Example</h2>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Name: <input type="text" name="name">
+  <br><br>
+ 
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+
+<?php
+echo "<h2>Your Input:</h2>";
+echo "ime table=   " . $name;
+
+
+?>
+
+
+<?php
+function prikazi($ime) {
+echo "<table style='border: solid 1px black;'>";
 
 
 <?php
@@ -43,3 +91,5 @@ echo "</table>";
 
 ?>
 
+</body>
+</html>
