@@ -7,7 +7,7 @@ class MenuAnestiz extends Administrace {
    public function __construct() {
 	       parent::__construct();  
 
-  if (isset($_SESSION["status"]) && $_SESSION["status"] == 2)  {		   
+  if (isset($_SESSION["status"]) && ($_SESSION["status"] == 2 || $_SESSION["status"] == 3))  {		   
 echo '
 
 <nav id= "glavnaNav">
