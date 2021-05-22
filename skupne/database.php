@@ -134,5 +134,5 @@ class Database {
 	public function odsrani($tabulka,$podminka){		
 	}		
 
-//uzavírací zavorky class Database	
-}
+	
+}//uzavírací zavorky class Database
