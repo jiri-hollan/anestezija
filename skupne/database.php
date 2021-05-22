@@ -23,8 +23,8 @@ class Database {
             }
 		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname, $this->username, $this->password);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
-//uzavírací zavorky __construct		
-	}
+	
+	}//uzavírací zavorky __construct	
 	
 	public function vyber($tabulka, $sloupce, $podminka = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
@@ -59,7 +59,7 @@ class Database {
 	  
 	  $dotaz->closeCursor();
 	  return $zaznamy;
-	}
+	}//od funkcije vyber
 //..................................................................................	
 	public function vyberOr($tabulka, $sloupce, $podminka = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
@@ -94,7 +94,7 @@ class Database {
 	  
 	  $dotaz->closeCursor();
 	  return $zaznamy;
-	}
+	}//od function vyberOr
 //..................................................................................
 
 
@@ -126,13 +126,13 @@ class Database {
   }
   
   return $pocetVlozenych;
-}
+}// od funkcije vloz
 //.......................................................................................
 	public function aktualizuj($tabulka,$data,$podminka){
-	}		
+	}//od unkcije sktualizuj	
 	
 	public function odsrani($tabulka,$podminka){		
-	}		
+	}//od funkcije odstrani		
 
-//uzavírací zavorky class Database	
-}
+	
+}//uzavírací zavorky class Database
