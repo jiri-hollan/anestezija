@@ -23,8 +23,8 @@ class Database {
             }
 		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname, $this->username, $this->password);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
-//uzavírací zavorky __construct		
-	}
+	
+	}//uzavírací zavorky __construct	
 	
 	public function vyber($tabulka, $sloupce, $podminka = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
