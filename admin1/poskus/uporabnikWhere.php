@@ -63,4 +63,22 @@ class Database {
 	
 
 }//uzavírací zavorky class Database
+
+class Uporabnikwhere {
+	public $conn;	
+	public function __construct() {
+		  $this->conn = new Database();
+	$uname='lanhol';
+    $id='1';	
+	$uporabnikiTbl2 = $this->conn->vyber('uporabnikiTbl2', array('id', 'status', 'priimek'), array('uname'=>$uname, 'id'=>$id));
+
+	
+	}//od __construct
+
+
+	
+}//od slass Uporabnikwhere
+
+$uporabnik = new Uporabnikwhere();
+
 ?>
