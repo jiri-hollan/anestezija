@@ -46,10 +46,13 @@ class Database {
 	/*echo var_dump($parametry) . "<br>";
 	  echo var_dump($podminka) . "<br>";
 	  echo var_dump($podminkaSQL . "<br>");*/
-	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
+	//$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
+	$dotaz = $this->conn->prepare("SELECT * FROM uporabnikiTbl" );
+	
 	
 	try {
-		$dotaz->execute($parametry);		
+		//$dotaz->execute($parametry);
+		$dotaz->execute();
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
@@ -75,15 +78,16 @@ class Uporabnikwhere {
 $this->prikazi($uporabnikiTbl2);
 	
 	}//od __construct
-function prikazi($uporabnikiTbl2) {
+function prikazi($dotaz) {
 echo "<table style='border: solid 1px black;'>";
 
 try {
    
 
     // set the resulting array to associative
-    $result = $uporabnikiTbl2;
-    foreach(new TableRows(new RecursiveArrayIterator($result->fetchAll())) as $k=>$v) {
+    //$result = $dotaz;
+	var_dump($dotaz);
+    foreach(new TableRows(new RecursiveArrayIterator($dotaz->fetchAll())) as $k=>$v) {
         echo $v;
     }
 }
