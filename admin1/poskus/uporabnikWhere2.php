@@ -25,14 +25,12 @@ class UporabnikiWhere {
 echo "<table style='border: solid 1px black;'>";
  echo "<tr><th>Id</th><th>email</th><th>username</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th></tr>";
 
-
-//include '../../skupne/streznik.php';
 try {
 	
 	$this->conn =new Database();
 	
-	$uporabnikiIzbrani = $this->conn->vyber('uporabnikiTbl2', array('id', 'ime', 'status'), array('uname'=>'lanhol'));
-	var_dump($uporabnikiIzbrani);
+	$uporabnikiIzbrani = $this->conn->vyber('uporabnikiTbl2', array('id', 'email', 'uname',	'geslo', 'ime', 'priimek', 'status'), array('uname'=>'lanhol'));
+	//var_dump($uporabnikiIzbrani);
 	//--------------------------------------------------------
    
 	//var_dump($stmt->fetchAll());
