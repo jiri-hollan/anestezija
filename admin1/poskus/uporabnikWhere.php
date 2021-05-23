@@ -72,23 +72,40 @@ class Uporabnikwhere {
     $id='1';	
 	$uporabnikiTbl2 = $this->conn->vyber('uporabnikiTbl2', array('id', 'status', 'priimek'), array('uname'=>$uname, 'id'=>$id));
 	
-
+$this->prikazi($uporabnikiTbl2);
 	
 	}//od __construct
+function prikazi($uporabnikiTbl2) {
+echo "<table style='border: solid 1px black;'>";
 
+try {
+   
 
+    // set the resulting array to associative
+    $result = $uporabnikiTbl2;
+    foreach(new TableRows(new RecursiveArrayIterator($result->fetchAll())) as $k=>$v) {
+        echo $v;
+    }
+}
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+$conn = null;
+echo "</table>";
+}
 	
 }//od class Uporabnikwhere
 
-$uporabnik = new Uporabnikwhere();
-prikazi($uporabnikiTbl2);
-function prikazi($uporabnikiTbl2) {
-echo "<table style='border: solid 1px black;'>";
+//$uporabnik = new Uporabnikwhere();
+
+/*function prikazi($uporabnikiTbl2) {
+echo "<table style='border: solid 1px black;'>";*/
 
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
         parent::__construct($it, self::LEAVES_ONLY);
+		echo 'sem v table rows';
     }
 
     function current() {
@@ -104,19 +121,6 @@ class TableRows extends RecursiveIteratorIterator {
     }
 }
 
-try {
-   
+$uporabnik = new Uporabnikwhere();
 
-    // set the resulting array to associative
-    $result = $uporabnikiTbl2;
-    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-        echo $v;
-    }
-}
-catch(PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-$conn = null;
-echo "</table>";
-}
 ?>
