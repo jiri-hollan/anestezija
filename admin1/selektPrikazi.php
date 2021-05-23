@@ -39,11 +39,6 @@ function test_input($data) {
 echo "<h2>Your Input:</h2>";
 echo "ime table=   " . $name;
 
-
-?>
-
-
-<?php
 function prikazi($ime) {
 echo "<table style='border: solid 1px black;'>";
 
