@@ -17,7 +17,10 @@ class TableRows extends RecursiveIteratorIterator {
         echo "</tr>" . "\n";
     }
 }//od class TableRows
+//-------------------------------------------------------------------------------------------------------------
+
 class UporabnikiWhere {
+	public $conn;
 	  function __construct() {
 echo "<table style='border: solid 1px black;'>";
  echo "<tr><th>Id</th><th>email</th><th>username</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th></tr>";
@@ -25,18 +28,13 @@ echo "<table style='border: solid 1px black;'>";
 
 //include '../../skupne/streznik.php';
 try {
-	$database=new Database();
-	$uporabnikiIzbrani = $database->vyber('uporabnikiTbl2', array('id', 'ime', 'status'), array('uname'=>'lanhol'));
+	
+	$this->conn =new Database();
+	
+	$uporabnikiIzbrani = $this->conn->vyber('uporabnikiTbl2', array('id', 'ime', 'status'), array('uname'=>'lanhol'));
 	var_dump($uporabnikiIzbrani);
 	//--------------------------------------------------------
-   // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //$stmt = $database->conn->prepare("SELECT * FROM" . " uporabnikiTbl2" );
-    //$stmt->execute();
-
-    // set the resulting array to associative
-    //$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
+   
 	//var_dump($stmt->fetchAll());
     foreach(new TableRows(new RecursiveArrayIterator($uporabnikiIzbrani)) as $k=>$v) {
         echo $v;
