@@ -26,16 +26,19 @@ echo "<table style='border: solid 1px black;'>";
 //include '../../skupne/streznik.php';
 try {
 	$database=new Database();
-	
+	$uporabnikiIzbrani = $database->vyber('uporabnikiTbl2', array('id', 'ime', 'status'), array('uname'=>'lanhol'));
+	var_dump($uporabnikiIzbrani);
 	//--------------------------------------------------------
    // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $database->conn->prepare("SELECT * FROM" . " uporabnikiTbl2" );
-    $stmt->execute();
+    //$stmt = $database->conn->prepare("SELECT * FROM" . " uporabnikiTbl2" );
+    //$stmt->execute();
 
     // set the resulting array to associative
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+    //$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+	//var_dump($stmt->fetchAll());
+    foreach(new TableRows(new RecursiveArrayIterator($uporabnikiIzbrani)) as $k=>$v) {
         echo $v;
     }
 }
