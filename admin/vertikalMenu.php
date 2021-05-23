@@ -7,7 +7,7 @@ class Vertikal extends Administrace {
    public function __construct() {
 	       parent::__construct();
 		   
-  if (isset($_SESSION["status"]) && $_SESSION["status"] == 2)  {			   
+  if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {			   
 echo '
 
 <h1>Menu servis</h1>
@@ -25,25 +25,26 @@ echo '
 <li><a href="selektVnosna.php">pokaži vnešenega bolnika</a></li>
 <li><a href="serverInformace.php">Informace o serveru</a></li>
 <li><a href="../skupne/database.php">Zagon poskusnega objekta database</a></li>
-
+</ul>
 <h1>Menu navodila</h1>
-<ul id="linky3">
+<ul id="linky1">
 <li><a href="../admin1/navodila/kreateBaseNavodila.php">naredi bazo: navodila</a></li>
 <li><a href="../admin1/navodila/kreateTableBesedila.php" >Naredi Tabelo:besedilaTbl </a></li>
 <li><a href="../admin1/navodila/novoBesedilo.php">vstavi novo besedilo</a></li>
 <li><a href="../admin1/navodila/besediloBase.php">prikaži besedila</a></li>
 <li><a href="../admin1/navodila/besediloBaseIzbira.php">prikaži besedila kot izbiro</a></li>
-
+</ul>
 <h1>Menu uporabniki</h1>
 <ul id="linky3">
 <li><a href="../admin1/navodila/kreateTableUporabniki.php">naredi tabelo: uporabnikiTbl2</a></li>
-
+</ul>
 <h1>Menu pregled</h1>
 <ul id="linky2">
 <!--<li><a href="pregled/vnosBolnika.html">Vnos bolnika</a></li>
 <li><a href="pregled/vsiPolnjenje.html">Vnos vsega</a></li>-->
 <li><a href="../pregled/novPolnjenje.php">polnjenje Nov bolnik</a></li>
 <li><a href="../pregled/zdravnik.php">vnos zdravnika</a></li>
+</ul>
 ';
      } else {
 	echo	' <h2>za ta del niste pooblaščeni</h2>';
