@@ -23,13 +23,13 @@ class UporabnikiWhere {
 	public $conn;
 	  function __construct() {
 echo "<table style='border: solid 1px black;'>";
- echo "<tr><th>Id</th><th>email</th><th>username</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th></tr>";
+ echo "<tr><th>Id</th><th>email</th><th>username</th><th>ime</th><th>priimek</th><th>status</th></tr>";
 
 try {
 	
 	$this->conn =new Database();
 	
-	$uporabnikiIzbrani = $this->conn->vyber('uporabnikiTbl2', array('id', 'email', 'uname',	'geslo', 'ime', 'priimek', 'status'), array('uname'=>'lanhol'));
+	$uporabnikiIzbrani = $this->conn->vyber('uporabnikiTbl2', array('id', 'email', 'uname', 'ime', 'priimek', 'status'), array('uname'=>'lanhol'));
 	//var_dump($uporabnikiIzbrani);
 	//--------------------------------------------------------
    
