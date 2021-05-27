@@ -6,12 +6,14 @@ class OcistiData {
     
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
-	//echo $_POST["id"];
+
 if (!empty($_POST["id"])) {
+			//echo $_POST["id"];
 	$data['id'] = $this->test_input($_POST["id"]);
   }	
   
 if (!empty($_POST["status"])) {
+			echo $_POST["status"];
 	$data['status'] = $this->test_input($_POST["status"]);
   }	
   
