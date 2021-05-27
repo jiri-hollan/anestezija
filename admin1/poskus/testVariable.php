@@ -3,12 +3,16 @@
 class OcistiData {
     public $data;
    	public function __construct() {
-
+    
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 	//echo $_POST["id"];
 if (!empty($_POST["id"])) {
 	$data['id'] = $this->test_input($_POST["id"]);
+  }	
+  
+if (!empty($_POST["status"])) {
+	$data['status'] = $this->test_input($_POST["status"]);
   }	
   
 if (!empty($_POST["ime"])) {
@@ -30,6 +34,7 @@ if (!empty($_POST["email"])) {
 
 }
 	//var_dump ($data);
+	
 $this->data=$data;
 }// od construct
 
@@ -37,7 +42,7 @@ $this->data=$data;
 
 
 function test_input($data) {
-	echo $data .'<br>';
+
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
