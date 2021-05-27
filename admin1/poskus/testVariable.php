@@ -13,6 +13,7 @@ if (!empty($_POST["id"])) {
   
 if (!empty($_POST["ime"])) {
 	$data['ime'] = $this->test_input($_POST["ime"]);
+	
   }	
 
 if (!empty($_POST["priimek"])) {
@@ -36,6 +37,7 @@ $this->data=$data;
 
 
 function test_input($data) {
+	echo $data .'<br>';
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);

@@ -31,11 +31,11 @@ try {
 	
 	$this->conn =new Database();
 	$data=new OcistiData();
-	//var_dump ($kvajeto);
-	//var_dump ($data->data);
 	$this->data=$data->data;
+	//var_dump ($this->data);
+
 	
-	$uporabnikiIzbrani = $this->conn->vyber('uporabnikiTbl2', array('id', 'email', 'uname', 'ime', 'priimek', 'status'), array('uname'=>'lanhol'));
+	$uporabnikiIzbrani = $this->conn->vyber('uporabnikiTbl2', array('id', 'email', 'uname', 'ime', 'priimek', 'status'), $this->data);
 	//var_dump($uporabnikiIzbrani);
 	//--------------------------------------------------------
    
