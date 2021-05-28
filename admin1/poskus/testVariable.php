@@ -13,8 +13,11 @@ if (!empty($_POST["id"])) {
   }	
   
 //if (!empty($_POST["status"])) 
- if (!is_null($_POST["status"])) {			
+ if (!is_null($_POST["status"])) {
+	 if ($_POST["status"]===""){}
+	 else{
 	$data['status'] = $this->test_input($_POST["status"]);
+	 }
   }	
   
 if (!empty($_POST["ime"])) {
