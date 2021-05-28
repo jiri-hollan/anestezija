@@ -5,15 +5,15 @@ class OcistiData {
    	public function __construct() {
     
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		
+	//var_dump ($_POST["status"]);	
 
 if (!empty($_POST["id"])) {
 			//echo $_POST["id"];
 	$data['id'] = $this->test_input($_POST["id"]);
   }	
   
-if (!empty($_POST["status"])) {
-			echo $_POST["status"];
+//if (!empty($_POST["status"])) 
+ if (!is_null($_POST["status"])) {			
 	$data['status'] = $this->test_input($_POST["status"]);
   }	
   
