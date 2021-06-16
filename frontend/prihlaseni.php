@@ -72,7 +72,7 @@ Class Prijava extends Prihlaseni {
 	//od function inicializuj		
 	}
 	
-	public function prihlaseniUspesne($status){
+	public function prihlaseniUspesne($status, $uname){
 	   $_SESSION['blog_prihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
 	   $_SESSION["status"] = $status;
@@ -94,7 +94,7 @@ Class Prijava extends Prihlaseni {
 	public function overUdaje() {
 		if (!empty($_POST['uname']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
-			$uporabnikiTbl2 = $this->conn->vyber('uporabnikiTbl2', array('status'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
+			$uporabnikiTbl2 = $this->conn->vyber('uporabnikiTbl2', array('status', 'uname'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
          //echo $uporabnikiTbl2[0]['status'];
 		 //$status=$uporabnikiTbl2[0]['status'];
 		// echo $status;
@@ -102,10 +102,12 @@ Class Prijava extends Prihlaseni {
 	
 		
 		if (count($uporabnikiTbl2) == 1)	{
-			$status=$uporabnikiTbl2[0]['status'];
+			$status=$uporabnikiTbl2[0]['status'];			
+			//echo $status;
 			$uname=$uporabnikiTbl2[0]['uname'];
+			echo $uname;
 		// echo $status;
-			$this->prihlaseniUspesne($status);
+			$this->prihlaseniUspesne($status, $uname);
 		} else {
 			//echo 'iz funkcije overUdaje';
 			return $this->prihlaseniSelhalo();
@@ -229,7 +231,11 @@ Class Profil extends Prihlaseni {
 //$status = 0;
 $nameTable = "uporabnikiTbl2";
 
-echo 'Uname: '. $_SESSION["uname"];
+//echo 'Uname: '. $_SESSION["uname"];
+$data['uname'] = $_SESSION["uname"];
+//var_dump ($data);
+require_once 'uporabnikWhere2.php';
+
 
   }// od construct
 }// od class profil
