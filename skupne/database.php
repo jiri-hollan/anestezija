@@ -129,7 +129,46 @@ class Database {
 }
 //.......................................................................................
 	public function aktualizuj($tabulka,$data,$podminka){
-	}		
+	  $sloupceHodnoty =array();
+      $parametry = array();	
+	  if (is_array($data) && !empty($data)) {
+		foreach ($data as $sloupec => $hodnota) {
+		  array_push($sloupceHodnoty, "'$sloupec' = ?");
+          array_push($parametry, $hodnota);		  
+		} //od foreache 
+
+	  } else {
+		  return 0;
+	  }//od else
+	  $sloupceHodnotySQL = implode(', ', $sloupceHodnoty);
+  
+      $podminkaSQL = '';
+	  if (is_array($podminka)) {
+		$i = 0;
+        foreach ($podminka as $sloupec => $hodnota)	{
+			if ($i == 0) {
+			  $podminkaSQL .= " WHERE '$sloupec' = ?";
+			} else {
+			  $podminkaSQL .= " AND '$sloupec' = ?";
+			}//od else
+			array_push($parametry, $hodnota);
+		    $i++;
+		}// od foreach
+	  }//od if is array
+	  
+	  $dotaz = $this->db->prepare("UPDATE '$tabulka' SET $sloupceHodnotaSQL".$podminkaSQL);
+	  
+	  try {
+		 $dotaz->execute($parametry);
+         $pocetAktualizovanych = $dotaz->rowCount();		 
+	  } catch (PDOException $e) {
+		  echo $e->getMessage();
+		  $pocetAktualizovanych = false;
+	  }//od catch
+	   return $pocetAktualizovanych;
+	  
+	}//od function aktualizuj		
+//..........................................................................................
 	
 	public function odsrani($tabulka,$podminka){		
 	}		
