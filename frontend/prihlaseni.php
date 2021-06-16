@@ -217,6 +217,10 @@ public function overUdaje($nameTable, $data) {
 
 
 
+//_______________________________________konec Sprememba gesla________________________________________
+
+
+
 //$prihlaseni = new Prihlaseni;
 if (isset($_GET['r'])) {
 	 // echo 'poskus GET' . $_GET['r'];
@@ -235,6 +239,11 @@ switch ($r) {
    
 case "logout":
   $prihlaseni = new Odjava;
+    //echo "Poskušate se odjaviti!"; 
+   break;  
+   
+case "profil":
+  $prihlaseni = new Registrace;
     //echo "Poskušate se odjaviti!"; 
    break;  
    

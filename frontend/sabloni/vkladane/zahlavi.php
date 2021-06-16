@@ -19,6 +19,7 @@
 <!--<a href="../frontend/odhlaseni.php?stav=odhlasit">Odjava in prijava</a>-->
     <a href="../frontend/prihlaseni.php?r=logout&stav=odhlasit">Odjava in prijava</a>
   <!--<a href="#about">About</a>-->
+  <a href="../frontend/mojProfil.php?r=profil">Moj profil</a>
 </div>
 
 
