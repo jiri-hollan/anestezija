@@ -2,6 +2,7 @@
 require_once '../skupne/database.php'; 
 //var_dump ($data);
 //require_once 'testVariable.php';
+
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
         parent::__construct($it, self::LEAVES_ONLY);
@@ -24,7 +25,9 @@ class TableRows extends RecursiveIteratorIterator {
 class UporabnikiWhere {
 	public $data;
 	public $conn;
-	  function __construct() {
+	 
+	  function __construct($data) {
+
 echo "<table style='border: solid 1px black;'>";
  echo "<tr><th>Id</th><th>email</th><th>username</th><th>ime</th><th>priimek</th><th>status</th></tr>";
 
@@ -35,10 +38,8 @@ try {
 	//$data=new OcistiData();
 
 
-     //$this->data=$data->data;
-	 $this->data = array("uname"=>$_SESSION["uname"]);
-	 
-	//$this->data=$_SESSION["uname"];
+    $this->data=$data;
+    echo 'this data: ';
 	var_dump ($this->data);
     //var_dump ($data);
 	
@@ -58,6 +59,6 @@ $conn = null;
 echo "</table>";
 	  }//od __construct
 }//od class UporabnikiWhere
-new UporabnikiWhere();
+//new UporabnikiWhere();
 ?>
 

@@ -217,7 +217,7 @@ public function overUdaje($nameTable, $data) {
 // od class Registrace	
 }
 
-//_____________________________________konec Registrace_______________________________________________
+//____________________________konec Registrace_______________________________
 Class Profil extends Prihlaseni {
     public $data;
     public $nameTable;
@@ -235,11 +235,11 @@ $nameTable = "uporabnikiTbl2";
 $data['uname'] = $_SESSION["uname"];
 //var_dump ($data);
 require_once 'uporabnikWhere2.php';
-
+new UporabnikiWhere($data);
 
   }// od construct
 }// od class profil
-//_______________________________________konec Profil________________________________________
+//________________________________konec Profil________________________
 
 
 
