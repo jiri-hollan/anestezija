@@ -170,8 +170,33 @@ class Database {
 	}//od function aktualizuj		
 //..........................................................................................
 	
-	public function odsrani($tabulka,$podminka){		
-	}		
-
+	public function odsrani($tabulka,$podminka){	
+	  $podminkaSQL = '';
+	  $parametry = array();
+	  if (is_array($podminka)) {
+		$i = 0;
+		foreach ($podminka as $sloupec=>$hodnota) {
+		  if ($i == 0)	{
+			$podminkaSQL .= " WHERE '$sloupec' = ?";
+		  } else {
+			 $podminkaSQL .= " AND '$sloupec' = ?"; 
+		  } //od else
+		  array_push($parametry, $hodnota);
+	      $i++;
+		}//od foreach
+	  }
+	  
+	$dotaz = $this->db->prepare("DELETE FROM '$tabulka'".$podminkaSQL);
+	try {
+	  $dotaz->execute($parametry);
+	  $pocetOdstranenych = $otaz->rowCount();	
+	} catch (PDException $e) {
+		echo $e->getMessage();
+		$pocetOdstranenych = false;
+	}//od catch
+	
+	return $pocetOdstranenych;
+	}// od function odstrani		
+//........................................................................................................
 	
 }//uzavírací zavorky class Database
