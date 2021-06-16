@@ -76,6 +76,7 @@ Class Prijava extends Prihlaseni {
 	   $_SESSION['blog_prihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
 	   $_SESSION["status"] = $status;
+	   $_SESSION["uname"] = $uname;
 	  //echo $status;
 	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
 	 // header('Location: ' .  'prispevki.php');
@@ -102,6 +103,7 @@ Class Prijava extends Prihlaseni {
 		
 		if (count($uporabnikiTbl2) == 1)	{
 			$status=$uporabnikiTbl2[0]['status'];
+			$uname=$uporabnikiTbl2[0]['uname'];
 		// echo $status;
 			$this->prihlaseniUspesne($status);
 		} else {
@@ -214,10 +216,24 @@ public function overUdaje($nameTable, $data) {
 }
 
 //_____________________________________konec Registrace_______________________________________________
+Class Profil extends Prihlaseni {
+    public $data;
+    public $nameTable;
+   
+	public function __construct() {
+		    parent::__construct();
+			
+			
+//$registracija=true;
+//$email=$geslo=$ime=$priimek=$uname=0;
+//$status = 0;
+$nameTable = "uporabnikiTbl2";
 
+echo 'Uname: '. $_SESSION["uname"];
 
-
-//_______________________________________konec Sprememba gesla________________________________________
+  }// od construct
+}// od class profil
+//_______________________________________konec Profil________________________________________
 
 
 
@@ -243,7 +259,7 @@ case "logout":
    break;  
    
 case "profil":
-  $prihlaseni = new Registrace;
+  $prihlaseni = new Profil;
     //echo "Poskušate se odjaviti!"; 
    break;  
    
