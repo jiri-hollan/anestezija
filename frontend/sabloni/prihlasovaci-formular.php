@@ -1,9 +1,9 @@
 <?php require_once('vkladane/zahlavi.php');?>
 
 
-<button onclick="schovej('id01')"style="width:auto;">Sign Up</button>
+<button onclick="schovej('id01')"style="width:auto;">Registracija</button>
 
-<button onclick="schovej('id02')" style="width:auto;">Login</button>
+<button onclick="schovej('id02')" style="width:auto;">Prijava</button>
 
 <div id="id01" class="modal">
 

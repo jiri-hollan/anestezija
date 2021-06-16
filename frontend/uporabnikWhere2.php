@@ -39,8 +39,8 @@ try {
 
 
     $this->data=$data;
-    echo 'this data: ';
-	var_dump ($this->data);
+   // echo 'this data: ';
+	//var_dump ($this->data);
     //var_dump ($data);
 	
 	$uporabnikiIzbrani = $this->conn->vyber('uporabnikiTbl2', array('id', 'email', 'uname', 'ime', 'priimek', 'status'), $this->data);

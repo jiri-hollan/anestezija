@@ -229,13 +229,18 @@ Class Profil extends Prihlaseni {
 //$registracija=true;
 //$email=$geslo=$ime=$priimek=$uname=0;
 //$status = 0;
-$nameTable = "uporabnikiTbl2";
-
+//$nameTable = "uporabnikiTbl2";
 //echo 'Uname: '. $_SESSION["uname"];
+
+if (isset($_SESSION["uname"])) {
 $data['uname'] = $_SESSION["uname"];
 //var_dump ($data);
 require_once 'uporabnikWhere2.php';
 new UporabnikiWhere($data);
+
+} else{
+echo 'NISTE PRIJAVLJENI';	
+}
 
   }// od construct
 }// od class profil
