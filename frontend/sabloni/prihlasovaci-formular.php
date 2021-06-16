@@ -5,6 +5,8 @@
 
 <button onclick="schovej('id02')" style="width:auto;">Prijava</button>
 
+<button id="geslo" onclick="schovej('id03')" style="width:auto;">Sprememba gesla</button>
+
 <div id="id01" class="modal">
 
 <!-- ---------------------------------Registracija-------------------- 
@@ -66,5 +68,23 @@
 
   </form>
 </div>
+<!-- ___________________________  Sprememba gesla      ___________________________________________-->
+<div id="id03" class="modal">
+  
+  <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF'] . '?r=login'?>" method="post" autocomplete="off">
+   <div class="container">
+      <label for="geslo"><b>Geslo</b></label>
+      <input type="password" placeholder="geslo" name="geslo" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z]).{8,}" title="Mora vsebovati vsaj številke in male črke skupaj najmanj 8 znakov" required>
 
+      <label for="psw-repeat"><b>Ponovi geslo</b></label>
+      <input type="password" placeholder="Ponovi geslo" name="psw-repeat" autocomplete="off" required>
+      <button type="submit" class="signupbtn">Sign Up</button>    
+   <!--   <span class="psw">Forgot <a href="#">password?</a></span>-->
+    </div>   
+    <div class="clearfix">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+   <!--   <span class="psw">Forgot <a href="#">password?</a></span>-->
+    </div>   
+  </form>
+</div>
 <?php require_once('vkladane/zapati.php'); ?>
