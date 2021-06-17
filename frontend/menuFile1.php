@@ -37,7 +37,7 @@ echo '
    }
    
    echo '
-  <!-- <a href="/python/">Python</a>-->
+
 </ul>
 </nav>
 ';
