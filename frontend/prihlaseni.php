@@ -46,7 +46,7 @@ Class odjava extends Prihlaseni {
 			//echo 'Odhlasi';
 		 session_unset();
 		 session_destroy();
-            echo 'Odhlašen';
+            echo 'Odjavljen';
 		  $oznameni = 'Ste odjavljeni, ' . 'ponovno se prijavite.';	
 //		header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');  
 
