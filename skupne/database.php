@@ -133,7 +133,7 @@ class Database {
       $parametry = array();	
 	  if (is_array($data) && !empty($data)) {
 		foreach ($data as $sloupec => $hodnota) {
-		  array_push($sloupceHodnoty, "'$sloupec' = ?");
+		  array_push($sloupceHodnoty, " $sloupec = ?");
           array_push($parametry, $hodnota);		  
 		} //od foreache 
 
@@ -141,24 +141,25 @@ class Database {
 		  return 0;
 	  }//od else
 	  $sloupceHodnotySQL = implode(', ', $sloupceHodnoty);
-  var_dump ($sloupceHodnotySQL);
+  //var_dump ($sloupceHodnotySQL);
       $podminkaSQL = '';
 	  if (is_array($podminka)) {
 		$i = 0;
         foreach ($podminka as $sloupec => $hodnota)	{
 			if ($i == 0) {
-			  $podminkaSQL .= " WHERE '$sloupec' = ?";
+			  $podminkaSQL .=" WHERE $sloupec = ?";
 			} else {
-			  $podminkaSQL .= " AND '$sloupec' = ?";
+			  $podminkaSQL .= " AND $sloupec = ?";
 			}//od else
 			array_push($parametry, $hodnota);
 		    $i++;
 		}// od foreach
-  var_dump ($podminkaSQL);		
+	//var_dump ($parametry);	
+  //var_dump ($podminkaSQL);		
 	  }//od if is array
 	  
-	  $dotaz = $this->conn->prepare("UPDATE '$tabulka' SET $sloupceHodnotySQL".$podminkaSQL);
-	  
+	  $dotaz = $this->conn->prepare("UPDATE $tabulka SET $sloupceHodnotySQL.$podminkaSQL");
+  //var_dump ($dotaz);	  
 	  try {
 		 $dotaz->execute($parametry);
          $pocetAktualizovanych = $dotaz->rowCount();		 
