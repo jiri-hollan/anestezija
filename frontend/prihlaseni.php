@@ -211,6 +211,8 @@ public function overUdaje($nameTable, $data) {
 }
 
 //____________________________konec Registrace_______________________________
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 Class Profil extends Prihlaseni {
     public $data;
     public $nameTable;
@@ -238,7 +240,7 @@ echo 'NISTE PRIJAVLJENI';
   }// od construct
 }// od class profil
 //________________________________konec Profil________________________
-
+//---------------------SPREMEMBA G------------------------------------
 
 class SpremembaG extends Prihlaseni  {
 	public $tabulka;
@@ -247,14 +249,53 @@ class SpremembaG extends Prihlaseni  {
 
  public function __construct() {
 		    parent::__construct();
+			
     $tabulka = 'uporabnikiTbl2';
-    $data = array('geslo'=>"m");
-    $podminka = array('id'=>5);
+	$geslo=0;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	echo 'v server rekvest';
+	var_dump($_POST["sGeslo"]);
+	//var_dump($_POST["id"]);
+	if (isset($_SESSION["uname"]) && !empty($_POST["sGeslo"])) {
+	$podminka['uname'] = $_SESSION["uname"];
+	$sGeslo = md5($_POST["sGeslo"]);
+	$podminka['geslo'] = $sGeslo;
+	
+	
+	if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
+    echo "napačen vnos gesla";
+	//$registracija=false;	
+  } else {
+    $geslo = $_POST["geslo"];
+	$data['geslo'] = md5($geslo);
+	var_dump($data);
+  }
+	
+	}//od if isset session
+	
+
+	
+/*	function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}*/
+	
+	
+	
+   // $data = array('geslo'=>"m");
+    //$podminka = array('id'=>5);
 //require_once '../../skupne/database.php';
 
 new Database;
 $uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
 //aktualizuj($tabulka,$data,$podminka);
+
+}//od if $ server
+else {
+	echo "nekaj je narobe";
+}	
  }//od construct
 }//od class spremembaG
 //new SpremembaG;
