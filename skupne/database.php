@@ -158,7 +158,7 @@ class Database {
   //var_dump ($podminkaSQL);		
 	  }//od if is array
 	  
-	  $dotaz = $this->conn->prepare("UPDATE $tabulka SET $sloupceHodnotySQL.$podminkaSQL");
+	  $dotaz = $this->conn->prepare("UPDATE $tabulka SET $sloupceHodnotySQL".$podminkaSQL);
   //var_dump ($dotaz);	  
 	  try {
 		 $dotaz->execute($parametry);
@@ -172,7 +172,7 @@ class Database {
 	}//od function aktualizuj		
 //..........................................................................................
 	
-	public function odsrani($tabulka,$podminka){	
+	public function odstrani($tabulka,$podminka){	
 	  $podminkaSQL = '';
 	  $parametry = array();
 	  if (is_array($podminka)) {

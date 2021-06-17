@@ -21,15 +21,15 @@ Class Prihlaseni {
 }//od class prihlaseni
 //public function aktualizuj($tabulka,$data,$podminka)
 class SpremembaG extends Prihlaseni  {
-	
-public $tabulka;
-public $data;
-public $podminka;
+	public $tabulka;
+    public $data;
+    public $podminka;
+
  public function __construct() {
 		    parent::__construct();
-$tabulka = 'uporabnikiTbl2';
-$data = array('geslo'=>"b");
-$podminka = array('id'=>3);
+    $tabulka = 'uporabnikiTbl2';
+    $data = array('geslo'=>"b");
+    $podminka = array('id'=>3);
 //require_once '../../skupne/database.php';
 
 new Database;
