@@ -141,7 +141,7 @@ class Database {
 		  return 0;
 	  }//od else
 	  $sloupceHodnotySQL = implode(', ', $sloupceHodnoty);
-  
+  var_dump ($sloupceHodnotySQL);
       $podminkaSQL = '';
 	  if (is_array($podminka)) {
 		$i = 0;
@@ -154,9 +154,10 @@ class Database {
 			array_push($parametry, $hodnota);
 		    $i++;
 		}// od foreach
+  var_dump ($podminkaSQL);		
 	  }//od if is array
 	  
-	  $dotaz = $this->db->prepare("UPDATE '$tabulka' SET $sloupceHodnotaSQL".$podminkaSQL);
+	  $dotaz = $this->conn->prepare("UPDATE '$tabulka' SET $sloupceHodnotySQL".$podminkaSQL);
 	  
 	  try {
 		 $dotaz->execute($parametry);
@@ -186,7 +187,7 @@ class Database {
 		}//od foreach
 	  }
 	  
-	$dotaz = $this->db->prepare("DELETE FROM '$tabulka'".$podminkaSQL);
+	$dotaz = $this->conn->prepare("DELETE FROM '$tabulka'".$podminkaSQL);
 	try {
 	  $dotaz->execute($parametry);
 	  $pocetOdstranenych = $otaz->rowCount();	
