@@ -248,7 +248,7 @@ class SpremembaG extends Prihlaseni  {
  public function __construct() {
 		    parent::__construct();
     $tabulka = 'uporabnikiTbl2';
-    $data = array('geslo'=>"z");
+    $data = array('geslo'=>"m");
     $podminka = array('id'=>5);
 //require_once '../../skupne/database.php';
 
@@ -283,6 +283,11 @@ case "logout":
    
 case "profil":
   $prihlaseni = new Profil;
+    //echo "V profilu"; 
+   break;  
+   
+case "spremembaG":
+  $prihlaseni = new SpremembaG;
     //echo "V profilu"; 
    break;  
    

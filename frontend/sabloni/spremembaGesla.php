@@ -1,6 +1,6 @@
 <?php require_once('vkladane/zahlavi.php');?>
 
- <form autocomplete="off" action="<?php echo $_SERVER['PHP_SELF']?>"  method="post">
+ <form autocomplete="off" action="<?php echo $_SERVER['PHP_SELF'] . '?r=spremembaG'?>"  method="post">
    <div class="containerGeslo">
    <h2>Sprememba gesla</h2>
       <!--<label for="sGeslo"><b>Staro geslo</b></label>-->
