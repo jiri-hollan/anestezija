@@ -237,7 +237,7 @@ $data['uname'] = $_SESSION["uname"];
 //var_dump ($data);
 require_once 'uporabnikWhere2.php';
 new UporabnikiWhere($data);
-
+require_once 'sabloni/spremembaGesla.php';
 } else{
 echo 'NISTE PRIJAVLJENI';	
 }
