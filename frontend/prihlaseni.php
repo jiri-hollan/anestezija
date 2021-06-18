@@ -28,6 +28,13 @@ Class odjava extends Prihlaseni {
 	public function __construct() {
 		    parent::__construct();
 	
+ $this->conn = new Database();
+	  $this->zaklad = new stdClass();
+	   if ($_SERVER['SERVER_NAME']=="localhost"){
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/frontend/'; 
+	  }else {
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
+	  }
 
 	  //echo 'odhlašovani';
 	  if (null !== ($_GET['stav'] || $_GET['stav'] == 'odhlasit')) {
@@ -39,7 +46,7 @@ Class odjava extends Prihlaseni {
 			//echo 'Odhlasi';
 		 session_unset();
 		 session_destroy();
-            echo 'Odjavljen';
+            echo 'Odhlašen';
 		  $oznameni = 'Ste odjavljeni, ' . 'ponovno se prijavite.';	
 //		header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');  
 
@@ -211,8 +218,6 @@ public function overUdaje($nameTable, $data) {
 }
 
 //____________________________konec Registrace_______________________________
-//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
 Class Profil extends Prihlaseni {
     public $data;
     public $nameTable;
@@ -232,84 +237,17 @@ $data['uname'] = $_SESSION["uname"];
 //var_dump ($data);
 require_once 'uporabnikWhere2.php';
 new UporabnikiWhere($data);
-require_once 'sabloni/spremembaGesla.php';
+
 } else{
 echo 'NISTE PRIJAVLJENI';	
 }
-//new SpremembaG;
+
   }// od construct
 }// od class profil
 //________________________________konec Profil________________________
-//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-class SpremembaG extends Prihlaseni  {
-	public $tabulka;
-    public $data;
-    public $podminka;
 
- public function __construct() {
-		    parent::__construct();
-			
-    $tabulka = 'uporabnikiTbl2';
-	$geslo=0;
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	//echo 'v server rekvest';
-	//var_dump($_POST["sGeslo"]);
-	//var_dump($_POST["id"]);
-	if (isset($_SESSION["uname"]) && !empty($_POST["sGeslo"])) {
-	$podminka['uname'] = $_SESSION["uname"];
-	$sGeslo = md5($_POST["sGeslo"]);
-	$podminka['geslo'] = $sGeslo;
-	
-	
-	if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
-    echo "napačen vnos gesla";
-	//$registracija=false;	
-  } else {
-    $geslo = $_POST["geslo"];
-	$data['geslo'] = md5($geslo);
-	//var_dump($data);
-	new Database;
-$uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
-//aktualizuj($tabulka,$data,$podminka);
-//echo 'Število aktualiziranih zapisov: ' . $uporabnikiTbl2
-     if ($uporabnikiTbl2 == 1) {
-		echo 'Vaše geslo je bilo spremenjeno'; 
-	 }
-  }
-	
-	}//od if isset session
-	else {
-	echo 'Niste prijavljeni, ali je vnos gesla napačen';	
-	}
 
-	
-/*	function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}*/
-	
-	
-	
-   // $data = array('geslo'=>"m");
-    //$podminka = array('id'=>5);
-//require_once '../../skupne/database.php';
-/*
-new Database;
-$uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
-//aktualizuj($tabulka,$data,$podminka);
-echo 'Število aktualiziranih zapisov: ' . $pocetAktualizovanych;*/
-}//od if $ server
-else {
-	echo "nekaj je narobe";
-}	
- }//od construct
-}//od class spremembaG
-//new SpremembaG;
-
-//_____________________konec clas spremembaG___________________________
 //$prihlaseni = new Prihlaseni;
 if (isset($_GET['r'])) {
 	 // echo 'poskus GET' . $_GET['r'];
@@ -333,12 +271,7 @@ case "logout":
    
 case "profil":
   $prihlaseni = new Profil;
-    //echo "V profilu"; 
-   break;  
-   
-case "spremembaG":
-  $prihlaseni = new SpremembaG;
-    //echo "V profilu"; 
+    //echo "Poskušate se odjaviti!"; 
    break;  
    
   default:
