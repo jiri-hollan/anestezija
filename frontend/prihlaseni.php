@@ -272,7 +272,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	new Database;
 $uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
 //aktualizuj($tabulka,$data,$podminka);
-  /echo 'Število aktualiziranih zapisov: ' . $uporabnikiTbl2; 
+  //echo 'Število aktualiziranih zapisov: ' . $uporabnikiTbl2; 
 if ($uporabnikiTbl2 == 1) {
      echo 'geslo je spremenjeno';
 } 
