@@ -253,7 +253,7 @@ class SpremembaG extends Prihlaseni  {
     $tabulka = 'uporabnikiTbl2';
 	$geslo=0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	echo 'v server rekvest';
+	//echo 'v server rekvest';
 	//var_dump($_POST["sGeslo"]);
 	//var_dump($_POST["id"]);
 	if (isset($_SESSION["uname"]) && !empty($_POST["sGeslo"])) {
@@ -272,7 +272,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	new Database;
 $uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
 //aktualizuj($tabulka,$data,$podminka);
-echo 'Število aktualiziranih zapisov: ' . $pocetAktualizovanych;
+  /echo 'Število aktualiziranih zapisov: ' . $uporabnikiTbl2; 
+if ($uporabnikiTbl2 == 1) {
+     echo 'geslo je spremenjeno';
+} 
   }
 	
 	}//od if isset session
