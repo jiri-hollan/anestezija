@@ -240,7 +240,7 @@ echo 'NISTE PRIJAVLJENI';
   }// od construct
 }// od class profil
 //________________________________konec Profil________________________
-//---------------------SPREMEMBA G------------------------------------
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 class SpremembaG extends Prihlaseni  {
 	public $tabulka;
@@ -269,10 +269,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $geslo = $_POST["geslo"];
 	$data['geslo'] = md5($geslo);
 	var_dump($data);
+	new Database;
+$uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
+//aktualizuj($tabulka,$data,$podminka);
+echo 'Število aktualiziranih zapisov: ' . $pocetAktualizovanych;
   }
 	
 	}//od if isset session
-	
+	else {
+	echo 'Niste prijavljeni, ali je vnos gesla napačen';	
+	}
 
 	
 /*	function test_input($data) {
@@ -287,11 +293,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    // $data = array('geslo'=>"m");
     //$podminka = array('id'=>5);
 //require_once '../../skupne/database.php';
-
+/*
 new Database;
 $uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
 //aktualizuj($tabulka,$data,$podminka);
-
+echo 'Število aktualiziranih zapisov: ' . $pocetAktualizovanych;*/
 }//od if $ server
 else {
 	echo "nekaj je narobe";
