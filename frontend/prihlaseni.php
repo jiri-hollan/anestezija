@@ -254,7 +254,7 @@ class SpremembaG extends Prihlaseni  {
 	$geslo=0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	echo 'v server rekvest';
-	var_dump($_POST["sGeslo"]);
+	//var_dump($_POST["sGeslo"]);
 	//var_dump($_POST["id"]);
 	if (isset($_SESSION["uname"]) && !empty($_POST["sGeslo"])) {
 	$podminka['uname'] = $_SESSION["uname"];
@@ -268,7 +268,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $geslo = $_POST["geslo"];
 	$data['geslo'] = md5($geslo);
-	var_dump($data);
+	//var_dump($data);
 	new Database;
 $uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
 //aktualizuj($tabulka,$data,$podminka);
