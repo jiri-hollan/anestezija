@@ -58,6 +58,7 @@ try {
 	`ime` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
 	`priimek` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
     `status` int(3) NOT NULL,
+    `pristop` int(3) NOT NULL,	
 	UNIQUE (email, uname)
     )";
 
