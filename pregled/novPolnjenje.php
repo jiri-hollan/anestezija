@@ -86,6 +86,7 @@
     <option value="urologija">
     <option value="ORL">
     <option value="RTG">
+	<option value="interna">
   </datalist>
   
   <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika" readonly tabindex="-1"></label>
