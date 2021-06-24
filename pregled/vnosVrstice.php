@@ -60,7 +60,7 @@ vstavi($imeTable, $vrednosti, $polja);
 
 
 function vstavi($imeTable,$c,$polja)  {
-include '../servis/prijavniWeb.php';	
+include '../skupne/prijavniWeb.php';	
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

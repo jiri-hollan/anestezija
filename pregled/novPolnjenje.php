@@ -283,7 +283,7 @@
 	     dokler ni databaze, ostane "submitForm" zakomentiran
 	    __________________________________________________________________________________________
 	 <button id="submitFrm" type="submit" form="frm" value="Submit">Shrani</button>-->
-  <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->
+ <span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>vnos v bazo</span>
 	
 	
  </div>	 
