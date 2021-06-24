@@ -263,8 +263,7 @@
    <div id="navodilaR">navodila</div>
 
 </div>
-<script>
-</script>
+
 
 <!--....................................................................................
 	...............................................Navigacija.........................-->
@@ -278,12 +277,11 @@
      <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>
      <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span>     
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
-	<!-- <span class="navspan" id="spanButon" <button type="submit" form="frm" value="Submit">Submit</button></span>-->
 	<!-- ________________________________________________________________________________________
 	     dokler ni databaze, ostane "submitForm" zakomentiran
 	    __________________________________________________________________________________________
 	 <button id="submitFrm" type="submit" form="frm" value="Submit">Shrani</button>-->
- <span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>vnos v bazo</span>
+ <span class="navSpan" id="submitFrm" onclick='document.getElementById("frm").submit();'>shrani</span>
 	
 	
  </div>	 

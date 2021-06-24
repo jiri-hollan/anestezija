@@ -46,7 +46,7 @@ document.getElementsByTagName('title')[0].innerHTML= priimek + " " + ime;
      document.getElementById("novB").style.visibility = "visible";
      document.getElementById("natisni").style.visibility = "visible";
      document.getElementById("pomoc").style.visibility = "visible";
-     //document.getElementById("submitFrm").style.visibility = "hidden";
+     document.getElementById("submitFrm").style.visibility = "hidden";
 
 
 
