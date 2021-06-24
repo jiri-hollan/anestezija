@@ -217,7 +217,7 @@
 
   
 
-    <textarea id="navodila" class="mikro"  name="navodila" rows="3" >Navodila:</textarea>
+    <textarea id="navodila" class="mikro"  name="navodila" placeholder="Navodila" rows="3" ></textarea>
    </div>
   </fieldset>
  
