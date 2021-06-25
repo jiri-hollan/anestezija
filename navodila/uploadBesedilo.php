@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="sl-SI">
-<head>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
 <?php
 /*
 // define variables and set to empty values
@@ -33,9 +24,9 @@ function test_input($data) {
   return $data;
 }
 */
-?>
 
-<?php
+
+
 //----naloži datoteko besedila pod originalnim imenom----
 $nameTable = $_POST["nameTable"];
 $nalozi['naslov'] = $_POST["naslov"];
@@ -95,9 +86,9 @@ vstavi($nameTable,$nalozi['naslov'] ,$nalozi['direktorij'],$nalozi['file']);
     echo "<h1>Sorry, there was an error uploading your file.</h1>";
   }
 }
-?>
 
-<?php
+
+
 
 
 function vstavi($nameTable,$naslov,$direktorij,$fajl) {
@@ -130,6 +121,3 @@ catch(PDOException $e)
 $conn = null;
 }
 ?>
-
-</body>
-</html>
