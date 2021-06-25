@@ -22,7 +22,7 @@
 
 <!-- <body onload="danesFunction()">  -->
      <body onload="vpisFunction()">
- 
+
 
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
 <form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" autocomplete="off"> 

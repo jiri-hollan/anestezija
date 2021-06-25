@@ -1,5 +1,6 @@
 
 <?php
+if (!empty($_POST)) {
 // define variables and set to empty values
 $najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
 //$imeTable = 'novBolnikTab';
@@ -38,7 +39,7 @@ $vrednosti = rtrim($najdene,",");
 //$name_two["zack"]
 
 
-vstavi($imeTable, $vrednosti, $polja);
+
 
 
 
@@ -77,4 +78,7 @@ header('Location: novPolnjenje.php');
 
 $conn = null;
 }
+
+vstavi($imeTable, $vrednosti, $polja);
+} //od if
 ?>
