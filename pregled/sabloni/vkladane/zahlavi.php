@@ -27,7 +27,7 @@
 <!--....................................................................................
 	...............................................Navigacija.........................-->
 	
- <div class="navbar" id="navbar" style='display:z-index:1;'>
+ <div class="navbar" id="navbar" >
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 	 <!-- Funkcija novBolnikFunction shrani formu u bazo in skoči na vpis novega bolnika -->
 	<!-- <span class="navSpan" id="novB" onclick="novBolnikFunction() ">Nov bolnik</span>-->
