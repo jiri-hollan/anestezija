@@ -67,8 +67,8 @@ try {
    echo "Vložena nova vrstica v podatkovno bazo";
 	//echo "<script>naprejFunction</script>";
 
-	//include ("novPolnjenje.html");
-header('Location: novPolnjenje.php');
+
+header('Location: bolnik.php');
  exit;
     }
     catch(PDOException $e)

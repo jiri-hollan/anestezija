@@ -46,7 +46,8 @@ function naprejFunction() {
     alert("zdravnik ni prijavljen");
     return false;
   }
-     window.open("novPolnjenje.php", "_self");             
+     //window.open("novPolnjenje.php", "_self"); 
+	 window.open("bolnik.php", "_self"); 
 }
 
 function listaZdravnikovFunction() {
