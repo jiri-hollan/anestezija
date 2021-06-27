@@ -264,7 +264,7 @@ width:95%;
 .navbar {
   overflow: hidden;
   background-color: blue;
-  position: relative;
+  position: fixed;
   top: 0;
   width:600px;
   ​​z-index: 60;
