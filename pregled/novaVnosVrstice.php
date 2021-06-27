@@ -6,7 +6,7 @@ if (!empty($_POST)) {
 // define variables and set to empty values
 $najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
 //$imeTable = 'novBolnikTab';
-$imeTable = 'bolnikTbl';
+$nameTable = 'bolnikTbl';
 
 $stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
 
@@ -23,12 +23,17 @@ foreach ($stolpci as $stolpec) {
 	
 if (isset($_POST[$stolpec])) {
 	echo $_POST[$stolpec];
-} else {
+		$data[$stolpec] = ($_POST[$stolpec]);
+ } else {
 	echo $stolpec . ' ne obstaja';
-}	
-}
-
-
+  }
+  
+	
+}//od foreach
+$database = new database;
+var_dump ($database);
+$ulozeno = vloz($nameTable, $data);
+			echo 'uspešno ste se registrirali,<br> pravice do dostopa vam bodo dodeljene po posvetu <br>z obveščevalnimi agencijami.';
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 /*
