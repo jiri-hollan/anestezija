@@ -1,6 +1,31 @@
 
 <?php
-require '../skupne/database.php';
+require_once '../skupne/database.php';
+Class Apregled {
+	public $conn;
+	public $zaklad;
+	public $status;
+	
+	public function __construct() {
+	  $this->conn = new Database();
+	/*  $this->zaklad = new stdClass();
+	  if ($_SERVER['SERVER_NAME']=="localhost"){
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/frontend/'; 
+	  }else {
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
+	  } */
+	  
+
+	}	
+	
+}//od class prihlaseni
+
+//___________________________________- potomstvo_______________________________________________
+Class PrviVpis extends Apregled {
+		
+	public function __construct() {
+		    parent::__construct();
+
 
 if (!empty($_POST)) {
 // define variables and set to empty values
@@ -32,7 +57,7 @@ if (isset($_POST[$stolpec])) {
 }//od foreach
 $database = new database;
 var_dump ($database);
-$ulozeno = vloz($nameTable, $data);
+$ulozeno = $this->conn->vloz($nameTable, $data);
 			echo 'uspešno ste se registrirali,<br> pravice do dostopa vam bodo dodeljene po posvetu <br>z obveščevalnimi agencijami.';
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -100,4 +125,8 @@ $conn = null;
 
 vstavi($imeTable, $vrednosti, $polja); */
 } //od if 
+	} //od construct
+	} //od class PrviVpis
+	
+	$novaVnosVrstice = new PrviVpis;
 ?>
