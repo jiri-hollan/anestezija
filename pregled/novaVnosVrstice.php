@@ -21,7 +21,7 @@ $stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojst
 
 foreach ($stolpci as $stolpec) {
 	
-if isset($_POST[$stolpec]) {
+if (isset($_POST[$stolpec])) {
 	echo $_POST[$stolpec];
 } else {
 	echo $stolpec . ' ne obstaja';
@@ -93,6 +93,6 @@ header('Location: bolnik.php');
 $conn = null;
 }
 
-vstavi($imeTable, $vrednosti, $polja);
-} //od if */
+vstavi($imeTable, $vrednosti, $polja); */
+} //od if 
 ?>
