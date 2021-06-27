@@ -47,7 +47,7 @@ $stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojst
 foreach ($stolpci as $stolpec) {
 	
 if (isset($_POST[$stolpec])) {
-	echo $_POST[$stolpec];
+	//echo $_POST[$stolpec];
 		$data[$stolpec] = ($_POST[$stolpec]);
  } else {
 	echo $stolpec . ' ne obstaja';
@@ -56,9 +56,9 @@ if (isset($_POST[$stolpec])) {
 	
 }//od foreach
 $database = new database;
-var_dump ($database);
+//var_dump ($database);
 $ulozeno = $this->conn->vloz($nameTable, $data);
-			echo 'uspešno ste se registrirali,<br> pravice do dostopa vam bodo dodeljene po posvetu <br>z obveščevalnimi agencijami.';
+			echo 'Zapis vnesen v tabelo';
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 /*
