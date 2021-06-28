@@ -120,11 +120,14 @@ class Database {
   try {
 	  $dotaz->execute($parametry);
 	  $pocetVlozenych = $dotaz->rowCount();	 
-	  $lastId = $this->conn->lastInsertId();
-	  var_dump($lastId);
+	  $ = $this->conn->lastInsertId();
+	  //var_dump($lastId);
+	  $vlozeno['pocetVlozenych'] = $pocetVlozenych;
+	  $vlozeno['lastId'] = $pocetVlozenych;
   } catch (PDOException $e) {
 	  echo $e->getMessage();
 	  $pocetVlozenych = false;
+	  $lastId =  false;
   }
   
   return $pocetVlozenych;
