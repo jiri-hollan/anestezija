@@ -8,12 +8,12 @@ Class Apregled {
 	
 	public function __construct() {
 	  $this->conn = new Database();
-	/*  $this->zaklad = new stdClass();
+	  $this->zaklad = new stdClass();
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/frontend/'; 
 	  }else {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
-	  } */
+	  } 
 	  
 
 	}	
@@ -72,12 +72,6 @@ $ulozeno = $this->conn->vloz($nameTable, $data);
   return $data;
 }*/
 
-
-/*
-	 
-header('Location: bolnik.php');
-
- */
 } //od if 
 	} //od construct
 	} //od class PrviVpis
