@@ -54,9 +54,6 @@ $database = new database;
 $ulozeno = $this->conn->vloz($nameTable, $data);
 			echo 'Zapis vnesen v tabelo';
 
-//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
 
 
 /*function test_input($data) {
@@ -72,4 +69,16 @@ $ulozeno = $this->conn->vloz($nameTable, $data);
 	
 	$novaVnosVrstice = new PrviVpis;
 	header('Location: bolnik.php');
+	
+//-------------------------------------------konec prviVpis---------------------------
+
+Class SpremeniVpis extends Apregled {
+		
+	public function __construct() {
+		    parent::__construct();
+
+	
+} //od construct
+	} //od class SpremeniVpis
+		
 ?>
