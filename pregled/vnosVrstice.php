@@ -86,10 +86,17 @@ Class PreberiVpis extends Apregled {
 		
 	public function __construct() {
 		    parent::__construct();
-
+			
+if (!empty($_POST)) {			
+    $podminka = $_POST;
 	
-} //od construct
-	} //od class PreberiVpis
+	$database = new database;
+//var_dump ($database);
+$prebrano = $this->conn->vyberOr($nameTable, $stolpci, $podminka);
+			echo 'Zapis vnesen v tabelo';
+    } //od if 
+  } //od construct
+} //od class PreberiVpis
 
 //-------------------------------------------konec PreberiVpis---------------------------		
 ?>
