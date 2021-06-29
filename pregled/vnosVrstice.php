@@ -70,7 +70,7 @@ $ulozeno = $this->conn->vloz($nameTable, $data);
 	$novaVnosVrstice = new PrviVpis;
 	header('Location: bolnik.php');
 	
-//-------------------------------------------konec prviVpis---------------------------
+//-------------------------------------------konec PrviVpis---------------------------
 
 Class SpremeniVpis extends Apregled {
 		
