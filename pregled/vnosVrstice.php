@@ -80,5 +80,16 @@ Class SpremeniVpis extends Apregled {
 	
 } //od construct
 	} //od class SpremeniVpis
+	
+//-------------------------------------------konec SpremeniVpis---------------------------	
+Class PreberiVpis extends Apregled {
 		
+	public function __construct() {
+		    parent::__construct();
+
+	
+} //od construct
+	} //od class PreberiVpis
+
+//-------------------------------------------konec PreberiVpis---------------------------		
 ?>
