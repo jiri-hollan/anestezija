@@ -11,22 +11,25 @@
 </form>
 <p id="demo"></p>
 <p id="demo1"></p>
+<p id="demo2"></p>
 <p onclick="formFunction()">formFunction</p>
 <script>
 //const person = {};
 function formFunction() {
 var inputs = document.getElementById("my-form").elements;
 var jString = "";
+const person1 = {};
 // Iterate over the form controls
 for (i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" ) {
   
-  kljuc=inputs[i].name;
+ var kljuc=inputs[i].name;
   //alert (kljuc);
   
-  vrednost=inputs[i].value
+ var vrednost=inputs[i].value
   //alert (vrednost);
-//const person = {};
+//const person1 = {};
+  person1[kljuc] = vrednost;
 if (i===0) {
 jString = '"'+ kljuc + '"'+ ":" +'"'+  vrednost +'"';
 } else {
@@ -61,6 +64,7 @@ txt += x + ': '+person[x] + " <br>";
 };
 
 document.getElementById("demo1").innerHTML = txt;
+document.getElementById("demo2").innerHTML = 'username'+person1.username;
 
 }
 //document.getElementById("demo").innerHTML = Object.values(person);
