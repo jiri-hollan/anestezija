@@ -12,10 +12,10 @@
 <p id="demo"></p>
 <p onclick="formFunction()">formFunction</p>
 <script>
-const person = {};
+//const person = {};
 function formFunction() {
 var inputs = document.getElementById("my-form").elements;
-var jString = "{";
+var jString = "";
 // Iterate over the form controls
 for (i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" ) {
@@ -26,27 +26,30 @@ for (i = 0; i < inputs.length; i++) {
   vrednost=inputs[i].value
   //alert (vrednost);
 //const person = {};
-jString = jString + kljuc + ":" +'"'+  vrednost +'"' + ",";
+if (i===0) {
+jString = '"'+ kljuc + '"'+ ":" +'"'+  vrednost +'"';
+} else {
+jString = jString + ', ' + '"' + kljuc + '"' + ":" +'"'+  vrednost +'"';
+}
 //person.kljuc = vrednost;
-
-
-alert (jString);
+//alert (jString);
 //alert (kljuc + " " + vrednost);
  // document.getElementById("demo").innerHTML = Object.values(person);
   }
   //document.getElementById("demo").innerHTML = Object.values(person);
 }
+jString = '{'+jString+'}';
+alert (jString);
 //document.getElementById("demo").innerHTML = person;
 
 
 //document.getElementById("demo").innerHTML = Object.keys(person);
 //document.getElementById("demo").innerHTML = Object.values(person) + Object.keys(person);
-let txt = "";
-for (let x in person) {
-txt += person[x] + " ";
-};
 
-document.getElementById("demo").innerHTML = txt;
+const person = {jString};
+//txt = person.password;
+alert (person.username);
+document.getElementById("demo").innerHTML = person.password;
 
 
 
