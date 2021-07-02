@@ -2,20 +2,20 @@
 <html>
 <body>
 
-<h2>JavaScript Objects</h2>
+<!--<h2>JavaScript Objects</h2>
 <p>Object.values() converts an object to an array.</p>
 <form id="my-form">
   <input type="text" name="username">
   <input type="text" name="full-name">
   <input type="password" name="password">
-</form>
-<p id="demo"></p>
-<p id="demo1"></p>
+</form>-->
+<p id="demo">demo</p>
+<p id="demo1">demo1</p>
 <p onclick="formFunction()">formFunction</p>
 <script>
 //const person = {};
 function formFunction() {
-var inputs = document.getElementById("my-form").elements;
+var inputs = document.getElementById("frm").elements;
 var jString = "";
 // Iterate over the form controls
 for (i = 0; i < inputs.length; i++) {
@@ -27,7 +27,9 @@ for (i = 0; i < inputs.length; i++) {
   vrednost=inputs[i].value
   //alert (vrednost);
 //const person = {};
-if (i===0) {
+if (kjuc=="undefined") {}
+	
+else if (i===0&&kjuc===!"undefined") {
 jString = '"'+ kljuc + '"'+ ":" +'"'+  vrednost +'"';
 } else {
 jString = jString + ', ' + '"' + kljuc + '"' + ":" +'"'+  vrednost +'"';

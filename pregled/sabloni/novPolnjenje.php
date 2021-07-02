@@ -208,6 +208,11 @@ require_once ('sabloni/vkladane/zahlavi.php');
 </form>
 <!--buton je premeščen v navMenu
 <button id="bolnikButon"  type="submit" form="frm" value="Submit">Submit</button>-->
+
+<?php
+require_once ('sabloni/formObjekt.php');
+?>
+
 <!-- ______________________________________________________________________________________
 
 ...........................Tretji del TISK................................-->
