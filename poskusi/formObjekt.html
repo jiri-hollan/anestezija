@@ -15,7 +15,7 @@
 const person = {};
 function formFunction() {
 var inputs = document.getElementById("my-form").elements;
-
+var jString = "{";
 // Iterate over the form controls
 for (i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" ) {
@@ -26,11 +26,12 @@ for (i = 0; i < inputs.length; i++) {
   vrednost=inputs[i].value
   //alert (vrednost);
 //const person = {};
-person.kljuc = vrednost;
+jString = jString + kljuc + ":" +'"'+  vrednost +'"' + ",";
+//person.kljuc = vrednost;
 
 
-
-alert (kljuc + " " + vrednost);
+alert (jString);
+//alert (kljuc + " " + vrednost);
  // document.getElementById("demo").innerHTML = Object.values(person);
   }
   //document.getElementById("demo").innerHTML = Object.values(person);
