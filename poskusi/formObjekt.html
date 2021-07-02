@@ -10,6 +10,7 @@
   <input type="password" name="password">
 </form>
 <p id="demo"></p>
+<p id="demo1"></p>
 <p onclick="formFunction()">formFunction</p>
 <script>
 //const person = {};
@@ -40,18 +41,26 @@ jString = jString + ', ' + '"' + kljuc + '"' + ":" +'"'+  vrednost +'"';
 }
 jString = '{'+jString+'}';
 alert (jString);
+
 //document.getElementById("demo").innerHTML = person;
 
 
 //document.getElementById("demo").innerHTML = Object.keys(person);
 //document.getElementById("demo").innerHTML = Object.values(person) + Object.keys(person);
 
-const person = {jString};
+
+const person = JSON.parse(jString);
+//const person = {jString};
 //txt = person.password;
-alert (person.username);
-document.getElementById("demo").innerHTML = person.password;
+//alert (person.username);
+document.getElementById("demo").innerHTML = 'geslo: '+person.password;
 
+let txt = "";
+for (let x in person) {
+txt += x + ': '+person[x] + " <br>";
+};
 
+document.getElementById("demo1").innerHTML = txt;
 
 }
 //document.getElementById("demo").innerHTML = Object.values(person);
