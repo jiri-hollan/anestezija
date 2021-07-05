@@ -1,12 +1,12 @@
 
 <p id="demo1">demo1</p>
-<p id="demo2">demo2</p>
+<!--<p id="demo2">demo2</p>-->
 <p onclick="formFunction()">formFunction</p>
 <script>
 
 function formFunction() {
 var inputs = document.getElementById("frm").elements;
-var jString = "";
+//var jString = "";
 const person1 = {};
 // Iterate over the form controls
 for (i = 0; i < inputs.length; i++) {
@@ -31,5 +31,6 @@ txt += x + ': '+person1[x] + " <br>";
 document.getElementById("demo1").innerHTML = txt;
 //document.getElementById("demo2").innerHTML = 'priimek: '+person1.priimek;
 //-----------------------------------konec prikaza------------------------------------
+return person1;
 }
 </script>
