@@ -1,5 +1,6 @@
 <?php
 require_once('../skupne/database.php');
+require_once ('sabloni/vkladane/zahlavi.php');
 require_once ('sabloni/novPolnjenje.php');
 
 /*Class Apregled {
@@ -21,5 +22,6 @@ require_once ('sabloni/novPolnjenje.php');
 	
 }//od class prihlaseni 
 $bolnik = new Apregled; */
-
+require_once ('sabloni/formObjekt.php');
+require_once('sabloni/vkladane/zapati.php');
 ?>

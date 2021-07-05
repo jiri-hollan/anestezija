@@ -1,6 +1,3 @@
-<?php
-require_once ('sabloni/vkladane/zahlavi.php');
-?>
 
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
 <form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" autocomplete="off"> 
@@ -174,7 +171,6 @@ require_once ('sabloni/vkladane/zahlavi.php');
 	 
  </fieldset>
  
-
 	<labelfor="izvidiInOpombe">Izvidi in opombe:</label><br>  
     <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
 
@@ -209,9 +205,7 @@ require_once ('sabloni/vkladane/zahlavi.php');
 <!--buton je premeščen v navMenu
 <button id="bolnikButon"  type="submit" form="frm" value="Submit">Submit</button>-->
 
-<?php
-require_once ('sabloni/formObjekt.php');
-?>
+
 
 <!-- ______________________________________________________________________________________
 
@@ -247,5 +241,3 @@ require_once ('sabloni/formObjekt.php');
    <div id="navodilaR">navodila</div>
 
 </div>
-
-<?php require_once('vkladane/zapati.php'); ?>
