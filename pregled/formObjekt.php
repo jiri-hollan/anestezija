@@ -1,5 +1,6 @@
 
 <p id="demo1">demo1</p>
+<input id="input" name="input"></input>
 <!--<p id="demo2">demo2</p>-->
 <p onclick="formFunction()">formFunction</p>
 <p onclick="formNazajFunction(person1)">formNazajFunction</p>
@@ -30,7 +31,7 @@ for (let x in person1) {
 txt += x + ': '+person1[x] + " <br>";
 }
 
-document.getElementById("demo1").innerHTML = txt;
+//document.getElementById("demo1").innerHTML = txt;
 //document.getElementById("demo2").innerHTML = 'priimek: '+person1.priimek;
 //-----------------------------------konec prikaza------------------------------------
 return person1;
@@ -43,7 +44,9 @@ for (i = 0; i < inputs.length; i++) {
 if (inputs[i].nodeName === "INPUT" ) {
 	 var kljuc=inputs[i].name;
  //alert (kljuc); 	 
-	 document.getElementById(kljuc).name = person1[kljuc];
+
+     document.getElementsByName(kljuc)[0].value = person1[kljuc]; //person1[kljuc];
+//alert(kljuc + ": " +person1[kljuc]);
 
 } // od if
 } //od for
