@@ -1,6 +1,6 @@
 
-<p id="demo1">demo1</p>
-<input id="input" name="input"></input>
+<!--<p id="demo1">demo1</p>-->
+
 <!--<p id="demo2">demo2</p>-->
 <p onclick="formFunction()">formFunction</p>
 <p onclick="formNazajFunction(person1)">formNazajFunction</p>
@@ -26,14 +26,16 @@ for (i = 0; i < inputs.length; i++) {
 //jString = '{'+jString+'}';
 //alert (jString);
 //---------------------------------------del kode za prikaz objekta person1--------
-let txt = "";
+
+/*let txt = "";
 for (let x in person1) {
 txt += x + ': '+person1[x] + " <br>";
 }
+document.getElementById("demo1").innerHTML = txt;*/
 
- document.getElementById("demo1").innerHTML = txt;
 //document.getElementById("demo2").innerHTML = 'priimek: '+person1.priimek;
 //-----------------------------------konec prikaza------------------------------------
+
 return person1;
 }//od formFunction
 
