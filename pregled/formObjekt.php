@@ -13,7 +13,7 @@ var inputs = document.getElementById("frm").elements;
 
 // Iterate over the form controls
 for (i = 0; i < inputs.length; i++) {
-  if (inputs[i].nodeName === "INPUT" ) {
+  if (inputs[i].nodeName === "INPUT" ||inputs[i].nodeName === "TEXTAREA") {
   
  var kljuc=inputs[i].name;
   //alert (kljuc); 
@@ -31,7 +31,7 @@ for (let x in person1) {
 txt += x + ': '+person1[x] + " <br>";
 }
 
-//document.getElementById("demo1").innerHTML = txt;
+ document.getElementById("demo1").innerHTML = txt;
 //document.getElementById("demo2").innerHTML = 'priimek: '+person1.priimek;
 //-----------------------------------konec prikaza------------------------------------
 return person1;
@@ -41,7 +41,7 @@ function formNazajFunction(person1) {
 //var kljuc;	
 var inputs = document.getElementById("frm").elements;
 for (i = 0; i < inputs.length; i++) {
-if (inputs[i].nodeName === "INPUT" ) {
+  if (inputs[i].nodeName === "INPUT" ||inputs[i].nodeName === "TEXTAREA") {
 	 var kljuc=inputs[i].name;
  //alert (kljuc); 	 
 
