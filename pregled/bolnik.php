@@ -22,6 +22,6 @@ require_once ('sabloni/novPolnjenje.php');
 	
 }//od class prihlaseni 
 $bolnik = new Apregled; */
-require_once ('sabloni/formObjekt.php');
+require_once ('formObjekt.php');
 require_once('sabloni/vkladane/zapati.php');
 ?>
