@@ -2,12 +2,14 @@
 <p id="demo1">demo1</p>
 <!--<p id="demo2">demo2</p>-->
 <p onclick="formFunction()">formFunction</p>
+<p onclick="formNazajFunction(person1)">formNazajFunction</p>
 <script>
-
+const person1 = {};	
 function formFunction() {
+//const person1 = {};	
 var inputs = document.getElementById("frm").elements;
 //var jString = "";
-const person1 = {};
+
 // Iterate over the form controls
 for (i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" ) {
@@ -33,4 +35,17 @@ document.getElementById("demo1").innerHTML = txt;
 //-----------------------------------konec prikaza------------------------------------
 return person1;
 }//od formFunction
+
+function formNazajFunction(person1) {
+//var kljuc;	
+var inputs = document.getElementById("frm").elements;
+for (i = 0; i < inputs.length; i++) {
+if (inputs[i].nodeName === "INPUT" ) {
+	 var kljuc=inputs[i].name;
+ //alert (kljuc); 	 
+	 document.getElementById(kljuc).name = person1[kljuc];
+
+} // od if
+} //od for
+} //od function formNazajFunction
 </script>
