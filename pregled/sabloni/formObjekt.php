@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html>
-<body>
 
-<p id="demo">demo</p>
+<!--<html>
+<body> -->
+
 <p id="demo1">demo1</p>
 <p id="demo2">demo2</p>
 <p onclick="formFunction()">formFunction</p>
@@ -38,11 +37,11 @@ txt += x + ': '+person1[x] + " <br>";
 };
 
 document.getElementById("demo1").innerHTML = txt;
-document.getElementById("demo2").innerHTML = 'priimek'+person1.priimek;
+document.getElementById("demo2").innerHTML = 'priimek: '+person1.priimek;
 
 }
 
 </script>
-
+<!--
 </body>
-</html>
+</html>-->
