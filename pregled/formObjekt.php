@@ -22,14 +22,11 @@ for (i = 0; i < inputs.length; i++) {
   //alert (vrednost);
 
   person1[kljuc] = vrednost;
-
-jString = jString + ', ' + '"' + kljuc + '"' + ":" +'"'+  vrednost +'"';
-
+//jString = jString + ', ' + '"' + kljuc + '"' + ":" +'"'+  vrednost +'"';
   }
-
 }
-jString = '{'+jString+'}';
-alert (jString);
+//jString = '{'+jString+'}';
+//alert (jString);
 
 let txt = "";
 for (let x in person1) {
@@ -38,9 +35,7 @@ txt += x + ': '+person1[x] + " <br>";
 
 document.getElementById("demo1").innerHTML = txt;
 document.getElementById("demo2").innerHTML = 'priimek: '+person1.priimek;
-
 }
-
 </script>
 <!--
 </body>
