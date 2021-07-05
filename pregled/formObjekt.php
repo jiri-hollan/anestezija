@@ -19,18 +19,18 @@ for (i = 0; i < inputs.length; i++) {
   person1[kljuc] = vrednost;
 //jString = jString + ', ' + '"' + kljuc + '"' + ":" +'"'+  vrednost +'"';
   }
-}
+} //od for
 //jString = '{'+jString+'}';
 //alert (jString);
 //---------------------------------------del kode za prikaz objekta person1--------
 let txt = "";
 for (let x in person1) {
 txt += x + ': '+person1[x] + " <br>";
-};
+}
 
 document.getElementById("demo1").innerHTML = txt;
 //document.getElementById("demo2").innerHTML = 'priimek: '+person1.priimek;
 //-----------------------------------konec prikaza------------------------------------
 return person1;
-}
+}//od formFunction
 </script>
