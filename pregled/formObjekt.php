@@ -38,7 +38,7 @@ document.getElementById("demo1").innerHTML = txt;*/
 
 //const myJSON = JSON.stringify(myObj);
 const myJSON = JSON.stringify(person1);
-localStorage.setItem("testJSON", myJSON);
+sessionStorage.setItem("testJSON", myJSON);
 
 
 
@@ -47,7 +47,7 @@ localStorage.setItem("testJSON", myJSON);
 }//od formFunction
 
 function formNazajFunction(person1) {
-	 let text = localStorage.getItem("testJSON");
+	 let text = sessionStorage.getItem("testJSON");
      let obj = JSON.parse(text);
 //alert (obj.ime);
 	
