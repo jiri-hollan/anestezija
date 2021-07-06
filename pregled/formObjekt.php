@@ -36,10 +36,21 @@ document.getElementById("demo1").innerHTML = txt;*/
 //document.getElementById("demo2").innerHTML = 'priimek: '+person1.priimek;
 //-----------------------------------konec prikaza------------------------------------
 
-return person1;
+//const myJSON = JSON.stringify(myObj);
+const myJSON = JSON.stringify(person1);
+localStorage.setItem("testJSON", myJSON);
+
+
+
+
+//return person1;
 }//od formFunction
 
 function formNazajFunction(person1) {
+	 let text = localStorage.getItem("testJSON");
+     let obj = JSON.parse(text);
+//alert (obj.ime);
+	
 //var kljuc;	
 var inputs = document.getElementById("frm").elements;
 for (i = 0; i < inputs.length; i++) {
@@ -47,7 +58,7 @@ for (i = 0; i < inputs.length; i++) {
 	 var kljuc=inputs[i].name;
  //alert (kljuc); 	 
 
-     document.getElementsByName(kljuc)[0].value = person1[kljuc]; //person1[kljuc];
+     document.getElementsByName(kljuc)[0].value = obj[kljuc]; //person1[kljuc];
 //alert(kljuc + ": " +person1[kljuc]);
 
 } // od if
