@@ -63,5 +63,6 @@ for (i = 0; i < inputs.length; i++) {
 
 } // od if
 } //od for
+starostFunction();
 } //od function formNazajFunction
 </script>
