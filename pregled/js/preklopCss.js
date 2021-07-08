@@ -48,7 +48,7 @@ document.getElementsByTagName('title')[0].innerHTML= priimek + " " + ime;
      document.getElementById("pomoc").style.visibility = "visible";
      document.getElementById("submitFrm").style.visibility = "hidden";
 
-
+return false;
 
      }
 }
