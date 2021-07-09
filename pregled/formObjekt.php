@@ -35,6 +35,7 @@ document.getElementById("demo1").innerHTML = txt;*/
 
 //document.getElementById("demo2").innerHTML = 'priimek: '+person1.priimek;
 //-----------------------------------konec prikaza------------------------------------
+//-----to bo konec konstruktorja--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 //const myJSON = JSON.stringify(myObj);
 const myJSON = JSON.stringify(person1);
@@ -45,6 +46,8 @@ sessionStorage.setItem("testJSON", myJSON);
 
 //return person1;
 }//od formFunction
+
+///--------------------- to bo konec izdelave jsona---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 function formNazajFunction(person1) {
 	 let text = sessionStorage.getItem("testJSON");
@@ -65,4 +68,6 @@ for (i = 0; i < inputs.length; i++) {
 } //od for
 starostFunction();
 } //od function formNazajFunction
+
+//to bo konec vstavitve vrednosti nazaj v forulat--xxxxxxxxxxxxxxxxxx
 </script>
