@@ -16,9 +16,9 @@ Class Apregled {
 	  }else {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  } 
-	  $nameTable = 'bolnikTbl';
+	  $this->nameTable = 'bolnikTbl';
 	  
-      $stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
+      $this->stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
 	}	
 	
 }//od class prihlaseni
@@ -38,7 +38,7 @@ $najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
 // Looping through an array using for 
 //echo "\nLOOPING array z uporabo for: \n"; 
 
-foreach ($stolpci as $stolpec) {
+foreach ($this->stolpci as $stolpec) {
 	
 if (isset($_POST[$stolpec])) {
 	//echo $_POST[$stolpec];
@@ -51,7 +51,7 @@ if (isset($_POST[$stolpec])) {
 }//od foreach
 $database = new database;
 //var_dump ($database);
-$ulozeno = $this->conn->vloz($nameTable, $data);
+$ulozeno = $this->conn->vloz($this->nameTable, $data);
 			echo 'Zapis vnesen v tabelo';
 
 
@@ -68,7 +68,7 @@ $ulozeno = $this->conn->vloz($nameTable, $data);
 	} //od class PrviVpis
 	
 	$novaVnosVrstice = new PrviVpis;
-	header('Location: bolnik.php');
+	//header('Location: bolnik.php');
 	
 //-------------------------------------------konec PrviVpis---------------------------
 
