@@ -130,8 +130,8 @@ class Database {
   }
       $vlozeno['pocetVlozenych'] = $pocetVlozenych;
 	  //var_dump ($vlozeno);
-	  $vlozeno['lastId'] = $pocetVlozenych;
-	 // echo $pocetVlozenych . $vlozeno['lastId'];
+	  $vlozeno['lastId'] = $lastId;
+	 // echo $pocetVlozenych . 'zadnji Id: '. $vlozeno['lastId'];
   //return $pocetVlozenych;
     return $vlozeno;
 }

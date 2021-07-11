@@ -68,7 +68,7 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
 	} //od class PrviVpis
 	
 	$novaVnosVrstice = new PrviVpis;
-	//header('Location: bolnik.php');
+	header('Location: bolnik.php');
 	
 //-------------------------------------------konec PrviVpis---------------------------
 
