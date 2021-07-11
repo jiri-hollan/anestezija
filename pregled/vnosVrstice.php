@@ -5,8 +5,7 @@ Class Apregled {
 	public $conn;
 	public $zaklad;
 	public $status;
-	public $nameTable;
-	public $stolpci;
+	
 	
 	public function __construct() {
 	  $this->conn = new Database();
@@ -49,6 +48,7 @@ if (isset($_POST[$stolpec])) {
   
 	
 }//od foreach
+
 $database = new database;
 //var_dump ($database);
 $ulozeno = $this->conn->vloz($this->nameTable, $data);
