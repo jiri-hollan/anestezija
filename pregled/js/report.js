@@ -2,6 +2,7 @@
  var a;
  function reportFunction(a)
  {
+	formFunction(); 
  var x;	 
  var x1 = document.getElementById("frm")["oddelek"].value;
  var x2 = document.getElementById("frm")["dgOperativna"].value;
