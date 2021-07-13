@@ -239,7 +239,7 @@ document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdr
       natisniFunction();
      }
      else if(a=="n") {  
-      nazajFunction();
+      novBolnikFunction();
      }
 	 else if(a=="p") {  
       ogledFunction();

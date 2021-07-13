@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <title>Novi bolnik</title>
-<script src="js/bmi.js?<?php echo time(); ?>"></script>
 <script src="js/vpis.js?<?php echo time(); ?>"></script>
-//<script src="js/starost.js?<?php echo time(); ?>"></script>
 <script src="js/report.js?<?php echo time(); ?>"></script>
 <script src="js/preklopCss.js?<?php echo time(); ?>"></script>
 <script src="js/odjava.js?<?php echo time(); ?>"></script>

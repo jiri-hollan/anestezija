@@ -20,10 +20,12 @@ function novBolnikFunction() {
   document.getElementById("frm").submit();
 alert ('shranjeno v bazo');
 //  alert ('po vstavljanju v bazo');
+//location.reload();
   } else {
  alert ('ni shranjeno');
+location.reload();
   }
  // alert ('nov bolnik');
-location.reload();
+
 }
 //------konec pri prehodu na novega bolnika---
