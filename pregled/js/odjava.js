@@ -11,7 +11,7 @@ function klousFunction(){
 close();
 }
 
-
+//------shranjevanje v bazo pri prehodu na novega bolnika---
 function novBolnikFunction() {
 
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
@@ -25,3 +25,4 @@ function novBolnikFunction() {
  // alert ('nov bolnik');
 location.reload();
 }
+//------konec pri prehodu na novega bolnika---
