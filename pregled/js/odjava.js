@@ -18,9 +18,10 @@ function novBolnikFunction() {
   if (r == true) {
  // alert ('pred vstavljanjem v bazo');
   document.getElementById("frm").submit();
+alert ('shranjeno v bazo');
 //  alert ('po vstavljanju v bazo');
   } else {
- 
+ alert ('ni shranjeno');
   }
  // alert ('nov bolnik');
 location.reload();
