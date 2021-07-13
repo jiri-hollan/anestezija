@@ -12,7 +12,8 @@ close();
 }
 
 //------shranjevanje v bazo pri prehodu na novega bolnika---
-function novBolnikFunction() {
+var izbris;
+function novBolnikFunction(izbris) {
 
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
   if (r == true) {
@@ -22,7 +23,7 @@ alert ('shranjeno v bazo');
 //  alert ('po vstavljanju v bazo');
 //location.reload();
   } else {
- alert ('ni shranjeno');
+ //alert ('ni shranjeno');
 location.reload();
   }
  // alert ('nov bolnik');

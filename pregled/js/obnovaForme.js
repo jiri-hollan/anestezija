@@ -58,5 +58,6 @@ for (i = 0; i < inputs.length; i++) {
 } // od if
 } //od for
 starostFunction();
+document.getElementById("novB").style.display = "none"; 
 } //od function formNazajFunction
 

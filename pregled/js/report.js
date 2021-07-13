@@ -239,8 +239,24 @@ document.getElementById("navodilaR").innerHTML= navodila;
 
 document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdravnika").value;
 
+switch (a) {
+  case "t":
+    natisniFunction();
+    break;
+  case "n":
+    novBolnikFunction();
+    break;
+ case "p":
+    ogledFunction();
+    break;	
+  default:
+    text = "No value found";
+}
 
-     if (a=="t") {
+
+
+
+   /*  if (a=="t") {
       natisniFunction();
      }
      else if(a=="n") {  
@@ -248,7 +264,7 @@ document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdr
      }
 	 else if(a=="p") {  
       ogledFunction();
-     }
+     }*/
 //....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
 }
  }
