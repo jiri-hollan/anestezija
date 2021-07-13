@@ -1,4 +1,4 @@
-
+ var datRojstva;
  var a;
  function reportFunction(a)
  {
@@ -11,11 +11,13 @@
  var x5 = document.getElementById("frm")["visina"].value;
  var x6 = document.getElementById("frm")["izvidiInOpombe"].value;
  var x7 = document.getElementById("frm")["sklep"].value;
- /*var v8 = document.getElementById("frm")["stevMaticna"].value;
- var x9 = document.getElementById("frm")["stevMaticna"].value;
- var x10 = document.getElementById("frm")["stevMaticna"].value;
- var x11 = document.getElementById("frm")["stevMaticna"].value;*/
- 
+ var v8 = document.getElementById("frm")["ime"].value;
+ var x9 = document.getElementById("frm")["priimek"].value;
+ var x10 = datRojstva;
+ /* var x11 = document.getElementById("frm")["stevMaticna"].value;
+var x12 = document.getElementById("frm")["stevMaticna"].value;*/
+  
+  
   if (x1 == "") {
     alert("oddelek mora biti vpisan");
     return false;
@@ -47,19 +49,22 @@ else if (x7 == "") {
     alert("sklep mora biti vpisan");
     return false;
   }
-/*else if (x4 == "") {
+/*else if (x8 == "") {
     alert("teza mora biti vpisana");
     return false;
   }
-else if (x4 == "") {
+else if (x9 == "") {
     alert("teza mora biti vpisana");
     return false;
   }
-else if (x4 == "") {
+else if (x10 == "") {
+    alert("teza mora biti vpisana");
+    return false;
+  }
+else if (x11 == "") {
     alert("teza mora biti vpisana");
     return false;
   }*/
-
 
  else {
 
