@@ -15,6 +15,21 @@ close();
 var izbris;
 function novBolnikFunction(izbris) {
 
+switch (izbris) {
+  case 0:
+    stariFunction();
+    break;
+  case 1:
+    noviFunction();
+    break;
+
+
+  default:
+    //text = "No value found";
+}
+
+function stariFunction() {
+
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
   if (r == true) {
  // alert ('pred vstavljanjem v bazo');
@@ -27,6 +42,15 @@ alert ('shranjeno v bazo');
 location.reload();
   }
  // alert ('nov bolnik');
-
+}//--od stariFunction
+function noviFunction() {
+	alert ("V noviFunction");
+ sessionStorage.removeItem("testJSON");	
+document.getElementById("novB").style.visibility = "visible"; 	
+location.reload();	
 }
+}//---od novBolnikFunction
+
+
+
 //------konec pri prehodu na novega bolnika---

@@ -254,17 +254,6 @@ switch (a) {
 }
 
 
-
-
-   /*  if (a=="t") {
-      natisniFunction();
-     }
-     else if(a=="n") {  
-      novBolnikFunction();
-     }
-	 else if(a=="p") {  
-      ogledFunction();
-     }*/
 //....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
 }
  }

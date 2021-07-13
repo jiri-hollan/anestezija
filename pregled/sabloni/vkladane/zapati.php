@@ -7,7 +7,7 @@
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 	 <!-- Funkcija novBolnikFunction shrani formu u bazo in skoči na vpis novega bolnika -->
 	<!-- <span class="navSpan" id="novB" onclick="novBolnikFunction() ">Nov bolnik</span>-->
-     <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>
+     <span class="navSpan" id="novB" onclick="novBolnikFunction(1);">Nov bolnik</span>
      <span class="navSpan" id="nazaj" onclick="nazajFunction()">nazaj</span>
      <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>
      <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span> 
