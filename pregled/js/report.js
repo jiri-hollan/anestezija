@@ -244,7 +244,7 @@ switch (a) {
     natisniFunction();
     break;
   case "n":
-    novBolnikFunction();
+    novBolnikFunction(0);
     break;
  case "p":
     ogledFunction();
