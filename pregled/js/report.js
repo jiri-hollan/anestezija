@@ -11,10 +11,10 @@
  var x5 = document.getElementById("frm")["visina"].value;
  var x6 = document.getElementById("frm")["izvidiInOpombe"].value;
  var x7 = document.getElementById("frm")["sklep"].value;
-/* var v8 = document.getElementById("frm")["ime"].value;
- var x9 = document.getElementById("frm")["priimek"].value;
+ var x8 = document.getElementById("ime").value;
+ var x9 = document.getElementById("priimek").value;
  var x10 = datRojstva;
- var x11 = document.getElementById("frm")["stevMaticna"].value;
+ /*var x11 = document.getElementById("frm")["stevMaticna"].value;
 var x12 = document.getElementById("frm")["stevMaticna"].value;*/
   
   
@@ -49,7 +49,7 @@ else if (x7 == "") {
     alert("sklep mora biti vpisan");
     return false;
   }
-/*else if (x8 == "") {
+else if (x8 == "") {
     alert("Ime mora biti vpisano");
     return false;
   }
@@ -61,7 +61,7 @@ else if (x10 == "") {
     alert("datum rojstva mora biti vpisan");
     return false;
   }
-else if (x11 == "") {
+/*else if (x11 == "") {
     alert("teza mora biti vpisana");
     return false;
   }*/
