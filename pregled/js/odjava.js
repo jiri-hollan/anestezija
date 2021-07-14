@@ -29,12 +29,12 @@ switch (izbris) {
 }
 
 function stariFunction() {
-alert ('v stariFunction');
+//alert ('v stariFunction');
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
   if (r == true) {
  // alert ('pred vstavljanjem v bazo');
   document.getElementById("frm").submit();
-alert ('shranjeno v bazo');
+//alert ('shranjeno v bazo');
 //  alert ('po vstavljanju v bazo');
 //location.reload();
   } else {
@@ -46,7 +46,7 @@ location.reload();
 
 
 function noviFunction() {
-	alert ("V noviFunction");
+	//alert ("V noviFunction");
  sessionStorage.removeItem("testJSON");	
 document.getElementById("novBLegend").style.visibility = "visible"; 	
 location.reload();	
