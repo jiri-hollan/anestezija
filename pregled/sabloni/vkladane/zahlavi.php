@@ -20,6 +20,5 @@
 
 </head>
 
-<!-- <body onload="danesFunction()">  -->
      <body onload="vpisFunction()">
 	 
