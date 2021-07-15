@@ -41,6 +41,7 @@ sessionStorage.setItem("testJSON", myJSON);
 }//od formFunction
 
 function formNazajFunction(person1) {
+	if (sessionStorage.getItem("testJSON")!=null){
 	 let text = sessionStorage.getItem("testJSON");
      let obj = JSON.parse(text);
 //alert (obj.ime);
@@ -59,5 +60,6 @@ for (i = 0; i < inputs.length; i++) {
 } //od for
 starostFunction();
 document.getElementById("novBLegend").style.display = "none"; 
+	}//od if
 } //od function formNazajFunction
 

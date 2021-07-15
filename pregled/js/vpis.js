@@ -15,6 +15,7 @@ function vpisFunction() {
      document.getElementById("submitFrm").style.visibility = "hidden";
 
      danesFunction();
+	 formNazajFunction();
 }
 
  //izračun današnjeg datuma in prikaz v ljudski obliki. V <input> vložena pravilna oblika datuma za QLS
