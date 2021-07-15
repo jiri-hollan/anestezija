@@ -2,6 +2,7 @@
 <?php
 
 require_once '../skupne/database.php';
+
 	$novaVnosVrstice = new PrviVpis;
 
 Class Apregled {
@@ -58,7 +59,16 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
 			echo 'Zapis vnesen v tabelo';
 			//var_dump ($ulozeno);			
             //echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
-			//echo '<br>last id: '.$ulozeno["lastId"];
+			echo '<br>last id: '.$ulozeno["lastId"];
+			
+		 $bolnikId = $ulozeno["lastId"];
+
+    echo '<script>';
+    echo 'sessionStorage.setItem("bolnikId",'. $bolnikId .');';		
+    echo 'alert(sessionStorage.getItem("bolnikId"));';
+    echo '</script>';	
+			
+			
 /*function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
