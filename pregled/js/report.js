@@ -1,5 +1,6 @@
  var datRojstva;
  var a;
+ alert('report: '+sessionStorage.getItem("bolnikId"));
  function reportFunction(a)
  {
 	formFunction(); 

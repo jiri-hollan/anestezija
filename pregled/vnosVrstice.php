@@ -65,7 +65,7 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
 
     echo '<script>';
     echo 'sessionStorage.setItem("bolnikId",'. $bolnikId .');';		
-    echo 'alert(sessionStorage.getItem("bolnikId"));';
+    echo 'alert("vnos vrstice: "+sessionStorage.getItem("bolnikId"));';
     echo '</script>';	
 			
 			
@@ -75,7 +75,7 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
   $data = htmlspecialchars($data);
   return $data;
 }*/
-header('Location: bolnik.php');
+//header('Location: bolnik.php');
 } //od if 
 
 	} //od construct

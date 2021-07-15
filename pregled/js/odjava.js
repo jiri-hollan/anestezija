@@ -2,6 +2,7 @@ function odjavaFunction() {
 	 localStorage.setItem("imeZdravnika", "");
 	 localStorage.setItem("aktivnaBolnica","");
      sessionStorage.removeItem("testJSON");
+	 sessionStorage.removeItem("bolnikId");
      window.open("zdravnik.php", "_self");
 	 //alert ("odjava");
      sbFunction();	 
@@ -33,6 +34,7 @@ function stariFunction() {
 //alert ('v stariFunction');
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
   if (r == true) {
+	//alert ('odjava.js bolnikId: '+sessionStorage.getItem("bolnikId"));  
  // alert ('pred vstavljanjem v bazo');
   document.getElementById("frm").submit();
 //alert ('shranjeno v bazo');
@@ -53,6 +55,7 @@ location.reload();
 function noviFunction() {
 	//alert ("V noviFunction");
  sessionStorage.removeItem("testJSON");	
+ sessionStorage.removeItem("bolnikId");
 document.getElementById("novBLegend").style.visibility = "visible"; 	
 location.reload();	
 }
