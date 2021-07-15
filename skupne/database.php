@@ -25,7 +25,8 @@ class Database {
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
 	
 	}//uzavírací zavorky __construct	
-	
+//-----------------konec construct--------------
+
 	public function vyber($tabulka, $sloupce, $podminka = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
 	$podminkaSQL = '';
@@ -60,7 +61,8 @@ class Database {
 	  $dotaz->closeCursor();
 	  return $zaznamy;
 	}
-//..................................................................................	
+//............konec vyber.............................................................
+
 	public function vyberOr($tabulka, $sloupce, $podminka = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
 	$podminkaSQL = '';
@@ -95,7 +97,7 @@ class Database {
 	  $dotaz->closeCursor();
 	  return $zaznamy;
 	}
-//..................................................................................
+//..............konec vyberOr.......................................................
 
 
 	public function  vloz($tabulka,$data){
@@ -135,7 +137,8 @@ class Database {
   //return $pocetVlozenych;
     return $vlozeno;
 }
-//.......................................................................................
+//.........konec vloz.................................................................
+
 	public function aktualizuj($tabulka,$data,$podminka){
 	  $sloupceHodnoty =array();
       $parametry = array();	
@@ -178,7 +181,8 @@ class Database {
 	   return $pocetAktualizovanych;
 	  
 	}//od function aktualizuj		
-//..........................................................................................
+//...........konec aktualizuj................................
+
 	
 	public function odstrani($tabulka,$podminka){	
 	  $podminkaSQL = '';
@@ -207,6 +211,6 @@ class Database {
 	
 	return $pocetOdstranenych;
 	}// od function odstrani		
-//........................................................................................................
+//......konec odstrani......................
 	
 }//uzavírací zavorky class Database
