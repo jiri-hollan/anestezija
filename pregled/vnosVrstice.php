@@ -1,6 +1,9 @@
 
 <?php
+
 require_once '../skupne/database.php';
+	$novaVnosVrstice = new PrviVpis;
+
 Class Apregled {
 	public $conn;
 	public $zaklad;
@@ -62,13 +65,13 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
   $data = htmlspecialchars($data);
   return $data;
 }*/
-
+header('Location: bolnik.php');
 } //od if 
 	} //od construct
 	} //od class PrviVpis
 	
-	$novaVnosVrstice = new PrviVpis;
-	header('Location: bolnik.php');
+	//$novaVnosVrstice = new PrviVpis;
+	//header('Location: bolnik.php');
 	
 //-------------------------------------------konec PrviVpis---------------------------
 
