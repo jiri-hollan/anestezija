@@ -57,8 +57,6 @@ $database = new database;
 $ulozeno = $this->conn->vloz($this->nameTable, $data);
 			echo 'Zapis vnesen v tabelo';
 
-
-
 /*function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -67,6 +65,7 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
 }*/
 header('Location: bolnik.php');
 } //od if 
+
 	} //od construct
 	} //od class PrviVpis
 	
