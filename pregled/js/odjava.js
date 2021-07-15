@@ -29,6 +29,7 @@ switch (izbris) {
 }
 
 function stariFunction() {
+	if (localStorage.getItem("aktivnaBolnica")=="SBI"){
 //alert ('v stariFunction');
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
   if (r == true) {
@@ -42,6 +43,10 @@ function stariFunction() {
 location.reload();
   }
  // alert ('nov bolnik');
+	}//od if
+	else {
+	location.reload();	
+	}
 }//--od stariFunction
 
 
