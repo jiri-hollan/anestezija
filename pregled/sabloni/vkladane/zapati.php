@@ -17,7 +17,7 @@
 	     dokler ni databaze, ostane "submitForm" zakomentiran
 	    __________________________________________________________________________________________
 	 <button id="submitFrm" type="submit" form="frm" value="Submit">Shrani</button>-->
- <!--<span class="navSpan" id="submitFrm" onclick='document.getElementById("frm").submit();'>shrani</span>-->
+<!--<span class="navSpan" id="submitFrm" onclick='document.getElementById("frm").submit();'>shrani</span>-->
  <span class="navSpan" id="submitFrm" onclick="return reportFunction('n')">shrani</span>	
 	
  </div>	 

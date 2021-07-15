@@ -242,6 +242,7 @@ document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdr
 switch (a) {
   case "t":
     natisniFunction();
+    novBolnikFunction(0);	
     break;
   case "n":
     novBolnikFunction(0);
