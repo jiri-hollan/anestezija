@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta charset="UTF-8">
-<title>Novi bolnik</title>
-<script src="js/vpis.js"></script>
-</head>
 
-<body>
 <?php
+if (!empty($_POST)) {
 // define variables and set to empty values
 $najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
 //$imeTable = 'novBolnikTab';
-$imeTable = 'bolnikTable';
+$imeTable = 'bolnikTbl';
 
 $stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
 
@@ -47,7 +39,7 @@ $vrednosti = rtrim($najdene,",");
 //$name_two["zack"]
 
 
-vstavi($imeTable, $vrednosti, $polja);
+
 
 
 
@@ -60,7 +52,7 @@ vstavi($imeTable, $vrednosti, $polja);
 
 
 function vstavi($imeTable,$c,$polja)  {
-include '../servis/prijavniWeb.php';	
+include '../skupne/prijavniWeb.php';	
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -76,7 +68,7 @@ try {
 	//echo "<script>naprejFunction</script>";
 
 	//include ("novPolnjenje.html");
-header('Location: novPolnjenje.html');
+header('Location: novPolnjenje.php');
  exit;
     }
     catch(PDOException $e)
@@ -86,7 +78,7 @@ header('Location: novPolnjenje.html');
 
 $conn = null;
 }
-?>
 
-</body>
-</html>
+vstavi($imeTable, $vrednosti, $polja);
+} //od if
+?>

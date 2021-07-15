@@ -22,7 +22,7 @@
 
 <!-- <body onload="danesFunction()">  -->
      <body onload="vpisFunction()">
- 
+
 
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
 <form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" autocomplete="off"> 
@@ -47,7 +47,7 @@
     <label for="stevMaticna">Matična številka:</label>
     <input id="stevMaticna"type="text" name="stevMaticna" pattern="[0-9]{1,}" required onkeypress=" return isNumber(event, allNumb)"/><br>
   <label for="EMSO">EMŠO:</label>
-    <input id="EMSO" type="text" name="EMSO"pattern="[0-9]{1,}"  onkeypress=" return isNumber(event, allNumb)"/ >  
+    <input id="EMSO" type="text" name="EMSO"pattern="[0-9]{1,}" placeholder="pusti prazno" onkeypress=" return isNumber(event, allNumb)"/ >  
     <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->  
     <input id="datRojstva" type = "hidden" name = "datRojstva" readonly  >   
     <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  >
@@ -86,6 +86,7 @@
     <option value="urologija">
     <option value="ORL">
     <option value="RTG">
+	<option value="interna">
   </datalist>
   
   <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika" readonly tabindex="-1"></label>
@@ -216,7 +217,7 @@
 
   
 
-    <textarea id="navodila" class="mikro"  name="navodila" rows="3" >Navodila:</textarea>
+    <textarea id="navodila" class="mikro"  name="navodila" placeholder="Navodila" rows="3" ></textarea>
    </div>
   </fieldset>
  
@@ -263,8 +264,7 @@
    <div id="navodilaR">navodila</div>
 
 </div>
-<script>
-</script>
+
 
 <!--....................................................................................
 	...............................................Navigacija.........................-->
@@ -278,12 +278,11 @@
      <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>
      <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span>     
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
-	<!-- <span class="navspan" id="spanButon" <button type="submit" form="frm" value="Submit">Submit</button></span>-->
 	<!-- ________________________________________________________________________________________
 	     dokler ni databaze, ostane "submitForm" zakomentiran
 	    __________________________________________________________________________________________
 	 <button id="submitFrm" type="submit" form="frm" value="Submit">Shrani</button>-->
-  <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->
+ <span class="navSpan" id="submitFrm" onclick='document.getElementById("frm").submit();'>shrani</span>
 	
 	
  </div>	 

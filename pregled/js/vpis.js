@@ -12,7 +12,7 @@ function vpisFunction() {
      document.getElementById("novB").style.visibility = "hidden";
      document.getElementById("natisni").style.visibility = "hidden";
      document.getElementById("pomoc").style.visibility = "hidden";
-    // document.getElementById("submitFrm").style.visibility = "hidden";
+     document.getElementById("submitFrm").style.visibility = "hidden";
 
      danesFunction();
 }
