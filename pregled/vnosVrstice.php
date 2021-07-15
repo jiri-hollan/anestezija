@@ -56,7 +56,9 @@ $database = new database;
 //var_dump ($database);
 $ulozeno = $this->conn->vloz($this->nameTable, $data);
 			echo 'Zapis vnesen v tabelo';
-
+			//var_dump ($ulozeno);
+            //echo $ulozeno[];
+			//echo $ulozeno[];
 /*function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
