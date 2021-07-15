@@ -70,8 +70,6 @@ header('Location: bolnik.php');
 	} //od construct
 	} //od class PrviVpis
 	
-	//$novaVnosVrstice = new PrviVpis;
-	//header('Location: bolnik.php');
 	
 //-------------------------------------------konec PrviVpis---------------------------
 
