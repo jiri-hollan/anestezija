@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Novi bolnik</title>
-</head>
 
-<body>
 <?php
 
 $imeTable = 'novBolnikTab';
@@ -68,6 +61,3 @@ try {
 $conn = null;
 }               
 ?>
-
-</body>
-</html>
