@@ -67,15 +67,15 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
     echo 'sessionStorage.setItem("bolnikId",'. $bolnikId .');';		
     echo 'alert("vnos vrstice: "+sessionStorage.getItem("bolnikId"));';
     echo '</script>';	
-			
-			
+	return;		
+	header('Location: bolnik.php');		
 /*function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
 }*/
-//header('Location: bolnik.php');
+
 } //od if 
 
 	} //od construct
