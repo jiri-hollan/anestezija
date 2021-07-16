@@ -7,9 +7,9 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
-		echo '<script>';
+		/*echo '<script>';
 		echo 'alert("bolnik Id ni nula");';
-		echo '</script>';
+		echo '</script>';*/
 		$novaVnosVrstice = new SpremeniVpis;
 	}
 }//od if $_SERVER
