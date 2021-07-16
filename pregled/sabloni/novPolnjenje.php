@@ -156,7 +156,7 @@
     <label for="terPredhodna">Predhodna terapija:</label><br>   
     <textarea id="terPredhodna" class="mala" rows="4" cols="200" name="terPredhodna"></textarea>
 
- <fieldset class="alergija">
+ <fieldset id= "asamal" >
     <legend></legend>
      <label>ASA:<input id="asa" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)"/ ></label>  
 	<datalist id="ase">

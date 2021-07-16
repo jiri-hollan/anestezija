@@ -179,10 +179,12 @@ fieldset.ekg  input  {
   width:90%;  
 }
 
-fieldset.alergija  {
- padding: 20px 2px;  
-}
-  
+
+ #asamal {
+  position: relative;
+  padding: 20px 2px;  
+  height: auto;  
+} 
  
 fieldset.alergija label {
   width:auto;
@@ -191,8 +193,8 @@ fieldset.alergija label {
   /*padding: 1px 1px 1px 10px;*/
  }
  
-fieldset.alergija #alergija {
-  width:700px;
+#alergija {
+  width:200px;
   display: inline-box;
   text-align: left;   
   /*padding: 1px 1px 1px 20px;*/
