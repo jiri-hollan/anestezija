@@ -7,9 +7,9 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
-		echo '<script>';
+		/*echo '<script>';
 		echo 'alert("bolnik Id ni nula");';
-		echo '</script>';
+		echo '</script>';*/
 		$novaVnosVrstice = new SpremeniVpis;
 	}
 }//od if $_SERVER
@@ -31,6 +31,7 @@ Class Apregled {
 	  $this->nameTable = 'bolnikTbl';
 	  
       $this->stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
+	  
 	}	
 	
 }//od class prihlaseni
@@ -115,20 +116,31 @@ if (isset($_POST[$stolpec])) {
 		$data[$stolpec] = ($_POST[$stolpec]);
  } else {
 	echo $stolpec . ' ne obstaja';
-  }
-  
-	
+  }	
 }//od foreach
+	
+if (isset($_POST['bolnikId'])) {
+	//echo $_POST['bolnikId'];
+		$podminka['pregledId'] = ($_POST['bolnikId']);
+ } else {
+	echo 'bolnik Id ne obstaja';
+	    echo '<script>';
+	
+    //echo 'alert("bolnik Id ne obstaja");';
+	echo 'window.location.href = "bolnik\.php";';
+    echo '</script>';	
+	
+  }	
 
 $database = new database;
 //var_dump ($database);
-$ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $_POST['bolnikId'] );
+$ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 			echo 'Zapis vnesen v tabelo';
 			//var_dump ($ulozeno);			
             //echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
 			header('Location: bolnik.php');
 
-	}//id if
+	}//od if
 } //od construct
 	} //od class SpremeniVpis
 	

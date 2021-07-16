@@ -167,7 +167,10 @@ class Database {
 		}// od foreach
 	//var_dump ($parametry);	
   //var_dump ($podminkaSQL);		
-	  }//od if is array
+	  } else {
+		 // return;
+	  }
+	  
 	  
 	  $dotaz = $this->conn->prepare("UPDATE $tabulka SET $sloupceHodnotySQL".$podminkaSQL);
   //var_dump ($dotaz);	  
