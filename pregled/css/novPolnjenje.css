@@ -127,7 +127,7 @@ fieldset.meritve  input  {
 #lab {
   position: relative;
   padding: 20px 2px;  
-  height: 120px;  
+  height: auto;  
 }
 
 #lab  label  {
@@ -142,17 +142,20 @@ fieldset.meritve  input  {
 }
 
 #stolpec1  {
-    position: absolute;
+	float: left;
+   /* position: absolute;*/
     width:220px;  
 }
 
 #stolpec2  {
-  position: absolute;
+	float: left;
+   /* position: absolute;*/
   left: 250px;
   width:220px; 
 }
 #stolpec3  {
-  position: absolute;
+	float: left;
+   /* position: absolute;*/
   left: 500px;
   width:220px; 
 }
