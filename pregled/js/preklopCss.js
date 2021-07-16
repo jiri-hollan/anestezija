@@ -35,6 +35,7 @@ ime = document.getElementById("ime").value;
 stevMaticna = document.getElementById("stevMaticna").value;
   document.getElementById("osebni").innerHTML = priimek + " " + ime + "  " + "roj: " + datRojstva + "  mat. indeks: " + stevMaticna;
   document.getElementById("imeZdravnika").value = localStorage.getItem("imeZdravnika");
+  document.getElementById("bolnikId").value = sessionStorage.getItem("bolnikId");
 document.getElementsByTagName('title')[0].innerHTML= priimek + " " + ime;
 
      document.getElementById("navbar").style.display = "block";
