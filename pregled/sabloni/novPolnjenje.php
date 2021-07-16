@@ -4,7 +4,7 @@
 <fieldset class="novBolnik" id="prva">
     <legend id="novBLegend">Nov bolnik</legend>
     <h2 id="lab6"> </h2>
-	<input id="bolnikId" type = "hidden" name = "bolnikId" value = "-1" readonly >
+	<input id="bolnikId" type = "hidden" name = "bolnikId" value = "" readonly >
     <label for="ime">Ime:</label>  
     <input id="ime" type="text" name="ime" pattern="[A-Za-zŽžšŠđĐćĆčČ]{1,}" required><br>    
     <label for="priimek">Priimek:</label>
