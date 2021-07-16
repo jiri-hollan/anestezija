@@ -4,7 +4,14 @@
 require_once '../skupne/database.php';
 
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
+	if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
+	} else {
+		echo '<script>';
+		echo 'alert("bolnik Id ni nula");';
+		echo '</script>';
+		$novaVnosVrstice = new SpremeniVpis;
+	}
 }//od if $_SERVER
 
 Class Apregled {
@@ -92,7 +99,36 @@ Class SpremeniVpis extends Apregled {
 	public function __construct() {
 		    parent::__construct();
 
+	echo 'V sprmeni Vpis';
+	if (!empty($_POST)) {
+// define variables and set to empty values
+$najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
+
+
+// Looping through an array using for 
+//echo "\nLOOPING array z uporabo for: \n"; 
+
+foreach ($this->stolpci as $stolpec) {
 	
+if (isset($_POST[$stolpec])) {
+	//echo $_POST[$stolpec];
+		$data[$stolpec] = ($_POST[$stolpec]);
+ } else {
+	echo $stolpec . ' ne obstaja';
+  }
+  
+	
+}//od foreach
+
+$database = new database;
+//var_dump ($database);
+$ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $_POST['bolnikId'] );
+			echo 'Zapis vnesen v tabelo';
+			//var_dump ($ulozeno);			
+            //echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
+			header('Location: bolnik.php');
+
+	}//id if
 } //od construct
 	} //od class SpremeniVpis
 	
