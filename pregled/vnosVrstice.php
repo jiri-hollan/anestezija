@@ -3,7 +3,9 @@
 
 require_once '../skupne/database.php';
 
+if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	$novaVnosVrstice = new PrviVpis;
+}//od if $_SERVER
 
 Class Apregled {
 	public $conn;
