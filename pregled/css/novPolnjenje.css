@@ -194,8 +194,8 @@ fieldset.alergija label {
  }
  
 #alergija {
-  width:200px;
-  display: inline-box;
+  width:70%;
+  /*display: inline-box;*/
   text-align: left;   
   /*padding: 1px 1px 1px 20px;*/
  }
