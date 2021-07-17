@@ -196,7 +196,8 @@ if (isset($_POST[$stolpec])) {
 	$database = new database;
 //var_dump ($database);
 $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
-           // var_dump($prebrano);
+           echo '<br>';
+           var_dump($prebrano);
 			echo 'Zapisi najdeni';
 //    } //od if 
   } //od construct

@@ -4,7 +4,7 @@
 </head>
 <body> 
 <form action="vnosVrstice.php" method="post">
-<input   type="text" name="stevMaticna" required >matična stevilka</input>
+<input   type="number" name="stevMaticna" required >matična stevilka</input>
 <input   type="text" name="doBaze" value="vyber" >do baze</input>
 <input   type="submit" ></input>
 </form>

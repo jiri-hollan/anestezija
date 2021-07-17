@@ -29,6 +29,7 @@ class Database {
 
 	public function vyber($tabulka, $sloupce, $podminka = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
+	echo '<br>'.$sloupceSQL;
 	$podminkaSQL = '';
 	$parametry = array();
 	
@@ -38,7 +39,7 @@ class Database {
 			if ($i == 0){
 				$podminkaSQL .=" WHERE $sloupec = ?";				
 			}else {
-				$podminkaSQL .= " AND $sloupec = ?";
+				$podminkaSQL .=" AND $sloupec = ?";
 			}
 			$parametry[$i] = $hodnota;
 			$i++;
@@ -47,9 +48,9 @@ class Database {
 	 echo '<br>';
 	 echo var_dump($parametry) . "<br>";
 	  echo var_dump($podminka) . "<br>";
-	  echo var_dump($podminkaSQL . "<br>");
+	  echo var_dump($podminkaSQL );
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
-	
+	var_dump($dotaz);
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
@@ -76,7 +77,7 @@ class Database {
 				$podminkaSQL .=" WHERE $sloupec = ?";				
 			}else {
 				$podminkaSQL .= " OR $sloupec = ?";
-			}
+			}			
 			$parametry[$i] = $hodnota;
 			$i++;
 		}
