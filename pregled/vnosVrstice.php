@@ -135,7 +135,7 @@ if (isset($_POST['bolnikId'])) {
 $database = new database;
 //var_dump ($database);
 $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
-			echo 'Zapis vnesen v tabelo';
+			echo 'Zapis aktualizovan in shranjen v tabelo';
 			//var_dump ($ulozeno);			
             //echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
 			header('Location: bolnik.php');
@@ -147,17 +147,22 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 //-------------------------------------------konec SpremeniVpis---------------------------	
 Class PreberiVpis extends Apregled {
 		
-	public function __construct() {
+	public function __construct($nameTable, $data, $podminka) {
 		    parent::__construct();
-			
-if (!empty($_POST)) {			
-    $podminka = $_POST;
+			echo 'v preberi vpis';
+	$this->nameTable = $nameTable;
+	$this->stolpci = $data;
+	$this->podminka = $podminka;
+	
+/*if (!empty($_POST)) {			
+    $podminka = $_POST;*/
 	
 	$database = new database;
 //var_dump ($database);
-$prebrano = $this->conn->vyberOr($nameTable, $stolpci, $podminka);
-			echo 'Zapis vnesen v tabelo';
-    } //od if 
+$prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
+            var_dump($prebrano);
+			echo 'Zapisi najdeni';
+//    } //od if 
   } //od construct
 } //od class PreberiVpis
 

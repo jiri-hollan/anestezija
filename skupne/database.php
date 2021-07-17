@@ -53,6 +53,7 @@ class Database {
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
+		echo 'v try vyber';
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
 		  $zaznamy = false;
