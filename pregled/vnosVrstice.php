@@ -6,7 +6,11 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze']))
 switch ($_POST['doBaze']) {
   case vloz:
-   // code to be executed if n=label1;
+  if ($_POST['bolnikId']=="") {
+	$novaVnosVrstice = new PrviVpis;
+	} else {
+	$novaVnosVrstice = new SpremeniVpis;
+	}	
     break;
   case vyber:
     //code to be executed if n=label2;
