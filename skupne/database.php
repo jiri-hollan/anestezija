@@ -44,16 +44,16 @@ class Database {
 			$i++;
 		}
 	}
-	
-	/*echo var_dump($parametry) . "<br>";
+	 echo '<br>';
+	 echo var_dump($parametry) . "<br>";
 	  echo var_dump($podminka) . "<br>";
-	  echo var_dump($podminkaSQL . "<br>");*/
+	  echo var_dump($podminkaSQL . "<br>");
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
 	
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
-		echo 'v try vyber';
+		echo '<br>v try vyber';
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
 		  $zaznamy = false;

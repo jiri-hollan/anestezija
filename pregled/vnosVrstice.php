@@ -5,15 +5,15 @@ require_once '../skupne/database.php';
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze']))
 switch ($_POST['doBaze']) {
-  case vloz:
+  case 'vloz':
   if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
 	$novaVnosVrstice = new SpremeniVpis;
 	}	
     break;
-  case vyber:
-    //code to be executed if n=label2;
+  case 'vyber':
+    new PreberiVpis;
     break;
   case aktualizuj:
    // code to be executed if n=label3;
@@ -166,11 +166,28 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 //-------------------------------------------konec SpremeniVpis---------------------------	
 Class PreberiVpis extends Apregled {
 		
-	public function __construct($nameTable, $data, $podminka) {
+	public function __construct() {
 		    parent::__construct();
 			echo 'v preberi vpis';
-	$this->nameTable = $nameTable;
-	$this->stolpci = $data;
+			
+			
+	foreach ($this->stolpci as $stolpec) {
+	
+if (isset($_POST[$stolpec])) {
+	//echo $_POST[$stolpec];
+		$podminka[$stolpec] = ($_POST[$stolpec]);
+ } else {
+	//echo $stolpec . ' ne obstaja';
+  }
+  
+
+}//od foreach		
+			
+			
+		//var_dump($podminka);		
+			
+	$this->nameTable = 'bolnikTbl';
+	$this->stolpci = ['pregledId'];
 	$this->podminka = $podminka;
 	
 /*if (!empty($_POST)) {			
@@ -179,7 +196,7 @@ Class PreberiVpis extends Apregled {
 	$database = new database;
 //var_dump ($database);
 $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
-            var_dump($prebrano);
+           // var_dump($prebrano);
 			echo 'Zapisi najdeni';
 //    } //od if 
   } //od construct
