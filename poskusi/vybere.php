@@ -3,7 +3,7 @@
 <head>
 </head>
 <body> 
-<form action="vnosVrstice.php" method="post">
+<form action="../pregled/vnosVrstice.php" method="post">
 <input   type="number" name="stevMaticna" required >matična stevilka</input>
 <input   type="text" name="doBaze" value="vyber" >do baze</input>
 <input   type="submit" ></input>
