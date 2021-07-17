@@ -119,7 +119,7 @@ Class SpremeniVpis extends Apregled {
 	public function __construct() {
 		    parent::__construct();
 
-	echo 'V sprmeni Vpis';
+	//echo 'V spremeni Vpis';
 	if (!empty($_POST)) {
 // define variables and set to empty values
 $najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
@@ -168,7 +168,7 @@ Class PreberiVpis extends Apregled {
 		
 	public function __construct() {
 		    parent::__construct();
-			echo 'v preberi vpis';
+			//echo 'v preberi vpis';
 			
 			
 	foreach ($this->stolpci as $stolpec) {
@@ -196,7 +196,7 @@ if (isset($_POST[$stolpec])) {
 //var_dump ($database);
 $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
-           var_dump($prebrano);
+          // var_dump($prebrano);
 			echo 'Zapisi najdeni';
 //    } //od if 
   } //od construct

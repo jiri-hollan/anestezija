@@ -29,7 +29,7 @@ class Database {
 
 	public function vyber($tabulka, $sloupce, $podminka = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
-	echo '<br>'.$sloupceSQL;
+	//echo '<br>'.$sloupceSQL;
 	$podminkaSQL = '';
 	$parametry = array();
 	
@@ -45,16 +45,16 @@ class Database {
 			$i++;
 		}
 	}
-	 echo '<br>';
-	 echo var_dump($parametry) . "<br>";
-	  echo var_dump($podminka) . "<br>";
-	  echo var_dump($podminkaSQL );
+	// echo '<br>';
+	// echo var_dump($parametry) . "<br>";
+	 // echo var_dump($podminka) . "<br>";
+	 // echo var_dump($podminkaSQL );
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
-	var_dump($dotaz);
+	//var_dump($dotaz);
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
-		echo '<br>v try vyber';
+		//echo '<br>v try vyber';
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
 		  $zaznamy = false;
