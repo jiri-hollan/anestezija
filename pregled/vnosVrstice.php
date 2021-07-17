@@ -186,8 +186,7 @@ if (isset($_POST[$stolpec])) {
 			
 		//var_dump($podminka);		
 			
-	$this->nameTable = 'bolnikTbl';
-	$this->stolpci = ['pregledId'];
+	$this->stolpci = array('datPregleda', 'imeZdravnika' );
 	$this->podminka = $podminka;
 	
 /*if (!empty($_POST)) {			
