@@ -2,9 +2,24 @@
 <?php
 
 require_once '../skupne/database.php';
-
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
-	if ($_POST['bolnikId']=="") {
+	if (isset($_POST['doBaze']))
+switch ($_POST['doBaze']) {
+  case vloz:
+   // code to be executed if n=label1;
+    break;
+  case vyber:
+    //code to be executed if n=label2;
+    break;
+  case aktualizuj:
+   // code to be executed if n=label3;
+    break;
+
+}
+
+
+
+	else if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
 		/*echo '<script>';
