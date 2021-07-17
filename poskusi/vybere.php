@@ -13,9 +13,9 @@ document.getElementById("data").value = poljeJSON;
 </script>
 
 <form action="../pregled/vnosVrstice.php" method="post">
-<input id="data" type="text" value="" style="width:90%;"></input><br>
+<input id="data" type="text" name="data" value="" style="width:90%;"></input><br>
 <input   type="number" name="stevMaticna" required >matična stevilka</input>
-<input   type="text" name="doBaze" value="vyber" >do baze</input>
+<input   type="text" name="doBaze" value="vyber" readonly>do baze</input>
 <input   type="submit" ></input>i
 </form>
 <?php

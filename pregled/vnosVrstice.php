@@ -184,9 +184,11 @@ if (isset($_POST[$stolpec])) {
 }//od foreach		
 			
 			
-		//var_dump($podminka);		
-			
-	$this->stolpci = array('datPregleda', 'imeZdravnika' );
+		//var_dump($podminka);	
+		//var_dump($_POST['data']);
+	$this->stolpci = 	json_decode($_POST['data']);	
+	//var_dump($this->stolpci);
+	//$this->stolpci = array('datPregleda', 'imeZdravnika' );
 	$this->podminka = $podminka;
 	
 /*if (!empty($_POST)) {			
@@ -196,7 +198,7 @@ if (isset($_POST[$stolpec])) {
 //var_dump ($database);
 $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
-          // var_dump($prebrano);
+          //var_dump($prebrano);
 			echo 'Zapisi najdeni';
 //    } //od if 
   } //od construct
