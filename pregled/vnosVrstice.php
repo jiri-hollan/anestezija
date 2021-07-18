@@ -199,7 +199,7 @@ if (isset($_POST[$stolpec])) {
 $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
           //var_dump($prebrano);
-			echo 'Zapisi najdeni';
+			echo 'Število najdenih zapisov: '.count($prebrano);
 //    } //od if 
   } //od construct
 } //od class PreberiVpis
