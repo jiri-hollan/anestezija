@@ -6,7 +6,7 @@
  <body onload="stolpciFuncton()">
 <script>
 function stolpciFuncton() {
-const poljeJS = ["datPregleda", "imeZdravnika"];
+const poljeJS = ["pregledId", "datPregleda", "imeZdravnika"];
 const poljeJSON = JSON.stringify(poljeJS);
 document.getElementById("data").value = poljeJSON;
 }
