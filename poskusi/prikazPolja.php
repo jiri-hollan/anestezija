@@ -17,13 +17,13 @@ class TableRows extends RecursiveIteratorIterator {
     }
 }
 
-$stmt = array (
+/*$stmt = array (
   array("Volvo",22,18),
   array("BMW",15,13),
   array("Saab",5,2),
   array("Land Rover",17,15)
-);
-
+);*/
+$stmt = $prebrano;
 
 //$stmt=array("kvak", "fuj");
  foreach(new TableRows(new RecursiveArrayIterator($stmt)) as $k=>$v) {
