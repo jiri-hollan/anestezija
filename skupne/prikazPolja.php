@@ -25,7 +25,7 @@ $stmt = $prebrano;
 echo '<button id="myBtn">Try it</button>
 <script>
 
-document.getElementById("myBtn").addEventListener("click", myFunction());
+document.getElementById("myBtn").addEventListener("click", myFunction);
 function myFunction() {
   //alert(document.getElementById("mojaTabela").rows[0].cells.namedItem("id").innerHTML);
     alert(document.getElementById("mojaTabela").rows[0].cells.item(0).innerHTML);
