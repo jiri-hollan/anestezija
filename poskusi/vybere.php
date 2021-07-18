@@ -16,7 +16,7 @@ document.getElementById("data").value = poljeJSON;
 <input id="data" type="text" name="data" value="" style="width:90%;"></input><br>
 <input   type="number" name="stevMaticna" required >matična stevilka</input>
 <input   type="text" name="doBaze" value="vyber" readonly>do baze</input>
-<input   type="submit" ></input>i
+<input   type="submit" ></input>
 </form>
 <?php
 /*require_once('vnosVrstice.php');
