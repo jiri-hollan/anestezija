@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="sabloni/css/zahlavi.css?<?php echo time(); ?>">
 
 <link rel="stylesheet" href="../css/menuFile.css?<?php echo time(); ?>">
-<script src="sabloni/js/uporabnikiVse.js?<?php echo time(); ?>"></script> 
+<script src="../frontend/js/uporabnikiVse.js?<?php echo time(); ?>"></script> 
 <link rel="stylesheet" href="sabloni/css/uporabnikiNov.css?<?php echo time(); ?>">
 
 </head>
