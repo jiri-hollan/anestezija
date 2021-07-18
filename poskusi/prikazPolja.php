@@ -17,8 +17,8 @@ class TableRows extends RecursiveIteratorIterator {
     }
 }
 
-
- foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+$stmt=array("kvak", "fuj");
+ foreach(new TableRows(new RecursiveArrayIterator($stmt)) as $k=>$v) {
         echo $v;
     }
 
