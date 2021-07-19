@@ -21,14 +21,19 @@ $stmt = $prebrano;
         echo $v;
     }
 
-
-echo '<button id="myBtn">Try it</button>
+echo '
 <script>
 
-document.getElementById("myBtn").addEventListener("click", myFunction);
-function myFunction() {
-  //alert(document.getElementById("mojaTabela").rows[0].cells.namedItem("id").innerHTML);
-    alert(document.getElementById("mojaTabela").rows[0].cells.item(0).innerHTML);
+document.getElementById("mojaTabela").addEventListener("click", functionRow);
+function functionRow (e) {
+if (e.path[1]!=undefined) {	
+var x = e.path[1];
+prvaCelica = x.cells[0].innerHTML;
+//     document.getElementById("demo3").innerHTML = "Triggered by a " + prvaCelica + " element"; 
+ alert(prvaCelica);
 }
+}
+
+
 </script>';
 ?>
