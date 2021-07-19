@@ -11,7 +11,8 @@
 <p id="demo"></p>
 
 <script>
-document.addEventListener("click", function(e)
+//document.addEventListener("click", function(e)
+document.addEventListener("mouseover", function(e)
 { 
   var x = e.target;
   document.getElementById("demo").innerHTML = "Triggered by a " + x.nodeName + " element";
