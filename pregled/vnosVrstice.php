@@ -97,7 +97,7 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
     echo '<script>';
     echo 'sessionStorage.setItem("bolnikId",'. $bolnikId .');';		
     //echo 'alert("vnos vrstice: "+sessionStorage.getItem("bolnikId"));';
-	echo 'window.location.href = "bolnik\.php";';
+	echo 'window.location.href = "\.\./pregled/bolnik\.php";';
     echo '</script>';	
 	return;		
 	//header('Location: bolnik.php');		
@@ -180,7 +180,7 @@ if (isset($_POST[$stolpec])) {
 	//echo $_POST[$stolpec];
 		$podminka[$stolpec] = ($_POST[$stolpec]);
  } else {
-	//echo $stolpec . ' ne obstaja';
+	echo ' alert($stolpec \. " ne obstaja");  ';
   }
   
 
