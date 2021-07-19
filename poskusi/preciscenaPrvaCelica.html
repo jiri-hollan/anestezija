@@ -29,14 +29,8 @@ table, td {
 
 function functionRow (e) {
 var x = e.path[1];
-//var x = e.target.nodeName;
-row_value = x.cells[0].innerHTML;
-if (x == "TD") {
-
-}
-
-   document.getElementById("demo3").innerHTML = "Triggered by a " + row_value + " element";
-  
+prvaCelica = x.cells[0].innerHTML;
+document.getElementById("demo3").innerHTML = "Triggered by a " + prvaCelica + " element";  
 }
 
 
