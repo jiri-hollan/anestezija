@@ -2,6 +2,8 @@
 <?php
 
 require_once '../skupne/database.php';
+
+/*
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze']))
 switch ($_POST['doBaze']) {
@@ -26,13 +28,13 @@ switch ($_POST['doBaze']) {
 	else if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
-		/*echo '<script>';
-		echo 'alert("bolnik Id ni nula");';
-		echo '</script>';*/
+		//echo '<script>';
+		//echo 'alert("bolnik Id ni nula");';
+		//echo '</script>';
 		$novaVnosVrstice = new SpremeniVpis;
 	}
 }//od if $_SERVER
-
+*/
 Class Apregled {
 	public $conn;
 	public $zaklad;
