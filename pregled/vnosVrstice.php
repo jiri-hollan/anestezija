@@ -164,6 +164,7 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 	} //od class SpremeniVpis
 	
 //-------------------------------------------konec SpremeniVpis---------------------------	
+
 Class PreberiVpis extends Apregled {
 		
 	public function __construct() {

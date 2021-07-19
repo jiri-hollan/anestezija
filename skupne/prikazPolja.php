@@ -29,7 +29,6 @@ function functionRow (e) {
 if (e.path[1]!=undefined) {	
 var x = e.path[1];
 prvaCelica = x.cells[0].innerHTML;
-//     document.getElementById("demo3").innerHTML = "Triggered by a " + prvaCelica + " element"; 
  alert(prvaCelica);
 }
 }
