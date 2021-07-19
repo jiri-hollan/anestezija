@@ -173,7 +173,7 @@ Class PreberiVpis extends Apregled {
 		    parent::__construct();
 			//echo 'v preberi vpis';
 			
-			
+		if (!empty($_POST)) {		
 	foreach ($this->stolpci as $stolpec) {
 	
 if (isset($_POST[$stolpec])) {
@@ -206,7 +206,7 @@ $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka
 			echo '<br>Število najdenih zapisov: '.count($prebrano);
 			
 //	Return	$prebrano;	
-//    } //od if 
+	}//od if
   } //od construct
 } //od class PreberiVpis
 
