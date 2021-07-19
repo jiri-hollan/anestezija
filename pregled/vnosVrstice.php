@@ -205,7 +205,7 @@ $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka
 //require_once('../skupne/prikazPolja.php');		  
 			echo '<br>Število najdenih zapisov: '.count($prebrano);
 			
-	Return	$prebrano;	
+//	Return	$prebrano;	
 //    } //od if 
   } //od construct
 } //od class PreberiVpis

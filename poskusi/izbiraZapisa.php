@@ -1,4 +1,9 @@
 <?php
+
+/////////////////////////////////////////////////////7
+require_once '../pregled/vnosVrstice.php';
+
+
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze']))
 switch ($_POST['doBaze']) {
@@ -10,7 +15,7 @@ switch ($_POST['doBaze']) {
 	}	
     break;
   case 'vyber':
-    new PreberiVpis;
+    $prebrano = new PreberiVpis;
     break;
   case 'aktualizuj':
    // code to be executed if n=label3;
@@ -30,10 +35,8 @@ switch ($_POST['doBaze']) {
 	}
 }//od if $_SERVER
 
-/////////////////////////////////////////////////////7
-require_once '../skupne/database.php';
-require_once('../skupne/prikazPolja.php');	
 
+require_once('../skupne/prikazPolja.php');	
 
 
 ?>
