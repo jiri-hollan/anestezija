@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+</head>
 <body>
 
 <p id="nadpis">This example uses the addEventListener() method to add many events on the document.</p>
-
+<table id="myTable">
+  <tr>
+    <td>cell 1</td>
+    <td>cell 2</td>
+  </tr>
+  <tr>
+    <td>cell 3</td>
+    <td>cell 4</td>
+  </tr>
+</table>
 <p id="demo"></p>
 
 <script>
 document.getElementById("nadpis").addEventListener("mouseover", myFunction);
 document.getElementById("nadpis").addEventListener("click", mySecondFunction);
 document.getElementById("nadpis").addEventListener("mouseout", myThirdFunction);
+
+document.getElementById("nadpis").addEventListener("mouseover", myFunction);
+document.getElementById("nadpis").addEventListener("click", mySecondFunction);
+document.getElementById("nadpis").addEventListener("mouseout", myThirdFunction);
+
+
+
 
 function myFunction() {
   document.getElementById("demo").innerHTML += "Moused over!<br>"
