@@ -23,7 +23,7 @@ table, td {
 <p id="demo"></p>
 <p id="demo1">demo1</p>
 <p id="demo2">demo2</p>
-
+<p id="demo3">demo3</p>
 <script>
 //document.getElementById("nadpis").addEventListener("mouseover", myFunction);
 document.getElementById("nadpis").addEventListener("click", mySecondFunction);
@@ -64,12 +64,16 @@ var x = e.target;
   document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
 }
 function functionRow (e) {
-var x = e.target.nodeName;
+var x = e.path[1];
+//var x = e.target.nodeName;
+row_value = x.cells[0].innerHTML;
 if (x == "TD") {
 
 }
   document.getElementById("demo1").innerHTML = "Triggered by a " + x + " element";
-  document.getElementById("demo2").innerHTML = "Triggered by a " + x.parent + " element";
+  document.getElementById("demo2").innerHTML = "Triggered by a " + x.parentNode + " element";
+   document.getElementById("demo3").innerHTML = "Triggered by a " + row_value + " element";
+  
 }
 
 
