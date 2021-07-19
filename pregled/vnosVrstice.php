@@ -173,14 +173,16 @@ Class PreberiVpis extends Apregled {
 		    parent::__construct();
 			//echo 'v preberi vpis';
 			
-		if (!empty($_POST)) {		
+if (!empty($_POST)) {	
+var_dump($_POST);
+	echo '<script> alert("$_POST   ni prazen"); </script> ';	
 	foreach ($this->stolpci as $stolpec) {
 	
 if (isset($_POST[$stolpec])) {
 	//echo $_POST[$stolpec];
 		$podminka[$stolpec] = ($_POST[$stolpec]);
  } else {
-	echo ' alert($stolpec \. " ne obstaja");  ';
+	//echo $_POST[$stolpec] . " ne obstaja" ;
   }
   
 
@@ -205,8 +207,11 @@ $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka
 //require_once('../skupne/prikazPolja.php');		  
 			echo '<br>Število najdenih zapisov: '.count($prebrano);
 			
-//	Return	$prebrano;	
+Return	$prebrano;	
 	}//od if
+	else  {
+	echo ' alert("$_POST   je prazen");  ';			
+	}  
   } //od construct
 } //od class PreberiVpis
 
