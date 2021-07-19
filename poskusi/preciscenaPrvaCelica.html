@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<p id="nadpis">This example uses the addEventListener() method to add many events on the document.</p>
+<table id="myTable">
+  <tr>
+    <td>cell 1</td>
+    <td>cell 2</td>
+  </tr>
+  <tr>
+    <td>cell 3</td>
+    <td>cell 4</td>
+  </tr>
+</table>
+<p id="demo"></p>
+
+<p id="demo3">demo3</p>
+<script>
+
+  document.getElementById("myTable").addEventListener("click", functionRow);
+
+function functionRow (e) {
+var x = e.path[1];
+//var x = e.target.nodeName;
+row_value = x.cells[0].innerHTML;
+if (x == "TD") {
+
+}
+
+   document.getElementById("demo3").innerHTML = "Triggered by a " + row_value + " element";
+  
+}
+
+
+</script>
+
+</body>
+</html>
