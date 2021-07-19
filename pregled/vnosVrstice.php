@@ -148,7 +148,7 @@ if (isset($_POST['bolnikId'])) {
 	    echo '<script>';
 	
     //echo 'alert("bolnik Id ne obstaja");';
-	echo 'window.location.href = "bolnik\.php";';
+	echo 'window.location.href = "\.\./pregled/bolnik\.php";';
     echo '</script>';	
 	
   }	
@@ -159,7 +159,7 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 			echo 'Zapis aktualizovan in shranjen v tabelo';
 			//var_dump ($ulozeno);			
             //echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
-			header('Location: bolnik.php');
+			header('Location: ../pregled/bolnik.php');
 
 	}//od if
 } //od construct

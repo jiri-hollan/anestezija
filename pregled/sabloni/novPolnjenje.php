@@ -1,6 +1,7 @@
 
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
-<form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" autocomplete="off"> 
+<!--<form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" autocomplete="off"> -->
+<form id="frm" name="bolnikForma" method="post" action="../poskusi/izbiraZapisa.php" autocomplete="off"> 
 <fieldset class="novBolnik" id="prva">
     <legend id="novBLegend">Nov bolnik</legend>
     <h2 id="lab6"> </h2>
