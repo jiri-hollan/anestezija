@@ -15,7 +15,8 @@ switch ($_POST['doBaze']) {
 	}	
     break;
   case 'vyber':
-    new PreberiVpis;
+    $prebrano=new PreberiVpis;
+	var_dump($prebrano);
     break;
   case 'aktualizuj':
    // code to be executed if n=label3;
