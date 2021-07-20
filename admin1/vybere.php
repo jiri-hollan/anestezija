@@ -18,9 +18,6 @@ document.getElementById("data").value = poljeJSON;
 <input   type="text" name="doBaze" value="vyber" readonly hidden></input>
 <input   type="submit" ></input>
 </form>
-<?php
-
-?>
 
 </body>
 </html>
