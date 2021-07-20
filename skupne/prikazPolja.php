@@ -15,9 +15,10 @@ class TableRows extends RecursiveIteratorIterator {
     }
 }
 //echo '<p id="gumb">gumb</p>';
-$stmt = $prebrano;
+
+//$stmt = $najdeno;
 //$stmt=array("kvak", "fuj");
- foreach(new TableRows(new RecursiveArrayIterator($stmt)) as $k=>$v) {
+ foreach(new TableRows(new RecursiveArrayIterator($najdeno)) as $k=>$v) {
         echo $v;
     }
 
