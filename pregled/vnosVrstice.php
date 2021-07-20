@@ -3,38 +3,6 @@
 
 require_once '../skupne/database.php';
 
-/*
-if ($_SERVER['REQUEST_METHOD']== 'POST') {
-	if (isset($_POST['doBaze']))
-switch ($_POST['doBaze']) {
-  case 'vloz':
-  if ($_POST['bolnikId']=="") {
-	$novaVnosVrstice = new PrviVpis;
-	} else {
-	$novaVnosVrstice = new SpremeniVpis;
-	}	
-    break;
-  case 'vyber':
-    new PreberiVpis;
-    break;
-  case 'aktualizuj':
-   // code to be executed if n=label3;
-    break;
-
-}
-
-
-
-	else if ($_POST['bolnikId']=="") {
-	$novaVnosVrstice = new PrviVpis;
-	} else {
-		//echo '<script>';
-		//echo 'alert("bolnik Id ni nula");';
-		//echo '</script>';
-		$novaVnosVrstice = new SpremeniVpis;
-	}
-}//od if $_SERVER
-*/
 Class Apregled {
 	public $conn;
 	public $zaklad;
@@ -85,10 +53,10 @@ if (isset($_POST[$stolpec])) {
 }//od foreach
 
 $database = new database;
-//var_dump ($database);
+//var_dump($database);
 $ulozeno = $this->conn->vloz($this->nameTable, $data);
 			echo 'Zapis vnesen v tabelo';
-			//var_dump ($ulozeno);			
+			//var_dump($ulozeno);			
             //echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
 			echo '<br>last id: '.$ulozeno["lastId"];
 			
@@ -121,7 +89,7 @@ Class SpremeniVpis extends Apregled {
 	public function __construct() {
 		    parent::__construct();
 
-	//echo 'V spremeni Vpis';
+	//echo '<p>V spremeni Vpis</p>';
 	if (!empty($_POST)) {
 // define variables and set to empty values
 $najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
@@ -168,51 +136,48 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 //-------------------------------------------konec SpremeniVpis---------------------------	
 
 Class PreberiVpis extends Apregled {
-		
+
 	public function __construct() {
 		    parent::__construct();
 			//echo 'v preberi vpis';
 			
-if (!empty($_POST)) {	
-var_dump($_POST);
-	echo '<script> alert("$_POST   ni prazen"); </script> ';	
-	foreach ($this->stolpci as $stolpec) {
-	
-if (isset($_POST[$stolpec])) {
-	//echo $_POST[$stolpec];
-		$podminka[$stolpec] = ($_POST[$stolpec]);
- } else {
-	//echo $_POST[$stolpec] . " ne obstaja" ;
-  }
+ if (!empty($_POST)) {	
+//var_dump($_POST);
+//echo '<script> alert("$_POST   ni prazen"); </script> ';	
+	foreach ($this->stolpci as $stolpec) {	
+       if (isset($_POST[$stolpec])) {
+	     //echo $_POST[$stolpec];
+		  $podminka[$stolpec] = ($_POST[$stolpec]);
+       } else {
+	  //echo $_POST[$stolpec] . " ne obstaja" ;
+     }
   
 
-}//od foreach		
-			
-			
-		//var_dump($podminka);	
-		//var_dump($_POST['data']);
+   }//od foreach		
+ }//od if !empty
+	else  {
+	echo ' alert("$_POST   je prazen");  ';			
+   } 
+	$this->podminka = $podminka;	
+} //od construct
+  
+ function prebranoFunction() {
+//var_dump($podminka);	
+//var_dump($_POST['data']);
 	$this->stolpci = 	json_decode($_POST['data']);	
 	//var_dump($this->stolpci);
-	//$this->stolpci = array('datPregleda', 'imeZdravnika' );
-	$this->podminka = $podminka;
-	
-/*if (!empty($_POST)) {			
-    $podminka = $_POST;*/
-	
+
 	$database = new database;
 //var_dump ($database);
 $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
-          //var_dump($prebrano);
-//require_once('../skupne/prikazPolja.php');		  
+          //var_dump($prebrano);		  
 			echo '<br>Število najdenih zapisov: '.count($prebrano);
 			
 Return	$prebrano;	
-	}//od if
-	else  {
-	echo ' alert("$_POST   je prazen");  ';			
-	}  
-  } //od construct
+	
+} 
+  
 } //od class PreberiVpis
 
 //-------------------------------------------konec PreberiVpis---------------------------		
