@@ -20,6 +20,8 @@ switch ($_POST['doBaze']) {
   case 'aktualizuj':
    // code to be executed if n=label3;
     break;
+  default:
+    echo '$post[do baze ni vloz, vyber,aktualizuj]';
 }
 	else if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
