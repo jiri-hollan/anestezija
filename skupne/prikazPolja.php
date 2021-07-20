@@ -30,7 +30,7 @@ function functionRow (e) {
 if (e.path[1]!=undefined) {	
 var x = e.path[1];
 prvaCelica = x.cells[0].innerHTML;
- alert(prvaCelica);
+ alert("prikazPolja\.php"+prvaCelica);
 }
 }
 
