@@ -21,14 +21,14 @@ switch ($_POST['doBaze']) {
    // code to be executed if n=label3;
     break;
 }
-/*	else if ($_POST['bolnikId']=="") {
+	else if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
 		//echo '<script>';
 		//echo 'alert("bolnik Id ni nula");';
 		//echo '</script>';
 		$novaVnosVrstice = new SpremeniVpis;
-	}*/
+	}
 }//od if $_SERVER
 
 
