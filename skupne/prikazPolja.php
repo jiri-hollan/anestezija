@@ -14,10 +14,8 @@ class TableRows extends RecursiveIteratorIterator {
         echo "</tr>" . "\n";
     }
 }
-//echo '<p id="gumb">gumb</p>';
 
-//$stmt = $najdeno;
-//$stmt=array("kvak", "fuj");
+
  foreach(new TableRows(new RecursiveArrayIterator($najdeno)) as $k=>$v) {
         echo $v;
     }
@@ -31,6 +29,7 @@ if (e.path[1]!=undefined) {
 var x = e.path[1];
 prvaCelica = x.cells[0].innerHTML;
  alert("prikazPolja\.php"+prvaCelica);
+ 
 }
 }
 
