@@ -15,8 +15,8 @@ switch ($_POST['doBaze']) {
 	}	
     break;
   case 'vyber':
-    $cosi = new PreberiVpis;
-	$prebrano = $cosi->prebranoFunction();
+    $najdi = new PreberiVpis;
+	$prebrano = $najdi->prebranoFunction();
 	//var_dump($prebrano);
     break;
   case 'aktualizuj':

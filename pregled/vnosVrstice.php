@@ -151,8 +151,6 @@ Class PreberiVpis extends Apregled {
        } else {
 	  //echo $_POST[$stolpec] . " ne obstaja" ;
      }
-  
-
    }//od foreach		
  }//od if !empty
 	else  {
@@ -166,16 +164,13 @@ Class PreberiVpis extends Apregled {
 //var_dump($_POST['data']);
 	$this->stolpci = 	json_decode($_POST['data']);	
 	//var_dump($this->stolpci);
-
 	$database = new database;
-//var_dump ($database);
-$prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
+   //var_dump ($database);
+   $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
           //var_dump($prebrano);		  
-			echo '<br>Število najdenih zapisov: '.count($prebrano);
-			
-Return	$prebrano;	
-	
+			echo '<br>Število najdenih zapisov: '.count($prebrano);			
+Return	$prebrano;		
 } 
   
 } //od class PreberiVpis
