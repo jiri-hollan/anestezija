@@ -13,7 +13,7 @@ switch ($_POST['doBaze']) {
 	}	
     break;
   case 'vyber':
-    new PreberiVpis;
+    new PrikazPolja;
     break;
   case 'aktualizuj':
    // code to be executed if n=label3;
@@ -166,7 +166,7 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 //-------------------------------------------konec SpremeniVpis---------------------------	
 
 Class PreberiVpis extends Apregled {
-		
+	public $prebrano;	
 	public function __construct() {
 		    parent::__construct();
 			//echo 'v preberi vpis';
@@ -200,11 +200,57 @@ if (isset($_POST[$stolpec])) {
 $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
           //var_dump($prebrano);
-require_once('../skupne/prikazPolja.php');		  
+//require_once('../skupne/prikazPolja.php');		  
 			echo '<br>Število najdenih zapisov: '.count($prebrano);
 //    } //od if 
   } //od construct
 } //od class PreberiVpis
 
-//-------------------------------------------konec PreberiVpis---------------------------		
+//-------------------------------------------konec PreberiVpis---------------------------	
+Class PrikazPolja extends PreberiVpis {
+		
+	public function __construct() {
+		    parent::__construct();
+			
+	echo "<table id='mojaTabela' style='border: solid 1px black;'>";
+
+//echo '<p id="gumb">gumb</p>';
+//$stmt = $prebrano;
+//$stmt=array("kvak", "fuj");
+ foreach(new TableRows(new RecursiveArrayIterator($this->prebrano)) as $k=>$v) {
+        echo $v;
+    }
+
+echo '
+<script>
+
+document.getElementById("mojaTabela").addEventListener("click", functionRow);
+function functionRow (e) {
+if (e.path[1]!=undefined) {	
+var x = e.path[1];
+prvaCelica = x.cells[0].innerHTML;
+ alert(prvaCelica);
+}
+}
+
+
+</script>';		
+
+	  } //od construct
+} //od class PrikazPolja
+
+class TableRows extends RecursiveIteratorIterator {
+    function __construct($it) {
+        parent::__construct($it, self::LEAVES_ONLY);
+    }
+    function current() {
+        return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
+    }
+    function beginChildren() {
+        echo "<tr>";
+    }
+    function endChildren() {
+        echo "</tr>" . "\n";
+    }
+}
 ?>
