@@ -3,7 +3,7 @@
 require_once '../pregled/vnosVrstice.php';
 
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
-	if (isset($_POST['doBaze']))
+	if (isset($_POST['doBaze'])){
 switch ($_POST['doBaze']) {
   case 'vloz':
   if ($_POST['bolnikId']=="") {
@@ -23,6 +23,7 @@ switch ($_POST['doBaze']) {
   default:
     echo '$post[do baze ni vloz, vyber,aktualizuj]';
 }
+	}
 	else if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
