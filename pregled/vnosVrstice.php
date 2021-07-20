@@ -3,7 +3,7 @@
 
 require_once '../skupne/database.php';
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
-	if (isset($_POST['doBaze']))
+	if (isset($_POST['doBaze'])){
 switch ($_POST['doBaze']) {
   case 'vloz':
   if ($_POST['bolnikId']=="") {
@@ -18,12 +18,8 @@ switch ($_POST['doBaze']) {
   case 'aktualizuj':
    // code to be executed if n=label3;
     break;
-
 }
-
-
-
-	else if ($_POST['bolnikId']=="") {
+	}	else if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
 		/*echo '<script>';
