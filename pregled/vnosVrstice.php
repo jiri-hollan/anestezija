@@ -19,7 +19,7 @@ switch ($doBaze) {
     break;
   case 'vyber':
     $najdi = new PreberiVpis;
-	$najdeno = $najdi->$podminka;
+		$najdeno = $najdi->prebranoFunction();
     break;
   case 'aktualizuj':
    // code to be executed if n=label3;
@@ -186,10 +186,11 @@ if (isset($_POST[$stolpec])) {
    }//od foreach	
    var_dump($podminka);
    $this->podminka=$podminka; 
+    var_dump($this->podminka);
 return $this->podminka;   
  } //od construct	
  
- function prebranoFunction($this->podminka) {			
+ function prebranoFunction() {			
 		//var_dump($podminka);	
 		//var_dump($_POST['data']);
 	$this->stolpci = 	json_decode($_POST['data']);	
