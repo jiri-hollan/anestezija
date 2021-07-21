@@ -84,7 +84,7 @@ if (isset($_POST[$stolpec])) {
 	
 }//od foreach
 
-$database = new database;
+//$database = new database;
 //var_dump ($database);
 $ulozeno = $this->conn->vloz($this->nameTable, $data);
 			echo 'Zapis vnesen v tabelo';
@@ -153,7 +153,7 @@ if (isset($_POST['bolnikId'])) {
 	
   }	
 
-$database = new database;
+//$database = new database;
 //var_dump ($database);
 $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 			echo 'Zapis aktualizovan in shranjen v tabelo';
@@ -197,7 +197,7 @@ if (isset($_POST[$stolpec])) {
 /*if (!empty($_POST)) {			
     $podminka = $_POST;*/
 	
-	$database = new database;
+	//$database = new database;
 //var_dump ($database);
 $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
