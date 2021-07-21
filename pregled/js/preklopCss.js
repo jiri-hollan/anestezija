@@ -42,12 +42,13 @@ document.getElementsByTagName('title')[0].innerHTML= priimek + " " + ime;
      document.getElementById("prva").style.display = "none"; 
      document.getElementById("druga").style.display = "block";
      document.getElementById("tretja").style.display = "none";
-     document.getElementById("nazaj").style.visibility = "hidden";
-     document.getElementById("predogled").style.visibility = "visible";
-     document.getElementById("novB").style.visibility = "visible";
-     document.getElementById("natisni").style.visibility = "visible";
-     document.getElementById("pomoc").style.visibility = "visible";
-     document.getElementById("submitFrm").style.visibility = "hidden";
+     document.getElementById("nazaj").style.display = "none";
+     document.getElementById("predogled").style.display = "block";
+     document.getElementById("novB").style.display = "block";
+     document.getElementById("natisni").style.display = "block";
+     document.getElementById("pomoc").style.display = "block";
+     document.getElementById("submitFrm").style.display = "none";
+	 document.getElementById("najdiZapis").style.display = "none";
 
 return false;
 

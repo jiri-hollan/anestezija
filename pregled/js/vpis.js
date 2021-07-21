@@ -7,16 +7,16 @@ function vpisFunction() {
      document.getElementById("prva").style.display = "block"; 
      document.getElementById("druga").style.display = "none";
      document.getElementById("tretja").style.display = "none";
-     document.getElementById("nazaj").style.visibility = "hidden";
+     document.getElementById("nazaj").style.display = "none";
      //document.getElementById("predogled").style.visibility = "hidden";
 	 document.getElementById("predogled").style.display = "none";
-     document.getElementById("novB").style.visibility = "visible";
+     document.getElementById("novB").style.display = "block"; ;
      //document.getElementById("natisni").style.visibility = "hidden";
      document.getElementById("natisni").style.display = "none";	
     // document.getElementById("pomoc").style.visibility = "hidden";	 
      document.getElementById("pomoc").style.display = "none";	
-     document.getElementById("submitFrm").style.visibility = "hidden";
      document.getElementById("submitFrm").style.display = "none";
+     document.getElementById("najdiZapis").style.display = "block";
 	 
      danesFunction();
 	 formNazajFunction();

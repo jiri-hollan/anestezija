@@ -304,9 +304,10 @@ function nazajFunction() {
     document.getElementById("prva").style.display = "none"; 
     document.getElementById("druga").style.display = "block";
     document.getElementById("tretja").style.display = "none";
-    document.getElementById("nazaj").style.visibility = "hidden";
-    document.getElementById("predogled").style.visibility = "visible";
-	document.getElementById("submitFrm").style.visibility = "hidden";
+    document.getElementById("nazaj").style.display = "none";
+    document.getElementById("predogled").style.display = "block";
+	document.getElementById("submitFrm").style.display = "none";
+	document.getElementById("najdiZapis").style.display = "none";
 }
 
 function ogledFunction() {
@@ -315,9 +316,10 @@ function ogledFunction() {
   document.getElementById("prva").style.display = "none"; 
   document.getElementById("druga").style.display = "none";
   document.getElementById("tretja").style.display = "block";
-  document.getElementById("predogled").style.visibility = "hidden";
-  document.getElementById("nazaj").style.visibility = "visible";
-  document.getElementById("submitFrm").style.visibility = "visible";
+  document.getElementById("predogled").style.display = "none";
+  document.getElementById("nazaj").style.display = "block";
+  document.getElementById("submitFrm").style.display = "block";
+  document.getElementById("najdiZapis").style.display = "none";  
 }
 
 function pomocFunction() {
