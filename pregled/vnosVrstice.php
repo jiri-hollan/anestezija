@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	} else {
 		$doBaze  = "";
 	}
+	//var_dump($doBaze);
 switch ($doBaze) {
   case 'vloz':
   if ($_POST['bolnikId']=="") {
