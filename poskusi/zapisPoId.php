@@ -23,7 +23,7 @@ echo $vrstica;
 	
 }//od class PoberZapis
 
-Class PrikaziPolja{
+Class PrikazPolja{
 	public function __construct($id) {	
 	
 echo "<table id='mojaTabela' style='border: solid 1px black;'>";
@@ -62,5 +62,5 @@ prvaCelica = x.cells[0].innerHTML;
 
 </script>';
 	}//od construct	
-}//od class PrikaziPolja
+}//od class PrikazPolja
 ?>
