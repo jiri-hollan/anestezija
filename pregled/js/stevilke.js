@@ -8,4 +8,4 @@ for (i = 1; i < a; i++) {
 b += "<option value=" +  i + ">"  +"<br>";
 }
 document.getElementById(c).innerHTML = b;
-}
+}//poskusni napis
