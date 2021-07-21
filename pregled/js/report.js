@@ -1,5 +1,6 @@
  var datRojstva;
  var a;
+
  //alert('report: '+sessionStorage.getItem("bolnikId"));
  function reportFunction(a)
  {
@@ -251,10 +252,7 @@ switch (a) {
  case "p": //predogled
     ogledFunction();
     break;	
-  case "n": //najde zapis
-    alert('še ni napisan program');
-	//novBolnikFunction(1); // očisti formular
-    break;	
+  
   default:
     text = "No value found";
 }

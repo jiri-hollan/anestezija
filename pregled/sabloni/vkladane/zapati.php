@@ -19,7 +19,7 @@
 	 <button id="submitFrm" type="submit" form="frm" value="Submit">Shrani</button>-->
 <!--<span class="navSpan" id="submitFrm" onclick='document.getElementById("frm").submit();'>shrani</span>-->
  <span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span>	
- <span class="navSpan" id="najdiZapis" onclick="return reportFunction('n')">najdi</span>	
+ <span class="navSpan" id="najdiZapis" onclick="alert('koda še ni napisana');">najdi</span>	
  </div>	 
 
 
