@@ -241,14 +241,14 @@ document.getElementById("navodilaR").innerHTML= navodila;
 document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdravnika").value;
 
 switch (a) {
-  case "t":
+  case "t": //tisk
     natisniFunction();
     novBolnikFunction(0);	
     break;
-  case "n":
+  case "n": //naloži v bazo
     novBolnikFunction(0);
     break;
- case "p":
+ case "p": //predogled
     ogledFunction();
     break;	
   default:
