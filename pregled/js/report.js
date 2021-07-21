@@ -252,7 +252,8 @@ switch (a) {
     ogledFunction();
     break;	
   case "n": //najde zapis
-    //najde?Function();
+    alert('še ni napisan program');
+	//novBolnikFunction(1); // očisti formular
     break;	
   default:
     text = "No value found";
