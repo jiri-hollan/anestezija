@@ -19,7 +19,7 @@ switch ($doBaze) {
     break;
   case 'vyber':
     $najdi = new PreberiVpis;
-	$najdeno = $najdi->prebranoFunction();
+	$najdeno = $najdi->$podminka;
     break;
   case 'aktualizuj':
    // code to be executed if n=label3;
@@ -182,31 +182,28 @@ if (isset($_POST[$stolpec])) {
 		$podminka[$stolpec] = ($_POST[$stolpec]);
  } else {
 	//echo $stolpec . ' ne obstaja';
-  }
-  
-
-}//od foreach		
-			
-			
+    }  
+   }//od foreach	
+   var_dump($podminka);
+   $this->podminka=$podminka; 
+return $this->podminka;   
+ } //od construct	
+ 
+ function prebranoFunction($this->podminka) {			
 		//var_dump($podminka);	
 		//var_dump($_POST['data']);
 	$this->stolpci = 	json_decode($_POST['data']);	
 	//var_dump($this->stolpci);
 	//$this->stolpci = array('datPregleda', 'imeZdravnika' );
 	$this->podminka = $podminka;
-	
-/*if (!empty($_POST)) {			
-    $podminka = $_POST;*/
-	
-	//$database = new database;
-//var_dump ($database);
+
 $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
           //var_dump($prebrano);
   require_once('../skupne/prikazPolja.php');		  
 			echo '<br>Število najdenih zapisov: '.count($prebrano);
-//    } //od if 
-  } //od construct
+Return	$prebrano;	
+} 
 } //od class PreberiVpis
 
 //-------------------------------------------konec PreberiVpis---------------------------		
