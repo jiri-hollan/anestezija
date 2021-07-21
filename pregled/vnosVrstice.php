@@ -4,7 +4,11 @@
 require_once '../skupne/database.php';
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze'])){
-switch ($_POST['doBaze']) {
+		$doBaze  = $_POST['doBaze'];
+	} else {
+		$doBaze  = "";
+	}
+switch ($doBaze) {
   case 'vloz':
   if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
@@ -18,15 +22,16 @@ switch ($_POST['doBaze']) {
   case 'aktualizuj':
    // code to be executed if n=label3;
     break;
-}
-	}	else if ($_POST['bolnikId']=="") {
+  case '':
+    if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
-		//echo '<script>';
-		//echo 'alert("bolnik Id ni nula");';
-		//echo '</script>';*/
-		$novaVnosVrstice = new SpremeniVpis;
-	}
+	$novaVnosVrstice = new SpremeniVpis;
+	}	
+    break;
+  default:	
+	echo 'doBaze ni v definiranih vrednosteh';
+}
 }//od if $_SERVER
 
 Class Apregled {
