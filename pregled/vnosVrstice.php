@@ -22,9 +22,9 @@ switch ($_POST['doBaze']) {
 	}	else if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
-		/*echo '<script>';
-		echo 'alert("bolnik Id ni nula");';
-		echo '</script>';*/
+		//echo '<script>';
+		//echo 'alert("bolnik Id ni nula");';
+		//echo '</script>';*/
 		$novaVnosVrstice = new SpremeniVpis;
 	}
 }//od if $_SERVER
