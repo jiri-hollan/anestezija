@@ -18,7 +18,8 @@ switch ($doBaze) {
 	}	
     break;
   case 'vyber':
-    new PreberiVpis;
+    $najdi = new PreberiVpis;
+	$najdeno = $najdi->prebranoFunction();
     break;
   case 'aktualizuj':
    // code to be executed if n=label3;
