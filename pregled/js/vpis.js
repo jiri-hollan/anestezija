@@ -8,12 +8,16 @@ function vpisFunction() {
      document.getElementById("druga").style.display = "none";
      document.getElementById("tretja").style.display = "none";
      document.getElementById("nazaj").style.visibility = "hidden";
-     document.getElementById("predogled").style.visibility = "hidden";
+     //document.getElementById("predogled").style.visibility = "hidden";
+	 document.getElementById("predogled").style.display = "none";
      document.getElementById("novB").style.visibility = "visible";
-     document.getElementById("natisni").style.visibility = "hidden";
-     document.getElementById("pomoc").style.visibility = "hidden";
+     //document.getElementById("natisni").style.visibility = "hidden";
+     document.getElementById("natisni").style.display = "none";	
+    // document.getElementById("pomoc").style.visibility = "hidden";	 
+     document.getElementById("pomoc").style.display = "none";	
      document.getElementById("submitFrm").style.visibility = "hidden";
-
+     document.getElementById("submitFrm").style.display = "none";
+	 
      danesFunction();
 	 formNazajFunction();
 }
