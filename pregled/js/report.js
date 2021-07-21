@@ -245,11 +245,14 @@ switch (a) {
     natisniFunction();
     novBolnikFunction(0);	
     break;
-  case "n": //naloži v bazo
+  case "s": //naloži v bazo
     novBolnikFunction(0);
     break;
  case "p": //predogled
     ogledFunction();
+    break;	
+  case "n": //najde zapis
+    //najde?Function();
     break;	
   default:
     text = "No value found";
