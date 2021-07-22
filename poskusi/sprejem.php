@@ -13,8 +13,5 @@ $iskaniPregled = json_encode($prebrano[0]);
 
 session_start();
 $_SESSION["testJSON"] = $iskaniPregled;
-/*
-const myJSON = JSON.stringify(person1);
-sessionStorage.setItem("testJSON", myJSON);
-*/
+
 ?>
