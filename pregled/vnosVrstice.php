@@ -18,12 +18,16 @@ switch ($doBaze) {
     break;
   case 'vyber':
     $najdi = new PreberiVpis;
-	var_dump ($najdi ->prebranoFunction());
+	//var_dump ($najdi ->prebranoFunction());
 	//$najdeno = $najdi->prebranoFunction();
 	$prebrano = $najdi->prebranoFunction();
 	require_once '../skupne/prikazPolja.php';
     require_once '../poskusi/zapisPoId.php';
 	
+    break;
+  case 'prikazi':
+    $prikazi = new PreberiVpis;
+   // prikaže preiskavo pod id v formi;
     break;
   case 'aktualizuj':
    // code to be executed if n=label3;
@@ -206,7 +210,7 @@ Class PreberiVpis extends Apregled {
    $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
           //var_dump($prebrano);		  
-			echo '<br>Število najdenih zapisov: '.count($prebrano);			
+			echo '<br>Število najdenih zapisov vnos: '.count($prebrano);			
 Return	$prebrano;		
 } 
   
