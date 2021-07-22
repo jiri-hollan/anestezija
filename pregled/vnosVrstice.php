@@ -170,43 +170,44 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 //-------------------------------------------konec SpremeniVpis---------------------------	
 
 Class PreberiVpis extends Apregled {
-		
+
 	public function __construct() {
 		    parent::__construct();
 			//echo 'v preberi vpis';
 			
-			
-	foreach ($this->stolpci as $stolpec) {
-	
-if (isset($_POST[$stolpec])) {
-	//echo $_POST[$stolpec];
-		$podminka[$stolpec] = ($_POST[$stolpec]);
- } else {
-	//echo $stolpec . ' ne obstaja';
-    }  
-   }//od foreach	
-   var_dump($podminka);
-   $this->podminka=$podminka; 
-    var_dump($this->podminka);
-return $this->podminka;   
- } //od construct	
- 
- function prebranoFunction() {			
-		//var_dump($podminka);	
-		//var_dump($_POST['data']);
+ if (!empty($_POST)) {	
+//var_dump($_POST);
+//echo '<script> alert("$_POST   ni prazen"); </script> ';	
+	foreach ($this->stolpci as $stolpec) {	
+       if (isset($_POST[$stolpec])) {
+	     //echo $_POST[$stolpec];
+		  $podminka[$stolpec] = ($_POST[$stolpec]);
+       } else {
+	  //echo $_POST[$stolpec] . " ne obstaja" ;
+     }
+   }//od foreach		
+ }//od if !empty
+	else  {
+	echo ' alert("$_POST   je prazen");  ';			
+   } 
+	$this->podminka = $podminka;	
+} //od construct
+  
+ function prebranoFunction() {
+//var_dump($podminka);	
+//var_dump($_POST['data']);
 	$this->stolpci = 	json_decode($_POST['data']);	
 	//var_dump($this->stolpci);
-	//$this->stolpci = array('datPregleda', 'imeZdravnika' );
-	$this->podminka = $podminka;
-
-$prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
+	//$database = new database;
+   //var_dump ($database);
+   $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
-          //var_dump($prebrano);
-  require_once('../skupne/prikazPolja.php');		  
-			echo '<br>Število najdenih zapisov: '.count($prebrano);
-Return	$prebrano;	
+          //var_dump($prebrano);		  
+			echo '<br>Število najdenih zapisov: '.count($prebrano);			
+Return	$prebrano;		
 } 
+  
 } //od class PreberiVpis
 
-//-------------------------------------------konec PreberiVpis---------------------------		
+//-------------------------------------------konec PreberiVpis---------------------------	-------------------------------------------konec PreberiVpis---------------------------		
 ?>
