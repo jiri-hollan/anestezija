@@ -22,7 +22,7 @@ echo $vrstica;
 	}//od construct	
 	
 }//od class PoberZapis
-
+/*
 Class PrikazPolja{
 	public function __construct($id) {	
 	
@@ -62,5 +62,5 @@ prvaCelica = x.cells[0].innerHTML;
 
 </script>';
 	}//od construct	
-}//od class PrikazPolja
+}//od class PrikazPolja */
 ?>

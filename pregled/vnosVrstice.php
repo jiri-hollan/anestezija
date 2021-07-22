@@ -1,6 +1,5 @@
 
 <?php
-
 require_once '../skupne/database.php';
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze'])){
@@ -20,7 +19,11 @@ switch ($doBaze) {
   case 'vyber':
     $najdi = new PreberiVpis;
 	var_dump ($najdi ->prebranoFunction());
-	//	$najdeno = $najdi->prebranoFunction();
+	//$najdeno = $najdi->prebranoFunction();
+	$prebrano = $najdi->prebranoFunction();
+	require_once '../skupne/prikazPolja.php';
+    require_once '../poskusi/zapisPoId.php';
+	
     break;
   case 'aktualizuj':
    // code to be executed if n=label3;
