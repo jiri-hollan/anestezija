@@ -30,9 +30,13 @@ if (e.path[1]!=undefined) {
 var x = e.path[1];
 prvaCelica = x.cells[0].innerHTML;
  alert(prvaCelica);
+celicaFunction(prvaCelica);
 }
 }
-
+function celicaFunction(prvaCelica) { 
+  alert("to je prva celica: "+prvaCelica);
+  window.location.href = "../poskusi/sprejem.php?id=" + prvaCelica; 
+}
 
 </script>';
 ?>
