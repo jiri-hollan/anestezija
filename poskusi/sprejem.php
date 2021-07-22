@@ -1,3 +1,9 @@
+<doctyp! html>
+<html>
+<body>
+<div id="result">to je rezult</div>
+<p>
+<p>
 <?php
 require_once '../skupne/database.php';
 $conn = new Database();
@@ -15,3 +21,10 @@ session_start();
 $_SESSION["testJSON"] = $iskaniPregled;
 
 ?>
+
+
+<script>
+  document.getElementById("result").innerHTML = sessionStorage.getItem("testJSON");
+  </script>
+  </body>
+  </html>
