@@ -18,6 +18,8 @@ $stolpci = array('*');
 $podminka = array("pregledId"=>$id);
 $prebrano = $conn->vyber($nameTable, $stolpci, $podminka);
 //var_dump($prebrano[0]);
+// tu treba odstraniti pregledId
+unset($prebrano[0]['pregledId']);
 $iskaniPregled = json_encode($prebrano[0]);
 
 
