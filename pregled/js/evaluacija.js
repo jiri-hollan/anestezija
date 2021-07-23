@@ -26,8 +26,11 @@ if(vrednost !="" && vrednost<min) {
      //alert (ime + " je nad zgornjo mejo mormale");
      pozorFunction(ime, 1);	
 	 
+  } else if(vrednost == "") { 
+	 pozorFunction(ime, 2);
+	 
   } else {
-    pozorFunction(ime, 2);	
+    pozorFunction(ime, 3);	
  }
 
 }
@@ -46,6 +49,11 @@ switch (x) {
   case 1:
   document.getElementById(ime).style.color = "Crimson"; 
   document.getElementById(ime).style.fontWeight = "bold";
+   break;
+   
+   case 2:
+  document.getElementById(ime).value = ""; 
+
    break;
    
    default:
