@@ -51,13 +51,9 @@ try {
 
     // sql to create table
 	
-    $sql = "ALTER TABLE". " " . $ime . " " . " 
- 
- ADD dan INTEGER,
-mesec INTEGER,
-leto INTEGER,
+    $sql = "ALTER TABLE $ime  ADD leto INTEGER "; // , mesec INTEGER, leto INTEGER
 
-    ";
+
 	/*ALTER TABLE Customers
 
   ADD last_name VARCHAR(50),
