@@ -27,12 +27,13 @@ $GLOBALS['testJSON'] = $iskaniPregled;
 
 
 <script>
- // document.getElementById("result").innerHTML = sessionStorage.getItem("testJSON");
- // alert(sessionStorage.getItem("testJSON"));
-  document.getElementById("result").innerHTML = sessionStorage.getItem("$GLOBALS['testJSON']");
-  alert(sessionStorage.getItem("$GLOBALS['testJSON']"));  
-  
-  
+  stringJson='<?php echo $GLOBALS['testJSON'];?>';
+  alert(stringJson);
+  sessionStorage.setItem("testJSON", stringJson);
+ 
+  //document.getElementById("result").innerHTML = sessionStorage.getItem("$GLOBALS['testJSON']");
+  alert(sessionStorage.getItem("testJSON"));  
+
   
   </script>
   </body>
