@@ -13,6 +13,8 @@ echo $_SESSION["testJSON"];
 stringJson='<?php echo $_SESSION["testJSON"];?>';
 //alert('<?php echo $_SESSION["testJSON"];?>');
 alert(stringJson);
+
+sessionStorage.setItem("testJSON", stringJson);
 </script>
 
 </body>
