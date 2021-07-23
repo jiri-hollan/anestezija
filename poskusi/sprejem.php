@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <doctyp! html>
 
 <html>
@@ -9,6 +7,7 @@ session_start();
 <p>
 <p>
 <?php
+session_start();
 require_once '../skupne/database.php';
 $conn = new Database();
 var_dump($_GET);
