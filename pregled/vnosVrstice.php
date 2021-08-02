@@ -22,7 +22,7 @@ switch ($doBaze) {
 	//$najdeno = $najdi->prebranoFunction();
 	$prebrano = $najdi->prebranoFunction();
 	require_once '../skupne/prikazPolja.php';
-    require_once '../poskusi/zapisPoId.php';
+    require_once '../admin1/bolnikBaze/zapisPoId.php';
 	
     break;
   case 'prikazi':
