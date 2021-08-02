@@ -271,7 +271,7 @@ width:95%;
   background-color: blue;
   position: fixed;
   top: 0;
-  width:600px;
+  max-width:1000px;
   ​​z-index: 60;
   
 }
