@@ -143,19 +143,16 @@ fieldset.labor input  {
 
 #stolpec1  {
 	float: left;
-   /* position: absolute;*/
     width:220px;  
 }
 
 #stolpec2  {
 	float: left;
-   /* position: absolute;*/
   left: 250px;
   width:220px; 
 }
 #stolpec3  {
 	float: left;
-   /* position: absolute;*/
   left: 250px;
   max-width:400px; 
 }
