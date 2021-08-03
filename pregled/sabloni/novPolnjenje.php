@@ -92,7 +92,7 @@
     <br> 
  </fieldset>
 
- <fieldset id="lab">
+ <fieldset class="labor" id="lab">
 <div id="stolpec1">
     <label for="hb">Hb:</label>  
     <input class="lab"id="hb" type="text" name="hb" size="1" onfocusout=  "laborFunction(name,value)"><br>
@@ -122,29 +122,12 @@
     <label for="k">K:</label>  
     <input class="lab"id="k" type="text" name="k" size="1" onfocusout=  "laborFunction(name,value)"><br>
 </div>
-<div id="stolpec3">
-    Drugi izvidi<br>
-<!--  <label for="x1"></label>  
-    <input id="x1" type="text" name="x1" size="1" onkeyup= "drugiIzvidiFunction()" tabindex="-1"><br>
-   <label for="x2"></label>  
-    <input id="x2" type="text" name="x2" size="1"onkeyup= "drugiIzvidiFunction()"  tabindex="-1"><br>
-   <label for="x3"></label>  
-    <input id="x3" type="text" name="x3" size="1" onkeyup= "drugiIzvidiFunction()"tabindex="-1"><br>
-   <label for="x4"></label>  
-    <input id="x4" type="text" name="x4" size="1" onkeyup= "drugiIzvidiFunction()"tabindex="-1"><br>
-   <label for="x5"></label>  
-    <input id="x5" type="text" name="x5" size="1" onkeyup= "drugiIzvidiFunction()"tabindex="-1"><br>-->
-	
-	<label for="drugiIzvidi"></label> 
-    <textarea class="lab"id="drugiIzvidi" class="mala" rows="7" cols="70"  name="drugiIzvidi" ></textarea><br> 
-	<!--<input id="drugiIzvidi" type="hidden" name="drugiIzvidi" readonly>-->
-	
-	
-	
-	
-</div>
- </fieldset>
-
+<!--<div id="stolpec3">
+    Drugi izvidi<br>-->	
+	<label for="drugiIzvidi">Drugi izvidi</label> 
+    <textarea class="lab"id="drugiIzvidi"  rows="6" cols="50"  name="drugiIzvidi" ></textarea><br> 		
+<!--</div>-->
+ </fieldset> 
  
     <legend></legend>
     <label for="ekg">EKG:</label>  

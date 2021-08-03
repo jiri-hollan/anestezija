@@ -124,20 +124,20 @@ fieldset.meritve  input  {
   width:50px; 
 }
 
-#lab {
+fieldset.labor {
   position: relative;
   padding: 20px 2px;  
   height: auto;  
 }
 
-#lab  label  {
+fieldset.labor label  {
   width:100px;
   display: inline-block;
   text-align: right;   
   padding: 1px 1px 1px 2px;
 }
 
-#lab  input  {
+fieldset.labor input  {
   width:80px;
 }
 
@@ -153,11 +153,12 @@ fieldset.meritve  input  {
   left: 250px;
   width:220px; 
 }
-#stolpec3  {
+/*#stolpec3  {
 	float: left;
-   /* position: absolute;*/
-  left: 500px;
-  width:220px; 
+  
+ max-width:90%; 
+   border: 2px solid #ccc;
+  border-radius: 4px;
 }
 #stolpec3  label  {
   width:1px;
@@ -165,9 +166,23 @@ fieldset.meritve  input  {
   text-align: right;   
   padding: 1px 1px 1px 1px;
 }
-#stolpec3   input  {
-  width:150px;
+*/
+textarea.lab  label  {
+  width:auto;
+  display: inline-block;
+  text-align: left;
 }
+textarea.lab  {
+  max-width: 100%;
+  height: 80px;
+
+    padding: 4px 2px;
+  box-sizing: border-box;
+ 
+  background-color: #f8f8f8;
+  resize: none;
+}
+
 
 fieldset.ekg {
   padding: 1px 2px;    
@@ -212,6 +227,8 @@ fieldset.alergija label {
 fieldset.zaklucek  {
   padding: 5px 2px;   
 }
+
+
 
 textarea.mala {
   width: 100%;
