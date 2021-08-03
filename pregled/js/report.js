@@ -154,7 +154,7 @@ var lab = document.getElementById("lab").getElementsByTagName("label");
 var vred =document.getElementById("lab").getElementsByClassName("lab"); 
 for (i = 0; i < lab.length; i++) 
 {  
-if (vred[i].value.length > 0)
+if (vred[i].value.length > 0 && vred[i].value!=0)
    {
 	var videz = vred[i].style.fontWeight;	   
    text += '<span style= "font-weight:' + videz + '">' + lab[i].innerHTML + vred[i].value + "</span>," + "&nbsp" + " ";

@@ -36,8 +36,6 @@
 
 
            <!-- <p ime = naprej style="background-color:blue; color:white;" onclick = "return osebniFunction()"><b>Naprej</b></p>-->
-
-       
     
   <!-- </p>-->
  

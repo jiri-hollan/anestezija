@@ -50,54 +50,16 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // sql to create table
-    $sql = "CREATE TABLE". " " . $ime . " " . " (
-pregledId int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-datPregleda DATE,
-imeZdravnika VARCHAR(100),
-stevMaticna INTEGER,
-EMSO NUMERIC(20), 
-dan INTEGER,
-mesec INTEGER,
-leto INTEGER,
-datRojstva VARCHAR(100),
-starost NUMERIC(3),
-ime VARCHAR(100),
-priimek VARCHAR(100),
-oddelek VARCHAR(100),
-dgOperativna VARCHAR(100),
-opNacrtovana VARCHAR(100),
-teza DECIMAL(5),
-visina DECIMAL(4,2),
-bmi INTEGER,
-krvniTlak VARCHAR(100),
-pulz NUMERIC(3),
-hb DECIMAL(3),
-ks DECIMAL(3,1),
-inr DECIMAL(3,1),
-aptc DECIMAL(3),
-trombociti DECIMAL(4),
-kreatinin DECIMAL(3),
-laktat NUMERIC(2,1),
-pbnp NUMERIC(3),
-pct NUMERIC(3,1),
-crp NUMERIC(3),
-na NUMERIC(3),
-k NUMERIC(2,1),
-drugiIzvidi VARCHAR(100),
-ekg VARCHAR(255),
-rtg VARCHAR(255),
-dgPridruzene VARCHAR(255),
-terPredhodna VARCHAR(255),
-asa INTEGER,
-mallampati INTEGER,
-alergija VARCHAR(100),
-izvidiInOpombe BLOB(2147483647),
-premedVecer VARCHAR(100),
-premedPredOp VARCHAR(100),
-navodila VARCHAR(255),
-sklep VARCHAR(255),
-status CHARACTER(15)
-    )";
+	
+    $sql = "ALTER TABLE $ime  ADD leto INTEGER "; // , mesec INTEGER, leto INTEGER
+
+
+	/*ALTER TABLE Customers
+
+  ADD last_name VARCHAR(50),
+      first_name VARCHAR(40);*/
+	
+	
 
     // use exec() because no results are returned
     $conn->exec($sql);

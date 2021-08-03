@@ -1,6 +1,5 @@
 
 <?php
-
 require_once '../skupne/database.php';
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze'])){
@@ -18,7 +17,17 @@ switch ($doBaze) {
 	}	
     break;
   case 'vyber':
-    new PreberiVpis;
+    $najdi = new PreberiVpis;
+	//var_dump ($najdi ->prebranoFunction());
+	//$najdeno = $najdi->prebranoFunction();
+	$prebrano = $najdi->prebranoFunction();
+	require_once '../skupne/prikazPolja.php';
+    require_once '../admin1/bolnikBaze/zapisPoId.php';
+	
+    break;
+  case 'prikazi':
+    $prikazi = new PreberiVpis;
+   // prikaže preiskavo pod id v formi;
     break;
   case 'aktualizuj':
    // code to be executed if n=label3;
@@ -51,7 +60,7 @@ Class Apregled {
 	  } 
 	  $this->nameTable = 'bolnikTbl';
 	  
-      $this->stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
+      $this->stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "dan", "mesec", "leto", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "laktat", "pbnp", "pct", "crp", "na", "k", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
 	  
 	}	
 	
@@ -168,45 +177,44 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 //-------------------------------------------konec SpremeniVpis---------------------------	
 
 Class PreberiVpis extends Apregled {
-		
+
 	public function __construct() {
 		    parent::__construct();
 			//echo 'v preberi vpis';
 			
-			
-	foreach ($this->stolpci as $stolpec) {
-	
-if (isset($_POST[$stolpec])) {
-	//echo $_POST[$stolpec];
-		$podminka[$stolpec] = ($_POST[$stolpec]);
- } else {
-	//echo $stolpec . ' ne obstaja';
-  }
+ if (!empty($_POST)) {	
+//var_dump($_POST);
+//echo '<script> alert("$_POST   ni prazen"); </script> ';	
+	foreach ($this->stolpci as $stolpec) {	
+       if (isset($_POST[$stolpec])) {
+	     //echo $_POST[$stolpec];
+		  $podminka[$stolpec] = ($_POST[$stolpec]);
+       } else {
+	  //echo $_POST[$stolpec] . " ne obstaja" ;
+     }
+   }//od foreach		
+ }//od if !empty
+	else  {
+	echo ' alert("$_POST   je prazen");  ';			
+   } 
+	$this->podminka = $podminka;	
+} //od construct
   
-
-}//od foreach		
-			
-			
-		//var_dump($podminka);	
-		//var_dump($_POST['data']);
+ function prebranoFunction() {
+//var_dump($podminka);	
+//var_dump($_POST['data']);
 	$this->stolpci = 	json_decode($_POST['data']);	
 	//var_dump($this->stolpci);
-	//$this->stolpci = array('datPregleda', 'imeZdravnika' );
-	$this->podminka = $podminka;
-	
-/*if (!empty($_POST)) {			
-    $podminka = $_POST;*/
-	
 	//$database = new database;
-//var_dump ($database);
-$prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
+   //var_dump ($database);
+   $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            echo '<br>';
-          //var_dump($prebrano);
-  require_once('../skupne/prikazPolja.php');		  
-			echo '<br>Število najdenih zapisov: '.count($prebrano);
-//    } //od if 
-  } //od construct
+          //var_dump($prebrano);		  
+			echo '<br>Število najdenih zapisov vnos: '.count($prebrano);			
+Return	$prebrano;		
+} 
+  
 } //od class PreberiVpis
 
-//-------------------------------------------konec PreberiVpis---------------------------		
+//-------------------------------------------konec PreberiVpis---------------------------	-------------------------------------------konec PreberiVpis---------------------------		
 ?>
