@@ -122,11 +122,11 @@
     <label for="k">K:</label>  
     <input class="lab"id="k" type="text" name="k" size="1" onfocusout=  "laborFunction(name,value)"><br>
 </div>
-<!--<div id="stolpec3">
-    Drugi izvidi<br>-->	
-	<label for="drugiIzvidi">Drugi izvidi</label> 
-    <textarea class="lab"id="drugiIzvidi"  rows="6" cols="50"  name="drugiIzvidi" ></textarea><br> 		
-<!--</div>-->
+<div id="stolpec3">
+  <!--  Drugi izvidi<br>	-->
+	<label for="drugiIzvidi"></label> 
+    <textarea class="lab"id="drugiIzvidi"  rows="7" cols="60"  name="drugiIzvidi" placeholder="Drugi izvidi" ></textarea><br> 		
+</div>
  </fieldset> 
  
     <legend></legend>

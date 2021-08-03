@@ -125,7 +125,7 @@ fieldset.meritve  input  {
 }
 
 fieldset.labor {
-  position: relative;
+
   padding: 20px 2px;  
   height: auto;  
 }
@@ -153,48 +153,24 @@ fieldset.labor input  {
   left: 250px;
   width:220px; 
 }
-/*#stolpec3  {
+#stolpec3  {
 	float: left;
-  
- max-width:90%; 
-   border: 2px solid #ccc;
-  border-radius: 4px;
+   /* position: absolute;*/
+  left: 250px;
+  max-width:400px; 
 }
-#stolpec3  label  {
-  width:1px;
-  display: inline-block;
-  text-align: right;   
-  padding: 1px 1px 1px 1px;
-}
-*/
-textarea.lab  label  {
-  width:auto;
-  display: inline-block;
-  text-align: left;
-}
-textarea.lab  {
-  max-width: 100%;
-  height: 80px;
 
-    padding: 4px 2px;
+fieldset.labor textarea {
+  width: 100%;
+  height: 120px;
+  float: left;
+  padding: 4px 2px;
   box-sizing: border-box;
- 
+  border: 2px solid #ccc;
+  border-radius: 4px;
   background-color: #f8f8f8;
   resize: none;
-}
-
-
-fieldset.ekg {
-  padding: 1px 2px;    
-}
-fieldset.ekg  label  {
-  width:50px;
-  display: inline-block;
-  text-align: right;
-}
-
-fieldset.ekg  input  {
-  width:90%;  
+  
 }
 
 
