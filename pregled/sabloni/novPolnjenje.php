@@ -125,7 +125,7 @@
 <div id="stolpec3">
   <!--  Drugi izvidi<br>	-->
 	<label for="drugiIzvidi"></label> 
-    <textarea class="lab"id="drugiIzvidi"  rows="7" cols="60"  name="drugiIzvidi" placeholder="Drugi izvidi" ></textarea><br> 		
+    <textarea class="lab"id="drugiIzvidi"  rows="7" cols="30"  name="drugiIzvidi" placeholder="Drugi izvidi" ></textarea><br> 		
 </div>
  </fieldset> 
  
