@@ -151,7 +151,7 @@ var text = "Lab.: ";
 var i;
 var videz;
 var lab = document.getElementById("lab").getElementsByTagName("label");
-var vred =document.getElementById("lab").getElementsByTagName("input"); 
+var vred =document.getElementById("lab").getElementsByClassName("lab"); 
 for (i = 0; i < lab.length; i++) 
 {  
 if (vred[i].value.length > 0 && vred[i].value!=0)

@@ -95,36 +95,36 @@
  <fieldset id="lab">
 <div id="stolpec1">
     <label for="hb">Hb:</label>  
-    <input id="hb" type="text" name="hb" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab"id="hb" type="text" name="hb" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="ks">KS:</label>  
-    <input id="ks"type="text" name="ks" size="1" onfocusout=  "laborFunction(name,value)"> <br>
+    <input class="lab"id="ks"type="text" name="ks" size="1" onfocusout=  "laborFunction(name,value)"> <br>
     <label for="inr">INR:</label>  
-    <input id="inr" type="text" name="inr" size="1" onfocusout=  "laborFunction(name,value)"><br> 
+    <input class="lab"id="inr" type="text" name="inr" size="1" onfocusout=  "laborFunction(name,value)"><br> 
     <label for="aptc">APTČ:</label>  
-    <input id="aptc" type="text" name="aptc" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab"id="aptc" type="text" name="aptc" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="trombociti">Trombociti:</label>  
-    <input id="trombociti" type="text" name="trombociti" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab"id="trombociti" type="text" name="trombociti" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="kreatinin">Kreatinin:</label>  
-    <input id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
+    <input class="lab"id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
    
 </div>
 <div id="stolpec2">
     <label for="laktat">laktat:</label>  
-    <input id="laktat" type="text" name="laktat" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab"id="laktat" type="text" name="laktat" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="pbnp">P-BNP:</label>  
-    <input id="pbnp" type="text" name="pbnp" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab"id="pbnp" type="text" name="pbnp" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="pct">PCT:</label>  
-    <input id="pct" type="text" name="pct" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab"id="pct" type="text" name="pct" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="crp">CRP:</label>  
-    <input id="crp" type="text" name="crp" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab"id="crp" type="text" name="crp" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="na">Na:</label>  
-    <input id="na" type="text" name="na" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab"id="na" type="text" name="na" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="k">K:</label>  
-    <input id="k" type="text" name="k" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab"id="k" type="text" name="k" size="1" onfocusout=  "laborFunction(name,value)"><br>
 </div>
 <div id="stolpec3">
     Drugi izvidi<br>
-  <label for="x1"></label>  
+<!--  <label for="x1"></label>  
     <input id="x1" type="text" name="x1" size="1" onkeyup= "drugiIzvidiFunction()" tabindex="-1"><br>
    <label for="x2"></label>  
     <input id="x2" type="text" name="x2" size="1"onkeyup= "drugiIzvidiFunction()"  tabindex="-1"><br>
@@ -133,8 +133,11 @@
    <label for="x4"></label>  
     <input id="x4" type="text" name="x4" size="1" onkeyup= "drugiIzvidiFunction()"tabindex="-1"><br>
    <label for="x5"></label>  
-    <input id="x5" type="text" name="x5" size="1" onkeyup= "drugiIzvidiFunction()"tabindex="-1"><br>
-	<input id="drugiIzvidi" type="hidden" name="drugiIzvidi" readonly>
+    <input id="x5" type="text" name="x5" size="1" onkeyup= "drugiIzvidiFunction()"tabindex="-1"><br>-->
+	
+	<label for="drugiIzvidi"></label> 
+    <textarea class="lab"id="drugiIzvidi" class="mala" rows="7" cols="70"  name="drugiIzvidi" ></textarea><br> 
+	<!--<input id="drugiIzvidi" type="hidden" name="drugiIzvidi" readonly>-->
 	
 	
 	
