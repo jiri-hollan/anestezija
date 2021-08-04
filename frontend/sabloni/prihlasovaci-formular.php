@@ -5,11 +5,8 @@
 
 <button onclick="schovej('id02')" style="width:auto;">Prijava</button>
 
-
+<!-- ---------------------------------Registracija------------------------------------------------------- --> 
 <div id="id01" class="modal">
-
-<!-- ---------------------------------Registracija-------------------- 
---------------------------------------------------------------------- -->  
   <form class="modal-content animate" autocomplete="off" action="<?php echo $_SERVER['PHP_SELF'] . '?r=singin'?>" method="post">
     <div class="container">
       <h1>Registracija</h1>
