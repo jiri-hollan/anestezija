@@ -8,8 +8,16 @@
 	 <!-- Funkcija novBolnikFunction shrani formu u bazo in skoči na vpis novega bolnika -->
 	<!-- <span class="navSpan" id="novB" onclick="novBolnikFunction() ">Nov bolnik</span>-->
      <span class="navSpan" id="novB" onclick="novBolnikFunction(1);">Nov bolnik</span>
+	 <div class="dropdown">
+        <button class="dropbtn">najdi</button>
+          <div class="dropdown-content">
+          <p onclick="alert('koda še ni napisana');">pokaži</p>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+       </div>
+     </div>
 	<!--<span class="navSpan" id="najdiZapis" onclick="../../../bolnikBaze/vybere.php;">najdi</span> -->	
-	<span class="navSpan" id="najdiZapis" onclick="alert('koda še ni napisana');">najdi</span>	
+	<!-- <span class="navSpan" id="najdiZapis" onclick="alert('koda še ni napisana');">najdi</span>	-->
      <span class="navSpan" id="nazaj" onclick="nazajFunction()">nazaj</span>
      <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>
      <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span> 
