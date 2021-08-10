@@ -12,7 +12,7 @@
         <button class="dropbtn">najdi</button>
           <div class="dropdown-content">
           <p onclick="alert('koda še ni napisana');">pokaži</p>
-          <a href="#">Link 2</a>
+          <a href="../admin1/bolnikBaze/vybere.php">baze</a>
           <a href="#">Link 3</a>
        </div>
      </div>
