@@ -49,6 +49,6 @@
 <li><a href="../pregled/novPolnjenje.php">polnjenje Nov bolnik</a></li>
 <li><a href="../pregled/zdravnik.php">vnos zdravnika</a></li>
 <li><a href="navodila/kreateTableBolnikTbl.php">naredi tabelo: bolnikTbl</a></li>
-<li><a href="bolnikBaze/vybere.php">Prikaže preglede glede na matično številko</a></li>
+<li><a href="../pregled/bolnikBaze/vybere.php">Prikaže preglede glede na matično številko</a></li>
 </body>
 </html>
