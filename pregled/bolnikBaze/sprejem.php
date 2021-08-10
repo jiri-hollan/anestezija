@@ -3,7 +3,7 @@
 
 <html>
 <body>
-<div id="result" >to je rezult</div>
+<!--<div id="result" >to je rezult</div>-->
 <p>
 <p>
 <?php
@@ -12,7 +12,7 @@ require_once '../../skupne/database.php';
 $conn = new Database();
 //var_dump($_GET);
 $id = $_GET["id"];
-echo '<p>sprejeto: '.$id.'</p>';
+//echo '<p>sprejeto: '.$id.'</p>';
 $nameTable = "bolnikTbl";
 $stolpci = array('*');
 $podminka = array("pregledId"=>$id);
@@ -33,9 +33,9 @@ $GLOBALS['testJSON'] = $iskaniPregled;
   //alert(stringJson);
   sessionStorage.setItem("testJSON", stringJson);
  
-  document.getElementById("result").innerHTML = sessionStorage.getItem("testJSON");
+ // document.getElementById("result").innerHTML = sessionStorage.getItem("testJSON");
   //alert(sessionStorage.getItem("testJSON"));  
-
+  window.location.href = "../bolnik.php"; 
   
   </script>
   </body>
