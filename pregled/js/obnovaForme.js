@@ -44,7 +44,7 @@ function formNazajFunction(person1) {
 	if (sessionStorage.getItem("testJSON")!=null){
 	 let text = sessionStorage.getItem("testJSON");
      let obj = JSON.parse(text);
-alert (text);
+//alert (text);
 //alert (obj.ime);
 	
 //var kljuc;	
