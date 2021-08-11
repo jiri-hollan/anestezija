@@ -14,13 +14,14 @@ const poljeJSON = JSON.stringify(poljeJS);
 document.getElementById("data").value = poljeJSON;
 }
 </script>
-
+<div id="kontejner">
 <form action="../../pregled/vnosVrstice.php" method="post">
 <input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
-<input   type="number" name="stevMaticna" required >matična stevilka</input>
+<label for "stevMaticna">matična stevilka</label>
+<input   type="number" name="stevMaticna" required ></input>
 <input   type="hidden" name="doBaze" value="vyber" readonly ></input>
 <input   type="submit" ></input>
 </form>
-
+</div>
 </body>
 </html>
