@@ -85,7 +85,9 @@ foreach ($this->stolpci as $stolpec) {
 	
 if (isset($_POST[$stolpec])) {
 	//echo $_POST[$stolpec];
-		$data[$stolpec] = ($_POST[$stolpec]);
+		$data[$stolpec] = trim($_POST[$stolpec]);
+		$data[$stolpec] = stripslashes($data[$stolpec]); 
+		$data[$stolpec] = htmlspecialchars($data[$stolpec]);
  } else {
 	echo $stolpec . ' ne obstaja';
   }
@@ -110,12 +112,12 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
     echo '</script>';	
 	return;		
 	//header('Location: bolnik.php');		
-function test_input($data) {
+/*function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
-}
+}*/
 
 } //od if 
 
