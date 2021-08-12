@@ -45,7 +45,7 @@ function formNazajFunction(person1) {
 	 let text = sessionStorage.getItem("testJSON");
      let obj = JSON.parse(text);
 //alert (text);
-//alert (obj.ime);
+//alert (obj.izvidiInOpombe);
 	
 //var kljuc;	
 var inputs = document.getElementById("frm").elements;
