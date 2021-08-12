@@ -19,10 +19,11 @@ echo '
           <a href="bolnikBaze/vybere.php">baze</a>
           <!--<a href="#">Link 3</a>-->
        </div>
-     </div>';
+     ';
 } 
   }
 ?> 
+</div>
 	<!--<span class="navSpan" id="najdiZapis" onclick="../../../bolnikBaze/vybere.php;">najdi</span> -->	
 	<!-- <span class="navSpan" id="najdiZapis" onclick="alert('koda še ni napisana');">najdi</span>	-->
      <span class="navSpan" id="nazaj" onclick="nazajFunction()">nazaj</span>
