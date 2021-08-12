@@ -8,10 +8,11 @@
 	 <!-- Funkcija novBolnikFunction shrani formu u bazo in skoči na vpis novega bolnika -->
 	<!-- <span class="navSpan" id="novB" onclick="novBolnikFunction() ">Nov bolnik</span>-->
      <span class="navSpan" id="novB" onclick="novBolnikFunction(1);">Nov bolnik</span>
+	 <div id="najdiZapis"class="dropdown">
 <?php
   if (isset($_SESSION["pristop"]))  {
 if ($_SESSION["pristop"]==3) {	 
-echo '<div id="najdiZapis"class="dropdown">
+echo '
         <button class="dropbtn">najdi</button>
           <div class="dropdown-content">
           <!--<a href="#">Link 1</a>-->
