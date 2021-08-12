@@ -5,7 +5,7 @@ Class Prihlaseni {
 	public $conn;
 	public $zaklad;
 	public $status;
-	
+	public $pristop;
 	public function __construct() {
 	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();

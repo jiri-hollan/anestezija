@@ -5,7 +5,7 @@ Class PoberZapis{
 	public $conn;
 	public $zaklad;
 	public $status;
-	
+	public $pristop;
 	
 	public function __construct($id) {
  $this->id = $id;

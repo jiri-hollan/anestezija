@@ -101,8 +101,9 @@ Class Prijava extends Prihlaseni {
 	
 		
 		if (count($uporabnikiTbl2) == 1)	{
-			$status=$uporabnikiTbl2[0]['status'];
+			$status=$uporabnikiTbl2[0]['status'];			
 		// echo $status;
+		    $pristop=$uporabnikiTbl2[0]['pristop'];
 			$this->prihlaseniUspesne($status);
 		} else {
 			//echo 'iz funkcije overUdaje';

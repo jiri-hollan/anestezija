@@ -247,6 +247,7 @@ switch (a) {
     novBolnikFunction(0);	
     break;
   case "s": //naloži v bazo
+    danesFunction();
     novBolnikFunction(0);
     break;
  case "p": //predogled
