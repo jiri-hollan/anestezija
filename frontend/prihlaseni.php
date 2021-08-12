@@ -7,6 +7,7 @@ Class Prihlaseni {
 	public $conn;
 	public $zaklad;
 	public $status;
+	public $pristop;
 	
 	public function __construct() {
 	  $this->conn = new Database();
@@ -65,10 +66,11 @@ Class Prijava extends Prihlaseni {
 	//od function inicializuj		
 	}
 	
-	public function prihlaseniUspesne($status, $uname){
+	public function prihlaseniUspesne($status, $pristop, $uname){
 	   $_SESSION['blog_prihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
 	   $_SESSION["status"] = $status;
+	   $_SESSION["pristop"] = $pristop;
 	   $_SESSION["uname"] = $uname;
 	  //echo $status;
 	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
@@ -87,7 +89,7 @@ Class Prijava extends Prihlaseni {
 	public function overUdaje() {
 		if (!empty($_POST['uname']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
-			$uporabnikiTbl2 = $this->conn->vyber('uporabnikiTbl2', array('status', 'uname'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
+			$uporabnikiTbl2 = $this->conn->vyber('uporabnikiTbl2', array('status', 'pristop', 'uname'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
          //echo $uporabnikiTbl2[0]['status'];
 		 //$status=$uporabnikiTbl2[0]['status'];
 		// echo $status;
@@ -97,10 +99,12 @@ Class Prijava extends Prihlaseni {
 		if (count($uporabnikiTbl2) == 1)	{
 			$status=$uporabnikiTbl2[0]['status'];			
 			//echo $status;
+			$pristop=$uporabnikiTbl2[0]['pristop'];			
+			//echo $pristop;			
 			$uname=$uporabnikiTbl2[0]['uname'];
 			echo $uname;
 		// echo $status;
-			$this->prihlaseniUspesne($status, $uname);
+			$this->prihlaseniUspesne($status, $pristop,  $uname);
 		} else {
 			//echo 'iz funkcije overUdaje';
 			return $this->prihlaseniSelhalo();
@@ -125,6 +129,7 @@ Class Registrace extends Prihlaseni {
 $registracija=true;
 $email=$geslo=$ime=$priimek=$uname=0;
 $status = 0;
+$pristop = 0;
 $nameTable = "uporabnikiTbl2";
 
 	
@@ -167,6 +172,7 @@ if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
 	$data['geslo'] = md5($geslo);
   }
     $data['status'] = $status;
+	$data['pristop'] = $pristop;
   //echo '<br>status: ' .$status;
   //echo'<br>data: '. $data["status"].'<br>';
 }

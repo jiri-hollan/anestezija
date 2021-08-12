@@ -48,7 +48,7 @@ Class Apregled {
 	public $conn;
 	public $zaklad;
 	public $status;
-	
+	public $pristop;
 	
 	public function __construct() {
 	  $this->conn = new Database();
