@@ -1,7 +1,8 @@
-
 <doctyp! html>
-
-<html>
+<html lang="cs-SI">
+<head>
+<meta charset="utf-8">
+</head>
 <body>
 <!--<div id="result" >to je rezult</div>-->
 <p>
