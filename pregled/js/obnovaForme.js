@@ -48,9 +48,10 @@ function formNazajFunction(person1) {
 //alert (text);	
 
 text = text.replace(/\n/g, "\\n")
+               .replace(/\&quot;/g,'\\"')
+               .replace(/\&amp;/g, "&")
                .replace(/\'/g, "\\'")
                .replace(/\\"/g, '\\"')
-               .replace(/\&/g, "\\&")
                .replace(/\r/g, "\\r")
                .replace(/\t/g, "\\t")
                .replace(/\\b/g, "\\b")
