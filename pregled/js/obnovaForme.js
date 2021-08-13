@@ -47,14 +47,14 @@ function formNazajFunction(person1) {
 	 let text = sessionStorage.getItem("testJSON");
 //alert (text);	
 
-text = text.replace(/\\n/g, "\\n")  
-               .replace(/\\'/g, "\\'")
+text = text.replace(/\n/g, "\\n")
+               .replace(/\'/g, "\\'")
                .replace(/\\"/g, '\\"')
-               .replace(/\\&/g, "\\&")
-               .replace(/\\r/g, "\\r")
-               .replace(/\\t/g, "\\t")
+               .replace(/\&/g, "\\&")
+               .replace(/\r/g, "\\r")
+               .replace(/\t/g, "\\t")
                .replace(/\\b/g, "\\b")
-               .replace(/\\f/g, "\\f");
+               .replace(/\f/g, "\\f");
 // remove non-printable and other non-valid JSON chars
 text = text.replace(/[\u0000-\u0019]+/g,""); 
 
