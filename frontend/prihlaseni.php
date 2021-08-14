@@ -38,6 +38,10 @@ Class odjava extends Prihlaseni {
 		
 		 public function odhlasi() {
 			//echo 'Odhlasi';
+		echo'<script>
+	sessionStorage.removeItem("testJSON");	
+	sessionStorage.removeItem("bolnikId"); 
+	</script>';	
 		 session_unset();
 		 session_destroy();
             echo 'Odjavljen';

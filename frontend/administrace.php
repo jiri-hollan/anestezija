@@ -32,6 +32,11 @@ class Administrace {
 	  if (empty($prihlasen)) {
 		  session_unset();
 		  session_destroy();
+	echo'<script>
+	sessionStorage.removeItem("testJSON");	
+	sessionStorage.removeItem("bolnikId"); 
+	</script>';	  
+		  
 		  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');
 		   
 	// header('Location: localhost/anestiz/frontend/prihlaseni.php?stav=odhlasit');
