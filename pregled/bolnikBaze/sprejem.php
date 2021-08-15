@@ -1,13 +1,9 @@
-<doctyp! html>
-<html lang="cs-SI">
-<head>
-<meta charset="utf-8">
-</head>
-<body>
-<!--<div id="result" >to je rezult</div>-->
-<p>
-<p>
 <?php
+require_once 'sabloni/zahlavi.php';
+/*<!--<div id="result" >to je rezult</div>
+<p>
+<p>-->*/
+
 //session_start();
 require_once '../../skupne/database.php';
 $conn = new Database();
@@ -39,5 +35,6 @@ $GLOBALS['testJSON'] = $iskaniPregled;
   window.location.href = "../bolnik.php"; 
   
   </script>
-  </body>
-  </html>
+ <?php 
+ require_once 'sabloni/zapati.php';
+ ?>

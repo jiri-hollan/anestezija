@@ -1,3 +1,6 @@
+<?php
+require_once 'sabloni/zahlavi.php';
+/*
 <!DOCTYPE html>
 <html  lang="sl-SI">
 <head>
@@ -6,6 +9,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/baze.css?<?php echo time(); ?>">
 </head>
+*/
+?>
  <body onload="stolpciFuncton()">
 <script>
 function stolpciFuncton() {
@@ -29,6 +34,5 @@ echo '
 </div>
 ';
 }
+ require_once 'sabloni/zapati.php';
 ?>
-</body>
-</html>

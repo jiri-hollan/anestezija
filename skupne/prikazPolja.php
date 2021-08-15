@@ -1,5 +1,5 @@
 <?php
-echo "<table id='mojaTabela' style='border: solid 1px black;'>";
+echo "<table id='vrsticeTabela' style='border: solid 1px black;'>";
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
         parent::__construct($it, self::LEAVES_ONLY);
@@ -24,7 +24,7 @@ $stmt = $prebrano;
 echo '
 <script>
 
-document.getElementById("mojaTabela").addEventListener("click", functionRow);
+document.getElementById("vrsticeTabela").addEventListener("click", functionRow);
 function functionRow (e) {
 if (e.path[1]!=undefined) {	
 var x = e.path[1];
