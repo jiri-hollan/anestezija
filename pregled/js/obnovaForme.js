@@ -4,7 +4,7 @@ function formFunction() {
 //const person1 = {};	
 var inputs = document.getElementById("frm").elements;
 //var jString = "";
-console.log($("#frm").serialize());
+//console.log($("#frm").serialize());
 // Iterate over the form controls
 for (i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" ||inputs[i].nodeName === "TEXTAREA") {
