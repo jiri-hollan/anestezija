@@ -4,7 +4,7 @@ function formFunction() {
 //const person1 = {};	
 var inputs = document.getElementById("frm").elements;
 //var jString = "";
-
+console.log($("#frm").serialize());
 // Iterate over the form controls
 for (i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" ||inputs[i].nodeName === "TEXTAREA") {
@@ -47,7 +47,7 @@ function formNazajFunction(person1) {
 	 let text = sessionStorage.getItem("testJSON");
 //alert (text);	
 
-text = text.replace(/\n/g, "\\n")
+/*text = text.replace(/\n/g, "\\n")
                .replace(/\&quot;/g,'\\"')
                .replace(/\&amp;/g, "&")
                .replace(/\'/g, "\\'")
@@ -57,8 +57,7 @@ text = text.replace(/\n/g, "\\n")
                .replace(/\\b/g, "\\b")
                .replace(/\f/g, "\\f");
 // remove non-printable and other non-valid JSON chars
-text = text.replace(/[\u0000-\u0019]+/g,""); 
-
+text = text.replace(/[\u0000-\u0019]+/g,""); */
 
      let obj = JSON.parse(text);
 
@@ -70,8 +69,9 @@ for (i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" ||inputs[i].nodeName === "TEXTAREA") {
 	 var kljuc=inputs[i].name;
  //alert (kljuc); 	 
-
-     document.getElementsByName(kljuc)[0].value = obj[kljuc]; //person1[kljuc];
+	 if (obj[kljuc] !== undefined) {
+		document.getElementsByName(kljuc)[0].value = obj[kljuc].replace(/\&quot;/g,'\\"').replace(/\&amp;/g, "&"); //person1[kljuc]; 
+	 }
 //alert(kljuc + ": " +person1[kljuc]);
 
 } // od if

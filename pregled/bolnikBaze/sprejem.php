@@ -18,15 +18,17 @@ $prebrano = $conn->vyber($nameTable, $stolpci, $podminka);
 // tu treba odstraniti pregledId
 unset($prebrano[0]['pregledId']);
 $iskaniPregled = json_encode($prebrano[0]);
-
-
 //$_SESSION["testJSON"] = $iskaniPregled;
 $GLOBALS['testJSON'] = $iskaniPregled;
+
 ?>
 
 
 <script>
-  stringJson='<?php echo $GLOBALS['testJSON'];?>';
+  console.log('test1');
+  
+  stringJson=JSON.stringify(<?php echo $GLOBALS['testJSON']; ?>);
+  console.log('test1');
   //alert(stringJson);
   sessionStorage.setItem("testJSON", stringJson);
  
