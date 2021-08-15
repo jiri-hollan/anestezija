@@ -14,6 +14,10 @@ const poljeJSON = JSON.stringify(poljeJS);
 document.getElementById("data").value = poljeJSON;
 }
 </script>
+<?php 
+session_start();
+if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
+echo '
 <div id="kontejner">
 <form action="../../pregled/vnosVrstice.php" method="post">
 <input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
@@ -23,5 +27,8 @@ document.getElementById("data").value = poljeJSON;
 <input   type="submit" ></input>
 </form>
 </div>
+';
+}
+?>
 </body>
 </html>
