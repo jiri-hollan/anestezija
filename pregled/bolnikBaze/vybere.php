@@ -24,7 +24,7 @@ session_start();
 if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '
 <div id="kontejner">
-<form action="../../pregled/vnosVrstice.php" method="post">
+<form action="../../pregled/vnosVrstice.php" method="post" autocomplete="off">
 <input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
 <label for "stevMaticna">matična stevilka</label>
 <input   type="number" name="stevMaticna" required ></input>
