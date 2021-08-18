@@ -52,8 +52,12 @@ switch ($doBaze) {
   case 'prikazi':
 
     $prikazi = new PreberiVpis($nameTable, $stolpci, $pogoj);
-	$prikazi-> prebranoFunction();
+	$prebrano = $prikazi-> prebranoFunction();
    // prikaže preiskavo pod id v formi;
+	require_once 'prikazPoljaAdmin.php';
+   // require_once 'bolnikBaze/zapisPoId.php';
+   
+   
     break;
   case 'aktualizuj':
    // code to be executed if $doBaze==aktualizuj;
@@ -88,7 +92,7 @@ Class Administrace {
 	  	  	 // var_dump($nameTable);
 	 $this->nameTable = $nameTable;	  
     // $this->stolpci = $_POST['stolpci']; 
-	 $this->stolpci = 	json_decode($_POST['stolpci']);
+	 //$this->stolpci = 	json_decode($_POST['stolpci']);
 	}// od 	function __construct
 	
 }//od class Administrace
@@ -152,8 +156,12 @@ Class PreberiVpis extends Administrace {
 	public function __construct($nameTable, $stolpci, $pogoj) {
 		    parent::__construct($nameTable);
 			//echo 'v preberi vpis';
-	//var_dump($nameTable);		
- if (!empty($_POST) && $stolpci!="*") {	
+	//var_dump($nameTable);	
+	$podminka = "";
+	$this->stolpci=$stolpci;
+	
+ if (!empty($_POST)) {	
+ //if (!empty($_POST) && $stolpci!="*") {	
 var_dump($_POST['stolpci']);
 //echo '<script> alert("$_POST   ni prazen"); </script> ';	
 	foreach ($this->stolpci as $stolpec) {	
@@ -164,12 +172,12 @@ var_dump($_POST['stolpci']);
 	  //echo $_POST[$stolpec] . " ne obstaja" ;
      }
    }//od foreach
-   	$this->stolpci = 	json_decode($_POST['stolpci']);
-	var_dump($this->stolpci);
+   //	$this->stolpci = 	json_decode($_POST['stolpci']);
+	//var_dump($this->stolpci);
    	$this->podminka = $podminka;
  }//od if !empty
 	else  {
-	$this->stolpci = $stolpci;
+	//$this->stolpci = $stolpci;
 	//$this->stolpci = array('*');	
 	$this->podminka = "";	
 	//echo ' alert("$_POST ali $this_stolpci  je prazen");  ';			
