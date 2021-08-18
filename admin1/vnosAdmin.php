@@ -10,15 +10,15 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	}
 	
 
-		if (isset($_POST['pogoj'])){
+/*		if (isset($_POST['pogoj'])){
 		$pogoj  = $_POST['pogoj'];
 	} else {
 		$pogoj  = "";
 	}
-
+*/
 	if (isset($_POST['stolpci'])){
 	 	$stolpci = 	json_decode($_POST['stolpci']);
-		var_dump($stolpci);
+		//var_dump($stolpci);
 		//echo $stolpci;
 	} else {
 		$stolpci  = "";
@@ -51,7 +51,7 @@ switch ($doBaze) {
     break;
   case 'prikazi':
 
-    $prikazi = new PreberiVpis($nameTable, $stolpci, $pogoj);
+    $prikazi = new PreberiVpis($nameTable, $stolpci);
 	$prebrano = $prikazi-> prebranoFunction();
    // prikaže preiskavo pod id v formi;
 	require_once 'prikazPoljaAdmin.php';
@@ -153,32 +153,38 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 
 Class PreberiVpis extends Administrace {
 
-	public function __construct($nameTable, $stolpci, $pogoj) {
+	public function __construct($nameTable, $stolpci) {
 		    parent::__construct($nameTable);
 			//echo 'v preberi vpis';
-	//var_dump($nameTable);	
+	//var_dump($nameTable);
+	$vidno = array('*');
 	$podminka = "";
 	$this->stolpci=$stolpci;
+	//var_dump($this->stolpci);	
+	$this->vidno=$vidno;
+	//var_dump($this->vidno);
 	
- if (!empty($_POST)) {	
+	
+ if (!empty($_POST)&& $this->stolpci!="") {	
  //if (!empty($_POST) && $stolpci!="*") {	
-var_dump($_POST['stolpci']);
+//var_dump($this->stolpci);
 //echo '<script> alert("$_POST   ni prazen"); </script> ';	
 	foreach ($this->stolpci as $stolpec) {	
+	var_dump($stolpec);
+	//var_dump($_POST[$stolpec]);
        if (isset($_POST[$stolpec])) {
-	     //echo $_POST[$stolpec];
+	     echo $_POST[$stolpec];
 		  $podminka[$stolpec] = ($_POST[$stolpec]);
+		 var_dump($podminka[$stolpec]);
        } else {
 	  //echo $_POST[$stolpec] . " ne obstaja" ;
      }
    }//od foreach
-   //	$this->stolpci = 	json_decode($_POST['stolpci']);
 	//var_dump($this->stolpci);
    	$this->podminka = $podminka;
  }//od if !empty
 	else  {
-	//$this->stolpci = $stolpci;
-	//$this->stolpci = array('*');	
+	
 	$this->podminka = "";	
 	//echo ' alert("$_POST ali $this_stolpci  je prazen");  ';			
    } 
@@ -188,10 +194,8 @@ var_dump($_POST['stolpci']);
  function prebranoFunction() {
 //var_dump($podminka);	
 //var_dump($_POST['stolpci']);
-	//var_dump($this->stolpci);
-	//$database = new database;
-   //var_dump ($database);
-   $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
+//var_dump($this->stolpci);
+   $prebrano = $this->conn->vyber($this->nameTable, $this->vidno, $this->podminka);
            echo '<br>';
           //var_dump($prebrano);		  
 			echo '<br>Število najdenih zapisov vnos: '.count($prebrano);			
@@ -200,5 +204,5 @@ Return	$prebrano;
   
 } //od class PreberiVpis
 
-//-------------------------------------------konec PreberiVpis---------------------------	-------------------------------------------konec PreberiVpis---------------------------		
+//-------------------------------------------konec PreberiVpis---------------------------		
 ?>
