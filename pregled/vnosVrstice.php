@@ -204,8 +204,8 @@ Class PreberiVpis extends Apregled {
   
  function prebranoFunction() {
 //var_dump($podminka);	
-//var_dump($_POST['data']);
-	$this->stolpci = 	json_decode($_POST['data']);	
+//var_dump($_POST['stolpci']);
+	$this->stolpci = 	json_decode($_POST['stolpci']);	
 	//var_dump($this->stolpci);
 	//$database = new database;
    //var_dump ($database);

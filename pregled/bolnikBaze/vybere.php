@@ -16,7 +16,7 @@ require_once 'sabloni/zahlavi.php';
 function stolpciFuncton() {
 const poljeJS = ["pregledId", "datPregleda", "imeZdravnika"];
 const poljeJSON = JSON.stringify(poljeJS);
-document.getElementById("data").value = poljeJSON;
+document.getElementById("stolpci").value = poljeJSON;
 }
 </script>
 <?php 
@@ -25,7 +25,7 @@ if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '
 <div id="kontejner">
 <form action="../../pregled/vnosVrstice.php" method="post" autocomplete="off">
-<input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
+<input id="stolpci" type="hidden" name="stolpci" value="" style="width:90%;"></input><br>
 <label for "stevMaticna">matična stevilka</label>
 <input   type="number" name="stevMaticna" required ></input>
 <input   type="hidden" name="doBaze" value="vyber" readonly ></input>
