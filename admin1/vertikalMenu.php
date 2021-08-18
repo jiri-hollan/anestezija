@@ -41,6 +41,7 @@
 <ul id="linky3">
 <li><a href="navodila/kreateTableUporabniki.php">naredi tabelo: uporabnikiTbl</a></li>
 <li><a href="navodila/kreateTableUporabniki2.php">naredi tabelo: uporabnikiTbl2</a></li>
+<li><a href="prikaziDatoteko.php">pokaži Uporabnike</a></li>
 
 <h1>Menu pregled</h1>
 <ul id="linky2">

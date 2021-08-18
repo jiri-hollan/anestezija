@@ -17,12 +17,12 @@ document.getElementById("stolpci").value = poljeJSON;
 
 
 
-<h2>PHP Form Validation Example</h2>
+<h2>Prikaz tabele uporabnikiTbl2</h2>
 <form method="post" action="vnosAdmin.php"> 
-<input id="stolpci" type="text" name="stolpci" value="*" readonly>
+<input id="stolpci" type="hidden" name="stolpci" value="*" readonly>
 <input type="hidden" name="doBaze" value="prikazi">
-<input id="id"  type="number" name="id"  ></input>
-  Name: <input type="text" name="nameTable">
+<input id="id"  type="hidden" name="id"  ></input>
+  Tabela: <input type="text" name="nameTable" value="uporabnikiTbl2">
   <br><br>
  
   <br><br>
