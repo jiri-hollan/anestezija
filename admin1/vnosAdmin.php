@@ -16,7 +16,13 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
 		$pogoj  = "";
 	}
 
-
+	if (isset($_POST['stolpci'])){
+	 	$stolpci = 	json_decode($_POST['stolpci']);
+		var_dump($stolpci);
+		//echo $stolpci;
+	} else {
+		$stolpci  = "";
+	}
 
 
 //............................................................	
@@ -45,7 +51,7 @@ switch ($doBaze) {
     break;
   case 'prikazi':
 
-    $prikazi = new PreberiVpis($nameTable, $pogoj);
+    $prikazi = new PreberiVpis($nameTable, $stolpci, $pogoj);
 	$prikazi-> prebranoFunction();
    // prikaže preiskavo pod id v formi;
     break;
@@ -80,10 +86,9 @@ Class Administrace {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  } 
 	  	  	 // var_dump($nameTable);
-	 $this->nameTable = $nameTable;
-	  
-    //  $this->stolpci = //array(); 
-	  
+	 $this->nameTable = $nameTable;	  
+    // $this->stolpci = $_POST['stolpci']; 
+	 $this->stolpci = 	json_decode($_POST['stolpci']);
 	}// od 	function __construct
 	
 }//od class Administrace
@@ -144,12 +149,12 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 
 Class PreberiVpis extends Administrace {
 
-	public function __construct($nameTable, $pogoj) {
+	public function __construct($nameTable, $stolpci, $pogoj) {
 		    parent::__construct($nameTable);
 			//echo 'v preberi vpis';
 	//var_dump($nameTable);		
- if (!empty($_POST) && isset($this->stolpci)) {	
-//var_dump($_POST);
+ if (!empty($_POST) && $stolpci!="*") {	
+var_dump($_POST['stolpci']);
 //echo '<script> alert("$_POST   ni prazen"); </script> ';	
 	foreach ($this->stolpci as $stolpec) {	
        if (isset($_POST[$stolpec])) {
@@ -159,20 +164,22 @@ Class PreberiVpis extends Administrace {
 	  //echo $_POST[$stolpec] . " ne obstaja" ;
      }
    }//od foreach
+   	$this->stolpci = 	json_decode($_POST['stolpci']);
+	var_dump($this->stolpci);
    	$this->podminka = $podminka;
  }//od if !empty
 	else  {
-	//$this->podminka = "";	
-	echo ' alert("$_POST ali $this_stolpci  je prazen");  ';			
+	$this->stolpci = $stolpci;
+	//$this->stolpci = array('*');	
+	$this->podminka = "";	
+	//echo ' alert("$_POST ali $this_stolpci  je prazen");  ';			
    } 
-	$this->podminka = $podminka;	
+
 } //od construct
   
  function prebranoFunction() {
 //var_dump($podminka);	
 //var_dump($_POST['stolpci']);
-	$this->stolpci = 	json_decode($_POST['stolpci']);
-	//$this->stolpci = array('*');
 	//var_dump($this->stolpci);
 	//$database = new database;
    //var_dump ($database);

@@ -199,7 +199,8 @@ Class PreberiVpis extends Apregled {
 	else  {
 	echo ' alert("$_POST   je prazen");  ';			
    } 
-	$this->podminka = $podminka;	
+	$this->podminka = $podminka;
+var_dump($podminka);	
 } //od construct
   
  function prebranoFunction() {

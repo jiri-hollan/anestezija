@@ -4,16 +4,24 @@
 <meta charset="UTF-8">
 <title></title>
 </head>
-<body>
 
+<body onload="stolpciFuncton()">
+<script>
+function stolpciFuncton() {
+const poljeJS = ["*"];
+const poljeJSON = JSON.stringify(poljeJS);
+document.getElementById("stolpci").value = poljeJSON;
+}
+</script>
 <p>vnesi ime tabele and click OK:</p>
 
 
 
 <h2>PHP Form Validation Example</h2>
 <form method="post" action="vnosAdmin.php"> 
-<input type="text" name="stolpci" value="*" readonly>
+<input id="stolpci" type="text" name="stolpci" value="*" readonly>
 <input type="hidden" name="doBaze" value="prikazi">
+<input id="id"  type="number" name="id"  ></input>
   Name: <input type="text" name="nameTable">
   <br><br>
  
