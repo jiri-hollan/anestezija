@@ -29,12 +29,5 @@ document.getElementById("stolpci").value = poljeJSON;
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
-
-<?php
-$nameTable = "uporabnikiTbl2";
-$stolpci = array("id", "email", "uname", "geslo", "ime", "priimek", "status", "pristop");
-require_once('vnosAdmin.php');
-?>
-
 </body>
 </html>
