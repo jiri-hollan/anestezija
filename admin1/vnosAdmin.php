@@ -1,13 +1,15 @@
 
 <?php
 require_once '../skupne/database.php';
+$stolpci = array("id", "email", "uname", "geslo", "ime", "priimek", "status", "pristop");	
+$nameTable = "uporabnikiTbl2";
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	
-		if (isset($_POST['nameTable'])){
+/*		if (isset($_POST['nameTable'])){
 		$nameTable  = $_POST['nameTable'];
 	} else {
 		$nameTable  = "";
-	}
+	}*/
 	
 
 /*		if (isset($_POST['pogoj'])){
@@ -16,13 +18,13 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
 		$pogoj  = "";
 	}
 */
-	if (isset($_POST['stolpci'])){
+/*	if (isset($_POST['stolpci'])){
 	 	$stolpci = 	json_decode($_POST['stolpci']);
 		//var_dump($stolpci);
 		//echo $stolpci;
 	} else {
 		$stolpci  = "";
-	}
+	}*/
 
 
 //............................................................	
@@ -31,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	} else {
 		$doBaze  = "";
 	}
+//$stolpci = array("id", "email", "uname", "geslo", "ime", "priimek", "status", "pristop");	
 	//var_dump($doBaze);
 switch ($doBaze) {
   case 'vloz':
@@ -49,8 +52,7 @@ switch ($doBaze) {
     require_once 'bolnikBaze/zapisPoId.php';
 	*/
     break;
-  case 'prikazi':
-
+  case 'prikazi':    
     $prikazi = new PreberiVpis($nameTable, $stolpci);
 	$prebrano = $prikazi-> prebranoFunction();
    // prikaže preiskavo pod id v formi;
@@ -80,7 +82,7 @@ Class Administrace {
 	public $status;
 	
 
-	public function __construct($nameTable) {
+	public function __construct($nameTable, $stolpci) {
 	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();
 
@@ -91,7 +93,8 @@ Class Administrace {
 	  } 
 	  	  	 // var_dump($nameTable);
 	 $this->nameTable = $nameTable;	  
-     $this->stolpci = array("id", "email", "uname", "geslo", "ime", "priimek", "status", "pristop"); 
+    // $this->stolpci = array("id", "email", "uname", "geslo", "ime", "priimek", "status", "pristop"); 
+	$this->stolpci = $stolpci;
 	}// od 	function __construct
 	
 }//od class Administrace
@@ -153,7 +156,7 @@ $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
 Class PreberiVpis extends Administrace {
 
 	public function __construct($nameTable, $stolpci) {
-		    parent::__construct($nameTable);
+		    parent::__construct($nameTable, $stolpci);
 			//echo 'v preberi vpis';
 			
  if (!empty($_POST)) {		

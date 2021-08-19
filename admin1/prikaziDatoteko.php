@@ -23,7 +23,7 @@ document.getElementById("stolpci").value = poljeJSON;
 <input id="stolpci" type="hidden" name="stolpci" value="" readonly>
 <input type="hidden" name="doBaze" value="prikazi">
 <input id="id"  type="text" name="id" value="" ></input>
-  Tabela: <input type="text" name="nameTable" value="uporabnikiTbl2">
+  Tabela: <!--<input type="text" name="nameTable" value="uporabnikiTbl2">-->
   <br><br>
  
   <br><br>
@@ -31,7 +31,9 @@ document.getElementById("stolpci").value = poljeJSON;
 </form>
 
 <?php
-
+$nameTable = "uporabnikiTbl2";
+$stolpci = array("id", "email", "uname", "geslo", "ime", "priimek", "status", "pristop");
+require_once('vnosAdmin.php');
 ?>
 
 </body>
