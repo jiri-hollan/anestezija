@@ -160,17 +160,17 @@ Class PreberiVpis extends Administrace {
 //var_dump($this->stolpci);
 //echo '<script> alert("$_POST   ni prazen"); </script> ';	
 	foreach ($this->stolpci as $stolpec) {
-	echo('<br>$stolpec=   ');	
-	var_dump($stolpec);
+	//echo('<br>$stolpec=   ');	
+	//var_dump($stolpec);
 	//var_dump($_POST[$stolpec]);
        if (isset($_POST[$stolpec])&& $_POST[$stolpec]!="") {
 		  $podminka[$stolpec] = ($_POST[$stolpec]);
-		 var_dump($_POST[$stolpec]);
-		  echo ('<br>');
-		  echo ('$podminka[$stolpec]= ');
-		  var_dump($podminka[$stolpec]);
+		// var_dump($_POST[$stolpec]);
+		//  echo ('<br>');
+		 // echo ('$podminka[$stolpec]= ');
+		 // var_dump($podminka[$stolpec]);
        } else {
-	  echo $stolpec . " ne obstaja" ;
+	 // echo $stolpec . " ne obstaja" ;
 
      }//od if isset
    }//od foreach
@@ -182,8 +182,8 @@ Class PreberiVpis extends Administrace {
    } 
    if (isset($podminka)){
 	$this->podminka = $podminka;
-	  echo ('<br> $podminka= ');  
-var_dump($podminka);
+	 // echo ('<br> $podminka= ');  
+     //var_dump($podminka);
    }else {$this->podminka ="";}
    
 } //od construct
@@ -195,7 +195,7 @@ var_dump($podminka);
      $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka); 
            echo '<br>';
           //var_dump($prebrano);		  
-			echo '<br>Število najdenih zapisov vnos: '.count($prebrano);			
+			echo '<br>Število najdenih zapisov: '.count($prebrano);			
 Return	$prebrano;		
  }//od prebranoFunction   
 } //od class PreberiVpis
