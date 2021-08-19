@@ -168,14 +168,16 @@ Class PreberiVpis extends Administrace {
  //if (!empty($_POST) && $stolpci!="*") {	
 //var_dump($this->stolpci);
 //echo '<script> alert("$_POST   ni prazen"); </script> ';	
-	foreach ($this->stolpci as $stolpec) {	
+	foreach ($this->stolpci as $stolpec) {
+	echo('<br>$stolpec=   ');	
 	var_dump($stolpec);
 	//var_dump($_POST[$stolpec]);
        if (isset($_POST[$stolpec])) {
 
 		  $podminka[$stolpec] = ($_POST[$stolpec]);
+		 echo('<br>$_POST[$stolpec=   ');
 	     Var_dump($_POST[$stolpec]);
-		 echo ('<br>');
+		 echo ('<br>$podminka[$stolpec]=  ');
 		 var_dump($podminka[$stolpec]);
        } else {
 	  //echo $_POST[$stolpec] . " ne obstaja" ;
