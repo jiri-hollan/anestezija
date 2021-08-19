@@ -22,7 +22,7 @@ document.getElementById("stolpci").value = poljeJSON;
 <form method="post" action="vnosAdmin.php"> 
 <input id="stolpci" type="hidden" name="stolpci" value="" readonly>
 <input type="hidden" name="doBaze" value="prikazi">
-<input id="id"  type="text" name="id"  ></input>
+<input id="id"  type="text" name="id" value="" ></input>
   Tabela: <input type="text" name="nameTable" value="uporabnikiTbl2">
   <br><br>
  

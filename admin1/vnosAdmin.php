@@ -155,16 +155,17 @@ Class PreberiVpis extends Administrace {
 	public function __construct($nameTable, $stolpci) {
 		    parent::__construct($nameTable);
 			//echo 'v preberi vpis';
-	//var_dump($nameTable);
+			
+/*	//var_dump($nameTable);
 	$vidno = array('*');
 	$podminka = "";
 	$this->stolpci=$stolpci;
 	//var_dump($this->stolpci);	
 	$this->vidno=$vidno;
-	//var_dump($this->vidno);
+	//var_dump($this->vidno);  */
 	
 	
- if (!empty($_POST)&& $this->stolpci!="") {	
+ if (!empty($_POST)) {	
  //if (!empty($_POST) && $stolpci!="*") {	
 //var_dump($this->stolpci);
 //echo '<script> alert("$_POST   ni prazen"); </script> ';	
@@ -172,33 +173,42 @@ Class PreberiVpis extends Administrace {
 	echo('<br>$stolpec=   ');	
 	var_dump($stolpec);
 	//var_dump($_POST[$stolpec]);
-       if (isset($_POST[$stolpec])) {
-
+       if (isset($_POST[$stolpec])&& $_POST[$stolpec]!="") {
 		  $podminka[$stolpec] = ($_POST[$stolpec]);
-		 echo('<br>$_POST[$stolpec=   ');
-	     Var_dump($_POST[$stolpec]);
-		 echo ('<br>$podminka[$stolpec]=  ');
-		 var_dump($podminka[$stolpec]);
+		 var_dump($_POST[$stolpec]);
+		  echo ('<br>');
+		  echo ('$podminka[$stolpec]= ');
+		  var_dump($podminka[$stolpec]);
        } else {
-	  //echo $_POST[$stolpec] . " ne obstaja" ;
-     }
+	  echo $stolpec . " ne obstaja" ;
+
+     }//od if isset
    }//od foreach
+/*	     $this->podminka = $podminka;
+	  echo ('<br> $podminka= ');  
+var_dump($podminka); */
 	//var_dump($this->stolpci);
-   	$this->podminka = $podminka;
+  // $this->podminka = $podminka;
  }//od if !empty
 	else  {
-	
+	echo ' alert("$_POST   je prazen");  ';	
 	$this->podminka = "";	
 	//echo ' alert("$_POST ali $this_stolpci  je prazen");  ';			
    } 
-
+   if (isset($podminka)){
+	$this->podminka = $podminka;
+	  echo ('<br> $podminka= ');  
+var_dump($podminka);
+   }else {$this->podminka ="";}
+   
 } //od construct
   
  function prebranoFunction() {
 //var_dump($podminka);	
 //var_dump($_POST['stolpci']);
 //var_dump($this->stolpci);
-   $prebrano = $this->conn->vyber($this->nameTable, $this->vidno, $this->podminka);
+  // $prebrano = $this->conn->vyber($this->nameTable, $this->vidno, $this->podminka);
+     $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka); 
            echo '<br>';
           //var_dump($prebrano);		  
 			echo '<br>Število najdenih zapisov vnos: '.count($prebrano);			
