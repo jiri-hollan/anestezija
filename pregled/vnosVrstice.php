@@ -62,9 +62,9 @@ Class Apregled {
 	  
       $this->stolpci = array("datPregleda", "imeZdravnika", "stevMaticna", "EMSO", "dan", "mesec", "leto", "datRojstva", "starost", "ime", "priimek", "oddelek", "dgOperativna", "opNacrtovana", "teza", "visina", "bmi", "krvniTlak", "pulz", "hb", "ks", "inr", "aptc", "trombociti", "kreatinin", "laktat", "pbnp", "pct", "crp", "na", "k", "drugiIzvidi", "ekg", "rtg", "dgPridruzene", "terPredhodna", "asa", "mallampati", "alergija", "izvidiInOpombe", "premedVecer", "premedPredOp", "navodila", "sklep"); 
 	  
-	}	
+	}//od construct	
 	
-}//od class prihlaseni
+}//od class Apregled
 
 //___________________________________- potomstvo_______________________________________________
 Class PrviVpis extends Apregled {
@@ -189,8 +189,11 @@ Class PreberiVpis extends Apregled {
 //echo '<script> alert("$_POST   ni prazen"); </script> ';	
 	foreach ($this->stolpci as $stolpec) {	
        if (isset($_POST[$stolpec])) {
-	     //echo $_POST[$stolpec];
 		  $podminka[$stolpec] = ($_POST[$stolpec]);
+		 var_dump($_POST[$stolpec]);
+		  echo ('<br>');
+		  echo ('$podminka[$stolpec]= ');
+		  var_dump($podminka[$stolpec]);
        } else {
 	  //echo $_POST[$stolpec] . " ne obstaja" ;
      }
@@ -200,6 +203,7 @@ Class PreberiVpis extends Apregled {
 	echo ' alert("$_POST   je prazen");  ';			
    } 
 	$this->podminka = $podminka;
+  echo ('<br>');	
 var_dump($podminka);	
 } //od construct
   

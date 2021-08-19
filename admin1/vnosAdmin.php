@@ -91,8 +91,7 @@ Class Administrace {
 	  } 
 	  	  	 // var_dump($nameTable);
 	 $this->nameTable = $nameTable;	  
-    // $this->stolpci = $_POST['stolpci']; 
-	 //$this->stolpci = 	json_decode($_POST['stolpci']);
+     $this->stolpci = array("id", "email", "uname", "geslo", "ime", "priimek", "status", "pristop"); 
 	}// od 	function __construct
 	
 }//od class Administrace
@@ -173,8 +172,10 @@ Class PreberiVpis extends Administrace {
 	var_dump($stolpec);
 	//var_dump($_POST[$stolpec]);
        if (isset($_POST[$stolpec])) {
-	     echo $_POST[$stolpec];
+
 		  $podminka[$stolpec] = ($_POST[$stolpec]);
+	     Var_dump($_POST[$stolpec]);
+		 echo ('<br>');
 		 var_dump($podminka[$stolpec]);
        } else {
 	  //echo $_POST[$stolpec] . " ne obstaja" ;
