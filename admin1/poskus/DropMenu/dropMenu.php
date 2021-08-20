@@ -9,7 +9,8 @@
 <body>
 
 <div class="navbar">
-  <a href="#home">Home</a>
+
+  <a href=../../../frontend/menuFile1.php>Home</a>
  <!-- <a href="#news">News</a>-->
   <div class="dropdown">
     <button class="dropbtn">Menu servis 
