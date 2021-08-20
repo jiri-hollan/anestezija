@@ -213,14 +213,14 @@
     <p id="meritveR">meritve</p>
     <p id="labR">lab</p>
   <div class="asmalR">
-       ASA: <span id="asaR"​ class="kvadrat" >.</span><span style="padding-left:10px;"> Mallampati:</span> <span id="mallR" class="kvadrat" >.</span> <span style="padding-left:10px;">Alergija:</span> <span id="alergijaR"></span>
+       ASA: <span id="asaR"​ class="kvadrat" >.</span><span style="padding-left:10px;"> Mallampati:</span> <span id="mallR" class="kvadrat" >.</span> <span style="padding-left:50px;">Alergija:</span> <span id="alergijaR"></span>
   </div>
 
  <!-- <textarea id="pridBolezniR"  class="mala" >pridružene bolezni</textarea>
   <textarea id="predTerapR"  class="mala" >predhodna terapija</textarea>-->
  </div>
 
-
+<hr>
   <div class="velka" id="izvidiR">Izvidi in opombe</div>
 </div> 
    <div id="premedikacijaR"><i>premedikacija</i></div>
