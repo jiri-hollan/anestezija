@@ -212,6 +212,7 @@
     <p id="operacijaR">predvidevana op.</p>
     <p id="meritveR">meritve</p>
     <p id="labR">lab</p>
+	<hr>
   <div class="asmalR">
        ASA: <span id="asaR"​ class="kvadrat" >.</span><span style="padding-left:10px;"> Mallampati:</span> <span id="mallR" class="kvadrat" >.</span> <span style="padding-left:50px;">Alergija:</span> <span id="alergijaR"></span>
   </div>
