@@ -154,7 +154,7 @@
      <option value='st mall'>
      </datalist>
      
-     <label for="alergija">Alergija:<input id="alergija" type="text" name="alergija"  ></label>
+     <label for="alergija">Alergija:<input id="alergija" type="text" name="alergija" value="ni znano" ></label>
 	 
  </fieldset>
  
@@ -173,7 +173,7 @@
   <div id="zaklucek">
 	<label for="premedVecer">Zvečer:..<input id="premedVecer" type="textarea" name="premedVecer" ></label>  
     <br>
-	<label for="premedPredOp">Pred op.:<input id="premedPredOp" type="textarea" name="premedPredOp" ></label> <br> 
+	<label for="premedPredOp">Pred op.:<input id="premedPredOp" type="textarea" name="premedPredOp" value="nič"></label> <br> 
 
 
   
@@ -220,7 +220,6 @@
   <textarea id="predTerapR"  class="mala" >predhodna terapija</textarea>-->
  </div>
 
-<hr>
   <div class="velka" id="izvidiR">Izvidi in opombe</div>
 </div> 
    <div id="premedikacijaR"><i>premedikacija</i></div>
