@@ -96,14 +96,15 @@
 <div id="stolpec1">
     <label for="hb">Hb:</label>  
     <input class="lab"id="hb" type="text" name="hb" size="1" onfocusout=  "laborFunction(name,value)"><br>
+	<label for="trombociti">Trombociti:</label>  
+    <input class="lab"id="trombociti" type="text" name="trombociti" size="1" onfocusout=  "laborFunction(name,value)"><br>	
     <label for="ks">KS:</label>  
     <input class="lab"id="ks"type="text" name="ks" size="1" onfocusout=  "laborFunction(name,value)"> <br>
     <label for="inr">INR:</label>  
     <input class="lab"id="inr" type="text" name="inr" size="1" onfocusout=  "laborFunction(name,value)"><br> 
     <label for="aptc">APTČ:</label>  
     <input class="lab"id="aptc" type="text" name="aptc" size="1" onfocusout=  "laborFunction(name,value)"><br>
-    <label for="trombociti">Trombociti:</label>  
-    <input class="lab"id="trombociti" type="text" name="trombociti" size="1" onfocusout=  "laborFunction(name,value)"><br>
+
     <label for="kreatinin">Kreatinin:</label>  
     <input class="lab"id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
    
