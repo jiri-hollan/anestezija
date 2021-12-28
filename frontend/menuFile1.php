@@ -28,7 +28,7 @@ echo '
 	 break;
 	 
 	 case 3:
-	   echo $a1.$a2;
+	   echo $a1.$a2.$a3;
     break;
    
     default:
