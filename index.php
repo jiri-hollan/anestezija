@@ -18,6 +18,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
   <meta http-equiv="refresh" content="0;url=frontend/menuFile1.php" />
 
   <title>Anestezija Izola</title>
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 
