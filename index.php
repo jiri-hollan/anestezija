@@ -19,6 +19,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
 
   <title>Anestezija Izola</title>
    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="http://anestiz.com/favicon.ico">
 </head>
 
 
