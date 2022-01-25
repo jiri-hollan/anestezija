@@ -11,16 +11,14 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
- 
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8_general_ci" />
+  <title>Anestiz</title>
+   <meta http-equiv="Content-Type" content="text/html;charset=utf-8_general_ci" />
+   <meta name="keywords" content="anestezija,Izola,hollan" />
+   <meta http-equiv="refresh" content="0;url=frontend/menuFile1.php" />
 
-  <meta name="keywords" content="anestezija,Izola,hollan" />
-  <meta http-equiv="refresh" content="0;url=frontend/menuFile1.php" />
-
-  <title>Anestezija Izola</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico?<?php echo time(); ?>">
     <link rel="shortcut icon" href="favicon.ico?<?php echo time(); ?>">
-    <link rel="shortcut icon" href="favicon256.ico?<?php echo time(); ?>">
+	<link href='favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>
     <link href='favicon120.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='120x120'/>
     <link href='favicon152.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='152x152'/>
 
@@ -28,8 +26,6 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
     <link rel="shortcut icon" href="http://anestiz.com/favicon256.ico?<?php echo time(); ?>">
     <link href='http://anestiz.com/favicon120.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='120x120'/>
     <link href='http://anestiz.com/favicon152.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='152x152'/>-->
-
-
 </head>
 
 
