@@ -1,9 +1,15 @@
-<!DOCTYPE html>
+<?php
+require_once('../skupne/sabloni/zahlaviUniverzal.php');  
+?>
+
+<!--<!DOCTYPE html>
 <html lang="cs-SI">
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+
     <link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
 	<link href='favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>
     <link href='../favicon120.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='120x120'/>
