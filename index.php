@@ -19,7 +19,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
 
   <title>Anestezija Izola</title>
   
-    <link rel="icon" type="image/x-icon" href="favicon.ico?<?php echo time(); ?>">
+    <link rel="icon" type="image/x-icon" href="favicon256.ico?<?php echo time(); ?>">
 
 </head>
 
