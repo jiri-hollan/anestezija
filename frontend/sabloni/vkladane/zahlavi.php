@@ -4,10 +4,10 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="icon" type="image/x-icon" href="../favicon.ico?<?php echo time(); ?>">
+<!-- <link rel="icon" type="image/x-icon" href="../favicon.ico?<?php echo time(); ?>">-->
  <!-- <link rel="shortcut icon" href="../favicon256.ico?<?php echo time(); ?>">-->
  <!-- <link rel="icon" type="image/x-icon" href="../favicon256.ico?<?php echo time(); ?>">-->
-
+  <link href='../favicon120.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='120x120'/>
 <link rel="stylesheet" href="sabloni/css/zahlavi.css?<?php echo time(); ?>">
 <link rel="stylesheet" href="../css/menuFile.css?<?php echo time(); ?>">
 <script src="../frontend/js/uporabnikiVse.js?<?php echo time(); ?>"></script> 
