@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="http://anestiz.com/favicon.ico?<?php echo time(); ?>">
 <link rel="shortcut icon" href="http://anestiz.com/favicon256.ico?<?php echo time(); ?>">
-<!--<link rel="apple-touch-icon" href="http://anestiz.com/favicon120.png">
-<link rel="apple-touch-icon" href="http://anestiz.com/favicon152.png">-->
+
+
 
 <link rel="stylesheet" href="sabloni/css/zahlavi.css?<?php echo time(); ?>">
 <link rel="stylesheet" href="../css/menuFile.css?<?php echo time(); ?>">
