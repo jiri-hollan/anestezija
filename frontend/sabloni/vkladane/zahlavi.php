@@ -5,14 +5,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
-	<link href='favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>
-    <link href='../favicon120.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='120x120'/>
-    <link href='../favicon152.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='152x152'/>
+	<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>
 
-  <!--  <link rel="shortcut icon" href="http://anestiz.com/favicon.ico?<?php echo time(); ?>">
-    <link rel="shortcut icon" href="http://anestiz.com/favicon256.ico?<?php echo time(); ?>">
-    <link href='http://anestiz.com/favicon120.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='120x120'/>
-    <link href='http://anestiz.com/favicon152.png?<?php echo time(); ?>' rel='apple-touch-icon' sizes='152x152'/>-->
+
 
 <link rel="stylesheet" href="sabloni/css/zahlavi.css?<?php echo time(); ?>">
 <link rel="stylesheet" href="../css/menuFile.css?<?php echo time(); ?>">
