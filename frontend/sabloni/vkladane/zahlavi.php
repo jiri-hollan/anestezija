@@ -4,8 +4,8 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="http://anestiz.com/favicon.ico?<?php echo time(); ?>">
-<link rel="shortcut icon" href="http://anestiz.com/favicon256.ico?<?php echo time(); ?>">
+<link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
+<link rel="shortcut icon" href="../favicon256.ico?<?php echo time(); ?>">
 
 
 
