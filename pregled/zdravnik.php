@@ -39,6 +39,7 @@ ________________________________________________________________________________
    
    
 <div id="prijava" >
+<p id="aktBolnica">.</p>
 <h1>Prijava</h1>
 
 <label for="zdravnik" >Zdravnik:</label> 
@@ -48,7 +49,7 @@ ________________________________________________________________________________
   </datalist>
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
 <p id="result"> </p>
-<p id="aktBolnica">.</p>
+
   <script>listaZdravnikovFunction();</script>
 
 </div>
