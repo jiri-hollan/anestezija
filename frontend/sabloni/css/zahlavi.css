@@ -31,3 +31,10 @@ body {
   background-color: orange;
   color: white;
 }
+
+.topnav span{
+  float: right;
+   color: #f2f2f2;
+   text-align: center;
+     padding: 14px 16px;
+}
