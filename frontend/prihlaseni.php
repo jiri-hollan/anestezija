@@ -90,8 +90,8 @@ Class Prijava extends Prihlaseni {
 	}
 	
 	public function prihlaseniSelhalo() {
-		//echo 'iz funkcije prihlaseniSelhalo';
-	   return 'Napačno uporabniško ime ali geslo. ';
+		echo 'Napačno uporabniško ime ali geslo. ';
+	   return ;
 	}
 	
 	public function overUdaje() {
