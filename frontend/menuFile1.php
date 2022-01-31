@@ -32,8 +32,12 @@ echo '
     break;
    
     default:
-	   }
-	   //od switch
+	   } //od switch
+	 echo
+	'<script>
+    document.getElementById("prij").innerHTML = "Odjava";
+     </script>'	
+	 ;
    }
    
    echo '
