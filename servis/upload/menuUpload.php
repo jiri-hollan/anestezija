@@ -1,6 +1,4 @@
 <!doctype html>
-<html>
-<head>
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8">
