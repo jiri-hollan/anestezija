@@ -36,7 +36,7 @@ echo '
 	 echo
 	'<script>
     document.getElementById("prij").innerHTML = "Odjava";
-	document.getElementById("uname").innerHTML = "prijavljen";
+	document.getElementById("uname").innerHTML = "prijavljen";	
      </script>'	
 	 ;
    }
@@ -53,3 +53,9 @@ echo '
 require_once('sabloni/vkladane/zapati.php'); 
 ?>
 
+<script>
+    document.getElementById("prij").innerHTML = "Odjava";
+	document.getElementById("uname").innerHTML = "prijavljen";
+	document.getElementById("uname").innerHTML = "prijavljen: " + " " + <?php echo JSON_encode ($_SESSION["uname"])  ;?>;
+	//alert (<?php echo JSON_encode ($_SESSION["uname"])  ;?>);
+     </script>
