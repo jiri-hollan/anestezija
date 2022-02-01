@@ -247,6 +247,15 @@ $data['uname'] = $_SESSION["uname"];
 require_once 'uporabnikWhere2.php';
 new UporabnikiWhere($data);
 require_once 'sabloni/spremembaGesla.php';
+echo '
+<script>
+    document.getElementById("prij").innerHTML = "Odjava";
+	document.getElementById("uname").innerHTML = "prijavljen";
+	document.getElementById("uname").innerHTML = "prijavljen: ";
+
+	//alert (<?php echo JSON_encode ($_SESSION["uname"])  ;?>);
+     </script>';
+
 } else{
 echo 'NISTE PRIJAVLJENI';	
 }
