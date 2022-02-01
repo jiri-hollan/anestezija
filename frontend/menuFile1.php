@@ -57,5 +57,6 @@ require_once('sabloni/vkladane/zapati.php');
     document.getElementById("prij").innerHTML = "Odjava";
 	document.getElementById("uname").innerHTML = "prijavljen";
 	document.getElementById("uname").innerHTML = "prijavljen: " + " " + <?php echo JSON_encode ($_SESSION["uname"])  ;?>;
+	document.getElementById("dom").innerHTML = "doma";	
 	//alert (<?php echo JSON_encode ($_SESSION["uname"])  ;?>);
      </script>
