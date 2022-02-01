@@ -6,7 +6,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-</head>
 <body>
  <section class="top-bar-section">
           <!-- Right Nav Section -->
