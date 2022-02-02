@@ -186,27 +186,27 @@ document.getElementById("alergijaR").innerHTML= alergija;
 //....................EKG....................................................................
 
 var ekg = document.getElementById("ekg").value;
-ekg = opisFunction(ekg, "EKG:");
+ekg = opisFunction(ekg, "<hr>EKG:");
 //alert(ekg);
 
 
 //...........................RTG................................................................
 var rtg = document.getElementById("rtg").value;
-rtg = opisFunction(rtg, "RTG:");
+rtg = opisFunction(rtg, "<hr>RTG:");
 
 //..............pridružene bolezni........................................................
 var prid = document.getElementById("dgPridruzene").value;
-prid = opisFunction(prid, "Pridružene bolezni:" );
+prid = opisFunction(prid, "<hr>Pridružene bolezni:" );
 
 //................................... predhodna terapija.........................................
 var pred = document.getElementById("terPredhodna").value;
-pred = opisFunction(pred, "Predhodna terapija:" );
+pred = opisFunction(pred, "<hr>Predhodna terapija:" );
 
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
 
 izvidi = izvidi.replace(/\n/g, "<br>&emsp;&emsp;");
-izvidi = izvidiFunction(izvidi, "<br><hr>");
+izvidi = izvidiFunction(izvidi, "<hr>");
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
