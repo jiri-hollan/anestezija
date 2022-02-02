@@ -22,8 +22,9 @@
 
     <label for="stevMaticna">Matična številka:</label>
     <input id="stevMaticna"type="text" name="stevMaticna" pattern="[0-9]{1,}" required onkeypress=" return isNumber(event, allNumb)"/><br>
-  <label for="EMSO">EMŠO:</label>
-    <input id="EMSO" type="text" name="EMSO"pattern="[0-9]{1,}" placeholder="pusti prazno" onkeypress=" return isNumber(event, allNumb)"/ >  
+    <input id="EMSO"  type = "hidden" name="EMSO"pattern="[0-9]{1,}" placeholder="pusti prazno" onkeypress=" return isNumber(event, allNumb)"/ >  
+	  <!--  <label for="EMSO">EMŠO:</label>
+    <input id="EMSO" type="text" name="EMSO"pattern="[0-9]{1,}" placeholder="pusti prazno" onkeypress=" return isNumber(event, allNumb)"/ >  -->
     <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->  
     <input id="datRojstva" type = "hidden" name = "datRojstva" readonly  >   
     <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  >
