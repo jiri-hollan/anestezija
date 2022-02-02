@@ -159,7 +159,7 @@
 	 
  </fieldset>
  
-	<labelfor="izvidiInOpombe">Izvidi in opombe:</label><br>  
+	<label for="izvidiInOpombe">Izvidi in opombe:</label><br>  
     <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
 
  <label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
