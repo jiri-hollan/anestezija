@@ -9,7 +9,10 @@ class TableRows extends RecursiveIteratorIterator {
     }
 
     function current() {
-        return "<td style='width: 150px;border:1px solid black;'>" . parent::current(). "</td>";
+
+        // return "<td style='width: 150px;border:1px solid black;' >" . parent::current(). "</td>";
+		// return "<input style='width: 150px;border:1px solid black;' value=" . parent::current() . "></input>";	 
+		 return "<td  >" . "<input style='width: 150px;border:1px solid black;' value=" . parent::current() . "></input>". "</td>";
     }
 
     function beginChildren() {
