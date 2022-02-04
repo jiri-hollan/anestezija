@@ -76,6 +76,7 @@ var zdravList  =[
 "Jiří&nbsp;Hollan",
 "Nives&nbsp;Tomažič",
 "Nevenka&nbsp;Pavšek",
+"Dominik&nbsp;Čarman",
 ];
 document.getElementById("aktBolnica").innerHTML = "<h1>Izola</h1> "; 
        break;
