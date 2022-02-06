@@ -65,5 +65,45 @@ class Database {
 	}
 //............konec vyber.............................................................
 
+
+	public function  vloz($tabulka,$data){
+       $sloupce = array();
+	   $hodnoty = array();
+	   $parametry = array();
+	   if (is_array($data)) {
+		foreach ($data as $sloupec => $hodnota) { 
+		 array_push($sloupce, $sloupec);
+         array_push($hodnoty, '?');
+		 array_push($parametry, $hodnota);		   
+	   }		
+	}
+    $sloupceSQL = implode(', ', $sloupce);
+    $hodnotySQL = implode(',  ', $hodnoty);
+/*	echo '<br>sloupce: '.$sloupceSQL.'<br>';
+	echo 'hodnotySQL: '.$hodnotySQL.'<br>';
+	echo 'parametry: '.var_dump($parametry).'<br>';
+	*/
+    $dotaz = $this->conn->prepare("INSERT INTO $tabulka ($sloupceSQL) VALUES ($hodnotySQL)");
+
+  try {
+	  $dotaz->execute($parametry);
+	  $pocetVlozenych = $dotaz->rowCount();	 
+	  $lastId = $this->conn->lastInsertId();
+	  //var_dump($lastId);
+	  
+  } catch (PDOException $e) {
+	  echo $e->getMessage();
+	  $pocetVlozenych = false;
+	  $lastId =  false;
+  }
+      $vlozeno['pocetVlozenych'] = $pocetVlozenych;
+	  //var_dump ($vlozeno);
+	  $vlozeno['lastId'] = $lastId;
+	 // echo $pocetVlozenych . 'zadnji Id: '. $vlozeno['lastId'];
+  //return $pocetVlozenych;
+    return $vlozeno;
+}
+//.........konec vloz.................................................................
+
 }//uzavírací zavorky class Database
 ?>
