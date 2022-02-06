@@ -21,6 +21,7 @@ for ($i = 0; $i < $dolzina; $i++) {
 foreach ($vybrano[$i] as $key => $value) {
    // echo "$key: $value\n";
 	echo "$value\n";
-}
-}
+}//od foreach
+}//od for
+
 ?>
