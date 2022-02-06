@@ -1,6 +1,7 @@
 <?php
 include 'database1.php';
-$tabulka="uporabnikiTbl2";
+//$tabulka="uporabnikiTbl2";
+$tabulka="pregledovalciTbl";
 $stolpci=["*"];
 //$stolpci=["ime","priimek"];
 $podminka = array("ime"=>"Jiří");
