@@ -30,10 +30,10 @@ switch ($akce) {
     echo "to je vyber";
     vyberFunction();
     break;
- /* case label2:
-    code to be executed if n=label2;
+case "vloz":
+    vlozFunction();
     break;
-  case label3:
+  /*  case label3:
     code to be executed if n=label3;
     break;
     ...*/
@@ -67,6 +67,23 @@ foreach ($vybrano[$i] as $key => $value) {
 }//od foreach
 }//od for
 }//od vyberFunction
+
+function vlozFunction(){
+//$tabulka="uporabnikiTbl2";
+$tabulka="pregledovalciTbl";
+$data= array("bolnisnica"=>"izola", "ime"=>"Lela", "priimek"=>"Hollan", "status"=>"1");
+
+$vloz = new database($tabulka,$data);
+//$vloz->vloz($tabulka,$data);
+$vlozeno=$vloz->vloz($tabulka,$data );
+//echo $vlozeno[1];
+echo "<br>";
+echo var_dump($vlozeno);
+echo "<br>";
+echo count($vlozeno);
+echo "<br>";
+}//od vlozFunction
+
 ?>
 <h2>PHP Form izbira funkcije</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
