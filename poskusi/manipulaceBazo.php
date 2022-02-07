@@ -26,9 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 switch ($akce) {
-  case "iskanje":
-    echo "to je iskanje";
-    iskanjeFunction();
+  case "vyber":
+    echo "to je vyber";
+    vyberFunction();
     break;
  /* case label2:
     code to be executed if n=label2;
@@ -41,7 +41,7 @@ switch ($akce) {
     echo "ni izvelo case";
 }//od switch
 }//od if
-function iskanjeFunction(){
+function vyberFunction(){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
 $stolpci=["*"];
@@ -66,7 +66,7 @@ foreach ($vybrano[$i] as $key => $value) {
 	echo "$value\n";
 }//od foreach
 }//od for
-}//od iskanjeFunction
+}//od vyberFunction
 ?>
 <h2>PHP Form izbira funkcije</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
