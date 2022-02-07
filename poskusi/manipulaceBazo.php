@@ -9,7 +9,39 @@
 <!--konec zahlavi-->
 
 <?php
+/* V tom failu so funkcije za spreminjanje tabele databaze*/
 include 'database1.php';
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $akce = test_input($_POST["akce"]);
+  echo $akce;
+  //$akce = naredi($akce);
+
+
+
+
+switch ($akce) {
+  case "iskanje":
+    echo "to je iskanje";
+    iskanjeFunction();
+    break;
+ /* case label2:
+    code to be executed if n=label2;
+    break;
+  case label3:
+    code to be executed if n=label3;
+    break;
+    ...*/
+  default:
+    echo "ni izvelo case";
+}//od switch
+}//od if
+function iskanjeFunction(){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
 $stolpci=["*"];
@@ -34,8 +66,17 @@ foreach ($vybrano[$i] as $key => $value) {
 	echo "$value\n";
 }//od foreach
 }//od for
-
+}//od iskanjeFunction
 ?>
+<h2>PHP Form izbira funkcije</h2>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  
+  funkcija: <input type="text" name="akce">
+  <br><br>
+ 
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
 <!--zapati-->
 </body>
 </html>
