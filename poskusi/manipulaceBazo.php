@@ -36,9 +36,14 @@ case "vloz":
   case "edit":
      editFunction();
     break;
+ case "delete":
+     deleteFunction();
+    break;	
+	
     /*  ...*/
   default:
     echo "ni izvelo case";
+	
 }//od switch
 }//od if
 function vyberFunction(){
@@ -87,6 +92,11 @@ echo "<br>";
 function editFunction(){
 	echo 'editFunction še ni napisana';
 }//od editFunction
+
+function deleteFunction(){
+	echo 'deleteFunction še ni napisana';
+}//od editFunction
+
 ?>
 <h2>PHP Form izbira funkcije</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -99,7 +109,9 @@ function editFunction(){
   <label for="vloz">vlož</label><br>
   <input type="radio" id="edit" name="akce" value="edit">
   <label for="edit">spremeni</label><br> 
-  
+  <input type="radio" id="delete" name="akce" value="delete">
+  <label for="delete">odstrani</label><br> 
+   
  <!-- <input type="radio" id="javascript" name="akce" value="JavaScript">
   <label for="javascript">JavaScript</label>-->
   <br><br>
