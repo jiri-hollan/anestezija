@@ -88,9 +88,14 @@ echo "<br>";
 <h2>PHP Form izbira funkcije</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   
-  funkcija: <input type="text" name="akce">
+  funkcija: <!--<input type="text" name="akce">-->
   <br><br>
- 
+ <input type="radio" id="vyber" name="akce" value="vyber">
+  <label for="vyber">vyber</label><br>
+  <input type="radio" id="vloz" name="akce" value="vloz">
+  <label for="vloz">vlož</label><br>
+ <!-- <input type="radio" id="javascript" name="akce" value="JavaScript">
+  <label for="javascript">JavaScript</label>-->
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
