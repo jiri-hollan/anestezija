@@ -10,7 +10,7 @@
 
 <?php
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
-include 'database1.php';
+include '../skupne/database.php';
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
