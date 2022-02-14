@@ -108,7 +108,7 @@ function deleteFunction(){
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
   
-  funkcija: 
+
   <br><br>
  <!-- <label for="vyber"> vyber</label>  
   <input type="radio" id="vyber" name="akce" value="vyber">
@@ -120,13 +120,16 @@ function deleteFunction(){
   <input type="radio" id="delete" name="akce" value="delete">-->
 
   <!--<p id="formaId"></p> -->
-<input type="text" id="formaId" name="akce" value="">
+   <label for="akceId"> funkcija: </label>
+<input type="text" id="akceId" name="akce" value=""><br>
+  <label for="bolnisnicaId"> bolnišnica</label>
+<input type="text" id="bolnisnicaId" name="bolnisnica" value="">
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
 <script>
 function izborFunction(akce) {
-  document.getElementById("formaId").value = akce; 
+  document.getElementById("akceId").value = akce; 
 }
 </script>
 
