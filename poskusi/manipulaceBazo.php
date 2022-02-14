@@ -4,6 +4,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="../js/manipulaceBazo.js?<?php echo time(); ?>"></script> 
 </head>
 <body>
 <!--konec zahlavi-->
@@ -118,6 +119,7 @@ function deleteFunction(){
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
+
 <!--zapati-->
 </body>
 </html>
