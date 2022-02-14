@@ -25,7 +25,8 @@ class TableRows extends RecursiveIteratorIterator {
 }
 include '../../skupne/streznik.php';
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+	$conn = new PDO("mysql:host=" . $servername . ";dbname=" . $dbname . ';charset=UTF8', $username, $password);
+   // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $conn->prepare("SELECT * FROM" . " pregledovalciTbl" );
     $stmt->execute();
