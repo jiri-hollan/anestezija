@@ -2,6 +2,8 @@
 <html>
 <body >
 <h>forma kot js </>
+
+
 <script>
 document.write('<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >');
 document.write('<br>');
