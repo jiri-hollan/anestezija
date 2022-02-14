@@ -1,5 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+<p>uporabnikiTbl:</p>
+
 <?php
-require_once 'sabloni/vkladane/zahlavi.php';
+//require_once 'sabloni/vkladane/zahlavi.php';
 echo "<table style='border: solid 1px black;'>";
  echo "<tr><th>Id</th><th>email</th><th>username</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th></tr>";
 
@@ -38,6 +48,7 @@ catch(PDOException $e) {
 }
 $conn = null;
 echo "</table>";
-require_once 'sabloni/vkladane/zapati.php';
+//require_once 'sabloni/vkladane/zapati.php';
 ?>
-
+</body>
+</html>
