@@ -124,16 +124,20 @@ function deleteFunction(){
   <input type="radio" id="delete" name="akce" value="delete">-->
 
   <!--<p id="formaId"></p> -->
-   <label for="akceId"> funkcija: </label>
+
 <input type="text" id="akceId" name="akce" value=""><br>
-  <label for="bolnisnicaId"> bolnišnica</label>
-<input type="text" id="bolnisnicaId" name="bolnisnica" value="">
+
+<!--<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">-->
+<p id="demo"></p>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
 <script>
 function izborFunction(akce) {
-  document.getElementById("akceId").value = akce; 
+  document.getElementById("akceId").value = akce;
+ if(akce=="vyber"){ 
+ document.getElementById("demo").innerHTML = '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';
+}
 }
 </script>
 
