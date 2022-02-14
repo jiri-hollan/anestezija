@@ -15,11 +15,15 @@ function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
+  $data = strtolower($data);
   return $data;
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
+  $bolnisnica = test_input($_POST["bolnisnica"]);
   echo strtoupper($akce) .'<br>';
+  echo strtoupper($bolnisnica) .'<br>';
+  echo var_dump($bolnisnica) .'<br>';
   //$akce = naredi($akce);
 
 
@@ -28,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 switch ($akce) {
   case "vyber":
    // echo "to je vyber.<br>";
-    vyberFunction();
+    vyberFunction($bolnisnica);
     break;
 case "vloz":
     vlozFunction();
@@ -46,13 +50,13 @@ case "vloz":
 	
 }//od switch
 }//od if
-function vyberFunction(){
+function vyberFunction($bolnisnica){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
 $stolpci=["*"];
 //$stolpci=["ime","priimek"];
 //$podminka = array("ime"=>"Jiří");
-$podminka = array("bolnisnica"=>"Izola");
+$podminka = array("bolnisnica"=>$bolnisnica);
 //$podminka = array("ime"=>"Jiří", "Ben"=>"37", "Joe"=>"43");
 
 
