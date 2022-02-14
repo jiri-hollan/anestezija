@@ -51,7 +51,8 @@ function vyberFunction(){
 $tabulka="pregledovalciTbl";
 $stolpci=["*"];
 //$stolpci=["ime","priimek"];
-$podminka = array("ime"=>"Jiří");
+//$podminka = array("ime"=>"Jiří");
+$podminka = array("bolnisnica"=>"Izola");
 //$podminka = array("ime"=>"Jiří", "Ben"=>"37", "Joe"=>"43");
 
 
