@@ -4,7 +4,6 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="../js/manipulaceBazo.js?<?php echo time(); ?>"></script> 
 </head>
 <body>
 <!--konec zahlavi-->
@@ -101,25 +100,35 @@ function deleteFunction(){
 
 ?>
 <h2>PHP Form izbira funkcije</h2>
+
+<button onclick="izborFunction('vyber')">vyber</button>
+<button onclick="izborFunction('vloz')">vlož</button>
+<button onclick="izborFunction('edit')">edit</button>
+<button onclick="izborFunction('delete')">delete</button>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
   
-  funkcija: <!--<input type="text" name="akce">-->
+  funkcija: 
   <br><br>
-  <label for="vyber"> vyber</label>  
+ <!-- <label for="vyber"> vyber</label>  
   <input type="radio" id="vyber" name="akce" value="vyber">
   <label for="vloz"> vlož</label>
   <input type="radio" id="vloz" name="akce" value="vloz">
   <label for="edit"> spremeni</label>
   <input type="radio" id="edit" name="akce" value="edit">
   <label for="delete"> odstrani</label> 
-  <input type="radio" id="delete" name="akce" value="delete">
+  <input type="radio" id="delete" name="akce" value="delete">-->
 
-   
- <!-- <input type="radio" id="javascript" name="akce" value="JavaScript">
-  <label for="javascript">JavaScript</label>-->
+  <!--<p id="formaId"></p> -->
+<input type="text" id="formaId" name="akce" value="">
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
+<script>
+function izborFunction(akce) {
+  document.getElementById("formaId").value = akce; 
+}
+</script>
 
 <!--zapati-->
 </body>
