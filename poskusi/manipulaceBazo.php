@@ -105,14 +105,15 @@ function deleteFunction(){
   
   funkcija: <!--<input type="text" name="akce">-->
   <br><br>
- <input type="radio" id="vyber" name="akce" value="vyber">
-  <label for="vyber">vyber</label><br>
+  <label for="vyber"> vyber</label>  
+  <input type="radio" id="vyber" name="akce" value="vyber">
+  <label for="vloz"> vlož</label>
   <input type="radio" id="vloz" name="akce" value="vloz">
-  <label for="vloz">vlož</label><br>
+  <label for="edit"> spremeni</label>
   <input type="radio" id="edit" name="akce" value="edit">
-  <label for="edit">spremeni</label><br> 
+  <label for="delete"> odstrani</label> 
   <input type="radio" id="delete" name="akce" value="delete">
-  <label for="delete">odstrani</label><br> 
+
    
  <!-- <input type="radio" id="javascript" name="akce" value="JavaScript">
   <label for="javascript">JavaScript</label>-->
