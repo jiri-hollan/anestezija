@@ -27,17 +27,13 @@ function test_input($data) {
 ?>
 
 <h2>PHP Form Validation Example</h2>
-
-<script>
-document.write('<form method="post" action="');
-document.write('<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>');
-document.write('" >');
-document.write('<br>');
-document.write(' Name: <input type=' + '"text' + '" name="name' + '">');
-document.write('  <input type="submit" name="submit" value="Submit">');  
-document.write('</form>');
-</script>
-
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Name: <input type="text" name="name">
+  <br><br>
+ 
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
 
 <?php
 echo "<h2>Your Input:</h2>";
