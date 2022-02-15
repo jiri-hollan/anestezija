@@ -9,6 +9,7 @@
 <!--konec zahlavi-->
 
 <?php
+ 
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 include '../skupne/database.php';
 function test_input($test) {
@@ -18,6 +19,7 @@ function test_input($test) {
   $test = strtolower($test);
   return $test;
 }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
@@ -35,7 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 switch ($akce) {
   case "vyber":
    // echo "to je vyber.<br>";
-    vyberFunction($bolnisnica);
+    $podminka = array("bolnisnica"=>$bolnisnica);
+    vyberFunction($podminka);
     break;
 case "vloz":
     $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
@@ -54,13 +57,13 @@ case "vloz":
 	
 }//od switch
 }//od if
-function vyberFunction($bolnisnica){
+function vyberFunction($podminka){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
 $stolpci=["*"];
 //$stolpci=["ime","priimek"];
 //$podminka = array("ime"=>"Jiří");
-$podminka = array("bolnisnica"=>$bolnisnica);
+//$podminka = array("bolnisnica"=>$bolnisnica);
 //$podminka = array("ime"=>"Jiří", "Ben"=>"37", "Joe"=>"43");
 
 
