@@ -11,19 +11,22 @@
 <?php
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 include '../skupne/database.php';
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  $data = strtolower($data);
-  return $data;
+function test_input($test) {
+  $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
+  $test = strtolower($test);
+  return $test;
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
+    $ime = test_input($_POST["ime"]);
+	  $priimek = test_input($_POST["priimek"]);
+	    $status = test_input($_POST["status"]);
   echo strtoupper($akce) .'<br>';
   echo strtoupper($bolnisnica) .'<br>';
-  echo var_dump($bolnisnica) .'<br>';
+  echo var_dump($status) .'<br>';
   //$akce = naredi($akce);
 
 
@@ -111,23 +114,10 @@ function deleteFunction(){
 <button onclick="izborFunction('delete')">delete</button>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-  
-
   <br><br>
- <!-- <label for="vyber"> vyber</label>  
-  <input type="radio" id="vyber" name="akce" value="vyber">
-  <label for="vloz"> vlož</label>
-  <input type="radio" id="vloz" name="akce" value="vloz">
-  <label for="edit"> spremeni</label>
-  <input type="radio" id="edit" name="akce" value="edit">
-  <label for="delete"> odstrani</label> 
-  <input type="radio" id="delete" name="akce" value="delete">-->
 
-  <!--<p id="formaId"></p> -->
 
 <input type="text" id="akceId" name="akce" value=""><br>
-
-<!--<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">-->
 <p id="demo"></p>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
@@ -135,10 +125,29 @@ function deleteFunction(){
 <script>
 function izborFunction(akce) {
   document.getElementById("akceId").value = akce;
- if(akce=="vyber"){ 
- document.getElementById("demo").innerHTML = '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';
-}
-}
+
+switch(akce) {
+  case "vyber":
+    document.getElementById("demo").innerHTML = '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';// omogoči izbiro bolnišnice
+    break; 
+  case "vloz":
+    bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';
+    ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime">';
+    priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek">';
+    status= '<input type="int" id="statusId" name="status" value="" placeholder="status">';
+    document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
+    // code block
+    break;
+  case y:
+    // code blo
+    break;
+  case y:
+    // code block
+    break;	
+  default:
+    // code block
+ }//od switch
+} // od izborFunction
 </script>
 
 <!--zapati-->
