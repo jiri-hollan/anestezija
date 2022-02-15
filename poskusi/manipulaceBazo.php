@@ -16,19 +16,19 @@ function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
   $test = htmlspecialchars($test);
-  $test = strtolower($test);
+ // $test = strtolower($test);
   return $test;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
-  $ime = test_input($_POST["ime"]);
-  $priimek = test_input($_POST["priimek"]);
-  $status = test_input($_POST["status"]);
+ // $ime = test_input($_POST["ime"]);
+  //$priimek = test_input($_POST["priimek"]);
+ // $status = test_input($_POST["status"]);
   echo strtoupper($akce) .'<br>';
   echo strtoupper($bolnisnica) .'<br>';
-  echo var_dump($status) .'<br>';
+  //echo var_dump($status) .'<br>';
   //$akce = naredi($akce);
 
 
@@ -41,6 +41,9 @@ switch ($akce) {
     vyberFunction($podminka);
     break;
 case "vloz":
+    $ime = test_input($_POST["ime"]);
+    $priimek = test_input($_POST["priimek"]);
+    $status = test_input($_POST["status"]);  
     $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
     vlozFunction($data);
     break;
