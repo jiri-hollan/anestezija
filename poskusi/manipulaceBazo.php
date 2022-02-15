@@ -21,9 +21,9 @@ function test_input($test) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
-    $ime = test_input($_POST["ime"]);
-	  $priimek = test_input($_POST["priimek"]);
-	    $status = test_input($_POST["status"]);
+  $ime = test_input($_POST["ime"]);
+  $priimek = test_input($_POST["priimek"]);
+  $status = test_input($_POST["status"]);
   echo strtoupper($akce) .'<br>';
   echo strtoupper($bolnisnica) .'<br>';
   echo var_dump($status) .'<br>';
@@ -38,7 +38,8 @@ switch ($akce) {
     vyberFunction($bolnisnica);
     break;
 case "vloz":
-    vlozFunction();
+    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
+    vlozFunction($data);
     break;
   case "edit":
      editFunction();
@@ -81,10 +82,10 @@ foreach ($vybrano[$i] as $key => $value) {
 }//od for
 }//od vyberFunction
 
-function vlozFunction(){
+function vlozFunction($data){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
-$data= array("bolnisnica"=>"izola", "ime"=>"Lela", "priimek"=>"Hollan", "status"=>"1");
+//$data= array("bolnisnica"=>"izola", "ime"=>"Lela", "priimek"=>"Hollan", "status"=>"1");
 
 $vloz = new database($tabulka,$data);
 //$vloz->vloz($tabulka,$data);
