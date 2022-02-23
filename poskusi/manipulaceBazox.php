@@ -80,32 +80,13 @@ echo count($vybrano);
 $dolzina=count($vybrano);
 //echo $vybrano[1];
 echo "<br>";
-
-
-echo "<table style='border: solid 1px black;'>";
-echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";
-
-class TableRows extends RecursiveIteratorIterator {
-    function __construct($it) {
-        parent::__construct($it, self::LEAVES_ONLY);
-    }
-
-    function current() { 
-		 return "<td  >" . "<input style='width: 150px;border:1px solid black;' value=" . parent::current() . "></input>". "</td>";
-    }
-    function beginChildren() {
-        echo "<tr>";
-    }
-    function endChildren() {
-        echo "</tr>" . "\n";
-    }
-}
-
-foreach(new TableRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
-        echo $v;
-
+for ($i = 0; $i < $dolzina; $i++) {
+foreach ($vybrano[$i] as $key => $value) {
+   // echo "$key: $value\n";
+	echo "$value\n";
 }//od foreach
-}//od vyberFunction  
+}//od for
+}//od vyberFunction
 
 function vlozFunction($data){
 //$tabulka="uporabnikiTbl2";
