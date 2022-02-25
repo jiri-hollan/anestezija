@@ -69,9 +69,9 @@ $stolpci=["*"];
 //$podminka = array("bolnisnica"=>$bolnisnica);
 //$podminka = array("ime"=>"Jiří", "Ben"=>"37", "Joe"=>"43");
 
-
-$vyber = new database($tabulka, $stolpci, $podminka );
-$vyber->vyber($tabulka, $stolpci, $podminka);
+$vyber = new database();
+//$vyber = new database($tabulka, $stolpci, $podminka );
+//$vyber->vyber($tabulka, $stolpci, $podminka);
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 echo var_dump($vybrano);
