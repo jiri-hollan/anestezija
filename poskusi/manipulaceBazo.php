@@ -13,16 +13,14 @@
 <button onclick="izborFunction('vloz')">vlož</button>
 <button onclick="izborFunction('edit')">edit</button>
 <button onclick="izborFunction('delete')">delete</button>
+
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-  <br><br>
-
-
-<input type="text" id="akceId" name="akce" value=""><br>
+<input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
+<p id="posli"></p>
+<!--<input type="submit" name="submit" value="Submit"> -->
 </form>
+ <br>
 <?php
  
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
@@ -41,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  // $ime = test_input($_POST["ime"]);
   //$priimek = test_input($_POST["priimek"]);
  // $status = test_input($_POST["status"]);
-  echo strtoupper($akce) .'<br>';
+  echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
   //$akce = naredi($akce);
@@ -92,7 +90,7 @@ $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 echo var_dump($vybrano);
 echo "<br>";
 echo count($vybrano);
-$dolzina=count($vybrano);
+//$dolzina=count($vybrano);
 //echo $vybrano[1];
 echo "<br>";
 
@@ -155,6 +153,7 @@ function izborFunction(akce) {
 switch(akce) {
   case "vyber":
     document.getElementById("demo").innerHTML = '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';// omogoči izbiro bolnišnice
+	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
     break; 
   case "vloz":
     bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';
@@ -162,10 +161,10 @@ switch(akce) {
     priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek">';
     status= '<input type="int" id="statusId" name="status" value="" placeholder="status">';
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
-    // code block
+	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
     break;
   case y:
-    // code blo
+    // code block
     break;
   case y:
     // code block
