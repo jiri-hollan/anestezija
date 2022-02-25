@@ -7,7 +7,22 @@
 </head>
 <body>
 <!--konec zahlavi-->
+<h2>PHP Form izbira funkcije</h2>
 
+<button onclick="izborFunction('vyber')">vyber</button>
+<button onclick="izborFunction('vloz')">vlož</button>
+<button onclick="izborFunction('edit')">edit</button>
+<button onclick="izborFunction('delete')">delete</button>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+  <br><br>
+
+
+<input type="text" id="akceId" name="akce" value=""><br>
+<p id="demo"></p>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
 <?php
  
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
@@ -132,22 +147,7 @@ function deleteFunction(){
 }//od editFunction
 
 ?>
-<h2>PHP Form izbira funkcije</h2>
 
-<button onclick="izborFunction('vyber')">vyber</button>
-<button onclick="izborFunction('vloz')">vlož</button>
-<button onclick="izborFunction('edit')">edit</button>
-<button onclick="izborFunction('delete')">delete</button>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-  <br><br>
-
-
-<input type="text" id="akceId" name="akce" value=""><br>
-<p id="demo"></p>
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
-</form>
 <script>
 function izborFunction(akce) {
   document.getElementById("akceId").value = akce;
