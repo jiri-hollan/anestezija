@@ -161,10 +161,10 @@ switch(akce) {
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
     break; 
   case "vloz":
-    bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';
-    ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime">';
-    priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek">';
-    status= '<input type="int" id="statusId" name="status" value="" placeholder="status">';
+    bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica" required>';
+    ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime" required>';
+    priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
+    status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
     break;
