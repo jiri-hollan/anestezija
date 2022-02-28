@@ -42,8 +42,8 @@ document.getElementById("nadpis").addEventListener("click", mySecondFunction);
 /////document.getElementById("myTable").addEventListener("click", myCetrtaFunction);
 /////document.getElementById("myTable").addEventListener("mouseout", myThirdFunction);
 //// document.getElementById("myTable").addEventListener("mouseover", functionOver);
-  document.getElementById("myTable").addEventListener("click", functionOver);
-//  document.getElementById("myTable").addEventListener("click", functionRow);
+ document.getElementById("myTable").addEventListener("click", functionOver);
+  //document.getElementById("myTable").addEventListener("click", functionRow);
 //const element = document.getElementsByTagName("TR");
 
 
@@ -68,8 +68,13 @@ function myCetrtaFunction() {
 	}
 function functionOver (e) {
 var x = e.target;
+if (x.nodeName == "TD") {
+var y = e.path[1];
+row_value = y.cells[0].innerHTML;
   document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
   document.getElementById("demo2").innerHTML = "Triggered by a " + x.innerHTML + " element";  
+  document.getElementById("demo3").innerHTML = "Prva celice je= " + row_value + " element";
+ }
 }
 function functionRow (e) {
 var x = e.path[1];
