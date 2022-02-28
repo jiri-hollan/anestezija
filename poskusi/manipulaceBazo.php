@@ -36,6 +36,7 @@ function test_input($test) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
+
  // $ime = test_input($_POST["ime"]);
   //$priimek = test_input($_POST["priimek"]);
  // $status = test_input($_POST["status"]);
@@ -50,7 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 switch ($akce) {
   case "vyber":
    // echo "to je vyber.<br>";
+   if ($bolnisnica == "") {
+	$podminka = NULL;
+} else {
     $podminka = array("bolnisnica"=>$bolnisnica);
+}
     vyberFunction($podminka);
     break;
 case "vloz":
