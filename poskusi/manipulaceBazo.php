@@ -21,6 +21,9 @@
 <!--<input type="submit" name="submit" value="Submit"> -->
 </form>
  <br>
+<!-- <p id="demo1">demo1</p>
+<p id="demo2">demo2</p>-->
+<p id="demo3">demo3</p>
 <?php
  
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
@@ -100,7 +103,7 @@ echo count($vybrano);
 echo "<br>";
 if(count($vybrano)>0){
 
-echo "<table style='border: solid 1px black;'>";
+echo "<table id='osebe' style='border: solid 1px black;'>";
 echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
@@ -157,6 +160,22 @@ function deleteFunction(){
 
 <script src="js/manipulaceBazo.js">
 </script>
+<script>
+ document.getElementById("osebe").addEventListener("click", functionOver);
+
+function functionOver (e) {
+var x = e.target;
+if (x.nodeName == "TD") {
+var y = e.path[1];
+row_value = y.cells[0].innerHTML;
+ /* document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
+  document.getElementById("demo2").innerHTML = "Triggered by a " + x.innerHTML + " element";  */
+  document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;
+ }
+}
+
+</script>
+
 
 <!--zapati-->
 </body>
