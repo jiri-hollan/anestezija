@@ -69,7 +69,9 @@ case "vloz":
     vlozFunction($data);
     break;
   case "edit":
-     editFunction();
+     $id = test_input($_POST["id"]);
+	 $podminka = array("id"=>$id);
+     editFunction($podminka);
     break;
  case "delete":
      deleteFunction();
@@ -81,6 +83,27 @@ case "vloz":
 	
 }//od switch
 }//od if
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  $akce = test_input($_GET["akce"]);
+  switch ($akce) {
+	   case "edit":
+     $id = test_input($_GET["id"]);
+	 $podminka = array("id"=>$id);
+     editFunction($podminka);
+    break;
+ case "delete":
+     deleteFunction();
+    break;	
+	
+    /*  ...*/
+  default:
+    echo "ni izvelo case"; 
+  }//od switch	  
+}//od if
+
+
+
 function vyberFunction($podminka){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
@@ -148,8 +171,29 @@ echo count($vlozeno);
 echo "<br>";
 }//od vlozFunction
 
-function editFunction(){
-	echo 'editFunction še ni napisana';
+function editFunction($podminka){
+//	echo 'editFunction še ni napisana';
+$tabulka="pregledovalciTbl";
+$stolpci=["*"];
+$vyber = new database($tabulka, $stolpci, $podminka );
+$vyber->vyber($tabulka, $stolpci, $podminka);
+$vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
+//echo $vybrano[1];
+echo var_dump($vybrano);
+echo "<br>";
+echo count($vybrano);
+$dolzina=count($vybrano);
+//echo $vybrano[1];
+echo "<br>";
+for ($i = 0; $i < $dolzina; $i++) {
+foreach ($vybrano[$i] as $key => $value) {
+   // echo "$key: $value\n";
+	echo "$value\n";
+}//od foreach
+}//od for	
+	
+	
+	
 }//od editFunction
 
 function deleteFunction(){
@@ -171,8 +215,9 @@ row_value = y.cells[0].innerHTML;
  /* document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
   document.getElementById("demo2").innerHTML = "Triggered by a " + x.innerHTML + " element";  */
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;
- }
-}
+  
+ }//od if
+}//od function(e)
 
 </script>
 
