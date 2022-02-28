@@ -156,7 +156,6 @@ function deleteFunction(){
 ?>
 
 <script src="js/manipulaceBazo.js">
-
 </script>
 
 <!--zapati-->
