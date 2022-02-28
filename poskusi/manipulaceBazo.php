@@ -98,7 +98,7 @@ echo count($vybrano);
 //$dolzina=count($vybrano);
 //echo $vybrano[1];
 echo "<br>";
-
+if(count($vybrano)>0){
 
 echo "<table style='border: solid 1px black;'>";
 echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";
@@ -123,6 +123,10 @@ foreach(new TableRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
         echo $v;
 
 }//od foreach
+}//od if(cout)
+else{
+echo "Za izbrano bolnico ni zapisa v bazi";	
+}//od else
 }//od vyberFunction  
 
 function vlozFunction($data){
