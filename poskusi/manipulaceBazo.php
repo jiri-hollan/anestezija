@@ -95,7 +95,7 @@ $vyber = new database();
 //$vyber->vyber($tabulka, $stolpci, $podminka);
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
-echo var_dump($vybrano);
+//echo var_dump($vybrano);
 echo "<br>";
 echo count($vybrano);
 //$dolzina=count($vybrano);
