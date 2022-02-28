@@ -115,7 +115,7 @@ class TableRows extends RecursiveIteratorIterator {
         echo "<tr>";
     }
     function endChildren() {
-        echo "</tr>" . "\n";
+        echo "<td  >uredi</td></tr>" . "\n";
     }
 }
 
