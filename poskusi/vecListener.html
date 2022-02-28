@@ -14,14 +14,17 @@ table, td {
   <tr>
     <td>cell 1</td>
     <td>cell 2</td>
+	<td>Uredi</td>
   </tr>
   <tr>
     <td>cell 3</td>
     <td>cell 4</td>
+	<td>Uredi</td>	
   </tr>
  <tr>
     <td>cell 5</td>
     <td>cell 6</td>
+	<td>Uredi</td>	
   </tr> 
 </table>
 <p id="demo"></p>
@@ -38,9 +41,9 @@ document.getElementById("nadpis").addEventListener("click", mySecondFunction);
 //document.getElementById("myTable").addEventListener("click", mySecondFunction);
 /////document.getElementById("myTable").addEventListener("click", myCetrtaFunction);
 /////document.getElementById("myTable").addEventListener("mouseout", myThirdFunction);
-
-//document.getElementById("myTable").addEventListener("mouseover", functionOver);
-  document.getElementById("myTable").addEventListener("click", functionRow);
+//// document.getElementById("myTable").addEventListener("mouseover", functionOver);
+  document.getElementById("myTable").addEventListener("click", functionOver);
+//  document.getElementById("myTable").addEventListener("click", functionRow);
 //const element = document.getElementsByTagName("TR");
 
 
@@ -66,6 +69,7 @@ function myCetrtaFunction() {
 function functionOver (e) {
 var x = e.target;
   document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
+  document.getElementById("demo2").innerHTML = "Triggered by a " + x.innerHTML + " element";  
 }
 function functionRow (e) {
 var x = e.path[1];
@@ -76,7 +80,7 @@ if (x == "TD") {
 }
   document.getElementById("demo1").innerHTML = "Triggered by a " + x + " element";
   document.getElementById("demo2").innerHTML = "Triggered by a " + x.parentNode + " element";
-   document.getElementById("demo3").innerHTML = "Triggered by a " + row_value + " element";
+  document.getElementById("demo3").innerHTML = "Prva celice je= " + row_value + " element";
   
 }
 
