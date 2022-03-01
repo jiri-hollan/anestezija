@@ -47,10 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
   //$akce = naredi($akce);
-
-
-
-
 switch ($akce) {
   case "vyber":
    // echo "to je vyber.<br>";
@@ -84,7 +80,7 @@ case "vloz":
 }//od switch
 }//od if
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
   $akce = test_input($_GET["akce"]);
   switch ($akce) {
 	   case "edit":
@@ -98,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	
     /*  ...*/
   default:
-    echo "ni izvelo case"; 
+    echo "ni izvelo  case"; 
   }//od switch	  
 }//od if
 
@@ -205,8 +201,9 @@ function deleteFunction(){
 <script src="js/manipulaceBazo.js">
 </script>
 <script>
+if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);
-
+}
 function functionOver (e) {
 var x = e.target;
 if (x.nodeName == "TD") {
