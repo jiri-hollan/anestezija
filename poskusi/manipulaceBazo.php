@@ -83,8 +83,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 	 $podminka = array("id"=>$id);
      editFunction($podminka);
     break;
- case "delete":
-     deleteFunction();
+ case "odstrani":
+      $id = test_input($_GET["id"]);
+	 echo "id uporabnika= " .  $id;
+	echo "<br>";
+    // deleteFunction();
     break;	
 	
     /*  ...*/
@@ -133,8 +136,11 @@ class TableRows extends RecursiveIteratorIterator {
     }
     function endChildren() {
 		$a = 'onclick="' . "izborFunction('uredi')" . '"';
+		$b = 'onclick="' . "izborFunction('odstrani')" . '"';
+        echo "<td onclick=" . '"izborFunction('. "'uredi'".')"'.'"' . ">uredi</td>
+		<td onclick=" . '"izborFunction('. "'odstrani'".')"'.'"' . ">odstrani</td>
 		
-        echo "<td onclick=" . '"izborFunction('. "'uredi'".')"'.'"' . ">uredi</td></tr>" . "\n";
+		</tr>" . "\n";
     }
 }
 

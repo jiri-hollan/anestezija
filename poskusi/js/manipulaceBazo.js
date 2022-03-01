@@ -34,7 +34,8 @@ row_value = y.cells[0].innerHTML;
 }//od function(e)
     break;
 
-  case y:
+  case "odstrani":
+  alert("v funkcijo odstrani");
     // code block
 
     break;	
