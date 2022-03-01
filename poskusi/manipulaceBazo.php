@@ -23,7 +23,7 @@
  <br>
 <!-- <p id="demo1">demo1</p>
 <p id="demo2">demo2</p>-->
-<p id="demo3">demo3</p>
+<p id="demo3"></p>
 <?php
  
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
@@ -178,11 +178,15 @@ echo "število vybranych zapisov= " . count($vybrano);
 $dolzina=count($vybrano);
 //echo $vybrano[1];
 echo "<br>";
+echo "<form>";
 for ($i = 0; $i < $dolzina; $i++) {
 foreach ($vybrano[$i] as $key => $value) {
    // echo "$key: $value\n";
-	echo "$value\n";
+	echo " $key: <input value=$value\n></input>";
+	//echo "$value\n";
 }//od foreach
+echo "<input type='submit'>";
+echo "</form>";
 }//od for	
 	
 	
