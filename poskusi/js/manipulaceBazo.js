@@ -19,6 +19,23 @@ switch(akce) {
   if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);
 }
+
+    break;
+
+  case "odstrani":
+  alert("v funkcijo odstrani");
+  if(document.getElementById("osebe")!=null){
+ document.getElementById("osebe").addEventListener("click", functionOver);
+}
+
+    // code block
+
+    break;	
+  default:
+    // code block
+ }//od switch
+} // od izborFunction
+
 function functionOver (e) {
 var x = e.target;
 if (x.nodeName == "TD") {
@@ -32,14 +49,3 @@ row_value = y.cells[0].innerHTML;
  window.location.href = "manipulaceBazo.php?akce=" + x.innerHTML + "&id=" + row_value;
   
 }//od function(e)
-    break;
-
-  case "odstrani":
-  alert("v funkcijo odstrani");
-    // code block
-
-    break;	
-  default:
-    // code block
- }//od switch
-} // od izborFunction
