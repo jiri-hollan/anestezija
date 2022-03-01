@@ -35,7 +35,7 @@ switch(akce) {
     // code block
  }//od switch
 } // od izborFunction
-
+//----------------------------------------------------------------------------------------
 function functionOver (e) {
 var x = e.target;
 if (x.nodeName == "TD") {
