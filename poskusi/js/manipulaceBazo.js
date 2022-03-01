@@ -14,8 +14,8 @@ switch(akce) {
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
     break;
-  case y:
-    // code block
+  case "uredi":
+  alert("urejam");
     break;
   case y:
     // code block

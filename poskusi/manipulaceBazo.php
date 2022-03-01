@@ -137,7 +137,9 @@ class TableRows extends RecursiveIteratorIterator {
         echo "<tr>";
     }
     function endChildren() {
-        echo "<td  >uredi</td></tr>" . "\n";
+		$a = 'onclick="' . "izborFunction('uredi')" . '"';
+		
+        echo "<td onclick=" . '"izborFunction('. "'uredi'".')"'.'"' . ">uredi</td></tr>" . "\n";
     }
 }
 
