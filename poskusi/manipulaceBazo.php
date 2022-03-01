@@ -64,16 +64,7 @@ case "vloz":
     $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
     vlozFunction($data);
     break;
-  case "edit":
-     $id = test_input($_POST["id"]);
-	 $podminka = array("id"=>$id);
-     editFunction($podminka);
-    break;
- case "delete":
-     deleteFunction();
-    break;	
-	
-    /*  ...*/
+
   default:
     echo "ni izvelo case";
 	
