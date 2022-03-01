@@ -29,7 +29,6 @@ row_value = y.cells[0].innerHTML;
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
  }//od if
  
- // window.location.href = "manipulaceBazo.php?akce=" + row_value; 
  window.location.href = "manipulaceBazo.php?akce=" + x.innerHTML + "&id=" + row_value;
   
 }//od function(e)

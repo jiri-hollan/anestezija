@@ -85,6 +85,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
   switch ($akce) {
 	   case "uredi":
      $id = test_input($_GET["id"]);
+	 echo "id uporabnika= " .  $id;
+	echo "<br>";
+	// var_dump($id);
+	// echo "<br>"; 
 	 $podminka = array("id"=>$id);
      editFunction($podminka);
     break;
@@ -131,7 +135,7 @@ class TableRows extends RecursiveIteratorIterator {
     }
 
     function current() { 
-		 return "<td  >" . "<input style='width: 150px;border:1px solid black;' value=" . parent::current() . "></input>". "</td>";
+		 return "<td  >"  . parent::current() . "</td>";
     }
     function beginChildren() {
         echo "<tr>";
@@ -177,9 +181,9 @@ $vyber = new database($tabulka, $stolpci, $podminka );
 $vyber->vyber($tabulka, $stolpci, $podminka);
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
-echo var_dump($vybrano);
+//echo var_dump($vybrano);
 echo "<br>";
-echo count($vybrano);
+echo "število vybranych zapisov= " . count($vybrano);
 $dolzina=count($vybrano);
 //echo $vybrano[1];
 echo "<br>";
