@@ -83,7 +83,7 @@ case "vloz":
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
   $akce = test_input($_GET["akce"]);
   switch ($akce) {
-	   case "edit":
+	   case "uredi":
      $id = test_input($_GET["id"]);
 	 $podminka = array("id"=>$id);
      editFunction($podminka);
@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 	
     /*  ...*/
   default:
-    echo "ni izvelo  case"; 
+    echo "ni izvelo get case"; 
   }//od switch	  
 }//od if
 
