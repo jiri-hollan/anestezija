@@ -307,23 +307,6 @@ $uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
 	}
 
 	
-/*	function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}*/
-	
-	
-	
-   // $data = array('geslo'=>"m");
-    //$podminka = array('id'=>5);
-//require_once '../../skupne/database.php';
-/*
-new Database;
-$uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
-//aktualizuj($tabulka,$data,$podminka);
-echo 'Število aktualiziranih zapisov: ' . $pocetAktualizovanych;*/
 }//od if $ server
 else {
 	echo "nekaj je narobe";
