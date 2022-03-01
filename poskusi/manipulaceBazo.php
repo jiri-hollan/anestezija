@@ -11,7 +11,7 @@
 
 <button onclick="izborFunction('vyber')">vyber</button>
 <button onclick="izborFunction('vloz')">vlož</button>
-<button onclick="izborFunction('edit')">edit</button>
+<button onclick="izborFunction('uredi')">uredi</button>
 <button onclick="izborFunction('delete')">delete</button>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
