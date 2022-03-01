@@ -202,24 +202,6 @@ function deleteFunction(){
 
 <script src="js/manipulaceBazo.js">
 </script>
-<script>
-if(document.getElementById("osebe")!=null){
- document.getElementById("osebe").addEventListener("click", functionOver);
-}
-function functionOver (e) {
-var x = e.target;
-if (x.nodeName == "TD") {
-var y = e.path[1];
-row_value = y.cells[0].innerHTML;
- /* document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
-  document.getElementById("demo2").innerHTML = "Triggered by a " + x.innerHTML + " element";  */
-  document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;
-  
- }//od if
-}//od function(e)
-
-</script>
-
 
 <!--zapati-->
 </body>
