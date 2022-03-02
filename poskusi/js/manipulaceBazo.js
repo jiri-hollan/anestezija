@@ -16,6 +16,7 @@ switch(akce) {
     break;
 
   case "uredi":
+  alert("v JS case edit");
   if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);
 }
