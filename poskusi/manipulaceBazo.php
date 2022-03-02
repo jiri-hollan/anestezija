@@ -199,7 +199,7 @@ echo "</form>";
 	
 }//od editFunction
 
-function deleteFunction(){
+function deleteFunction($podminka){
 	echo 'deleteFunction še ni napisana';
 }//od editFunction
 
