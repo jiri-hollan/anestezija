@@ -192,23 +192,24 @@ class Database {
 	public function odstrani($tabulka,$podminka){	
 	  $podminkaSQL = '';
 	  $parametry = array();
-	  if (is_array($podminka)) {
-		$i = 0;
-		foreach ($podminka as $sloupec=>$hodnota) {
-		  if ($i == 0)	{
-			$podminkaSQL .= " WHERE '$sloupec' = ?";
-		  } else {
-			 $podminkaSQL .= " AND '$sloupec' = ?"; 
-		  } //od else
-		  array_push($parametry, $hodnota);
-	      $i++;
-		}//od foreach
-	  }
 	  
-	$dotaz = $this->conn->prepare("DELETE FROM '$tabulka'".$podminkaSQL);
+if (is_array($podminka)){
+		$i = 0;
+		foreach ($podminka as $sloupec=>$hodnota){
+			if ($i == 0){
+				$podminkaSQL .=" WHERE $sloupec = ?";				
+			}else {
+				$podminkaSQL .= " OR $sloupec = ?";
+			}			
+			$parametry[$i] = $hodnota;
+			$i++;
+		}
+	}
+	  
+	$dotaz = $this->conn->prepare("DELETE FROM $tabulka".$podminkaSQL);
 	try {
 	  $dotaz->execute($parametry);
-	  $pocetOdstranenych = $otaz->rowCount();	
+	  $pocetOdstranenych = $dotaz->rowCount();	
 	} catch (PDException $e) {
 		echo $e->getMessage();
 		$pocetOdstranenych = false;
