@@ -204,7 +204,7 @@ function deleteFunction($podminka){
 
 ?>
 
-<script src="js/manipulaceBazo.js">
+<script src="js/manipulaceBazo.js?<?php echo time(); ?>">
 </script>
 
 <!--zapati-->
