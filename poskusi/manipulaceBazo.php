@@ -205,6 +205,7 @@ function odstraniFunction($podminka){
 	$tabulka="pregledovalciTbl";
 	$odstrani = new database();
 	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
+	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
 }//od odstraniFunction
 
 ?>
