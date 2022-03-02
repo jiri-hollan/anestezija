@@ -63,7 +63,19 @@ case "vloz":
     $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
     vlozFunction($data);
     break;
+case "uredi":
+    $tabulka="pregledovalciTbl";
+    $id=test_input($_POST["id"]);
+    $bolnisnica=test_input($_POST["bolnisnica"]);
+    $ime = test_input($_POST["ime"]);
+	$priimek = test_input($_POST["priimek"]);
+	$status = test_input($_POST["status"]); 
+	$podminka = array("id"=>$id);
+    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
+	$aktualizuj = new database($tabulka,$data,$podminka);
+	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
 
+    break;
   default:
     echo "ni izvelo case";
 	
