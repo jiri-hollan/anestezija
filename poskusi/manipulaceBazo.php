@@ -11,8 +11,7 @@
 
 <button onclick="izborFunction('vyber')">vyber</button>
 <button onclick="izborFunction('vloz')">vlož</button>
-<button onclick="izborFunction('uredi')">uredi</button>
-<button onclick="izborFunction('delete')">delete</button>
+
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="hidden" id="akceId" name="akce" value="">
@@ -191,7 +190,7 @@ foreach ($vybrano[$i] as $key => $value) {
 	echo " $key: <input value=$value\n></input>";
 	//echo "$value\n";
 }//od foreach
-echo "<input type='submit'>";
+echo "<br><br><button type='submit'>submit</button><button type='reset'>reset</button> ";
 echo "</form>";
 }//od for	
 	

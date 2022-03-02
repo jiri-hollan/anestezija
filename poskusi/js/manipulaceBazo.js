@@ -12,7 +12,7 @@ switch(akce) {
     priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
     status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
-	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
+	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
 
   case "uredi":
