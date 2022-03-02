@@ -26,6 +26,7 @@ switch(akce) {
   alert("v funkciji JS odstrani");
   if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);
+ 
 }
 
     // code block
