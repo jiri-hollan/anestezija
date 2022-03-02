@@ -23,7 +23,7 @@ switch(akce) {
     break;
 
   case "odstrani":
-  alert("v funkcijo odstrani");
+  alert("v funkciji JS odstrani");
   if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);
 }

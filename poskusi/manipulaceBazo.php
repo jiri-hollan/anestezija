@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
       $id = test_input($_GET["id"]);
 	 echo "id uporabnika= " .  $id;
 	echo "<br>";
-    // deleteFunction();
+    // odstraniFunction();
     break;	
 	
     /*  ...*/
@@ -198,9 +198,12 @@ echo "</form>";
 	
 }//od editFunction
 
-function deleteFunction($podminka){
-	echo 'deleteFunction še ni napisana';
-}//od editFunction
+function odstraniFunction($podminka){
+	echo 'odstraniFunction še ni napisana';
+	$tabulka="pregledovalciTbl";
+	$odstrani = new database();
+	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
+}//od odstraniFunction
 
 ?>
 
