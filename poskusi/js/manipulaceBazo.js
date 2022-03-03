@@ -24,11 +24,21 @@ switch(akce) {
     break;
 
   case "odstrani":
-  alert("v funkciji JS odstrani");
-  if(document.getElementById("osebe")!=null){
+
+  
+  if ( confirm("v funkciji JS odstrani\odstranim en zapis?") == true) {
+    if(document.getElementById("osebe")!=null){
+    document.getElementById("osebe").addEventListener("click", functionOver);
+      }
+} else {
+  text = "You canceled!";
+}
+  
+  
+ /* if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);
  
-}
+}*/
 
     // code block
 
