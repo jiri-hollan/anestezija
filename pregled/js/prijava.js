@@ -57,6 +57,7 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
 
     text = localStorage.getItem("aktivnaBolnica");	
 	//alert("lista zdravnikov " + text);
+// zdravList je array zapisan tu	
 switch (text) {
    case "SBI":	
 var zdravList  =[
