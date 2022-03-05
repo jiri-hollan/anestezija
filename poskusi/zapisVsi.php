@@ -4,7 +4,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="css/baze.css?<?php echo time(); ?>">
+<!--<link rel="stylesheet" type="text/css" href="css/baze.css?<?php echo time(); ?>">-->
 </head>
 <body>
 
@@ -19,7 +19,6 @@ Class PoberZapis{
 	public $zaklad;
 	public $status;
 	public $pristop;
-	public $celoIme=array();
 	public function __construct($bolnisnica) {
  $this->bolnisnica = $bolnisnica;
  $this->conn = new Database();	
@@ -35,19 +34,33 @@ echo'<br>';
 $vrstice = json_encode($prebrano);	
 echo $vrstice;
 echo'<br><br>';
-var_dump($prebrano);
-echo'<br>';
-echo $prebrano[0]["ime"].'<br>';
-for ($i = 0; $i < count($prebrano); $i++) {
-echo $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"];	
-//array_push($celoIme,$prebrano[$i]["ime"]);	
 //var_dump($prebrano);
+echo'<br>';
+//echo $prebrano[0]["ime"].'<br>';
+$celoIme=array();
+for ($i = 0; $i < count($prebrano); $i++) {
+//echo $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"].'<br>';	
+$celoIme1= $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"];
+//echo $celoIme1.'<br>';
+array_push($celoIme,$celoIme1);	
+//array_push($celoIme,$prebrano[$i]["ime"]);	
+
 }//od for 
+//var_dump($celoIme);
+$celoImeJson = json_encode($celoIme);	
+echo $celoImeJson;
+echo '<script>';
+echo 'var celoImeJson= ' . json_encode( $celoImeJson) . ';';
+echo '</script>';
+
 	}//od construct	
 	}//od class PoberZapis
 new PoberZapis("izola");
 ?>
+<script>
+alert("variabla 1:" + celoImeJson);
 
+</script>
 
  </body>
   </html>

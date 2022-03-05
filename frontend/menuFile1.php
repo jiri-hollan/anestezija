@@ -37,18 +37,11 @@ echo '
 	'<script>
     document.getElementById("prij").innerHTML = "Odjava";
 	document.getElementById("uname").innerHTML = "prijavljen";	
-     </script>'	
-	 ;
-   }
-   
-   echo '
-
-</ul>
-</nav>
-';
-   }
-//od class MenuAnestiz  
-}
+     </script>';
+   }//od if
+      echo '</ul></nav>';
+   }//od construct
+}//od class MenuAnestiz  
  $adminAnestiz = new MenuAnestiz(); 
 require_once('sabloni/vkladane/zapati.php'); 
 ?>
