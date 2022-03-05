@@ -70,7 +70,7 @@ new PoberZapis("izola");
 ?>
 <script>
 alert("celo ime Json:" + celoImeJson);
-
+var zdravList = JSON.parse(celoImeJson);
 </script>
 
  </body>
