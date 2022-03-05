@@ -19,7 +19,7 @@ Class PoberZapis{
 	public $zaklad;
 	public $status;
 	public $pristop;
-	
+	public $celoIme=array();
 	public function __construct($bolnisnica) {
  $this->bolnisnica = $bolnisnica;
  $this->conn = new Database();	
@@ -36,9 +36,15 @@ $vrstice = json_encode($prebrano);
 echo $vrstice;
 echo'<br><br>';
 var_dump($prebrano);
+echo'<br>';
+echo $prebrano[0]["ime"].'<br>';
+for ($i = 0; $i < count($prebrano); $i++) {
+echo $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"];	
+//array_push($celoIme,$prebrano[$i]["ime"]);	
+//var_dump($prebrano);
+}//od for 
 	}//od construct	
-	
-}//od class PoberZapis
+	}//od class PoberZapis
 new PoberZapis("izola");
 ?>
 
