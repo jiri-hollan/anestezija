@@ -33,25 +33,15 @@ Class PoberZapis{
 // $stolpci = array('*');
    $stolpci = array('ime','priimek');
 //bolnisnicapregledId je obsoječa bolnisnica v tabeli pregledovalciTbl
-   $podminka = array("bolnisnica"=>$this->bolnisnica);
-   
+   $podminka = array("bolnisnica"=>$this->bolnisnica);  
    $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
-   
- 
-echo "<table id='osebe' style='border: solid 1px black;'>";
-echo "<tr><th>ime</th><th>priimek</th></tr>";
-
-foreach(new TableRows(new RecursiveArrayIterator($prebrano)) as $k=>$v) {
-        echo $v;
-
-}//od foreach 
-   
+     
 echo '<br>Število najdenih zapisov zapis po '. $this->bolnisnica .': '.count($prebrano);	
 echo'<br>';
 //json_encode($prebrano);	
-$vrstice = json_encode($prebrano);	
+$vrstice = json_encode($prebrano, JSON_UNESCAPED_UNICODE);	
 echo $vrstice;
-echo'<br><br>';
+echo'<br>';
 //var_dump($prebrano);
 echo'<br>';
 //echo $prebrano[0]["ime"].'<br>';
@@ -59,40 +49,24 @@ $celoIme=array();
 for ($i = 0; $i < count($prebrano); $i++) {
 //echo $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"].'<br>';	
 $celoIme1= $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"];
-//echo $celoIme1.'<br>';
+echo $celoIme1.'<br>';//izpiše celo ime na zaslon
 array_push($celoIme,$celoIme1);	
 //array_push($celoIme,$prebrano[$i]["ime"]);	
 
 }//od for 
-//var_dump($celoIme);
-$celoImeJson = json_encode($celoIme);	
+echo '<br>var dump celo ime:<br>';
+var_dump($celoIme);
+$celoImeJson = json_encode($celoIme, JSON_UNESCAPED_UNICODE);
+echo'<br><br>celo ime json:<br>';	
 echo $celoImeJson;
 echo '<script>';
-echo 'var celoImeJson= ' . json_encode( $celoImeJson) . ';';
+echo 'var celoImeJson= ' . json_encode( $celoImeJson, JSON_UNESCAPED_UNICODE) . ';';
 echo '</script>';
 
 	}//od construct	
 	}//od class PoberZapis
 new PoberZapis("izola");
  
-class TableRows extends RecursiveIteratorIterator {
-    function __construct($it) {
-        parent::__construct($it, self::LEAVES_ONLY);
-    }
-
-    function current() { 
-		 return "<td  >"  . parent::current() . "</td>";
-    }
-    function beginChildren() {
-        echo "<tr>";
-    }
-    function endChildren() {
-		
-        echo "
-		
-		</tr>" . "\n";
-    }
-}
 ?>
 <script>
 alert("variabla 1:" + celoImeJson);
