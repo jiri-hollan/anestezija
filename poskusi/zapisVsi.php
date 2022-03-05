@@ -10,7 +10,14 @@
 
 
 
-
+<!DOCTYPE html>
+<html lang="cs-SI">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 <?php
 //------na temelju pregledId pobere podatke iz zapisa z bolnišnice
 require_once '../skupne/database.php';
@@ -27,7 +34,18 @@ Class PoberZapis{
    $stolpci = array('ime','priimek');
 //bolnisnicapregledId je obsoječa bolnisnica v tabeli pregledovalciTbl
    $podminka = array("bolnisnica"=>$this->bolnisnica);
+   
    $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
+   
+ 
+echo "<table id='osebe' style='border: solid 1px black;'>";
+echo "<tr><th>ime</th><th>priimek</th></tr>";
+
+foreach(new TableRows(new RecursiveArrayIterator($prebrano)) as $k=>$v) {
+        echo $v;
+
+}//od foreach 
+   
 echo '<br>Število najdenih zapisov zapis po '. $this->bolnisnica .': '.count($prebrano);	
 echo'<br>';
 //json_encode($prebrano);	
@@ -56,6 +74,25 @@ echo '</script>';
 	}//od construct	
 	}//od class PoberZapis
 new PoberZapis("izola");
+ 
+class TableRows extends RecursiveIteratorIterator {
+    function __construct($it) {
+        parent::__construct($it, self::LEAVES_ONLY);
+    }
+
+    function current() { 
+		 return "<td  >"  . parent::current() . "</td>";
+    }
+    function beginChildren() {
+        echo "<tr>";
+    }
+    function endChildren() {
+		
+        echo "
+		
+		</tr>" . "\n";
+    }
+}
 ?>
 <script>
 alert("variabla 1:" + celoImeJson);
