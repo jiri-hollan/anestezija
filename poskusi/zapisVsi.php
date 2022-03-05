@@ -30,7 +30,7 @@ Class PoberZapis{
    $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
 echo '<br>Število najdenih zapisov zapis po '. $this->bolnisnica .': '.count($prebrano);	
 echo'<br>';
-json_encode($prebrano);	
+//json_encode($prebrano);	
 $vrstice = json_encode($prebrano);	
 echo $vrstice;
 	}//od construct	
