@@ -24,7 +24,8 @@ Class PoberZapis{
  $this->bolnisnica = $bolnisnica;
  $this->conn = new Database();	
  $this->nameTable = 'pregledovalciTbl';
-   $stolpci = array('*');
+// $stolpci = array('*');
+   $stolpci = array('ime','priimek');
 //bolnisnicapregledId je obsoječa bolnisnica v tabeli pregledovalciTbl
    $podminka = array("bolnisnica"=>$this->bolnisnica);
    $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
@@ -33,6 +34,8 @@ echo'<br>';
 //json_encode($prebrano);	
 $vrstice = json_encode($prebrano);	
 echo $vrstice;
+echo'<br><br>';
+var_dump($prebrano);
 	}//od construct	
 	
 }//od class PoberZapis
