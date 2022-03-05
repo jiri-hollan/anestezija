@@ -69,7 +69,7 @@ new PoberZapis("izola");
  
 ?>
 <script>
-alert("variabla 1:" + celoImeJson);
+alert("celo ime Json:" + celoImeJson);
 
 </script>
 
