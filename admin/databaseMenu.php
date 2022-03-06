@@ -29,6 +29,7 @@ echo '
 <li><a href="../admin1/navodila/uporabnikiBase.php">prikaži uporabnike</a></li><br>
 <li><a href="../admin1/navodila/kreateTablePregledovalci.php">naredi tabelo: pregledovalciTbl</a></li>
 <li><a href="../admin1/navodila/pregledovalciBase.php">prikaži pregledovalce</a></li>
+<li><a href="../admin/manipulaceBazo.php">upravljanje z pregledovalci</a></li>
 </ul>
 </div>
 ';
