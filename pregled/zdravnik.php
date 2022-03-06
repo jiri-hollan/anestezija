@@ -50,8 +50,6 @@ ________________________________________________________________________________
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
 <p id="result"> </p>
 
- >
-
 </div>
 
 <div class="navbar" id="navBolnice" style='display:z-index:1;'>
