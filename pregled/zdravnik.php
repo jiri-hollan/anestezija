@@ -67,7 +67,7 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
   alert("celo ime Json:" + celoImeJson);
 var zdravListX = JSON.parse(celoImeJson);
   listaZdravnikovFunction(zdravListX);
-  </script
+  </script>
     <!-- <button id="buttonDomov" onclick="window.location.href='../menuFile.php';"> Domov </button>-->
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 	 <!-- Preklapljanje med bolnišnicami -->

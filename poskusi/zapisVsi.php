@@ -36,14 +36,14 @@ Class PoberZapis{
    $podminka = array("bolnisnica"=>$this->bolnisnica);  
    $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
      
-echo '<br>Število najdenih zapisov zapis po '. $this->bolnisnica .': '.count($prebrano);	
-echo'<br>';
+//echo '<br>Število najdenih zapisov zapis po '. $this->bolnisnica .': '.count($prebrano);	
+//echo'<br>';
 //json_encode($prebrano);	
 //$vrstice = json_encode($prebrano, JSON_UNESCAPED_UNICODE);	
 //echo $vrstice;
 //echo'<br>';
 //var_dump($prebrano);
-echo'<br>';
+//echo'<br>';
 //echo $prebrano[0]["ime"].'<br>';
 $celoIme=array();
 for ($i = 0; $i < count($prebrano); $i++) {
