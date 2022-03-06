@@ -22,11 +22,14 @@
  <br>
 <!-- <p id="demo1">demo1</p>
 <p id="demo2">demo2</p>-->
-<p id="demo3"></p>
+
 <?php
- 
+echo 'Menipulacija z bazo';
+ require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 include '../../skupne/database.php';
+echo'<p id="demo3"></p>';
+
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
