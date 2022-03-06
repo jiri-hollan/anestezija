@@ -2,7 +2,7 @@
 <?php
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
-include '../../skupne/database.php';
+ require_once '../../skupne/database.php';
 echo'';
 
 function test_input($test) {
