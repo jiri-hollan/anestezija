@@ -64,8 +64,8 @@ require_once('../poskusi/zapisVsi.php');
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 ?>
  <script>
-  alert("celo ime Json:" + celoImeJson);
-var zdravListX = JSON.parse(celoImeJson);
+ // alert("celo ime Json:" + celoImeJson);
+  var zdravListX = JSON.parse(celoImeJson);
   listaZdravnikovFunction(zdravListX);
   </script>
     <!-- <button id="buttonDomov" onclick="window.location.href='../menuFile.php';"> Domov </button>-->
