@@ -28,12 +28,13 @@ Class PoberZapis{
 	public $pristop;
 	public function __construct($bolnisnica) {
  $this->bolnisnica = $bolnisnica;
+  $this->status = '1';
  $this->conn = new Database();	
  $this->nameTable = 'pregledovalciTbl';
 // $stolpci = array('*');
    $stolpci = array('ime','priimek');
 //bolnisnicapregledId je obsoječa bolnisnica v tabeli pregledovalciTbl
-   $podminka = array("bolnisnica"=>$this->bolnisnica);  
+   $podminka = array("bolnisnica"=>$this->bolnisnica,"status"=>$this->status);  
    $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
      
 //echo '<br>Število najdenih zapisov zapis po '. $this->bolnisnica .': '.count($prebrano);	
