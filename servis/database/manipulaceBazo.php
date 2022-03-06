@@ -3,8 +3,18 @@
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once '../../skupne/database.php';
-echo'';
-
+?>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<input type="hidden" id="akceId" name="akce" value="">
+<p id="demo"></p>
+<p id="posli"></p>
+<!--<input type="submit" name="submit" value="Submit"> -->
+</form>
+ <br>
+<!-- <p id="demo1">demo1</p>
+<p id="demo2">demo2</p>-->
+<p id="demo3"></p>
+<?php
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
@@ -206,16 +216,7 @@ function odstraniFunction($podminka){
 <button onclick="izborFunction('vloz')">vlož</button>
 
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-<input type="hidden" id="akceId" name="akce" value="">
-<p id="demo"></p>
-<p id="posli"></p>
-<!--<input type="submit" name="submit" value="Submit"> -->
-</form>
- <br>
-<!-- <p id="demo1">demo1</p>
-<p id="demo2">demo2</p>-->
-<p id="demo3"></p>
+
 <!--zapati-->
 </body>
 </html>
