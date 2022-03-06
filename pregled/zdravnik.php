@@ -63,8 +63,10 @@ require_once('../poskusi/zapisVsi.php');
 //echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 ?>
-
-
+<script>
+alert("celo ime Json:" + celoImeJson);
+var zdravList = JSON.parse(celoImeJson);
+</script>
     <!-- <button id="buttonDomov" onclick="window.location.href='../menuFile.php';"> Domov </button>-->
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 	 <!-- Preklapljanje med bolnišnicami -->

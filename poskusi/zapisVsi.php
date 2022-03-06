@@ -39,9 +39,9 @@ Class PoberZapis{
 echo '<br>Število najdenih zapisov zapis po '. $this->bolnisnica .': '.count($prebrano);	
 echo'<br>';
 //json_encode($prebrano);	
-$vrstice = json_encode($prebrano, JSON_UNESCAPED_UNICODE);	
-echo $vrstice;
-echo'<br>';
+//$vrstice = json_encode($prebrano, JSON_UNESCAPED_UNICODE);	
+//echo $vrstice;
+//echo'<br>';
 //var_dump($prebrano);
 echo'<br>';
 //echo $prebrano[0]["ime"].'<br>';
@@ -49,16 +49,16 @@ $celoIme=array();
 for ($i = 0; $i < count($prebrano); $i++) {
 //echo $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"].'<br>';	
 $celoIme1= $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"];
-echo $celoIme1.'<br>';//izpiše celo ime na zaslon
+//echo $celoIme1.'<br>';//izpiše celo ime na zaslon
 array_push($celoIme,$celoIme1);	
 //array_push($celoIme,$prebrano[$i]["ime"]);	
 
 }//od for 
-echo '<br>var dump celo ime:<br>';
-var_dump($celoIme);
+//echo '<br>var dump celo ime:<br>';
+//var_dump($celoIme);
 $celoImeJson = json_encode($celoIme, JSON_UNESCAPED_UNICODE);
-echo'<br><br>celo ime json:<br>';	
-echo $celoImeJson;
+//echo'<br><br>celo ime json:<br>';	
+//echo $celoImeJson;
 echo '<script>';
 echo 'var celoImeJson= ' . json_encode( $celoImeJson, JSON_UNESCAPED_UNICODE) . ';';
 echo '</script>';
