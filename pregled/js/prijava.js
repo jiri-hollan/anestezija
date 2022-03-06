@@ -63,7 +63,8 @@ alert(zdravListX);
 
 switch (text) {
    case "SBI":	
-var zdravList  =[
+ var zdravList  = zdravListX; 
+/*var zdravList  =[
 "Nadežda&nbsp;Crnić&nbsp;Tokić",
 "Damjan&nbsp;Polh",
 "Tea&nbsp;Priman",
@@ -82,7 +83,7 @@ var zdravList  =[
 "Nevenka&nbsp;Pavšek",
 "Dominik&nbsp;Čarman",
 "Petra&nbsp;Makovec",
-];
+];*/
 document.getElementById("aktBolnica").innerHTML = "<h1>Izola</h1> "; 
        break;
     case "SBJ":
