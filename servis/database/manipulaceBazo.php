@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html lang="cs-SI">
-<head>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<!--konec zahlavi-->
-<h2>PHP Form izbira funkcije</h2>
-
-<button onclick="izborFunction('vyber')">vyber</button>
-<button onclick="izborFunction('vloz')">vlož</button>
-
-
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-<input type="hidden" id="akceId" name="akce" value="">
-<p id="demo"></p>
-<p id="posli"></p>
-<!--<input type="submit" name="submit" value="Submit"> -->
-</form>
- <br>
-<!-- <p id="demo1">demo1</p>
-<p id="demo2">demo2</p>-->
 
 <?php
-echo 'Menipulacija z bazo';
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 include '../../skupne/database.php';
-echo'<p id="demo3"></p>';
+echo'';
 
 function test_input($test) {
   $test = trim($test);
@@ -227,7 +202,20 @@ function odstraniFunction($podminka){
 
 <script src="js/manipulaceBazo.js?<?php echo time(); ?>">
 </script>
+<button onclick="izborFunction('vyber')">vyber</button>
+<button onclick="izborFunction('vloz')">vlož</button>
 
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<input type="hidden" id="akceId" name="akce" value="">
+<p id="demo"></p>
+<p id="posli"></p>
+<!--<input type="submit" name="submit" value="Submit"> -->
+</form>
+ <br>
+<!-- <p id="demo1">demo1</p>
+<p id="demo2">demo2</p>-->
+<p id="demo3"></p>
 <!--zapati-->
 </body>
 </html>
