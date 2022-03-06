@@ -58,6 +58,10 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
     text = localStorage.getItem("aktivnaBolnica");	
 	//alert("lista zdravnikov " + text);
 // tu bo prišla koda, ki naredi array zdravList iz tabele pregledovalci	
+
+alert("celo ime Json:" + celoImeJson);
+var zdravList = JSON.parse(celoImeJson);
+
 switch (text) {
    case "SBI":	
 var zdravList  =[

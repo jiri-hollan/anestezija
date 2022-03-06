@@ -58,6 +58,7 @@ ________________________________________________________________________________
 <?php
 
 require_once('../skupne/home.php');
+require_once('../poskusi/zapisVsi.php');
 
 //echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';

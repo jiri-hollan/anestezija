@@ -68,10 +68,11 @@ echo '</script>';
 new PoberZapis("izola");
  
 ?>
-<script>
+<script>/*
 alert("celo ime Json:" + celoImeJson);
 var zdravList = JSON.parse(celoImeJson);
-</script>
+
+*/</script>
 
  </body>
   </html>
