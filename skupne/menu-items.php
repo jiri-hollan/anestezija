@@ -7,7 +7,8 @@
 	 $a1= ' <li><a href="https://docs.google.com/spreadsheets/d/1XJEgArtGUnVuhZ1m4KmNVgukA-WPdkwzV4gdR0r4JbY/edit#gid=0">koledar</a></li>'; 
 	  /*<li><a href="../oddelek/razpisMeseci.php?pogled=raz">Razpored</a> </li> to je bil predstojnikov razpis pod $a1 */
 	 
-	 $a2= '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>';
+	 $a2= '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>
+	       <li><a href="../servis/database/pregledovalciMenu.php">pregledovalci</a> </li>'; 
 	 $a3= '<li><a href="../admin/databaseMenu.php">database</a> </li>'; 
 	 
 ?>
