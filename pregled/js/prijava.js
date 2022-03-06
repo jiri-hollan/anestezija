@@ -50,7 +50,7 @@ function naprejFunction() {
 	 window.open("bolnik.php", "_self"); 
 }
 
-function listaZdravnikovFunction() {
+function listaZdravnikovFunction(zdravListX) {
 	//alert ("lista zdravnikov function");
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 //document.getElementById("aktBolnica").innerHTML = "Za:  " + localStorage.getItem("aktivnaBolnica");
@@ -59,7 +59,7 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
 	//alert("lista zdravnikov " + text);
 // tu bo prišla koda, ki naredi array zdravList iz tabele pregledovalci	
 
-
+alert(zdravListX);
 
 switch (text) {
    case "SBI":	

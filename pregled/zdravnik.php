@@ -50,7 +50,7 @@ ________________________________________________________________________________
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
 <p id="result"> </p>
 
-  <script>listaZdravnikovFunction();</script>
+ >
 
 </div>
 
@@ -63,10 +63,11 @@ require_once('../poskusi/zapisVsi.php');
 //echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 ?>
-<script>
-alert("celo ime Json:" + celoImeJson);
-var zdravList = JSON.parse(celoImeJson);
-</script>
+ <script>
+  alert("celo ime Json:" + celoImeJson);
+var zdravListX = JSON.parse(celoImeJson);
+  listaZdravnikovFunction(zdravListX);
+  </script
     <!-- <button id="buttonDomov" onclick="window.location.href='../menuFile.php';"> Domov </button>-->
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 	 <!-- Preklapljanje med bolnišnicami -->
