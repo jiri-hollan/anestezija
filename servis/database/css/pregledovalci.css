@@ -1,0 +1,20 @@
+#vyberId{
+  font-size: 2em;
+  background-color: lightblue;
+}
+#vlozId{
+  font-size: 2em;
+  background-color: lightblue;
+}
+.urediCls{
+  font-size: 2em;
+  background-color: yellow;
+}
+.odstraniCls{
+  font-size: 2em;
+  background-color: lightPink;
+}
+.submit{
+  font-size: 2em;
+  background-color: lightGreen;
+}

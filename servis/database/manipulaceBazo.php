@@ -4,6 +4,10 @@
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once '../../skupne/database.php';
 ?>
+<br>
+<button id="vyberId" onclick="izborFunction('vyber')">vyber</button>
+<button id="vlozId" onclick="izborFunction('vloz')">vlož</button>
+
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
@@ -138,8 +142,8 @@ class TableRows extends RecursiveIteratorIterator {
     function endChildren() {
 		$a = 'onclick="' . "izborFunction('uredi')" . '"';
 		$b = 'onclick="' . "izborFunction('odstrani')" . '"';
-        echo "<td onclick=" . '"izborFunction('. "'uredi'".')"'.'"' . ">uredi</td>
-		<td onclick=" . '"izborFunction('. "'odstrani'".')"'.'"' . ">odstrani</td>
+        echo "<td class='urediCls' onclick=" . '"izborFunction('. "'uredi'".')"'.'"' . ">uredi</td>
+		<td class='odstraniCls' onclick=" . '"izborFunction('. "'odstrani'".')"'.'"' . ">odstrani</td>
 		
 		</tr>" . "\n";
     }
@@ -192,7 +196,7 @@ foreach ($vybrano[$i] as $key => $value) {
 	echo " $key: <input name=$key value=$value\n></input>";
 	//echo "$value\n";
 }//od foreach
-echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button type='submit'>submit</button><button type='reset'>reset</button> ";
+echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button class='submit' type='submit'>potrdi</button><button type='reset'>reset</button> ";
 echo "</form>";
 }//od for	
 	
@@ -212,8 +216,6 @@ function odstraniFunction($podminka){
 
 <script src="js/manipulaceBazo.js?<?php echo time(); ?>">
 </script>
-<button onclick="izborFunction('vyber')">vyber</button>
-<button onclick="izborFunction('vloz')">vlož</button>
 
 
 

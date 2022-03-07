@@ -3,7 +3,7 @@ function izborFunction(akce) {
 switch(akce) {
   case "vyber":
     document.getElementById("demo").innerHTML = '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';// omogoči izbiro bolnišnice
-	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
+	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
     break; 
 
   case "vloz":
@@ -12,7 +12,7 @@ switch(akce) {
     priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
     status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
-	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset">'; //submit+reset
+	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
 
   case "uredi":
