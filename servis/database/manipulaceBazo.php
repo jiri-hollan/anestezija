@@ -67,9 +67,9 @@ case "uredi":
      editFunction($podminka);
     break;
 case "odstrani":
-      $id = test_input($_GET["id"]);
+     $id = test_input($_GET["id"]);
 	 echo "id uporabnika= " .  $id;
-	echo "<br>";
+	 echo "<br>";
     $podminka = array("id"=>$id);
 	odstraniFunction($podminka);
     // odstraniFunction();

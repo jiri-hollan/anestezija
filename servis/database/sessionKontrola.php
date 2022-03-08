@@ -5,7 +5,6 @@ require_once('../sabloni/vkladane/zahlavi.php');
 class Administrace {
 	public $conn;
 	public $zaklad;
-	
 	public function __construct() {
 	  $this->conn = new Database();
       $this->zaklad = new stdClass();
