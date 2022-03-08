@@ -35,8 +35,7 @@ case "vloz":
     $priimek = test_input($_POST["priimek"]);
     $status = test_input($_POST["status"]);  
 	$vloz = new Vloz($bolnisnica, $tabulka, $ime, $priimek, $status);
-	$vloz->vlozFunction();
-	
+	$vloz->vlozFunction();	
     break;
 case "uredi":
     $tabulka="pregledovalciTbl";
@@ -44,8 +43,7 @@ case "uredi":
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
 	$priimek = test_input($_POST["priimek"]);
-	$status = test_input($_POST["status"]); 
-	
+	$status = test_input($_POST["status"]); 	
 	$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
 	$uredi->aktualizujFunction();
     break;
@@ -84,19 +82,7 @@ default:
 
  
 //_______________________________________________________________________________
-function vlozFunction($data){
-//$tabulka="uporabnikiTbl2";
-$tabulka="pregledovalciTbl";
-//primer polja: $data= array("bolnisnica"=>"izola", "ime"=>"Lela", "priimek"=>"Hollan", "status"=>"1");
-$vloz = new database();
-$vlozeno=$vloz->vloz($tabulka,$data );
-//echo $vlozeno[1];
-echo "<br>";
-echo var_dump($vlozeno);
-echo "<br>";
-echo count($vlozeno);
-echo "<br>";
-}//od vlozFunction
+
 //__________________________________________________________________________________
 function editFunction($podminka){
 //	echo 'editFunction opšalje podatke v urediFunction';
