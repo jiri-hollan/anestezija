@@ -33,7 +33,7 @@
   public $tabulka;
   public $stolpci;
   
-  function __construct($bolnisnica, $tabulka) {
+  function __construct($bolnisnica, $tabulka, $stolpci) {
 	$this->bolnisnica = $bolnisnica; 	  
     $this->tabulka = $tabulka; 
     $this->stolpci = $stolpci;	

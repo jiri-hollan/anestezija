@@ -22,13 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //$akce = naredi($akce);
 switch ($akce) {
 case "vyber":
-   // echo "to je vyber.<br>";
-   if ($bolnisnica == "") {
-	$podminka = NULL;
-   } else {
-    $podminka = array("bolnisnica"=>$bolnisnica);
-   }
-    vyberFunction($podminka);
+    $bolnisnica=test_input($_POST["bolnisnica"]);		
+    $tabulka="pregledovalciTbl";
+    $stolpci=["*"];
+	$vyber = new vyber($bolnisnica, $tabulka,$stolpci);
+	$vyber->vyberFunction();
     break;
 case "vloz":
     $ime = test_input($_POST["ime"]);
@@ -47,10 +45,6 @@ case "uredi":
 	
 	$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
 	$uredi->aktualizujFunction();
-	/*$podminka = array("id"=>$id);
-    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
-	$aktualizuj = new database();
-	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);*/
     break;
 default:
     echo "ni izvelo case";	
@@ -84,60 +78,8 @@ default:
 
 
 //__________________________________________________________________________________
-function vyberFunction($podminka){
-//$tabulka="uporabnikiTbl2";
-$tabulka="pregledovalciTbl";
-$stolpci=["*"];
-//$stolpci=["ime","priimek"];
-//$podminka = array("ime"=>"Jiří");
-//$podminka = array("bolnisnica"=>$bolnisnica);
-//$podminka = array("ime"=>"Jiří", "Ben"=>"37", "Joe"=>"43");
 
-$vyber = new database();
-//$vyber = new database($tabulka, $stolpci, $podminka );
-//$vyber->vyber($tabulka, $stolpci, $podminka);
-$vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
-//echo $vybrano[1];
-//echo var_dump($vybrano);
-echo "<br>";
-echo count($vybrano);
-//$dolzina=count($vybrano);
-//echo $vybrano[1];
-echo "<br>";
-if(count($vybrano)>0){
-
-class TableRows extends RecursiveIteratorIterator {
-    function __construct($it) {
-	echo "<table id='osebe' style='border: solid 1px black;'>";
-    echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";	
-        parent::__construct($it, self::LEAVES_ONLY);
-    }
-
-    function current() { 
-		 return "<td  >"  . parent::current() . "</td>";
-    }
-    function beginChildren() {
-        echo "<tr>";
-    }
-    function endChildren() {
-		$a = 'onclick="' . "izborFunction('uredi')" . '"';
-		$b = 'onclick="' . "izborFunction('odstrani')" . '"';
-        echo "<td class='urediCls' onclick=" . '"izborFunction('. "'uredi'".')"'.'"' . ">uredi</td>
-		<td class='odstraniCls' onclick=" . '"izborFunction('. "'odstrani'".')"'.'"' . ">odstrani</td>
-		
-		</tr>" . "\n";
-    }
-} // od class TableRows
-
-foreach(new TableRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
-        echo $v;
-
-}//od foreach
-}//od if(cout)
-else{
-echo "Za izbrano bolnico ni zapisa v bazi";	
-}//od else
-}//od vyberFunction  
+ 
 //_______________________________________________________________________________
 function vlozFunction($data){
 //$tabulka="uporabnikiTbl2";
