@@ -155,7 +155,7 @@ function editFunction($podminka){
 $tabulka="pregledovalciTbl";
 $stolpci=["*"];
 $vyber = new database();
-$vyber->vyber($tabulka, $stolpci, $podminka);
+//$vyber->vyber($tabulka, $stolpci, $podminka);
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
