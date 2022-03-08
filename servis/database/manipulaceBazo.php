@@ -4,7 +4,7 @@
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../../skupne/database.php';
-
+ require_once('manipulaceClass.php');
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
@@ -44,10 +44,13 @@ case "uredi":
     $ime = test_input($_POST["ime"]);
 	$priimek = test_input($_POST["priimek"]);
 	$status = test_input($_POST["status"]); 
-	$podminka = array("id"=>$id);
+	
+	$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
+	$uredi->aktualizujFunction();
+	/*$podminka = array("id"=>$id);
     $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
 	$aktualizuj = new database();
-	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
+	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);*/
     break;
 default:
     echo "ni izvelo case";	

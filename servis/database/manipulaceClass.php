@@ -1,16 +1,5 @@
  
 <?php 
-    $tabulka="pregledovalciTbl";
-    $id=test_input($_POST["id"]);
-    $bolnisnica=test_input($_POST["bolnisnica"]);
-    $ime = test_input($_POST["ime"]);
-	$priimek = test_input($_POST["priimek"]);
-	$status = test_input($_POST["status"]); 
-	$podminka = array("id"=>$id);
-    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
-	$aktualizuj = new database();
-	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
-	
 	
 	class Uredi {
   public $bolnisnica;		
@@ -22,7 +11,7 @@
 
 
 
-  function __construct($xxxxxx) {
+  function __construct($bolnisnica, $tabulka, $id, $ime, $priimek, $status) {
 	$this->bolnisnica = $bolnisnica; 	  
     $this->tabulka = $tabulka; 
 	$this->id = $id; 
