@@ -21,13 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //echo var_dump($status) .'<br>';
   //$akce = naredi($akce);
 switch ($akce) {
-  case "vyber":
+case "vyber":
    // echo "to je vyber.<br>";
    if ($bolnisnica == "") {
 	$podminka = NULL;
-} else {
+   } else {
     $podminka = array("bolnisnica"=>$bolnisnica);
-}
+   }
     vyberFunction($podminka);
     break;
 case "vloz":
@@ -48,27 +48,25 @@ case "uredi":
     $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
-
     break;
-  default:
-    echo "ni izvelo case";
-	
+default:
+    echo "ni izvelo case";	
 }//od switch
 }//od if
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
   $akce = test_input($_GET["akce"]);
-  switch ($akce) {
-	   case "uredi":
-     $id = test_input($_GET["id"]);
-	 echo "id uporabnika= " .  $id;
+switch ($akce) {
+case "uredi":
+    $id = test_input($_GET["id"]);
+	echo "id uporabnika= " .  $id;
 	echo "<br>";
 	// var_dump($id);
 	// echo "<br>"; 
 	 $podminka = array("id"=>$id);
      editFunction($podminka);
     break;
- case "odstrani":
+case "odstrani":
       $id = test_input($_GET["id"]);
 	 echo "id uporabnika= " .  $id;
 	echo "<br>";
@@ -76,15 +74,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 	odstraniFunction($podminka);
     // odstraniFunction();
     break;	
-	
-    /*  ...*/
-  default:
+default:
     echo "ni izvelo get case"; 
   }//od switch	  
 }//od if
 
 
-
+//__________________________________________________________________________________
 function vyberFunction($podminka){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
@@ -107,8 +103,6 @@ echo count($vybrano);
 echo "<br>";
 if(count($vybrano)>0){
 
-
-
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
 	echo "<table id='osebe' style='border: solid 1px black;'>";
@@ -130,7 +124,7 @@ class TableRows extends RecursiveIteratorIterator {
 		
 		</tr>" . "\n";
     }
-}
+} // od class TableRows
 
 foreach(new TableRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
         echo $v;
@@ -141,14 +135,12 @@ else{
 echo "Za izbrano bolnico ni zapisa v bazi";	
 }//od else
 }//od vyberFunction  
-
+//_______________________________________________________________________________
 function vlozFunction($data){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
-//$data= array("bolnisnica"=>"izola", "ime"=>"Lela", "priimek"=>"Hollan", "status"=>"1");
-
+//primer polja: $data= array("bolnisnica"=>"izola", "ime"=>"Lela", "priimek"=>"Hollan", "status"=>"1");
 $vloz = new database($tabulka,$data);
-//$vloz->vloz($tabulka,$data);
 $vlozeno=$vloz->vloz($tabulka,$data );
 //echo $vlozeno[1];
 echo "<br>";
@@ -157,7 +149,7 @@ echo "<br>";
 echo count($vlozeno);
 echo "<br>";
 }//od vlozFunction
-
+//__________________________________________________________________________________
 function editFunction($podminka){
 //	echo 'editFunction opšalje podatke v urediFunction';
 $tabulka="pregledovalciTbl";
@@ -181,12 +173,9 @@ foreach ($vybrano[$i] as $key => $value) {
 }//od foreach
 echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button class='submit' type='submit'>potrdi</button><button type='reset'>reset</button> ";
 echo "</form>";
-}//od for	
-	
-	
-	
+}//od for		
 }//od editFunction
-
+//_______________________________________________________________________________________
 function odstraniFunction($podminka){
 	//echo 'odstraniFunction še ni napisana';
 	$tabulka="pregledovalciTbl";
