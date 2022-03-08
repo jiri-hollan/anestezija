@@ -140,7 +140,7 @@ function vlozFunction($data){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
 //primer polja: $data= array("bolnisnica"=>"izola", "ime"=>"Lela", "priimek"=>"Hollan", "status"=>"1");
-$vloz = new database($tabulka,$data);
+$vloz = new database();
 $vlozeno=$vloz->vloz($tabulka,$data );
 //echo $vlozeno[1];
 echo "<br>";
@@ -157,7 +157,6 @@ $stolpci=["*"];
 $vyber = new database();
 //$vyber->vyber($tabulka, $stolpci, $podminka);
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
-//echo $vybrano[1];
 //echo var_dump($vybrano);
 echo "<br>";
 echo "število vybranych zapisov= " . count($vybrano);
