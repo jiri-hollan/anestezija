@@ -21,6 +21,6 @@ echo '
 	}
    }//od construct 
 }//od class Manipulace  
- $adminManipulace = new Manipulace(); 
+ $servisManipulace = new Manipulace(); 
 
 ?>
