@@ -32,7 +32,6 @@
   public $bolnisnica;		
   public $tabulka;
   public $stolpci;
-  
   function __construct($bolnisnica, $tabulka, $stolpci) {
 	$this->bolnisnica = $bolnisnica; 	  
     $this->tabulka = $tabulka; 
@@ -46,7 +45,6 @@
   }	
 	
 	function vyberFunction(){
-
 $vyber = new database();
 $vybrano=$vyber->vyber($this->tabulka, $this->stolpci, $this->podminka );
 //echo $vybrano[1];
@@ -67,13 +65,47 @@ else{
 echo "Za izbrano bolnico ni zapisa v bazi";	
 }//od else
 }//od vyberFunction  
-
 }//od class vyber
-// klic $vyber = new Vyber($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
+// klic $vyber = new Vyber($bolnisnica, $tabulka, $stolpci);
 // $vyber->vyberFunction();
 //________________________________________________________________________________________	
+	class Vloz {
+  public $bolnisnica;		
+  public $tabulka;
+  public $ime;
+  public $priimek;
+  public $status; 
+  function __construct($bolnisnica, $tabulka, $ime, $priimek, $status) {
+	$this->bolnisnica = $bolnisnica; 	  
+    $this->tabulka = $tabulka; 
+	$this->ime = $ime; 
+    $this->priimek = $priimek; 
+    $this->status = $status; 
+    $this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);	
+  }
+
+  
+  function vlozFunction(){
+
+$vloz = new database();
+$vlozeno=$vloz->vloz($this->tabulka,$this->data);
+//echo $vlozeno[1];
+echo "<br>";
+echo var_dump($vlozeno);
+echo "<br>";
+echo count($vlozeno);
+echo "<br>";
+}//od vlozFunction
+  
+  
+}// od class Vloz
+// klic $vloz = new Vloz($bolnisnica, $tabulka, $ime, $priimek, $status);
+// $vloz->aktualizujFunction();
+//_____________________________________________________________________________________
 
 
+
+//-------------------------iterator-----------------------------------------------------
 	class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
 	echo "<table id='osebe' style='border: solid 1px black;'>";

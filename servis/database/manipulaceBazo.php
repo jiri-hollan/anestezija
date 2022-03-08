@@ -25,15 +25,18 @@ case "vyber":
     $bolnisnica=test_input($_POST["bolnisnica"]);		
     $tabulka="pregledovalciTbl";
     $stolpci=["*"];
-	$vyber = new vyber($bolnisnica, $tabulka,$stolpci);
+	$vyber = new Vyber($bolnisnica, $tabulka,$stolpci);
 	$vyber->vyberFunction();
     break;
 case "vloz":
+    $tabulka="pregledovalciTbl";
+    $bolnisnica=test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
     $priimek = test_input($_POST["priimek"]);
     $status = test_input($_POST["status"]);  
-    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
-    vlozFunction($data);
+	$vloz = new Vloz($bolnisnica, $tabulka, $ime, $priimek, $status);
+	$vloz->vlozFunction();
+	
     break;
 case "uredi":
     $tabulka="pregledovalciTbl";
