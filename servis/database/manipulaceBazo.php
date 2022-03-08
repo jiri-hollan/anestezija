@@ -46,7 +46,7 @@ case "uredi":
 	$status = test_input($_POST["status"]); 
 	$podminka = array("id"=>$id);
     $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
-	$aktualizuj = new database($tabulka,$data,$podminka);
+	$aktualizuj = new database();
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
     break;
 default:
