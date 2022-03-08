@@ -16,10 +16,6 @@ function test_input($test) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
-
- // $ime = test_input($_POST["ime"]);
-  //$priimek = test_input($_POST["priimek"]);
- // $status = test_input($_POST["status"]);
   echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
@@ -111,11 +107,12 @@ echo count($vybrano);
 echo "<br>";
 if(count($vybrano)>0){
 
-echo "<table id='osebe' style='border: solid 1px black;'>";
-echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";
+
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
+	echo "<table id='osebe' style='border: solid 1px black;'>";
+    echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";	
         parent::__construct($it, self::LEAVES_ONLY);
     }
 
