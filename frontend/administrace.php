@@ -18,7 +18,7 @@ class Administrace {
       //$this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/frontend/';
 	  //echo $this->zaklad->url;
 	  $casoviLimit = 600;
-	  if (isset($_SESSION["blog_prihlasen"])) {
+	  if (isset($_SESSION["uporabnikPrihlasen"])) {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
 		  if ($uplinuliCas > $casoviLimit) {
 			  session_unset();
@@ -28,7 +28,7 @@ class Administrace {
 		  }
 	  }
 	  $_SESSION["casova_znamka"] = time();
-	  $prihlasen = $_SESSION['blog_prihlasen'];
+	  $prihlasen = $_SESSION['uporabnikPrihlasen'];
 	  if (empty($prihlasen)) {
 		  session_unset();
 		  session_destroy();

@@ -71,7 +71,7 @@ Class Prijava extends Prihlaseni {
 	}
 	
 	public function prihlaseniUspesne($status, $pristop, $uname){
-	   $_SESSION['blog_prihlasen'] = true;
+	   $_SESSION['uporabnikPrihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
 	   $_SESSION["status"] = $status;
 	   $_SESSION["pristop"] = $pristop;
