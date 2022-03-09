@@ -65,11 +65,12 @@ case "uredi":
 	$edit = new Edit($tabulka, $id); 	 
     break;
 case "odstrani":
+     $tabulka="pregledovalciTbl";
      $id = test_input($_GET["id"]);
 	 echo "id uporabnika= " .  $id;
 	 echo "<br>";
-    $podminka = array("id"=>$id);
-	odstraniFunction($podminka);
+	$odstrani = new Odstrani($tabulka, $id); 
+	//odstraniFunction($podminka);
     // odstraniFunction();
     break;	
 default:

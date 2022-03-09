@@ -171,7 +171,7 @@ echo "<br>";
 	 $podminka = array("id"=>$this->id);
 	 $odstrani = new database();
 //$vyber->vyber($tabulka, $stolpci, $podminka);
-    $najdeno=$odstrani->vyber($tabulka, $stolpci, $podminka );
+    $najdeno=$odstrani->vyber($this->tabulka, $this->stolpci, $podminka );
 	var_dump($najdeno);
 	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
 	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
