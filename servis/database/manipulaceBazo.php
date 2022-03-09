@@ -78,30 +78,7 @@ default:
 }//od if
 
 //________________________________________________________________________________
-function editFunction($podminka){
-//	echo 'editFunction opšalje podatke v urediFunction';
-$tabulka="pregledovalciTbl";
-$stolpci=["*"];
-$vyber = new database();
-//$vyber->vyber($tabulka, $stolpci, $podminka);
-$vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
-//echo var_dump($vybrano);
-echo "<br>";
-echo "število vybranych zapisov= " . count($vybrano);
-$dolzina=count($vybrano);
-//echo $vybrano[1];
-echo "<br>";
-echo "<form  method='post'>";
-for ($i = 0; $i < $dolzina; $i++) {
-foreach ($vybrano[$i] as $key => $value) {
-   // echo "$key: $value\n";
-	echo " $key: <input name=$key value=$value\n></input>";
-	//echo "$value\n";
-}//od foreach
-echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button class='submit' type='submit'>potrdi</button><button type='reset'>reset</button> ";
-echo "</form>";
-}//od for		
-}//od editFunction
+
 //_______________________________________________________________________________________
 function odstraniFunction($podminka){
 	//echo 'odstraniFunction še ni napisana';
