@@ -4,7 +4,9 @@
   public $bolnisnica;		
   public $tabulka;
   function __construct($bolnisnica="", $tabulka="") {
-	    $this->bolnisnica = ucfirst($bolnisnica); 
+	    $bolnisnica=strtolower($bolnisnica); 
+        $bolnisnica=ucfirst($bolnisnica); 
+	    $this->bolnisnica = $bolnisnica;
 echo $this->bolnisnica;		
         $this->tabulka = $tabulka; 
   } //od construct
