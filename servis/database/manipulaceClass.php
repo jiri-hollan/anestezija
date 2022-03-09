@@ -167,13 +167,13 @@ echo "<br>";
 	 function __construct($tabulka, $id) {
 	 $this->tabulka=$tabulka;
 	 $this->id=$id;
-	 $this->stolpci=["*"];	 
+	 $stolpci=["*"];	 
 	 $podminka = array("id"=>$this->id);
 	 $odstrani = new database();
 //$vyber->vyber($tabulka, $stolpci, $podminka);
-    $najdeno=$odstrani->vyber($this->tabulka, $this->stolpci, $podminka );
+    $najdeno=$odstrani->vyber($this->tabulka, $stolpci, $podminka );
 	var_dump($najdeno);
-	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
+	$odstranjeno=$odstrani->odstrani($this->tabulka, $podminka );
 	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
 	 }//od construct
 	 }//od class odstrani
