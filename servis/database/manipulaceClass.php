@@ -4,22 +4,18 @@
   public $bolnisnica;		
   public $tabulka;
   function __construct($bolnisnica="", $tabulka="") {
-	$this->bolnisnica = $bolnisnica; 	  
+	    $this->bolnisnica = $bolnisnica; 	  
         $this->tabulka = $tabulka; 
   } //od construct
 }//od class dostopPost
 //____________________________________________________________________________________________
 	class Uredi extends DostopPost{
-  public $bolnisnica;		
-  public $tabulka;
   public $id;
   public $ime;
   public $priimek;
   public $status; 
   public function __construct($bolnisnica, $tabulka, $id, $ime, $priimek, $status) {
-	  	 parent::__construct($bolnisnica, $tabulka);
-	//$this->bolnisnica = $bolnisnica; 	  
-    //$this->tabulka = $tabulka; 
+	parent::__construct($bolnisnica, $tabulka);
 	$this->id = $id; 
 	$this->ime = $ime; 
     $this->priimek = $priimek; 
@@ -37,13 +33,10 @@
 //_____________________________________________________________________________________
 
 	
-	class Vyber {
-  public $bolnisnica;		
-  public $tabulka;
+	class Vyber extends DostopPost{
   public $stolpci;
   function __construct($bolnisnica, $tabulka, $stolpci) {
-	$this->bolnisnica = $bolnisnica; 	  
-    $this->tabulka = $tabulka; 
+	parent::__construct($bolnisnica, $tabulka);
     $this->stolpci = $stolpci;	
 	
 	if ($this->bolnisnica == "") {
@@ -78,15 +71,12 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 // klic $vyber = new Vyber($bolnisnica, $tabulka, $stolpci);
 // $vyber->vyberFunction();
 //________________________________________________________________________________________	
-	class Vloz {
-  public $bolnisnica;		
-  public $tabulka;
+	class Vloz extends DostopPost {
   public $ime;
   public $priimek;
   public $status; 
   function __construct($bolnisnica, $tabulka, $ime, $priimek, $status) {
-	$this->bolnisnica = $bolnisnica; 	  
-    $this->tabulka = $tabulka; 
+	parent::__construct($bolnisnica, $tabulka);
 	$this->ime = $ime; 
     $this->priimek = $priimek; 
     $this->status = $status; 
