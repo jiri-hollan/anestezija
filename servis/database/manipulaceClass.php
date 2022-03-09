@@ -6,8 +6,8 @@
   function __construct($bolnisnica, $tabulka) {
 	$this->bolnisnica = $bolnisnica; 	  
         $this->tabulka = $tabulka; 
-
-}od class dostopPost
+  } //od construct
+}//od class dostopPost
 //____________________________________________________________________________________________
 	class Uredi extends DostopPost{
   public $bolnisnica;		
