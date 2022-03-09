@@ -3,7 +3,7 @@
 	class DostopPost{
   public $bolnisnica;		
   public $tabulka;
-  function __construct($bolnisnica, $tabulka) {
+  function __construct($bolnisnica="", $tabulka="") {
 	$this->bolnisnica = $bolnisnica; 	  
         $this->tabulka = $tabulka; 
   } //od construct
@@ -17,9 +17,9 @@
   public $priimek;
   public $status; 
   public function __construct($bolnisnica, $tabulka, $id, $ime, $priimek, $status) {
-	  	 parent::__construct();
-	$this->bolnisnica = $bolnisnica; 	  
-    $this->tabulka = $tabulka; 
+	  	 parent::__construct($bolnisnica, $tabulka);
+	//$this->bolnisnica = $bolnisnica; 	  
+    //$this->tabulka = $tabulka; 
 	$this->id = $id; 
 	$this->ime = $ime; 
     $this->priimek = $priimek; 
