@@ -4,7 +4,8 @@
   public $bolnisnica;		
   public $tabulka;
   function __construct($bolnisnica="", $tabulka="") {
-	    $this->bolnisnica = $bolnisnica; 	  
+	    $this->bolnisnica = ucfirst($bolnisnica); 
+echo $this->bolnisnica;		
         $this->tabulka = $tabulka; 
   } //od construct
 }//od class dostopPost
