@@ -1,6 +1,14 @@
  
 <?php 
-	
+	class DostopPost{
+  public $bolnisnica;		
+  public $tabulka;
+  function __construct($bolnisnica, $tabulka) {
+	$this->bolnisnica = $bolnisnica; 	  
+        $this->tabulka = $tabulka; 
+
+}od class dostopPost
+//____________________________________________________________________________________________
 	class Uredi {
   public $bolnisnica;		
   public $tabulka;
