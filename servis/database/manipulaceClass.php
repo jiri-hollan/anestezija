@@ -9,14 +9,15 @@
 
 }od class dostopPost
 //____________________________________________________________________________________________
-	class Uredi {
+	class Uredi extends DostopPost{
   public $bolnisnica;		
   public $tabulka;
   public $id;
   public $ime;
   public $priimek;
   public $status; 
-  function __construct($bolnisnica, $tabulka, $id, $ime, $priimek, $status) {
+  public function __construct($bolnisnica, $tabulka, $id, $ime, $priimek, $status) {
+	  	 parent::__construct();
 	$this->bolnisnica = $bolnisnica; 	  
     $this->tabulka = $tabulka; 
 	$this->id = $id; 
