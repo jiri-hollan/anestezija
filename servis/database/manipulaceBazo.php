@@ -56,13 +56,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
   $akce = test_input($_GET["akce"]);
 switch ($akce) {
 case "uredi":
+    $tabulka="pregledovalciTbl";
     $id = test_input($_GET["id"]);
 	echo "id uporabnika= " .  $id;
 	echo "<br>";
 	// var_dump($id);
 	// echo "<br>"; 
-	 $podminka = array("id"=>$id);
-     editFunction($podminka);
+	$edit = new Edit($tabulka, $id); 	 
     break;
 case "odstrani":
      $id = test_input($_GET["id"]);

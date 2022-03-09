@@ -130,5 +130,34 @@ echo "<br>";
 		</tr>" . "\n";
     }
 } // od class TableRows
+
+//____________________________________________________________________________________________________
+
+    class Edit {
+	public $id;	
+	public $tabulka;
+	 function __construct($tabulka, $id) {
+	 $this->tabulka=$tabulka;
+	 $this->id=$id;
+	 $this->podminka = array("id"=>$this->id);	
+	 $this->stolpci=["*"];
+	 $this->vyber = new database();
+	 $this->vybrano=$this->vyber->vyber($this->tabulka, $this->stolpci, $this->podminka );
+	 echo "<br>";
+     echo "število vybranych zapisov= " . count($this->vybrano);
+     $dolzina=count($this->vybrano);
+	 echo "<br>";
+     echo "<form  method='post'>";
+     for ($i = 0; $i < $dolzina; $i++) {
+       foreach ($this->vybrano[$i] as $key => $value) {
+   // echo "$key: $value\n";
+	   echo " $key: <input name=$key value=$value\n></input>";
+	//echo "$value\n";
+      }//od foreach	 
+	 echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button class='submit' type='submit'>potrdi</button><button type='reset'>reset</button> ";
+     echo "</form>";
+       }//od for	
+	 }//od construct	
+	}//od class edit
 	
 	?>
