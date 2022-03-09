@@ -78,20 +78,6 @@ default:
   }//od switch	  
 }//od if
 
-//________________________________________________________________________________
-
-//_______________________________________________________________________________________
-function odstraniFunction($podminka){
-	//echo 'odstraniFunction še ni napisana';
-	$tabulka="pregledovalciTbl";
-	$stolpci=["*"];
-	$odstrani = new database();
-//$vyber->vyber($tabulka, $stolpci, $podminka);
-    $najdeno=$odstrani->vyber($tabulka, $stolpci, $podminka );
-	var_dump($najdeno);
-	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
-	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
-}//od odstraniFunction
 
 ?>
 
