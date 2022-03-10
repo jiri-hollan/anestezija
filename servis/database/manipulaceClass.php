@@ -122,9 +122,9 @@ echo "<br>";
         echo "<tr>";
     }
     function endChildren() {
-		$a = 'onclick="' . "izborFunction('uredi')" . '"';
+		$a = 'onclick="' . "izborFunction('edit')" . '"';
 		$b = 'onclick="' . "izborFunction('odstrani')" . '"';
-        echo "<td class='urediCls' onclick=" . '"izborFunction('. "'uredi'".')"'.'"' . ">uredi</td>
+        echo "<td class='urediCls' onclick=" . '"izborFunction('. "'edit'".')"'.'"' . ">edit</td>
 		<td class='odstraniCls' onclick=" . '"izborFunction('. "'odstrani'".')"'.'"' . ">odstrani</td>
 		
 		</tr>" . "\n";
