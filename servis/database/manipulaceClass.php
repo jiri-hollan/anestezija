@@ -139,17 +139,17 @@ echo "<br>";
 	 function __construct($tabulka, $id) {
 	 $this->tabulka=$tabulka;
 	 $this->id=$id;
-	 $this->podminka = array("id"=>$this->id);	
-	 $this->stolpci=["*"];
-	 $this->vyber = new database();
-	 $this->vybrano=$this->vyber->vyber($this->tabulka, $this->stolpci, $this->podminka );
+	 $podminka = array("id"=>$this->id);	
+	 $stolpci=["*"];
+	 $vyber = new database();
+	 $vybrano=$vyber->vyber($this->tabulka, $stolpci, $podminka );
 	 echo "<br>";
-     echo "število vybranych zapisov= " . count($this->vybrano);
-     $dolzina=count($this->vybrano);
+     echo "število vybranych zapisov= " . count($vybrano);
+     $dolzina=count($vybrano);
 	 echo "<br>";
      echo "<form  method='post'>";
      for ($i = 0; $i < $dolzina; $i++) {
-       foreach ($this->vybrano[$i] as $key => $value) {
+       foreach ($vybrano[$i] as $key => $value) {
    // echo "$key: $value\n";
 	   echo " $key: <input name=$key value=$value\n></input>";
 	//echo "$value\n";
