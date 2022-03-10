@@ -15,7 +15,7 @@ switch(akce) {
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
 
-  case "uredi":
+  case "edit":
   //alert("v JS case edit");
   if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);

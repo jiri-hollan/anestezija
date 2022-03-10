@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   akceFunction($akce);
   }//od else if
   //______________________________________________________________________
-  function akceFunction(){
+  function akceFunction($akce){
 switch ($akce) {
 case "vyber":
     $bolnisnica=test_input($_POST["bolnisnica"]);		
