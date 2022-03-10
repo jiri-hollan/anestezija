@@ -19,7 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
-  //$akce = naredi($akce);
+  akceFunction($akce);
+}//od if
+  else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
+  $akce = test_input($_GET["akce"]);
+  akceFunction($akce);
+  }//od else if
+  //______________________________________________________________________
+  function akceFunction(){
 switch ($akce) {
 case "vyber":
     $bolnisnica=test_input($_POST["bolnisnica"]);		
@@ -47,15 +54,9 @@ case "uredi":
 	$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
 	$uredi->aktualizujFunction();
     break;
-default:
-    echo "ni izvelo case";	
-}//od switch
-}//od if
 
-if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
-  $akce = test_input($_GET["akce"]);
-switch ($akce) {
-case "uredi":
+
+case "edit":
     $tabulka="pregledovalciTbl";
     $id = test_input($_GET["id"]);
 	echo "id uporabnika= " .  $id;
@@ -76,8 +77,8 @@ case "odstrani":
 default:
     echo "ni izvelo get case"; 
   }//od switch	  
-}//od if
 
+  }//od akceFunction
 
 ?>
 
