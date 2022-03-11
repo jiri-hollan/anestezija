@@ -2,21 +2,22 @@ function izborFunction(akce) {
   document.getElementById("akceId").value = akce;
 switch(akce) {
   case "vyber":
+  
    // document.getElementById("demo").innerHTML = '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';// omogoči izbiro bolnišnice
 // omogoči izbiro bolnišnice 	
  document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
- 
- 
-/*<input id="zdravnik"  list="zdravniki" name="zdravnik"  onfocusout="zdravnikFunction()" required> 
-  <datalist id="zdravniki">  
-    <option value='ime zdravnika'>    
-  </datalist>*/
-	
-	var zdravList  =[
-	"Hana&nbsp;Hollan",
-	"Vladimir&nbsp;Jurekovič",
+ 	
+	var bolList  =[
+	"Izola",
+	"Jesenice",
 	];
-	
+	var text = "";
+var i;
+for (i = 0; i < bolList.length; i++) {
+ // text += "<option value=" +  zdravList[i] + ">"+"<br>";
+  text += "<option value='" +  bolList[i] + "'>"  +"<br>";
+}
+document.getElementById("bolnisnice").innerHTML = text;
 	
 	
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
