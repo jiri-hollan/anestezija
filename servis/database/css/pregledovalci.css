@@ -8,11 +8,19 @@
 }
 .urediCls{
   font-size: 2em;
-  background-color: yellow;
+  background-color: gold;
+}
+.urediCls:hover{
+  font-size: 2em;
+  background-color: lightYellow;
 }
 .odstraniCls{
   font-size: 2em;
-  background-color: lightPink;
+  background-color: pink;
+}
+.odstraniCls:hover{
+  font-size: 2em;
+  background-color: lightYellow;
 }
 .submit{
   font-size: 2em;
