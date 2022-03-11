@@ -59,7 +59,7 @@ case "uredi":
 case "edit":
     $tabulka="pregledovalciTbl";
     $id = test_input($_GET["id"]);
-	echo "id uporabnika= " .  $id;
+	//echo "id uporabnika= " .  $id;
 	echo "<br>";
 	// var_dump($id);
 	// echo "<br>"; 
@@ -68,7 +68,7 @@ case "edit":
 case "odstrani":
      $tabulka="pregledovalciTbl";
      $id = test_input($_GET["id"]);
-	 echo "id uporabnika= " .  $id;
+	// echo "id uporabnika= " .  $id;
 	 echo "<br>";
 	$odstrani = new Odstrani($tabulka, $id); 
 	//odstraniFunction($podminka);

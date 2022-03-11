@@ -7,7 +7,7 @@
 	    $bolnisnica=strtolower($bolnisnica); 
         $bolnisnica=ucfirst($bolnisnica); 
 	    $this->bolnisnica = $bolnisnica;
-echo $this->bolnisnica;		
+   echo $this->bolnisnica;		
         $this->tabulka = $tabulka; 
   } //od construct
 }//od class dostopPost
@@ -144,7 +144,7 @@ echo "<br>";
 	 $vyber = new database();
 	 $vybrano=$vyber->vyber($this->tabulka, $stolpci, $podminka );
 	 echo "<br>";
-     echo "število vybranych zapisov= " . count($vybrano);
+     //echo "število vybranych zapisov= " . count($vybrano);
      $dolzina=count($vybrano);
 	 echo "<br>";
      echo "<form  method='post'>";
