@@ -32,7 +32,7 @@ case "vyber":
     $bolnisnica=test_input($_POST["bolnisnica"]);		
     $tabulka="pregledovalciTbl";
     $stolpci=["*"];
-	$vyber = new Vyber($bolnisnica, $tabulka,$stolpci);
+	$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='priimek');
 	$vyber->vyberFunction();
     break;
 case "vloz":

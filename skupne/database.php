@@ -27,12 +27,12 @@ class Database {
 	}//uzavírací zavorky __construct	
 //-----------------konec construct--------------
 
-	public function vyber($tabulka, $sloupce, $podminka = NULL){
+	public function vyber($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
 	//echo '<br>'.$sloupceSQL;
 	$podminkaSQL = '';
 	$parametry = array();
-	
+	$poradiSQL = '';
 	if (is_array($podminka)){
 		$i = 0;
 		foreach ($podminka as $sloupec=>$hodnota){
@@ -45,11 +45,16 @@ class Database {
 			$i++;
 		}
 	}
+	if ($poradi!=NULL){
+	   $poradiSQL = " ORDER BY " . $poradi;	
+	}
+
+	echo $poradiSQL;
 	// echo '<br>';
 	// echo var_dump($parametry) . "<br>";
 	 // echo var_dump($podminka) . "<br>";
 	 // echo var_dump($podminkaSQL );
-	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
+	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL. $poradiSQL);
 	//var_dump($dotaz);
 	try {
 		$dotaz->execute($parametry);		
