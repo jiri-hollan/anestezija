@@ -49,7 +49,7 @@ class Database {
 	   $poradiSQL = " ORDER BY " . $poradi;	
 	}
 
-	echo $poradiSQL;
+	//echo $poradiSQL;
 	// echo '<br>';
 	// echo var_dump($parametry) . "<br>";
 	 // echo var_dump($podminka) . "<br>";

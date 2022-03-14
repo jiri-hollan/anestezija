@@ -14,9 +14,10 @@ Class PoberZapis{
  $this->nameTable = 'pregledovalciTbl';
 // $stolpci = array('*');
    $stolpci = array('ime','priimek');
+   $poradi = "priimek";
 //bolnisnicapregledId je obsoječa bolnisnica v tabeli pregledovalciTbl
    $podminka = array("bolnisnica"=>$this->bolnisnica,"status"=>$this->status);  
-   $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
+   $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka, $poradi);
      
 $celoIme=array();
 for ($i = 0; $i < count($prebrano); $i++) {
