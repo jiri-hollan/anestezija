@@ -34,9 +34,13 @@ $celoImeJson = json_encode($celoIme, JSON_UNESCAPED_UNICODE);
 echo '<script>';
 echo 'var celoImeJson= ' . json_encode( $celoImeJson, JSON_UNESCAPED_UNICODE) . ';';
 echo '</script>';
-
 	}//od construct	
 	}//od class PoberZapis
-new PoberZapis("izola");
+if (isset($_GET['aktivnaBolnisnica'])) {
+	$aktivnaBolnisnica = $_GET['aktivnaBolnisnica'];
+}else {$aktivnaBolnisnica = '';
+}
+//var_dump($aktivnaBolnisnica);
+new PoberZapis($aktivnaBolnisnica);
  
 ?>

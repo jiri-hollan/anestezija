@@ -25,7 +25,7 @@ switch (bol) {
     text = localStorage.getItem("aktivnaBolnica");
 	//alert ("Formular za S.B. Izola");
 	//location.reload();
-	location.href='zdravnik.php';
+	location.href='zdravnik.php?aktivnaBolnisnica=Izola';
     break;
   case "j":
       localStorage.setItem("aktivnaBolnica","SBJ");
