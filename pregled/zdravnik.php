@@ -74,11 +74,8 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
     <!-- <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>    	 
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>-->
   <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->
-	
-	
+		
  </div>	 
-
-
 
 </body>
 </html>
