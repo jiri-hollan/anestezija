@@ -38,7 +38,7 @@
 	
 	class Vyber extends DostopPost{
   public $stolpci;
-  function __construct($bolnisnica, $tabulka, $stolpci) {
+  function __construct($bolnisnica, $tabulka, $stolpci, $poradi=NULL) {
 	parent::__construct($bolnisnica, $tabulka);
     $this->stolpci = $stolpci;	
 	
@@ -47,11 +47,12 @@
    } else {
     $this->podminka = array("bolnisnica"=>$this->bolnisnica);
    }//od else
+   $this->poradi=$poradi;
   }	
 	
 	function vyberFunction(){
 $vyber = new database();
-$vybrano=$vyber->vyber($this->tabulka, $this->stolpci, $this->podminka );
+$vybrano=$vyber->vyber($this->tabulka, $this->stolpci, $this->podminka, $this->poradi );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
 //echo "<br>";
