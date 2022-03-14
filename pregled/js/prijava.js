@@ -31,7 +31,7 @@ switch (bol) {
       localStorage.setItem("aktivnaBolnica","SBJ");
     text = localStorage.getItem("aktivnaBolnica");
 		//alert ("Formular za S,B,Jesenice");
-	location.reload();
+	location.href='zdravnik.php?aktivnaBolnisnica=Jesenice';
     break;
   default:
     text = "No value found";	
@@ -88,10 +88,11 @@ switch (text) {
 document.getElementById("aktBolnica").innerHTML = "<h1>Izola</h1> "; 
        break;
     case "SBJ":
-	var zdravList  =[
+	var zdravList  = zdravListX; 
+	/*var zdravList  =[
 	"Hana&nbsp;Hollan",
 	"Vladimir&nbsp;Jurekovič",
-	];
+	];*/
 document.getElementById("aktBolnica").innerHTML = "<h1>Jesenice</h1> "; 	
 	   break;
 	default:
