@@ -25,9 +25,6 @@ switch (bol) {
     localStorage.setItem("mestoBolnice","Izola");	
     text = localStorage.getItem("aktivnaBolnica");
 	//alert ("Formular za S.B. Izola");
-
-	//var bolnica="Izola";
-	//location.href='zdravnik.php?aktivnaBolnisnica='+bolnica;return false;
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
   case "j":
@@ -65,38 +62,14 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
 // tu bo prišla koda, ki naredi array zdravList iz tabele pregledovalci	
 
 //alert(zdravListX);
-
+ var zdravList  = zdravListX; 
 switch (text) {
    case "SBI":  
- var zdravList  = zdravListX; 
-/*var zdravList  =[
-"Nadežda&nbsp;Crnić&nbsp;Tokić",
-"Damjan&nbsp;Polh",
-"Tea&nbsp;Priman",
-"Simona&nbsp;Spasović",
-"Vladimir&nbsp;Stanković",
-"Alja&nbsp;Skrt",
-"Zlatka&nbsp;Lipovšek",
-"Blaž&nbsp;Peček",
-"Mara&nbsp;Škoti&nbsp;Bončina",
-"Katja&nbsp;Luin",
-"Barbara&nbsp;Kosmina&nbsp;Štefančič",
-"Sandra&nbsp;Dušič",
-"David&nbsp;Hrvatin",
-"Jiří&nbsp;Hollan",
-"Nives&nbsp;Tomažič",
-"Nevenka&nbsp;Pavšek",
-"Dominik&nbsp;Čarman",
-"Petra&nbsp;Makovec",
-];*/
+
 document.getElementById("aktBolnica").innerHTML = "<h1>Izola</h1> "; 
        break;
     case "SBJ":
-	var zdravList  = zdravListX; 
-	/*var zdravList  =[
-	"Hana&nbsp;Hollan",
-	"Vladimir&nbsp;Jurekovič",
-	];*/
+
 document.getElementById("aktBolnica").innerHTML = "<h1>Jesenice</h1> "; 	
 	   break;
 	default:
