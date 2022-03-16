@@ -70,8 +70,8 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
     <!-- <button id="buttonDomov" onclick="window.location.href='../menuFile.php';"> Domov </button>-->
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 	 <!-- Preklapljanje med bolnišnicami -->
-	<span class="navSpan" id="sbi" onclick="sbFunction('i')">S.B. Izola</span>
-	<span class="navSpan" id="sbj" onclick="sbFunction('j')">S.B. Jesenice</span>	
+	<span class="navSpan" id="sbi" onclick="sbFunction('SBI')">S.B. Izola</span>
+	<span class="navSpan" id="sbj" onclick="sbFunction('SBJ')">S.B. Jesenice</span>	
     <!-- <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>    	 
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>-->
   <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->

@@ -18,19 +18,17 @@ document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podp
 function sbFunction(bol) {
 	if (!bol=="") {
 	//var bol = "";
-
+    localStorage.setItem("aktivnaBolnica",bol);
 switch (bol) {
-  case "i":
-    localStorage.setItem("aktivnaBolnica","SBI");
+  case "SBI":
+    //localStorage.setItem("aktivnaBolnica","SBI");
     localStorage.setItem("mestoBolnice","Izola");	
-    //text = localStorage.getItem("aktivnaBolnica");
 	//alert ("Formular za S.B. Izola");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
-  case "j":
-      localStorage.setItem("aktivnaBolnica","SBJ");
+  case "SBJ":
+      //localStorage.setItem("aktivnaBolnica","SBJ");
 	  localStorage.setItem("mestoBolnice","Jesenice");
-    //text = localStorage.getItem("aktivnaBolnica");
 		//alert ("Formular za S,B,Jesenice");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
@@ -56,8 +54,6 @@ function listaZdravnikovFunction(zdravListX) {
 	//alert ("lista zdravnikov function");
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
-    //text = localStorage.getItem("aktivnaBolnica");	
-	//alert("lista zdravnikov " + text);
 // tu bo prišla koda, ki naredi array zdravList iz tabele pregledovalci	
 
 //alert(zdravListX);
