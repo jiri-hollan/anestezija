@@ -24,14 +24,17 @@ switch (bol) {
     localStorage.setItem("aktivnaBolnica","SBI");
     text = localStorage.getItem("aktivnaBolnica");
 	//alert ("Formular za S.B. Izola");
-	//location.reload();
-	location.href='zdravnik.php?aktivnaBolnisnica=Izola';
+
+	var bolnica="Izola";
+	location.href='zdravnik.php?aktivnaBolnisnica='+bolnica;return false;
+
     break;
   case "j":
       localStorage.setItem("aktivnaBolnica","SBJ");
     text = localStorage.getItem("aktivnaBolnica");
 		//alert ("Formular za S,B,Jesenice");
-	location.href='zdravnik.php?aktivnaBolnisnica=Jesenice';
+	var bolnica="Jesenice";
+	location.href='zdravnik.php?aktivnaBolnisnica='+bolnica;return false;
     break;
   default:
     text = "No value found";	
