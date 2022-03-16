@@ -56,7 +56,7 @@ function listaZdravnikovFunction(zdravListX) {
 	//alert ("lista zdravnikov function");
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
-    text = localStorage.getItem("aktivnaBolnica");	
+    //text = localStorage.getItem("aktivnaBolnica");	
 	//alert("lista zdravnikov " + text);
 // tu bo prišla koda, ki naredi array zdravList iz tabele pregledovalci	
 
