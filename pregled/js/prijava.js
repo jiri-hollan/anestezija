@@ -55,7 +55,6 @@ function naprejFunction() {
 function listaZdravnikovFunction(zdravListX) {
 	//alert ("lista zdravnikov function");
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-//document.getElementById("aktBolnica").innerHTML = "Za:  " + localStorage.getItem("aktivnaBolnica");
 
     text = localStorage.getItem("aktivnaBolnica");	
 	//alert("lista zdravnikov " + text);
@@ -63,14 +62,11 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
 
 //alert(zdravListX);
  var zdravList  = zdravListX; 
+ document.getElementById("aktBolnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnice")+"</h1> "; 
 switch (text) {
-   case "SBI":  
-
-document.getElementById("aktBolnica").innerHTML = "<h1>Izola</h1> "; 
+   case "SBI":   
        break;
     case "SBJ":
-
-document.getElementById("aktBolnica").innerHTML = "<h1>Jesenice</h1> "; 	
 	   break;
 	default:
     var zdravList  =[];
