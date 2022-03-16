@@ -1,6 +1,7 @@
 function odjavaFunction() { 
 	 localStorage.setItem("imeZdravnika", "");
 	 localStorage.setItem("aktivnaBolnica","");
+	 localStorage.setItem("mestoBolnice","");
      sessionStorage.removeItem("testJSON");
 	 sessionStorage.removeItem("bolnikId");
      window.open("zdravnik.php", "_self");
