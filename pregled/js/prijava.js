@@ -21,14 +21,12 @@ function sbFunction(bol) {
     localStorage.setItem("aktivnaBolnica",bol);
 switch (bol) {
   case "SBI":
-    //localStorage.setItem("aktivnaBolnica","SBI");
     localStorage.setItem("mestoBolnice","Izola");	
 	//alert ("Formular za S.B. Izola");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
-  case "SBJ":
-      //localStorage.setItem("aktivnaBolnica","SBJ");
-	  localStorage.setItem("mestoBolnice","Jesenice");
+  case "SBJ":	  
+    localStorage.setItem("mestoBolnice","Jesenice");
 		//alert ("Formular za S,B,Jesenice");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
