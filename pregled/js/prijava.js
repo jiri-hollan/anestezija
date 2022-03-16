@@ -23,19 +23,19 @@ switch (bol) {
   case "i":
     localStorage.setItem("aktivnaBolnica","SBI");
     localStorage.setItem("mestoBolnice","Izola");	
-    text = localStorage.getItem("aktivnaBolnica");
+    //text = localStorage.getItem("aktivnaBolnica");
 	//alert ("Formular za S.B. Izola");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
   case "j":
       localStorage.setItem("aktivnaBolnica","SBJ");
 	  localStorage.setItem("mestoBolnice","Jesenice");
-    text = localStorage.getItem("aktivnaBolnica");
+    //text = localStorage.getItem("aktivnaBolnica");
 		//alert ("Formular za S,B,Jesenice");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
   default:
-    text = "No value found";	
+    //text = "No value found";	
 	//alert (text);	
     }
 }    
@@ -63,7 +63,7 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
 //alert(zdravListX);
  var zdravList  = zdravListX; 
  document.getElementById("aktBolnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnice")+"</h1> "; 
-switch (text) {
+switch (localStorage.getItem("aktivnaBolnica")) {
    case "SBI":   
        break;
     case "SBJ":
