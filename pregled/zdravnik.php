@@ -64,7 +64,7 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
  <script>
  // alert("celo ime Json:" + celoImeJson);
   var zdravListX = JSON.parse(celoImeJson);
-  alert(zdravListX);
+  //alert(zdravListX);
   listaZdravnikovFunction(zdravListX);
   </script>
     <!-- <button id="buttonDomov" onclick="window.location.href='../menuFile.php';"> Domov </button>-->
