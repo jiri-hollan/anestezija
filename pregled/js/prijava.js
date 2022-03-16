@@ -22,19 +22,20 @@ function sbFunction(bol) {
 switch (bol) {
   case "i":
     localStorage.setItem("aktivnaBolnica","SBI");
+    localStorage.setItem("mestoBolnice","Izola");	
     text = localStorage.getItem("aktivnaBolnica");
 	//alert ("Formular za S.B. Izola");
 
-	var bolnica="Izola";
-	location.href='zdravnik.php?aktivnaBolnisnica='+bolnica;return false;
-
+	//var bolnica="Izola";
+	//location.href='zdravnik.php?aktivnaBolnisnica='+bolnica;return false;
+	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
   case "j":
       localStorage.setItem("aktivnaBolnica","SBJ");
+	  localStorage.setItem("mestoBolnice","Jesenice");
     text = localStorage.getItem("aktivnaBolnica");
 		//alert ("Formular za S,B,Jesenice");
-	var bolnica="Jesenice";
-	location.href='zdravnik.php?aktivnaBolnisnica='+bolnica;return false;
+	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
   default:
     text = "No value found";	
@@ -66,7 +67,7 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
 //alert(zdravListX);
 
 switch (text) {
-   case "SBI":	
+   case "SBI":  
  var zdravList  = zdravListX; 
 /*var zdravList  =[
 "Nadežda&nbsp;Crnić&nbsp;Tokić",
