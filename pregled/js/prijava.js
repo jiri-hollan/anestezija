@@ -16,7 +16,11 @@ document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podp
 }
 
 function sbFunction(bol) {
-	if (!bol=="") {
+       if(bol=="spomin") {
+
+	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
+      }
+	else if (!bol=="") {
 	//var bol = "";
     localStorage.setItem("aktivnaBolnica",bol);
 switch (bol) {

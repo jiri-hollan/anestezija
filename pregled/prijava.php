@@ -11,7 +11,7 @@
 <script src="js/prijava.js?<?php echo time(); ?>"></script>
 </head>
 <body>
-<script>sbFunction("SBI")</script>
+<script>sbFunction("spomin")</script>
 
 
 </body>
