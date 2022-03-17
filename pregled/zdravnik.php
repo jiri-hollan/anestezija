@@ -57,8 +57,6 @@ ________________________________________________________________________________
 
 require_once('../skupne/home.php');
 require_once('zapisVsi.php');
-
-//echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 ?>
  <script>
@@ -67,15 +65,10 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
   //alert(zdravListX);
   listaZdravnikovFunction(zdravListX);
   </script>
-    <!-- <button id="buttonDomov" onclick="window.location.href='../menuFile.php';"> Domov </button>-->
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 	 <!-- Preklapljanje med bolnišnicami -->
 	<span class="navSpan" id="sbi" onclick="sbFunction('SBI')">S.B. Izola</span>
 	<span class="navSpan" id="sbj" onclick="sbFunction('SBJ')">S.B. Jesenice</span>	
-    <!-- <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>    	 
-     <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>-->
-  <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->
-	
 	
  </div>	 
 
