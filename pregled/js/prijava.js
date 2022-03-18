@@ -16,8 +16,8 @@ document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podp
 }
 
 function sbFunction(bol) {
+	bolnica={SBJ:"Jesenice", SBI:"Izola"};
        if(bol=="spomin") {
-
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
       }
 	else if (!bol=="") {
@@ -25,12 +25,16 @@ function sbFunction(bol) {
     localStorage.setItem("aktivnaBolnica",bol);
 switch (bol) {
   case "SBI":
-    localStorage.setItem("mestoBolnice","Izola");	
+    b=bolnica.SBI;
+    localStorage.setItem("mestoBolnice",b);
+   // localStorage.setItem("mestoBolnice","Izola");	
 	//alert ("Formular za S.B. Izola");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
-  case "SBJ":	  
-    localStorage.setItem("mestoBolnice","Jesenice");
+  case "SBJ":
+    b=bolnica.SBJ;
+    localStorage.setItem("mestoBolnice",b);
+   // localStorage.setItem("mestoBolnice","Jesenice");
 		//alert ("Formular za S,B,Jesenice");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
     break;
