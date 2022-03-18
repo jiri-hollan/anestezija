@@ -2,50 +2,33 @@
 function zdravnikFunction() {  
 // Check browser support
 if (typeof(Storage) !== "undefined") {
-  // Store
- imeZdravnika = document.getElementById("zdravnik").value || "" ;
- localStorage.setItem("imeZdravnika", imeZdravnika);
-  // Retrieve
-  document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-     }
-else {
-  //document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
+   // Store
+   imeZdravnika = document.getElementById("zdravnik").value || "" ;
+   localStorage.setItem("imeZdravnika", imeZdravnika);
+   // Retrieve
+   document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
-   }
-}
+     } else {
+     //document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+     document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
+    }
+  }
 
 function sbFunction(bol) {
-	this.bol=bol;
 	bolnica={SBJ:"Jesenice", SBI:"Izola"};
        if(bol=="spomin") {
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
-      }
-	else if (!bol=="") {
-	//var bol = "";
-    localStorage.setItem("aktivnaBolnica",bol);
-switch (bol) {
-  case "SBI":
-    b=bolnica.SBI;
-    localStorage.setItem("mestoBolnice",b);
+
+      } else if (!bol=="") {
+         localStorage.setItem("aktivnaBolnica",bol);
+         localStorage.setItem("mestoBolnice",bolnica[bol]);
 	//alert ("Formular za S.B. Izola");
-	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
-    break;
-  case "SBJ":
-    b=bolnica.SBJ;
-    localStorage.setItem("mestoBolnice",b);
-		//alert ("Formular za S,B,Jesenice");
-	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
-    break;
-  default:
-    //text = "No value found";	
-	//alert (text);	
-    }
-}    
-else {
-	 // alert ("nobena bolnišnica ni aktivirana");	
-	}
-}
+	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false; 
+
+      } else {
+	 //alert ("nobena bolnišnica ni aktivirana");	
+      }
+   }
 function naprejFunction() { 
  if (localStorage.getItem("imeZdravnika").length < 3) {
     alert("zdravnik ni prijavljen");
