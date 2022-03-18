@@ -19,8 +19,8 @@ oziroma to določi izbira NAV bara, če je ta aktivirana
 ________________________________________________________________________________________________________________________
 -->
 
-//<script>sbFunction()</script>
-<!--<script>sbFunction('i')</script>-->
+
+<!--<script>sbFunction()</script>-->
 Če niste odprli program v Google Chromu, ne bo delal pravilno
 <!--[if IE]>
     <div class="IE" style="

@@ -26,7 +26,7 @@ function sbFunction(bol) {
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false; 
 
       } else {
-	 //alert ("nobena bolnišnica ni aktivirana");	
+	 alert ("nobena bolnišnica ni aktivirana");	
       }
    }
 function naprejFunction() { 
