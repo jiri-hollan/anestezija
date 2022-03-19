@@ -17,7 +17,7 @@ if (typeof(Storage) !== "undefined") {
 function sbFunction(bol) {
 	bolnica={SBJ:"Jesenice", SBI:"Izola"};
        if(bol=="spomin") {
-	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
+	location.href='../pregled/zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
 
       } else if (!bol=="") {
          localStorage.setItem("aktivnaBolnica",bol);
