@@ -50,7 +50,10 @@ require_once('sabloni/vkladane/zapati.php');
 <script>
     //document.getElementById("prij").innerHTML = "Odjava";
 	//document.getElementById("uname").innerHTML = "prijavljen";
-	document.getElementById("uname").innerHTML = "prijavljen: " + " " + <?php echo JSON_encode ($_SESSION["uname"])  ;?>;
+	<?php 
+		$uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
+	?>
+	document.getElementById("uname").innerHTML = "prijavljen: " + " " + "<?= $uname ?>";
 	document.getElementById("dom").innerHTML = "doma";	
-	//alert (<?php echo JSON_encode ($_SESSION["uname"])  ;?>);
+	
      </script>
