@@ -31,4 +31,17 @@ li a {
   border-radius: 12%;
 
 }
+li span {
 
+  display: inline-block:
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-decoration: none; 
+  hight: 50px;
+  width: 200px;
+  background-color:orange;
+  padding: 30px;
+  border-radius: 12%;
+
+}

@@ -12,7 +12,7 @@ echo '
 <ul>
 
   <li><a href="../navodila/navodilaKovid.php?doma=frontend">Navodila</a> </li>
-  <!--<li><a href="../pregled/zdravnik.php?doma=frontend">Pregled</a> </li>-->
+  <li><span>ddd</span>  </li>
    <li><a href="../pregled/prijava.php">Pregled</a> </li> 
   <li><a href="../oddelek/razpisMeseci.php?pogled=dez&doma=frontend">Dežurstva</a> </li>';
   
