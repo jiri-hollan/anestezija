@@ -1,11 +1,3 @@
-<html>
-   
-   <head>
-      <title>obvestilo</title>
-   </head>
-   
-   <body>
-
 <?php
 $to = "<jiri.hollan@gmail.com>";
 //$to .= ", <hocimin68@gmail.com>";
