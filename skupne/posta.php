@@ -1,19 +1,20 @@
 <html>
    
    <head>
-      <title>Sending HTML email using PHP</title>
+      <title>obvestilo</title>
    </head>
    
    <body>
 
 <?php
-$to = "<jiri.hollan@gmail.com>, <hocimin68@gmail.com>";
-$subject = "To je subjekt";
+$to = "<jiri.hollan@gmail.com>";
+//$to .= ", <hocimin68@gmail.com>";
+$subject = "obvestilo anestiz";
 $from = '<noreply@sender.com>';
-$message = "Hello world!Arrays";
+$message = "Nov uporabnik";
 $headers[] = "From: " .($from);
 $headers[] = $to;
-$headers[] = "CC: somebodyelse@example.com";
+//$headers[] = "CC: somebodyelse@example.com";
 $headers[] = "Reply-To: ".($from);
 $headers[] = "Return-Path: ".($from);
 $headers[] = "MIME-Version: 1.0"; 
