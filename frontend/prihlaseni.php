@@ -217,6 +217,7 @@ public function overUdaje($nameTable, $data) {
 			//return $this->prihlaseniSelhalo();
 			$ulozeno = $this->conn->vloz($nameTable, $data);
 			echo 'uspešno ste se registrirali,<br> pravice do dostopa vam bodo dodeljene po posvetu <br>z obveščevalnimi agencijami.';
+require_once('../skupne/posta.php');		
 		}   
 	  }
 }
