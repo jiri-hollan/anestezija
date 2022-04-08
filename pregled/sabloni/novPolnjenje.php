@@ -207,7 +207,7 @@
   <h1>Anesteziološki pregled</h1>
    <div id="nalepkaR">nalepka</div> 
     <p id="obravnavaR"></p>  
-<div class="paragrafi">	<br>
+<div class="paragrafi">
 <div class="prvigrafi">	
     <p id="diagnozaR">op.diagnoza</p>
     <p id="operacijaR">predvidevana op.</p>

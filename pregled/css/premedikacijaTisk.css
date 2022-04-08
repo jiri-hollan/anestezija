@@ -59,33 +59,28 @@ position: relative;
     border-style:solid;  
     margin: 1px; */
 }
-
+/*
 #diagnozaR {
-    /*  position: relative;*/ 
+  
     top: 4px;
     border-bottom-width:1px; 
     border-bottom-style:solid;
-    /*  left: 2px;
-	background-color: Tomato;
-	text-align: left;
-    height: 0.6cm;
-    height: 1cm;
-    width: 98%;
-    margin: 1px; */     
+    
+}*/
+
+#diagnozaR {
+    /*  position: relative;*/ 
+    top: 10px;
+    border-width:1px; 
+    border-style:solid;
+    padding: 5px; 
 }
+
 #operacijaR {
-   /* position: relative;
-    top: 0px;
-    left: 2px;
-	background-color: Tomato;
-	text-align: left;
-    height: 0.6cm;
-    height: 1cm;
-    width: 98%;
-    margin: 1px; */ 
-   border-bottom-width:1px;  
-   border-bottom-style:solid; 
-   
+  
+   border-width:1px;  
+   border-style:solid; 
+   padding: 5px; 
 }
 .meritveR {
    
