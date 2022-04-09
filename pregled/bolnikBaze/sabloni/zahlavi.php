@@ -6,4 +6,3 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/baze.css?<?php echo time(); ?>">
 </head>
-<body>
