@@ -12,6 +12,7 @@ require_once 'sabloni/zahlavi.php';
 */
 ?>
  <body onload="stolpciFuncton()">
+ <a id="buttonNazaj" href="../bolnik.php" >Nazaj</a>
 <script>
 function stolpciFuncton() {
 const poljeJS = ["pregledId", "datPregleda", "imeZdravnika"];
