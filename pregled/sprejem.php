@@ -34,7 +34,7 @@ $GLOBALS['testJSON'] = $iskaniPregled;
  
  // document.getElementById("result").innerHTML = sessionStorage.getItem("testJSON");
   //alert(sessionStorage.getItem("testJSON"));  
-  window.location.href = "../bolnik.php"; 
+  window.location.href = "bolnik.php"; 
   
   </script>
  <?php 
