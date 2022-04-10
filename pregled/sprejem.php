@@ -5,7 +5,7 @@ require_once 'sabloni/zahlavi.php';
 <p>-->*/
 
 //session_start();
-require_once '../../skupne/database.php';
+require_once '../skupne/database.php';
 $conn = new Database();
 //var_dump($_GET);
 $id = $_GET["id"];

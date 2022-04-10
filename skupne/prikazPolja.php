@@ -57,7 +57,7 @@ celicaFunction(prvaCelica);
 }
 function celicaFunction(prvaCelica) { 
  // alert("to je prva celica: "+prvaCelica);
-  window.location.href = "../pregled/bolnikBaze/sprejem.php?id=" + prvaCelica; 
+  window.location.href = "../pregled/sprejem.php?id=" + prvaCelica; 
 }
 
 </script>';
