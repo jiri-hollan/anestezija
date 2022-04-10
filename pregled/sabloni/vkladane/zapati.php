@@ -21,7 +21,7 @@ echo '
         <button class="dropbtn">najdi</button>
           <div class="dropdown-content">
           <!--<a href="#">Link 1</a>-->
-          <a href="bolnikBaze/vybere.php">baze</a>
+          <a href="vybere.php">baze</a>
           <!--<a href="#">Link 3</a>-->
        </div>
      ';
