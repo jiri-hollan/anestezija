@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once 'sabloni/zahlavi.php';
+require_once 'vnosVrstice.php';
 /*
 <!DOCTYPE html>
 <html  lang="sl-SI">
@@ -21,11 +23,14 @@ document.getElementById("data").value = poljeJSON;
 }
 </script>
 <?php 
-session_start();
+//session_start();
 if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '
-<div id="kontejner">
-<form action="vnosVrstice.php" method="post" autocomplete="off">
+<div id="kontejner">';
+?>
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" autocomplete="off">
+<?php 
+echo '
 <input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
 <label for "stevMaticna">matična stevilka</label>
 <input   type="number" name="stevMaticna" required ></input>
