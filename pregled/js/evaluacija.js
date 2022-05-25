@@ -33,7 +33,7 @@ if(vrednost !="" && vrednost<min) {
     pozorFunction(ime, 3);	
  }
 
-}
+}//od function laborFunction
 
 
 
