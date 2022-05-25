@@ -54,8 +54,8 @@ try {
     id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	`skupina` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
 	`ime` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
-    `min` int(4) NOT NULL,
-	`max` int(4) NOT NULL
+    `min` float(4) NOT NULL,
+	`max` float(4) NOT NULL
     )";
 
     // use exec() because no results are returned
