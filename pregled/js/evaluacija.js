@@ -5,7 +5,6 @@ var inr = {min:0.8, max:1.3};
 var aptc = {min:28, max:40};
 var trombociti = {min:150, max:410};
 var kreatinin = {min:72, max:127};
-
 var laktat = {min:0, max:1.8};
 var pbnp = {min:0, max:100};
 var pct = {min:0, max:0.05};
