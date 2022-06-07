@@ -96,32 +96,32 @@
  <fieldset class="labor" id="lab">
 <div id="stolpec1">
     <label for="hb">Hb:</label>  
-    <input class="lab"id="hb" type="text" name="hb" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab osnovne"id="hb" type="text" name="hb" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="trombociti">Trombociti:</label>  
-    <input class="lab"id="trombociti" type="text" name="trombociti" size="1" onfocusout=  "laborFunction(name,value)"><br>	
+    <input class="lab osnovne"id="trombociti" type="text" name="trombociti" size="1" onfocusout=  "laborFunction(name,value)"><br>	
     <label for="ks">KS:</label>  
-    <input class="lab"id="ks"type="text" name="ks" size="1" onfocusout=  "laborFunction(name,value)"> <br>
+    <input class="lab osnovne"id="ks"type="text" name="ks" size="1" onfocusout=  "laborFunction(name,value)"> <br>
     <label for="inr">INR:</label>  
-    <input class="lab"id="inr" type="text" name="inr" size="1" onfocusout=  "laborFunction(name,value)"><br> 
+    <input class="lab osnovne"id="inr" type="text" name="inr" size="1" onfocusout=  "laborFunction(name,value)"><br> 
     <label for="aptc">APTČ:</label>  
-    <input class="lab"id="aptc" type="text" name="aptc" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab osnovne"id="aptc" type="text" name="aptc" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="kreatinin">Kreatinin:</label>  
-    <input class="lab"id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
+    <input class="lab osnovne"id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
    
 </div>
 <div id="stolpec2">
     <label for="laktat">laktat:</label>  
-    <input class="lab"id="laktat" type="text" name="laktat" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab osnovne"id="laktat" type="text" name="laktat" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="pbnp">P-BNP:</label>  
-    <input class="lab"id="pbnp" type="text" name="pbnp" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab osnovne"id="pbnp" type="text" name="pbnp" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="pct">PCT:</label>  
-    <input class="lab"id="pct" type="text" name="pct" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab osnovne"id="pct" type="text" name="pct" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="crp">CRP:</label>  
-    <input class="lab"id="crp" type="text" name="crp" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab osnovne"id="crp" type="text" name="crp" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="na">Na:</label>  
-    <input class="lab"id="na" type="text" name="na" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab osnovne"id="na" type="text" name="na" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="k">K:</label>  
-    <input class="lab"id="k" type="text" name="k" size="1" onfocusout=  "laborFunction(name,value)"><br>
+    <input class="lab osnovne"id="k" type="text" name="k" size="1" onfocusout=  "laborFunction(name,value)"><br>
 </div>
 <div id="stolpec3">
   <!--  Drugi izvidi<br>	-->

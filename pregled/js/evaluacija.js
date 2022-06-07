@@ -35,7 +35,7 @@ if(vrednost !="" && vrednost<min) {
 }//od function laborFunction
 
 function labevalFunction(){
-const iskano =  document.getElementsByClassName("lab");
+const iskano =  document.getElementsByClassName("lab osnovne");
 alert (iskano[3].name + " = " + iskano[3].value);
 }
 
