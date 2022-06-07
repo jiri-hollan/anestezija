@@ -34,7 +34,10 @@ if(vrednost !="" && vrednost<min) {
 
 }//od function laborFunction
 
-
+function labevalFunction(){
+const iskano =  document.getElementsByClassName("lab");
+alert (iskano[3].name + " = " + iskano[3].value);
+}
 
 function pozorFunction(ime, x) { 
    //alert (x);

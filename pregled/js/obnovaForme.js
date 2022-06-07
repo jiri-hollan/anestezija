@@ -78,6 +78,7 @@ for (i = 0; i < inputs.length; i++) {
 } //od for
 starostFunction();
 document.getElementById("novBLegend").style.display = "none"; 
+labevalFunction();
 	}//od if
 } //od function formNazajFunction
 
