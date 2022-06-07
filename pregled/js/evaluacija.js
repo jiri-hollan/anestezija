@@ -17,16 +17,21 @@ var k = {min:3.8, max:5};
   max = window[ime]["max"];
   min = window[ime]["min"];
 
-if(vrednost !="" && vrednost<min) {
-    //alert (ime + " je pod spodnjo mejo mormale");
-    pozorFunction(ime, 0);	
+
+if(vrednost == ""||vrednost == 0||vrednost=== null) { 
+	 pozorFunction(ime, 2);
+
 	
   } else if(vrednost != "" && vrednost>max) {
      //alert (ime + " je nad zgornjo mejo mormale");
      pozorFunction(ime, 1);	
 	 
-  } else if(vrednost == "") { 
-	 pozorFunction(ime, 2);
+ /*} else if(vrednost == ""||vrednost == 0||vrednost=== null) { 
+	 pozorFunction(ime, 2); */
+	 
+ } else if (vrednost !="" && vrednost<min) {
+    //alert (ime + " je pod spodnjo mejo mormale");
+    pozorFunction(ime, 0);
 	 
   } else {
     pozorFunction(ime, 3);	
@@ -37,7 +42,6 @@ if(vrednost !="" && vrednost<min) {
 function labevalFunction(){
 const iskano =  document.getElementsByClassName("lab osnovne");
 
-let text = "";
 for (let i = 0; i < iskano.length; i++) {
 // laborFunction spremeni styl glede na limite
 laborFunction(iskano[i].name,iskano[i].value); 
@@ -63,7 +67,7 @@ switch (x) {
    
    case 2:
   document.getElementById(ime).value = ""; 
-
+  //document.getElementById(ime).style.color = "white"; 
    break;
    
    default:
