@@ -11,15 +11,16 @@ Class PoberLimite{
  //$this->id = $id;
  $this->conn = new Database();	
  $this->nameTable = 'limitiTbl';
-   $stolpci = array('*');
+  // $stolpci = array('*');
+   $stolpci = array('ime', 'min', 'max');   
 //pregledId je obsoječi Id v tabeli bolnikTbl
- //  $podminka = array("pregledId"=>$this->id);
-  //  $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
-   $prebrano = $this->conn->vyber($this->nameTable, $stolpci);
-echo '<br>Število najdenih zapisov zapis po id: '.count($prebrano);	
+$podminka = array("skupina"=>"lab");
+  $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
+  // $prebrano = $this->conn->vyber($this->nameTable, $stolpci);
+echo '<br>Število zapisov limiti lab vrednosti: najdeno'.count($prebrano);	
 json_encode($prebrano);	
 $vrstica = json_encode($prebrano);	
-echo ' Najdeno'.$vrstica.' zapisov';
+echo ' zapisov'.$vrstica;
 	}//od construct	
 	
 }//od class PoberZapis
