@@ -36,8 +36,16 @@ if(vrednost !="" && vrednost<min) {
 
 function labevalFunction(){
 const iskano =  document.getElementsByClassName("lab osnovne");
-alert (iskano[3].name + " = " + iskano[3].value);
+
+let text = "";
+for (let i = 0; i < iskano.length; i++) {
+// laborFunction spremeni styl glede na limite
+laborFunction(iskano[i].name,iskano[i].value); 
+ 
 }
+
+//alert (iskano[3].name + " = " + iskano[3].value);
+} //od funkcije labevalFunction
 
 function pozorFunction(ime, x) { 
    //alert (x);
