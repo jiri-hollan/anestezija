@@ -37,6 +37,7 @@ echo '
 <li><a href="../admin/manipulacePregledovalci.php">upravljanje z pregledovalci</a></li><br>
 <li><a href="../admin1/navodila/kreateTableLimiti.php">naredi tabelo: limitiTbl</a></li>
 <li><a href="../admin1/navodila/limiti.php">prikaži limite</a></li>
+<li><a href="../admin/manipulaceLimiti.php">uredi limite</a></li><br>
 </ul>
 </div>
 ';
