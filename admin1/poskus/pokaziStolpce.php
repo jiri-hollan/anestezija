@@ -37,7 +37,7 @@ include '../../skupne/streznik.php';
 //$pdo = new PDO('mysql:host=sh17.neoserv.si;dbname=anestiz_premedikacija', 'anestiz', 'laringoskop');
 
     $conn = new PDO ("mysql:host=$servername;dbname=$dbname", $username, $password);
-	  
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
   // $conn = new PDO("mysql:host=$servername", $username, $password);
     // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 //Our SQL statement, which will select a list of tables from the current MySQL database.
