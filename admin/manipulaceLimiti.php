@@ -37,23 +37,23 @@ function test_input($test) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
-  $skupina = test_input($_POST["skupina"]);
+ // $skupina = test_input($_POST["skupina"]);
 
  // $ime = test_input($_POST["ime"]);
   //$min = test_input($_POST["min"]);
  // $max = test_input($_POST["max"]);
   echo strtoupper($akce) .': ';
-  echo strtoupper($skupina) .'<br>';
+//  echo strtoupper($skupina) .'<br>';
   //echo var_dump($max) .'<br>';
   //$akce = naredi($akce);
 switch ($akce) {
   case "vyber":
    // echo "to je vyber.<br>";
-   if ($skupina == "") {
+  // if ($skupina == "") {
 	$podminka = NULL;
-} else {
+/*} else {
     $podminka = array("skupina"=>$skupina);
-}
+}*/
     vyberFunction($podminka);
     break;
 case "vloz":
