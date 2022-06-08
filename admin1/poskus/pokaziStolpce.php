@@ -49,17 +49,17 @@ include '../../skupne/streznik.php';
 
  
 //Prepare our SQL statement,
-   $statement = $conn->prepare($sql);
+   $stmtl = $conn->prepare($sql);
    echo "To so stolpci tabele: " . $imeTable, "<br>";
  echo "<br><table style='border: solid 1px black;'>";
  //echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";	
  echo "<tr>";
 //Execute the statement.
-   $statement->execute();
+   $stmtl->execute();
 
 //Fetch the rows from our statement.
 //$tables = $statement->fetchAll(PDO::FETCH_NUM);
-  $tables = $statement->fetchAll(PDO::FETCH_NUM);
+  $tables = $stmtl->fetchAll(PDO::FETCH_NUM);
  
 //Loop through our table names.
    foreach($tables as $table){
