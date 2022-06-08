@@ -6,6 +6,13 @@
 </head>
 <body>
 
+
+<h2>Prikaz stolpcev v izbrani tabeli</h2>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Name: <input type="text" name="imeTable">
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
 <?php
 
  $imeTable  = "";
@@ -23,12 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } 
 function pokaziStolpce($imeTable) {
 include '../../skupne/streznik.php';	
-	    echo $imeTable, '<br>';
+	    echo $imeTable . '<br>';
 		
+
 //Connect to MySQL using the PDO object.
 //$pdo = new PDO('mysql:host=sh17.neoserv.si;dbname=anestiz_premedikacija', 'anestiz', 'laringoskop');
 
-    $pdo = new PDO ("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO ("mysql:host=$servername;dbname=$dbname", $username, $password);
 	  
   // $conn = new PDO("mysql:host=$servername", $username, $password);
     // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -38,32 +46,33 @@ include '../../skupne/streznik.php';
  
    $sql = "select column_name from information_schema.columns where table_name = '$imeTable'";
    echo $sql, "<br>";
+
+ 
 //Prepare our SQL statement,
-   $statement = $pdo->prepare($sql);
+   $statement = $conn->prepare($sql);
    echo "To so stolpci tabele: " . $imeTable, "<br>";
+ echo "<br><table style='border: solid 1px black;'>";
+ //echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";	
+ echo "<tr>";
 //Execute the statement.
    $statement->execute();
- 
+
 //Fetch the rows from our statement.
 //$tables = $statement->fetchAll(PDO::FETCH_NUM);
   $tables = $statement->fetchAll(PDO::FETCH_NUM);
+ 
 //Loop through our table names.
    foreach($tables as $table){
    //Print the table name out onto the page.
    //echo "stolpci:";
    //echo $table[0], '<br>';
-   print_r($table);
-   echo '<br>';	
-}
+   
+  echo '<th>'.$table[0].'</th>';
+   
+  // print_r($table);
+   //echo '<br>';	
+} //od foreach
 }
 ?>
-<h2>Prikaz stolpcev v izbrani tabeli</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="imeTable">
-  <br><br>
- 
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
-</form>
 </body>
 </html>
