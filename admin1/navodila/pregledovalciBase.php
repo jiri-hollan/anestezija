@@ -28,11 +28,12 @@ try {
 	$conn = new PDO("mysql:host=" . $servername . ";dbname=" . $dbname . ';charset=UTF8', $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	//----------------------------------------------------------------------------------
-	   $sql = "select column_name from information_schema.columns where table_name =  'pregledovalciTbl'";
+	   $imeTable = 'pregledovalciTbl';
+	   $sql = "select column_name from information_schema.columns where table_name =  '$imeTable'";
 
 //Prepare our SQL statement,
    $stmtl = $conn->prepare($sql);
-  // echo "To so stolpci tabele: " . "pregledovalciTbl", "<br>";
+  // echo "To so stolpci tabele: " . "$imeTable", "<br>";
  echo "<br><table style='border: solid 1px black;'>";
  //echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";	
  echo "<tr>";
@@ -53,7 +54,7 @@ try {
 	} //od foreach
 	
 	//------------------------------------------------------------------------------
-    $stmt = $conn->prepare("SELECT * FROM" . " pregledovalciTbl" );
+    $stmt = $conn->prepare("SELECT * FROM " . $imeTable );
     $stmt->execute();
 
     // set the resulting array to associative
