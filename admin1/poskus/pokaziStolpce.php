@@ -44,12 +44,12 @@ include '../../skupne/streznik.php';
 // $sql = "SELECT * FROM podatkiVsi";
  //$sql = "select column_name from information_schema.columns where table_name = 'kartakoTabela'";
  
-   $sql = "select column_name from information_schema.columns where table_name = '$imeTable'";
-   echo $sql, "<br>";
+   $stm = "select column_name from information_schema.columns where table_name = '$imeTable'";
+   echo $stm, "<br>";
 
  
 //Prepare our SQL statement,
-   $statement = $conn->prepare($sql);
+   $statement = $conn->prepare($stm);
    echo "To so stolpci tabele: " . $imeTable, "<br>";
  echo "<br><table style='border: solid 1px black;'>";
  //echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";	
