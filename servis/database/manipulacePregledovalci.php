@@ -82,7 +82,7 @@ default:
 
 ?>
 
-<script src="js/manipulaceBazo.js?<?php echo time(); ?>">
+<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>">
 </script>
 
 
