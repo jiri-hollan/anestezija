@@ -21,7 +21,7 @@ echo '
 <h1>Menu besedila</h1>
 <ul id="linky2">
 <li><a href="../admin1/navodila/kreateTableBesedila.php" >Naredi Tabelo:besedilaTbl </a></li>
-<li><a href="../admin1/navodila/besediloBase.php">prikaži besedila</a></li>
+<li><a href="../admin1/navodila/ogledTabele.php?imeTable=besedilaTbl">prikaži besedila</a></li>
 </ul>
 <h1>Menu uporabniki</h1>
 <ul id="linky3">
