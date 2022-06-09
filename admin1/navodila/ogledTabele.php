@@ -1,5 +1,8 @@
 <?php
 require_once 'sabloni/vkladane/zahlavi.php';
+	  // $imeTable = 'limitiTbl';
+	   $imeTable = $_GET['imeTable'];
+	   
 echo "<table style='border: solid 1px black;'>";
 // echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";
 
@@ -28,7 +31,7 @@ try {
 	$conn = new PDO("mysql:host=" . $servername . ";dbname=" . $dbname . ';charset=UTF8', $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	//----------------------------------------------------------------------------------
-	   $imeTable = 'pregledovalciTbl';
+
 	   $sql = "select column_name from information_schema.columns where table_name =  '$imeTable'";
 
 //Prepare our SQL statement,

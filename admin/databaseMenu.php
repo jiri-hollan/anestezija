@@ -33,10 +33,11 @@ echo '
 <h1>Menu pregled</h1>
 <ul id="linky3">
 <li><a href="../admin1/navodila/kreateTablePregledovalci.php">naredi tabelo: pregledovalciTbl</a></li>
-<li><a href="../admin1/navodila/pregledovalciBase.php">prikaži pregledovalce</a></li>
+<li><a href="../admin1/navodila/ogledTabele.php?imeTable=pregledovalciTbl">prikaži pregledovalce</a></li>
 <li><a href="../admin/manipulacePregledovalci.php">upravljanje z pregledovalci</a></li><br>
+
 <li><a href="../admin1/navodila/kreateTableLimiti.php">naredi tabelo: limitiTbl</a></li>
-<li><a href="../admin1/navodila/limiti.php?imeTable=limitiTbl">prikaži limite</a></li>
+<li><a href="../admin1/navodila/ogledTabele.php?imeTable=limitiTbl">prikaži limite</a></li>
 <li><a href="../admin/manipulaceLimiti.php">uredi limite</a></li><br>
 </ul>
 </div>
