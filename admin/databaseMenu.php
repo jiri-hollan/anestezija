@@ -26,8 +26,7 @@ echo '
 <h1>Menu uporabniki</h1>
 <ul id="linky3">
 <li><a href="../admin1/navodila/kreateTableUporabniki2.php">naredi tabelo: uporabnikiTbl2</a></li>
-<li><a href="../admin1/navodila/uporabnikiBase.php">prikaži uporabnike</a></li><br>
-
+<li><a href="../admin1/navodila/ogledTabele.php?imeTable=uporabnikiTbl2">prikaži uporabnike</a></li><br>
 
 </ul>
 <h1>Menu pregled</h1>
