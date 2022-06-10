@@ -33,7 +33,12 @@ array_push($celoIme,$celoIme1);
 //var_dump($celoIme);
 $celoImeJson = json_encode($celoIme, JSON_UNESCAPED_UNICODE);
 */
-var_dump($prebrano);
+//var_dump($prebrano);
+$limitiJson = json_encode($prebrano, JSON_UNESCAPED_UNICODE);
+echo '<script>';
+echo 'var limitiJson= ' . json_encode( $limitiJson, JSON_UNESCAPED_UNICODE) . ';';
+echo 'alert (limitiJson);';
+echo '</script>';
 /*echo '<script>';
 echo 'var celoImeJson= ' . json_encode( $celoImeJson, JSON_UNESCAPED_UNICODE) . ';';
 echo '</script>';*/
