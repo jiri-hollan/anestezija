@@ -12,8 +12,8 @@ Class PoberZapis{
  // $this->status = '1';
  $this->conn = new Database();	
  $this->nameTable = 'limitiTbl';
- $stolpci = array('*');
- //  $stolpci = array('ime','priimek');
+ //$stolpci = array('*');
+ $stolpci = array('ime','min', 'max');
   // $poradi = "priimek";
    $poradi = "";
 //bolnisnicapregledId je obsoječa bolnisnica v tabeli limitiTbl
@@ -39,9 +39,7 @@ echo '<script>';
 echo 'var limitiJson= ' . json_encode( $limitiJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'alert (limitiJson);';
 echo '</script>';
-/*echo '<script>';
-echo 'var celoImeJson= ' . json_encode( $celoImeJson, JSON_UNESCAPED_UNICODE) . ';';
-echo '</script>';*/
+
 	}//od construct	
 	}//od class PoberZapis
 /*if (isset($_GET['aktivnaBolnisnica'])) {
