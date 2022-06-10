@@ -37,7 +37,7 @@ function test_input($test) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
- // $skupina = test_input($_POST["skupina"]);
+  $skupina = test_input($_POST["skupina"]);
 
  // $ime = test_input($_POST["ime"]);
   //$min = test_input($_POST["min"]);
