@@ -1,24 +1,26 @@
 
 <?php
-//------na temelju pregledId pobere podatke iz zapisa z bolnišnice
+//------upam da naredi primeren jason iz limitiTbl
 require_once '../skupne/database.php';
 Class PoberZapis{
 	public $conn;
 	public $zaklad;
-	public $status;
-	public $pristop;
-	public function __construct($bolnisnica) {
- $this->bolnisnica = $bolnisnica;
-  $this->status = '1';
+	//public $status;
+	//public $pristop;
+	public function __construct() {
+// $this->bolnisnica = $bolnisnica;
+ // $this->status = '1';
  $this->conn = new Database();	
- $this->nameTable = 'pregledovalciTbl';
-// $stolpci = array('*');
-   $stolpci = array('ime','priimek');
-   $poradi = "priimek";
-//bolnisnicapregledId je obsoječa bolnisnica v tabeli pregledovalciTbl
-   $podminka = array("bolnisnica"=>$this->bolnisnica,"status"=>$this->status);  
+ $this->nameTable = 'limitiTbl';
+ $stolpci = array('*');
+ //  $stolpci = array('ime','priimek');
+  // $poradi = "priimek";
+   $poradi = "";
+//bolnisnicapregledId je obsoječa bolnisnica v tabeli limitiTbl
+ //  $podminka = array("bolnisnica"=>$this->bolnisnica,"status"=>$this->status); 
+ $podminka = array();
    $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka, $poradi);
-     
+/*     
 $celoIme=array();
 for ($i = 0; $i < count($prebrano); $i++) {
 //echo $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"].'<br>';	
@@ -26,22 +28,22 @@ $celoIme1= $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"];
 //echo $celoIme1.'<br>';//izpiše celo ime na zaslon
 array_push($celoIme,$celoIme1);	
 
-
 }//od for 
 //echo '<br>var dump celo ime:<br>';
 //var_dump($celoIme);
 $celoImeJson = json_encode($celoIme, JSON_UNESCAPED_UNICODE);
-
-echo '<script>';
+*/
+var_dump($prebrano);
+/*echo '<script>';
 echo 'var celoImeJson= ' . json_encode( $celoImeJson, JSON_UNESCAPED_UNICODE) . ';';
-echo '</script>';
+echo '</script>';*/
 	}//od construct	
 	}//od class PoberZapis
-if (isset($_GET['aktivnaBolnisnica'])) {
+/*if (isset($_GET['aktivnaBolnisnica'])) {
 	$aktivnaBolnisnica = $_GET['aktivnaBolnisnica'];
 }else {$aktivnaBolnisnica = '';
 }
-//var_dump($aktivnaBolnisnica);
-new PoberZapis($aktivnaBolnisnica);
+//var_dump($aktivnaBolnisnica);*/
+new PoberZapis();
  
 ?>
