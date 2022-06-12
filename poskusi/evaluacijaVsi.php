@@ -2,80 +2,43 @@
 <?php
 //------upam da naredi primeren jason iz limitiTbl
 require_once '../skupne/database.php';
-Class PoberZapis{
+Class PoberZapise{
 	public $conn;
 	public $zaklad;
 	//public $status;
 	//public $pristop;
 	public function __construct() {
 // $this->bolnisnica = $bolnisnica;
- // $this->status = '1';
  $this->conn = new Database();	
  $this->nameTable = 'limitiTbl';
- //$stolpci = array('*');
  $stolpci = array('ime','min', 'max');
-  // $poradi = "priimek";
-   $poradi = "";
-//bolnisnicapregledId je obsoječa bolnisnica v tabeli limitiTbl
- //  $podminka = array("bolnisnica"=>$this->bolnisnica,"status"=>$this->status); 
+ $poradi = "";
  $podminka = array();
    $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka, $poradi);
-/*     
-$celoIme=array();
-for ($i = 0; $i < count($prebrano); $i++) {
-//echo $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"].'<br>';	
-$celoIme1= $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"];
-//echo $celoIme1.'<br>';//izpiše celo ime na zaslon
-array_push($celoIme,$celoIme1);	
-
-}//od for 
-//echo '<br>var dump celo ime:<br>';
-//var_dump($celoIme);
-$celoImeJson = json_encode($celoIme, JSON_UNESCAPED_UNICODE);
-*/
 //var_dump($prebrano);
 //______________________________________________________________-
 $limiti=array();
 for ($i = 0; $i < count($prebrano); $i++) {
-//echo $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"].'<br>';
-	
 $ime= $prebrano[$i]["ime"];
 $min= $prebrano[$i]["min"];
 $max= $prebrano[$i]["max"];
-
 $limiti[$ime]=array("min"=>$min,"max"=>$max);
-
-//echo $limiti1.'<br>';//izpiše celo ime na zaslon
-//array_push($limiti,$limiti1);	
-
+//echo $limiti1.'<br>';//izpiše limite na zaslon
 }//od for 
 //echo '<br>var dump celo ime:<br>';
 var_dump($limiti);
 
 //________________________________________________________________
 
-//$limitiJson = json_encode($prebrano, JSON_UNESCAPED_UNICODE);
 $limitiJson = json_encode($limiti, JSON_UNESCAPED_UNICODE);
-
 echo '<script>';
 echo 'var limitiJson= ' . json_encode( $limitiJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'alert (limitiJson);';
 echo  'var limitiJsonx = JSON.parse(limitiJson);';
-//echo 'alert (limitiJsonx[0].ime + " min = " +limitiJsonx[0].min+ " max = " +limitiJsonx[0].max);'; 
 echo 'alert ("hb: " + " min = " +limitiJsonx["hb"].min+ " max = " +limitiJsonx["hb"].max);'; 
-
-//echo 'alert "hb: " + " min = " ;';
-//echo 'alert (limitiJson);';
-
 echo '</script>';
-
 	}//od construct	
-	}//od class PoberZapis
-/*if (isset($_GET['aktivnaBolnisnica'])) {
-	$aktivnaBolnisnica = $_GET['aktivnaBolnisnica'];
-}else {$aktivnaBolnisnica = '';
-}
-//var_dump($aktivnaBolnisnica);*/
-new PoberZapis();
+	}//od class PoberZapise
+new PoberZapise();
  
 ?>
