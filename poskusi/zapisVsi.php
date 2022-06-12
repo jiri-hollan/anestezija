@@ -34,12 +34,39 @@ array_push($celoIme,$celoIme1);
 $celoImeJson = json_encode($celoIme, JSON_UNESCAPED_UNICODE);
 */
 //var_dump($prebrano);
-$limitiJson = json_encode($prebrano, JSON_UNESCAPED_UNICODE);
+//______________________________________________________________-
+$limiti=array();
+for ($i = 0; $i < count($prebrano); $i++) {
+//echo $prebrano[$i]["ime"].' '.$prebrano[$i]["priimek"].'<br>';
+	
+$ime= $prebrano[$i]["ime"];
+$min= $prebrano[$i]["min"];
+$max= $prebrano[$i]["max"];
+
+$limiti[$ime]=array("min"=>$min,"max"=>$max);
+
+//echo $limiti1.'<br>';//izpiše celo ime na zaslon
+//array_push($limiti,$limiti1);	
+
+}//od for 
+//echo '<br>var dump celo ime:<br>';
+var_dump($limiti);
+
+//________________________________________________________________
+
+//$limitiJson = json_encode($prebrano, JSON_UNESCAPED_UNICODE);
+$limitiJson = json_encode($limiti, JSON_UNESCAPED_UNICODE);
+
 echo '<script>';
 echo 'var limitiJson= ' . json_encode( $limitiJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'alert (limitiJson);';
 echo  'var limitiJsonx = JSON.parse(limitiJson);';
-echo 'alert (limitiJsonx[0].ime + " min = " +limitiJsonx[0].min+ " max = " +limitiJsonx[0].max);'; 
+//echo 'alert (limitiJsonx[0].ime + " min = " +limitiJsonx[0].min+ " max = " +limitiJsonx[0].max);'; 
+echo 'alert ("hb: " + " min = " +limitiJsonx["hb"].min+ " max = " +limitiJsonx["hb"].max);'; 
+
+//echo 'alert "hb: " + " min = " ;';
+//echo 'alert (limitiJson);';
+
 echo '</script>';
 
 	}//od construct	
