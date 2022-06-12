@@ -1,4 +1,4 @@
-
+/*
 var hb = {min:100, max:150};
 var ks = {min:3.6, max:6.1};
 var inr = {min:0.8, max:1.3};
@@ -11,11 +11,16 @@ var pct = {min:0, max:0.05};
 var crp = {min:0, max:8};
 var na = {min:136, max:145};
 var k = {min:3.8, max:5};
+*/
 
  function laborFunction(ime,vrednost)
 {	
-  max = window[ime]["max"];
+ /* 
+ max = window[ime]["max"];
   min = window[ime]["min"];
+*/
+ max = limitiJsonx[ime]["max"];
+  min = limitiJsonx[ime]["min"];
 
 
 if(vrednost == ""||vrednost == 0||vrednost=== null) { 
