@@ -39,7 +39,7 @@ echo '<script>';
 echo 'var limitiJson= ' . json_encode( $limitiJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'alert (limitiJson);';
 echo  'var limitiJsonx = JSON.parse(limitiJson);';
-echo 'alert (limitiJsonx[0].ime + " min = " +limitiJsonx[0].min);'; 
+echo 'alert (limitiJsonx[0].ime + " min = " +limitiJsonx[0].min+ " max = " +limitiJsonx[0].max);'; 
 echo '</script>';
 
 	}//od construct	
