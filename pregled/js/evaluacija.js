@@ -20,8 +20,9 @@ var k = {min:3.8, max:5};
   min = window[ime]["min"];
 */
  max = limitiJsonx[ime]["max"];
+ console.log(max);
   min = limitiJsonx[ime]["min"];
-
+ console.log(min);
 
 if(vrednost == ""||vrednost == 0||vrednost=== null) { 
 	 pozorFunction(ime, 2);
