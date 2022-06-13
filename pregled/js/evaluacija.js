@@ -15,10 +15,7 @@ var k = {min:3.8, max:5};
 
  function laborFunction(ime,vrednost)
 {	
- /* 
- max = window[ime]["max"];
-  min = window[ime]["min"];
-*/
+
  max = limitiJsonx[ime]["max"];
  max = parseFloat(max);
  console.log(max);
@@ -46,7 +43,8 @@ if(vrednost == ""||vrednost == 0||vrednost=== null) {
  }
 
 }//od function laborFunction
-
+//-------------------------------------------------------------------------------------------------------
+//labevalFunction preveri limite lab. vrednosti pri načitanju bolnika iz baze
 function labevalFunction(){
 const iskano =  document.getElementsByClassName("lab osnovne");
 

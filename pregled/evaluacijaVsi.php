@@ -33,9 +33,8 @@ $limiti[$ime]=array("min"=>$min,"max"=>$max);
 $limitiJson = json_encode($limiti, JSON_UNESCAPED_UNICODE);
 echo '<script>';
 echo 'var limitiJson= ' . json_encode( $limitiJson, JSON_UNESCAPED_UNICODE) . ';';
-//echo 'alert (limitiJson);';
+//echo 'console.log(limitiJson);';
 echo  'var limitiJsonx = JSON.parse(limitiJson);';
-//echo 'alert ("hb: " + " min = " +limitiJsonx["hb"].min+ " max = " +limitiJsonx["hb"].max);'; 
 echo '</script>';
 	}//od construct	
 	}//od class PoberZapise
