@@ -22,3 +22,4 @@ echo ' Najdeno'.$vrstica.' zapisov';
 	}//od construct	
 	
 }//od class PoberZapis
+?>
