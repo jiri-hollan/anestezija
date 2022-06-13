@@ -20,8 +20,10 @@ var k = {min:3.8, max:5};
   min = window[ime]["min"];
 */
  max = limitiJsonx[ime]["max"];
+ max = parseFloat(max);
  console.log(max);
   min = limitiJsonx[ime]["min"];
+   min = parseFloat(min);
  console.log(min);
 
 if(vrednost == ""||vrednost == 0||vrednost=== null) { 
