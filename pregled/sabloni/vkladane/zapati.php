@@ -29,8 +29,7 @@ echo '
   }
 ?> 
 </div>
-	<!--<span class="navSpan" id="najdiZapis" onclick="../../../bolnikBaze/vybere.php;">najdi</span> -->	
-	<!-- <span class="navSpan" id="najdiZapis" onclick="alert('koda še ni napisana');">najdi</span>	-->
+
      <span class="navSpan" id="nazaj" onclick="nazajFunction()">nazaj</span>
      <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>
      <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span> 
