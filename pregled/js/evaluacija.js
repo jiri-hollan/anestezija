@@ -12,14 +12,15 @@ var crp = {min:0, max:8};
 var na = {min:136, max:145};
 var k = {min:3.8, max:5};
 */
- console.log(limitiJsonx);
+ const LIMITIlab = JSON.parse(limitiJson);
+ console.log(LIMITIlab);
  function laborFunction(ime,vrednost)
 {	
 
- max = limitiJsonx[ime]["max"];
+ max = LIMITIlab[ime]["max"];
  max = parseFloat(max);
  console.log(max);
-  min = limitiJsonx[ime]["min"];
+  min = LIMITIlab[ime]["min"];
    min = parseFloat(min);
  console.log(min);
 

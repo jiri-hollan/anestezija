@@ -34,7 +34,7 @@ $limitiJson = json_encode($limiti, JSON_UNESCAPED_UNICODE);
 echo '<script>';
 echo 'var limitiJson= ' . json_encode( $limitiJson, JSON_UNESCAPED_UNICODE) . ';';
 //echo 'console.log(limitiJson);';
-echo  'var limitiJsonx = JSON.parse(limitiJson);';
+//echo  'var limitiJsonx = JSON.parse(limitiJson);';
 echo '</script>';
 	}//od construct	
 	}//od class PoberZapise
