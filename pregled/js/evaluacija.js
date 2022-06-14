@@ -15,11 +15,12 @@ var k = {min:3.8, max:5};
 
  function laborFunction(ime,vrednost)
 {	
-
- max = limitiJsonx[ime]["max"];
+const LIMITILAB = JSON.parse(limitiJson);
+ console.log(LIMITILAB);
+ max = LIMITILAB[ime]["max"];
  max = parseFloat(max);
  console.log(max);
-  min = limitiJsonx[ime]["min"];
+  min = LIMITILAB[ime]["min"];
    min = parseFloat(min);
  console.log(min);
 
