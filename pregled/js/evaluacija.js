@@ -12,7 +12,7 @@ var crp = {min:0, max:8};
 var na = {min:136, max:145};
 var k = {min:3.8, max:5};
 */
-
+ console.log(limitiJsonx);
  function laborFunction(ime,vrednost)
 {	
 
