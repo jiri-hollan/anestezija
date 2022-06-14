@@ -12,7 +12,7 @@ var crp = {min:0, max:8};
 var na = {min:136, max:145};
 var k = {min:3.8, max:5};
 */
- console.log(limitiJsonx);
+/* console.log(limitiJsonx);
  function laborFunction(ime,vrednost)
 {	
 
@@ -29,11 +29,11 @@ if(vrednost == ""||vrednost == 0||vrednost=== null) {
 	
   } else if(vrednost != "" && vrednost>max) {
      //alert (ime + " je nad zgornjo mejo mormale");
-     pozorFunction(ime, 1);	
+     pozorFunction(ime, 1);	*/
 	 
  /*} else if(vrednost == ""||vrednost == 0||vrednost=== null) { 
 	 pozorFunction(ime, 2); */
-	 
+/*	 
  } else if (vrednost !="" && vrednost<min) {
     //alert (ime + " je pod spodnjo mejo mormale");
     pozorFunction(ime, 0);
@@ -42,7 +42,7 @@ if(vrednost == ""||vrednost == 0||vrednost=== null) {
     pozorFunction(ime, 3);	
  }
 
-}//od function laborFunction
+}//od function laborFunction */
 //-------------------------------------------------------------------------------------------------------
 //labevalFunction preveri limite lab. vrednosti pri načitanju bolnika iz baze
 function labevalFunction(){

@@ -41,3 +41,36 @@ echo '</script>';
 new PoberZapise();
  
 ?>
+<script>
+ console.log(limitiJsonx);
+ function laborFunction(ime,vrednost)
+{	
+
+ max = limitiJsonx[ime]["max"];
+ max = parseFloat(max);
+ console.log(max);
+  min = limitiJsonx[ime]["min"];
+   min = parseFloat(min);
+ console.log(min);
+
+if(vrednost == ""||vrednost == 0||vrednost=== null) { 
+	 pozorFunction(ime, 2);
+
+	
+  } else if(vrednost != "" && vrednost>max) {
+     //alert (ime + " je nad zgornjo mejo mormale");
+     pozorFunction(ime, 1);	
+	 
+ /*} else if(vrednost == ""||vrednost == 0||vrednost=== null) { 
+	 pozorFunction(ime, 2); */
+	 
+ } else if (vrednost !="" && vrednost<min) {
+    //alert (ime + " je pod spodnjo mejo mormale");
+    pozorFunction(ime, 0);
+	 
+  } else {
+    pozorFunction(ime, 3);	
+ }
+
+}//od function laborFunction
+</script>
