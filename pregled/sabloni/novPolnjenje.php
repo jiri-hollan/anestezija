@@ -155,7 +155,7 @@
      <option value='st mall'>
      </datalist>
      
-     <label for="alergija">Alergija:<input id="alergija" type="text" name="alergija"  ></label>
+     <label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>
 	 
  </fieldset>
  
