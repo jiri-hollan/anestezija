@@ -161,14 +161,31 @@
  
 	<label for="izvidiInOpombe">Izvidi in opombe:</label><br>  
     <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
-
- <label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
+ <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
+<!-- <label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
  <datalist id="sklepi">
     <option value="Lahko se uvrsti na operativni program">
     <option value="Potrebna je dodatna obdelava">
     <option value="Ni primeren za operacijo v naši bolnišnici">
 	<option value="Zaradi splošno slabega stanja mora biti uvrščen na program kot prvi">
+  </datalist> -->
+ <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
+<label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
+ <datalist id="sklepi">
+ 
+    <option value="sklep">
   </datalist>
+
+
+ <script>
+ // alert("sklep Json:" + sklepJson);
+  var sklepList = JSON.parse(sklepJson);
+  //alert(sklepList);
+  listaSklepovFunction(sklepList);
+  </script>
+
+
+ <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
 <br><br>
  <fieldset class="zaklucek">premedikacija 
   <div id="zaklucek">
