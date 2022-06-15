@@ -1,5 +1,5 @@
 function listaSklepovFunction(sklepList) {
-	alert ("lista Sklepov function");
+	//alert ("lista Sklepov function");
 
 console.log("sklepi.js");
 var text = "";
