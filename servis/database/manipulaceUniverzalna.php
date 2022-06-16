@@ -1,6 +1,8 @@
 
 <?php
-
+$tabulka=$_GET["imeTable"];
+   //$tabulka= "pregledovalciTab";
+	var_dump($tabulka);
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
@@ -20,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
-  akceFunction($akce);
+  akceFunction($akce, $tabulka);
 }//od if
   else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
   $akce = test_input($_GET["akce"]);
@@ -29,14 +31,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }//od else if
 
   //______________________________________________________________________
- $tabulka="pregledovalciTbl";
- function akceFunction($akce){
+ //$tabulka="pregledovalciTbl";
+ function akceFunction($akce, $tabulka){
    // $tabulka="pregledovalciTbl";
- // $tabulka=$_GET["imeTable"];
+   // $tabulka=$_GET["imeTable"];
 switch ($akce) {
 case "vyber":
-    $bolnisnica=test_input($_POST["bolnisnica"]);		
-   // $tabulka="pregledovalciTbl";
+    $bolnisnica=test_input($_POST["bolnisnica"]);
+ //$tabulka="pregledovalciTbl";
   // $tabulka=$_GET["imeTable"];
     $stolpci=["*"];
 	$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='priimek');
