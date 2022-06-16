@@ -37,7 +37,7 @@ echo '
 
 <li><a href="../admin1/navodila/kreateTableLimiti.php">naredi tabelo: limitiTbl</a></li>
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=limitiTbl">prikaži limite</a></li>
-<li><a href="../admin/manipulaceLimiti.php">uredi limite</a></li><br><br>
+<li><a href="../admin/manipulaceLimiti.php">uredi limite</a></li><br>
 
 <li><a href="../admin1/navodila/kreateTableSklepi.php">naredi tabelo: sklepiTbl</a></li>
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=sklepiTbl">prikaži sklepe</a></li>
