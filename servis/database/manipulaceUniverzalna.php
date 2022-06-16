@@ -1,13 +1,18 @@
 
 <?php
-$tabulka=$_GET["imeTable"];
+//$tabulka=$_GET["imeTable"];
    //$tabulka= "pregledovalciTab";
-	var_dump($tabulka);
+//	var_dump($tabulka);
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../../skupne/database.php';
  require_once('manipulaceClassUniversal.php');
+ if (isset($_GET["imeTable"])) {
+ $tabulka=$_GET["imeTable"];    
+   //$tabulka= "pregledovalciTab";
+	var_dump($tabulka);
+ }	
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
@@ -21,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $bolnisnica = test_input($_POST["bolnisnica"]);
   echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
-  //echo var_dump($status) .'<br>';
+  echo var_dump($tabulka) .'<br>';
   akceFunction($akce, $tabulka);
 }//od if
   else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
