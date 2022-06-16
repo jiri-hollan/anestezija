@@ -4,7 +4,7 @@
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../../skupne/database.php';
- require_once('manipulaceClass.php');
+ require_once('manipulaceClass1.php');
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
@@ -40,9 +40,9 @@ case "vloz":
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
    // $priimek = test_input($_POST["priimek"]);
-    $status = test_input($_POST["status"]);  
+    $aktiven = test_input($_POST["aktiven"]);  
 	//$vloz = new Vloz($bolnisnica, $tabulka, $ime, $priimek, $status);
-	$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $status);
+	$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $aktiven);
 	$vloz->vlozFunction();	
     break;
 case "uredi":
@@ -51,9 +51,9 @@ case "uredi":
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
 	//$priimek = test_input($_POST["priimek"]);
-	$status = test_input($_POST["status"]); 	
-	//$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
-	$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $status);
+	$aktiven = test_input($_POST["aktiven"]); 	
+	//$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $aktiven);
+	$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $aktiven);
 	$uredi->aktualizujFunction();
     break;
 
