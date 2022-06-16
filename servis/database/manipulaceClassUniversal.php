@@ -14,17 +14,20 @@
 //____________________________________________________________________________________________
 	class Uredi extends DostopPost{
   public $id;
-  public $ime;
+/*public $ime;
   public $priimek;
-  public $status; 
-  public function __construct($bolnisnica, $tabulka, $id, $ime, $priimek, $status) {
+  public $status;
+*/
+  public $data;
+  public function __construct($bolnisnica, $tabulka, $id, $data) {
 	parent::__construct($bolnisnica, $tabulka);
 	$this->id = $id; 
 	$this->ime = $ime; 
     $this->priimek = $priimek; 
     $this->status = $status; 
     $this->podminka = array("id"=>$this->id);
-    $this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);	
+   // $this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);	
+   $this->data = $data;
   }
   function aktualizujFunction() {
     	$aktualizuj = new database();
@@ -79,12 +82,12 @@ echo "Za izbrano bolnico ni zapisa v bazi";
   public $ime;
   public $priimek;
   public $status; 
-  function __construct($bolnisnica, $tabulka, $ime, $priimek, $status) {
+  function __construct($tabulka, $data) {
 	parent::__construct($bolnisnica, $tabulka);
-	$this->ime = $ime; 
+/*	$this->ime = $ime; 
     $this->priimek = $priimek; 
-    $this->status = $status; 
-    $this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);	
+    $this->status = $status; */
+    $this->data = $data;	
   }
 
   
