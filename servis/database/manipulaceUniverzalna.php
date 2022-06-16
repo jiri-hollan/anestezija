@@ -1,5 +1,6 @@
 
 <?php
+
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
@@ -23,16 +24,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }//od if
   else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
   $akce = test_input($_GET["akce"]);
+// $tabulka = test_input($_GET["imeTable"]);
   akceFunction($akce);
   }//od else if
+
   //______________________________________________________________________
-  function akceFunction($akce){
+ $tabulka="pregledovalciTbl";
+ function akceFunction($akce){
    // $tabulka="pregledovalciTbl";
-  $tabulka=$_GET["tabulka"];
+ // $tabulka=$_GET["imeTable"];
 switch ($akce) {
 case "vyber":
     $bolnisnica=test_input($_POST["bolnisnica"]);		
    // $tabulka="pregledovalciTbl";
+  // $tabulka=$_GET["imeTable"];
     $stolpci=["*"];
 	$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='priimek');
 	$vyber->vyberFunction();
@@ -45,7 +50,7 @@ case "vloz":
     $status = test_input($_POST["status"]); 
 */
 
-	$data = array("bolnisnica"=>test_input($_POST["bolnisnica"]), "ime"=>test_input($_POST["ime"]), "priimek"=>test_input($_POST["priimek"]), "status"=>test_input($_POST["status"]));
+	$data = array("ime"=>test_input($_POST["ime"]), "priimek"=>test_input($_POST["priimek"]), "status"=>test_input($_POST["status"]));
 	
 	
 	
