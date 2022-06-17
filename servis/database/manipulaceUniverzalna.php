@@ -12,11 +12,13 @@
  if (isset($_GET["imeTable"])) {
  $tabulka=$_GET["imeTable"];    
    //$tabulka= "pregledovalciTbl";
-	var_dump($tabulka);
+	//var_dump($tabulka);
  }else {
-	 $tabulka=$tabulka= "pregledovalciTbl";
+	// $tabulka=$tabulka= "pregledovalciTbl";
+	echo "ni tabulke";
+	 //	var_dump($tabulka);
  }
- 	var_dump($tabulka);
+ //	var_dump($tabulka);
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
@@ -30,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $bolnisnica = test_input($_POST["bolnisnica"]);
   echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
-  echo var_dump($tabulka) .'<br>';
+//  echo var_dump($tabulka) .'<br>';
   akceFunction($akce, $tabulka);
 }//od if
   else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
