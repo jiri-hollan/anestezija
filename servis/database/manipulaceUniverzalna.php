@@ -1,18 +1,22 @@
 
 <?php
 //$tabulka=$_GET["imeTable"];
-   //$tabulka= "pregledovalciTab";
+   //$tabulka= "pregledovalciTbl";
 //	var_dump($tabulka);
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../../skupne/database.php';
  require_once('manipulaceClassUniversal.php');
+ //	echo($_GET["imeTable"] . "<br>");
  if (isset($_GET["imeTable"])) {
  $tabulka=$_GET["imeTable"];    
-   //$tabulka= "pregledovalciTab";
+   //$tabulka= "pregledovalciTbl";
 	var_dump($tabulka);
- }	
+ }else {
+	 $tabulka=$tabulka= "pregledovalciTbl";
+ }
+ 	var_dump($tabulka);
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
@@ -109,7 +113,7 @@ default:
 
 ?>
 
-<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>">
+<script src="js/manipulaceUniverzalna.js?<?php echo time(); ?>">
 </script>
 
 
