@@ -1,7 +1,7 @@
 
 <?php
 //$tabulka=$_GET["imeTable"];
-   //$tabulka= "pregledovalciTab";
+   //$tabulka= "pregledovalciTbl";
 //	var_dump($tabulka);
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
@@ -10,7 +10,7 @@
  require_once('manipulaceClassUniversal.php');
  if (isset($_GET["imeTable"])) {
  $tabulka=$_GET["imeTable"];    
-   //$tabulka= "pregledovalciTab";
+   //$tabulka= "pregledovalciTbl";
 	var_dump($tabulka);
  }	
 function test_input($test) {
