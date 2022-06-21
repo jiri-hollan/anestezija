@@ -65,6 +65,7 @@ document.getElementById("bolnisnice").innerHTML = text;
  }//od switch
 } // od izborFunction
 //----------------------------------------------------------------------------------------
+//----------------- izbira id------------------------------------------------------
 function functionOver (e) {
 var x = e.target;
 if (x.nodeName == "TD") {

@@ -2,7 +2,7 @@
 <button id="vyberId" onclick="izborFunction('vyber')">vyber</button>
 <button id="vlozId" onclick="izborFunction('vloz')">vlož</button>
 
-<form method="post" action="akceUniverzalna.php">
+<form method="post" action="akceUniverzalna.php?tabulka=pregledovalciTbl">
 <input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
 <p id="posli"></p>
