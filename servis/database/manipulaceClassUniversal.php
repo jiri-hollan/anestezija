@@ -47,10 +47,12 @@
 	
 	if ($this->bolnisnica == "") {
 	$this->podminka = NULL;
+    $this->poradi=NULL;
    } else {
     $this->podminka = array("bolnisnica"=>$this->bolnisnica);
+	$this->poradi=$poradi;
    }//od else
-   $this->poradi=$poradi;
+  // $this->poradi=$poradi;
   }	
 	
 	function vyberFunction(){
