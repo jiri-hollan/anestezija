@@ -3,16 +3,19 @@
 //$tabulka=$_GET["imeTable"];
    //$tabulka= "pregledovalciTbl";
 //	var_dump($tabulka);
+if (isset($_GET["imeTable"])) {
+ $tabulka=$_GET["imeTable"];    
+   //$tabulka= "pregledovalciTbl";
+	//var_dump($tabulka);
+	//echo "<br>";
+	echo "tabulka: ".$tabulka;
+ }	
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../../skupne/database.php';
  require_once('manipulaceClassUniversal.php');
- if (isset($_GET["imeTable"])) {
- $tabulka=$_GET["imeTable"];    
-   //$tabulka= "pregledovalciTbl";
-	var_dump($tabulka);
- }	
+ 
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
