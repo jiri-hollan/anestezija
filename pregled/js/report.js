@@ -175,7 +175,7 @@ var asa = document.getElementById("asa").value;
 //alert(asa);
 document.getElementById("asaR").innerHTML= asa;
 
-var mall = document.getElementById("mall").value;
+var mall = document.getElementById("mallampati").value;
 //alert(mall);
 document.getElementById("mallR").innerHTML= mall;
 
