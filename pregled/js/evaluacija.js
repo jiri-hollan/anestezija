@@ -89,6 +89,7 @@ switch (x) {
 }
 
 }
+/*
 //-----------asaFunction---------------------------
 function asaFunction(ime, vrednost){
 //		alert("u funkciji asaFunction"+vrednost);
@@ -105,7 +106,7 @@ function asaFunction(ime, vrednost){
   document.getElementById(ime).style.color = "";
   document.getElementById(ime).style.fontWeight = "";
 	}
-}
+}*/
 //-----dovoljene vrednosti-------------
 var as = ["1", "2", "3", "4", "5"];
 var mal = ["1", "2", "3", "4"];
