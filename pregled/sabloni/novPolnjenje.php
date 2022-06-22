@@ -150,7 +150,7 @@
     <option value='st asa'>
     </datalist>
 	 
-     <label>Mallampati:<input id="mallampati" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mall', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "asaFunction(name,value)" /></label> 
+     <label>Mallampati:<input id="mallampati" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "asaFunction(name,value)" /></label> 
      <datalist id="mally">
      <option value='st mall'>
      </datalist>

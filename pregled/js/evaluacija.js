@@ -88,14 +88,14 @@ switch (x) {
 
 }
 //-----------asaFunction---------------------------
-/*function asaFunction(ime, vrednost){
+function asaFunction(ime, vrednost){
 //		alert("u funkciji asaFunction"+vrednost);
 	switch (vrednost){
-	case 0:	
+	case "0":	
 	alert("vrednost=0");	
 	  break;
-	case 3:
-	alert("vrednost=3");
+	case "3":
+	//alert("vrednost=3");
   document.getElementById(ime).style.color = "Crimson"; 
   document.getElementById(ime).style.fontWeight = "bold";
 	 break;	
@@ -103,7 +103,7 @@ switch (x) {
   document.getElementById(ime).style.color = "";
   document.getElementById(ime).style.fontWeight = "";
 	}
-}*/
+}
 //-----dovoljene vrednosti-------------
 var as = ["1", "2", "3", "4", "5"];
 var mal = ["1", "2", "3", "4"];
