@@ -23,7 +23,7 @@ $ime= $prebrano[$i]["ime"];
 $min= $prebrano[$i]["min"];
 $max= $prebrano[$i]["max"];
 $limiti[$ime]=array("min"=>$min,"max"=>$max);
-//echo $limiti1.'<br>';//izpiše limite na zaslon
+//var_dump ($limiti).'<br>';//izpiše limite na zaslon
 }//od for 
 //echo '<br>var dump celo ime:<br>';
 //var_dump($limiti);
