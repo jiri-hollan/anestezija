@@ -11,6 +11,9 @@ var pct = {min:0, max:0.05};
 var crp = {min:0, max:8};
 var na = {min:136, max:145};
 var k = {min:3.8, max:5};
+//.....................................
+var asa = {min:0, max:2};
+var mallampati = {min:0, max:2};
 */
  const LIMITIlab = JSON.parse(limitiJson);
  console.log(LIMITIlab);
@@ -85,7 +88,7 @@ switch (x) {
 
 }
 //-----------asaFunction---------------------------
-function asaFunction(ime, vrednost){
+/*function asaFunction(ime, vrednost){
 //		alert("u funkciji asaFunction"+vrednost);
 	switch (vrednost){
 	case 0:	
@@ -100,7 +103,7 @@ function asaFunction(ime, vrednost){
   document.getElementById(ime).style.color = "";
   document.getElementById(ime).style.fontWeight = "";
 	}
-}
+}*/
 //-----dovoljene vrednosti-------------
 var as = ["1", "2", "3", "4", "5"];
 var mal = ["1", "2", "3", "4"];
