@@ -60,7 +60,7 @@ for (let i = 0; i < ocena.length; i++) {
 // laborFunction spremeni styl glede na limite
 laborFunction(ocena[i].name,ocena[i].value);  
 }
-alert (ocena[1].name + " = " + ocena[1].value);
+//alert (ocena[1].name + " = " + ocena[1].value);
 } //od funkcije labevalFunction
 
 function pozorFunction(ime, x) { 
