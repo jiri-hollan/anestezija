@@ -145,12 +145,12 @@
 
  <fieldset id= "asamal" >
     <legend></legend>
-     <label>ASA:<input id="asa" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)" onfocusout=  "asaFunction(name,value)" /></label>  
+     <label>ASA:<input id="asa" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)" onfocusout=  "laborFunction(name,value)" /></label>  
 	<datalist id="ase">
     <option value='st asa'>
     </datalist>
 	 
-     <label>Mallampati:<input id="mallampati" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "asaFunction(name,value)" /></label> 
+     <label>Mallampati:<input id="mallampati" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" /></label> 
      <datalist id="mally">
      <option value='st mall'>
      </datalist>
