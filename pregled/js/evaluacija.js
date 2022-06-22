@@ -51,14 +51,16 @@ if(vrednost == ""||vrednost == 0||vrednost=== null) {
 //labevalFunction preveri limite lab. vrednosti pri načitanju bolnika iz baze
 function labevalFunction(){
 const iskano =  document.getElementsByClassName("lab osnovne");
-
+const ocena =  document.getElementsByClassName("ocena");
 for (let i = 0; i < iskano.length; i++) {
 // laborFunction spremeni styl glede na limite
-laborFunction(iskano[i].name,iskano[i].value); 
- 
+laborFunction(iskano[i].name,iskano[i].value);  
 }
-
-//alert (iskano[3].name + " = " + iskano[3].value);
+for (let i = 0; i < ocena.length; i++) {
+// laborFunction spremeni styl glede na limite
+laborFunction(ocena[i].name,ocena[i].value);  
+}
+alert (ocena[1].name + " = " + ocena[1].value);
 } //od funkcije labevalFunction
 
 function pozorFunction(ime, x) { 
