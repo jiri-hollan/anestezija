@@ -171,9 +171,11 @@ document.getElementById("labR").innerHTML = text;
 
 
 //............asa mallampati, alergija.........................................................
-var asa = document.getElementById("asa").value;
+//var asa = document.getElementById("asa").value;
 //alert(asa);
-document.getElementById("asaR").innerHTML= asa;
+var asa = document.getElementById("asa");
+
+document.getElementById("asaR").innerHTML="style= font-weight:" + asa.style.fonfWeight + "value=" + asa.value ;
 
 var mall = document.getElementById("mallampati").value;
 //alert(mall);
