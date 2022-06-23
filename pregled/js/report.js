@@ -174,9 +174,9 @@ document.getElementById("labR").innerHTML = text;
 //var asa = document.getElementById("asa").value;
 //alert(asa);
 var asa = document.getElementById("asa");
-
-document.getElementById("asaR").innerHTML="style= font-weight:" + asa.style.fonfWeight + "value=" + asa.value ;
-
+videz=asa.style.fontWeight;
+document.getElementById("asaR").innerHTML= asa.value;
+document.getElementById("asaR").style="bold";
 var mall = document.getElementById("mallampati").value;
 //alert(mall);
 document.getElementById("mallR").innerHTML= mall;
