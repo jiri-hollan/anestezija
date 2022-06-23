@@ -13,8 +13,12 @@ function bmiFunction()
     visina = validacija(visina);
 
     document.getElementById('teza').value = teza;
-    document.getElementById('visina').value = visina;
-
+	if (visina>3){
+		visina="";
+		alert("Visina mora biti navedena v metrih!");
+	}else{
+          document.getElementById('visina').value = visina;
+         }
      //window.alert ("1teža" + teza);
      //window.alert ("1višina" + visina);
     if (visina!=0 && teza!=0) {
