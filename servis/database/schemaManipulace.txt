@@ -14,7 +14,9 @@ submit pošle $post z imenom bolnišnice sama sebi(to je manipulacePregledovalci
 
 to aktivira funkcijo akceFunction(s $akce="vyber") in ta switch -- case vyber , tam so definirane variable $tabulka = pregledovalciTbl in  poradi="priimek"
 
-case vyber pošlje v manipulaceClass: new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='priimek'); v funkcijo: vyberFunction() ta vybere všechny zapis s podminkou=$bolnišnica in jih preda rekurzivnemu iteratoru, ki nariše tabelo s "onclicky" edit in odstrani. Onclick je aktivovana funkce "izborFunction()"
+case vyber pošlje v manipulaceClass: new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='priimek'); v funkcijo: vyberFunction() ta vybere všechny zapis s podminkou=$bolnišnica in jih preda rekurzivnemu iteratoru, ki nariše tabelo s "onclicky" edit in odstrani. Onclick je aktivovana funkce "izborFunction()" v fajlu manipulacePregledovalci.js "edit" ali "odstrani". JS listener izbere id vrstice, na katero se kliknulo. JS pošalje kot $GET: window.location.href = "manipulacePregledovalci.php?akce=" + x.innerHTML + "&id=" + row_value;.  $_GET["akce"] = edit ali odstrani. Ta potem aktivira: $edit = new Edit($tabulka, $id);  ali 	$odstrani = new Odstrani($tabulka, $id); v    manipulaceClass.php. $tabulka="pregledovalciTbl". je definiran znotraj "case"
+
+
 
 
 
