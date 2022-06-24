@@ -26,17 +26,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   akceFunction($akce);
   }//od else if
   //______________________________________________________________________
-  function akceFunction($akce){
+  function akceFunction($akce, $tabulka="sklepiTbl"){
 switch ($akce) {
 case "vyber":
     $bolnisnica=test_input($_POST["bolnisnica"]);		
-    $tabulka="sklepiTbl";
+    //$tabulka="sklepiTbl";
     $stolpci=["*"];
 	$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='sklep');
 	$vyber->vyberFunction();
     break;
 case "vloz":
-    $tabulka="sklepiTbl";
+    //$tabulka="sklepiTbl";
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
    // $priimek = test_input($_POST["priimek"]);
@@ -46,7 +46,7 @@ case "vloz":
 	$vloz->vlozFunction();	
     break;
 case "uredi":
-    $tabulka="sklepiTbl";
+    //$tabulka="sklepiTbl";
     $id=test_input($_POST["id"]);
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
@@ -59,7 +59,7 @@ case "uredi":
 
 
 case "edit":
-    $tabulka="sklepiTbl";
+    //$tabulka="sklepiTbl";
     $id = test_input($_GET["id"]);
 	//echo "id uporabnika= " .  $id;
 	echo "<br>";
@@ -68,7 +68,7 @@ case "edit":
 	$edit = new Edit($tabulka, $id); 	 
     break;
 case "odstrani":
-     $tabulka="sklepiTbl";
+     //$tabulka="sklepiTbl";
      $id = test_input($_GET["id"]);
 	// echo "id uporabnika= " .  $id;
 	 echo "<br>";
