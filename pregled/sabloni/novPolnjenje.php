@@ -48,29 +48,21 @@
 ...........................Drugi del formularja................................-->
 
  <div class="glavna" id="druga">
-
 	<h3 id="osebni"> osebni</h3>
-
  <fieldset class="zacetek">
     <legend></legend>      
- <!-- <label>Za oddelek:<input type="text" name="oddelek" required></label> --> 
-
-
-  <label>Za oddelek:<input id="zaOdd" list="oddelek" name="oddelek"required></label>  
-  <datalist id="oddelek">
+   <label>Za oddelek:<input id="zaOdd" list="oddelek" name="oddelek"required></label>  
+   <datalist id="oddelek">
     <option value="Kirurgija">
     <option value="ginekologija">
     <option value="urologija">
     <option value="ORL">
     <option value="RTG">
 	<option value="interna">
-  </datalist>
-  
+  </datalist>  
   <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika" readonly tabindex="-1"></label>
     <br> 
  </fieldset>
-
-
  <fieldset class="diagnoze">
     <legend></legend>
 	<label for="dgOperativna" >Operativna diagnoza:</label>
@@ -79,20 +71,16 @@
 	<label for="opNacrtovana">Načrtovana operacija:</label>  
     <input id="opNacrtovana"  type="text" name="opNacrtovana" required >
  </fieldset>
-
- 
-
   <fieldset class="meritve">
     <legend></legend>	
     <label for="starost">Starost:<input  id="starost" type="text" name="starost" size="1" readonly tabindex="-1"></label>      
     <label for = "teza">Teža:<input id = "teza" type = "text" name = "teza" onkeyup="bmiFunction()" required>kg</label>
-    <label for = "visina">Višina:<input id = "visina" type = "text" name = "visina" size="1" onkeyup="bmiFunction()" required>m</label> 
+    <label for = "visina">Višina:<input id = "visina" type = "text" name = "visina"  size="1" onkeyup="bmiFunction()" required>m</label> 
     <label for = "bmi">BMI: <input id = "bmi" type = "text" name = "bmi" id = "bmi" onclick = "bmiFunction()" readonly tabindex="-1"></label>  
     <label for = "krvniTlak">Krvni Tlak:<input id = "krTlak" type="text" name="krvniTlak" size="1" ></label>    
     <label for = "pulz">Pulz:<input id = "pulz" type="text" name="pulz" size="1" ></label>  
     <br> 
  </fieldset>
-
  <fieldset class="labor" id="lab">
 <div id="stolpec1">
     <label for="hb">Hb:</label>  
@@ -106,8 +94,7 @@
     <label for="aptc">APTČ:</label>  
     <input class="lab osnovne"id="aptc" type="text" name="aptc" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="kreatinin">Kreatinin:</label>  
-    <input class="lab osnovne"id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
-   
+    <input class="lab osnovne"id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br>    
 </div>
 <div id="stolpec2">
     <label for="laktat">laktat:</label>  
@@ -128,37 +115,28 @@
 	<label for="drugiIzvidi"></label> 
     <textarea class="lab"id="drugiIzvidi"  rows="7" cols="30"  name="drugiIzvidi" placeholder="Drugi izvidi" ></textarea><br> 		
 </div>
- </fieldset> 
- 
+ </fieldset>  
     <legend></legend>
     <label for="ekg">EKG:</label>  
     <textarea id="ekg" class="mala" rows="1" cols="200"  name="ekg" ></textarea><br> 
     <label for="rtg">RTG:</label>  
     <textarea id="rtg" class="mala" rows="1" cols="200"   name="rtg" ></textarea><br> 
-
-
     <label for="dgPridruzene">Pridružene bolezni:</label><br>  
     <textarea id= "dgPridruzene" class="mala" rows="4" cols="200" name="dgPridruzene"></textarea><br>
-
     <label for="terPredhodna">Predhodna terapija:</label><br>   
     <textarea id="terPredhodna" class="mala" rows="4" cols="200" name="terPredhodna"></textarea>
-
  <fieldset id= "asamal" >
     <legend></legend>
      <label>ASA:<input id="asa" class="ocena" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)" onfocusout=  "laborFunction(name,value)" /></label>  
 	<datalist id="ase">
     <option value='st asa'>
-    </datalist>
-	 
+    </datalist>	 
      <label>Mallampati:<input id="mallampati" class="ocena" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" /></label> 
      <datalist id="mally">
      <option value='st mall'>
-     </datalist>
-     
-     <label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>
-	 
- </fieldset>
- 
+     </datalist>     
+     <label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>	 
+ </fieldset> 
 	<label for="izvidiInOpombe">Izvidi in opombe:</label><br>  
     <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
  <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
@@ -171,19 +149,15 @@
   </datalist> -->
  <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
 <label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
- <datalist id="sklepi">
- 
+ <datalist id="sklepi"> 
     <option value="sklep">
   </datalist>
-
-
  <script>
  // alert("sklep Json:" + sklepJson);
   var sklepList = JSON.parse(sklepJson);
   //alert(sklepList);
   listaSklepovFunction(sklepList);
   </script>
-
 
  <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
 <br><br>
@@ -192,25 +166,14 @@
 	<label for="premedVecer">Zvečer:..<input id="premedVecer" type="textarea" name="premedVecer" ></label>  
     <br>
 	<label for="premedPredOp">Pred op.:<input id="premedPredOp" type="textarea" name="premedPredOp" ></label> <br> 
-
-
-  
-
     <textarea id="navodila" class="mikro"  name="navodila" placeholder="Navodila" rows="3" ></textarea>
    </div>
   </fieldset>
- 
-
-
- <!--<p> <button id="bolnikButon" type="submit">Shrani</button> </p> -->
- 	
  </fieldset>	
 </div>
 </form>
 <!--buton je premeščen v navMenu
 <button id="bolnikButon"  type="submit" form="frm" value="Submit">Submit</button>-->
-
-
 
 <!-- ______________________________________________________________________________________
 
@@ -231,18 +194,17 @@
     <p id="meritveR">meritve</p>
     <p id="labR">lab</p>
   <div class="asmalR">
-       ASA: <span id="asaR"​ class="kvadrat" >.</span><span style="padding-left:10px;"> Mallampati:</span> <span id="mallR" class="kvadrat" >.</span> <b><span style="padding-left:15px;font-size:120%;">Alergija:</span> <span id="alergijaR" style= "font-size:120%;"></span></b>
+  ASA: <span id="asaR"​ class="kvadrat" >.</span>
+  <span style="padding-left:10px;">Mallampati:</span> <span id="mallR" class="kvadrat" >.</span> 
+  <b><span style="padding-left:15px;font-size:120%;">Alergija:</span> <span id="alergijaR" style= "font-size:120%;"></span></b>
   </div>
 
  <!-- <textarea id="pridBolezniR"  class="mala" >pridružene bolezni</textarea>
   <textarea id="predTerapR"  class="mala" >predhodna terapija</textarea>-->
  </div>
-
-
   <div class="velka" id="izvidiR">Izvidi in opombe</div>
 </div> 
    <div id="premedikacijaR"><i>premedikacija</i></div>
    <div id="zdravnikR">zdravnik</div>
    <div id="navodilaR">navodila</div>
-
 </div>

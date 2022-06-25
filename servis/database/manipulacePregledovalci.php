@@ -30,14 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   function akceFunction($akce,$tabulka="pregledovalciTbl" ){
 switch ($akce) {
 case "vyber":
-    $bolnisnica=test_input($_POST["bolnisnica"]);		
-    
+    $bolnisnica=test_input($_POST["bolnisnica"]);		    
     $stolpci=["*"];
 	$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='priimek');
 	$vyber->vyberFunction();
     break;
-case "vloz":
-    
+case "vloz":    
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
     $priimek = test_input($_POST["priimek"]);
@@ -46,7 +44,6 @@ case "vloz":
 	$vloz->vlozFunction();	
     break;
 case "uredi":
-    
     $id=test_input($_POST["id"]);
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
@@ -55,10 +52,7 @@ case "uredi":
 	$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
 	$uredi->aktualizujFunction();
     break;
-
-
-case "edit":
-    
+case "edit":   
     $id = test_input($_GET["id"]);
 	//echo "id uporabnika= " .  $id;
 	echo "<br>";
@@ -85,8 +79,6 @@ default:
 
 <script src="js/manipulacePregledovalci.js?<?php echo time(); ?>">
 </script>
-
-
 
 <!--zapati-->
 </body>

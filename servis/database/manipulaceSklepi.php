@@ -29,37 +29,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   function akceFunction($akce, $tabulka="sklepiTbl"){
 switch ($akce) {
 case "vyber":
-    $bolnisnica=test_input($_POST["bolnisnica"]);		
- 
+    $bolnisnica=test_input($_POST["bolnisnica"]);		 
     $stolpci=["*"];
 	$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='sklep');
 	$vyber->vyberFunction();
     break;
 case "vloz":
-
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
-   // $priimek = test_input($_POST["priimek"]);
     $aktiven = test_input($_POST["aktiven"]);  
-	//$vloz = new Vloz($bolnisnica, $tabulka, $ime, $priimek, $status);
 	$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $aktiven);
 	$vloz->vlozFunction();	
     break;
-case "uredi":
-    
+case "uredi":    
     $id=test_input($_POST["id"]);
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
-	//$priimek = test_input($_POST["priimek"]);
 	$aktiven = test_input($_POST["aktiven"]); 	
-	//$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $aktiven);
 	$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $aktiven);
 	$uredi->aktualizujFunction();
     break;
-
-
-case "edit":
-    
+case "edit":    
     $id = test_input($_GET["id"]);
 	//echo "id uporabnika= " .  $id;
 	echo "<br>";
@@ -67,8 +57,7 @@ case "edit":
 	// echo "<br>"; 
 	$edit = new Edit($tabulka, $id); 	 
     break;
-case "odstrani":
-     
+case "odstrani":     
      $id = test_input($_GET["id"]);
 	// echo "id uporabnika= " .  $id;
 	 echo "<br>";
@@ -79,16 +68,11 @@ case "odstrani":
 default:
     echo "ni izvelo get case"; 
   }//od switch	  
-
   }//od akceFunction
-
 ?>
 
 <script src="js/manipulaceSklepi.js?<?php echo time(); ?>">
 </script>
-
-
-
 <!--zapati-->
 </body>
 </html>

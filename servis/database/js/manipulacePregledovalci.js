@@ -2,8 +2,6 @@ function izborFunction(akce) {
   document.getElementById("akceId").value = akce;
 switch(akce) {
   case "vyber":
-  
-   // document.getElementById("demo").innerHTML = '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';// omogoči izbiro bolnišnice
 // omogoči izbiro bolnišnice 	
  document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
  	
@@ -50,14 +48,6 @@ document.getElementById("bolnisnice").innerHTML = text;
 } else {
   text = "You canceled!";
 }
-  
-  
- /* if(document.getElementById("osebe")!=null){
- document.getElementById("osebe").addEventListener("click", functionOver);
- 
-}*/
-
-    // code block
 
     break;	
   default:
@@ -70,8 +60,6 @@ var x = e.target;
 if (x.nodeName == "TD") {
 var y = e.path[1];
 row_value = y.cells[0].innerHTML;
- /* document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
-  document.getElementById("demo2").innerHTML = "Triggered by a " + x.innerHTML + " element";  */
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
  }//od if
  
