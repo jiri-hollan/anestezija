@@ -1,6 +1,6 @@
 
 <?php
- $tabulka="pregledovalciTbl";
+ //$tabulka="pregledovalciTbl";
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
@@ -23,6 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   if (isset($_POST["tabulka"])){
 	  $tabulka= test_input($_POST["tabulka"]); 
+  }else {
+	 $tabulka = "pregledovalciTbl"; 
   }
   //$tabulka= test_input($_POST["tabulka"]);
   echo strtoupper($akce) .': ';
@@ -36,6 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	  $bolnisnica = test_input($_GET["bolnisnica"]);  
   }else {
 	 $bolnisnica = ""; 
+  }
+  if (isset($_GET["tabulka"])){
+	  $tabulka = test_input($_GET["tabulka"]);  
+  }else {
+	 $tabulka = "pregledovalciTbl"; 
   }
   akceFunction($akce,$tabulka,$bolnisnica);
   }//od else if
