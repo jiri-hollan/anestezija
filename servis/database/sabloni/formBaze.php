@@ -1,4 +1,7 @@
+
+
 <br>
+
 <button id="vyberId" onclick="izborFunction('vyber')">vyber</button>
 <button id="vlozId" onclick="izborFunction('vloz')">vlož</button>
 
