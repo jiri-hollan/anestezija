@@ -16,7 +16,13 @@ function test_input($test) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
-  $bolnisnica = test_input($_POST["bolnisnica"]);
+  if (isset($_POST["bolnisnica"])){
+	  $bolnisnica = test_input($_POST["bolnisnica"]);  
+  }
+  if (isset($_POST["tabulka"])){
+	  $tabulka= test_input($_POST["tabulka"]); 
+  }
+  //$tabulka= test_input($_POST["tabulka"]);
   echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
@@ -24,6 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }//od if
   else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
   $akce = test_input($_GET["akce"]);
+    if (isset($_GET["bolnisnica"])){
+	  $bolnisnica = test_input($_GET["bolnisnica"]);  
+  }
   akceFunction($akce,$tabulka,$bolnisnica);
   }//od else if
   //______________________________________________________________________
