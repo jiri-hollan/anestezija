@@ -1,6 +1,6 @@
 
 <?php
- //$tabulka="pregledovalciTbl";
+ $tabulka="pregledovalciTbl";
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
@@ -20,23 +20,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
-  akceFunction($akce);
+  akceFunction($akce,$tabulka,$bolnisnica);
 }//od if
   else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
   $akce = test_input($_GET["akce"]);
-  akceFunction($akce);
+  akceFunction($akce,$tabulka,$bolnisnica);
   }//od else if
   //______________________________________________________________________
-  function akceFunction($akce,$tabulka="pregledovalciTbl" ){
+  function akceFunction($akce,$tabulka="pregledovalciTbl", $bolnisnica="" ){
 switch ($akce) {
 case "vyber":
-    $bolnisnica=test_input($_POST["bolnisnica"]);		    
+   // $bolnisnica=test_input($_POST["bolnisnica"]);		    
     $stolpci=["*"];
 	$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='priimek');
 	$vyber->vyberFunction();
     break;
 case "vloz":    
-    $bolnisnica=test_input($_POST["bolnisnica"]);
+   // $bolnisnica=test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
     $priimek = test_input($_POST["priimek"]);
     $status = test_input($_POST["status"]);  
@@ -45,7 +45,7 @@ case "vloz":
     break;
 case "uredi":
     $id=test_input($_POST["id"]);
-    $bolnisnica=test_input($_POST["bolnisnica"]);
+   // $bolnisnica=test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
 	$priimek = test_input($_POST["priimek"]);
 	$status = test_input($_POST["status"]); 	
