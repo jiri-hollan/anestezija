@@ -18,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   if (isset($_POST["bolnisnica"])){
 	  $bolnisnica = test_input($_POST["bolnisnica"]);  
+  }else {
+	 $bolnisnica = "";   
   }
   if (isset($_POST["tabulka"])){
 	  $tabulka= test_input($_POST["tabulka"]); 
@@ -32,6 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_GET["akce"]);
     if (isset($_GET["bolnisnica"])){
 	  $bolnisnica = test_input($_GET["bolnisnica"]);  
+  }else {
+	 $bolnisnica = ""; 
   }
   akceFunction($akce,$tabulka,$bolnisnica);
   }//od else if
