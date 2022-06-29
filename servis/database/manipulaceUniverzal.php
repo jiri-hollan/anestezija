@@ -35,17 +35,17 @@ if (isset($_REQUEST["akce"])) {
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   akceFunction($akce,$tabulka,$bolnisnica);
-
-}//od if
-//_________________________________________________________________
-
-  //______________________________________________________________________
-  function akceFunction($akce,$tabulka, $bolnisnica="" ){
 echo '<script>';
 echo 'tabulka ="'.$tabulka.'";';
 //echo 'alert(tabulka);';
 echo '</script>';	  
 	  
+}//od if
+//_________________________________________________________________
+
+  //______________________________________________________________________
+  function akceFunction($akce,$tabulka, $bolnisnica="" ){
+
 switch ($akce) {
 case "vyber":
    // $bolnisnica=test_input($_POST["bolnisnica"]);		    
