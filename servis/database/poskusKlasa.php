@@ -21,7 +21,7 @@ class Manipulace  {
   }//od else if 
   else {	  
   }//od else
-   } 
+   }//od construct 
 }// od class Manipulace 
 
 ?>
