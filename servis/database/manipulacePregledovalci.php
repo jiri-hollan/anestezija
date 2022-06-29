@@ -42,7 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }else {
 	 $bolnisnica = ""; 
   }
-  if (isset($_GET["tabulka"])){
+      if (isset($tabulka)){
+	  $tabulka= $tabulka; 
+  }else if (isset($_GET["tabulka"])){
 	  $tabulka = test_input($_GET["tabulka"]);  
   }else {
 	 $tabulka = "pregledovalciTbl"; 
