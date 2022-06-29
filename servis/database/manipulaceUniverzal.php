@@ -41,6 +41,11 @@ if (isset($_REQUEST["akce"])) {
 
   //______________________________________________________________________
   function akceFunction($akce,$tabulka, $bolnisnica="" ){
+echo '<script>';
+echo 'tabulka ="'.$tabulka.'";';
+//echo 'alert(tabulka);';
+echo '</script>';	  
+	  
 switch ($akce) {
 case "vyber":
    // $bolnisnica=test_input($_POST["bolnisnica"]);		    
