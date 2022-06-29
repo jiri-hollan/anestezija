@@ -17,7 +17,7 @@ for (i = 0; i < bolList.length; i++) {
 }
 document.getElementById("bolnisnice").innerHTML = text;
 	
-	
+	document.getElementById("tabSent").innerHTML = '<input type="text" name="tabulka" value="pregledovalciTab">';
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
     break; 
 

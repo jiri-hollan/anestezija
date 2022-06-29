@@ -25,7 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    if (isset($tabulka)){
 	  $tabulka= $tabulka; 
   }else if (isset($_POST["tabulka"])){
-	  $tabulka= test_input($_POST["tabulka"]); 
+	  $tabulka= test_input($_POST["tabulka"]);
+	  
+  }else if (isset($_GET["tabulka"])){
+	  $tabulka = test_input($_GET["tabulka"]);  
   }else {
 	  echo "ni tabulke v post";
 	 $tabulka = "pregledovalciTbl"; 
