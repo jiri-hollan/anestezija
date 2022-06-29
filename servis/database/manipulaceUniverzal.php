@@ -16,51 +16,29 @@ function test_input($test) {
  // $test = strtolower($test);
   return $test;
 }
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $akce = test_input($_POST["akce"]);
-  if (isset($_POST["bolnisnica"])){
-	  $bolnisnica = test_input($_POST["bolnisnica"]);  
+//_____________________________________________________________
+if ($_SERVER["REQUEST_METHOD"] == "POST"||$_SERVER["REQUEST_METHOD"] == "GET"&& isset($_REQUEST["akce"])) {
+	  $akce = test_input($_REQUEST["akce"]);
+  if (isset($_REQUEST["bolnisnica"])){
+	  $bolnisnica = test_input($_REQUEST['bolnisnica']);  
   }else {
 	 $bolnisnica = "";   
   }
-  
-   if (isset($tabulka)){
+ if (isset($tabulka)){
 	  $tabulka= $tabulka; 
-  }else if (isset($_POST["tabulka"])){
-	  $tabulka= test_input($_POST["tabulka"]);
-	  
-  }else if (isset($_GET["tabulka"])){
-	  $tabulka = test_input($_GET["tabulka"]);  
+  }else if (isset($_REQUEST["tabulka"])){
+	  $tabulka= test_input($_REQUEST["tabulka"]);	  
   }else {
 	  echo "ni tabulke v post";
-	 //$tabulka = "pregledovalciTbl"; 
-  }
-  //$tabulka= test_input($_POST["tabulka"]);
-  echo strtoupper($akce) .': ';
-  echo strtoupper($bolnisnica) .'<br>';
-  //echo var_dump($status) .'<br>';
-  akceFunction($akce,$tabulka,$bolnisnica);
-}//od if
-  else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
-  $akce = test_input($_GET["akce"]);
-    if (isset($_GET["bolnisnica"])){
-	  $bolnisnica = test_input($_GET["bolnisnica"]);  
-  }else {
-	 $bolnisnica = ""; 
-  }
-      if (isset($tabulka)){
-	  $tabulka= $tabulka; 
-  }else if (isset($_GET["tabulka"])){
-	  $tabulka = test_input($_GET["tabulka"]);  
-  }else {
-	  echo "ni tabulke v get";
 	 //$tabulka = "pregledovalciTbl"; 
   }
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   akceFunction($akce,$tabulka,$bolnisnica);
-  }//od else if
+
+}//od if
+//_________________________________________________________________
+
   //______________________________________________________________________
   function akceFunction($akce,$tabulka, $bolnisnica="" ){
 switch ($akce) {
