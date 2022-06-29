@@ -1,4 +1,5 @@
 function izborFunction(akce) {
+	alert(tabulka);
   document.getElementById("akceId").value = akce;
 switch(akce) {
   case "vyber":
