@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }else if (isset($_POST["tabulka"])){
 	  $tabulka= test_input($_POST["tabulka"]); 
   }else {
+	  echo "ni tabulke v post";
 	 $tabulka = "pregledovalciTbl"; 
   }
   //$tabulka= test_input($_POST["tabulka"]);
@@ -47,12 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }else if (isset($_GET["tabulka"])){
 	  $tabulka = test_input($_GET["tabulka"]);  
   }else {
+	  echo "ni tabulke v get";
 	 $tabulka = "pregledovalciTbl"; 
   }
   akceFunction($akce,$tabulka,$bolnisnica);
   }//od else if
   //______________________________________________________________________
-  function akceFunction($akce,$tabulka="pregledovalciTbl", $bolnisnica="" ){
+  function akceFunction($akce,$tabulka, $bolnisnica="" ){
 switch ($akce) {
 case "vyber":
    // $bolnisnica=test_input($_POST["bolnisnica"]);		    
