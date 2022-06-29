@@ -17,7 +17,7 @@ function test_input($test) {
   return $test;
 }
 //_____________________________________________________________
-if ($_SERVER["REQUEST_METHOD"] == "POST"||$_SERVER["REQUEST_METHOD"] == "GET"&& isset($_REQUEST["akce"])) {
+if (isset($_REQUEST["akce"])) {
 	  $akce = test_input($_REQUEST["akce"]);
   if (isset($_REQUEST["bolnisnica"])){
 	  $bolnisnica = test_input($_REQUEST['bolnisnica']);  
