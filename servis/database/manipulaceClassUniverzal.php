@@ -72,25 +72,21 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 // $vyber->vyberFunction();
 //________________________________________________________________________________________	
 	class Vloz extends DostopPost {
-  public $ime;
-  public $priimek;
-  public $status; 
+
   function __construct($bolnisnica, $tabulka, $data) {
 	parent::__construct($bolnisnica, $tabulka);
 	$this->data = $data	
   }
-
-  
+ 
   function vlozFunction(){
-
-$vloz = new database();
-$vlozeno=$vloz->vloz($this->tabulka,$this->data);
-//echo $vlozeno[1];
-echo "<br>";
-echo var_dump($vlozeno);
-echo "<br>";
-echo count($vlozeno);
-echo "<br>";
+     $vloz = new database();
+     $vlozeno=$vloz->vloz($this->tabulka,$this->data);
+    //echo $vlozeno[1];
+     echo "<br>";
+     echo var_dump($vlozeno);
+     echo "<br>";
+     echo count($vlozeno);
+     echo "<br>";
 }//od vlozFunction
   
   
