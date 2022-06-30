@@ -1,4 +1,4 @@
-var tabulka;
+var tabulka="pregledovalciTbl";
 function izborFunction(akce) {
 	alert(tabulka);
   document.getElementById("akceId").value = akce;

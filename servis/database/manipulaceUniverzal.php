@@ -1,6 +1,3 @@
-<script>
-var tabulka;
-</script>
 
 <?php
  //$tabulka="pregledovalciTbl";
@@ -35,10 +32,7 @@ if (isset($_REQUEST["akce"])) {
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   akceFunction($akce,$tabulka,$bolnisnica);
-echo '<script>';
-echo 'tabulka ="'.$tabulka.'";';
-//echo 'alert(tabulka);';
-echo '</script>';	  
+
 	  
 }//od if
 //_________________________________________________________________
