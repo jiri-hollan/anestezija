@@ -75,12 +75,9 @@ echo "Za izbrano bolnico ni zapisa v bazi";
   public $ime;
   public $priimek;
   public $status; 
-  function __construct($bolnisnica, $tabulka, $ime, $priimek, $status) {
+  function __construct($bolnisnica, $tabulka, $data) {
 	parent::__construct($bolnisnica, $tabulka);
-	$this->ime = $ime; 
-    $this->priimek = $priimek; 
-    $this->status = $status; 
-    $this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);	
+	$this->data = $data	
   }
 
   
