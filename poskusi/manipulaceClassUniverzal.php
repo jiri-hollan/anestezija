@@ -83,7 +83,7 @@ echo "Za izbrano bolnico ni zapisa v bazi";
      $vlozeno=$vloz->vloz($this->tabulka,$this->data);
     //echo $vlozeno[1];
      echo "<br>";
-     echo print_r($vlozeno);
+     print_r($vlozeno);
      echo "<br>";
      echo count($vlozeno);
      echo "<br>";
