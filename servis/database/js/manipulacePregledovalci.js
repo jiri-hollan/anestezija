@@ -1,6 +1,6 @@
 var tabulka="pregledovalciTbl";
 function izborFunction(akce) {
-	alert(tabulka);
+	//alert(tabulka);
   document.getElementById("akceId").value = akce;
 switch(akce) {
   case "vyber":
