@@ -19,7 +19,7 @@ for (i = 0; i < bolList.length; i++) {
 }
 document.getElementById("bolnisnice").innerHTML = text;
 	
-	document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="pregledovalciTbl">';
+	document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
     break; 
 
@@ -29,7 +29,7 @@ document.getElementById("bolnisnice").innerHTML = text;
     priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
     status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
-	document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="pregledovalciTbl">';
+	document.getElementById("tabSent").innerHTML =  '<input type="hidden" name="tabulka" value="'+tabulka+'">';
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
 
@@ -66,6 +66,6 @@ row_value = y.cells[0].innerHTML;
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
  }//od if
  
- window.location.href = "manipulaceUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka= pregledovalciTbl";
+ window.location.href = "manipulaceUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka="+ tabulka;
   
 }//od function(e)
