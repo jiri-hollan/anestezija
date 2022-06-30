@@ -17,14 +17,10 @@
   public $ime;
   public $priimek;
   public $status; 
-  public function __construct($bolnisnica, $tabulka, $id, $ime, $priimek, $status) {
+  public function __construct($bolnisnica, $tabulka, $podminka, $data) {
 	parent::__construct($bolnisnica, $tabulka);
-	$this->id = $id; 
-	$this->ime = $ime; 
-    $this->priimek = $priimek; 
-    $this->status = $status; 
-    $this->podminka = array("id"=>$this->id);
-    $this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);	
+    $this->podminka = $podminka);
+    $this->data = $data;	
   }
   function aktualizujFunction() {
     	$aktualizuj = new database();

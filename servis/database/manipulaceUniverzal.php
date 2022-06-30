@@ -56,6 +56,9 @@ case "vloz":
 	$vloz->vlozFunction();	
     break;
 case "uredi":
+echo "case uredi <br>";
+var_dump($_POST);
+echo "<br>";
     $id=test_input($_POST["id"]);
    // $bolnisnica=test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
