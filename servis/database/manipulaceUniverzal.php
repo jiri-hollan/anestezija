@@ -57,7 +57,7 @@ case "vloz":
     break;
 case "uredi":
 echo "case uredi <br>";
-var_dump($_POST);
+print_r($_POST);
 echo "<br>";
     $id=test_input($_POST["id"]);
    // $bolnisnica=test_input($_POST["bolnisnica"]);
