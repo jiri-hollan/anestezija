@@ -1,3 +1,4 @@
+var tabulka="sklepiTbl";
 function izborFunction(akce) {
   document.getElementById("akceId").value = akce;
 switch(akce) {
@@ -16,7 +17,7 @@ for (i = 0; i < bolList.length; i++) {
 }
 document.getElementById("bolnisnice").innerHTML = text;
 	
-	
+	document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
     break; 
 
@@ -25,6 +26,7 @@ document.getElementById("bolnisnice").innerHTML = text;
     sklep= '<input type="text" id="sklepId" name="sklep" value="" placeholder="sklep" required>';
     aktiven= '<input type="int" id="aktivenId" name="aktiven" value="" placeholder="aktiven" required>';
     document.getElementById("demo").innerHTML = bolnisnica + sklep + aktiven;
+	document.getElementById("tabSent").innerHTML =  '<input type="hidden" name="tabulka" value="'+tabulka+'">';
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
 
@@ -60,6 +62,6 @@ row_value = y.cells[0].innerHTML;
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
  }//od if
  
- window.location.href = "manipulaceSklepi.php?akce=" + x.innerHTML + "&id=" + row_value;
+ window.location.href = "manipulaceSklepiUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value+ "&tabulka="+ tabulka;
   
 }//od function(e)
