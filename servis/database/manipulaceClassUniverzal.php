@@ -87,15 +87,8 @@ echo "Za izbrano bolnico ni zapisa v bazi";
      echo "<br>";
      echo count($vlozeno);
      echo "<br>";
-}//od vlozFunction
-  
-  
+}//od vlozFunction    
 }// od class Vloz
-// klic $vloz = new Vloz($bolnisnica, $tabulka, $ime, $priimek, $status);
-// $vloz->aktualizujFunction();
-//_____________________________________________________________________________________
-
-
 
 //-------------------------iterator-----------------------------------------------------
 	class TableRows extends RecursiveIteratorIterator {
