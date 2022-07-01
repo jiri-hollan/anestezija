@@ -19,7 +19,7 @@
   public $status; 
   public function __construct($bolnisnica, $tabulka, $podminka, $data) {
 	parent::__construct($bolnisnica, $tabulka);
-    $this->podminka = $podminka);
+    $this->podminka = $podminka;
     $this->data = $data;	
   }
   function aktualizujFunction() {
@@ -75,7 +75,7 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 
   function __construct($bolnisnica, $tabulka, $data) {
 	parent::__construct($bolnisnica, $tabulka);
-	$this->data = $data	
+	$this->data = $data;	
   }
  
   function vlozFunction(){

@@ -5,7 +5,7 @@
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../../skupne/database.php';
- require_once('manipulaceClass.php');
+ require_once('manipulaceClassUniverzal.php');
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
@@ -52,7 +52,8 @@ case "vloz":
     $ime = test_input($_POST["ime"]);
     $priimek = test_input($_POST["priimek"]);
     $status = test_input($_POST["status"]);  
-	$vloz = new Vloz($bolnisnica, $tabulka, $ime, $priimek, $status);
+	$data = array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);	
+	$vloz = new Vloz($bolnisnica, $tabulka, $data);
 	$vloz->vlozFunction();	
     break;
 case "uredi":
@@ -63,8 +64,11 @@ echo "<br>";
    // $bolnisnica=test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
 	$priimek = test_input($_POST["priimek"]);
-	$status = test_input($_POST["status"]); 	
-	$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
+	$status = test_input($_POST["status"]); 
+
+    $podminka = array("id"=>$id);
+	$data = array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
+	$uredi = new Uredi($bolnisnica, $tabulka, $podminka, $data);
 	$uredi->aktualizujFunction();
     break;
 case "edit":   
