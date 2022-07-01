@@ -52,13 +52,13 @@ case "vloz":
     $ime = test_input($_POST["ime"]);
     $priimek = test_input($_POST["priimek"]);
     $status = test_input($_POST["status"]);  
-	
-	 $data = array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);	
-	
+	$data = array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);	
 	$vloz = new Vloz($bolnisnica, $tabulka, $data);
 	$vloz->vlozFunction();	
     break;
-
+case "uredi":
+echo "case uredi <br>";
+print_r($_POST);
 echo "<br>";
     $id=test_input($_POST["id"]);
    // $bolnisnica=test_input($_POST["bolnisnica"]);
