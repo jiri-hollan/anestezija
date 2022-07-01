@@ -1,0 +1,54 @@
+Pregledovalci Univerzal:
+$tabulka 
+$bolnisnica
+$akce
+$stolpci=["*"]
+$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='priimek');
+
+$data = array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
+$vloz = new Vloz($bolnisnica, $tabulka, $data);
+$data = array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
+$id=test_input($_POST["id"]);
+$podminka = array("id"=>$id);
+$uredi = new Uredi($bolnisnica, $tabulka, $podminka, $data);
+$id = test_input($_GET["id"]);
+$edit = new Edit($tabulka, $id);
+$id = test_input($_GET["id"]);
+$odstrani = new Odstrani($tabulka, $id);
+
+
+-------------------------------------------------
+sklepi:
+$tabulka 
+$akce
+$bolnisnica
+$stolpci=["*"];
+$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='sklep');
+
+$sklep = test_input($_POST["sklep"]);
+$aktiven = test_input($_POST["aktiven"]);
+$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $aktiven);
+$id=test_input($_POST["id"]);
+$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $aktiven);
+$id = test_input($_GET["id"]);
+$edit = new Edit($tabulka, $id);
+$id = test_input($_GET["id"]);
+$odstrani = new Odstrani($tabulka, $id);
+
+------------------------------------------------------------------------------
+sklepi Univerzal:
+$tabulka 
+$akce
+$bolnisnica
+$stolpci=["*"];
+$vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='sklep');
+
+$data = array("bolnisnica"=>$bolnisnica, "sklep"=>$sklep, "aktiven"=>$aktiven);
+$vloz = new Vloz($bolnisnica, $tabulka, $data);
+$id=test_input($_POST["id"]);
+$podminka = array("id"=>$id);
+$uredi = new Uredi($bolnisnica, $tabulka, $podminka, $data);
+$id = test_input($_GET["id"]);
+$edit = new Edit($tabulka, $id);
+$id = test_input($_GET["id"]);
+$odstrani = new Odstrani($tabulka, $id);
