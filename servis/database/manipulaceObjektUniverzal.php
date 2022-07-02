@@ -6,6 +6,63 @@
  require_once('sabloni/formBaze.php');
  require_once '../../skupne/database.php';
  require_once('manipulaceClassUniverzal.php');
+ 
+ class Nastavitve {
+ function __construct() {
+if (isset($_REQUEST["akce"])) {
+	  $akce = test_input($_REQUEST["akce"]);
+  if (isset($_REQUEST["bolnisnica"])){
+	  $bolnisnica = test_input($_REQUEST['bolnisnica']);  
+  }else {
+	 $bolnisnica = "";   
+  }
+ if (isset($tabulka)){
+	  $tabulka= $tabulka; 
+  }else if (isset($_REQUEST["tabulka"])){
+	  $tabulka= test_input($_REQUEST["tabulka"]);
+	  switch ($tabulka){
+		case "pregledovalciTbl" :
+          $poradi='priimek';
+        break;	   
+		case "sklepiTbl": 
+          $poradi="sklep";	
+        break;
+        default:
+		 $poradi="";
+	  }//od switch
+  }else {
+	  echo "ni tabulke v post";
+	 //$tabulka = "pregledovalciTbl"; 
+  }
+    echo strtoupper($akce) .': ';
+  echo strtoupper($bolnisnica) .'<br>';
+      $stolpci=["*"];
+	}//od if  
+  }//od construct
+  function test_input($test) {
+  $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
+ // $test = strtolower($test);
+  return $test;
+}
+
+}//od class nastavitve
+//_______________________________________________________________________________
+// vyber is inherited from nastavitve
+class Vyber extends Nastavitve {
+	function __construct() {
+	parent::__construct();
+  
+  
+}//od construct
+}//od class Vybet
+
+
+
+
+
+//___________________________________________________________________________________ 
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
