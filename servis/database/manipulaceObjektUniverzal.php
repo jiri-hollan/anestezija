@@ -25,13 +25,13 @@ if (isset($_REQUEST["akce"])) {
 	  $tabulka= $tabulka; 
   }else if (isset($_REQUEST["tabulka"])){
 	  $tabulka= test_input($_REQUEST["tabulka"]);
-	  switch $tabulka{
+	  switch ($tabulka){
 		case "pregledovalciTbl" :
-          $poradi="priimek";
-        brake;	   
+          $poradi='priimek';
+        break;	   
 		case "sklepiTbl": 
           $poradi="sklep";	
-        brake;
+        break;
         default:
 		 $poradi="";
 	  }//od switch
@@ -41,14 +41,15 @@ if (isset($_REQUEST["akce"])) {
   }
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
-  akceFunction($akce,$tabulka,$bolnisnica,$poradi);
+      $stolpci=["*"];
+  akceFunction($akce,$tabulka,$bolnisnica,$stolpci,$poradi);
 
 	  
 }//od if
 //_________________________________________________________________
 
   //______________________________________________________________________
-  function akceFunction($akce,$tabulka, $bolnisnica="", $poradi){
+  function akceFunction($akce,$tabulka, $bolnisnica="",$stolpci, $poradi){
 
 switch ($akce) {
 case "vyber":
