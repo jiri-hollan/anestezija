@@ -1,8 +1,9 @@
 Pregledovalci Univerzal:
-$tabulka 
-$bolnisnica
 $akce
+$bolnisnica
+$tabulka 
 $stolpci=["*"]
+
 $vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='priimek');
 
 $data = array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
@@ -19,10 +20,11 @@ $odstrani = new Odstrani($tabulka, $id);
 
 -------------------------------------------------
 sklepi:
-$tabulka 
 $akce
 $bolnisnica
+$tabulka 
 $stolpci=["*"];
+
 $vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='sklep');
 
 $sklep = test_input($_POST["sklep"]);
@@ -37,10 +39,11 @@ $odstrani = new Odstrani($tabulka, $id);
 
 ------------------------------------------------------------------------------
 sklepi Univerzal:
-$tabulka 
 $akce
 $bolnisnica
+$tabulka
 $stolpci=["*"];
+
 $vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='sklep');
 
 $data = array("bolnisnica"=>$bolnisnica, "sklep"=>$sklep, "aktiven"=>$aktiven);
