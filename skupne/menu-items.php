@@ -8,7 +8,7 @@
 	  /*<li><a href="../oddelek/razpisMeseci.php?pogled=raz">Razpored</a> </li> to je bil predstojnikov razpis pod $a1 */
 	 
 	 $a2= '<li><a href="../servis/upload/menuUpload.php">servis</a> </li>
-	       <li><a href="../servis/database/pregledovalciMenu.php">nastavitve</a> </li>'; 
+	       <li><a href="../servis/database/nastavitveMenu.php">nastavitve</a> </li>'; 
 	 $a3= '<li><a href="../admin/databaseMenu.php">database</a> </li>'; 
 	 
 ?>
