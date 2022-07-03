@@ -31,7 +31,19 @@
 // $uredi->aktualizujFunction();
 //_____________________________________________________________________________________
 
-	
+	class Test_input extends DostopPost{
+  public $stolpci;
+  function __construct($test) {
+	//parent::__construct($test);
+   $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
+ // $test = strtolower($test);
+  return $test;
+}//od class Test_input
+
+
+//____________________________________________________________________________________	
 	class Vyber extends DostopPost{
   public $stolpci;
   function __construct($bolnisnica, $tabulka, $stolpci, $poradi=NULL) {
