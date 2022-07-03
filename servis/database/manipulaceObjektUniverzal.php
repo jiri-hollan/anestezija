@@ -36,12 +36,11 @@ if (isset($_REQUEST["akce"])) {
  	class Test_input {
   function __construct($test) {
 	//parent::__construct($test);
-   $test = trim($test);
-  $test = stripslashes($test);
-  $test = htmlspecialchars($test);
- // $test = strtolower($test);
- var_dump($test);
-  return ($test);
+   $this->test = trim($test);
+  $this->test = stripslashes($this->test);
+  $this->test = htmlspecialchars($this->test);
+ // $this->test = strtolower($this->test);
+  return ($this->test);
   }//od construct
 }//od class Test_input
 
