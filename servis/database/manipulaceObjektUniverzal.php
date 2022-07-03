@@ -31,7 +31,7 @@ if (isset($_REQUEST["akce"])) {
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
  // akceFunction($akce,$tabulka,$bolnisnica);
-  new $akce($bolnišnica, $tabulka);
+  new $akce($bolnisnica, $tabulka);
 
 	  
 }//od if
@@ -136,6 +136,7 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	parent::__construct($bolnisnica, $tabulka);
 	echo $tabulka;
 	$this->tabulka = $tabulka;
+	$this->bolnisnica = $bolnisnica;
 	$ime = new test_input($_POST["ime"]);
 	$this->ime = $ime->get_test();
     $priimek = new test_input($_POST["priimek"]);
