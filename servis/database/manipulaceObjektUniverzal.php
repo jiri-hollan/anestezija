@@ -31,7 +31,7 @@ if (isset($_REQUEST["akce"])) {
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
  // akceFunction($akce,$tabulka,$bolnisnica);
-  new $akce($tabulka,$bolnisnica);
+  new $akce($bolnišnica, $tabulka);
 
 	  
 }//od if
@@ -132,12 +132,20 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 //________________________________________________________________________________________	
 	class Vloz extends DostopPost {
 
-  function __construct($bolnisnica, $tabulka, $data) {
+  function __construct($bolnisnica, $tabulka) {
 	parent::__construct($bolnisnica, $tabulka);
-	$this->data = $data;	
-  }
+	echo $tabulka;
+	$this->tabulka = $tabulka;
+	$ime = new test_input($_POST["ime"]);
+	$this->ime = $ime->get_test();
+    $priimek = new test_input($_POST["priimek"]);
+	$this->priimek = $priimek->get_test();
+    $status = new test_input($_POST["status"]); 
+	$this->status = $status->get_test();
+	$this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);
+
  
-  function vlozFunction(){
+  //function vlozFunction(){
      $vloz = new database();
      $vlozeno=$vloz->vloz($this->tabulka,$this->data);
     //echo $vlozeno[1];
@@ -146,7 +154,9 @@ echo "Za izbrano bolnico ni zapisa v bazi";
      echo "<br>";
      echo count($vlozeno);
      echo "<br>";
-}//od vlozFunction    
+	 
+  }	 
+//}//od vlozFunction    
 }// od class Vloz
 
 //-------------------------iterator-----------------------------------------------------
