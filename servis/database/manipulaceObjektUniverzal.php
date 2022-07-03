@@ -22,6 +22,7 @@
   $test = htmlspecialchars($test);
  // $test = strtolower($test);
   return $test;
+  }//od construct
 }//od class Test_input
 
 //____________________________________________________________________________________________
