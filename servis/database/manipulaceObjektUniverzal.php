@@ -4,7 +4,6 @@
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../../skupne/database.php';
- //require_once('manipulaceClassUniverzal.php');
 
 //_____________________________________________________________
 if (isset($_REQUEST["akce"])) {
@@ -20,17 +19,14 @@ if (isset($_REQUEST["akce"])) {
  if (isset($tabulka)){
 	  $tabulka= $tabulka; 
   }else if (isset($_REQUEST["tabulka"])){
-	  //$tabulka= test_input($_REQUEST["tabulka"]);
 	  $tabulka= new Test_input($_REQUEST["tabulka"]);
 	  $tabulka = $tabulka->get_test();
   }else {
 	  echo "ni tabulke v post";
-	 //$tabulka = "pregledovalciTbl"; 
   }
   //var_dump($akce);
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
- // akceFunction($akce,$tabulka,$bolnisnica);
   new $akce($bolnisnica, $tabulka);
 
 	  
@@ -44,14 +40,10 @@ if (isset($_REQUEST["akce"])) {
    $test = trim($test);
   $test = stripslashes($test);
   $this->test = htmlspecialchars($test);
- // $this->test = strtolower($this->test);
-  //return $this->test;
   }//od construct
   function get_test() {
     return $this->test;
-  }
-  
-  
+  }  
 }//od class Test_input
 
 //____________________________________________________________________________________________
@@ -65,12 +57,9 @@ if (isset($_REQUEST["akce"])) {
 	    $bolnisnica=strtolower($bolnisnica); 
         $bolnisnica=ucfirst($bolnisnica); 
 	    $this->bolnisnica = $bolnisnica;
-   //echo $this->bolnisnica;		
         $this->tabulka = $tabulka; 
   } //od construct
 }//od class dostopPost
-
-
 //____________________________________________________________________________________________
 	class Uredi extends DostopPost{
   public $id;
@@ -78,38 +67,24 @@ if (isset($_REQUEST["akce"])) {
   public $priimek;
   public $status; 
   public function __construct($bolnisnica, $tabulka) {
-	parent::__construct($bolnisnica, $tabulka);
-	
+	parent::__construct($bolnisnica, $tabulka);	
 	echo "case uredi <br>";
 print_r($_POST);
 echo "<br>";
     $id= new test_input($_POST["id"]);
 	$this->id = $id->get_test();
-   // $bolnisnica=test_input($_POST["boln isnica"]);
     $ime =new test_input($_POST["ime"]);
 	$this->ime = $ime->get_test();
 	$priimek = new test_input($_POST["priimek"]);
 	$this->priimek = $priimek->get_test();
 	$status =new test_input($_POST["status"]); 
 	$this->status = $status->get_test();
-
     $this->podminka = array("id"=>$this->id);
 	$this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);
-	//$uredi = new Uredi($this->bolnisnica, $this->tabulka, $this->podminka, $this->data);
-	//$uredi->aktualizujFunction();
-	
-	
-	
-    //$this->podminka = $podminka;
-    //$this->data = $data;	
- // }
-  //function aktualizujFunction() {
     	$aktualizuj = new database();
 		$aktualizovano=$aktualizuj->aktualizuj($this->tabulka,$this->data,$this->podminka);
 }
 }// od class uredi
-// klic $uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
-// $uredi->aktualizujFunction();
 //_____________________________________________________________________________________
 
 	class Vyber extends DostopPost{
@@ -128,16 +103,8 @@ echo "<br>";
    }//od else
    $this->poradi=$poradi;
    $this->tabulka=$tabulka;
-	
-	//function vyberFunction()
 $vyber = new database();
 $vybrano=$vyber->vyber($this->tabulka, $this->stolpci, $this->podminka, $this->poradi );
-//echo $vybrano[1];
-//echo var_dump($vybrano);
-//echo "<br>";
-//echo count($vybrano);
-//$dolzina=count($vybrano);
-//echo $vybrano[1];
 echo "<br>";
 if(count($vybrano)>0){	
 	
@@ -151,8 +118,7 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 }//od else
 }//od vyberFunction  
 }//od class vyber
-// klic $vyber = new Vyber($bolnisnica, $tabulka, $stolpci);
-// $vyber->vyberFunction();
+
 //________________________________________________________________________________________	
 	class Vloz extends DostopPost {
 
@@ -187,7 +153,6 @@ echo "Za izbrano bolnico ni zapisa v bazi";
     echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";	
         parent::__construct($it, self::LEAVES_ONLY);
     }
-
     function current() { 
 		 return "<td  >"  . parent::current() . "</td>";
     }
@@ -214,8 +179,6 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	echo "<br>"; 
 	$tabulka = new test_input($_GET["tabulka"]);
 	 $this->tabulka = $tabulka->get_test();	 
-		 
-	// $this->tabulka=$tabulka;
 	 $podminka = array("id"=>$this->id);	
 	 $stolpci=["*"];
 	 $vyber = new database();
@@ -248,14 +211,9 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	 $this->id = $id->get_test();
 	// echo "id uporabnika= " .  $id;
 	 echo "<br>";
-	//$odstrani = new Odstrani($this->tabulka, $this->id); 
-
-	 //$this->tabulka=$tabulka;
-	 //$this->id=$id;
 	 $stolpci=["*"];	 
 	 $podminka = array("id"=>$this->id);
 	 $odstrani = new database();
-//$vyber->vyber($tabulka, $stolpci, $podminka);
     $najdeno=$odstrani->vyber($this->tabulka, $stolpci, $podminka );
 	print_r($najdeno);
 	$odstranjeno=$odstrani->odstrani($this->tabulka, $podminka );
