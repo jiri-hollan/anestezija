@@ -8,7 +8,6 @@
 
 //_____________________________________________________________
 if (isset($_REQUEST["akce"])) {
-     // $akce = $_REQUEST["akce"];
 	  $akce = new Test_input($_REQUEST["akce"]);
 	  $akce = $akce->get_test();
   if (isset($_REQUEST["bolnisnica"])){
@@ -23,6 +22,7 @@ if (isset($_REQUEST["akce"])) {
   }else if (isset($_REQUEST["tabulka"])){
 	  //$tabulka= test_input($_REQUEST["tabulka"]);
 	  $tabulka= new Test_input($_REQUEST["tabulka"]);
+	  $tabulka = $tabulka->get_test();
   }else {
 	  echo "ni tabulke v post";
 	 //$tabulka = "pregledovalciTbl"; 
