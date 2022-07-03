@@ -93,19 +93,22 @@ if (isset($_REQUEST["akce"])) {
 
 	class Vyber extends DostopPost{
   public $stolpci;
-  function __construct($bolnisnica, $tabulka, $stolpci="*", $poradi=NULL) {
+  public $bolnisnica; 
+  public $tabulka;
+  public $poradi;
+  function __construct($bolnisnica, $tabulka, $stolpci=["*"], $poradi=NULL) {
 	parent::__construct($bolnisnica, $tabulka);
     $this->stolpci = $stolpci;	
-	echo "v class vyber";
+	//echo "v class vyber";
 	if ($this->bolnisnica == "") {
 	$this->podminka = NULL;
    } else {
     $this->podminka = array("bolnisnica"=>$this->bolnisnica);
    }//od else
    $this->poradi=$poradi;
-  }	
+   $this->tabulka=$tabulka;
 	
-	function vyberFunction(){
+	//function vyberFunction()
 $vyber = new database();
 $vybrano=$vyber->vyber($this->tabulka, $this->stolpci, $this->podminka, $this->poradi );
 //echo $vybrano[1];
