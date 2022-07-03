@@ -148,8 +148,6 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	$this->status = $status->get_test();
 	$this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);
 
- 
-  //function vlozFunction(){
      $vloz = new database();
      $vlozeno=$vloz->vloz($this->tabulka,$this->data);
     //echo $vlozeno[1];
@@ -157,10 +155,8 @@ echo "Za izbrano bolnico ni zapisa v bazi";
      print_r($vlozeno);
      echo "<br>";
      echo count($vlozeno);
-     echo "<br>";
-	 
-  }	 
-//}//od vlozFunction    
+     echo "<br>";	 
+  }	    
 }// od class Vloz
 
 //-------------------------iterator-----------------------------------------------------
@@ -218,9 +214,17 @@ echo "Za izbrano bolnico ni zapisa v bazi";
     class odstrani {
 	public $id;	
 	public $tabulka;
-	 function __construct($tabulka, $id) {
-	 $this->tabulka=$tabulka;
-	 $this->id=$id;
+	 function __construct($tabulka, $id) {		 
+	 $tabulka = new test_input($_GET["tabulka"]);
+	 $this->tabulka = $tabulka->get_test();
+     $id = new test_input($_GET["id"]);
+	 $this->id = $id->get_test();
+	// echo "id uporabnika= " .  $id;
+	 echo "<br>";
+	//$odstrani = new Odstrani($this->tabulka, $this->id); 
+
+	 //$this->tabulka=$tabulka;
+	 //$this->id=$id;
 	 $stolpci=["*"];	 
 	 $podminka = array("id"=>$this->id);
 	 $odstrani = new database();
