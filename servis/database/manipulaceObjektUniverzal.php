@@ -77,15 +77,36 @@ if (isset($_REQUEST["akce"])) {
   public $ime;
   public $priimek;
   public $status; 
-  public function __construct($bolnisnica, $tabulka, $podminka, $data) {
+  public function __construct($bolnisnica, $tabulka) {
 	parent::__construct($bolnisnica, $tabulka);
-    $this->podminka = $podminka;
-    $this->data = $data;	
-  }
-  function aktualizujFunction() {
+	
+	echo "case uredi <br>";
+print_r($_POST);
+echo "<br>";
+    $id= new test_input($_POST["id"]);
+	$this->id = $id->get_test();
+   // $bolnisnica=test_input($_POST["boln isnica"]);
+    $ime =new test_input($_POST["ime"]);
+	$this->ime = $ime->get_test();
+	$priimek = new test_input($_POST["priimek"]);
+	$this->priimek = $priimek->get_test();
+	$status =new test_input($_POST["status"]); 
+	$this->status = $status->get_test();
+
+    $this->podminka = array("id"=>$this->id);
+	$this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);
+	$uredi = new Uredi($this->bolnisnica, $this->tabulka, $this->podminka, $this->data);
+	//$uredi->aktualizujFunction();
+	
+	
+	
+    //$this->podminka = $podminka;
+    //$this->data = $data;	
+ // }
+  //function aktualizujFunction() {
     	$aktualizuj = new database();
 		$aktualizovano=$aktualizuj->aktualizuj($this->tabulka,$this->data,$this->podminka);
-  }
+}
 }// od class uredi
 // klic $uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
 // $uredi->aktualizujFunction();
@@ -187,8 +208,14 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	public $id;	
 	public $tabulka;
 	 function __construct($tabulka, $id) {
-	 $this->tabulka=$tabulka;
-	 $this->id=$id;
+    $id = new test_input($_GET["id"]);
+	$this->id = $id->get_test();
+	//echo "id uporabnika= " .  $id;
+	echo "<br>"; 
+	$tabulka = new test_input($_GET["tabulka"]);
+	 $this->tabulka = $tabulka->get_test();	 
+		 
+	// $this->tabulka=$tabulka;
 	 $podminka = array("id"=>$this->id);	
 	 $stolpci=["*"];
 	 $vyber = new database();
