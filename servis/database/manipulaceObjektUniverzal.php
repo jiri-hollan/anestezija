@@ -126,7 +126,7 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	parent::__construct($bolnisnica, $tabulka);
 	echo $tabulka;
 	$this->tabulka = $tabulka;
-	$this->bolnisnica = $bolnisnica;
+	//$this->bolnisnica = $bolnisnica;
 	$ime = new test_input($_POST["ime"]);
 	$this->ime = $ime->get_test();
     $priimek = new test_input($_POST["priimek"]);
