@@ -30,7 +30,8 @@ if (isset($_REQUEST["akce"])) {
   //var_dump($akce);
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
-  akceFunction($akce,$tabulka,$bolnisnica);
+ // akceFunction($akce,$tabulka,$bolnisnica);
+  new $akce($tabulka,$bolnisnica);
 
 	  
 }//od if
@@ -92,10 +93,10 @@ if (isset($_REQUEST["akce"])) {
 
 	class Vyber extends DostopPost{
   public $stolpci;
-  function __construct($bolnisnica, $tabulka, $stolpci, $poradi=NULL) {
+  function __construct($bolnisnica, $tabulka, $stolpci="*", $poradi=NULL) {
 	parent::__construct($bolnisnica, $tabulka);
     $this->stolpci = $stolpci;	
-	
+	echo "v class vyber";
 	if ($this->bolnisnica == "") {
 	$this->podminka = NULL;
    } else {
