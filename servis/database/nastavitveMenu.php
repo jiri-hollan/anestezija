@@ -13,7 +13,7 @@ echo '
 <h1>Menu servis</h1>
 <ul id="linky1">
 
-<li><a href="../database/manipulaceUniverzal.php?tabulka=pregledovalciTbl">upravljanje z pregledovalci</a></li>
+<li><a href="../database/manipulaceObjektUniverzal.php?tabulka=pregledovalciTbl">upravljanje z pregledovalci</a></li>
 
 <li><a href="../database/manipulaceSklepiUniverzal.php?tabulka=sklepiTbl">pripravljeni sklepi</a></li>
 </ul>

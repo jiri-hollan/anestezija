@@ -1,4 +1,53 @@
+ <?php 
+ //$tabulka="pregledovalciTbl";
+ require_once('../sabloni/vkladane/zahlavi.php');
+/* V tom failu so funkcije za spreminjanje tabele databaze*/
+ require_once('sabloni/formBaze.php');
+ require_once '../../skupne/database.php';
+ //require_once('manipulaceClassUniverzal.php');
+
+//_____________________________________________________________
+if (isset($_REQUEST["akce"])) {
+      $akce = $_REQUEST["akce"];
+	  $akce = new Test_input($akce);
+  if (isset($_REQUEST["bolnisnica"])){
+	  $bolnisnica = new Test_input($_REQUEST['bolnisnica']);  
+  }else {
+	 $bolnisnica = "";   
+  }
+ if (isset($tabulka)){
+	  $tabulka= $tabulka; 
+  }else if (isset($_REQUEST["tabulka"])){
+	  //$tabulka= test_input($_REQUEST["tabulka"]);
+	  $tabulka= new Test_input($_REQUEST["tabulka"]);
+  }else {
+	  echo "ni tabulke v post";
+	 //$tabulka = "pregledovalciTbl"; 
+  }
+  var_dump($akce);
+    echo strtoupper($akce) .': ';
+  echo strtoupper($bolnisnica) .'<br>';
+  akceFunction($akce,$tabulka,$bolnisnica);
+
+	  
+}//od if
+//_________________________________
  
+ 	class Test_input {
+  function __construct($test) {
+	//parent::__construct($test);
+   $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
+ // $test = strtolower($test);
+ var_dump($test);
+  return ($test);
+  }//od construct
+}//od class Test_input
+
+//____________________________________________________________________________________________
+ 
+ ?>
 <?php 
  class DostopPost{
   public $bolnisnica;		
@@ -12,18 +61,6 @@
   } //od construct
 }//od class dostopPost
 
-//____________________________________________________________________________________	
-	class Test_input extends DostopPost{
-  public $stolpci;
-  function __construct($test) {
-	//parent::__construct($test);
-   $test = trim($test);
-  $test = stripslashes($test);
-  $test = htmlspecialchars($test);
- // $test = strtolower($test);
-  return $test;
-  }//od construct
-}//od class Test_input
 
 //____________________________________________________________________________________________
 	class Uredi extends DostopPost{
@@ -172,3 +209,9 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	 }//od construct
 	 }//od class odstrani
 	?>
+<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>">
+</script>
+
+<!--zapati-->
+</body>
+</html>	
