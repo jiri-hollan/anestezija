@@ -95,7 +95,7 @@ echo "<br>";
 
     $this->podminka = array("id"=>$this->id);
 	$this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);
-	$uredi = new Uredi($this->bolnisnica, $this->tabulka, $this->podminka, $this->data);
+	//$uredi = new Uredi($this->bolnisnica, $this->tabulka, $this->podminka, $this->data);
 	//$uredi->aktualizujFunction();
 	
 	
