@@ -8,10 +8,13 @@
 
 //_____________________________________________________________
 if (isset($_REQUEST["akce"])) {
-      $akce = $_REQUEST["akce"];
-	  $akce = new Test_input($akce);
+     // $akce = $_REQUEST["akce"];
+	  $akce = new Test_input($_REQUEST["akce"]);
+	  $akce = $akce->get_test();
   if (isset($_REQUEST["bolnisnica"])){
-	  $bolnisnica = new Test_input($_REQUEST['bolnisnica']);  
+	  $bolnisnica = new Test_input($_REQUEST['bolnisnica']); 
+      $bolnisnica = $bolnisnica->get_test();
+	  
   }else {
 	 $bolnisnica = "";   
   }
@@ -24,7 +27,7 @@ if (isset($_REQUEST["akce"])) {
 	  echo "ni tabulke v post";
 	 //$tabulka = "pregledovalciTbl"; 
   }
-  var_dump($akce);
+  //var_dump($akce);
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   akceFunction($akce,$tabulka,$bolnisnica);
@@ -34,14 +37,20 @@ if (isset($_REQUEST["akce"])) {
 //_________________________________
  
  	class Test_input {
+	public $test;	
   function __construct($test) {
 	//parent::__construct($test);
-   $this->test = trim($test);
-  $this->test = stripslashes($this->test);
-  $this->test = htmlspecialchars($this->test);
+   $test = trim($test);
+  $test = stripslashes($test);
+  $this->test = htmlspecialchars($test);
  // $this->test = strtolower($this->test);
-  return ($this->test);
+  //return $this->test;
   }//od construct
+  function get_test() {
+    return $this->test;
+  }
+  
+  
 }//od class Test_input
 
 //____________________________________________________________________________________________
