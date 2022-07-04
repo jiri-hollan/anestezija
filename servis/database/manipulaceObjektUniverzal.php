@@ -147,15 +147,18 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	parent::__construct($bolnisnica, $tabulka);
 	echo $tabulka;
 	$this->tabulka = $tabulka;
-	//$this->bolnisnica = $bolnisnica;
-	$ime = new test_input($_POST["ime"]);
-	$this->ime = $ime->get_test();
-    $priimek = new test_input($_POST["priimek"]);
-	$this->priimek = $priimek->get_test();
-    $status = new test_input($_POST["status"]); 
-	$this->status = $status->get_test();
-	$this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);
-
+	$data=array();
+ function array_push_assoc($data, $key, $value){
+   $data[$key] = $value;
+   return $data;
+}
+foreach (json_decode($this->dataPreg) as $key) {
+ //echo "$key <br>";
+    $value= new Test_input($_REQUEST[$key]); 
+	$value= $value->get_test();	
+    $data =array_push_assoc($data, $key, $value);
+}
+     $this->data = $data;
      $vloz = new database();
      $vlozeno=$vloz->vloz($this->tabulka,$this->data);
     //echo $vlozeno[1];
