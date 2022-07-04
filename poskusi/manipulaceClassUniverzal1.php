@@ -26,7 +26,7 @@
 		$aktualizovano=$aktualizuj->aktualizuj($this->tabulka,$this->data,$this->podminka);
   }
 }// od class uredi
-// klic $uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $aktiven);
+// klic $uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $status);
 // $uredi->aktualizujFunction();
 //_____________________________________________________________________________________
 
@@ -87,7 +87,7 @@
 	class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
 	echo "<table id='osebe' style='border: solid 1px black;'>";
-    echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>aktiven</th></tr>";	
+    echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>status</th></tr>";	
         parent::__construct($it, self::LEAVES_ONLY);
     }
     function current() { 

@@ -9,8 +9,8 @@ switch(akce) {
   case "vloz":
     bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica" required>';
     sklep= '<input type="text" id="sklepId" name="sklep" value="" placeholder="sklep" required>';
-    aktiven= '<input type="int" id="aktivenId" name="aktiven" value="" placeholder="aktiven" required>';
-    document.getElementById("demo").innerHTML = bolnisnica + sklep + aktiven;
+    status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
+    document.getElementById("demo").innerHTML = bolnisnica + sklep + status;
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
 
