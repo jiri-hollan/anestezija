@@ -16,15 +16,15 @@
   public $id;
   public $sklep;
   //public $priimek;
-  public $aktiven; 
-  public function __construct($bolnisnica, $tabulka, $id, $sklep, $aktiven) {
+  public $status; 
+  public function __construct($bolnisnica, $tabulka, $id, $sklep, $status) {
 	parent::__construct($bolnisnica, $tabulka);
 	$this->id = $id; 
 	$this->sklep = $sklep; 
    // $this->priimek = $priimek; 
-    $this->aktiven = $aktiven; 
+    $this->status = $status; 
     $this->podminka = array("id"=>$this->id);
-    $this->data = array("bolnisnica"=>$this->bolnisnica, "sklep"=>$this->sklep, "aktiven"=>$this->aktiven);	
+    $this->data = array("bolnisnica"=>$this->bolnisnica, "sklep"=>$this->sklep, "status"=>$this->status);	
   }
   function aktualizujFunction() {
     	$aktualizuj = new database();
@@ -78,13 +78,13 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	class Vloz extends DostopPost {
   public $sklep;
   //public $priimek;
-  public $aktiven; 
-  function __construct($bolnisnica, $tabulka, $sklep, $aktiven) {
+  public $status; 
+  function __construct($bolnisnica, $tabulka, $sklep, $status) {
 	parent::__construct($bolnisnica, $tabulka);
 	$this->sklep = $sklep; 
     //$this->priimek = $priimek; 
-    $this->aktiven = $aktiven; 
-    $this->data = array("bolnisnica"=>$this->bolnisnica, "sklep"=>$this->sklep, "aktiven"=>$this->aktiven);	
+    $this->status = $status; 
+    $this->data = array("bolnisnica"=>$this->bolnisnica, "sklep"=>$this->sklep, "status"=>$this->status);	
   }
 
   
@@ -113,7 +113,7 @@ echo "<br>";
 	class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
 	echo "<table id='osebe' style='border: solid 1px black;'>";
-    echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>aktiven</th></tr>";	
+    echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>status</th></tr>";	
         parent::__construct($it, self::LEAVES_ONLY);
     }
 
