@@ -37,16 +37,16 @@ case "vyber":
 case "vloz":
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
-    $aktiven = test_input($_POST["aktiven"]);  
-	$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $aktiven);
+    $status = test_input($_POST["status"]);  
+	$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $status);
 	$vloz->vlozFunction();	
     break;
 case "uredi":    
     $id=test_input($_POST["id"]);
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
-	$aktiven = test_input($_POST["aktiven"]); 	
-	$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $aktiven);
+	$status = test_input($_POST["status"]); 	
+	$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $status);
 	$uredi->aktualizujFunction();
     break;
 case "edit":    
