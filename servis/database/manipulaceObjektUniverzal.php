@@ -27,6 +27,7 @@ if (isset($_REQUEST["akce"])) {
   //var_dump($akce);
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
+ 
   new $akce($bolnisnica, $tabulka);
 
 	  
@@ -58,6 +59,17 @@ if (isset($_REQUEST["akce"])) {
         $bolnisnica=ucfirst($bolnisnica); 
 	    $this->bolnisnica = $bolnisnica;
         $this->tabulka = $tabulka; 
+		 switch($this->tabulka){
+	  case "pregledovalciTbl":
+	  $dataPreg= '["bolnisnica", "ime", "priimek", "status"]';
+	  break;
+	  case "sklepiTbl":
+	  $dataSklep= '["bolnisnica", "sklep", "status"]';
+	  break;
+	  default:
+	  echo "tabulka ni določena";
+  }
+		
   } //od construct
 }//od class dostopPost
 //____________________________________________________________________________________________
@@ -73,14 +85,31 @@ print_r($_POST);
 echo "<br>";
     $id= new test_input($_POST["id"]);
 	$this->id = $id->get_test();
+	/*
     $ime =new test_input($_POST["ime"]);
 	$this->ime = $ime->get_test();
 	$priimek = new test_input($_POST["priimek"]);
 	$this->priimek = $priimek->get_test();
 	$status =new test_input($_POST["status"]); 
 	$this->status = $status->get_test();
+	*/
+	$data=array();
+ function array_push_assoc($data, $key, $value){
+   $data[$key] = $a;
+   return $data;
+}
+foreach (json_decode($dataPreg) as $key) {
+ //echo "$key <br>";
+    $a= new Test_input($_REQUEST[$key]); 
+	$a= $a->get_test();	
+    $data =array_push_assoc($data, $key, $a);
+}
+
+	
+	
     $this->podminka = array("id"=>$this->id);
-	$this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);
+	//$this->data = array("bolnisnica"=>$this->bolnisnica, "ime"=>$this->ime, "priimek"=>$this->priimek, "status"=>$this->status);
+	    $this->data = $data;
     	$aktualizuj = new database();
 		$aktualizovano=$aktualizuj->aktualizuj($this->tabulka,$this->data,$this->podminka);
 }
