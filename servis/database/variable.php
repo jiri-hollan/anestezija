@@ -1,6 +1,6 @@
 <?php
-$dataPreg= ["bolnisnica", "ime", "priimek", "aktiven"];
-$dataSklep= ["bolnisnica", "sklep", "aktiven"];
+$dataPreg= ["bolnisnica", "ime", "priimek", "status"];
+$dataSklep= ["bolnisnica", "sklep", "status"];
 $poradiPreg= "priimek";
 $poradiSklep= "sklep";
 

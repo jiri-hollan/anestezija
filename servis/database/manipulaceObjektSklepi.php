@@ -64,7 +64,7 @@ if (isset($_REQUEST["akce"])) {
 	class Uredi extends DostopPost{
   public $id;
   public $sklep;
-  public $aktiven; 
+  public $status; 
   public function __construct($bolnisnica, $tabulka) {
 	parent::__construct($bolnisnica, $tabulka);	
 	echo "case uredi <br>";
@@ -74,10 +74,10 @@ echo "<br>";
 	$this->id = $id->get_test();
     $sklep =new test_input($_POST["sklep"]);
 	$this->sklep = $sklep->get_test();
-	$aktiven =new test_input($_POST["aktiven"]); 
-	$this->aktiven = $aktiven->get_test();
+	$status =new test_input($_POST["status"]); 
+	$this->status = $status->get_test();
     $this->podminka = array("id"=>$this->id);
-	$this->data = array("bolnisnica"=>$this->bolnisnica, "sklep"=>$this->sklep, "aktiven"=>$this->aktiven);
+	$this->data = array("bolnisnica"=>$this->bolnisnica, "sklep"=>$this->sklep, "status"=>$this->status);
     	$aktualizuj = new database();
 		$aktualizovano=$aktualizuj->aktualizuj($this->tabulka,$this->data,$this->podminka);
 }
@@ -126,9 +126,9 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	//$this->bolnisnica = $bolnisnica;
 	$sklep = new test_input($_POST["sklep"]);
 	$this->sklep = $sklep->get_test();
-    $aktiven = new test_input($_POST["aktiven"]); 
-	$this->aktiven = $aktiven->get_test();
-	$this->data = array("bolnisnica"=>$this->bolnisnica, "sklep"=>$this->sklep, "aktiven"=>$this->aktiven);
+    $status = new test_input($_POST["status"]); 
+	$this->status = $status->get_test();
+	$this->data = array("bolnisnica"=>$this->bolnisnica, "sklep"=>$this->sklep, "status"=>$this->status);
 
      $vloz = new database();
      $vlozeno=$vloz->vloz($this->tabulka,$this->data);
@@ -145,7 +145,7 @@ echo "Za izbrano bolnico ni zapisa v bazi";
 	class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
 	echo "<table id='osebe' style='border: solid 1px black;'>";
-    echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>aktiven</th></tr>";	
+    echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>status</th></tr>";	
         parent::__construct($it, self::LEAVES_ONLY);
     }
     function current() { 
