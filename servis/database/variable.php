@@ -8,23 +8,23 @@ $poradiSklep= "sklep";
 
 
 $data=array();
-function array_push_assoc($data, $value, $a){
-   $data[$value] = $a;
+function array_push_assoc($data, $key, $value){
+   $data[$key] = $value;
    return $data;
 }
 
 
-foreach (json_decode($dataPreg) as $value) {
- //echo "$value <br>";
-    $a= new Test_input($_REQUEST[$value]); 
-	$a= $a->get_test();	
- // $a='$'.$value.'= new test_input($_POST["'.$value.'"]);';
- // $b='$this->'.$value. '= $'.$value .'->get_test();';
-  //echo '$'.$value.'= new test_input($_POST["'.$value.'"]);<br>';
-  //echo '$this->'.$value. '= $'.$value .'->get_test();<br>';
-//$a;
-//var_dump ($a);
-$data =array_push_assoc($data, $value, $a);
+foreach (json_decode($dataPreg) as $key) {
+ //echo "$key <br>";
+    $value= new Test_input($_REQUEST[$key]); 
+	$value= $value->get_test();	
+ // $value='$'.$key.'= new test_input($_POST["'.$key.'"]);';
+ // $b='$this->'.$key. '= $'.$key .'->get_test();';
+  //echo '$'.$key.'= new test_input($_POST["'.$key.'"]);<br>';
+  //echo '$this->'.$key. '= $'.$key .'->get_test();<br>';
+//$value;
+//var_dump ($value);
+$data =array_push_assoc($data, $key, $value);
 //echo "<br>";
 }
 var_dump ($data);

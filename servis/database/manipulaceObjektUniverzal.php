@@ -61,10 +61,10 @@ if (isset($_REQUEST["akce"])) {
         $this->tabulka = $tabulka; 
 		 switch($this->tabulka){
 	  case "pregledovalciTbl":
-	  $dataPreg= '["bolnisnica", "ime", "priimek", "status"]';
+	  $this->dataPreg= '["bolnisnica", "ime", "priimek", "status"]';
 	  break;
 	  case "sklepiTbl":
-	  $dataSklep= '["bolnisnica", "sklep", "status"]';
+	  $this->dataPreg= '["bolnisnica", "sklep", "status"]';
 	  break;
 	  default:
 	  echo "tabulka ni določena";
@@ -85,24 +85,16 @@ print_r($_POST);
 echo "<br>";
     $id= new test_input($_POST["id"]);
 	$this->id = $id->get_test();
-	/*
-    $ime =new test_input($_POST["ime"]);
-	$this->ime = $ime->get_test();
-	$priimek = new test_input($_POST["priimek"]);
-	$this->priimek = $priimek->get_test();
-	$status =new test_input($_POST["status"]); 
-	$this->status = $status->get_test();
-	*/
 	$data=array();
  function array_push_assoc($data, $key, $value){
-   $data[$key] = $a;
+   $data[$key] = $value;
    return $data;
 }
-foreach (json_decode($dataPreg) as $key) {
+foreach (json_decode($this->dataPreg) as $key) {
  //echo "$key <br>";
-    $a= new Test_input($_REQUEST[$key]); 
-	$a= $a->get_test();	
-    $data =array_push_assoc($data, $key, $a);
+    $value= new Test_input($_REQUEST[$key]); 
+	$value= $value->get_test();	
+    $data =array_push_assoc($data, $key, $value);
 }
 
 	
