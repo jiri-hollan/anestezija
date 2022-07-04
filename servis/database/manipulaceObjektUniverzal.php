@@ -244,10 +244,18 @@ foreach (json_decode($this->dataPreg) as $key) {
 	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
 	 }//od construct
 	 }//od class odstrani
-	?>
-<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>">
-</script>
+if (isset($_REQUEST["tabulka"])){
 
+switch($_REQUEST["tabulka"]){
+	case "sklepiTbl":
+echo '<script src="js/manipulaceSklepi.js?<?php echo time(); ?>"></script>'; 
+break;
+case "pregledovalciTbl":
+echo '<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>"></script>'; 
+break;
+}
+}
+?>
 <!--zapati-->
 </body>
 </html>	
