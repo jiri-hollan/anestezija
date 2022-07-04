@@ -54,7 +54,7 @@ try {
     id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	`bolnisnica` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
 	`sklep` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
-    `aktiven` int(3) NOT NULL
+    `status` int(3) NOT NULL
     )";
 
     // use exec() because no results are returned
