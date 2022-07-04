@@ -40,9 +40,9 @@ case "vloz":
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
    // $priimek = test_input($_POST["priimek"]);
-    $aktiven = test_input($_POST["aktiven"]);  
+    $status = test_input($_POST["status"]);  
 	//$vloz = new Vloz($bolnisnica, $tabulka, $ime, $priimek, $status);
-	$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $aktiven);
+	$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $status);
 	$vloz->vlozFunction();	
     break;
 case "uredi":
@@ -51,9 +51,9 @@ case "uredi":
     $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
 	//$priimek = test_input($_POST["priimek"]);
-	$aktiven = test_input($_POST["aktiven"]); 	
-	//$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $aktiven);
-	$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $aktiven);
+	$status = test_input($_POST["status"]); 	
+	//$uredi = new Uredi($bolnisnica, $tabulka, $id, $ime, $priimek, $status);
+	$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $status);
 	$uredi->aktualizujFunction();
     break;
 
