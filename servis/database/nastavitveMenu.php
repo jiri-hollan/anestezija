@@ -15,7 +15,7 @@ echo '
 
 <li><a href="../database/manipulaceObjektUniverzal.php?tabulka=pregledovalciTbl">upravljanje z pregledovalci</a></li>
 
-<li><a href="../database/manipulaceObjektSklepi.php?tabulka=sklepiTbl">pripravljeni sklepi</a></li>
+<li><a href="../database/manipulaceObjektUniverzal.php?tabulka=sklepiTbl">pripravljeni sklepi</a></li>
 </ul>
 </div>
 ';
