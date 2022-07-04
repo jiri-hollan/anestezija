@@ -1,4 +1,8 @@
-
+<?php
+if (isset($_REQUEST["tabulka"])){
+	  $tab=$_REQUEST["tabulka"];
+  }
+?>
 
 <br>
 
