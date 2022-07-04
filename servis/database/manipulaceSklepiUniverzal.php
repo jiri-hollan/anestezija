@@ -50,8 +50,8 @@ case "vyber":
 case "vloz":    
    // $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
-    $aktiven = test_input($_POST["aktiven"]);  
-	$data = array("bolnisnica"=>$bolnisnica, "sklep"=>$sklep, "aktiven"=>$aktiven);	
+    $status = test_input($_POST["status"]);  
+	$data = array("bolnisnica"=>$bolnisnica, "sklep"=>$sklep, "status"=>$status);	
 	$vloz = new Vloz($bolnisnica, $tabulka, $data);
 	$vloz->vlozFunction();	
     break;
@@ -62,10 +62,10 @@ echo "<br>";
     $id=test_input($_POST["id"]);
    // $bolnisnica=test_input($_POST["bolnisnica"]);
     $sklep = test_input($_POST["sklep"]);
-	$aktiven = test_input($_POST["aktiven"]); 
+	$status = test_input($_POST["status"]); 
 
     $podminka = array("id"=>$id);
-	$data = array("bolnisnica"=>$bolnisnica, "sklep"=>$sklep, "aktiven"=>$aktiven);
+	$data = array("bolnisnica"=>$bolnisnica, "sklep"=>$sklep, "status"=>$status);
 	$uredi = new Uredi($bolnisnica, $tabulka, $podminka, $data);
 	$uredi->aktualizujFunction();
     break;

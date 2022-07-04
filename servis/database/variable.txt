@@ -28,10 +28,10 @@ $stolpci=["*"];
 $vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='sklep');
 
 $sklep = test_input($_POST["sklep"]);
-$aktiven = test_input($_POST["aktiven"]);
-$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $aktiven);
+$status = test_input($_POST["status"]);
+$vloz = new Vloz($bolnisnica, $tabulka, $sklep, $status);
 $id=test_input($_POST["id"]);
-$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $aktiven);
+$uredi = new Uredi($bolnisnica, $tabulka, $id, $sklep, $status);
 $id = test_input($_GET["id"]);
 $edit = new Edit($tabulka, $id);
 $id = test_input($_GET["id"]);
@@ -46,7 +46,7 @@ $stolpci=["*"];
 
 $vyber = new Vyber($bolnisnica, $tabulka, $stolpci, $poradi='sklep');
 
-$data = array("bolnisnica"=>$bolnisnica, "sklep"=>$sklep, "aktiven"=>$aktiven);
+$data = array("bolnisnica"=>$bolnisnica, "sklep"=>$sklep, "status"=>$status);
 $vloz = new Vloz($bolnisnica, $tabulka, $data);
 $id=test_input($_POST["id"]);
 $podminka = array("id"=>$id);
