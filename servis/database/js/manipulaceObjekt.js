@@ -57,6 +57,6 @@ functionOver:  function(e) {
   }//od function(e)
 
 
-}// od obj manipulace
+};// od obj manipulace
 
 
