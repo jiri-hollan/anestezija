@@ -60,27 +60,3 @@ function functionOver (e) {
 }// od obj manipulace
 
 
-
-//VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-
-function izborFunction(akce, tabulka) {
-	var tabulka=tabulka;
-	//alert(tabulka);
-
-switch(akce) {
-
-    break; 
-
-  
-    break;
-
-
-    break;
-
-
-    break;	
-  default:
-    // code block
- }//od switch
-} // od izborFunction
-//----------------------------------------------------------------------------------------
