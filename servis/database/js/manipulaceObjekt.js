@@ -1,5 +1,5 @@
 const manipulace = {
-  tabulka:"pregledovalciTbl",
+  tabulka:"sklepiTbl",
   //document.getElementById("akceId").value = akce;
 
 vyber: function()  {
