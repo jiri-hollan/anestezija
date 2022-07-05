@@ -5,7 +5,8 @@ const manipulace = {
 vyber: function(tabulka,akce)  {
 	this.tabulka=tabulka;
 	this.akce=akce;
-// omogoči izbiro bolnišnice 	
+// omogoči izbiro bolnišnice 
+document.getElementById("akceId").value = akce;
  document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
 	var bolList  =[
 	"Izola",
@@ -28,6 +29,7 @@ vloz: function(tabulka,akce)  {
     ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime" required>';
     priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
     status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
+	document.getElementById("akceId").value = akce;
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
 	document.getElementById("tabSent").innerHTML =  '<input type="hidden" name="tabulka" value="'+this.tabulka+'">';
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
