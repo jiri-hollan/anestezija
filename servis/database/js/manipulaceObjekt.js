@@ -1,8 +1,8 @@
 const manipulace = {
-  var tabulka="pregledovalciTbl";
-  document.getElementById("akceId").value = akce;
+  tabulka="pregledovalciTbl",
+  //document.getElementById("akceId").value = akce;
 
-function vyber{
+vyber: function()  {
 // omogoči izbiro bolnišnice 	
  document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
 	var bolList  =[
@@ -19,7 +19,7 @@ function vyber{
    document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
   }//od vyber
   
-function vloz{
+vloz: function()  {
     bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica" required>';
     ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime" required>';
     priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
@@ -29,14 +29,14 @@ function vloz{
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
 }// od vloz
 
-function edit{
+edit: function()  {
   //alert("v JS case edit");
   if(document.getElementById("osebe")!=null){
      document.getElementById("osebe").addEventListener("click", functionOver);
      }//od if
   }// od edit
   
-function odstrani{
+odstrani: function()  {
   if ( confirm("v funkciji JS odstrani\odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
     document.getElementById("osebe").addEventListener("click", functionOver);
@@ -46,7 +46,7 @@ function odstrani{
 }// od else
   }// od odstrani
 
-function functionOver (e) {
+functionOver:  function(e) {
   var x = e.target;
   if (x.nodeName == "TD") {
   var y = e.path[1];

@@ -251,7 +251,7 @@ switch($_REQUEST["tabulka"]){
 echo '<script src="js/manipulaceSklepi.js?<?php echo time(); ?>"></script>'; 
 break;
 case "pregledovalciTbl":
-echo '<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>"></script>'; 
+echo '<script src="js/manipulaceobjekt.js?<?php echo time(); ?>"></script>'; 
 break;
 }
 }
