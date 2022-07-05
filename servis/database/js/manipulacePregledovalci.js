@@ -1,5 +1,5 @@
-var tabulka="pregledovalciTbl";
-function izborFunction(akce) {
+var tabulka;
+function izborFunction(akce, tabulka) {
 	//alert(tabulka);
   document.getElementById("akceId").value = akce;
 switch(akce) {
