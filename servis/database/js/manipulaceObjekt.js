@@ -1,5 +1,5 @@
 const manipulace = {
-var tabulka="pregledovalciTbl";
+  var tabulka="pregledovalciTbl";
   document.getElementById("akceId").value = akce;
 
 function vyber{
@@ -10,15 +10,13 @@ function vyber{
 	"Jesenice",
 	];
 	var text = "";
-var i;
-for (i = 0; i < bolList.length; i++) {
- // text += "<option value=" +  zdravList[i] + ">"+"<br>";
+  var i;
+  for (i = 0; i < bolList.length; i++) {
   text += "<option value='" +  bolList[i] + "'>"  +"<br>";
 }
-document.getElementById("bolnisnice").innerHTML = text;
-	
-	document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
-	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
+   document.getElementById("bolnisnice").innerHTML = text;	
+   document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
+   document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
   }//od vyber
   
 function vloz{
