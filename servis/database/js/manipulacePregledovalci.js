@@ -1,5 +1,6 @@
 var tabulka;
 function izborFunction(akce, tabulka) {
+	var tabulka=tabulka;
 	//alert(tabulka);
   document.getElementById("akceId").value = akce;
 switch(akce) {
