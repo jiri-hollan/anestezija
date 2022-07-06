@@ -4,9 +4,9 @@ const manipulace = {
 
 vyber: function(tabulka)  {
 	this.tabulka=tabulka;
-	this.akce=vyber;
+	this.akce="vyber";
 // omogoči izbiro bolnišnice 
-document.getElementById("akceId").value = akce;
+document.getElementById("akceId").value = this.akce;
  document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
 	var bolList  =[
 	"Izola",
@@ -24,12 +24,12 @@ document.getElementById("akceId").value = akce;
   
 vloz: function(tabulka)  {
 	this.tabulka=tabulka;
-	this.akce=vloz;
+	this.akce="vloz";
     bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica" required>';
     ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime" required>';
     priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
     status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
-	document.getElementById("akceId").value = akce;
+	document.getElementById("akceId").value = this.akce;
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
 	document.getElementById("tabSent").innerHTML =  '<input type="hidden" name="tabulka" value="'+this.tabulka+'">';
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
@@ -38,14 +38,14 @@ vloz: function(tabulka)  {
 edit: function()  {
   //alert("v JS case edit");
   if(document.getElementById("osebe")!=null){
-     document.getElementById("osebe").addEventListener("click", functionOver);
+     document.getElementById("osebe").addEventListener("click", manipulace.functionOver);
      }//od if
   },// od edit
   
 odstrani: function()  {
   if ( confirm("v funkciji JS odstrani\odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
-    document.getElementById("osebe").addEventListener("click", functionOver);
+    document.getElementById("osebe").addEventListener("click", manipulace.functionOver);
       }//od notranjega if
 } else {
   text = "You canceled!";
