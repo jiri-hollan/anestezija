@@ -60,7 +60,7 @@ functionOver:  function(e) {
   row_value = y.cells[0].innerHTML;
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ; 
  this.akce= x.innerHTML; 
- alert(this.akce);
+ alert(this.akce+"Tabulka: "+this.tabulka);
  }//od if
    window.location.href = "manipulaceObjektUniverzal.php?akce=" + this.akce + "&id=" + this.row_value + "&tabulka="+ this.tabulka;
   }//od function(e)

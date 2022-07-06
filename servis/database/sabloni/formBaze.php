@@ -13,7 +13,7 @@ if (isset($_REQUEST["tabulka"])){
 
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-<input type="text" id="akceId" name="akce" value="">
+<input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
 <p id="tabSent"></p>
 <p id="posli"></p>
