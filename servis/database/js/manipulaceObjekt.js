@@ -2,9 +2,9 @@ const manipulace = {
   tabulka:"sklepiTbl",
   //document.getElementById("akceId").value = akce;
 
-vyber: function(tabulka,akce)  {
+vyber: function(tabulka)  {
 	this.tabulka=tabulka;
-	this.akce=akce;
+	this.akce=vyber;
 // omogoči izbiro bolnišnice 
 document.getElementById("akceId").value = akce;
  document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
@@ -22,9 +22,9 @@ document.getElementById("akceId").value = akce;
    document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
   },//od vyber
   
-vloz: function(tabulka,akce)  {
+vloz: function(tabulka)  {
 	this.tabulka=tabulka;
-	this.akce=akce;
+	this.akce=vloz;
     bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica" required>';
     ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime" required>';
     priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
