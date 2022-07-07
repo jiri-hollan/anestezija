@@ -36,7 +36,7 @@ this.vloz= function()  {
 };// od vloz
 
 this.edit= function()  {
-  //alert("v JS case edit");
+ alert("v JS case edit: "+this.tabulka);
   if(document.getElementById("osebe")!=null){
      document.getElementById("osebe").addEventListener("click", manipulace.functionOver);
      }//od if
@@ -53,16 +53,16 @@ this.odstrani= function()  {
   };// od odstrani
 
 this.functionOver=  function(e) {
-	alert("v functionOver"+this.tabulka);
+	alert("v functionOver"+manipulace.tabulka);
   var x = e.target;
   if (x.nodeName == "TD") {
   var y = e.path[1];
   row_value = y.cells[0].innerHTML;
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ; 
  this.akce= x.innerHTML; 
- alert("zahtevana akce: "+this.akce+" Tabulka: "+this.tabulka);
+ alert("zahtevana akce: "+this.akce+" Tabulka: "+manipulace.tabulka);
  }//od if
-   window.location.href = "manipulaceObjektUniverzal.php?akce=" + this.akce + "&id=" + this.row_value + "&tabulka="+ this.tabulka;
+   window.location.href = "manipulaceObjektUniverzal.php?akce=" + this.akce + "&id=" + this.row_value + "&tabulka="+ manipulace.tabulka;
   };//od function(e)
 
 
