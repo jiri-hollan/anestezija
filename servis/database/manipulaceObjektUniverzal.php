@@ -172,8 +172,18 @@ foreach (json_decode($this->dataPreg) as $key) {
 //-------------------------iterator-----------------------------------------------------
 	class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
+		//echo $_REQUEST["tabulka"];
 	echo "<table id='osebe' style='border: solid 1px black;'>";
-    echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";	
+	switch ($_REQUEST["tabulka"]){
+		  case "pregledovalciTbl":
+    echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";
+    break;
+	case "sklepiTbl":
+    echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>status</th></tr>";
+    break;
+	default:
+	echo "";
+	}
         parent::__construct($it, self::LEAVES_ONLY);
     }
     function current() { 
@@ -188,6 +198,7 @@ foreach (json_decode($this->dataPreg) as $key) {
 		
 		</tr>" . "\n";
     }
+	
 } // od class TableRows
 
 //____________________________________________________________________________________________________
