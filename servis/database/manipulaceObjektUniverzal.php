@@ -1,5 +1,4 @@
  <?php 
- //$tabulka="pregledovalciTbl";
  require_once('../sabloni/vkladane/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
