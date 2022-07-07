@@ -7,9 +7,13 @@ if (isset($_REQUEST["tabulka"])){
 ?>
 
 <br>
-
+<!--
 <button id="vyberId" onclick="manipulace.vyber('<?php echo $tab;?>')">vyber</button>
 <button id="vlozId" onclick="manipulace.vloz('<?php echo $tab;?>')">vlož</button>
+
+<button id="vyberId" onclick="const manipulace = new Manipulace('?php echo $tab;?>', 'vyber')">vyber</button>  -->
+<button id="vyberId" onclick="manipulaceStart('<?php echo $tab;?>', 'vyber')">vyber</button>
+
 
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">

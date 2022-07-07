@@ -1,9 +1,21 @@
-const manipulace = {
-  tabulka:"sklepiTbl",
-  //document.getElementById("akceId").value = akce;
+function manipulaceStart(tabulka, akce) {
+	  console.log(tabulka);
+  const manipulace = new Manipulace(tabulka); 
+  console.log(akce);
+  manipulace.vyber();
 
-vyber: function(tabulka)  {
-	this.tabulka=tabulka;
+}
+
+
+class Manipulace {
+ constructor(tabulka) {
+    this.tabulka = tabulka;
+
+
+  }
+
+vyber= function()  {
+	//this.tabulka=tabulka;
 	this.akce="vyber";
 // omogoči izbiro bolnišnice 
 document.getElementById("akceId").value = this.akce;
@@ -20,9 +32,9 @@ document.getElementById("akceId").value = this.akce;
    document.getElementById("bolnisnice").innerHTML = text;	
    document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+this.tabulka+'">';
    document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
-  },//od vyber
+  }//od vyber
   
-vloz: function(tabulka)  {
+vloz= function(tabulka)  {
 	this.tabulka=tabulka;
 	this.akce="vloz";
     bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica" required>';
@@ -33,16 +45,16 @@ vloz: function(tabulka)  {
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
 	document.getElementById("tabSent").innerHTML =  '<input type="hidden" name="tabulka" value="'+this.tabulka+'">';
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
-},// od vloz
+}// od vloz
 
-edit: function()  {
+edit= function()  {
   //alert("v JS case edit");
   if(document.getElementById("osebe")!=null){
      document.getElementById("osebe").addEventListener("click", manipulace.functionOver);
      }//od if
-  },// od edit
+  }// od edit
   
-odstrani: function()  {
+odstrani= function()  {
   if ( confirm("v funkciji JS odstrani\odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
     document.getElementById("osebe").addEventListener("click", manipulace.functionOver);
@@ -50,9 +62,9 @@ odstrani: function()  {
 } else {
   text = "You canceled!";
 }// od else
-  },// od odstrani
+  }// od odstrani
 
-functionOver:  function(e) {
+functionOver=  function(e) {
 	alert("functionOver:");
   var x = e.target;
   if (x.nodeName == "TD") {
