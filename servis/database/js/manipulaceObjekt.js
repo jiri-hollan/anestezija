@@ -1,9 +1,10 @@
-const manipulace = {
-  tabulka:"sklepiTbl",
-  //document.getElementById("akceId").value = akce;
+const manipulace = new Manipulace("pregledovalciTbl");
 
-vyber: function(tabulka)  {
-	this.tabulka=tabulka;
+
+function Manipulace(tabulka) {
+  this.tabulka=tabulka;
+
+this.vyber= function()  {
 	this.akce="vyber";
 // omogoči izbiro bolnišnice 
 document.getElementById("akceId").value = this.akce;
@@ -22,8 +23,7 @@ document.getElementById("akceId").value = this.akce;
    document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
   },//od vyber
   
-vloz: function(tabulka)  {
-	this.tabulka=tabulka;
+this.vloz= function()  {
 	this.akce="vloz";
     bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica" required>';
     ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime" required>';
@@ -35,14 +35,14 @@ vloz: function(tabulka)  {
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
 },// od vloz
 
-edit: function()  {
+this.edit= function()  {
   //alert("v JS case edit");
   if(document.getElementById("osebe")!=null){
      document.getElementById("osebe").addEventListener("click", manipulace.functionOver);
      }//od if
   },// od edit
   
-odstrani: function()  {
+this.odstrani= function()  {
   if ( confirm("v funkciji JS odstrani\odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
     document.getElementById("osebe").addEventListener("click", manipulace.functionOver);
@@ -52,7 +52,7 @@ odstrani: function()  {
 }// od else
   },// od odstrani
 
-functionOver:  function(e) {
+this.functionOver=  function(e) {
 	alert("v functionOver");
   var x = e.target;
   if (x.nodeName == "TD") {
