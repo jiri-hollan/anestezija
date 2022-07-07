@@ -184,10 +184,14 @@ foreach (json_decode($this->dataPreg) as $key) {
         echo "<tr>";
     }
     function endChildren() {
- 
-        echo "<td class='urediCls' onclick=" . 'manipulace.edit()' . ">edit</td>		
-		<td class='odstraniCls' onclick=" . 'manipulace.odstrani()'  . ">odstrani</td>		
+		
+		 echo "<td class='urediCls' onclick=" . 'preklop("edit",'. $tabulka.')' . ">edit</td>		
+		<td class='odstraniCls' onclick=" . 'preklop("odstrani",'. $tabulka.')'  . ">odstrani</td>		
 		</tr>" . "\n";
+ 
+       /* echo "<td class='urediCls' onclick=" . 'manipulace.edit()' . ">edit</td>		
+		<td class='odstraniCls' onclick=" . 'manipulace.odstrani()'  . ">odstrani</td>		
+		</tr>" . "\n";*/
     }
 } // od class TableRows
 

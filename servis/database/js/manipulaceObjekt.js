@@ -1,4 +1,19 @@
-const manipulace = new Manipulace("pregledovalciTbl");
+function preklop(akce,tabulka){
+	alert(akce+" "+tabulka);
+const manipulace = new Manipulace(tabulka);
+switch(akce) {
+  case "vyber":
+   manipulace.vyber();	
+    break;
+  case "vloz":
+    manipulace.vloz();
+    break;
+  default:
+    alert("zgodilo se nepredvideno");
+}
+}
+
+//const manipulace = new Manipulace("pregledovalciTbl");
 
 
 function Manipulace(tabulka) {
@@ -67,5 +82,3 @@ this.functionOver=  function(e) {
 
 
 };// od obj manipulace
-
-
