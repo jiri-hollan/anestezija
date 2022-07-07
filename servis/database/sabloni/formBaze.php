@@ -8,10 +8,11 @@ if (isset($_REQUEST["tabulka"])){
 
 <br>
 
+<!--<button id="vyberId" onclick="manipulace.vyber('<?php echo $tabulka;?>')">vyber</button>-->
+<!--<button id="vlozId" onclick="manipulace.vloz('<?php echo $tabulka;?>')">vlož</button>-->
+
 <button id="vyberId" onclick="manipulace.vyber('<?php echo $tabulka;?>')">vyber</button>
 <button id="vlozId" onclick="manipulace.vloz('<?php echo $tabulka;?>')">vlož</button>
-
-
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
