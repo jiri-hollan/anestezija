@@ -185,8 +185,8 @@ foreach (json_decode($this->dataPreg) as $key) {
     }
     function endChildren() {
 		
-		 echo "<td class='urediCls' onclick=" . 'preklop("edit",'. $tabulka.')' . ">edit</td>		
-		<td class='odstraniCls' onclick=" . 'preklop("odstrani",'. $tabulka.')'  . ">odstrani</td>		
+		 echo "<td class='urediCls' onclick=" . "preklop('edit', 'pregledovalciTbl')" . ">edit</td>		
+		<td class='odstraniCls' onclick=" . "preklop('odstrani', 'pregledovalciTbl')"  . ">odstrani</td>		
 		</tr>" . "\n";
  
        /* echo "<td class='urediCls' onclick=" . 'manipulace.edit()' . ">edit</td>		

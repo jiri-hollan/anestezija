@@ -1,5 +1,5 @@
 function preklop(akce,tabulka){
-	alert(akce+" "+tabulka);
+	alert("preklop: "+akce+" "+tabulka);
 const manipulace = new Manipulace(tabulka);
 switch(akce) {
   case "vyber":
@@ -8,6 +8,12 @@ switch(akce) {
   case "vloz":
     manipulace.vloz();
     break;
+  case "edit":
+    manipulace.edit();
+    break;
+  case "odstrani":
+    manipulace.odstrani();
+    break;	
   default:
     alert("zgodilo se nepredvideno");
 }
