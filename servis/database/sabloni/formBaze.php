@@ -2,12 +2,9 @@
 if (isset($_REQUEST["tabulka"])){
 	  $tab=$_REQUEST["tabulka"];
 	  echo "Tabulka je: ".$tab;
-  }
-  
+  } 
 ?>
-
 <br>
-
 <button id="vyberId" onclick="izborFunction('vyber','<?php echo $tab;?>')">vyber</button>
 <button id="vlozId" onclick="izborFunction('vloz','<?php echo $tab;?>')">vlož</button>
 
@@ -16,9 +13,6 @@ if (isset($_REQUEST["tabulka"])){
 <p id="demo"></p>
 <p id="tabSent"></p>
 <p id="posli"></p>
-<!--<input type="submit" name="submit" value="Submit"> -->
 </form>
  <br>
-<!-- <p id="demo1">demo1</p>
-<p id="demo2">demo2</p>-->
 <p id="demo3"></p>
