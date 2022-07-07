@@ -1,7 +1,7 @@
 <?php
 if (isset($_REQUEST["tabulka"])){
 	  $tabulka=$_REQUEST["tabulka"];
-	  echo "$Tabulka je: ".$tabulka;
+	  echo "$"."Tabulka je: ".$tabulka;
   }
   
 ?>

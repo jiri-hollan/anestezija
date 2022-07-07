@@ -27,7 +27,7 @@ if (isset($_REQUEST["akce"])) {
   //var_dump($akce);
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
- echo "to je tabulka in bolnišnica ".$tabulka.$bolnisnica;
+ echo "to je"."$". "tabulka in"."$"." bolnišnica ".$tabulka.$bolnisnica;
   new $akce($bolnisnica, $tabulka);
 
 	  

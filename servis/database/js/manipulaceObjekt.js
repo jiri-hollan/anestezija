@@ -53,14 +53,14 @@ odstrani: function()  {
   },// od odstrani
 
 functionOver:  function(e) {
-	alert("functionOver:");
+	alert("v functionOver");
   var x = e.target;
   if (x.nodeName == "TD") {
   var y = e.path[1];
   row_value = y.cells[0].innerHTML;
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ; 
  this.akce= x.innerHTML; 
- alert(this.akce+"Tabulka: "+this.tabulka);
+ alert("zahtevana akce: "+this.akce+"Tabulka: "+this.tabulka);
  }//od if
    window.location.href = "manipulaceObjektUniverzal.php?akce=" + this.akce + "&id=" + this.row_value + "&tabulka="+ this.tabulka;
   }//od function(e)
