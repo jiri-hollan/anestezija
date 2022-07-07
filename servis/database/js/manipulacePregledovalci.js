@@ -45,7 +45,7 @@ document.getElementById("bolnisnice").innerHTML = text;
   case "odstrani":
 
   
-  if ( confirm("v funkciji JS odstrani\odstranim en zapis?") == true) {
+  if ( confirm("Odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
     document.getElementById("osebe").addEventListener("click", functionOver);
       }
