@@ -21,7 +21,7 @@ document.getElementById("akceId").value = this.akce;
    document.getElementById("bolnisnice").innerHTML = text;	
    document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+this.tabulka+'">';
    document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
-  },//od vyber
+  };//od vyber
   
 this.vloz= function()  {
 	this.akce="vloz";
@@ -33,7 +33,7 @@ this.vloz= function()  {
     document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
 	document.getElementById("tabSent").innerHTML =  '<input type="hidden" name="tabulka" value="'+this.tabulka+'">';
 	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
-},// od vloz
+};// od vloz
 
 this.edit= function()  {
   //alert("v JS case edit");
@@ -50,7 +50,7 @@ this.odstrani= function()  {
 } else {
   text = "You canceled!";
 }// od else
-  },// od odstrani
+  };// od odstrani
 
 this.functionOver=  function(e) {
 	alert("v functionOver"+this.tabulka);
@@ -63,7 +63,7 @@ this.functionOver=  function(e) {
  alert("zahtevana akce: "+this.akce+" Tabulka: "+this.tabulka);
  }//od if
    window.location.href = "manipulaceObjektUniverzal.php?akce=" + this.akce + "&id=" + this.row_value + "&tabulka="+ this.tabulka;
-  }//od function(e)
+  };//od function(e)
 
 
 };// od obj manipulace

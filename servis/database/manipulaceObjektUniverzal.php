@@ -248,11 +248,11 @@ if (isset($_REQUEST["tabulka"])){
 
 switch($_REQUEST["tabulka"]){
 	case "sklepiTbl":
-echo '<script src="js/manipulaceObjekt.js?<?php echo time(); ?>"></script>'; 
-break;
-case "pregledovalciTbl":
-echo '<script src="js/manipulaceObjekt.js?<?php echo time(); ?>"></script>'; 
-break;
+     echo '<script src="js/manipulaceObjekt.js?<?php echo time(); ?>"></script>'; 
+   break;
+   case "pregledovalciTbl":
+    echo '<script src="js/manipulaceObjekt.js?<?php echo time(); ?>"></script>'; 
+   break;
 }
 }
 ?>
