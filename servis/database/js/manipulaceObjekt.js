@@ -38,14 +38,14 @@ this.vloz= function()  {
 this.edit= function()  {
  alert("v JS case edit: "+this.tabulka);
   if(document.getElementById("osebe")!=null){
-     document.getElementById("osebe").addEventListener("click", manipulace.functionOver);
+     document.getElementById("osebe").addEventListener("click", this.functionOver);
      }//od if
   },// od edit
   
 this.odstrani= function()  {
   if ( confirm("v funkciji JS odstrani\odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
-    document.getElementById("osebe").addEventListener("click", manipulace.functionOver);
+    document.getElementById("osebe").addEventListener("click", this.functionOver);
       }//od notranjega if
 } else {
   text = "You canceled!";
@@ -62,7 +62,7 @@ this.functionOver=  function(e) {
  this.akce= x.innerHTML; 
  alert("zahtevana akce: "+this.akce+" Tabulka: "+manipulace.tabulka);
  }//od if
-   window.location.href = "manipulaceObjektUniverzal.php?akce=" + this.akce + "&id=" + this.row_value + "&tabulka="+ manipulace.tabulka;
+   window.location.href = "manipulaceObjektUniverzal.php?akce=" + this.akce + "&id=" + row_value + "&tabulka="+ manipulace.tabulka;
   };//od function(e)
 
 

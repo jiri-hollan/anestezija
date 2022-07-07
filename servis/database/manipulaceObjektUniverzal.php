@@ -231,9 +231,10 @@ foreach (json_decode($this->dataPreg) as $key) {
 	 function __construct($tabulka, $id) {		 
 	 $tabulka = new test_input($_GET["tabulka"]);
 	 $this->tabulka = $tabulka->get_test();
+	 	 echo "id uporabnika= " .  $_GET["id"];
      $id = new test_input($_GET["id"]);
 	 $this->id = $id->get_test();
-	// echo "id uporabnika= " .  $id;
+	 //echo "id uporabnika= " .  $id;
 	 echo "<br>";
 	 $stolpci=["*"];	 
 	 $podminka = array("id"=>$this->id);
