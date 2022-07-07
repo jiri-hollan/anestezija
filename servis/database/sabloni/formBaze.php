@@ -1,15 +1,15 @@
 <?php
 if (isset($_REQUEST["tabulka"])){
-	  $tab=$_REQUEST["tabulka"];
-	  echo "Tabulka je: ".$tab;
+	  $tabulka=$_REQUEST["tabulka"];
+	  echo "Tabulka je: ".$tabulka;
   }
   
 ?>
 
 <br>
 
-<button id="vyberId" onclick="manipulace.vyber('<?php echo $tab;?>')">vyber</button>
-<button id="vlozId" onclick="manipulace.vloz('<?php echo $tab;?>')">vlož</button>
+<button id="vyberId" onclick="manipulace.vyber('<?php echo $tabulka;?>')">vyber</button>
+<button id="vlozId" onclick="manipulace.vloz('<?php echo $tabulka;?>')">vlož</button>
 
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
