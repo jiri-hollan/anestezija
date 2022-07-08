@@ -51,16 +51,16 @@
 	<h3 id="osebni"> osebni</h3>
  <fieldset class="zacetek">
     <legend></legend>      
-   <label>Za oddelek:<input id="zaOdd" list="oddelek" name="oddelek"required></label>  
-   <datalist id="oddelek">
+ <label>Za oddelek:<input id="zaOdd" list="oddelek" name="oddelek"required></label>  
+  <datalist id="oddelek">
     <option value="Kirurgija">
     <option value="ginekologija">
     <option value="urologija">
     <option value="ORL">
     <option value="RTG">
 	<option value="interna">
-  </datalist>  
-  <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika" readonly tabindex="-1"></label>
+  </datalist>
+    <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika" readonly tabindex="-1"></label>
     <br> 
  </fieldset>
  <fieldset class="diagnoze">
@@ -71,11 +71,11 @@
 	<label for="opNacrtovana">Načrtovana operacija:</label>  
     <input id="opNacrtovana"  type="text" name="opNacrtovana" required >
  </fieldset>
-  <fieldset class="meritve">
+ <fieldset class="meritve">
     <legend></legend>	
     <label for="starost">Starost:<input  id="starost" type="text" name="starost" size="1" readonly tabindex="-1"></label>      
     <label for = "teza">Teža:<input id = "teza" type = "text" name = "teza" onkeyup="bmiFunction()" required>kg</label>
-    <label for = "visina">Višina:<input id = "visina" type = "text" name = "visina"  size="1" onkeyup="bmiFunction()" required>m</label> 
+    <label for = "visina">Višina:<input id = "visina" type = "text" name = "visina" size="1" onkeyup="bmiFunction()" required>m</label> 
     <label for = "bmi">BMI: <input id = "bmi" type = "text" name = "bmi" id = "bmi" onclick = "bmiFunction()" readonly tabindex="-1"></label>  
     <label for = "krvniTlak">Krvni Tlak:<input id = "krTlak" type="text" name="krvniTlak" size="1" ></label>    
     <label for = "pulz">Pulz:<input id = "pulz" type="text" name="pulz" size="1" ></label>  
@@ -94,8 +94,8 @@
     <label for="aptc">APTČ:</label>  
     <input class="lab osnovne"id="aptc" type="text" name="aptc" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="kreatinin">Kreatinin:</label>  
-    <input class="lab osnovne"id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br>    
-</div>
+    <input class="lab osnovne"id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
+   </div>
 <div id="stolpec2">
     <label for="laktat">laktat:</label>  
     <input class="lab osnovne"id="laktat" type="text" name="laktat" size="1" onfocusout=  "laborFunction(name,value)"><br>
@@ -115,8 +115,8 @@
 	<label for="drugiIzvidi"></label> 
     <textarea class="lab"id="drugiIzvidi"  rows="7" cols="30"  name="drugiIzvidi" placeholder="Drugi izvidi" ></textarea><br> 		
 </div>
- </fieldset>  
-    <legend></legend>
+ </fieldset> 
+     <legend></legend>
     <label for="ekg">EKG:</label>  
     <textarea id="ekg" class="mala" rows="1" cols="200"  name="ekg" ></textarea><br> 
     <label for="rtg">RTG:</label>  
@@ -130,14 +130,14 @@
      <label>ASA:<input id="asa" class="ocena" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)" onfocusout=  "laborFunction(name,value)" /></label>  
 	<datalist id="ase">
     <option value='st asa'>
-    </datalist>	 
-     <label>Mallampati:<input id="mallampati" class="ocena" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" /></label> 
+    </datalist>
+	      <label>Mallampati:<input id="mallampati" class="ocena" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" /></label> 
      <datalist id="mally">
      <option value='st mall'>
-     </datalist>     
-     <label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>	 
- </fieldset> 
-	<label for="izvidiInOpombe">Izvidi in opombe:</label><br>  
+     </datalist>
+     <label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>
+  </fieldset>
+ 	<label for="izvidiInOpombe">Izvidi in opombe:</label><br>  
     <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
  <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
 <!-- <label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
@@ -149,8 +149,8 @@
   </datalist> -->
  <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
 <label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
- <datalist id="sklepi"> 
-    <option value="sklep">
+ <datalist id="sklepi">
+     <option value="sklep">
   </datalist>
  <script>
  // alert("sklep Json:" + sklepJson);
@@ -168,7 +168,7 @@
 	<label for="premedPredOp">Pred op.:<input id="premedPredOp" type="textarea" name="premedPredOp" ></label> <br> 
     <textarea id="navodila" class="mikro"  name="navodila" placeholder="Navodila" rows="3" ></textarea>
    </div>
-  </fieldset>
+  </fieldset> 	
  </fieldset>	
 </div>
 </form>
