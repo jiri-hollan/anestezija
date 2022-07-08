@@ -1,7 +1,8 @@
 <?php
 if (isset($_REQUEST["tabulka"])){
 	  $tab=$_REQUEST["tabulka"];
-	  echo "Tabulka je: ".$tab;
+	 // echo "Tabulka je: ".$tab;
+	 echo rtrim($tab,"Tbl");
   } 
 ?>
 <br>
