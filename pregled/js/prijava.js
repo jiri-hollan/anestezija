@@ -18,14 +18,13 @@ if (typeof(Storage) !== "undefined") {
  } //od bolnisnicaFunction 
 
 function sbFunction(bol) {
-	//bolnisnica={SBJ:"Jesenice", SBI:"Izola"};
-	//bolnisnica={};
+	bolnisnica={SBJ:"Jesenice", SBI:"Izola"};
        if(bol=="spomin") {
 	location.href='../pregled/zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnisnice");return false;
 
       } else if (!bol=="") {
          localStorage.setItem("aktivnaBolnisnica",bol);
-         localStorage.setItem("mestoBolnisnice",bol);
+         localStorage.setItem("mestoBolnisnice",bolnisnica[bol]);
 	//alert ("Formular za S.B. Izola");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnisnice");return false; 
 
