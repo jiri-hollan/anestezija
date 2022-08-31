@@ -1,7 +1,7 @@
 <?php
 //------seznam bolnišnic
 require_once '../skupne/database.php';
-Class spisekZdravnikov{
+Class spisekBolnisnic{
 	public $conn;
 	public $zaklad;
 	public $status; //vljučena=1, nevključena=0
@@ -20,5 +20,6 @@ Class spisekZdravnikov{
 array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);	
     }//od for 
 	}//od construct			
-	}//od class spisekZdravnikov
+	}//od class spisekBolnisnic
+	new spisekBolnisnic();
 ?>

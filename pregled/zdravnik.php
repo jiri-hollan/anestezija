@@ -63,6 +63,7 @@ ________________________________________________________________________________
 
 require_once('../skupne/home.php');
 require_once('zapisVsi.php');
+require_once('bolnisnice.php');
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 ?>
  <script>
