@@ -51,7 +51,7 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
  var zdravList  = zdravListX; 
  document.getElementById("aktBolnisnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnisnice")+"</h1> "; 
 switch (localStorage.getItem("aktivnaBolnisnica")) {
-   case "Izola":   
+   case "SBI":   
        break;
     case "SBJ":
 	   break;
