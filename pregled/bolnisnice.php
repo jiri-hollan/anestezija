@@ -19,6 +19,13 @@ Class spisekBolnisnic{
 
 array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);	
     }//od for 
+	//echo '<br>var dump mesto Bolnišnice:<br>';
+//var_dump($mestoBolnisnice);
+$mestoBolnisniceJson = json_encode($mestoBolnisnice, JSON_UNESCAPED_UNICODE);
+
+echo '<script>';
+echo 'var celoImeJson= ' . json_encode( $celoImeJson, JSON_UNESCAPED_UNICODE) . ';';
+echo '</script>';
 	}//od construct			
 	}//od class spisekBolnisnic
 	new spisekBolnisnic();
