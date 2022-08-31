@@ -24,7 +24,7 @@ array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);
 $mestoBolnisniceJson = json_encode($mestoBolnisnice, JSON_UNESCAPED_UNICODE);
 
 echo '<script>';
-echo 'var celoImeJson= ' . json_encode( $celoImeJson, JSON_UNESCAPED_UNICODE) . ';';
+echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
 echo '</script>';
 	}//od construct			
 	}//od class spisekBolnisnic
