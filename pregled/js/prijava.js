@@ -14,7 +14,18 @@ if (typeof(Storage) !== "undefined") {
     }
   }
  function bolnisnicaFunction() {  
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+   // Store
+   imeZdravnika = document.getElementById("zdravnik").value || "" ;
+   localStorage.setItem("imeZdravnika", imeZdravnika);
+   // Retrieve
+   document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
+     } else {
+     //document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+     document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
+    }
  } //od bolnisnicaFunction 
 
 function sbFunction(bol) {
