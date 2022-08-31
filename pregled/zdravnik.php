@@ -41,8 +41,14 @@ ________________________________________________________________________________
 <div id="prijava" >
 <p id="aktBolnica">.</p>
 <h1>Prijava</h1>
-
-<label for="zdravnik" >Zdravnik:</label> 
+	 <!-- Izbira bolnišnice -->
+<label for="bolnisnica" >Bolnišnica:</label> 
+<input id="bolnisnica"  list="bolnisnice" name="bolnisnica"  onfocusout="bolnisnicaFunction()" required> 
+  <datalist id="bolnisnice">  
+    <option value='Bolnišnica'>    
+  </datalist>
+	 <!-- Izbira zdravnika -->
+<br><label for="zdravnik" > Zdravnik:</label> 
 <input id="zdravnik"  list="zdravniki" name="zdravnik"  onfocusout="zdravnikFunction()" required> 
   <datalist id="zdravniki">  
     <option value='ime zdravnika'>    

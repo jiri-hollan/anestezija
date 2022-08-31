@@ -13,6 +13,9 @@ if (typeof(Storage) !== "undefined") {
      document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
     }
   }
+ function bolnisnicaFunction() {  
+
+ } //od bolnisnicaFunction 
 
 function sbFunction(bol) {
 	bolnica={SBJ:"Jesenice", SBI:"Izola"};
