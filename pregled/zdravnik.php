@@ -74,7 +74,7 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
   </script>
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 	 <!-- Preklapljanje med bolnišnicami -->
-	<span class="navSpan" id="sbi" onclick="sbFunction('SBI')">S.B. Izola</span>
+	<span class="navSpan" id="sbi" onclick="sbFunction('Izola')">S.B. Izola</span>
 	<span class="navSpan" id="sbj" onclick="sbFunction('SBJ')">S.B. Jesenice</span>	
 	
  </div>	 
