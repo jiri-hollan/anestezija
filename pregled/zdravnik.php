@@ -39,7 +39,7 @@ ________________________________________________________________________________
    
    
 <div id="prijava" >
-<p id="aktBolnica">.</p>
+<p id="aktBolnisnica">.</p>
 <h1>Prijava</h1>
 	 <!-- Izbira bolnišnice -->
 <label for="bolnisnica" >Bolnišnica:</label> 
@@ -58,7 +58,7 @@ ________________________________________________________________________________
 
 </div>
 
-<div class="navbar" id="navBolnice" style='display:z-index:1;'>
+<div class="navbar" id="navBolnisnice" style='display:z-index:1;'>
 <?php
 
 require_once('../skupne/home.php');

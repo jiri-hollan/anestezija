@@ -76,10 +76,10 @@ else if (x10 == "") {
      document.getElementById("tretja").style.display = "block";
 
 
-  if (!localStorage.getItem("aktivnaBolnica") == "") {
+  if (!localStorage.getItem("aktivnaBolnisnica") == "") {
 logo = document.getElementById("logo").innerHTML;
 //alert (logo);
-boln = localStorage.getItem("aktivnaBolnica");
+boln = localStorage.getItem("aktivnaBolnisnica");
 //alert (boln);
 
 logo = '<img  id="';

@@ -1,7 +1,7 @@
 function odjavaFunction() { 
 	 localStorage.setItem("imeZdravnika", "");
-	 localStorage.setItem("aktivnaBolnica","");
-	 localStorage.setItem("mestoBolnice","");
+	 localStorage.setItem("aktivnaBolnisnica","");
+	 localStorage.setItem("mestoBolnisnice","");
      sessionStorage.removeItem("testJSON");
 	 sessionStorage.removeItem("bolnikId");
      window.open("zdravnik.php", "_self");
@@ -31,7 +31,7 @@ switch (izbris) {
 }
 
 function stariFunction() {
-	if (localStorage.getItem("aktivnaBolnica")=="SBI"){
+	if (localStorage.getItem("aktivnaBolnisnica")=="SBI"){
 //alert ('v stariFunction');
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
   if (r == true) {

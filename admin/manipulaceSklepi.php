@@ -159,7 +159,7 @@ foreach(new TableRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
 }//od foreach
 }//od if(cout)
 else{
-echo "Za izbrano bolnico ni zapisa v bazi";	
+echo "Za izbrano bolnisnico ni zapisa v bazi";	
 }//od else
 }//od vyberFunction  
 

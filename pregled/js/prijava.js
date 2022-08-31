@@ -18,15 +18,15 @@ if (typeof(Storage) !== "undefined") {
  } //od bolnisnicaFunction 
 
 function sbFunction(bol) {
-	bolnica={SBJ:"Jesenice", SBI:"Izola"};
+	bolnisnica={SBJ:"Jesenice", SBI:"Izola"};
        if(bol=="spomin") {
-	location.href='../pregled/zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false;
+	location.href='../pregled/zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnisnice");return false;
 
       } else if (!bol=="") {
-         localStorage.setItem("aktivnaBolnica",bol);
-         localStorage.setItem("mestoBolnice",bolnica[bol]);
+         localStorage.setItem("aktivnaBolnisnica",bol);
+         localStorage.setItem("mestoBolnisnice",bolnisnica[bol]);
 	//alert ("Formular za S.B. Izola");
-	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnice");return false; 
+	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnisnice");return false; 
 
       } else {
 	 //alert ("nobena bolnišnica ni aktivirana");	
@@ -49,15 +49,15 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
 
 //alert(zdravListX);
  var zdravList  = zdravListX; 
- document.getElementById("aktBolnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnice")+"</h1> "; 
-switch (localStorage.getItem("aktivnaBolnica")) {
+ document.getElementById("aktBolnisnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnisnice")+"</h1> "; 
+switch (localStorage.getItem("aktivnaBolnisnica")) {
    case "SBI":   
        break;
     case "SBJ":
 	   break;
 	default:
     var zdravList  =[];
-document.getElementById("aktBolnica").innerHTML = "Bolnišnica ni določena"; 	
+document.getElementById("aktBolnisnica").innerHTML = "Bolnišnica ni določena"; 	
 	//alert ("bolnišnica ni določena");
 }
 
