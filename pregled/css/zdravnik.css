@@ -60,3 +60,13 @@ padding: 40px;
     //outline: #4CAF50 solid 3px;
 border-radius: 12%;  
 }
+
+#bolnisnica {
+	position: relative;
+	left: 11px;
+}
+
+#zdravnik {
+	position: relative;
+    left: 20px;
+}
