@@ -13,6 +13,7 @@ if (typeof(Storage) !== "undefined") {
      document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
     }
   }
+  /*
 //_______________________________________________________________________  
  function bolnisnicaFunction() {  
 // Check browser support
@@ -29,12 +30,17 @@ if (typeof(Storage) !== "undefined") {
     }
  } //od bolnisnicaFunction 
 //__________________________________________________________________________________
-function sbFunction(bol) {
+*/
+function sbFunction(bol="") {
 	bolnisnica={SBJ:"Jesenice", SBI:"Izola"};
+
+
        if(bol=="spomin") {
 	location.href='../pregled/zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnisnice");return false;
 
       } else if (!bol=="") {
+		 bol = document.getElementById("bolnisnica").value || "" ;
+		 bol = bol.toUpperCase();
          localStorage.setItem("aktivnaBolnisnica",bol);
          localStorage.setItem("mestoBolnisnice",bolnisnica[bol]);
 	//alert ("Formular za S.B. Izola");

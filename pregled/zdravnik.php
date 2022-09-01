@@ -43,7 +43,7 @@ ________________________________________________________________________________
 <h1>Prijava</h1>
 	 <!-- Izbira bolnišnice -->
 <label for="bolnisnica" >Bolnišnica:</label> 
-<input id="bolnisnica"  list="bolnisnice" name="bolnisnica"  onfocusout="bolnisnicaFunction()" required> 
+<input id="bolnisnica"  list="bolnisnice" name="bolnisnica"  onfocusout="sbFunction(1)" required> 
   <datalist id="bolnisnice">  
     <option value='Bolnišnica'>    
   </datalist>
