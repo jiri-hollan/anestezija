@@ -13,24 +13,7 @@ if (typeof(Storage) !== "undefined") {
      document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
     }
   }
-  /*
-//_______________________________________________________________________  
- function bolnisnicaFunction() {  
-// Check browser support
-if (typeof(Storage) !== "undefined") {
-   // Store
-   nazivB = document.getElementById("bolnisnica").value || "" ;
-   localStorage.setItem("aktivnaBolnisnica", nazivB);
-   // Retrieve
-   document.getElementById("aktBolnisnica").innerHTML = localStorage.getItem("aktivnaBolnisnica");
 
-     } else {
-     //document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-     document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
-    }
- } //od bolnisnicaFunction 
-//__________________________________________________________________________________
-*/
 function sbFunction(bol="") {
 	bolnisnica={SBJ:"Jesenice", SBI:"Izola"};
 
