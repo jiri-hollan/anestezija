@@ -15,7 +15,7 @@ if (typeof(Storage) !== "undefined") {
   }
 
 function sbFunction(bol="") {
-	alert(seznamBolnisnicJson);
+	//alert(seznamBolnisnicJson);
 	//bolnisnica=seznamBolnisnicx;
     bolnisnica={Jesenice:"SBJ", Izola:"SBI"};
 
