@@ -73,3 +73,22 @@ for (i = 0; i < zdravList.length; i++) {
 document.getElementById("zdravniki").innerHTML = text;
 
 }
+//__________________________________________________________________________________________
+function listaBolnisnicFunction(bolListX) {
+	//alert ("lista bolnisnic function");
+document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
+
+// tu bo prišla koda, ki naredi array bolList iz tabele bolnisniceTab	
+
+//alert(bolListX);
+var bolList  = bolListX; 
+var text = "";
+var i;
+
+for (i = 0; i < bolList.length; i++) {
+ // text += "<option value=" +  bolList[i]  + ">"  +"<br>";
+  text += "<option value='" +  bolList[i]  + "'>"  +"<br>";
+}
+document.getElementById("bolnisnice").innerHTML = text;
+
+}

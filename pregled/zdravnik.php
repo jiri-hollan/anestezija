@@ -67,6 +67,8 @@ require_once('bolnisnice.php');
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 ?>
  <script>
+   var mestoBolnisniceX = JSON.parse(mestoBolnisniceJson);
+   listaBolnisnicFunction(mestoBolnisniceX );
  // alert("celo ime Json:" + celoImeJson);
   var zdravListX = JSON.parse(celoImeJson);
   //alert(zdravListX);
