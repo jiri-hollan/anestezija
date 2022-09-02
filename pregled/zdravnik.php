@@ -64,9 +64,12 @@ ________________________________________________________________________________
 require_once('../skupne/home.php');
 require_once('zapisVsi.php');
 require_once('bolnisnice.php');
+//require_once('prijavaJs.php');
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 ?>
  <script>
+   var seznamBolnisnicx = JSON.parse(seznamBolnisnicJson);
+   alert(seznamBolnisnicJson);
    var mestoBolnisniceX = JSON.parse(mestoBolnisniceJson);
    listaBolnisnicFunction(mestoBolnisniceX );
  // alert("celo ime Json:" + celoImeJson);

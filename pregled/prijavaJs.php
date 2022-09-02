@@ -1,3 +1,5 @@
+
+<script>
 //document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 function zdravnikFunction() {  
 // Check browser support
@@ -15,8 +17,8 @@ if (typeof(Storage) !== "undefined") {
   }
 
 function sbFunction(bol="") {
-	alert(seznamBolnisnicJson);
-	//bolnisnica=seznamBolnisnicx;
+	alert(seznamBolnisnicx);
+	//bolnisnica={SBJ:"Jesenice", SBI:"Izola"};
     bolnisnica={Jesenice:"SBJ", Izola:"SBI"};
 
        if(bol=="spomin") {
@@ -93,3 +95,4 @@ for (i = 0; i < bolList.length; i++) {
 document.getElementById("bolnisnice").innerHTML = text;
 
 }
+</script>

@@ -32,7 +32,7 @@ $seznamBolnisnicJson = json_encode($seznamBolnisnic, JSON_UNESCAPED_UNICODE);
 echo '<script>';
 echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'var seznamBolnisnicJson= ' . json_encode( $seznamBolnisnicJson, JSON_UNESCAPED_UNICODE) . ';';
-echo 'alert(seznamBolnisnicJson);';
+//echo 'alert(seznamBolnisnicJson);';
 echo '</script>';
 	}//od construct			
 	}//od class spisekBolnisnic
