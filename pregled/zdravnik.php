@@ -16,12 +16,9 @@
 <!--_____________________________________________________________________________________________________________________
 ZA DOLOČITEV BOLNIŠNICE JE POTREBNO VPISATI PARAMETR FUNKCIJE sbFunction ZA IZOLO "i" ZA JESENICE "j"
 oziroma to določi izbira NAV bara, če je ta aktivirana
-________________________________________________________________________________________________________________________
+_______________________________________________________________________________________________
 -->
 
-
-<!--<script>sbFunction()</script>-->
-Če niste odprli program v Google Chromu, ne bo delal pravilno
 <!--[if IE]>
     <div class="IE" style="
     width: 500px;
@@ -77,10 +74,7 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
   listaZdravnikovFunction(zdravListX);
   </script>
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
-	 <!-- Preklapljanje med bolnišnicami -->
-	<!--<span class="navSpan" id="sbi" onclick="sbFunction('SBI')">S.B. Izola</span>
-	<span class="navSpan" id="sbj" onclick="sbFunction('SBJ')">S.B. Jesenice</span>	
-	-->
+
  </div>	 
 
 
