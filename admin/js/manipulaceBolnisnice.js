@@ -2,16 +2,15 @@ function izborFunction(akce) {
   document.getElementById("akceId").value = akce;
 switch(akce) {
   case "vyber":
-    document.getElementById("demo").innerHTML = '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';// omogoči izbiro bolnišnice
+    document.getElementById("demo").innerHTML = '<input type="text" id="mestoId" name="mesto" value="" placeholder="Bolnišnica">';// omogoči izbiro bolnišnice
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
     break; 
 
   case "vloz":
-    bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica" required>';
-    ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime" required>';
-    priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
+    mesto= '<input type="text" id="mestoId" name="mesto" value="" placeholder="Mesto" required>';
+    nazivB= '<input type="text" id="nazivBId" name="nazivB" value="" placeholder="nazivB" required>';
     status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
-    document.getElementById("demo").innerHTML = bolnisnica + ime + priimek + status;
+    document.getElementById("demo").innerHTML = mesto + nazivB + status;
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
 
@@ -58,6 +57,6 @@ row_value = y.cells[0].innerHTML;
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
  }//od if
  
- window.location.href = "manipulacePregledovalci.php?akce=" + x.innerHTML + "&id=" + row_value;
+ window.location.href = "manipulaceBolnisnice.php?akce=" + x.innerHTML + "&id=" + row_value;
   
 }//od function(e)
