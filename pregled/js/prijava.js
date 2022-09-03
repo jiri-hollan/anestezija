@@ -23,7 +23,7 @@ function sbFunction(bol="") {
 	location.href='../pregled/zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnisnice");return false;
 
       } else if (!bol=="") {
-		  alert(seznamBolnisnicJson);
+		 // alert(seznamBolnisnicJson);
 		 bolnisnica=seznamBolnisnicx; 
 		// bolnisnica={Jesenice:"SBJ", Izola:"SBI"}; 
 		 bol = document.getElementById("bolnisnica").value || "" ;
