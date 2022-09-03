@@ -17,12 +17,13 @@ if (typeof(Storage) !== "undefined") {
 function sbFunction(bol="") {
 	//alert(seznamBolnisnicJson);
 	//bolnisnica=seznamBolnisnicx;
-    bolnisnica={Jesenice:"SBJ", Izola:"SBI"};
+   // bolnisnica={Jesenice:"SBJ", Izola:"SBI"};
 
        if(bol=="spomin") {
 	location.href='../pregled/zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnisnice");return false;
 
       } else if (!bol=="") {
+		 bolnisnica={Jesenice:"SBJ", Izola:"SBI"}; 
 		 bol = document.getElementById("bolnisnica").value || "" ;
 		 //bol = bol.toUpperCase();
          localStorage.setItem("aktivnaBolnisnica",bolnisnica[bol]);
