@@ -55,18 +55,12 @@ document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.
 //alert(zdravListX);
  var zdravList  = zdravListX; 
  document.getElementById("aktBolnisnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnisnice")+"</h1> "; 
-switch (localStorage.getItem("aktivnaBolnisnica")) {
-   case "SBI":   
-       break;
-    case "SBJ":
-	   break;
-	case "OBV":
-	   break;   
-	default:
-    var zdravList  =[];
+ //alert (localStorage.getItem("aktivnaBolnisnica"));
+ if (localStorage.getItem("aktivnaBolnisnica") === "undefined") {
+   var zdravList  =[];
 document.getElementById("aktBolnisnica").innerHTML = "Bolnišnica ni določena"; 	
 	//alert ("bolnišnica ni določena");
-}
+} 
 
 var text = "";
 var naslov="&nbsp;dr.med";
