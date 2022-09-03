@@ -43,6 +43,12 @@ echo '
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=sklepiTbl">prikaži sklepe</a></li>
 <li><a href="../admin/manipulaceSklepi.php">upravljanje s sklepi</a></li><br>
 </ul>
+<h1>Menu bolnišnice</h1>
+<ul id="linky4">
+<li><a href="../admin1/navodila/kreateTableBolnisnice.php">naredi tabelo: bolnisniceTbl</a></li>
+<li><a href="../admin1/navodila/ogledTabele.php?imeTable=bolnisniceTbl">prikaži bolnisnice</a></li>
+<li><a href="../admin/manipulaceBolnisnice.php">upravljanje z bolnišnicami</a></li><br>
+</ul>
 </div>
 ';
      } else {
