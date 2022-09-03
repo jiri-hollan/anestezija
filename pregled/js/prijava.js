@@ -60,6 +60,8 @@ switch (localStorage.getItem("aktivnaBolnisnica")) {
        break;
     case "SBJ":
 	   break;
+	case "OBV":
+	   break;   
 	default:
     var zdravList  =[];
 document.getElementById("aktBolnisnica").innerHTML = "Bolnišnica ni določena"; 	
