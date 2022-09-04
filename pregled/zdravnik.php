@@ -37,6 +37,7 @@ ________________________________________________________________________________
    
 <div id="prijava" >
 <p id="aktBolnisnica">.</p>
+<p id="result"> </p>
 <h1>Prijava</h1>
 	 <!-- Izbira bolnišnice -->
 <label for="bolnisnica" >Bolnišnica:</label> 
@@ -51,7 +52,7 @@ ________________________________________________________________________________
     <option value='ime zdravnika'>    
   </datalist>
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
-<p id="result"> </p>
+<!--<p id="result"> </p>-->
 
 </div>
 
