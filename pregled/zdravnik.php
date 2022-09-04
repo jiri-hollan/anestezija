@@ -40,12 +40,12 @@ ________________________________________________________________________________
 <h1>Prijava</h1>
 	 <!-- Izbira bolnišnice -->
 <label for="bolnisnica" >Bolnišnica:</label> 
-<input id="bolnisnica"  list="bolnisnice" name="bolnisnica"  onfocusout="sbFunction(1)" required> 
+<input id="bolnisnica"  list="bolnisnice" name="bolnisnica"  onfocusout="sbFunction(1)" required autocomplete="off"> 
   <datalist id="bolnisnice">  
     <option value='Bolnišnica'>    
   </datalist>
 	 <!-- Izbira zdravnika -->
-<br><label for="zdravnik" > Zdravnik:</label> 
+<br><br><label for="zdravnik" > Zdravnik:</label> 
 <input id="zdravnik"  list="zdravniki" name="zdravnik"  onfocusout="zdravnikFunction()" required> 
   <datalist id="zdravniki">  
     <option value='ime zdravnika'>    
