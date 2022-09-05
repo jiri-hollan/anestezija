@@ -212,7 +212,7 @@ function odstraniFunction($podminka){
 
 ?>
 
-<script src="js/manipulacebolnisnice.js?<?php echo time(); ?>">
+<script src="js/manipulaceBolnisnice.js?<?php echo time(); ?>">
 </script>
 
 <!--zapati-->
