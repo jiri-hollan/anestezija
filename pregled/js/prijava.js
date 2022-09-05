@@ -56,9 +56,9 @@ document.getElementById("pregledovalec").innerHTML = "prijavljen je:  " + localS
  var zdravList  = zdravListX; 
  document.getElementById("aktBolnisnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnisnice")+"</h1> "; 
  //alert (localStorage.getItem("aktivnaBolnisnica"));
- if (localStorage.getItem("aktivnaBolnisnica") === "undefined") {
+ if (localStorage.getItem("aktivnaBolnisnica") === ""||localStorage.getItem("aktivnaBolnisnica") ==="undefined") {
    var zdravList  =[];
-document.getElementById("aktBolnisnica").innerHTML = "Bolnišnica ni določena"; 	
+document.getElementById("aktBolnisnica").innerHTML = "<h1>Bolnišnica ni določena</h1>"; 	
 	//alert ("bolnišnica ni določena");
 } 
 
