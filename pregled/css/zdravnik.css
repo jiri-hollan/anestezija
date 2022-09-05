@@ -1,5 +1,6 @@
 #prijava {
 position: relative;
+  top: 1cm;
 height: 7cm;
 width: 10cm;
 background-color: wheat;
@@ -23,7 +24,7 @@ padding: 40px;
   background-color: blue;
   position: fixed;
   top: 0;
-  width:460px;
+  width:200px;
   ​​z-index: 60;
   
 }
