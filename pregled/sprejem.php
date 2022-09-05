@@ -1,6 +1,6 @@
 <?php
 require_once 'sabloni/zahlavi.php';
-/*<!--<div id="result" >to je rezult</div>
+/*<!--<div id="pregledovalec" >to je rezult</div>
 <p>
 <p>-->*/
 
@@ -32,7 +32,7 @@ $GLOBALS['testJSON'] = $iskaniPregled;
   //alert(stringJson);
   sessionStorage.setItem("testJSON", stringJson);
  
- // document.getElementById("result").innerHTML = sessionStorage.getItem("testJSON");
+ // document.getElementById("pregledovalec").innerHTML = sessionStorage.getItem("testJSON");
   //alert(sessionStorage.getItem("testJSON"));  
   window.location.href = "bolnik.php"; 
   

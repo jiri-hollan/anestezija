@@ -1,6 +1,6 @@
 
 <script>
-//document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
+//document.getElementById("pregledovalec").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 function zdravnikFunction() {  
 // Check browser support
 if (typeof(Storage) !== "undefined") {
@@ -8,11 +8,11 @@ if (typeof(Storage) !== "undefined") {
    imeZdravnika = document.getElementById("zdravnik").value || "" ;
    localStorage.setItem("imeZdravnika", imeZdravnika);
    // Retrieve
-   document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
+   document.getElementById("pregledovalec").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
      } else {
-     //document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-     document.getElementById("result").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
+     //document.getElementById("pregledovalec").innerHTML = "Sorry, your browser does not support Web Storage...";
+     document.getElementById("pregledovalec").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
     }
   }
 
@@ -47,7 +47,7 @@ function naprejFunction() {
 
 function listaZdravnikovFunction(zdravListX) {
 	//alert ("lista zdravnikov function");
-document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
+document.getElementById("pregledovalec").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
 // tu bo prišla koda, ki naredi array zdravList iz tabele pregledovalci	
 
@@ -79,7 +79,7 @@ document.getElementById("zdravniki").innerHTML = text;
 //__________________________________________________________________________________________
 function listaBolnisnicFunction(bolListX) {
 	//alert ("lista bolnisnic function");
-document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
+document.getElementById("pregledovalec").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
 // tu bo prišla koda, ki naredi array bolList iz tabele bolnisniceTab	
 
