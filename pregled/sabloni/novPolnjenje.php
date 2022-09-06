@@ -1,5 +1,4 @@
 
-<!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
 <form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" autocomplete="off"> 
 <fieldset class="novBolnik" id="prva">
     <legend id="novBLegend">Nov bolnik</legend>
@@ -139,15 +138,7 @@
   </fieldset>
  	<label for="izvidiInOpombe">Izvidi in opombe:</label><br>  
     <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
- <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
-<!-- <label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
- <datalist id="sklepi">
-    <option value="Lahko se uvrsti na operativni program">
-    <option value="Potrebna je dodatna obdelava">
-    <option value="Ni primeren za operacijo v naši bolnišnici">
-	<option value="Zaradi splošno slabega stanja mora biti uvrščen na program kot prvi">
-  </datalist> -->
- <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
+
 <label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
  <datalist id="sklepi">
      <option value="sklep">
@@ -159,7 +150,6 @@
   listaSklepovFunction(sklepList);
   </script>
 
- <!--//////////////////////////////////////////////////////////////////////////////////////////77-->
 <br><br>
  <fieldset class="zaklucek">premedikacija 
   <div id="zaklucek">
@@ -172,8 +162,7 @@
  </fieldset>	
 </div>
 </form>
-<!--buton je premeščen v navMenu
-<button id="bolnikButon"  type="submit" form="frm" value="Submit">Submit</button>-->
+
 
 <!-- ______________________________________________________________________________________
 
@@ -181,9 +170,7 @@
 
 <div class="celaStran" id="tretja">
   <div id="logo"><img  id="imgBol" src="logoSBI.png"></div>
-  
- <!-- <div id="logo"><img  id="imgBol" src="logoSBI.png" alt="logo SBI" width="200" height="100"></div> -->
-<!-- <div id="logo"><img id="imgBol" src="logoSBj.png" alt="logo SBI" width="200" height="100"></div>-->
+
   <h1>Anesteziološki pregled</h1>
    <div id="nalepkaR">nalepka</div> 
     <p id="obravnavaR"></p>  
@@ -199,8 +186,6 @@
   <b><span style="padding-left:15px;font-size:120%;">Alergija:</span> <span id="alergijaR" style= "font-size:120%;"></span></b>
   </div>
 
- <!-- <textarea id="pridBolezniR"  class="mala" >pridružene bolezni</textarea>
-  <textarea id="predTerapR"  class="mala" >predhodna terapija</textarea>-->
  </div>
   <div class="velka" id="izvidiR">Izvidi in opombe</div>
 </div> 
