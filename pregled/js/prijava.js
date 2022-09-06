@@ -9,15 +9,12 @@ if (typeof(Storage) !== "undefined") {
    document.getElementById("pregledovalec").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 
      } else {
-     //document.getElementById("pregledovalec").innerHTML = "Sorry, your browser does not support Web Storage...";
      document.getElementById("pregledovalec").innerHTML = "oprostite, vaš brskalnik ne podpira Web Storage" + "<br>" + "uporabite Google Chrom";
     }
   }
 
 function sbFunction(bol="") {
 	//alert(seznamBolnisnicJson);
-	//bolnisnica=seznamBolnisnicx;
-   // bolnisnica={Jesenice:"SBJ", Izola:"SBI"};
 
        if(bol=="spomin") {
 	location.href='../pregled/zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnisnice");return false;
@@ -67,8 +64,7 @@ var naslov="&nbsp;dr.med";
 var i;
 
 for (i = 0; i < zdravList.length; i++) {
- // text += "<option value=" +  zdravList[i] + naslov + ">"  +"<br>";
-  text += "<option value='" +  zdravList[i] + naslov + "'>"  +"<br>";
+    text += "<option value='" +  zdravList[i] + naslov + "'>"  +"<br>";
 }
 document.getElementById("zdravniki").innerHTML = text;
 
@@ -86,7 +82,6 @@ var text = "";
 var i;
 
 for (i = 0; i < bolList.length; i++) {
- // text += "<option value=" +  bolList[i]  + ">"  +"<br>";
   text += "<option value='" +  bolList[i]  + "'>"  +"<br>";
 }
 document.getElementById("bolnisnice").innerHTML = text;
