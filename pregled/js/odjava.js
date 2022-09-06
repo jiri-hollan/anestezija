@@ -38,6 +38,7 @@ function stariFunction() {
   if (r == true) {
 	//alert ('odjava.js bolnikId: '+sessionStorage.getItem("bolnikId"));  
  // alert ('pred vstavljanjem v bazo');
+  document.getElementById("ustanova").value= localStorage.getItem("aktivnaBolnisnica");
   document.getElementById("frm").submit();
 //alert ('shranjeno v bazo');
 //  alert ('po vstavljanju v bazo');
