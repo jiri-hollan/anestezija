@@ -21,8 +21,8 @@ function sbFunction(bol="") {
 
       } else if (!bol=="") {
 		 // alert(seznamBolnisnicJson);
+		 //naredi array bolnišnic
 		 bolnisnica=seznamBolnisnicx; 
-		// bolnisnica={Jesenice:"SBJ", Izola:"SBI"}; 
 		 bol = document.getElementById("bolnisnica").value || "" ;
 		 //bol = bol.toUpperCase();
          localStorage.setItem("aktivnaBolnisnica",bolnisnica[bol]);
