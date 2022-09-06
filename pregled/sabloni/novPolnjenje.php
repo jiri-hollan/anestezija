@@ -169,8 +169,8 @@
 ...........................Tretji del TISK................................-->
 
 <div class="celaStran" id="tretja">
-  <div id="logo"><img  id="imgBol" src="logoSBI.png"></div>
-
+  <!--<div id="logo"><img  id="imgBol" src="logoSBI.png"></div>-->
+  <div id="logo"><img  id="imgBol" ></div>
   <h1>Anesteziološki pregled</h1>
    <div id="nalepkaR">nalepka</div> 
     <p id="obravnavaR"></p>  
