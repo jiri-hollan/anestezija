@@ -18,7 +18,7 @@
     <option value='mesec leta'>
     </datalist>
     <input id="leto"type="text" name="leto" size="2" maxlength="4" required onkeyup="starostFunction()" ><br>
-
+<input id="ustanova"  type = "hidden" name="ustanova"     <input id="datRojstva" type = "hidden" name = "datRojstva" readonly >   
     <label for="stevMaticna">Matična številka:</label>
     <input id="stevMaticna"type="text" name="stevMaticna" pattern="[0-9]{1,}" required onkeypress=" return isNumber(event, allNumb)"/><br>
     <input id="EMSO"  type = "hidden" name="EMSO"pattern="[0-9]{1,}" placeholder="pusti prazno" onkeypress=" return isNumber(event, allNumb)"/ >  
