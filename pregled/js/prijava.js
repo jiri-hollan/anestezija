@@ -55,7 +55,7 @@ document.getElementById("pregledovalec").innerHTML = "prijavljen je:  " + localS
  //alert (localStorage.getItem("aktivnaBolnisnica"));
  if (localStorage.getItem("aktivnaBolnisnica") === ""||localStorage.getItem("aktivnaBolnisnica") ==="undefined") {
    var zdravList  =[];
-document.getElementById("aktBolnisnica").innerHTML = "<h1>Bolnišnica ni določena</h1>"; 	
+document.getElementById("aktBolnisnica").innerHTML = "<h1 style='color:Tomato;'>Bolnišnica ni določena</h1>"; 	
 	//alert ("bolnišnica ni določena");
 } 
 
