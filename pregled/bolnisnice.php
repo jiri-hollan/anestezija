@@ -27,14 +27,29 @@ array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);
     }//od for 
 	//echo '<br>var dump mesto Bolnišnice:<br>';
 //var_dump($mestoBolnisnice);
+//_______________________________________________________________________________
+$stolpci = array('nazivB');
+$vrednosti = array(2);
+$prebrano = $this->conn->vyberIn($this->nameTable, $stolpci, $podminka, $vrednosti, $poradi);
+$bazeBolnisnice=array();
+ for ($i = 0; $i < count($prebrano); $i++) {
+//echo $prebrano[$i]["nazivB"].'<br>';	
+array_push($bazeBolnisnice,$prebrano[$i]["nazivB"] );
+//var_dump($bazeBolnisnice);
+    }//od for 
+//var_dump($bazeBolnisnice);
+//__________________________________________________________________________
 $seznamBolnisnic=array_combine($mestoBolnisnice,$nazivBolnisnice);
 //var_dump($seznamBolnisnic);
 $mestoBolnisniceJson = json_encode($mestoBolnisnice, JSON_UNESCAPED_UNICODE);
 $seznamBolnisnicJson = json_encode($seznamBolnisnic, JSON_UNESCAPED_UNICODE);
+$bazeBolnisniceJson = json_encode($bazeBolnisnice, JSON_UNESCAPED_UNICODE);
 echo '<script>';
 echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'var seznamBolnisnicJson= ' . json_encode( $seznamBolnisnicJson, JSON_UNESCAPED_UNICODE) . ';';
+echo 'var bazeBolnisniceJson= ' . json_encode( $bazeBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
 //echo 'alert(seznamBolnisnicJson);';
+//echo 'alert(bazeBolnisniceJson);';
 echo '</script>';
 	}//od construct			
 	}//od class spisekBolnisnic
