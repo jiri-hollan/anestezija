@@ -31,7 +31,7 @@ switch (izbris) {
 }
 
 function stariFunction() {
-	alert ('v stariFunction fajl odjava'+localStorage.getItem("aktivnaBolnisnica"))
+	//alert ('v stariFunction fajl odjava'+localStorage.getItem("aktivnaBolnisnica"))
 	if (localStorage.getItem("aktivnaBolnisnica")=="SBI"){
 //alert ('v stariFunction');
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
