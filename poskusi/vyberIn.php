@@ -27,22 +27,22 @@ class Database {
 	}//uzavírací zavorky __construct	
 //-----------------konec construct--------------
 
-public function vyberOr($tabulka, $sloupce, $podminka = NULL){
+public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 	$sloupceSQL = implode(', ', $sloupce);
 	$podminkaSQL = '';
 	$parametry = array();
 	
-	if (is_array($podminka)){
+	
+	
+	if (is_array($vrednosti)){
 		$i = 0;
-		foreach ($podminka as $sloupec=>$hodnota){
-			if ($i == 0){
-				$podminkaSQL .=" WHERE $sloupec = ?";				
-			}else {
-				$podminkaSQL .= " OR $sloupec = ?";
-			}			
-			$parametry[$i] = $hodnota;
+		$podminkaSQL .=" WHERE $podminka IN (";
+		foreach ($vrednosti){
+						
+				$podminkaSQL .="$vrednosti[$i],";								
 			$i++;
 		}
+		$podminkaSQL .=")";	
 	}
 	
 	/*echo var_dump($parametry) . "<br>";
