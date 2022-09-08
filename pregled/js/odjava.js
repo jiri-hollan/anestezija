@@ -44,12 +44,13 @@ function stariFunction() {
 //  alert ('po vstavljanju v bazo');
 //location.reload();
   } else {
- //alert ('ni shranjeno');
+
 location.reload();
   }
  // alert ('nov bolnik');
 	}//od if
 	else {
+    alert ( localStorage.getItem("aktivnaBolnisnica") + ' ni možno schraniti v podatkovno bazo');	
 	location.reload();	
 	}
 }//--od stariFunction
