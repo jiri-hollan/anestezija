@@ -29,6 +29,13 @@ array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);
 //var_dump($mestoBolnisnice);
 $seznamBolnisnic=array_combine($mestoBolnisnice,$nazivBolnisnice);
 //var_dump($seznamBolnisnic);
+$mestoBolnisniceJson = json_encode($mestoBolnisnice, JSON_UNESCAPED_UNICODE);
+$seznamBolnisnicJson = json_encode($seznamBolnisnic, JSON_UNESCAPED_UNICODE);
+echo '<script>';
+echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
+echo 'var seznamBolnisnicJson= ' . json_encode( $seznamBolnisnicJson, JSON_UNESCAPED_UNICODE) . ';';
+//echo 'alert(seznamBolnisnicJson);';
+echo '</script>';
 	}//od construct			
 	}//od class spisekBolnisnic
 	new spisekBolnisnic();
