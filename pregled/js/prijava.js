@@ -28,7 +28,7 @@ function sbFunction(bol="") {
          localStorage.setItem("aktivnaBolnisnica",bolnisnica[bol]);
          localStorage.setItem("mestoBolnisnice",bol);
 	     localStorage.setItem("bazeBolnisnice",bazeBolnisniceJson);	
-alert(bazeBolnisniceJson);		 
+//alert(bazeBolnisniceJson);		 
 	//alert ("Formular za S.B. Izola");
 	location.href='zdravnik.php?aktivnaBolnisnica='+localStorage.getItem("mestoBolnisnice");return false; 
 
