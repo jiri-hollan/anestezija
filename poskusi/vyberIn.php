@@ -23,7 +23,6 @@ class Database {
             }
 		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname . ';charset=UTF8', $this->username, $this->password);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
-	echo "na začetku 26";
 	}//uzavírací zavorky __construct	
 //-----------------konec construct--------------
 
@@ -31,33 +30,25 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 	$sloupceSQL = implode(', ', $sloupce);
 	$podminkaSQL = '';
 	$parametry = array();
-		
-	if (is_array($vrednosti)){
-
+   	    if (is_array($vrednosti)){
 		$podminkaSQL .=" WHERE " . $podminka ." IN" . "(";	
-        var_dump($vrednosti);
+        //var_dump($vrednosti);
         $i=0;
 		foreach($vrednosti as $i => $val) {
 		if ($i>0){
 				$podminkaSQL .=",";		
 		}	
-
-						$podminkaSQL .="$vrednosti[$i]";	
-  //echo "$i = $val<br>";
-}
-				$podminkaSQL .=")";	
-				echo $podminkaSQL;
-	}
-	
-	/*echo var_dump($parametry) . "<br>";
-	  echo var_dump($podminka) . "<br>";
-	  echo var_dump($podminkaSQL . "<br>");*/
+        $podminkaSQL .="$vrednosti[$i]";
+} //od foreach
+	$podminkaSQL .=")";	
+	//echo $podminkaSQL;
+	}//od if array
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
 	
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
-		var_dump($zaznamy);
+		//var_dump($zaznamy);
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
 		  $zaznamy = false;
@@ -65,7 +56,7 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 	  
 	  $dotaz->closeCursor();
 	  return $zaznamy;
-	}
+	} // od public function vyberIn
 //..............konec vyberIn...................................................
 }//uzavírací zavorky class Database
 

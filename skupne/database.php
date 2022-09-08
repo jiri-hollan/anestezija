@@ -111,7 +111,7 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 	$parametry = array();
    	    if (is_array($vrednosti)){
 		$podminkaSQL .=" WHERE " . $podminka ." IN" . "(";	
-        var_dump($vrednosti);
+        //var_dump($vrednosti);
         $i=0;
 		foreach($vrednosti as $i => $val) {
 		if ($i>0){
@@ -120,14 +120,14 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
         $podminkaSQL .="$vrednosti[$i]";
 } //od foreach
 	$podminkaSQL .=")";	
-	echo $podminkaSQL;
+	//echo $podminkaSQL;
 	}//od if array
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
 	
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
-		var_dump($zaznamy);
+		//var_dump($zaznamy);
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
 		  $zaznamy = false;
