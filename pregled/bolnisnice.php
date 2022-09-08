@@ -4,7 +4,7 @@ require_once '../skupne/database.php';
 Class spisekBolnisnic{
 	public $conn;
 	public $zaklad;
-	public $status; //vljučena=1, nevključena=0
+	public $status; //vključena+baza=2, vljučena=1, nevključena=0
 	public function __construct() {
   $this->status = '1';
   $this->conn = new Database();	
