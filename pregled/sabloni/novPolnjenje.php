@@ -24,22 +24,11 @@
     <input id="EMSO"  type = "hidden" name="EMSO"pattern="[0-9]{1,}" placeholder="pusti prazno" onkeypress=" return isNumber(event, allNumb)"/ >  
 	  <!--  <label for="EMSO">EMŠO:</label>
     <input id="EMSO" type="text" name="EMSO"pattern="[0-9]{1,}" placeholder="pusti prazno" onkeypress=" return isNumber(event, allNumb)"/ >  -->
-    <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->  
     <input id="datRojstva" type = "hidden" name = "datRojstva" readonly  >   
     <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  >
     <br>
-  <!-- <label for="starost">Starost:<input id="starost" type = "text" name = "starost" readonly  ></label> <br>-->
-  <br>
-
-  
+    <br>  
      <button class="naprej" id="naprej" ime = naprej  onclick = "return osebniFunction()"><b>Naprej</b></button>
-
-
-           <!-- <p ime = naprej style="background-color:blue; color:white;" onclick = "return osebniFunction()"><b>Naprej</b></p>-->
-
-       
-    
-  <!-- </p>-->
  
  </fieldset>  
 <!-- ______________________________________________________________________________________
