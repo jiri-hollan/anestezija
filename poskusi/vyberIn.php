@@ -35,14 +35,17 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 	if (is_array($vrednosti)){
 
 		$podminkaSQL .=" WHERE " . $podminka ." IN" . "(";	
+        var_dump($vrednosti);
+        $i=0;
+		foreach($vrednosti as $i => $val) {
+		if ($i>0){
+				$podminkaSQL .=",";		
+		}	
 
-		$i = 0;			
-	//foreach ($vrednosti){
-	foreach ($podminka as $sloupec=>$hodnota){					
-				$podminkaSQL .="$vrednosti[$i],";								
-			$i++;
-		}
-		$podminkaSQL .=")";	
+						$podminkaSQL .="$vrednosti[$i]";	
+  //echo "$i = $val<br>";
+}
+				$podminkaSQL .=")";	
 				echo $podminkaSQL;
 	}
 	
@@ -54,6 +57,7 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
+		var_dump($zaznamy);
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
 		  $zaznamy = false;

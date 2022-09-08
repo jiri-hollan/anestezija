@@ -105,7 +105,38 @@ class Database {
 	  return $zaznamy;
 	}
 //..............konec vyberOr.......................................................
-
+public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
+	$sloupceSQL = implode(', ', $sloupce);
+	$podminkaSQL = '';
+	$parametry = array();
+   	    if (is_array($vrednosti)){
+		$podminkaSQL .=" WHERE " . $podminka ." IN" . "(";	
+        var_dump($vrednosti);
+        $i=0;
+		foreach($vrednosti as $i => $val) {
+		if ($i>0){
+				$podminkaSQL .=",";		
+		}	
+        $podminkaSQL .="$vrednosti[$i]";
+} //od foreach
+	$podminkaSQL .=")";	
+	echo $podminkaSQL;
+	}//od if array
+	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
+	
+	try {
+		$dotaz->execute($parametry);		
+		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
+		var_dump($zaznamy);
+	  }catch (PDException $e) {
+		  echo $e->getMessage();
+		  $zaznamy = false;
+	  }
+	  
+	  $dotaz->closeCursor();
+	  return $zaznamy;
+	} // od public function vyberIn
+//..............konec vyberIn...................................................
 
 	public function  vloz($tabulka,$data){
        $sloupce = array();
