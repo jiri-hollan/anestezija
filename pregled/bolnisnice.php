@@ -14,7 +14,7 @@ Class spisekBolnisnic{
   $podminka = "status";
   $vrednosti = array(1,2);
   $prebrano = $this->conn->vyberIn($this->nameTable, $stolpci, $podminka, $vrednosti, $poradi);
- // var_dump ($prebrano);
+//var_dump ($prebrano);
   $nazivBolnisnice=array();
   $sezamBolnisnic=array();
   $mestoBolnisnice=array();
@@ -22,7 +22,8 @@ Class spisekBolnisnic{
 //echo $prebrano[$i]["mesto"].'<br>';	
 
 array_push($nazivBolnisnice,$prebrano[$i]["nazivB"] );
-array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);	
+array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);
+//var_dump($mestoBolnisnice);
     }//od for 
 	//echo '<br>var dump mesto Bolnišnice:<br>';
 //var_dump($mestoBolnisnice);
