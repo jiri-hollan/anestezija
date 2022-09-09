@@ -73,6 +73,7 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
   var zdravListX = JSON.parse(celoImeJson);
   //alert(zdravListX);
   listaZdravnikovFunction(zdravListX);
+  //alert(localStorage.getItem("bazeBolnisnice"));
   </script>
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
 

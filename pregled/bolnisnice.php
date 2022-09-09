@@ -50,6 +50,7 @@ echo '<script>';
 echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'var seznamBolnisnicJson= ' . json_encode( $seznamBolnisnicJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'var bazeBolnisniceJson= ' . json_encode( $bazeBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
+echo 'localStorage.setItem("bazeBolnisnice",bazeBolnisniceJson);';
 //echo 'alert(seznamBolnisnicJson);';
 //echo 'alert(bazeBolnisniceJson);';
 echo '</script>';
