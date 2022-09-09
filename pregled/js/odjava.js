@@ -37,7 +37,7 @@ let x=localStorage.getItem("aktivnaBolnisnica");
 let y=localStorage.getItem("bazeBolnisnice");
 let z= y.includes(x);
 alert(z);
-	//if (localStorage.getItem("aktivnaBolnisnica")=="SBI"){
+	//IF: localStorage.getItem("aktivnaBolnisnica")== bolnišnica s statusom 2
 		if (z){
 //alert ('v stariFunction');
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
