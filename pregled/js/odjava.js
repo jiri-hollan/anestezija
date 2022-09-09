@@ -33,7 +33,12 @@ switch (izbris) {
 function stariFunction() {
 //alert ('v stariFunction fajl odjava'+localStorage.getItem("aktivnaBolnisnica"));
 //alert(localStorage.getItem("bazeBolnisnice"));
-	if (localStorage.getItem("aktivnaBolnisnica")=="SBI"){
+let x=localStorage.getItem("aktivnaBolnisnica");
+let y=localStorage.getItem("bazeBolnisnice");
+let z= y.includes(x);
+alert(z);
+	//if (localStorage.getItem("aktivnaBolnisnica")=="SBI"){
+		if (z){
 //alert ('v stariFunction');
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
   if (r == true) {
