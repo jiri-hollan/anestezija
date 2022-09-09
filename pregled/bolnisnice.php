@@ -31,6 +31,7 @@ array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);
 $stolpci = array('nazivB');
 $vrednosti = array(2);
 $prebrano = $this->conn->vyberIn($this->nameTable, $stolpci, $podminka, $vrednosti, $poradi);
+//var_dump($prebrano);
 $bazeBolnisnice=array();
  for ($i = 0; $i < count($prebrano); $i++) {
 //echo $prebrano[$i]["nazivB"].'<br>';	
@@ -44,6 +45,7 @@ $seznamBolnisnic=array_combine($mestoBolnisnice,$nazivBolnisnice);
 $mestoBolnisniceJson = json_encode($mestoBolnisnice, JSON_UNESCAPED_UNICODE);
 $seznamBolnisnicJson = json_encode($seznamBolnisnic, JSON_UNESCAPED_UNICODE);
 $bazeBolnisniceJson = json_encode($bazeBolnisnice, JSON_UNESCAPED_UNICODE);
+//var_dump($bazeBolnisniceJson);
 echo '<script>';
 echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'var seznamBolnisnicJson= ' . json_encode( $seznamBolnisnicJson, JSON_UNESCAPED_UNICODE) . ';';
