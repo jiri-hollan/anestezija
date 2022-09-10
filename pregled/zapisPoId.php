@@ -16,6 +16,7 @@ Class PoberZapis{
    $podminka = array("pregledId"=>$this->id);
    $prebrano = $this->conn->vyber($this->nameTable, $stolpci, $podminka);
 echo '<br>Število najdenih zapisov zapis po id: '.count($prebrano);	
+//var_dump($podminka);
 json_encode($prebrano);	
 $vrstica = json_encode($prebrano);	
 echo ' Najdeno'.$vrstica.' zapisov';

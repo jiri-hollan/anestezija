@@ -191,6 +191,7 @@ Class PreberiVpis extends Apregled {
        if (isset($_POST[$stolpec])) {
 	     //echo $_POST[$stolpec];
 		  $podminka[$stolpec] = ($_POST[$stolpec]);
+		// echo 'Podminka[stolpec]= '.$podminka[$stolpec];
        } else {
 	  //echo $_POST[$stolpec] . " ne obstaja" ;
      }
