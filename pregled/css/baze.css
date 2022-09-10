@@ -1,11 +1,15 @@
 #kontejner {
 border-style: solid;
 padding: 25px 50px 75px 100px;
-height: 100px;
-width: 20%; 
+height: 120px;
+width: 250px; 
 background-color: powderblue;
 font-size: 30px;
 		}
+		
+#ustanova {
+width: 50px; 	
+}		
 		
 #buttonNazaj {
 	float: left;

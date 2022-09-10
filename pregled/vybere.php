@@ -32,6 +32,8 @@ echo '
 <?php 
 echo '
 <input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
+<label for "ustanova">bolnisnica:</label>
+<input id="ustanova" type="text" name="ustanova" value="SBI" required ></input>
 <label for "stevMaticna">matična stevilka</label>
 <input   type="number" name="stevMaticna" required ></input>
 <input   type="hidden" name="doBaze" value="vyber" readonly ></input>
