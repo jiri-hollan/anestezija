@@ -52,7 +52,7 @@ ________________________________________________________________________________
     <option value='ime zdravnika'>    
   </datalist>
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
-<!--<p id="pregledovalec"> </p>-->
+
 
 </div>
 
