@@ -77,7 +77,7 @@ else if (x10 == "") {
 
 
   if (!localStorage.getItem("aktivnaBolnisnica") == "") {
-logo = document.getElementById("logo").innerHTML;
+//logo = document.getElementById("logo").innerHTML;
 //alert (logo);
 boln = localStorage.getItem("aktivnaBolnisnica");
 //alert (boln);
