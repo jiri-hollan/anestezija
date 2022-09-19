@@ -84,7 +84,7 @@ boln = localStorage.getItem("aktivnaBolnisnica");
 
 logo = '<img  id="';
 logo = logo + 'imgBol"';
-logo = logo + '<img src="logo' + boln + '.png">';
+logo = logo + 'src="logo' + boln + '.png">';
 //alert (logo);
 document.getElementById("logo").innerHTML = logo;
   }
