@@ -75,19 +75,6 @@ else if (x10 == "") {
      document.getElementById("druga").style.display = "none";
      document.getElementById("tretja").style.display = "block";
 
-
-  if (!localStorage.getItem("aktivnaBolnisnica") == "") {
-//logo = document.getElementById("logo").innerHTML;
-//alert (logo);
-boln = localStorage.getItem("aktivnaBolnisnica");
-//alert (boln);
-
-logo = '<img  id="';
-logo = logo + 'imgBol"';
-logo = logo + 'src="logo' + boln + '.png">';
-//alert (logo);
-document.getElementById("logo").innerHTML = logo;
-  }
 nalepka = document.getElementById("priimek").value;
 nalepka = "priimek in ime:.... " + "<b>" + nalepka + " " + document.getElementById("ime").value + "</b>" + "<br>";
 nalepka = nalepka + "datum rojstva:..... " +  "<b>" + datRojstva + "</b>" + "<br>" ;
