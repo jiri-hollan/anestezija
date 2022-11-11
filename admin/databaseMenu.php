@@ -10,7 +10,7 @@ class Manipulace extends Administrace {
   if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {			   
 echo '
 <div id="manipulace">
-<h1>Menu servis</h1>
+<!--<h1>Menu servis</h1>
 <ul id="linky1">
 
 <li><a href="../admin1/selektPrikazi.php">prikazi izbrano tabelo</a></li>
@@ -22,7 +22,7 @@ echo '
 <ul id="linky2">
 <li><a href="../admin1/navodila/kreateTableBesedila.php" >Naredi Tabelo:besedilaTbl </a></li>
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=besedilaTbl">prikaži besedila</a></li>
-</ul>
+</ul>-->
 <h1>Menu uporabniki</h1>
 <ul id="linky3">
 <li><a href="../admin1/navodila/kreateTableUporabniki2.php">naredi tabelo: uporabnikiTbl2</a></li>
