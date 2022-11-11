@@ -1,7 +1,7 @@
 
 <?php
 require_once '../skupne/database.php';
-if ($_SERVER['REQUEST_METHOD']== 'POST') {
+/*if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze'])&&isset($_POST['ustanova'])){
 		$doBaze  = $_POST['doBaze'];
 	} else {
@@ -112,12 +112,12 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
     echo '</script>';	
 	return;		
 	//header('Location: bolnik.php');		
-/*function test_input($data) {
+function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
-}*/
+}
 
 } //od if 
 
@@ -221,3 +221,4 @@ Return	$prebrano;
 
 //-------------------------------------------konec PreberiVpis---------------------------	-------------------------------------------konec PreberiVpis---------------------------		
 ?>
+*/
