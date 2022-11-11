@@ -112,7 +112,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 
 
 function vyberFunction($podminka){
-//$tabulka="uporabnikiTbl2";
 $tabulka="limitiTbl";
 $stolpci=["*"];
 //$stolpci=["ime","min"];
@@ -168,7 +167,6 @@ echo "Za izbrano bolnisnico ni zapisa v bazi";
 }//od vyberFunction  
 
 function vlozFunction($data){
-//$tabulka="uporabnikiTbl2";
 $tabulka="limitiTbl";
 //$data= array("skupina"=>"izola", "ime"=>"Lela", "min"=>"Hollan", "max"=>"1");
 

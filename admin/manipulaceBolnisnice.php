@@ -109,7 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 
 
 function vyberFunction($podminka){
-//$tabulka="uporabnikiTbl2";
 $tabulka="bolnisniceTbl";
 $stolpci=["*"];
 //$podminka = array("ime"=>"Jiří");
