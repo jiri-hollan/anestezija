@@ -1,6 +1,6 @@
 
 <?php
-require_once '../skupne/database.php';
+/*require_once '../skupne/database.php';*/
 /*if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze'])&&isset($_POST['ustanova'])){
 		$doBaze  = $_POST['doBaze'];
