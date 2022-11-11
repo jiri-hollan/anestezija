@@ -18,9 +18,9 @@ var izbris;
 function novBolnikFunction(izbris) {
 
 switch (izbris) {
-  case 0: // shrani v bazo
+ /* case 0: // shrani v bazo
     stariFunction();
-    break;
+    break;*/
   case 1: //naloži praznoi formular
     noviFunction();
     break;

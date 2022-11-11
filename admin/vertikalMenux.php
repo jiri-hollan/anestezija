@@ -24,7 +24,6 @@ echo '
 <li><a href="../admin1/pokaziStolpce.php">pokaži Stolpce</a></li>
 <li><a href="selektVnosna.php">pokaži vnešenega bolnika</a></li>
 <li><a href="serverInformace.php">Informace o serveru</a></li>
-<li><a href="../skupne/database.php">Zagon poskusnega objekta database</a></li>
 </ul>
 <h1>Menu navodila</h1>
 <ul id="linky1">

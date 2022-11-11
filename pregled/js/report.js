@@ -229,12 +229,12 @@ document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdr
 switch (a) {
   case "t": //tisk
     natisniFunction();
-    novBolnikFunction(0);	
+    novBolnikFunction(1);	
     break;
-  case "s": //naloži v bazo
+ /* case "s": //naloži v bazo
     danesFunction();
     novBolnikFunction(0);
-    break;
+    break;*/
  case "p": //predogled
     ogledFunction();
     break;	

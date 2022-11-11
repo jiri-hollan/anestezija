@@ -31,7 +31,7 @@ echo '
      <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>
      <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span> 	 
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
-     <span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span>	
+     <!--<span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span>-->	
  </div>	 
 
 
