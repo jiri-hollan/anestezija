@@ -10,13 +10,6 @@ echo '<nav id= "glavnaNav">
 
 <ul>';
 
-/*  <li><a href="../navodila/navodilaKovid.php?doma=frontend">Navodila</a> </li>
-  <li><span onclick=sbFunction("spomin")>Pregled</span>  </li>
-  <!-- <li><a href="../pregled/prijava.php">Pregled</a> </li> -->
-  <li><a href="../oddelek/razpisMeseci.php?pogled=dez&doma=frontend">Dežurstva</a> </li>';*/
-  
-  
-  
   if (isset($_SESSION["status"]))  {
 	  //require_once('../skupne/menu-items.php'); 
 	   switch ($_SESSION["status"]) {
@@ -52,8 +45,7 @@ require_once('sabloni/vkladane/zapati.php');
 ?>
 
 <script>
-    //document.getElementById("prij").innerHTML = "Odjava";
-	//document.getElementById("uname").innerHTML = "prijavljen";
+
 	<?php 
 		$uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
 	?>
