@@ -2,7 +2,6 @@
 
 
 function vpisFunction() {
-alert('vpisFunction');
 	   document.getElementById("navbar").style.display = "block";
      document.getElementById("prva").style.display = "block"; 
      document.getElementById("druga").style.display = "none";
@@ -15,7 +14,6 @@ alert('vpisFunction');
      document.getElementById("natisni").style.display = "none";	
     // document.getElementById("pomoc").style.visibility = "hidden";	 
      document.getElementById("pomoc").style.display = "none";	
-     /*document.getElementById("submitFrm").style.display = "none";*/
      document.getElementById("najdiZapis").style.display = "block";
 	 
      danesFunction();
@@ -25,7 +23,6 @@ alert('vpisFunction');
  //izračun današnjeg datuma in prikaz v ljudski obliki. V <input> vložena pravilna oblika datuma za QLS
    var danes;
   function danesFunction() {
-	  alert ('v funkciji danesFuncton');
     var d = new Date();   
     danes = d.toLocaleString("sl-SI", {dateStyle: "medium",timeStyle: "short"});  
     //document.forms["frm1"].elements["datPregleda"].value = danes; 
