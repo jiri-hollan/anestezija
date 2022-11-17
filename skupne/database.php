@@ -13,7 +13,6 @@ class Database {
       $this->servername = "sh17.neoserv.si";
       $this->username = "anestiz";
       $this->password = "sem pride geslo";	  
-      //$this->password = "laringoskop";
       $this->dbname = "anestiz_navodila";
 
           if ( $_SERVER['SERVER_NAME']=="localhost") {

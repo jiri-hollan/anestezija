@@ -1,8 +1,7 @@
 <?php
 $servername = "sh17.neoserv.si";
 $username = "anestiz";
-$password = "laringoskop";
-//$dbname = "anestiz_premedikacija";
+$password = "sem pride geslo";
 $dbname = "anestiz_navodila";
 
 

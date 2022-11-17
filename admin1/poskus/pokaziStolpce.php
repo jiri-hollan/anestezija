@@ -34,8 +34,6 @@ include '../../skupne/streznik.php';
 		
 
 //Connect to MySQL using the PDO object.
-//$pdo = new PDO('mysql:host=sh17.neoserv.si;dbname=anestiz_premedikacija', 'anestiz', 'laringoskop');
-
     $conn = new PDO ("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
   // $conn = new PDO("mysql:host=$servername", $username, $password);

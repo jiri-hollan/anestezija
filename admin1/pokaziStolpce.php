@@ -26,11 +26,8 @@ include '../skupne/streznik.php';
 	    echo $ime, '<br>';
 		
 //Connect to MySQL using the PDO object.
-//$pdo = new PDO('mysql:host=sh17.neoserv.si;dbname=anestiz_premedikacija', 'anestiz', 'laringoskop');
-
     $pdo = new PDO ("mysql:host=$servername;dbname=$dbname", $username, $password);
-	  
-  // $conn = new PDO("mysql:host=$servername", $username, $password);
+	    // $conn = new PDO("mysql:host=$servername", $username, $password);
     // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 //Our SQL statement, which will select a list of tables from the current MySQL database.
 // $sql = "SELECT * FROM podatkiVsi";
