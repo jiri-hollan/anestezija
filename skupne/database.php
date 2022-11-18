@@ -9,19 +9,18 @@ class Database {
 	public $connn = '';
 	
 	public Function __construct(){
-	
+	include 'streznik.php';
       //$this->servername = "sh17.neoserv.si";
-      $this->servername = $_SERVER['SERVER_NAME'];	  
+   /*   $this->servername = $_SERVER['SERVER_NAME'];	  
       $this->username = "anestiz";
       $this->password = "laringoskop";
       $this->dbname = "anestiz_navodila";
 
           if ( $_SERVER['SERVER_NAME']=="localhost") {
-			  //$this->servername = "localhost";
               $this->username = "root";
               $this->password = "";
               $this->dbname = "navodila";
-            }
+            }*/
 		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname . ';charset=UTF8', $this->username, $this->password);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
 	
