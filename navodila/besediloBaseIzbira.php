@@ -8,37 +8,23 @@
 include '../skupne/database.php';
 
 $tabulka="besedilaTbl";
-$stolpci=["id", "naslov", "direktorij"];
+$stolpci=["id", "naslov", "direktorij","fajl"];
 $podminka=[""];
 
 $vyber = new database();
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
-echo var_dump($vybrano);
+//echo var_dump($vybrano);
 echo "<br>";
-echo count($vybrano);
-//$dolzina=count($vybrano);
-//echo $vybrano[1];
+
 //------------------------------------------------------------------------
-/*
+
 try {
-	require '../skupne/prijavniWeb.php';
 
-    $stmt = $conn->prepare("SELECT id, naslov, direktorij, fajl FROM besedilaTbl");
-    $stmt->execute();
-
-    // set the resulting array to associative
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
-//---- dvorazmerni array iz basedilaTbl-----------------------------------------------------------------------
-	 
-	 $moznosti=$stmt->fetchAll();
-	//var_dump($moznosti); 
-	
 //---------------------prikaže izbiro vnešenega besedila iz podatkov v bazi "navodila" tabela "besedilaTbl"------------------	
 
 echo '<ul id= "navodilaId">';
- foreach ($moznosti as $value) {
+ foreach ($vybrano as $value) {
   //var_dump($value);
   echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
 }
@@ -52,7 +38,7 @@ catch(PDOException $e) {
 }
 $conn = null;
 echo "</table>";
-*/
+
 ?>
 
 </body>
