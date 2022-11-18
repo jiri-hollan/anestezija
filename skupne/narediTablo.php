@@ -45,11 +45,5 @@ $conn = null;
 
 }
 }//uzavírací zavorky class DatabaseGloboka
-$definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    naslov VARCHAR(30) NOT NULL,
-    direktorij VARCHAR(30) NOT NULL,
-	fajl VARCHAR(30) NOT NULL,
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP";
-$krekre=new DatabaseGloboka;
-$krekre->naredi('novat', $definice);
+
 ?>

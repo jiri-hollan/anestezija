@@ -39,14 +39,37 @@ echo "<br>";
 ?>
 
 <?php
-include '../../skupne/narediTablo.php';
-$definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+function naredi($ime) {
+include '../../skupne/prijavniWeb.php';
+$ime ;
+//$dbname="navodila";
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // sql to create table
+    $sql = "CREATE TABLE". " " . $ime . " " . " (
+    id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     naslov VARCHAR(30) NOT NULL,
     direktorij VARCHAR(30) NOT NULL,
 	fajl VARCHAR(30) NOT NULL,
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP";
-$krekre=new DatabaseGloboka;
-$krekre->naredi('novat', $definice);
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    )";
+
+    // use exec() because no results are returned
+    $conn->exec($sql);
+    echo "Tabela" . " " . $ime . " uspešno narejena";
+    }
+catch(PDOException $e)
+    {
+    echo $sql . "<br>" . $e->getMessage();
+    }
+
+$conn = null;
+
+
+}
 ?>
 
 </body>
