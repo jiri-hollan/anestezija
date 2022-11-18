@@ -1,44 +1,17 @@
 <?php
-/*
-// define variables and set to empty values
-$nameTable = $naslov = $direktorij  =  $fajl = "";
-//$nameTable = $imeZdr = $priimekZdr  = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $nameTable = test_input($_POST["nameTable"]);
- // $nameTable = vstavi($_POST["nameTable"]);
-  
-    
-$nalozi['naslov'] = test_input($_POST["naslov"]);
-$nalozi['direktorij'] = test_input($_POST["direktorij"]);
-$nalozi['file'] = basename($_FILES["fileToUpload"]["name"]); 
-
- 
-  
-vstavi($nameTable,$naslov,$direktorij,$fajl);
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-*/
-
-
 
 //----naloži datoteko besedila pod originalnim imenom----
 $nameTable = $_POST["nameTable"];
 $nalozi['naslov'] = $_POST["naslov"];
 $nalozi['direktorij'] = $_POST["direktorij"];
-$nalozi['file'] = basename($_FILES["fileToUpload"]["name"]);
+$nalozi['fajl'] = basename($_FILES["fileToUpload"]["name"]);
 //$nalozi[''] = '';
 //$nalozi[''] = '';
 
 echo "<h2>Naslov prispevka: " . $_POST["naslov"]. "</h2><br>";
 
 //$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$target_file = $nalozi['direktorij'] . $nalozi['file'];
+$target_file = $nalozi['direktorij'] . $nalozi['fajl'];
 
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -80,8 +53,9 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-vstavi($nameTable,$nalozi['naslov'] ,$nalozi['direktorij'],$nalozi['file']);
-    echo "<h1>The file ". $nalozi['file']. " je bila naložena kot: " . $target_file . "</h1>";
+//vstavi($nameTable,$nalozi['naslov'] ,$nalozi['direktorij'],$nalozi['fajl']);
+vstavi($nameTable,$nalozi);
+    echo "<h1>The file ". $nalozi['fajl']. " je bila naložena kot: " . $target_file . "</h1>";
   } else {
     echo "<h1>Sorry, there was an error uploading your file.</h1>";
   }
@@ -90,8 +64,7 @@ vstavi($nameTable,$nalozi['naslov'] ,$nalozi['direktorij'],$nalozi['file']);
 
 
 
-//function vstavi($nameTable,$nalozi){
-function vstavi($nameTable,$naslov,$direktorij,$fajl) {
+function vstavi($nameTable,$nalozi){
 //echo var_dump($nalozi);
 
 $nameTable;
@@ -107,11 +80,10 @@ include '../skupne/database.php';
 
 
 $tabulka=$nameTable;
-   $data= array("naslov"=>$naslov, "direktorij"=>$direktorij, "fajl"=>$fajl);
-  //$data= $nalozi;
+   //$data= array("naslov"=>$naslov, "direktorij"=>$direktorij, "fajl"=>$fajl);
+  $data= $nalozi;
 
 $vloz = new database($tabulka,$data);
-//$vloz->vloz($tabulka,$data);
 $vlozeno=$vloz->vloz($tabulka,$data );
 //echo $vlozeno[1];
 echo "<br>";
