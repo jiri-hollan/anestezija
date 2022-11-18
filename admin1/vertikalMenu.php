@@ -19,7 +19,7 @@
 <li><a href="odklop.php">Odpoji se od serverja</a></li>
 <li><a href="kreateTable.php" >Naredi poskusno Tabelo</a></li>
 <li><a href="kreateTableSkript.php" >Naredi Tabelo iz Skripta.php</a></li>
-<li><a href="insertVrstica.php">vstavi vrstico</a></li>
+<!--<li><a href="insertVrstica.php">vstavi vrstico</a></li>-->
 <li><a href="selektPrikazi.php">prikazi izbrano tabelo</a></li>
 <li><a href="doSql.php">vnesi in poženi SQL</a></li>
 <li><a href="pokaziTable.php">pokaži Table</a></li>
@@ -41,11 +41,6 @@
 
 <h1>Menu pregled</h1>
 <ul id="linky2">
-<!--<li><a href="pregled/vnosBolnika.html">Vnos bolnika</a></li>
-<li><a href="pregled/vsiPolnjenje.html">Vnos vsega</a></li>-->
-<li><a href="../pregled/novPolnjenje.php">polnjenje Nov bolnik</a></li>
-<li><a href="../pregled/zdravnik.php">vnos zdravnika</a></li>
 <li><a href="navodila/kreateTableBolnikTbl.php">naredi tabelo: bolnikTbl</a></li>
-<li><a href="../pregled/vybere.php">Prikaže preglede glede na matično številko</a></li>
 </body>
 </html>

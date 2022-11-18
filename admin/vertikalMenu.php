@@ -16,7 +16,7 @@ echo '
 <li><a href="../admin1/odklop.php">Odpoji se od serverja</a></li>
 <li><a href="../admin1/kreateTable.php" >Naredi poskusno Tabelo</a></li>
 <li><a href="../admin1/kreateTableSkript.php" >Naredi Tabelo iz Skripta.php</a></li>
-<li><a href="../admin1/insertVrstica.php">vstavi vrstico</a></li>
+<!--<li><a href="../admin1/insertVrstica.php">vstavi vrstico</a></li>-->
 <li><a href="../admin1/selektPrikazi.php">prikazi izbrano tabelo</a></li>
 <li><a href="../admin1/doSql.php">vnesi in poženi SQL</a></li>
 <li><a href="../admin1/pokaziTable.php">pokaži Table</a></li>
