@@ -61,9 +61,6 @@ vstavi($nameTable,$nalozi);
   }
 }
 
-
-
-
 function vstavi($nameTable,$nalozi){
 //echo var_dump($nalozi);
 
@@ -72,13 +69,8 @@ $naslov;
 $direktorij;
 $fajl;
 
-
-
-try {
-		
+try {		
 include '../skupne/database.php';
-
-
 $tabulka=$nameTable;
    //$data= array("naslov"=>$naslov, "direktorij"=>$direktorij, "fajl"=>$fajl);
   $data= $nalozi;
@@ -92,17 +84,8 @@ echo "<br>";
 echo count($vlozeno);
 echo "<br>";
 
-
-
-
 //-------------------------------------------------------------------------------------   
- /*   $sql = "INSERT INTO". " " . $nameTable . " " . " (naslov, direktorij, fajl)
-    VALUES ('$naslov', '$direktorij', '$fajl')";
-	echo "<br>";
-	echo $sql . "<br>" ;
-	
-    // use exec() because no results are returned
-    $conn->exec($sql);*/
+
     echo "New record created successfully";
     }
 catch(PDOException $e)
