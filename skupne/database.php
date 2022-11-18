@@ -10,13 +10,14 @@ class Database {
 	
 	public Function __construct(){
 	
-      $this->servername = "sh17.neoserv.si";
+      //$this->servername = "sh17.neoserv.si";
+      $this->servername = $_SERVER['SERVER_NAME'];	  
       $this->username = "anestiz";
       $this->password = "laringoskop";
       $this->dbname = "anestiz_navodila";
 
           if ( $_SERVER['SERVER_NAME']=="localhost") {
-			  $this->servername = "localhost";
+			  //$this->servername = "localhost";
               $this->username = "root";
               $this->password = "";
               $this->dbname = "navodila";
