@@ -17,7 +17,6 @@
 <ul id="linky1">
 <li><a href="konekt.php">Pripoji se na server</a></li>
 <li><a href="odklop.php">Odpoji se od serverja</a></li>
-<li><a href="kreateBase.php">naredi bazo</a></li>
 <li><a href="kreateTable.php" >Naredi poskusno Tabelo</a></li>
 <li><a href="kreateTableSkript.php" >Naredi Tabelo iz Skripta.php</a></li>
 <li><a href="insertVrstica.php">vstavi vrstico</a></li>
