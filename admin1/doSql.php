@@ -67,14 +67,7 @@ echo $kodaSql;
 
 
 function mojSql($kodaSql) {
-/*$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "premedikacija";*/
-
 include '../skupne/streznik.php';
-
-
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
