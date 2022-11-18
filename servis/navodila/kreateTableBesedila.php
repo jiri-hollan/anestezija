@@ -46,7 +46,7 @@ $definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	fajl VARCHAR(30) NOT NULL,
     reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP";
 $krekre=new DatabaseGloboka;
-$krekre->naredi('novat', $definice);
+$krekre->naredi('besedilaTbl', $definice);
 ?>
 
 </body>
