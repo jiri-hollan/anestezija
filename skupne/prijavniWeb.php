@@ -1,5 +1,5 @@
 <?php
-$servername = "sh17.neoserv.si";
+$servername = "sem pride ime serverja";
 $username = "anestiz";
 $password = "sem pride geslo";
 $dbname = "anestiz_navodila";

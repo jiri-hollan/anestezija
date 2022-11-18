@@ -10,7 +10,7 @@ class Database {
 	
 	public Function __construct(){
 	
-      $this->servername = "sh17.neoserv.si";
+      $this->servername = "sem pride ime serverja";
       $this->username = "anestiz";
       $this->password = "sem pride geslo";	  
       $this->dbname = "anestiz_navodila";
