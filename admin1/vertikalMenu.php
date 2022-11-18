@@ -33,7 +33,6 @@
 <li><a href="navodila/kreateBaseNavodila.php">naredi bazo: navodila</a></li>
 <li><a href="navodila/kreateTableBesedila.php" >Naredi Tabelo:besedilaTbl </a></li>
 <li><a href="navodila/novoBesedilo.php">vstavi novo besedilo</a></li>
-<li><a href="navodila/besediloBase.php">prikaži besedila</a></li>
 <li><a href="navodila/besediloBaseIzbira.php">prikaži besedila kot izbiro</a></li>
 
 <h1>Menu uporabniki</h1>
