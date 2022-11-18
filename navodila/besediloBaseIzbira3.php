@@ -5,22 +5,6 @@
 <?php
 //----------prijavni podatki za podatkovno bazo odvisno od uporabljenega strežnika------
 
-include '../skupne/database.php';
-
-$tabulka="besedilaTbl";
-$stolpci=["id", "naslov", "direktorij"];
-$podminka=[""];
-
-$vyber = new database();
-$vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
-//echo $vybrano[1];
-echo var_dump($vybrano);
-echo "<br>";
-echo count($vybrano);
-//$dolzina=count($vybrano);
-//echo $vybrano[1];
-//------------------------------------------------------------------------
-/*
 try {
 	require '../skupne/prijavniWeb.php';
 
@@ -52,7 +36,6 @@ catch(PDOException $e) {
 }
 $conn = null;
 echo "</table>";
-*/
 ?>
 
 </body>
