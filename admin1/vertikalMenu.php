@@ -24,23 +24,19 @@
 <li><a href="doSql.php">vnesi in poženi SQL</a></li>
 <li><a href="pokaziTable.php">pokaži Table</a></li>
 <li><a href="pokaziStolpce.php">pokaži Stolpce</a></li>
-<li><a href="selektVnosna.php">pokaži vnešenega bolnika</a></li>
 <li><a href="serverInformace.php">Informace o serveru</a></li>
 <li><a href="../skupne/database.php">Zgon poskusnega objekta database</a></li>
-
+</ul>
 <h1>Menu navodila</h1>
 <ul id="linky3">
 <li><a href="navodila/kreateBaseNavodila.php">naredi bazo: navodila</a></li>
 <li><a href="navodila/kreateTableBesedila.php" >Naredi Tabelo:besedilaTbl </a></li>
-<li><a href="navodila/novoBesedilo.php">vstavi novo besedilo</a></li>
-<li><a href="navodila/besediloBaseIzbira.php">prikaži besedila kot izbiro</a></li>
-
-<h1>Menu uporabniki</h1>
-<ul id="linky3">
 <li><a href="navodila/kreateTableUporabniki2.php">naredi tabelo: uporabnikiTbl2</a></li>
-
-<h1>Menu pregled</h1>
-<ul id="linky2">
 <li><a href="navodila/kreateTableBolnikTbl.php">naredi tabelo: bolnikTbl</a></li>
+<li><a href="navodila/kreateTableSklepi.php">naredi tabelo: sklepiTbl</a></li>
+<li><a href="navodila/kreateTableLimiti.php">naredi tabelo: limitiTbl</a></li>
+<li><a href="navodila/kreateTableBolnisnice.php">naredi tabelo: bolnisniceTbl</a></li>
+</ul>
+
 </body>
 </html>

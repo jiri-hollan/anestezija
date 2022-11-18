@@ -21,7 +21,6 @@ echo '
 <li><a href="../admin1/doSql.php">vnesi in poženi SQL</a></li>
 <li><a href="../admin1/pokaziTable.php">pokaži Table</a></li>
 <li><a href="../admin1/pokaziStolpce.php">pokaži Stolpce</a></li>
-<li><a href="selektVnosna.php">pokaži vnešenega bolnika</a></li>
 <li><a href="serverInformace.php">Informace o serveru</a></li>
 <li><a href="../skupne/database.php">Zagon poskusnega objekta database</a></li>
 </ul>
@@ -29,17 +28,11 @@ echo '
 <ul id="linky1">
 <li><a href="../admin1/navodila/kreateBaseNavodila.php">naredi bazo: navodila</a></li>
 <li><a href="../admin1/navodila/kreateTableBesedila.php" >Naredi Tabelo:besedilaTbl </a></li>
-<li><a href="../admin1/navodila/novoBesedilo.php">vstavi novo besedilo</a></li>
-<li><a href="../admin1/navodila/besediloBase.php">prikaži besedila</a></li>
-<li><a href="../admin1/navodila/besediloBaseIzbira.php">prikaži besedila kot izbiro</a></li>
-</ul>
-<h1>Menu uporabniki</h1>
-<ul id="linky3">
 <li><a href="../admin1/navodila/kreateTableUporabniki.php">naredi tabelo: uporabnikiTbl2</a></li>
-</ul>
-<h1>Menu pregled</h1>
-<ul id="linky2">
-<li><a href="navodila/kreateTableBolnikTbl.php">naredi tabelo: bolnikTbl</a></li>
+<li><a href="../admin1/navodila/kreateTableBolnikTbl.php">naredi tabelo: bolnikTbl</a></li>
+<li><a href="../admin1/navodila/kreateTableSklepi.php">naredi tabelo: sklepiTbl</a></li>
+<li><a href="../admin1/navodila/kreateTableLimiti.php">naredi tabelo: limitiTbl</a></li>
+<li><a href="../admin1/navodila/kreateTableBolnisnice.php">naredi tabelo: bolnisniceTbl</a></li>
 </ul>
 ';
      } else {
