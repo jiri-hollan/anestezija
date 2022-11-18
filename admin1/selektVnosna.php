@@ -18,9 +18,9 @@ include '../skupne/streznik.php';
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
- // $stmt = $conn->prepare("SELECT id, ime, priimek, datRojstva, stevMaticna,  FROM bolniktab");
- // $stmt = $conn->prepare("SELECT *  FROM novbolniktab");
-	$stmt = $conn->prepare("SELECT pregledId, ime, priimek, datRojstva, stevMaticna  FROM bolnikTable");
+ // $stmt = $conn->prepare("SELECT id, ime, priimek, datRojstva, stevMaticna,  FROM bolnikTbl");
+ // $stmt = $conn->prepare("SELECT *  FROM novbolnikTbl");
+	$stmt = $conn->prepare("SELECT pregledId, ime, priimek, datRojstva, stevMaticna  FROM bolnikTbl");
     $stmt->execute();
 	
 	/* Exercise PDOStatement::fetch styles   */

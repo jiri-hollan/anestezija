@@ -14,7 +14,6 @@ echo '
 <ul id="linky1">
 <li><a href="../admin1/konekt.php">Pripoji se na server</a></li>
 <li><a href="../admin1/odklop.php">Odpoji se od serverja</a></li>
-<li><a href="../admin1/kreateBase.php">naredi bazo</a></li>
 <li><a href="../admin1/kreateTable.php" >Naredi poskusno Tabelo</a></li>
 <li><a href="../admin1/kreateTableSkript.php" >Naredi Tabelo iz Skripta.php</a></li>
 <li><a href="../admin1/insertVrstica.php">vstavi vrstico</a></li>
