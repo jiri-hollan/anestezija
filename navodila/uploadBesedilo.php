@@ -90,9 +90,9 @@ vstavi($nameTable,$nalozi['naslov'] ,$nalozi['direktorij'],$nalozi['file']);
 
 
 
-
+//function vstavi($nameTable,$nalozi){
 function vstavi($nameTable,$naslov,$direktorij,$fajl) {
-
+//echo var_dump($nalozi);
 
 $nameTable;
 $naslov;
@@ -107,8 +107,8 @@ include '../skupne/database.php';
 
 
 $tabulka=$nameTable;
-   // $data= array("naslov"=>$naslov, "direktorij"=>$direktorij, "fajl"=>$fajl);
-$data= $nalozi;
+   $data= array("naslov"=>$naslov, "direktorij"=>$direktorij, "fajl"=>$fajl);
+  //$data= $nalozi;
 
 $vloz = new database($tabulka,$data);
 //$vloz->vloz($tabulka,$data);
@@ -119,7 +119,7 @@ echo var_dump($vlozeno);
 echo "<br>";
 echo count($vlozeno);
 echo "<br>";
-}//od vlozFunction
+
 
 
 
