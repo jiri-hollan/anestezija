@@ -6,7 +6,7 @@ $dbname = "anestiz_navodila";
 
 
 if ( $_SERVER['SERVER_NAME']=="localhost") {
-$servername = "localhost";
+//$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "navodila";
