@@ -16,36 +16,32 @@ echo '
 <li><a href="../admin1/selektPrikazi.php">prikazi izbrano tabelo</a></li>
 <li><a href="../admin1/pokaziTable.php">pokaži Table</a></li>
 <li><a href="../admin1/pokaziStolpce.php">pokaži Stolpce</a></li>
+<li><a href="../admin1/navodila/kreateTableVse.php" >Naredi Tabele </a></li>
 </ul>
 
 <h1>Menu besedila</h1>
 <ul id="linky2">
-<li><a href="../admin1/navodila/kreateTableBesedila.php" >Naredi Tabelo:besedilaTbl </a></li>
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=besedilaTbl">prikaži besedila</a></li>
 </ul>
 <h1>Menu uporabniki</h1>
 <ul id="linky3">
-<li><a href="../admin1/navodila/kreateTableUporabniki2.php">naredi tabelo: uporabnikiTbl2</a></li>
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=uporabnikiTbl2">prikaži uporabnike</a></li><br>
 
 </ul>
 <h1>Menu pregled</h1>
 <ul id="linky3">
-<li><a href="../admin1/navodila/kreateTablePregledovalci.php">naredi tabelo: pregledovalciTbl</a></li>
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=pregledovalciTbl">prikaži pregledovalce</a></li>
-<li><a href="../admin/manipulacePregledovalci.php">upravljanje z pregledovalci</a></li><br>
-
-<li><a href="../admin1/navodila/kreateTableLimiti.php">naredi tabelo: limitiTbl</a></li>
+<li><a href="../admin/manipulacePregledovalci.php">upravljanje z pregledovalci</a></li>
+<br>
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=limitiTbl">prikaži limite</a></li>
-<li><a href="../admin/manipulaceLimiti.php">uredi limite</a></li><br>
-
-<li><a href="../admin1/navodila/kreateTableSklepi.php">naredi tabelo: sklepiTbl</a></li>
+<li><a href="../admin/manipulaceLimiti.php">uredi limite</a></li>
+<br>
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=sklepiTbl">prikaži sklepe</a></li>
-<li><a href="../admin/manipulaceSklepi.php">upravljanje s sklepi</a></li><br>
+<li><a href="../admin/manipulaceSklepi.php">upravljanje s sklepi</a></li>
+<br>
 </ul>
 <h1>Menu bolnišnice</h1>
 <ul id="linky4">
-<li><a href="../admin1/navodila/kreateTableBolnisnice.php">naredi tabelo: bolnisniceTbl</a></li>
 <li><a href="../admin1/navodila/ogledTabele.php?imeTable=bolnisniceTbl">prikaži bolnisnice</a></li>
 <li><a href="../admin/manipulaceBolnisnice.php">upravljanje z bolnišnicami</a></li><br>
 </ul>
