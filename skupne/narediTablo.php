@@ -10,25 +10,18 @@ class DatabaseGloboka {
 	
 	public Function __construct(){
 	include 'streznik.php';
-      //$this->servername = "sh17.neoserv.si";
- 
+      //$this->servername = "sh17.neoserv.si"; 
 		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname . ';charset=UTF8', $this->username, $this->password);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
 	
 	}//uzavírací zavorky __construct	
 //-----------------konec construct--------------
 
-
-
-//---------------------------------
 public function naredi($tabulka, $definice) {
-//include '../../skupne/prijavniWeb.php';
 $tabulka ;
 //$dbname="navodila";
 try {
-
     // sql to create table
-	
     $sql = "CREATE TABLE". " " . $tabulka . " " . " ($definice)";
 
     // use exec() because no results are returned
@@ -39,9 +32,7 @@ catch(PDOException $e)
     {
     echo $sql . "<br>" . $e->getMessage();
     }
-
 $conn = null;
-
 
 }
 }//uzavírací zavorky class DatabaseGloboka
