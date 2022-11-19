@@ -9,22 +9,30 @@
 
 <?php
 
-include '../skupne/streznik.php';
+class Konekt {
+	
+	public $servername = '';
+	public $username = '';
+	public $password = '';
+	public $dbname = '';
+	public $connn = '';
+	
+	public Function __construct(){
+	include '../skupne/streznik.php';
 
 try {
-    $conn = new PDO("mysql:host=$servername", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $this->conn = new PDO("mysql:host=" . $this->servername , $this->username, $this->password);
+    $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
     echo "Uspešno pripojen na server";
     }
 catch(PDOException $e)
     {
-    echo "priključitev na server ni uspela: " . $e->getMessage();
+    echo "Povezava na server ni uspela: " . $e->getMessage();
     }
-	
-
+}//uzavírací zavorky __construct	
+//-----------------konec construct--------------
+}//uzavírací zavorky class Konekt
+new Konekt;
 ?>
-
-
 </body>
 </html>
