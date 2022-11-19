@@ -8,7 +8,7 @@
 <body>
 <?php
 
-class PrijavaServer {
+class NarediBazo {
 	
 	public $servername = '';
 	public $username = '';
@@ -68,8 +68,8 @@ catch(PDOException $e)
 $conn = null;
 	}//uzavírací zavorky __construct	
 //-----------------konec construct--------------
-}//uzavírací zavorky class PrijavaServer
-new PrijavaServer;
+}//uzavírací zavorky class NarediBazo
+new NarediBazo;
 ?>
 
 </body>
