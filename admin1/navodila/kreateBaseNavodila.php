@@ -7,13 +7,21 @@
 </head>
 <body>
 <?php
-include '../../skupne/streznik.php';
-$imeBase ="";
+
+class NarediBazo {
+	
+	public $servername = '';
+	public $username = '';
+	public $password = '';
+	public $dbname = '';
+	public $connn = '';
+	
+	public Function __construct(){
+	include '../../skupne/streznik.php';
 
 try {
-    $conn = new PDO("mysql:host=$servername", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $this->conn = new PDO("mysql:host=" . $this->servername , $this->username, $this->password);
+    $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
     echo "Connected successfully","<br>";
     }
 catch(PDOException $e)
@@ -22,11 +30,10 @@ catch(PDOException $e)
     }
 
 try {
-
     $sql = "CREATE DATABASE navodila";
     // use exec() because no results are returned
-    $conn->exec($sql);
-    echo "Database <navodila> created successfully<br>";
+    $this->conn->exec($sql);
+    echo "Database <navodila> je pravkar narejena<br>";
     }
 catch(PDOException $e)
     {
@@ -34,8 +41,10 @@ catch(PDOException $e)
     }
 
 $conn = null;
-
-
+	}//uzavírací zavorky __construct	
+//-----------------konec construct--------------
+}//uzavírací zavorky class NarediBazo
+new NarediBazo;
 ?>
 
 </body>
