@@ -29,13 +29,9 @@
 </ul>
 <h1>Menu navodila</h1>
 <ul id="linky3">
+
 <li><a href="navodila/kreateBaseNavodila.php">naredi bazo: navodila</a></li>
-<li><a href="navodila/kreateTableBesedila.php" >Naredi Tabelo:besedilaTbl </a></li>
-<li><a href="navodila/kreateTableUporabniki2.php">naredi tabelo: uporabnikiTbl2</a></li>
-<li><a href="navodila/kreateTableBolnikTbl.php">naredi tabelo: bolnikTbl</a></li>
-<li><a href="navodila/kreateTableSklepi.php">naredi tabelo: sklepiTbl</a></li>
-<li><a href="navodila/kreateTableLimiti.php">naredi tabelo: limitiTbl</a></li>
-<li><a href="navodila/kreateTableBolnisnice.php">naredi tabelo: bolnisniceTbl</a></li>
+<li><a href="navodila/kreateTableVse.php">naredi tabele</a></li>
 </ul>
 
 </body>

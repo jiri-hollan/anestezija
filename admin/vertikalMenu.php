@@ -26,13 +26,9 @@ echo '
 </ul>
 <h1>Menu navodila</h1>
 <ul id="linky1">
+
 <li><a href="../admin1/navodila/kreateBaseNavodila.php">naredi bazo: navodila</a></li>
-<li><a href="../admin1/navodila/kreateTableBesedila.php" >Naredi Tabelo:besedilaTbl </a></li>
-<li><a href="../admin1/navodila/kreateTableUporabniki.php">naredi tabelo: uporabnikiTbl2</a></li>
-<li><a href="../admin1/navodila/kreateTableBolnikTbl.php">naredi tabelo: bolnikTbl</a></li>
-<li><a href="../admin1/navodila/kreateTableSklepi.php">naredi tabelo: sklepiTbl</a></li>
-<li><a href="../admin1/navodila/kreateTableLimiti.php">naredi tabelo: limitiTbl</a></li>
-<li><a href="../admin1/navodila/kreateTableBolnisnice.php">naredi tabelo: bolnisniceTbl</a></li>
+<li><a href="../admin1/navodila/kreateTableVse.php">naredi tabele</a></li>
 </ul>
 ';
      } else {
