@@ -14,14 +14,11 @@ echo '
 <ul id="linky1">
 <li><a href="../admin1/konekt.php">Pripoji se na server</a></li>
 <li><a href="../admin1/odklop.php">Odpoji se od serverja</a></li>
-<li><a href="../admin1/kreateTable.php" >Naredi poskusno Tabelo</a></li>
-<li><a href="../admin1/kreateTableSkript.php" >Naredi Tabelo iz Skripta.php</a></li>
 <li><a href="../admin1/selektPrikazi.php">prikazi izbrano tabelo</a></li>
 <li><a href="../admin1/doSql.php">vnesi in poženi SQL</a></li>
 <li><a href="../admin1/pokaziTable.php">pokaži Table</a></li>
 <li><a href="../admin1/pokaziStolpce.php">pokaži Stolpce</a></li>
 <li><a href="serverInformace.php">Informace o serveru</a></li>
-<li><a href="../skupne/database.php">Zagon poskusnega objekta database</a></li>
 </ul>
 <h1>Menu navodila</h1>
 <ul id="linky1">
