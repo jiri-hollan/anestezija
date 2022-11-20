@@ -100,11 +100,42 @@ catch(PDOException $e) {
     }
 
 $conn = null;
-
-
-
 }//uzavírací zavorky function ogled
 //-------------------konec function ogled-------
+public function pokaziTable() {
+try {
+	$sql = "SHOW TABLES";
+//Prepare our SQL statement,
+ $statement = $this->conn->prepare($sql);
+//Execute the statement.
+$statement->execute();
+ 
+//Fetch the rows from our statement.
+//$tables = $statement->fetchAll(PDO::FETCH_NUM);
+  $tables = $statement->fetchAll(PDO::FETCH_BOTH);
+//Loop through our table names.
+foreach($tables as $table){
+    //Print the table name out onto the page.
+    //echo $table[0], '<br>';
+	print_r($table);
+	echo '<br>';
+print("\n");
+} 
+}
+
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+    }
+$conn = null;
+}//uzavírací zavorky function pokaziTable
+//-------------------konec function pokaziTable-------
+
+public function xxxx($yyyy) {
+
+
+$conn = null;
+}//uzavírací zavorky function xxxx
+//-------------------konec function xxxx-------
 }//uzavírací zavorky class DatabaseGloboka
 
 ?>
