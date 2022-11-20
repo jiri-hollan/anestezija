@@ -29,11 +29,12 @@ function test_input($data) {
 <h2>PHP Form Validation Example</h2>
 
 <script>
-document.write('<form method="post" action="');
-document.write('<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>');
+document.write('<form method="get" action="');
+document.write('../admin1/navodila/ogledTabele.php');
+//document.write('<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>');
 document.write('" >');
 document.write('<br>');
-document.write(' Name: <input type=' + '"text' + '" name="name' + '">');
+document.write(' Name: <input type=' + '"text' + '" name="imeTable' + '">');
 document.write('  <input type="submit" name="submit" value="Submit">');  
 document.write('</form>');
 </script>
@@ -42,7 +43,7 @@ document.write('</form>');
 <?php
 echo "<h2>Your Input:</h2>";
 echo "ime table=   " . $name;
-
+/*
 function prikazi($ime) {
 echo "<table style='border: solid 1px black;'>";
 
@@ -64,6 +65,12 @@ class TableRows extends RecursiveIteratorIterator {
         echo "</tr>" . "\n";
     }
 }
+
+*/
+
+//--------------------------------------------------------
+
+/*
 include '../skupne/streznik.php';
 $ime ;
 try {
@@ -84,7 +91,9 @@ catch(PDOException $e) {
 }
 $conn = null;
 echo "</table>";
+
 }
+*/
 ?>
 
 </body>
