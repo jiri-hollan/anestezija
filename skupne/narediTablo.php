@@ -58,6 +58,53 @@ $conn = null;
 
 }//uzavírací zavorky function narediSql
 //-------------------konec function narediSql-------
+public function ogled($imeTable) {
+try {
+
+$sql = "select column_name from information_schema.columns where table_name =  '$imeTable'";
+
+//Prepare our SQL statement,
+   $stmtl = $this->conn->prepare($sql);
+  // echo "To so stolpci tabele: " . "$imeTable", "<br>";
+ echo "<br><table style='border: solid 1px black;'>";
+ //echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";	
+ echo "<tr>";
+//Execute the statement.
+   $stmtl->execute();
+
+//Fetch the rows from our statement.
+//$tables = $statement->fetchAll(PDO::FETCH_NUM);
+  $tables = $stmtl->fetchAll(PDO::FETCH_NUM);
+ 
+//Loop through our table names.
+   foreach($tables as $table){
+   //Print the table name out onto the page.
+   //echo "stolpci:";
+   //echo $table[0], '<br>';
+   
+  echo '<th>'.$table[0].'</th>';
+	} //od foreach
+	
+	//------------------------------------------------------------------------------
+    $stmt = $this->conn->prepare("SELECT * FROM " . $imeTable );
+    $stmt->execute();
+
+    // set the resulting array to associative
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+        echo $v;
+    }
+}
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+    }
+
+$conn = null;
+
+
+
+}//uzavírací zavorky function ogled
+//-------------------konec function ogled-------
 }//uzavírací zavorky class DatabaseGloboka
 
 ?>
