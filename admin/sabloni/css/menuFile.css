@@ -45,7 +45,7 @@ li a {
 }
 #manipulace li {
   /*float: left;*/
-  padding: 1px 1px;
+  padding: 5px 1px;
   cursor: pointer;
 }	
 
