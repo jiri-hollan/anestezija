@@ -67,7 +67,10 @@ echo $kodaSql;
 
 
 function mojSql($kodaSql) {
-include '../skupne/streznik.php';
+include '../skupne/narediTablo.php';	
+$databaseGloboka=new DatabaseGloboka;
+$databaseGloboka->narediSql($kodaSql);
+/*
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
@@ -86,7 +89,9 @@ catch(PDOException $e)
     }
 
 $conn = null;
+*/
 }
+
 ?>
 </body>
 </html>
