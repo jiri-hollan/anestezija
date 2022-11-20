@@ -24,11 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 function pokaziStolpce($tabulka) {
 include '../skupne/narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;	
+$databaseGloboka->	pokaziStolpce($tabulka); 
 	
-
-	    echo $tabulka, '<br>';
-		
-
 }
 ?>
 <h2>Prikaz stolpcev v izbrani tabeli</h2>
