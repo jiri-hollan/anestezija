@@ -130,6 +130,37 @@ $conn = null;
 }//uzavírací zavorky function pokaziTable
 //-------------------konec function pokaziTable-------
 
+public function pokaziStolpce($tabulka) {
+try {
+	 //$sql = "select column_name from information_schema.columns where table_name = 'kartakoTabela'";
+ 
+   $sql = "select column_name from information_schema.columns where table_name = '$tabulka'";
+   echo $sql, "<br>";
+//Prepare our SQL statement,
+    $statement = $this->conn->prepare($sql);
+   echo "To so stolpci tabele: " . $tabulka, "<br>";
+//Execute the statement.
+   $statement->execute();
+ 
+//Fetch the rows from our statement.
+  $tables = $statement->fetchAll(PDO::FETCH_NUM);
+//Loop through our table names.
+   foreach($tables as $table){
+   //Print the table name out onto the page.
+   //echo "stolpci:";
+   //echo $table[0], '<br>';
+   print_r($table);
+   echo '<br>';	
+}
+	
+}catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+    }
+
+$conn = null;
+}//uzavírací zavorky function pokaziStolpce
+//-------------------konec function pokaziStolpce-------
+
 public function xxxx($yyyy) {
 
 
