@@ -11,13 +11,13 @@
 <?php
 // define variables and set to empty values
 $name  = "";
-
+/*
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
 
    prikazi($name);
 }
-
+*/
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
