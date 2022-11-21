@@ -30,7 +30,7 @@ function test_input($data) {
 
 <script>
 document.write('<form method="get" action="');
-document.write('../admin1/navodila/ogledTabele.php');
+document.write('../skupne/ogledTabele.php');
 document.write('" >');
 document.write('<br>');
 document.write(' Name: <input type=' + '"text' + '" name="imeTable' + '">');
