@@ -29,7 +29,9 @@ echo '
 <p>vnesi ime tabele and click OK:</p>
 
 <form method="get" action="../skupne/ogledTabele.php">
-Ime table: <input type="text" name="imeTable">
+Ime table: 
+<input type="text" name="imeTable">
+<input type="hidden" name="nazaj" value= "../admin/databaseMenu.php">
 <input type="submit" name="submit" value="submit">  
 </form>
 ';
