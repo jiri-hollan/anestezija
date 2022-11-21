@@ -11,35 +11,30 @@
 <?php
 // define variables and set to empty values
 $name  = "";
-/*
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
 
    prikazi($name);
 }
-*/
+
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
 }
-?>
 
+echo '
 <h2>PHP Form Validation Example</h2>
 
-<script>
-document.write('<form method="get" action="');
-document.write('../skupne/ogledTabele.php');
-document.write('" >');
-document.write('<br>');
-document.write(' Name: <input type=' + '"text' + '" name="imeTable' + '">');
-document.write('  <input type="submit" name="submit" value="Submit">');  
-document.write('</form>');
-</script>
+<form method="get" action="../skupne/ogledTabele.php">
+<br>
+Name: <input type="text" name="imeTable">
+<input type="submit" name="submit" value="submit">  
+</form>
+';
 
-
-<?php
 echo "<h2>Your Input:</h2>";
 echo "ime table=   " . $name;
 
