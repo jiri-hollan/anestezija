@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>vnesi ime tabele and click OK:</p>
+<h2>Vsebina table</h2>
 
 <?php
 // define variables and set to empty values
@@ -26,18 +26,17 @@ function test_input($data) {
 }
 
 echo '
-<h2>PHP Form Validation Example</h2>
+<p>vnesi ime tabele and click OK:</p>
 
 <form method="get" action="../skupne/ogledTabele.php">
-<br>
-Name: <input type="text" name="imeTable">
+Ime table: <input type="text" name="imeTable">
 <input type="submit" name="submit" value="submit">  
 </form>
 ';
-
+/*
 echo "<h2>Your Input:</h2>";
 echo "ime table=   " . $name;
-
+*/
 ?>
 
 </body>
