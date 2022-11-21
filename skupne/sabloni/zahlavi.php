@@ -14,7 +14,7 @@ $nazaj = $_GET['nazaj'];
 $nazaj = "../frontend/menuFile1.php";
 }
 echo '
- <a class="active" href=' .$nazaj.'>Domov</a>
+ <a class="active" href=' .$nazaj.'>Nazaj</a>
  ';
  ?>
 </div>
