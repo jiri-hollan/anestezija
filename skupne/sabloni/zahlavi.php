@@ -7,7 +7,16 @@
 </head>
 <body>
 <div class="topnav">
- <a class="active" href="../frontend/menuFile1.php">Domov</a>
+<?php
+if (isset($_GET['nazaj'])){
+$nazaj = $_GET['nazaj'];
+}else {
+$nazaj = "../frontend/menuFile1.php";
+}
+echo '
+ <a class="active" href=' .$nazaj.'>Domov</a>
+ ';
+ ?>
 </div>
 
 
