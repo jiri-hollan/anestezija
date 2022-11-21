@@ -18,9 +18,9 @@ var izbris;
 function novBolnikFunction(izbris) {
 
 switch (izbris) {
-  case 0: // shrani v bazo
+ /* case 0: // shrani v bazo
     stariFunction();
-    break;
+    break;*/
   case 1: //naloži praznoi formular
     noviFunction();
     break;
@@ -30,7 +30,7 @@ switch (izbris) {
     //text = "No value found";
 }
 
-function stariFunction() {
+function stariFunctionx() {
 //alert ('v stariFunction fajl odjava'+localStorage.getItem("aktivnaBolnisnica"));
 //alert(localStorage.getItem("bazeBolnisnice"));
 let x=localStorage.getItem("aktivnaBolnisnica");
@@ -41,6 +41,7 @@ let z= y.includes(x);
 		if (z){
 //alert ('v stariFunction');
   var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
+  
   if (r == true) {
 	//alert ('odjava.js bolnikId: '+sessionStorage.getItem("bolnikId"));  
  // alert ('pred vstavljanjem v bazo');

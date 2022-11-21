@@ -16,10 +16,10 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
   if (isset($_SESSION["pristop"]))  {
 if ($_SESSION["pristop"]==3) {	 
 echo '
-        <button class="dropbtn">najdi</button>
+        <!--<button class="dropbtn">najdi</button>-->
           <div class="dropdown-content">
           <!--<a href="#">Link 1</a>-->
-          <a href="vybere.php">baze</a>
+          <!--<a href="vybere.php">baze</a>-->
           <!--<a href="#">Link 3</a>-->
        </div>
      ';
@@ -31,7 +31,7 @@ echo '
      <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>
      <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span> 	 
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
-     <span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span>	
+   <!--  <span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span>-->	
  </div>	 
 
 
