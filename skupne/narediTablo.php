@@ -136,7 +136,7 @@ try {
 	 //$sql = "select column_name from information_schema.columns where table_name = 'kartakoTabela'";
  
    $sql = "select column_name from information_schema.columns where table_name = '$tabulka'";
-   echo $sql, "<br>";
+   //echo $sql, "<br>";
 //Prepare our SQL statement,
     $statement = $this->conn->prepare($sql);
    echo "To so stolpci tabele: " . $tabulka, "<br>";

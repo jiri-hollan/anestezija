@@ -1,19 +1,21 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title></title>
 </head>
 <body>
-
+-->
 <?php
-
+require_once '../skupne/sabloni/zahlavi.php';
  $imeTable  = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $imeTable = test_input($_POST["imeTable"]);
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+		if (isset($_GET['imeTable'])){
+  $imeTable = test_input($_GET["imeTable"]);
   //$imeTable = pokaziStolpce($_POST["imeTable"]);
   $imeTable = pokaziStolpce($imeTable);
+		}
 }
  function test_input($data) {
   $data = trim($data);
@@ -29,8 +31,10 @@ $databaseGloboka->	pokaziStolpce($tabulka);
 }
 ?>
 <h2>Prikaz stolpcev v izbrani tabeli</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="imeTable">
+<form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Name: 
+  <input type="text" name="imeTable">
+  <input type="hidden" name="nazaj" value= <?php echo $nazaj;?>> 
   <br><br>
  
   <br><br>
