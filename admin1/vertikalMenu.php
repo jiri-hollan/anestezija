@@ -7,14 +7,16 @@ class Vertikal extends Administrace {
    public function __construct() {
 	       parent::__construct();
 		   
-  if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {			   
+  if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {
+$nazaj="../admin1/vertikalMenu.php";	  
 echo '
 
 <h1>Menu servis</h1>
 <ul id="linky1">
 <li><a href="konekt.php">Pripoji se na server</a></li>
 <li><a href="odklop.php">Odpoji se od serverja</a></li>
-<li><a href="selektPrikazi.php">prikazi izbrano tabelo</a></li>
+<li><a href="selektPrikazi.php?nazaj='.$nazaj.'">prikazi izbrano tabelo</a></li>
+
 <li><a href="doSql.php">vnesi in poženi SQL</a></li>
 <li><a href="pokaziTable.php">pokaži Table</a></li>
 <li><a href="pokaziStolpce.php">pokaži Stolpce</a></li>

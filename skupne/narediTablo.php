@@ -58,7 +58,8 @@ $conn = null;
 
 }//uzavírací zavorky function narediSql
 //-------------------konec function narediSql-------
-public function ogled($imeTable) {
+public function ogled($imeTable) { 
+if ($imeTable!=""){
 try {
 
 $sql = "select column_name from information_schema.columns where table_name =  '$imeTable'";
@@ -98,7 +99,7 @@ $sql = "select column_name from information_schema.columns where table_name =  '
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
     }
-
+}//id if
 $conn = null;
 }//uzavírací zavorky function ogled
 //-------------------konec function ogled-------

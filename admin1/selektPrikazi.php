@@ -10,12 +10,15 @@
 
 <?php
 // define variables and set to empty values
-$name  = "";
+$nazaj  = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = test_input($_POST["name"]);
-
-   prikazi($name);
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+	if (isset($_GET['nazaj'])){
+  $nazaj = test_input($_GET['nazaj']);
+	}else{	
+	//var_dump($nazaj); 
+	echo "nazaj ne obstaja";	
+	}
 }
 
 function test_input($data) {
@@ -31,7 +34,7 @@ echo '
 <form method="get" action="../skupne/ogledTabele.php">
 Ime table: 
 <input type="text" name="imeTable">
-<input type="hidden" name="nazaj" value= "../admin1/vertikalMenu.php">
+<input type="hidden" name="nazaj" value='. $nazaj.'>
 <input type="submit" name="submit" value="submit">  
 </form>
 ';
