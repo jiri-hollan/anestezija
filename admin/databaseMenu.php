@@ -7,13 +7,14 @@ class Manipulace extends Administrace {
    public function __construct() {
 	       parent::__construct();
 		   
-  if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {			   
+  if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {
+$nazaj="../admin/databaseMenu.php";	  
 echo '
 <div id="manipulace">
 <h1>Menu servis</h1>
 <ul id="linky1">
 
-<li><a href="selektPrikazi.php">prikazi izbrano tabelo</a></li>
+<li><a href="selektPrikazi.php?nazaj='.$nazaj.'">prikazi izbrano tabelo</a></li>
 <li><a href="../admin1/pokaziTable.php">pokaži Table</a></li>
 <li><a href="../admin1/pokaziStolpce.php">pokaži Stolpce</a></li>
 <li><a href="../admin1/navodila/kreateTableVse.php" >Naredi Tabele </a></li>
