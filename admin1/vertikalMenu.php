@@ -16,7 +16,6 @@ echo '
 <li><a href="konekt.php">Pripoji se na server</a></li>
 <li><a href="odklop.php">Odpoji se od serverja</a></li>
 <li><a href="../admin/selektPrikazi.php?nazaj='.$nazaj.'">prikazi izbrano tabelo</a></li>
-
 <li><a href="doSql.php">vnesi in poženi SQL</a></li>
 <li><a href="pokaziTable.php">pokaži Table</a></li>
 <li><a href="pokaziStolpce.php">pokaži Stolpce</a></li>
