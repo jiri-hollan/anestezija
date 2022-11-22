@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -7,8 +7,9 @@
 <body>
 
 <h2>Vsebina table</h2>
-
+-->
 <?php
+require_once '../skupne/sabloni/zahlavi.php';
 // define variables and set to empty values
 $nazaj  = "";
 
