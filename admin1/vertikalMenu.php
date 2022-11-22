@@ -17,8 +17,8 @@ echo '
 <li><a href="odklop.php">Odpoji se od serverja</a></li>
 <li><a href="../admin/selektPrikazi.php?nazaj='.$nazaj.'">prikazi izbrano tabelo</a></li>
 <li><a href="doSql.php">vnesi in poženi SQL</a></li>
-<li><a href="pokaziTable.php">pokaži Table</a></li>
-<li><a href="pokaziStolpce.php">pokaži Stolpce</a></li>
+<li><a href="pokaziTable.php?nazaj='.$nazaj.'">pokaži Table</a></li>
+<li><a href="pokaziStolpce.php?nazaj='.$nazaj.'">pokaži Stolpce</a></li>
 <li><a href="serverInformace.php">Informace o serveru</a></li>
 </ul>
 <h1>Menu navodila</h1>
