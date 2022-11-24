@@ -10,14 +10,10 @@
 <title>Anestiz</title>
 </head>
 <body>
-  <!--<a class="active" href="../../frontend/menuFile1.php">Domov</a>-->
-  
+ 
   <div class="topnav">
   <a class="active" href="../../frontend/menuFile1.php">Domov</a>
-  <!--<a href="../frontend/index.php">Administrace</a>-->
-<!--<a href="../frontend/odhlaseni.php?stav=odhlasit">Odjava in prijava</a>-->
-    <a id="prij" href="../../frontend/prihlaseni.php?r=logout&stav=odhlasit">odjava</a>
-  <!--<a href="#about">About</a>-->
+  <a id="prij" href="../../frontend/prihlaseni.php?r=logout&stav=odhlasit">odjava</a>
   <a href="../../frontend/prihlaseni.php?r=profil">Moj profil</a>
 
 </div>
