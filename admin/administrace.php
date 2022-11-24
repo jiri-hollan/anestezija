@@ -21,7 +21,7 @@ class Administrace {
 		  if ($uplinuliCas > $casoviLimit) {
 			  session_unset();
 			  session_destroy();
-			  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
+			  header('Location: ' . $this->zaklad->url . '../frontend/prihlaseni.php?stav=neaktivni');
 			  exit();
 		  }
 	  }
@@ -30,7 +30,7 @@ class Administrace {
 	  if (empty($prihlasen)) {
 		  session_unset();
 		  session_destroy();
-		  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');		   
+		  header('Location: ' . $this->zaklad->url . '../frontend/prihlaseni.php?stav=odhlasit');		   
 		  exit();
 	  } else {
 		  $this->conn = new Database();
