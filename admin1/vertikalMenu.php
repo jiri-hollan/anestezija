@@ -1,7 +1,7 @@
 <?php
 echo 'Menipulacija z bazo';
-require_once('sabloni/vkladane/zahlavi.php');
-require_once('administrace.php');
+require_once('../admin/sabloni/vkladane/zahlavi.php');
+require_once('../admin/administrace.php');
 
 class Vertikal extends Administrace {
    public function __construct() {
@@ -34,5 +34,5 @@ echo '
    }//od construct 
 }//od class vertikal  
  $adminVnertikal = new Vertikal(); 
-require_once('sabloni/vkladane/zapati.php'); 
+require_once('../admin/sabloni/vkladane/zapati.php'); 
 ?>
