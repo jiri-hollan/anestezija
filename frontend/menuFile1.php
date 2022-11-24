@@ -40,17 +40,12 @@ echo '<nav id= "glavnaNav">
       echo '</ul></nav>';
    }//od construct
 }//od class MenuAnestiz  
- $adminAnestiz = new MenuAnestiz(); 
+$adminAnestiz = new MenuAnestiz(); 
+$uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
 require_once('sabloni/vkladane/zapati.php'); 
 ?>
+<script>	
+	document.getElementById("uname").innerHTML = "prijavljen je: " + " " + "<?= $uname ?>";
+	document.getElementById("dom").innerHTML = "doma";		
+</script>
 
-<script>
-    //document.getElementById("prij").innerHTML = "Odjava";
-	//document.getElementById("uname").innerHTML = "prijavljen";
-	<?php 
-		$uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
-	?>
-	document.getElementById("uname").innerHTML = "prijavljen: " + " " + "<?= $uname ?>";
-	document.getElementById("dom").innerHTML = "doma";	
-	
-     </script>
