@@ -1,13 +1,7 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title></title>
-</head>
-<body>
-<?php
 
+<?php
+require_once '../skupne/sabloni/zahlavi.php';
 class NarediBazo {
 	
 	public $servername = '';
