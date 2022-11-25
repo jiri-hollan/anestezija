@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title></title>
-</head>
-<body>
 
+<?php
+require_once '../skupne/sabloni/zahlavi.php';
+
+echo '
 <h2>Naredi tabelo</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<form method="post" action="'. htmlspecialchars($_SERVER["PHP_SELF"]).'">  
 
   <label for="besedila">besedila</label>
   <input type="radio" id="besedila" name="name" value="besedila">
@@ -29,26 +26,20 @@
       
    <label for="bolnik">bolnik</label>
    <input type="radio" id="bolnik" name="name" value="bolnik"> 
-    
- <!--  <label for="lala">lala</label>
-   <input type="radio" id="lala" name="name" value="lala"> 
-   
-   <label for="lala">lala</label>
-   <input type="radio" id="lala" name="name" value="lala"> 
-   -->
-   
+   <input type="hidden" name="nazaj" value='. $nazaj.'>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
   <br>
-</form>
-
+</form>';
+?>
 <?php
 // define variables and set to empty values
 $name  = "";
 $ime  = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = test_input($_POST["name"]);
+  $name = test_input($_POST["name"]);    
   $name = naredi($name);
+
 }
 
 function test_input($test) {
