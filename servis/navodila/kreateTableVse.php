@@ -28,11 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = naredi($name);
 }
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
+function test_input($test) {
+  $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
+  return $test;
 }
 function naredi($ime) {
 include '../../skupne/narediTablo.php';	

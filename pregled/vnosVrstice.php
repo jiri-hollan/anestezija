@@ -95,8 +95,6 @@ if (isset($_POST[$stolpec])) {
 	
 }//od foreach
 
-//$database = new database;
-//var_dump ($database);
 $ulozeno = $this->conn->vloz($this->nameTable, $data);
 			echo 'Zapis vnesen v tabelo';
 			//var_dump ($ulozeno);			
@@ -111,14 +109,6 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
 	echo 'window.location.href = "bolnik\.php";';
     echo '</script>';	
 	return;		
-	//header('Location: bolnik.php');		
-/*function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}*/
-
 } //od if 
 
 	} //od construct

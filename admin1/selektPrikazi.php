@@ -1,13 +1,4 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title></title>
-</head>
-<body>
 
-<h2>Vsebina table</h2>
--->
 <?php
 require_once '../skupne/sabloni/zahlavi.php';
 // define variables and set to empty values
@@ -22,11 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	}
 }
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
+function test_input($test) {
+  $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
+  return $test;
 }
 
 echo '

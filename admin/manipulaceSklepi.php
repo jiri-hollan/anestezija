@@ -31,7 +31,6 @@ function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
   $test = htmlspecialchars($test);
- // $test = strtolower($test);
   return $test;
 }
 

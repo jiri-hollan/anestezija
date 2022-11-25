@@ -104,21 +104,8 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
 			echo '<br>last id: '.$ulozeno["lastId"];
 			
 		 $lastId = $ulozeno["lastId"];
-
-   // echo '<script>';
-    //echo 'sessionStorage.setItem("bolnikId",'. $bolnikId .');';		
-    //echo 'alert("vnos vrstice: "+sessionStorage.getItem("bolnikId"));';
-	//echo 'window.location.href = "bolnik\.php";';
-   // echo '</script>';	
 	return;		
-	//header('Location: bolnik.php');		
-/*function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}*/
-
+	
 } //od if 
 
 	} //od construct

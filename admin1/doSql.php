@@ -28,15 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
+function test_input($test) {
+  $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
   echo "<br>";
-  echo  "Funkcija test data=" . " " . $data;
- 
-  
-  return $data;
+  echo  "Funkcija test_input=" . " " . $test; 
+  return $test;
 }
 ?>
 
