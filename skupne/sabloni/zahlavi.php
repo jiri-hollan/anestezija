@@ -11,8 +11,11 @@
 <?php
 if (isset($_GET['nazaj'])){
 $nazaj = $_GET['nazaj'];
+}elseif (isset($_POST['nazaj'])){		  
+      $nazaj = test_input($_POST['nazaj']);	
+  	//var_dump($nazaj); 
 }else {
-$nazaj = "../frontend/menuFile1.php";
+     $nazaj = "../frontend/menuFile1.php";
 }
 echo '
  <a class="active" href=' .$nazaj.'>Nazaj</a>
