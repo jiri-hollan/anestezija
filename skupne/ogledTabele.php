@@ -1,8 +1,13 @@
 <?php
 require_once 'sabloni/zahlavi.php';
 	  // $imeTable = 'limitiTbl';
+	  if (isset($_POST['imeTable'])){
+		  
+	   $imeTable = $_POST['imeTable'];		  
+	  }
+	  if (isset($_GET['imeTable'])){	  
 	   $imeTable = $_GET['imeTable'];
-	   
+	  }
 echo "<table style='border: solid 1px black;'>";
 // echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";
 

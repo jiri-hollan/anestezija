@@ -32,7 +32,7 @@ function test_input($data) {
 echo '
 <p>vnesi ime tabele and click OK:</p>
 
-<form method="get" action="../skupne/ogledTabele.php">
+<form method="post" action="../skupne/ogledTabele.php">
 Ime table: 
 <input type="text" name="imeTable">
 <input type="hidden" name="nazaj" value='. $nazaj.'>
