@@ -1,15 +1,22 @@
 <?php
 require_once 'sabloni/zahlavi.php';
 	  // $imeTable = 'limitiTbl';
-	  if (isset($_POST['imeTable'])){
-		  
-	   $imeTable = $_POST['imeTable'];		  
+	  
+function test_input($test) {
+  $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
+  return $test;
+}
+	  
+	  if (isset($_POST['imeTable'])){		  
+	   $imeTable = test_input($_POST['imeTable']);		  
 	  }
 	  if (isset($_GET['imeTable'])){	  
-	   $imeTable = $_GET['imeTable'];
+	   $imeTable = test_input($_GET['imeTable']);
 	  }
+echo $imeTable;	  
 echo "<table style='border: solid 1px black;'>";
-// echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
