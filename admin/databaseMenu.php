@@ -15,9 +15,9 @@ echo '
 <ul id="linky1">
 
 <li><a href="selektPrikazi.php?nazaj='.$nazaj.'">prikazi izbrano tabelo</a></li>
-<li><a href="../admin1/pokaziTable.php?nazaj='.$nazaj.'">pokaži Table</a></li>
+<!--<li><a href="../admin1/pokaziTable.php?nazaj='.$nazaj.'">pokaži Table</a></li>
 <li><a href="../admin1/pokaziStolpce.php?nazaj='.$nazaj.'">pokaži Stolpce</a></li>
-<li><a href="../admin1/navodila/kreateTableVse.php" >Naredi Tabele </a></li>
+<li><a href="../admin1/navodila/kreateTableVse.php" >Naredi Tabele </a></li>-->
 </ul>
 
 <h1>Besedila</h1>
