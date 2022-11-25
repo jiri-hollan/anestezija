@@ -1,7 +1,5 @@
 <?php
 require_once 'sabloni/zahlavi.php';
-	  // $imeTable = 'limitiTbl';
-	  
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);

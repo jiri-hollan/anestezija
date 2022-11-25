@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
 
 <?php
+require_once '../skupne/sabloni/zahlavi.php';
 echo 'PHP_SELF: ' . $_SERVER['PHP_SELF'];
 echo "<br>";
 echo 'SERVER_NAME: ' . $_SERVER['SERVER_NAME'];

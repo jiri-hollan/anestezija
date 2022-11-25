@@ -1,15 +1,6 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title></title>
-</head>
-<body>
-
-
-
 <?php
+require_once '../skupne/sabloni/zahlavi.php';
 // define variables and set to empty values
 $kodaSql = "";
 
