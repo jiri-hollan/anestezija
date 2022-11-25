@@ -36,7 +36,7 @@ echo '
 // define variables and set to empty values
 $name  = "";
 $ime  = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST"&& isset($_POST["name"])) {
   $name = test_input($_POST["name"]);    
   $name = naredi($name);
 
