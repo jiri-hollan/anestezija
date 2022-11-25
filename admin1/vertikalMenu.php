@@ -24,8 +24,8 @@ echo '
 <h1>Menu navodila</h1>
 <ul id="linky1">
 
-<li><a href="../admin1/navodila/kreateBaseNavodila.php">naredi bazo: navodila</a></li>
-<li><a href="../admin1/navodila/kreateTableVse.php">naredi tabele</a></li>
+<li><a href="kreateBaseNavodila.php">naredi bazo: navodila</a></li>
+<li><a href="kreateTableVse.php">naredi tabele</a></li>
 </ul>
 ';
      } else {

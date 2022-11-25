@@ -58,7 +58,7 @@ function test_input($test) {
   return $test;
 }
 function naredi($ime) {
-include '../../skupne/narediTablo.php';	
+include '../skupne/narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;	
 switch ($ime) {	
 case "besedila":
