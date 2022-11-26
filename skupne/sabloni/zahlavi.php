@@ -10,7 +10,8 @@
 <div class="topnav">
 <?php
 if (isset($_GET['nazaj'])){
-$nazaj = $_GET['nazaj'];
+//$nazaj = $_GET['nazaj'];
+      $nazaj = test_input($_GET['nazaj']);	
 }elseif (isset($_POST['nazaj'])){		  
       $nazaj = test_input($_POST['nazaj']);	
   	//var_dump($nazaj); 
