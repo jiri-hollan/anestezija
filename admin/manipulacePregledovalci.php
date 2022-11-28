@@ -24,22 +24,11 @@ require_once '../skupne/sabloni/zahlavi.php';
  
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 include '../skupne/database.php';
-/*xxfunction test_input($test) {
-  $test = trim($test);
-  $test = stripslashes($test);
-  $test = htmlspecialchars($test);
- // $test = strtolower($test);
-  return $test;
-}*/
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
 
- // $ime = test_input($_POST["ime"]);
-  //$priimek = test_input($_POST["priimek"]);
- // $status = test_input($_POST["status"]);
   echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
@@ -100,8 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 	odstraniFunction($podminka);
     // odstraniFunction();
     break;	
-	
-    /*  ...*/
   default:
     echo "ni izvelo get case"; 
   }//od switch	  
@@ -113,14 +100,7 @@ function vyberFunction($podminka){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
 $stolpci=["*"];
-//$stolpci=["ime","priimek"];
-//$podminka = array("ime"=>"Jiří");
-//$podminka = array("bolnisnica"=>$bolnisnica);
-//$podminka = array("ime"=>"Jiří", "Ben"=>"37", "Joe"=>"43");
-
 $vyber = new database();
-//$vyber = new database($tabulka, $stolpci, $podminka );
-//$vyber->vyber($tabulka, $stolpci, $podminka);
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
@@ -168,8 +148,6 @@ echo "Za izbrano bolnisnico ni zapisa v bazi";
 function vlozFunction($data){
 //$tabulka="uporabnikiTbl2";
 $tabulka="pregledovalciTbl";
-//$data= array("bolnisnica"=>"izola", "ime"=>"Lela", "priimek"=>"Hollan", "status"=>"1");
-
 $vloz = new database($tabulka,$data);
 //$vloz->vloz($tabulka,$data);
 $vlozeno=$vloz->vloz($tabulka,$data );
@@ -204,10 +182,7 @@ foreach ($vybrano[$i] as $key => $value) {
 }//od foreach
 echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button type='submit'>submit</button><button type='reset'>reset</button> ";
 echo "</form>";
-}//od for	
-	
-	
-	
+}//od for		
 }//od editFunction
 
 function odstraniFunction($podminka){
