@@ -3,20 +3,15 @@ require_once '../skupne/sabloni/zahlavi.php';
 ?>
 <!--konec zahlavi-->
 <h2>PHP Form izbira funkcije</h2>
-
 <button onclick="izborFunction('vyber')">vyber</button>
 <button onclick="izborFunction('vloz')">vlož</button>
-
-
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
 <p id="posli"></p>
-<!--<input type="submit" name="submit" value="Submit"> -->
+<!--submit iz js -->
 </form>
  <br>
-<!-- <p id="demo1">demo1</p>
-<p id="demo2">demo2</p>-->
 <p id="demo3"></p>
 <?php
  
@@ -25,9 +20,6 @@ include '../skupne/database.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $mesto = test_input($_POST["mesto"]);
-
- // $nazivB = test_input($_POST["nazivB"]);
- // $status = test_input($_POST["status"]);
   echo strtoupper($akce) .': ';
   echo strtoupper($mesto) .'<br>';
   //echo var_dump($status) .'<br>';
@@ -58,11 +50,9 @@ case "uredi":
     $data= array("mesto"=>$mesto, "nazivB"=>$nazivB, "status"=>$status);
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
-
     break;
   default:
-    echo "ni izvelo case";
-	
+    echo "ni izvelo case";	
 }//od switch
 }//od if
 
@@ -84,24 +74,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 	echo "<br>";
     $podminka = array("id"=>$id);
 	odstraniFunction($podminka);
-    // odstraniFunction();
     break;	
-	
-    /*  ...*/
   default:
     echo "ni izvelo get case"; 
   }//od switch	  
 }//od if
 
-
-
 function vyberFunction($podminka){
-//$tabulka="uporabnikiTbl2";
 $tabulka="bolnisniceTbl";
 $stolpci=["*"];
-//$podminka = array("ime"=>"Jiří");
-//$podminka = array("mesto"=>$mesto);
-
 $vyber = new database();
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
@@ -112,7 +93,6 @@ echo count($vybrano);
 //echo $vybrano[1];
 echo "<br>";
 if(count($vybrano)>0){
-
 echo "<table id='osebe' style='border: solid 1px black;'>";
 echo "<tr><th>Id</th><th>mesto</><th>nazivB</th><th>status</th></tr>";
 
@@ -183,10 +163,7 @@ foreach ($vybrano[$i] as $key => $value) {
 }//od foreach
 echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button type='submit'>submit</button><button type='reset'>reset</button> ";
 echo "</form>";
-}//od for	
-	
-	
-	
+}//od for		
 }//od editFunction
 
 function odstraniFunction($podminka){
@@ -196,12 +173,9 @@ function odstraniFunction($podminka){
 	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
 	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
 }//od odstraniFunction
-
 ?>
-
 <script src="js/manipulaceBolnisnice.js?<?php echo time(); ?>">
 </script>
-
 <!--zapati-->
 </body>
 </html>
