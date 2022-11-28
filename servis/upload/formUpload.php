@@ -8,18 +8,11 @@
 <link rel="stylesheet" href="../../css/vnos.css?<?php echo time(); ?>">
 </head>
 <body>
-<!--<a id="buttonDomov" href="../../menuFile.php" >Domov</a>
-    <a id="buttonDomov" href="../../admin/menuFile1.php" >Domov</a>-->
 <?php
-
 require_once('../../skupne/home.php');
-
 echo '<a id="buttonDomov" href="../' . $home . '" >Domov</a>';
 ?>
-
-
 <h1><form action="uploadM.php" method="post" enctype="multipart/form-data">
-
 	<?php
 	//"$_GETrazpored" določi, kam se pdf naloži
 	echo '<input type="hidden" name="direktorij" value="' . $_GET["direktorij"] . '" required><br>';
