@@ -19,6 +19,13 @@
 </div>
 
 
- <?php require_once('sabloni/oznamovaci-oblast.php');  ?> 
+ <?php require_once('sabloni/oznamovaci-oblast.php');  
+ function test_input($test) {
+  $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
+  return $test;
+} 
+ ?> 
 
 

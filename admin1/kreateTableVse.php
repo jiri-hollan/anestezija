@@ -41,13 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"&& isset($_POST["name"])) {
   $name = naredi($name);
 
 }
-
+/*xx
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
   $test = htmlspecialchars($test);
   return $test;
-}
+}*/
 function naredi($ime) {
 include '../skupne/narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;	

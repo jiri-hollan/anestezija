@@ -10,12 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
   $imeTable = pokaziStolpce($imeTable);
 		}
 }
+/*xx
  function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
   $test = htmlspecialchars($test);
   return $test;
-} 
+} */
 function pokaziStolpce($tabulka) {
 include '../skupne/narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;	

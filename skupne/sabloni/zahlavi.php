@@ -21,6 +21,12 @@ if (isset($_GET['nazaj'])){
 echo '
  <a class="active" href=' .$nazaj.'>Nazaj</a>
  ';
+function test_input($test) {
+  $test = trim($test);
+  $test = stripslashes($test);
+  $test = htmlspecialchars($test);
+  return $test;
+} 
  ?>
 </div>
 

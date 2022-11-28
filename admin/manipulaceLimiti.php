@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="cs-SI">
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+-->
+<?php
+require_once '../skupne/sabloni/zahlavi.php';
+?>
 <!--konec zahlavi-->
 <h2>PHP Form izbira funkcije</h2>
 
@@ -27,13 +31,14 @@
  
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 include '../skupne/database.php';
+/*xx
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
   $test = htmlspecialchars($test);
  // $test = strtolower($test);
   return $test;
-}
+}*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);

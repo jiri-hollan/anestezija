@@ -1,11 +1,11 @@
 <?php
 require_once 'sabloni/zahlavi.php';
-function test_input($test) {
+/*xxfunction test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
   $test = htmlspecialchars($test);
   return $test;
-}
+}*/
 	  
 	  if (isset($_POST['imeTable'])){		  
 	   $imeTable = test_input($_POST['imeTable']);		  

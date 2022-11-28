@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  mojSql($kodaSql);
 
 }
-
+/*xx
 function test_input($test) {
   $test = trim($test);
   $test = stripslashes($test);
@@ -26,7 +26,7 @@ function test_input($test) {
   echo "<br>";
   echo  "Funkcija test_input=" . " " . $test; 
   return $test;
-}
+}*/
 ?>
 
 <h2>Vnesi stavek SQL in potrdi</h2>
