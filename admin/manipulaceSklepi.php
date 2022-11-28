@@ -15,20 +15,11 @@ require_once '../skupne/sabloni/zahlavi.php';
 <!--<input type="submit" name="submit" value="Submit"> -->
 </form>
  <br>
-<!-- <p id="demo1">demo1</p>
-<p id="demo2">demo2</p>-->
 <p id="demo3"></p>
 <?php
  
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 include '../skupne/database.php';
-/*xxfunction test_input($test) {
-  $test = trim($test);
-  $test = stripslashes($test);
-  $test = htmlspecialchars($test);
-  return $test;
-}*/
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
@@ -93,26 +84,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 	odstraniFunction($podminka);
     // odstraniFunction();
     break;	
-	
-    /*  ...*/
   default:
     echo "ni izvelo get case"; 
   }//od switch	  
 }//od if
 
-
-
 function vyberFunction($podminka){
 //$tabulka="uporabnikiTbl2";
 $tabulka="sklepiTbl";
 $stolpci=["*"];
-
-//$podminka = array("bolnisnica"=>$bolnisnica);
-
-
 $vyber = new database();
-//$vyber = new database($tabulka, $stolpci, $podminka );
-//$vyber->vyber($tabulka, $stolpci, $podminka);
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
