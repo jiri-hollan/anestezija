@@ -77,33 +77,20 @@ Class Prijava extends Prihlaseni {
 	   $_SESSION["pristop"] = $pristop;
 	   $_SESSION["uname"] = $uname;
 	  //echo $status;
-	  // header('Location: ' . $this->zaklad->url . 'prispevki.php');
-	 // header('Location: ' .  'prispevki.php');
-	
-	// header('Location: '.'menuFile1.php'); 
-	// header('Location: ' .  'vertikalMenu.php');
-	
 	echo '<script type="text/JavaScript"> 
      location.replace("menuFile1.php"); 
      </script>';
 	   exit();
-	}
-	
+	}	
 	public function prihlaseniSelhalo() {
 		echo 'Napačno uporabniško ime ali geslo. ';
 	   return ;
-	}
-	
+	}	
 	public function overUdaje() {
 		if (!empty($_POST['uname']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
 			$uporabnikiTbl2 = $this->conn->vyber('uporabnikiTbl2', array('status', 'pristop', 'uname'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
-         //echo $uporabnikiTbl2[0]['status'];
-		 //$status=$uporabnikiTbl2[0]['status'];
-		// echo $status;
-		//echo var_dump($uporabnikiTbl2) .'<br>';
-	
-		
+
 		if (count($uporabnikiTbl2) == 1)	{
 			$status=$uporabnikiTbl2[0]['status'];			
 			//echo $status;
