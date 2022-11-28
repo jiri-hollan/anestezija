@@ -1,5 +1,5 @@
 <?php
-echo 'Menipulacija z bazo';
+echo 'napredna manipulacija z bazo';
 require_once('../admin/sabloni/vkladane/zahlavi.php');
 require_once('../admin/administrace.php');
 
