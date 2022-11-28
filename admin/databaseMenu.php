@@ -23,22 +23,22 @@ echo '
 <h1>Pregledovalci</h1>
 <ul id="linky3">
 <li><a href="../skupne/ogledTabele.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">prikaži pregledovalce</a></li>
-<li><a href="../admin/manipulacePregledovalci.php">upravljanje z pregledovalci</a></li>
+<li><a href="../admin/manipulacePregledovalci.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">upravljanje z pregledovalci</a></li>
 </ul>
 <h1>Limiti</h1>
 <ul id="linky4">
 <li><a href="../skupne/ogledTabele.php?imeTable=limitiTbl&nazaj='.$nazaj.'">prikaži limite</a></li>
-<li><a href="../admin/manipulaceLimiti.php">uredi limite</a></li>
+<li><a href="../admin/manipulaceLimiti.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">uredi limite</a></li>
 </ul>
 <h1>Sklepi</h1>
 <ul id="linky5">
 <li><a href="../skupne/ogledTabele.php?imeTable=sklepiTbl&nazaj='.$nazaj.'">prikaži sklepe</a></li>
-<li><a href="../admin/manipulaceSklepi.php">upravljanje s sklepi</a></li>
+<li><a href="../admin/manipulaceSklepi.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">upravljanje s sklepi</a></li>
 </ul>
 <h1>Bolnišnice</h1>
 <ul id="linky6">
 <li><a href="../skupne/ogledTabele.php?imeTable=bolnisniceTbl&nazaj='.$nazaj.'">prikaži bolnisnice</a></li>
-<li><a href="../admin/manipulaceBolnisnice.php">upravljanje z bolnišnicami</a></li><br>
+<li><a href="../admin/manipulaceBolnisnice.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">upravljanje z bolnišnicami</a></li><br>
 </ul>
 </div>
 ';
