@@ -14,18 +14,14 @@ switch(akce) {
     document.getElementById("demo").innerHTML = skupina + ime + min + max;
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
-
   case "uredi":
   //alert("v JS case edit");
   if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);
 }
-
     break;
 
-  case "odstrani":
-
-  
+  case "odstrani":  
   if ( confirm("v funkciji JS odstrani\odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
     document.getElementById("osebe").addEventListener("click", functionOver);
@@ -33,15 +29,6 @@ switch(akce) {
 } else {
   text = "You canceled!";
 }
-  
-  
- /* if(document.getElementById("osebe")!=null){
- document.getElementById("osebe").addEventListener("click", functionOver);
- 
-}*/
-
-    // code block
-
     break;	
   default:
     // code block
@@ -53,11 +40,7 @@ var x = e.target;
 if (x.nodeName == "TD") {
 var y = e.path[1];
 row_value = y.cells[0].innerHTML;
- /* document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
-  document.getElementById("demo2").innerHTML = "Triggered by a " + x.innerHTML + " element";  */
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
- }//od if
- 
- window.location.href = "manipulaceLimiti.php?akce=" + x.innerHTML + "&id=" + row_value;
-  
+ }//od if 
+ window.location.href = "manipulaceLimiti.php?akce=" + x.innerHTML + "&id=" + row_value;  
 }//od function(e)
