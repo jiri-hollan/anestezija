@@ -22,14 +22,6 @@ require_once '../skupne/sabloni/zahlavi.php';
  
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 include '../skupne/database.php';
-function test_input($test) {
-  $test = trim($test);
-  $test = stripslashes($test);
-  $test = htmlspecialchars($test);
- // $test = strtolower($test);
-  return $test;
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $mesto = test_input($_POST["mesto"]);
