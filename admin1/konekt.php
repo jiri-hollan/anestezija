@@ -25,6 +25,6 @@ catch(PDOException $e)
 //-----------------konec construct--------------
 }//uzavírací zavorky class Konekt
 new Konekt;
+
+require_once '../skupne/sabloni/zapati.php';
 ?>
-</body>
-</html>

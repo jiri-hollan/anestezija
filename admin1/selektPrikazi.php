@@ -11,7 +11,5 @@ Ime table:
 <input type="submit" name="submit" value="submit">  
 </form>
 ';
+require_once '../skupne/sabloni/zapati.php';
 ?>
-
-</body>
-</html>

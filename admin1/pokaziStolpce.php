@@ -25,5 +25,6 @@ $databaseGloboka->	pokaziStolpce($tabulka);
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
-</body>
-</html>
+<?php
+require_once '../skupne/sabloni/zapati.php';
+?>

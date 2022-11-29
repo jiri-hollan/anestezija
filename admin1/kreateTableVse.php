@@ -165,8 +165,6 @@ default:
  echo "<h2>Your Input: ".$ime."</h2>";
 echo "<br>"; 
 }// od function naredi($ime)
+
+require_once '../skupne/sabloni/zapati.php';
 ?>
-
-
-</body>
-</html>

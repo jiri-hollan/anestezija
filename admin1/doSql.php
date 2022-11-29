@@ -29,6 +29,5 @@ include '../skupne/narediTablo.php';
 $databaseGloboka=new DatabaseGloboka;
 $databaseGloboka->narediSql($kodaSql);
 }
+require_once '../skupne/sabloni/zapati.php';
 ?>
-</body>
-</html>

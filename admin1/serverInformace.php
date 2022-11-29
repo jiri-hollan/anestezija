@@ -12,6 +12,7 @@ echo "<br>";
 echo 'HTTP_USER_AGENT: ' . $_SERVER['HTTP_USER_AGENT'];
 echo "<br>";
 echo 'SCRIPT_NAME: ' . $_SERVER['SCRIPT_NAME'];
+require_once '../skupne/sabloni/zapati.php';
 ?>
 
 </body>

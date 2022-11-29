@@ -37,7 +37,5 @@ $conn = null;
 //-----------------konec construct--------------
 }//uzavírací zavorky class NarediBazo
 new NarediBazo;
+require_once '../skupne/sabloni/zapati.php';
 ?>
-
-</body>
-</html>
