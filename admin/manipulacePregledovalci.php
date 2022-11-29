@@ -194,10 +194,8 @@ function odstraniFunction($podminka){
 }//od odstraniFunction
 
 ?>
-
 <script src="js/manipulacePregledovalci.js?<?php echo time(); ?>">
 </script>
-
-<!--zapati-->
-</body>
-</html>
+<?php
+require_once '../skupne/sabloni/zapati.php';
+?>

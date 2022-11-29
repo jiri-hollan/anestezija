@@ -195,7 +195,6 @@ function odstraniFunction($podminka){
 
 <script src="js/manipulaceSklepi.js?<?php echo time(); ?>">
 </script>
-
-<!--zapati-->
-</body>
-</html>
+<?php
+require_once '../skupne/sabloni/zapati.php';
+?>

@@ -214,6 +214,6 @@ function odstraniFunction($podminka){
 <script src="js/manipulaceLimiti.js?<?php echo time(); ?>">
 </script>
 
-<!--zapati-->
-</body>
-</html>
+<?php
+require_once '../skupne/sabloni/zapati.php';
+?>
