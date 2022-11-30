@@ -1,0 +1,1 @@
+V tem folderju bodo datoteke, ki se zaženejo direktno za instaliranje podatkovne baze in SQL za instaliranje baze preko phpMyadmin.
