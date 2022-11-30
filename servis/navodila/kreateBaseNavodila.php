@@ -17,7 +17,7 @@ class NarediBazo {
 	public $connn = '';
 	
 	public Function __construct(){
-	include '../../skupne/streznik.php';
+	require_once '../../skupne/streznik.php';
 
 try {
     $this->conn = new PDO("mysql:host=" . $this->servername , $this->username, $this->password);

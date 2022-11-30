@@ -70,7 +70,7 @@ $direktorij;
 $fajl;
 
 try {		
-include '../skupne/database.php';
+require_once '../skupne/database.php';
 $tabulka=$nameTable;
    //$data= array("naslov"=>$naslov, "direktorij"=>$direktorij, "fajl"=>$fajl);
   $data= $nalozi;

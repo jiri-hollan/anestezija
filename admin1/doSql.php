@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 echo "<h2>Your Input:</h2>";
 echo $kodaSql;
 function mojSql($kodaSql) {
-include '../skupne/narediTablo.php';	
+require_once '../skupne/narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;
 $databaseGloboka->narediSql($kodaSql);
 }

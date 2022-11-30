@@ -16,7 +16,7 @@ require_once '../skupne/sabloni/zahlavi.php';
 <?php
  
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
-include '../skupne/database.php';
+require_once '../skupne/database.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $mesto = test_input($_POST["mesto"]);

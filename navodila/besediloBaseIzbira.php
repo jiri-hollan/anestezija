@@ -5,7 +5,7 @@
 <?php
 //----------prijavni podatki za podatkovno bazo odvisno od uporabljenega strežnika------
 
-include '../skupne/database.php';
+require_once '../skupne/database.php';
 
 $tabulka="besedilaTbl";
 $stolpci=["id", "naslov", "direktorij","fajl"];

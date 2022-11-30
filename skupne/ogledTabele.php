@@ -27,7 +27,7 @@ class TableRows extends RecursiveIteratorIterator {
         echo "</tr>" . "\n";
     }
 }
-include 'narediTablo.php';	
+require_once 'narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;
 $databaseGloboka->ogled($imeTable);
 

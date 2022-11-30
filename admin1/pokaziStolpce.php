@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		}
 }
 function pokaziStolpce($tabulka) {
-include '../skupne/narediTablo.php';	
+require_once '../skupne/narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;	
 $databaseGloboka->	pokaziStolpce($tabulka); 	
 }

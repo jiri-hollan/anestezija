@@ -35,7 +35,7 @@ function stariFunction() {
 //alert(localStorage.getItem("bazeBolnisnice"));
 let x=localStorage.getItem("aktivnaBolnisnica");
 let y=localStorage.getItem("bazeBolnisnice");
-let z= y.includes(x);
+let z= y.require_onces(x);
 //alert(z);
 	//IF: localStorage.getItem("aktivnaBolnisnica")== bolnišnica s statusom 2
 		if (z){
