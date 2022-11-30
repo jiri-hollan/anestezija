@@ -16,7 +16,7 @@ Class Prihlaseni {
 	  }else {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
-	}		
+	}//od construct		
 }//od class prihlaseni
 
 //___________________________________- potomstvo_______________________________________________
@@ -117,7 +117,6 @@ if (empty($_POST["ime"])) {
 	$registracija=false;	
   } else {
 	$data['ime'] = $this->test_input($_POST["ime"]);
-   // $ime = $this->test_input($_POST["ime"]);
   }	
 
 if (empty($_POST["priimek"])) {
@@ -183,7 +182,7 @@ public function overUdaje($nameTable, $data) {
 require_once('../skupne/posta.php');		
 		}   
 	  }
-}
+}//od function overUdaje
 }// od class Registrace	
 
 //____________________________konec Registrace_______________________________
@@ -195,12 +194,6 @@ Class Profil extends Prihlaseni {
 	public function __construct() {
 		    parent::__construct();
 						
-//$registracija=true;
-//$email=$geslo=$ime=$priimek=$uname=0;
-//$status = 0;
-//$nameTable = "uporabnikiTbl2";
-//echo 'Uname: '. $_SESSION["uname"];
-
 if (isset($_SESSION["uname"])) {
 $data['uname'] = $_SESSION["uname"];
 //var_dump ($data);
@@ -219,7 +212,6 @@ echo '
 } else{
 echo 'NISTE PRIJAVLJENI';	
 }
-//new SpremembaG;
   }// od construct
 }// od class profil
 //________________________________konec Profil________________________
@@ -243,8 +235,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$podminka['uname'] = $_SESSION["uname"];
 	$sGeslo = md5($_POST["sGeslo"]);
 	$podminka['geslo'] = $sGeslo;
-	
-	
+		
 	if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
     echo "napačen vnos gesla";
 	//$registracija=false;	
@@ -254,7 +245,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	//var_dump($data);
 	new Database;
 $uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
-//aktualizuj($tabulka,$data,$podminka);
 //echo 'Število aktualiziranih zapisov: ' . $uporabnikiTbl2
      if ($uporabnikiTbl2 == 1) {
 		echo 'Vaše geslo je bilo spremenjeno'; 
@@ -264,8 +254,7 @@ $uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
 	}//od if isset session
 	else {
 	echo 'Niste prijavljeni, ali je vnos gesla napačen';	
-	}
-	
+	}	
 }//od if $ server
 else {
 	echo "nekaj je narobe";
@@ -277,7 +266,6 @@ else {
 //_____________________konec clas spremembaG___________________________
 //$prihlaseni = new Prihlaseni;
 if (isset($_GET['r'])) {
-	 // echo 'poskus GET' . $_GET['r'];
 	  $r = $_GET['r'];
 switch ($r) {
   case "login":
@@ -309,4 +297,4 @@ case "spremembaG":
   default:
     //echo "Your favorite color is neither red, blue, nor green!";
 }
-}
+}//od if isset
