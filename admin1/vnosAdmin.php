@@ -48,8 +48,6 @@ Class Administrace {
 	public $conn;
 	public $zaklad;
 	public $status;
-	
-	
 	public function __construct() {
 	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();
@@ -61,8 +59,7 @@ Class Administrace {
 	  $this->nameTable = //'';
 	  
       $this->stolpci = //array(); 
-	  
-	}	
+	  }	
 	
 }//od class prihlaseni
 
@@ -74,44 +71,29 @@ Class PrviVpis extends Apregled {
 
 
 if (!empty($_POST)) {
-// define variables and set to empty values
-//$najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
-
-
-// Looping through an array using for 
-//echo "\nLOOPING array z uporabo for: \n"; 
 
 foreach ($this->stolpci as $stolpec) {
 	
 if (isset($_POST[$stolpec])) {
-	//echo $_POST[$stolpec];
 		$data[$stolpec] = trim($_POST[$stolpec]);
 		$data[$stolpec] = stripslashes($data[$stolpec]); 
 		$data[$stolpec] = htmlspecialchars($data[$stolpec]);
  } else {
 	echo $stolpec . ' ne obstaja';
   }
-  
-	
-}//od foreach
+  }//od foreach
 
-//$database = new database;
-//var_dump ($database);
 $ulozeno = $this->conn->vloz($this->nameTable, $data);
 			echo 'Zapis vnesen v tabelo';
 			//var_dump ($ulozeno);			
             //echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
 			echo '<br>last id: '.$ulozeno["lastId"];
-			
-		 $lastId = $ulozeno["lastId"];
+			$lastId = $ulozeno["lastId"];
 	return;		
 	
 } //od if 
-
 	} //od construct
 	} //od class PrviVpis
-	
-	
 //-------------------------------------------konec PrviVpis---------------------------
 
 Class SpremeniVpis extends Apregled {

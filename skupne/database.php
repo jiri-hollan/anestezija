@@ -1,7 +1,5 @@
  <?php
-
 class Database {
-	
 	public $servername = '';
 	public $username = '';
 	public $password = '';
@@ -10,26 +8,14 @@ class Database {
 	
 	public Function __construct(){
 	include 'streznik.php';
-      //$this->servername = "sh17.neoserv.si";
-   /*   $this->servername = $_SERVER['SERVER_NAME'];	  
-      $this->username = "anestiz";
-      $this->password = "laringoskop";
-      $this->dbname = "anestiz_navodila";
-
-          if ( $_SERVER['SERVER_NAME']=="localhost") {
-              $this->username = "root";
-              $this->password = "";
-              $this->dbname = "navodila";
-            }*/
 		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname . ';charset=UTF8', $this->username, $this->password);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
-	
 	}//uzavírací zavorky __construct	
 //-----------------konec construct--------------
 
 	public function vyber($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
-	//echo '<br>'.$sloupceSQL;
+//echo '<br>'.$sloupceSQL;
 	$podminkaSQL = '';
 	$parametry = array();
 	$poradiSQL = '';
@@ -40,31 +26,24 @@ class Database {
 				$podminkaSQL .=" WHERE $sloupec = ?";				
 			}else {
 				$podminkaSQL .=" AND $sloupec = ?";
-			}
+}
 			$parametry[$i] = $hodnota;
 			$i++;
-		}
 	}
+}
 	if ($poradi!=NULL){
 	   $poradiSQL = " ORDER BY " . $poradi;	
 	}
-
-	//echo $poradiSQL;
-	// echo '<br>';
-	// echo var_dump($parametry) . "<br>";
-	 // echo var_dump($podminka) . "<br>";
-	 // echo var_dump($podminkaSQL );
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL. $poradiSQL);
-	//var_dump($dotaz);
+//var_dump($dotaz);
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
-		//echo '<br>v try vyber';
+//echo '<br>v try vyber';
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
 		  $zaznamy = false;
 	  }
-	  
 	  $dotaz->closeCursor();
 	  return $zaznamy;
 	}
@@ -82,15 +61,14 @@ class Database {
 				$podminkaSQL .=" WHERE $sloupec = ?";				
 			}else {
 				$podminkaSQL .= " OR $sloupec = ?";
-			}			
+		}			
 			$parametry[$i] = $hodnota;
 			$i++;
 		}
 	}
-	
-	/*echo var_dump($parametry) . "<br>";
-	  echo var_dump($podminka) . "<br>";
-	  echo var_dump($podminkaSQL . "<br>");*/
+/*echo var_dump($parametry) . "<br>";
+echo var_dump($podminka) . "<br>";
+echo var_dump($podminkaSQL . "<br>");*/
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
 	
 	try {
@@ -111,28 +89,27 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 	$parametry = array();
    	    if (is_array($vrednosti)){
 		$podminkaSQL .=" WHERE " . $podminka ." IN" . "(";	
-        //var_dump($vrednosti);
+//var_dump($vrednosti);
         $i=0;
 		foreach($vrednosti as $i => $val) {
 		if ($i>0){
-				$podminkaSQL .=",";		
+		$podminkaSQL .=",";		
 		}	
         $podminkaSQL .="$vrednosti[$i]";
 } //od foreach
 	$podminkaSQL .=")";	
-	//echo $podminkaSQL;
+//echo $podminkaSQL;
 	}//od if array
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL);
 	
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
-		//var_dump($zaznamy);
+//var_dump($zaznamy);
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
 		  $zaznamy = false;
-	  }
-	  
+	  } 
 	  $dotaz->closeCursor();
 	  return $zaznamy;
 	} // od public function vyberIn
@@ -151,17 +128,13 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 	}
     $sloupceSQL = implode(', ', $sloupce);
     $hodnotySQL = implode(',  ', $hodnoty);
-/*	echo '<br>sloupce: '.$sloupceSQL.'<br>';
-	echo 'hodnotySQL: '.$hodnotySQL.'<br>';
-	echo 'parametry: '.var_dump($parametry).'<br>';
-	*/
     $dotaz = $this->conn->prepare("INSERT INTO $tabulka ($sloupceSQL) VALUES ($hodnotySQL)");
 
   try {
 	  $dotaz->execute($parametry);
 	  $pocetVlozenych = $dotaz->rowCount();	 
 	  $lastId = $this->conn->lastInsertId();
-	  //var_dump($lastId);
+//var_dump($lastId);
 	  
   } catch (PDOException $e) {
 	  echo $e->getMessage();
@@ -169,10 +142,9 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 	  $lastId =  false;
   }
       $vlozeno['pocetVlozenych'] = $pocetVlozenych;
-	  //var_dump ($vlozeno);
+//var_dump ($vlozeno);
 	  $vlozeno['lastId'] = $lastId;
-	 // echo $pocetVlozenych . 'zadnji Id: '. $vlozeno['lastId'];
-  //return $pocetVlozenych;
+// echo $pocetVlozenych . 'zadnji Id: '. $vlozeno['lastId'];
     return $vlozeno;
 }
 //.........konec vloz.................................................................
@@ -190,7 +162,7 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 		  return 0;
 	  }//od else
 	  $sloupceHodnotySQL = implode(', ', $sloupceHodnoty);
-  //var_dump ($sloupceHodnotySQL);
+//var_dump ($sloupceHodnotySQL);
       $podminkaSQL = '';
 	  if (is_array($podminka)) {
 		$i = 0;
@@ -203,15 +175,13 @@ public function vyberIn($tabulka, $sloupce, $podminka = NULL, $vrednosti=NULL){
 			array_push($parametry, $hodnota);
 		    $i++;
 		}// od foreach
-	//var_dump ($parametry);	
-  //var_dump ($podminkaSQL);		
+//var_dump ($parametry);	
+//var_dump ($podminkaSQL);		
 	  } else {
-		 // return;
+
 	  }
-	  
-	  
 	  $dotaz = $this->conn->prepare("UPDATE $tabulka SET $sloupceHodnotySQL".$podminkaSQL);
-  //var_dump ($dotaz);	  
+//var_dump ($dotaz);	  
 	  try {
 		 $dotaz->execute($parametry);
          $pocetAktualizovanych = $dotaz->rowCount();		 

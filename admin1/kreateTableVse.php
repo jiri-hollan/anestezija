@@ -33,13 +33,11 @@ echo '
 </form>';
 ?>
 <?php
-// define variables and set to empty values
 $name  = "";
 $ime  = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST"&& isset($_POST["name"])) {
   $name = test_input($_POST["name"]);    
   $name = naredi($name);
-
 }
 
 function naredi($ime) {
@@ -165,10 +163,5 @@ default:
  echo "<h2>Your Input: ".$ime."</h2>";
 echo "<br>"; 
 }// od function naredi($ime)
-
-
+require_once '../skupne/sabloni/zapati.php';
 ?>
-
-
-</body>
-</html>

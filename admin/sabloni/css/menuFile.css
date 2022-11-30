@@ -44,14 +44,11 @@ li a {
 
 }
 #manipulace li {
-  /*float: left;*/
   padding: 5px 1px;
   cursor: pointer;
 }	
 
 #manipulace li a {
-
-  /*display: block:*/
   text-align: center;
   color: white;
   font-size: 20px;

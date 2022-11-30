@@ -11,9 +11,6 @@ div.celaStran {
     left: 2px;
     height: 2.5cm;
     width: 5.5cm;
-    /*border-width:1px;  
-    border-style:solid;
-    padding: 12px;*/
 } 
 h1 {
   position: absolute;
@@ -38,9 +35,6 @@ h1 {
     height: 1cm;
     width: 10cm;
     text-align: left;
-   /* border-width:1px;  
-    border-style:solid;
-    margin: 3px; */
 }
 .paragrafi {
 position: relative;	
@@ -50,26 +44,12 @@ top: 170px;
 position: relative;
     top: 0px;
     left: 2px;
-	/*background-color: Tomato;*/
 	text-align: left;
     height: 0.6cm;
-    /*height: 1cm;*/
     width: 98%;
-  /*  border-width:1px;  
-    border-style:solid;  
-    margin: 1px; */
 }
-/*
-#diagnozaR {
-  
-    top: 4px;
-    border-bottom-width:1px; 
-    border-bottom-style:solid;
-    
-}*/
 
 #diagnozaR {
-    /*  position: relative;*/ 
     top: 10px;
     border-width:1px; 
     border-style:solid;
@@ -86,35 +66,9 @@ position: relative;
    
 }
 .labR {
-   /*  position: relative;
-    top: 2px;
-    left: 2px;
-    height: 1cm;
-    width: 98%;
-    border-width:1px;  
-    border-style:solid; 
-    margin: 3px;  */
+
 }
- /* #ekgR {
-  position: relative;
-    top: 0px;
-    left: 2px;
-    height: 1cm;
-    width: 98%;
-    border-width:1px;  
-    border-style:solid; 
-    margin: 3px;  
-}
-#rtgR {
-   position: relative;
-    top: 0px;
-    left: 2px;
-    height: 1cm;
-    width: 98%;
-    border-width:1px;  
-    border-style:solid; 
-    margin: 3px; 
-}*/ 
+
 
 .asmalR {
      position: relative;
@@ -122,8 +76,6 @@ position: relative;
     left: 2px;
     height: 0.8cm;
     width: 98%;
-    /*border-width:1px;  
-    border-style:solid; */
     margin: 3px;  
 }
 
@@ -135,8 +87,6 @@ position: relative;
     left: 2px;
     height: 15cm;
     width: 98%;
-    /*border-width:1px;  
-    border-style:solid; */
     margin: 1px;  
 }
 
@@ -160,23 +110,15 @@ position: relative;
 }
 #izvidiR .besedilo{
  padding-left: 20px;
- /*text-indent: 20px;*/
 }
 
 #izvidiR  p {
-/*position: relative;*/
-  /*  top: 0px;
-    left: 2px;*/
 	background-color: blue;
 	text-align: left;
     height: 0.6cm;  
     width: 98%;
-  /* text-indent: 20px;*/
    padding-left: 5px;
-/* margin-top: 5px;
- margin-bottom:0px;*/
 }
-
 
 #premedikacijaR {
     position: absolute;

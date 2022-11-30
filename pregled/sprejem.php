@@ -1,10 +1,6 @@
 <?php
 require_once 'sabloni/zahlavi.php';
-/*<!--<div id="pregledovalec" >to je rezult</div>
-<p>
-<p>-->*/
 
-//session_start();
 require_once '../skupne/database.php';
 $conn = new Database();
 //var_dump($_GET);
@@ -18,9 +14,7 @@ $prebrano = $conn->vyber($nameTable, $stolpci, $podminka);
 // tu treba odstraniti pregledId
 unset($prebrano[0]['pregledId']);
 $iskaniPregled = json_encode($prebrano[0]);
-//$_SESSION["testJSON"] = $iskaniPregled;
 $GLOBALS['testJSON'] = $iskaniPregled;
-
 ?>
 
 

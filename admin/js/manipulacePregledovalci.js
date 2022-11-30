@@ -20,11 +20,9 @@ switch(akce) {
   if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);
 }
-
     break;
 
   case "odstrani":
-
   
   if ( confirm("v funkciji JS odstrani\odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
@@ -33,15 +31,6 @@ switch(akce) {
 } else {
   text = "You canceled!";
 }
-  
-  
- /* if(document.getElementById("osebe")!=null){
- document.getElementById("osebe").addEventListener("click", functionOver);
- 
-}*/
-
-    // code block
-
     break;	
   default:
     // code block
@@ -53,8 +42,6 @@ var x = e.target;
 if (x.nodeName == "TD") {
 var y = e.path[1];
 row_value = y.cells[0].innerHTML;
- /* document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
-  document.getElementById("demo2").innerHTML = "Triggered by a " + x.innerHTML + " element";  */
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
  }//od if
  

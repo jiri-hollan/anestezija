@@ -11,7 +11,6 @@ function bmiFunction()
 
     teza = validacija(teza);
     visina = validacija(visina);
-
     document.getElementById('teza').value = teza;
 	if (visina>3){
 		visina="";
@@ -33,8 +32,6 @@ function bmiFunction()
     }
 }
 
-
-
 function validacija(input) {
     if (input < 0) {
         return 0;
@@ -51,11 +48,9 @@ function validacija(input) {
 
   //................ Izračun starosti.............
   
-
   var dateParts;
   var starost;
   var datRojstva;
-
  function starostFunction()
  {
 var dan = document.getElementById("dan").value ;
@@ -65,16 +60,6 @@ if(dan*mesec*leto >0){
 
  datRojstva = dan + "." + mesec + "." + leto;
   var dateParts = datRojstva.split(".");  
-
-/*  datRojstva = document.getElementById("dan").value ;
-  datRojstva = datRojstva + "." + document.getElementById("mesec").value ;
-  datRojstva = datRojstva + "." +  document.getElementById("leto").value ;*/
-
-
-  //var dateParts = datRojstva.split(".");  
-//alert (dateParts);
-
-//............ month is 0-based, that's why we need dataParts[1] - 1  roj = dateObject.......
  document.getElementById("datRojstva").value = leto + "-" + mesec + "-" + dan; 
   var roj =  new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
 //alert (datRojstva);
