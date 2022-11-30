@@ -30,10 +30,7 @@ class TableRows extends RecursiveIteratorIterator {
 include 'narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;
 $databaseGloboka->ogled($imeTable);
-
 //-----------------------------------------------
-
 echo "</table>";
 require_once 'sabloni/zapati.php';
 ?>
-
