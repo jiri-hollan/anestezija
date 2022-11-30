@@ -1,13 +1,6 @@
 
 <?php
 require_once '../skupne/sabloni/zahlavi.php';
-/*xx
-function test_input($test) {
-  $test = trim($test);
-  $test = stripslashes($test);
-  $test = htmlspecialchars($test);
-  return $test;
-}*/
 
 echo '
 <p>vnesi ime tabele and click OK:</p>
@@ -19,11 +12,6 @@ Ime table:
 <input type="submit" name="submit" value="submit">  
 </form>
 ';
-/*
-echo "<h2>Your Input:</h2>";
-echo "ime table=   " . $name;
-*/
 ?>
-
 </body>
 </html>

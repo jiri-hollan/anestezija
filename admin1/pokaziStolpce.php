@@ -10,18 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
   $imeTable = pokaziStolpce($imeTable);
 		}
 }
-/*xx
- function test_input($test) {
-  $test = trim($test);
-  $test = stripslashes($test);
-  $test = htmlspecialchars($test);
-  return $test;
-} */
+
 function pokaziStolpce($tabulka) {
 include '../skupne/narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;	
-$databaseGloboka->	pokaziStolpce($tabulka); 
-	
+$databaseGloboka->	pokaziStolpce($tabulka); 	
 }
 ?>
 <h2>Prikaz stolpcev v izbrani tabeli</h2>
@@ -29,8 +22,7 @@ $databaseGloboka->	pokaziStolpce($tabulka);
   Name: 
   <input type="text" name="imeTable">
   <input type="hidden" name="nazaj" value= <?php echo $nazaj;?>> 
-  <br><br>
- 
+  <br><br> 
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>

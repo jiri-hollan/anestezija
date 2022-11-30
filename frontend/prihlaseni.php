@@ -7,8 +7,7 @@ Class Prihlaseni {
 	public $conn;
 	public $zaklad;
 	public $status;
-	public $pristop;
-	
+	public $pristop;	
 	public function __construct() {
 	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();
@@ -17,10 +16,7 @@ Class Prihlaseni {
 	  }else {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
-	  
-
-	}	
-	
+	}		
 }//od class prihlaseni
 
 //___________________________________- potomstvo_______________________________________________
@@ -28,8 +24,6 @@ Class odjava extends Prihlaseni {
 		
 	public function __construct() {
 		    parent::__construct();
-	
-
 	  //echo 'odhlašovani';
 	  if (null !== ($_GET['stav'] || $_GET['stav'] == 'odhlasit')) {
 	  $this->odhlasi();
@@ -46,17 +40,11 @@ Class odjava extends Prihlaseni {
 		 session_destroy();
             echo 'Odjavljen';
 		  $oznameni = 'Ste odjavljeni, ' . 'ponovno se prijavite.';	
-//		header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');  
-
-	  require_once('sabloni/prihlasovaci-formular.php');
-	
+	  require_once('sabloni/prihlasovaci-formular.php');	
 	}//od function odhlasi		
 	}//od clas odjava
-
-
 //____________________________________konec clas odjava_______________________________________
 Class Prijava extends Prihlaseni {
-	
 	
 	public function __construct() {
 		    parent::__construct();
@@ -106,31 +94,23 @@ Class Prijava extends Prihlaseni {
 		}   
 	  }
 	}
-	
-	
-// od class Prijava	
-}
+}// od class Prijava	
 //_____________________________________konec Prijava_______________________________________________
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Class Registrace extends Prihlaseni {
     public $data;
-    public $nameTable;
-   
+    public $nameTable;   
 	public function __construct() {
 		    parent::__construct();
-			
-			
+						
 $registracija=true;
 $email=$geslo=$ime=$priimek=$uname=0;
 $status = 0;
 $pristop = 0;
 $nameTable = "uporabnikiTbl2";
-
 	
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	
-
 	//echo $_POST["ime"];	
 if (empty($_POST["ime"])) {
     echo"ime is required";
@@ -172,16 +152,12 @@ if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
   //echo'<br>data: '. $data["status"].'<br>';
 }
 
-
 if ($registracija){
 	//echo $values.'<br>'; 
 	 //echo '<br>'.'V if registracija: '.$nameTable.var_dump($data).'<br>';
-  //  $this->registracija($nameTable,$keys,$values);
       $chiba = $this->overUdaje($nameTable, $data);
-     // $ulozeno = $this->conn->vloz($nameTable, $data);
 	}
-// od construct
-}
+}// od construct
 
 function test_input($test) {
   $test = trim($test);
@@ -208,21 +184,17 @@ require_once('../skupne/posta.php');
 		}   
 	  }
 }
-
-// od class Registrace	
-}
+}// od class Registrace	
 
 //____________________________konec Registrace_______________________________
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 Class Profil extends Prihlaseni {
     public $data;
-    public $nameTable;
-   
+    public $nameTable;   
 	public function __construct() {
 		    parent::__construct();
-			
-			
+						
 //$registracija=true;
 //$email=$geslo=$ime=$priimek=$uname=0;
 //$status = 0;
@@ -293,7 +265,6 @@ $uporabnikiTbl2 = $this->conn->aktualizuj($tabulka,$data,$podminka);
 	else {
 	echo 'Niste prijavljeni, ali je vnos gesla napačen';	
 	}
-
 	
 }//od if $ server
 else {

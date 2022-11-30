@@ -1,22 +1,13 @@
 
-
 <?php
 require_once '../skupne/sabloni/zahlavi.php';
-/*xx
-function test_input($test) {
-  $test = trim($test);
-  $test = stripslashes($test);
-  $test = htmlspecialchars($test);
-  return $test;
-}*/
-class NarediBazo {
-	
+
+class NarediBazo {	
 	public $servername = '';
 	public $username = '';
 	public $password = '';
 	public $dbname = '';
-	public $connn = '';
-	
+	public $connn = '';	
 	public Function __construct(){
 	include '../skupne/streznik.php';
 
