@@ -8,9 +8,37 @@ class Manipulace extends Administrace {
 	       parent::__construct();
 		   
   if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {
-$nazaj="../admin/databaseMenu.php";	  
+$nazaj="../admin/databaseMenu.php";
+//-------------------------------------------
 echo '
 <div id="manipulace">
+<h1>ogled</h1>
+<form method="post" action="../skupne/ogledTabele.php">
+<input type="hidden"  name="nazaj" value="'.$nazaj.'">
+<input type="submit"  name="imeTable" value="besedilaTbl">
+<input type="submit"  name="imeTable" value="uporabnikiTbl2">
+<input type="submit"  name="imeTable" value="pregledovalciTbl">
+<input type="submit"  name="imeTable" value="limitiTbl">
+<input type="submit"  name="imeTable" value="sklepiTbl">
+<input type="submit"  name="imeTable" value="bolnisniceTbl">
+
+</form>
+';
+echo '
+<h1>manipulace</h1>
+<ul id="linky">
+<li><a href="../admin/manipulaceUporabniki.php?imeTable=uporabnikiTbl2&nazaj='.$nazaj.'">uporabniki</a></li>
+<li><a href="../admin/manipulacePregledovalci.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">pregledovalci</a></li>
+<li><a href="../admin/manipulaceLimiti.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">limiti</a></li>
+<li><a href="../admin/manipulaceSklepi.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">sklepi</a></li>
+<li><a href="../admin/manipulaceBolnisnice.php?imeTable=bolnisniceTbl&nazaj='.$nazaj.'">bolnišnice</a></li><br>
+</ul>
+</div>
+';
+
+//-----------------------------------------*/ 
+/*echo '
+
 
 <h1>Besedila</h1>
 <ul id="linky2">
@@ -38,10 +66,10 @@ echo '
 <h1>Bolnišnice</h1>
 <ul id="linky6">
 <li><a href="../skupne/ogledTabele.php?imeTable=bolnisniceTbl&nazaj='.$nazaj.'">prikaži bolnisnice</a></li>
-<li><a href="../admin/manipulaceBolnisnice.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">upravljanje z bolnišnicami</a></li><br>
+<li><a href="../admin/manipulaceBolnisnice.php?imeTable=bolnisniceTbl&nazaj='.$nazaj.'">upravljanje z bolnišnicami</a></li><br>
 </ul>
 </div>
-';
+';*/
      } else {
 	echo	' <h2>za ta del niste pooblaščeni</h2>';
 	}
