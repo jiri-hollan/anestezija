@@ -7,7 +7,7 @@ require_once '../skupne/sabloni/zahlavi.php';
 <h2>PHP Form izbira funkcije</h2>
 
 <button onclick="izborFunction('vyber')">vyber</button>
-<!--pri uporabnikih ni direktno vlaganje zaželeno, zato ni gumba vlož -->
+<button onclick="izborFunction('vloz')">vlož</button>
 
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -46,22 +46,30 @@ switch ($akce) {
 }
     vyberFunction($podminka);
     break; 
-	 	
+	 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 	
 case "vloz":
-
-    break; 
+    $email = ($_POST["email"]);
+	$uname = ($_POST["uname"]);
+    $geslo = test_input($_POST["geslo"]);	
+    $ime = test_input($_POST["ime"]);
+    $priimek = test_input($_POST["priimek"]);
+    $status = test_input($_POST["status"]); 
+    $pristop = test_input($_POST["pristop"]); 	
+    $data= array("email"=>$email, "uname"=>$uname, "geslo"=>$geslo, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status), "pristop"=>$pristop);
+    vlozFunction($data);
+    break; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 case "uredi":
     $tabulka="uporabnikiTbl2";
     $id=test_input($_POST["id"]);
-    $email=test_input($_POST["email"]);
-    $uname=test_input($_POST["uname"]);	
+    //$email=test_input($_POST["email"]);
+    //$uname=test_input($_POST["uname"]);	
     $ime = test_input($_POST["ime"]);
-    $priimek = test_input($_POST["priimek"]);
+	$priimek = test_input($_POST["priimek"]);
 	$status = test_input($_POST["status"]);
 	$pristop = test_input($_POST["pristop"]);	
 	$podminka = array("id"=>$id);
    // $data= array("email"=>$email, "uname"=>$uname,  "ime"=>$ime, "priimek"=>$priimek, "status"=>$status, "pristop"=>$pristop);
-    $data= array("status"=>$status, "pristop"=>$pristop);	
+    $data= array("ime"=>$ime, "priimek"=>$priimek, "status"=>$status, "pristop"=>$pristop);	
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
 
@@ -172,7 +180,7 @@ $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
 echo "<br>";
-echo "število vybranych zapisov= " . count($vybrano)."<br>";
+echo "število vybranych zapisov= " . count($vybrano);
 $dolzina=count($vybrano);
 //echo $vybrano[1];
 echo "<br>";
@@ -180,13 +188,13 @@ echo "<form  method='post'>";
 for ($i = 0; $i < $dolzina; $i++) {
 foreach ($vybrano[$i] as $key => $value) {
    // echo "$key: $value\n";
-   if ($key=="ime"||$key=="priimek"){
-	echo "<b> $value</b> ";
-   }
-   if ($key=="status"||$key=="pristop"){   
-	echo "<br><br> $key: <input name=$key value=$value\n></input>";
+if($key=="id"||$key=="ime"||$key=="priimek"){
+	echo " $key: <input name=$key value=$value readonly\n></input>";	
+}	
+if($key=="status"||$key=="pristop"){	
+	echo " $key: <input name=$key value=$value \n></input>";
+}	
 	//echo "$value\n";
-   }
 }//od foreach
 echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button type='submit'>submit</button><button type='reset'>reset</button> ";
 echo "</form>";
