@@ -9,7 +9,7 @@ class Database {
 	public $connn = '';
 	
 	public Function __construct(){
-	include 'streznik.php';
+	require 'streznik.php';
       //$this->servername = "sh17.neoserv.si";
    /*   $this->servername = $_SERVER['SERVER_NAME'];	  
       $this->username = "anestiz";
