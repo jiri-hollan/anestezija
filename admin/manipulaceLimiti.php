@@ -26,22 +26,22 @@ require_once '../skupne/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
-  $skupina = test_input($_POST["skupina"]);
+  $bolnisnica = test_input($_POST["bolnisnica"]);
 
  // $ime = test_input($_POST["ime"]);
   //$min = test_input($_POST["min"]);
  // $max = test_input($_POST["max"]);
   echo strtoupper($akce) .': ';
-//  echo strtoupper($skupina) .'<br>';
+//  echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($max) .'<br>';
   //$akce = naredi($akce);
 switch ($akce) {
   case "vyber":
    // echo "to je vyber.<br>";
-  // if ($skupina == "") {
+  // if ($bolnisnica == "") {
 	$podminka = NULL;
 /*} else {
-    $podminka = array("skupina"=>$skupina);
+    $podminka = array("bolnisnica"=>$bolnisnica);
 }*/
     vyberFunction($podminka);
     break;
@@ -49,18 +49,19 @@ case "vloz":
     $ime = test_input($_POST["ime"]);
     $min = test_input($_POST["min"]);
     $max = test_input($_POST["max"]);  
-    $data= array("skupina"=>$skupina, "ime"=>$ime, "min"=>$min, "max"=>$max);
+    $data= array("bolnisnica"=>$bolnisnica, "skupina"=>$skupina, "ime"=>$ime, "min"=>$min, "max"=>$max);
     vlozFunction($data);
     break;
 case "uredi":
     $tabulka="limitiTbl";
     $id=test_input($_POST["id"]);
-    $skupina=test_input($_POST["skupina"]);
+    $skupina=test_input($_POST["skupina"]);	
+    $bolnisnica=test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
 	$min = test_input($_POST["min"]);
 	$max = test_input($_POST["max"]); 
 	$podminka = array("id"=>$id);
-    $data= array("skupina"=>$skupina, "ime"=>$ime, "min"=>$min, "max"=>$max);
+    $data= array("bolnisnica"=>$bolnisnica, "skupina"=>$skupina, "ime"=>$ime, "min"=>$min, "max"=>$max);
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
 
@@ -106,7 +107,7 @@ $tabulka="limitiTbl";
 $stolpci=["*"];
 //$stolpci=["ime","min"];
 //$podminka = array("ime"=>"Jiří");
-//$podminka = array("skupina"=>$skupina);
+//$podminka = array("bolnisnica"=>$bolnisnica);
 //$podminka = array("ime"=>"Jiří", "Ben"=>"37", "Joe"=>"43");
 
 $vyber = new database();
@@ -123,7 +124,7 @@ echo "<br>";
 if(count($vybrano)>0){
 
 echo "<table id='osebe' style='border: solid 1px black;'>";
-echo "<tr><th>Id</th><th>skupina</><th>ime</th><th>min</th><th>max</th></tr>";
+echo "<tr><th>Id</th><th>bolnisnica</><th>skupina</><th>ime</th><th>min</th><th>max</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
@@ -159,7 +160,7 @@ echo "Za izbrano bolnisnico ni zapisa v bazi";
 function vlozFunction($data){
 //$tabulka="uporabnikiTbl2";
 $tabulka="limitiTbl";
-//$data= array("skupina"=>"izola", "ime"=>"Lela", "min"=>"Hollan", "max"=>"1");
+//$data= array("bolnisnica"=>"izola", "ime"=>"Lela", "min"=>"Hollan", "max"=>"1");
 
 $vloz = new database($tabulka,$data);
 //$vloz->vloz($tabulka,$data);
