@@ -27,11 +27,11 @@ echo '
 echo '
 <h1>manipulace</h1>
 <ul id="linky">
-<li><a href="../admin/manipulaceUporabniki.php?imeTable=uporabnikiTbl2&nazaj='.$nazaj.'">uporabniki</a></li>
-<li><a href="../admin/manipulacePregledovalci.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">pregledovalci</a></li>
-<li><a href="../admin/manipulaceLimiti.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">limiti</a></li>
-<li><a href="../admin/manipulaceSklepi.php?imeTable=pregledovalciTbl&nazaj='.$nazaj.'">sklepi</a></li>
-<li><a href="../admin/manipulaceBolnisnice.php?imeTable=bolnisniceTbl&nazaj='.$nazaj.'">bolnišnice</a></li><br>
+<li><a href="../admin/manipulaceUporabniki.php?nazaj='.$nazaj.'">uporabniki</a></li>
+<li><a href="../admin/manipulacePregledovalci.php?nazaj='.$nazaj.'">pregledovalci</a></li>
+<li><a href="../admin/manipulaceLimiti.php?nazaj='.$nazaj.'">limiti</a></li>
+<li><a href="../admin/manipulaceSklepi.php?nazaj='.$nazaj.'">sklepi</a></li>
+<li><a href="../admin/manipulaceBolnisnice.php?nazaj='.$nazaj.'">bolnišnice</a></li><br>
 </ul>
 </div>
 ';
