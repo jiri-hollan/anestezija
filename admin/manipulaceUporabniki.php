@@ -27,20 +27,20 @@ require_once '../skupne/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
- // $bolnisnica = test_input($_POST["bolnisnica"]);
+  $bolnisnica = test_input($_POST["bolnisnica"]);
 
   echo strtoupper($akce) .': ';
-  //echo strtoupper($bolnisnica) .'<br>';
+  echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
   //$akce = naredi($akce);
 switch ($akce) {
   case "vyber":
    // echo "to je vyber.<br>";
-/*   if ($bolnisnica == "") {
+   if ($bolnisnica == "") {
 	$podminka = NULL;
 } else {
     $podminka = array("bolnisnica"=>$bolnisnica);
-}*/
+}
     vyberFunction($podminka);
     break;
 case "vloz":
