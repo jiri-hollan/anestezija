@@ -54,8 +54,8 @@ case "vloz":
     $ime = test_input($_POST["ime"]);
     $priimek = test_input($_POST["priimek"]);
     $status = test_input($_POST["status"]); 
-    $dostop = test_input($_POST["dostop"]); 	
-    $data= array("email"=>$email, "uname"=>$uname, "geslo"=>$geslo, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status), "dostop"=>$dostop);
+    $pristop = test_input($_POST["pristop"]); 	
+    $data= array("email"=>$email, "uname"=>$uname, "geslo"=>$geslo, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status), "pristop"=>$pristop);
     vlozFunction($data);
     break; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 case "uredi":
@@ -65,9 +65,10 @@ case "uredi":
     $uname=test_input($_POST["uname"]);	
     $ime = test_input($_POST["ime"]);
 	$priimek = test_input($_POST["priimek"]);
-	$status = test_input($_POST["status"]); 
+	$status = test_input($_POST["status"]);
+	$pristop = test_input($_POST["pristop"]);	
 	$podminka = array("id"=>$id);
-    $data= array("email"=>$email, "uname"=>$uname,  "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
+    $data= array("email"=>$email, "uname"=>$uname,  "ime"=>$ime, "priimek"=>$priimek, "status"=>$status, "pristop"=>$pristop);
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
 
@@ -121,7 +122,7 @@ echo "<br>";
 if(count($vybrano)>0){
 
 echo "<table id='osebe' style='border: solid 1px black;'>";
-echo "<tr><th>Id</th><th>e-mail</><th>uporabnik</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th><th>dostop</th></tr>";
+echo "<tr><th>Id</th><th>e-mail</><th>uporabnik</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th><th>pristop</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {

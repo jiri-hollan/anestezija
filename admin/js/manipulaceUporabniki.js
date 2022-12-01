@@ -14,7 +14,7 @@ switch(akce) {
     priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
     status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
     pristop= '<input type="int" id="pristopId" name="pristop" value="" placeholder="pristop" required>';	
-    document.getElementById("demo").innerHTML = ime + priimek + status;
+    document.getElementById("demo").innerHTML = email + uname + geslo + ime + priimek + status + pristop;
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
 
