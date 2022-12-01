@@ -1,4 +1,4 @@
-var tabulka="sklepiTbl";
+var tabulka="limitiTbl";
 function izborFunction(akce) {
   document.getElementById("akceId").value = akce;
 switch(akce) {

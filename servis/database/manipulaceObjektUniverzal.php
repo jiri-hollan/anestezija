@@ -65,6 +65,9 @@ if (isset($_REQUEST["akce"])) {
 	  case "sklepiTbl":
 	  $this->dataPreg= '["bolnisnica", "sklep", "status"]';
 	  break;
+	  case "limitiTbl":
+	  $this->dataPreg= '["bolnisnica", "skupina", "ime", "min", "max"]';
+	  break;
 	  default:
 	  echo "tabulka ni določena";
   }
@@ -181,6 +184,9 @@ foreach (json_decode($this->dataPreg) as $key) {
 	case "sklepiTbl":
     echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>status</th></tr>";
     break;
+	case "limitiTbl":
+    echo "<tr><th>Id</th><th>bolnišnica</><th>skupina</th><th>ime</th><th>min</th><th>max</th></tr>";
+    break;
 	default:
 	echo "";
 	}
@@ -257,11 +263,14 @@ foreach (json_decode($this->dataPreg) as $key) {
 if (isset($_REQUEST["tabulka"])){
 
 switch($_REQUEST["tabulka"]){
-	case "sklepiTbl":
+case "sklepiTbl":
 echo '<script src="js/manipulaceSklepi.js?<?php echo time(); ?>"></script>'; 
 break;
 case "pregledovalciTbl":
 echo '<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>"></script>'; 
+break;
+case "limitiTbl":
+echo '<script src="js/manipulaceLimiti.js?<?php echo time(); ?>"></script>'; 
 break;
 }
 }
