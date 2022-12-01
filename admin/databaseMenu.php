@@ -27,7 +27,7 @@ echo '
 echo '
 <h1>manipulace</h1>
 <ul id="linky">
-<li><a href="../admin/manipulaceUporabniki.php?nazaj='.$nazaj.'">uporabniki</a></li>
+<!--<li><a href="../admin/manipulaceUporabniki.php?nazaj='.$nazaj.'">uporabniki</a></li>-->
 <li><a href="../admin/manipulacePregledovalci.php?nazaj='.$nazaj.'">pregledovalci</a></li>
 <li><a href="../admin/manipulaceLimiti.php?nazaj='.$nazaj.'">limiti</a></li>
 <li><a href="../admin/manipulaceSklepi.php?nazaj='.$nazaj.'">sklepi</a></li>
