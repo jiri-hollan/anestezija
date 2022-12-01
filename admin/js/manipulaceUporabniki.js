@@ -7,19 +7,11 @@ switch(akce) {
     break; 
 
   case "vloz":
-    email= '<input type="text" id="emailId" name="email" value="" placeholder="e-mail" required>';
-    uname= '<input type="text" id="unameId" name="uname" value="" placeholder="Uporabniško ime" required>';	
-    geslo= '<input type="text" id="gesloId" name="geslo" value="" placeholder="Geslo" required>';		
-    ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime" required>';
-    priimek= '<input type="text" id="priimekId" name="priimek" value="" placeholder="priimek" required>';
-    status= '<input type="int" id="statusId" name="status" value="" placeholder="status" required>';
-    pristop= '<input type="int" id="pristopId" name="pristop" value="" placeholder="pristop" required>';	
-    document.getElementById("demo").innerHTML = email + uname + geslo + ime + priimek + status + pristop;
-	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset">'; //submit+reset
+   alert("ni omogočeno");
     break;
 
   case "uredi":
-  //alert("v JS case edit");
+  alert("urejati je možno le status in pristop");
   if(document.getElementById("osebe")!=null){
  document.getElementById("osebe").addEventListener("click", functionOver);
 }
