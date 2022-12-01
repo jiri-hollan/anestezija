@@ -27,27 +27,31 @@ require_once '../skupne/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
-  $bolnisnica = test_input($_POST["bolnisnica"]);
+ // $bolnisnica = test_input($_POST["bolnisnica"]);
 
   echo strtoupper($akce) .': ';
-  echo strtoupper($bolnisnica) .'<br>';
+  //echo strtoupper($bolnisnica) .'<br>';
   //echo var_dump($status) .'<br>';
   //$akce = naredi($akce);
 switch ($akce) {
   case "vyber":
    // echo "to je vyber.<br>";
-   if ($bolnisnica == "") {
+/*   if ($bolnisnica == "") {
 	$podminka = NULL;
 } else {
     $podminka = array("bolnisnica"=>$bolnisnica);
-}
+}*/
     vyberFunction($podminka);
     break;
 case "vloz":
+    $email = ($_POST["email"]);
+	$uname = ($_POST["uname"]);
+    $geslo = test_input($_POST["geslo"]);	
     $ime = test_input($_POST["ime"]);
     $priimek = test_input($_POST["priimek"]);
-    $status = test_input($_POST["status"]);  
-    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
+    $status = test_input($_POST["status"]); 
+    $dostop = test_input($_POST["dostop"]); 	
+    $data= array("email"=>$email, "uname"=>$uname, "geslo"=>$geslo, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status), "dostop"=>$dostop);
     vlozFunction($data);
     break;
 case "uredi":
@@ -112,7 +116,7 @@ echo "<br>";
 if(count($vybrano)>0){
 
 echo "<table id='osebe' style='border: solid 1px black;'>";
-echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>status</th></tr>";
+echo "<tr><th>Id</th><th>e-mail</><th>uporabnik</th><th>geslo</th><th>ime</th><th>priimek</th><th>status</th><th>dostop</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
