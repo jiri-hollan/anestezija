@@ -4,8 +4,8 @@ require_once '../skupne/sabloni/zahlavi.php';
 $nazaj="../admin1/vertikalMenu.php";
 ?>
 
-<h2>PHP Form izbira funkcije</h2>
-<button onclick="izborFunction('vyber')">vyber</button>
+<h2>kompetence uporabnikov</h2>
+<button onclick="izborFunction('vyber')">izberi</button>
 <!--xx<button onclick="izborFunction('vloz')">vlož</button>xx-->
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">

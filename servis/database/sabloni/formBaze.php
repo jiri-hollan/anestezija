@@ -6,7 +6,7 @@ if (isset($_REQUEST["tabulka"])){
   } 
 ?>
 <br>
-<button id="vyberId" onclick="izborFunction('vyber','<?php echo $tab;?>')">vyber</button>
+<button id="vyberId" onclick="izborFunction('vyber','<?php echo $tab;?>')">izberi</button>
 <button id="vlozId" onclick="izborFunction('vloz','<?php echo $tab;?>')">vlož</button>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">

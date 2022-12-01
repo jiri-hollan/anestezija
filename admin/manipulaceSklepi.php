@@ -2,9 +2,9 @@
 require_once '../skupne/sabloni/zahlavi.php';
 ?>
 <!--konec zahlavi-->
-<h2>PHP Form izbira funkcije</h2>
+<h2>Prednastavljeni sklepi</h2>
 
-<button onclick="izborFunction('vyber')">vyber</button>
+<button onclick="izborFunction('vyber')">izberi</button>
 <button onclick="izborFunction('vloz')">vlož</button>
 
 
