@@ -33,6 +33,9 @@ echo '
 <li><a href="../admin/manipulaceSklepi.php?nazaj='.$nazaj.'">sklepi</a></li>
 <li><a href="../admin/manipulaceBolnisnice.php?nazaj='.$nazaj.'">bolnišnice</a></li><br>
 </ul>
+
+<a href="../admin1/vertikalMenu.php?nazaj='.$nazaj.'">.</a>
+
 </div>
 ';
 
