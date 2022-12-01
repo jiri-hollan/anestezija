@@ -27,22 +27,26 @@ require_once '../skupne/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
-  $bolnisnica = test_input($_POST["bolnisnica"]);
+  $priimek = test_input($_POST["priimek"]);
 
   echo strtoupper($akce) .': ';
-  echo strtoupper($bolnisnica) .'<br>';
+  echo strtoupper($priimek) .'<br>';
   //echo var_dump($status) .'<br>';
   //$akce = naredi($akce);
+  
+
 switch ($akce) {
+
   case "vyber":
    // echo "to je vyber.<br>";
-   if ($bolnisnica == "") {
+   if ($priimek == "") {
 	$podminka = NULL;
 } else {
-    $podminka = array("bolnisnica"=>$bolnisnica);
+    $podminka = array("priimek"=>$priimek);
 }
     vyberFunction($podminka);
-    break;
+    break; 
+	 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 	
 case "vloz":
     $email = ($_POST["email"]);
 	$uname = ($_POST["uname"]);
@@ -53,16 +57,17 @@ case "vloz":
     $dostop = test_input($_POST["dostop"]); 	
     $data= array("email"=>$email, "uname"=>$uname, "geslo"=>$geslo, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status), "dostop"=>$dostop);
     vlozFunction($data);
-    break;
+    break; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 case "uredi":
     $tabulka="uporabnikiTbl2";
     $id=test_input($_POST["id"]);
-    $bolnisnica=test_input($_POST["bolnisnica"]);
+    $email=test_input($_POST["email"]);
+    $uname=test_input($_POST["uname"]);	
     $ime = test_input($_POST["ime"]);
 	$priimek = test_input($_POST["priimek"]);
 	$status = test_input($_POST["status"]); 
 	$podminka = array("id"=>$id);
-    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
+    $data= array("email"=>$email, "uname"=>$uname,  "ime"=>$ime, "priimek"=>$priimek, "status"=>$status);
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
 
@@ -70,7 +75,7 @@ case "uredi":
   default:
     echo "ni izvelo case";
 	
-}//od switch
+}//od switch 
 }//od if
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
