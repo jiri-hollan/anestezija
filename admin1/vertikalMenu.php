@@ -1,6 +1,6 @@
 <?php
-echo 'napredna manipulacija z bazo';
 require_once('../admin/sabloni/vkladane/zahlavi.php');
+echo 'napredna manipulacija z bazo';
 require_once('../admin/administrace.php');
 
 class Vertikal extends Administrace {

@@ -1,6 +1,6 @@
 <?php
+require_once('../frontend/sabloni/vkladane/zahlavi.php');
 echo 'Menipulacija z bazo';
-require_once('sabloni/vkladane/zahlavi.php');
 require_once('administrace.php');
 
 class Manipulace extends Administrace {
