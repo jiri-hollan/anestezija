@@ -4,10 +4,10 @@
  //console.log(LIMITIlab);
  max = LIMITIlab[ime]["max"];
  max = parseFloat(max);
- console.log(max);
+ //console.log(max);
   min = LIMITIlab[ime]["min"];
    min = parseFloat(min);
- console.log(min);
+ //console.log(min);
 
 if(vrednost == ""||vrednost == 0||vrednost=== null) { 
 	 pozorFunction(ime, 2);
