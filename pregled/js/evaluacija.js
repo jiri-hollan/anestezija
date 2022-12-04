@@ -1,7 +1,7 @@
  function laborFunction(ime,vrednost)
 {	
  const LIMITIlab = JSON.parse(limitiJson);
- console.log(LIMITIlab);
+ //console.log(LIMITIlab);
  max = LIMITIlab[ime]["max"];
  max = parseFloat(max);
  console.log(max);
