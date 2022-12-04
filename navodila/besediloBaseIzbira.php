@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
 //----------prijavni podatki za podatkovno bazo odvisno od uporabljenega strežnika------
 
@@ -38,8 +34,4 @@ catch(PDOException $e) {
 }
 $conn = null;
 echo "</table>";
-
 ?>
-
-</body>
-</html>

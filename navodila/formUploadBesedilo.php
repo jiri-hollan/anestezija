@@ -40,6 +40,6 @@ echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
   <input type="submit" value="Naloži besedilo" name="submit">
 </form>
 </h2>
-
-</body>
-</html>
+<?php
+require_once '../skupne/sabloni/zapati.php';
+?>
