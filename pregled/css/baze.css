@@ -30,3 +30,12 @@ border-radius: 12%;
 #buttonNazaj:hover {
 background-color: black;	
 }
+
+	table {
+		border: 1px solid black;
+		max_width:500px;		
+	}
+	
+  tr:hover 
+ {background-color: yellow;
+	}

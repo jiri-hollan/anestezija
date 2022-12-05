@@ -1,25 +1,3 @@
-<!DOCTYPE html>
-<html  lang="sl-SI">
-<head>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<!--<link rel="stylesheet" type="text/css" href="css/baze.css?<?php echo time(); ?>">-->
-<style>
-	table {
-		border: 1px solid black;
-		max_width:500px;		
-	}
-	
-  tr:hover 
- {background-color: yellow;
-	}
-	
-</style>
-</head>
-<body>
-
-
 <?php
 echo "<table id='vrsticeTabela'>";
 class TableRows extends RecursiveIteratorIterator {
@@ -62,5 +40,3 @@ function celicaFunction(prvaCelica) {
 
 </script>';
 ?>
-</body>
-</html>
