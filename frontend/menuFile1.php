@@ -6,26 +6,21 @@ require_once('administrace.php');
 class MenuAnestiz  {
    public function __construct() {
    require_once('../skupne/menu-items.php');          
-echo '<nav id= "glavnaNav">
-
+echo '
+<nav id= "glavnaNav">
 <ul>';
-
   if (isset($_SESSION["status"]))  {
 	  //require_once('../skupne/menu-items.php'); 
-	   switch ($_SESSION["status"]) {
-		   
+	   switch ($_SESSION["status"]) {		   
 	case 1:
 	  echo $a0.$a1;
     break;   
- 
      case 2:
 	   echo $a0.$a1.$a2;
-	 break;
-	 
+	 break;	 
 	 case 3:
 	   echo $a0.$a1.$a2.$a3;
-    break;
-   
+    break;   
     default:
 	   } //od switch
 	 echo

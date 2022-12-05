@@ -10,24 +10,18 @@
  //console.log(min);
 
 if(vrednost == ""||vrednost == 0||vrednost=== null) { 
-	 pozorFunction(ime, 2);
-
-	
-  } else if(vrednost != "" && vrednost>max) {
+	 pozorFunction(ime, 2);	
+  }else if(vrednost != "" && vrednost>max) {
      //alert (ime + " je nad zgornjo mejo mormale");
-     pozorFunction(ime, 1);	
-	 
- /*} else if(vrednost == ""||vrednost == 0||vrednost=== null) { 
-	 pozorFunction(ime, 2); */
-	 
- } else if (vrednost !="" && vrednost<min) {
+     pozorFunction(ime, 1);		 
+/*} else if(vrednost == ""||vrednost == 0||vrednost=== null) { 
+	 pozorFunction(ime, 2); */	 
+ }else if (vrednost !="" && vrednost<min) {
     //alert (ime + " je pod spodnjo mejo mormale");
-    pozorFunction(ime, 0);
-	 
-  } else {
+    pozorFunction(ime, 0);	 
+  }else {
     pozorFunction(ime, 3);	
  }
-
 }//od function laborFunction
 //-------------------------------------------------------------------------------------------------------
 //labevalFunction preveri limite lab. vrednosti pri načitanju bolnika iz baze
@@ -52,25 +46,20 @@ switch (x) {
   case 0:
   document.getElementById(ime).style.color = "#ff0000"; 
   document.getElementById(ime).style.fontWeight = "bold";
-    break;
-	
+    break;	
   case 1:
   document.getElementById(ime).style.color = "Crimson"; 
   document.getElementById(ime).style.fontWeight = "bolder";
-   break;
-   
+   break;   
    case 2:
   document.getElementById(ime).value = ""; 
   //document.getElementById(ime).style.color = "white"; 
-   break;
-   
+   break;   
    default:
     document.getElementById(ime).style.color = "";
-    document.getElementById(ime).style.fontWeight = "";
-    
-}
-
-}
+    document.getElementById(ime).style.fontWeight = "";    
+}// od switch
+}// od pozorFunction
 
 //-----dovoljene vrednosti-------------
 var as = ["1", "2", "3", "4", "5"];
@@ -78,11 +67,10 @@ var mal = ["1", "2", "3", "4"];
 var allNumb = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 function isNumber(evt, a)
 { 
-    var allowed_characters = a;
-    
+    var allowed_characters = a;   
     if (allowed_characters.indexOf(evt.key) > -1) {
-        return true;
+      return true;
     }
-    return false;
-}
+      return false;
+}//od isNumber
 //-------konec dovoljene vrednosti-----
