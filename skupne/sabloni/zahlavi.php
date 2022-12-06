@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../skupne/css/zahlavi.css?<?php echo time(); ?>">
     <link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
-	<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>
+	<!--xx<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>-->
     <title>Anestiz</title>
 
 </head>

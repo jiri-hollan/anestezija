@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
     <title>Novi bolnik</title>
     <link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
-	<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>
+	<!--xx<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>-->
 <script src="js/vpis.js?<?php echo time(); ?>"></script>
 <script src="js/report.js?<?php echo time(); ?>"></script>
 <script src="js/preklopCss.js?<?php echo time(); ?>"></script>
