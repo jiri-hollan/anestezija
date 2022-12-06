@@ -7,6 +7,6 @@
 <link rel="stylesheet" href="../css/navodila.css?<?php echo time(); ?>">
 <link rel="stylesheet" href="../css/vnos.css?<?php echo time(); ?>">
     <link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
-	<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>
+	<!--xx<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>-->
 </head>
 <body>

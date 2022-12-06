@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anestiz-set</title> 
     <link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
-	<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>
+	<!--xx<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>-->
 <script src="js/prijava.js?<?php echo time(); ?>"></script> 
 <script src="js/odjava.js?<?php echo time(); ?>"></script>
 <link rel="stylesheet" type="text/css" href="css/zdravnik.css?<?php echo time(); ?>">
