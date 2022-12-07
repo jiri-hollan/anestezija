@@ -15,15 +15,13 @@ class TableRows extends RecursiveIteratorIterator {
     }
 }
 //echo '<p id="gumb">gumb</p>';
-$stmt = $prebrano;
+   $stmt = $prebrano;
 //$stmt=array("kvak", "fuj");
  foreach(new TableRows(new RecursiveArrayIterator($stmt)) as $k=>$v) {
         echo $v;
     }
-
 echo '
 <script>
-
 document.getElementById("vrsticeTabela").addEventListener("click", functionRow);
 function functionRow (e) {
 if (e.path[1]!=undefined) {	
@@ -37,6 +35,5 @@ function celicaFunction(prvaCelica) {
  // alert("to je prva celica: "+prvaCelica);
   window.location.href = "../pregled/sprejem.php?id=" + prvaCelica; 
 }
-
 </script>';
 ?>

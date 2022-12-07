@@ -7,7 +7,6 @@ switch(akce) {
   case "vyber":
 // omogoči izbiro bolnišnice 	
  document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
- 	
 	var bolList  =[
 	"Izola",
 	"Jesenice",
@@ -18,10 +17,9 @@ for (i = 0; i < bolList.length; i++) {
  // text += "<option value=" +  zdravList[i] + ">"+"<br>";
   text += "<option value='" +  bolList[i] + "'>"  +"<br>";
 }
-document.getElementById("bolnisnice").innerHTML = text;
-	
-	document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
-	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
+  document.getElementById("bolnisnice").innerHTML = text;
+  document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
+  document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
     break; 
 
   case "vloz":
@@ -35,27 +33,22 @@ document.getElementById("bolnisnice").innerHTML = text;
     break;
 
   case "edit":
-  //alert("v JS case edit");
-  if(document.getElementById("osebe")!=null){
- document.getElementById("osebe").addEventListener("click", functionOver);
+//alert("v JS case edit");
+   if(document.getElementById("osebe")!=null){
+     document.getElementById("osebe").addEventListener("click", functionOver);
 }
-
     break;
 
-  case "odstrani":
-
-  
-  if ( confirm("Odstranim en zapis?") == true) {
+  case "odstrani": 
+   if ( confirm("Odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
     document.getElementById("osebe").addEventListener("click", functionOver);
       }
 } else {
   text = "You canceled!";
 }
-
     break;	
   default:
-    // code block
  }//od switch
 } // od izborFunction
 //----------------------------------------------------------------------------------------
@@ -65,8 +58,6 @@ if (x.nodeName == "TD") {
 var y = e.path[1];
 row_value = y.cells[0].innerHTML;
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
- }//od if
- 
- window.location.href = "manipulaceObjektUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka="+ tabulka;
-  
+ }//od if 
+  window.location.href = "manipulaceObjektUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka="+ tabulka; 
 }//od function(e)

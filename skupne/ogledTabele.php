@@ -1,6 +1,5 @@
 <?php
-require_once 'sabloni/zahlavi.php';
-  
+require_once 'sabloni/zahlavi.php';  
 	  if (isset($_POST['imeTable'])){		  
 	   $imeTable = test_input($_POST['imeTable']);		  
 	  }
@@ -30,9 +29,6 @@ class TableRows extends RecursiveIteratorIterator {
 require_once 'narediTablo.php';	
 $databaseGloboka=new DatabaseGloboka;
 $databaseGloboka->ogled($imeTable);
-
-//-----------------------------------------------
-
 echo "</table>";
 require_once 'sabloni/zapati.php';
 ?>

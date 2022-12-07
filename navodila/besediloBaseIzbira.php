@@ -2,7 +2,6 @@
 //----------prijavni podatki za podatkovno bazo odvisno od uporabljenega strežnika------
 
 require_once '../skupne/database.php';
-
 $tabulka="besedilaTbl";
 $stolpci=["id", "naslov", "direktorij","fajl"];
 $podminka=[""];
@@ -11,11 +10,7 @@ $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
 echo "<br>";
-
-//------------------------------------------------------------------------
-
 try {
-
 //---------------------prikaže izbiro vnešenega besedila iz podatkov v bazi "navodila" tabela "besedilaTbl"------------------	
 
 echo '<ul id= "navodilaId">';
@@ -23,11 +18,8 @@ echo '<ul id= "navodilaId">';
   //var_dump($value);
   echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
 }
-echo '</ul>';	
-	
-//-------------------------------------------------------------------------------------------------------------	
+echo '</ul>';
     }
-
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
 }

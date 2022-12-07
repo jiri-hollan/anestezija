@@ -3,11 +3,8 @@ require_once '../skupne/sabloni/zahlavi.php';
 ?>
 <!--konec zahlavi-->
 <h2>Urejanje limitov</h2>
-
 <button onclick="izborFunction('vyber')">izberi</button>
 <button onclick="izborFunction('vloz')">vlož</button>
-
-
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
@@ -210,10 +207,8 @@ function odstraniFunction($podminka){
 }//od odstraniFunction
 
 ?>
-
 <script src="js/manipulaceLimiti.js?<?php echo time(); ?>">
 </script>
-
 <?php
 require_once '../skupne/sabloni/zapati.php';
 ?>

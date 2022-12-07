@@ -1,18 +1,13 @@
 <?php
 require_once '../skupne/sabloni/zahlavi.php';
 ?>
-<!--konec zahlavi-->
 <h2>Prednastavljeni sklepi</h2>
-
 <button onclick="izborFunction('vyber')">izberi</button>
 <button onclick="izborFunction('vloz')">vlož</button>
-
-
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
 <p id="posli"></p>
-<!--<input type="submit" name="submit" value="Submit"> -->
 </form>
  <br>
 <p id="demo3"></p>
@@ -192,7 +187,6 @@ function odstraniFunction($podminka){
 }//od odstraniFunction
 
 ?>
-
 <script src="js/manipulaceSklepi.js?<?php echo time(); ?>">
 </script>
 <?php

@@ -8,5 +8,4 @@
 	 $a2= '<li><a href="../servis/menuUpload.php">Naloži</a> </li>
 	       <li><a href="../servis/database/nastavitveMenu.php">nastavitve</a> </li>'; 
 	 $a3= '<li><a href="../admin/databaseMenu.php">database</a> </li>'; 
-	 
 ?>

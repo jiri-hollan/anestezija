@@ -6,7 +6,6 @@ echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 <h1> Nalaganje besedila </h1>
 <h2>
 <form action="uploadBesedilo.php" method="post" enctype="multipart/form-data">
-  <!--<label for="direktorij">Ciljni direktorij: </label>-->
 	<?php
 	//"$_GETrazpored" določi, kam se pdf naloži	
 	echo '<input type="hidden" name="direktorij" id="direktorij" value="' . $_GET["direktorij"] . '" readonly>';
