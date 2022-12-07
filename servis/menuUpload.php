@@ -1,5 +1,5 @@
 <?php
-require_once('../sabloni/vkladane/zahlavi.php');
+require_once('sabloni/vkladane/zahlavi.php');
 ?>
  <section class="top-bar-section">
           <!-- Right Nav Section -->
