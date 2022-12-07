@@ -32,3 +32,8 @@ input {
      width: auto;
 	   text-overflow: ellipsis;
 }
+
+#sklep {
+	 background-color: white;
+	    width: 1000px;
+}
