@@ -10,7 +10,7 @@
 <body>
 <?php
 require_once('../skupne/home.php');
-echo '<a id="buttonDomov" href="../' . $home . '" >Domov</a>';
+echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 ?>
 <h1><form action="uploadM.php" method="post" enctype="multipart/form-data">
 	<?php
