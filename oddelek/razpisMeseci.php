@@ -45,7 +45,7 @@ switch ($pogled) {
 }
 ?>
 </ul>
-<p id=demo class=mesecni><img src="<?php echo $slika;?>" alt="Standardna oprema" width="460" height="600"></p>
+<p id=slika class=mesecni><img src="<?php echo $slika;?>" alt="Standardna oprema" width="460" height="600"></p>
 </body>
 </html>
 
