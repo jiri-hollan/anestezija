@@ -6,7 +6,6 @@ require_once '../skupne/database.php';
 $tabulka="besedilaTbl";
 $stolpci=["id", "naslov", "direktorij","fajl"];
 $podminka=[""];
-
 $vyber = new database();
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
