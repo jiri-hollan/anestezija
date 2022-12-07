@@ -26,3 +26,9 @@ body {
   background-color: #04AA6D;
   color: white;
 }
+
+input {
+   background-color: #04AA6D; 
+     width: auto;
+	   text-overflow: ellipsis;
+}
