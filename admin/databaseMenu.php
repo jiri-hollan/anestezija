@@ -5,8 +5,7 @@ require_once('administrace.php');
 
 class Manipulace extends Administrace {
    public function __construct() {
-	       parent::__construct();
-		   
+	       parent::__construct();		   
   if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {
 $nazaj="../admin/databaseMenu.php";
 echo '
@@ -31,7 +30,6 @@ echo '
 <li><a href="../admin/manipulaceBolnisnice.php?nazaj='.$nazaj.'">bolnišnice</a></li><br>
 </ul>
 <a href="../admin1/vertikalMenu.php?nazaj='.$nazaj.'">.</a>
-
 </div>
 ';
     } else {

@@ -3,9 +3,13 @@
    oznamovaci oblast admin
    <?php echo htmlspecialchars(!empty($chyba) ? $chyba : $_GET['chyba']); ?>
    </div>
-<?php endif;  ?> 
-<?php if(!empty($oznameni) || !empty($_GET['oznameni'])):  ?> 
+<?php 
+  endif; 
+  if(!empty($oznameni) || !empty($_GET['oznameni'])):  
+?> 
    <div class="alert alert-info">
-   <?php echo htmlspecialchars(!empty($oznameni)? $oznameni : $_GET['oznameni']); ?>
+<?php 
+  echo htmlspecialchars(!empty($oznameni)? $oznameni : $_GET['oznameni']);
+?>
    </div>
 <?php endif;  ?>
