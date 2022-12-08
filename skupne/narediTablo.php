@@ -136,4 +136,5 @@ try {
 $conn = null;
 }//uzavírací zavorky function pokaziStolpce
 //-------------------konec function pokaziStolpce-------
+}//uzavírací zavorky class DatabaseGloboka
 ?>
