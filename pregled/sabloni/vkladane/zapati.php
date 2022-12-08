@@ -11,7 +11,7 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
 	 <div id="najdiZapis"class="dropdown">
 <?php
   if (isset($_SESSION["pristop"]))  {
-if ($_SESSION["pristop"]==3) {	 
+  if ($_SESSION["pristop"]==3) {	 
 echo '
 <button class="dropbtn">najdi</button>
 <div class="dropdown-content">
