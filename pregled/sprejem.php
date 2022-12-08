@@ -5,7 +5,7 @@ $conn = new Database();
 //var_dump($_GET);
 $id = $_GET["id"];
 //echo '<p>sprejeto: '.$id.'</p>';
-$nameTable = "bolnikTbl";
+//**$nameTable = "bolnikTbl";
 $stolpci = array('*');
 $podminka = array("pregledId"=>$id);
 $prebrano = $conn->vyber($nameTable, $stolpci, $podminka);

@@ -102,7 +102,7 @@ $definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     `status` int(3) NOT NULL";
 $databaseGloboka->naredi('sklepiTbl', $definice);
 break;
-
+/*xx
 case "bolnik":
 $definice= "pregledId int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 datPregleda DATE,
@@ -153,6 +153,7 @@ sklep VARCHAR(255),
 status CHARACTER(15)";
 $databaseGloboka->naredi('bolnikTbl', $definice);
 break;
+xx*/
 /*
 case "":
 $definice= "";

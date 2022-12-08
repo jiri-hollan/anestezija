@@ -9,7 +9,7 @@ Class PoberZapis{
 	public function __construct($id) {
  $this->id = $id;
  $this->conn = new Database();	
- $this->nameTable = 'bolnikTbl';
+ //**$this->nameTable = 'bolnikTbl';
  $stolpci = array('*');
 //pregledId je obsoječi Id v tabeli bolnikTbl
  $podminka = array("pregledId"=>$this->id);
