@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	} else {
 		$doBaze  = "";
 	}
-	//var_dump($doBaze);
+//var_dump($doBaze);
 switch ($doBaze) {
   case 'vloz':
   if ($_POST['bolnikId']=="") {
@@ -18,19 +18,16 @@ switch ($doBaze) {
     break;
   case 'vyber':
     $najdi = new PreberiVpis;
-	//var_dump ($najdi ->prebranoFunction());
-	//$najdeno = $najdi->prebranoFunction();
+//var_dump ($najdi ->prebranoFunction());
 	$prebrano = $najdi->prebranoFunction();
 	require_once '../skupne/prikazPolja.php';
-    require_once 'zapisPoId.php';
-	
+    require_once 'zapisPoId.php';	
     break;
   case 'prikazi':
     $prikazi = new PreberiVpis;
-   // prikaže preiskavo pod id v formi;
+// prikaže preiskavo pod id v formi;
     break;
   case 'aktualizuj':
-   // code to be executed if n=label3;
     break;
   case '':
     if ($_POST['bolnikId']=="") {

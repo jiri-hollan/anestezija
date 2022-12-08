@@ -28,8 +28,7 @@
     <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  >
     <br>
     <br>  
-     <button class="naprej" id="naprej" ime = naprej  onclick = "return osebniFunction()"><b>Naprej</b></button>
- 
+    <button class="naprej" id="naprej" ime = naprej  onclick = "return osebniFunction()"><b>Naprej</b></button> 
  </fieldset>  
 <!-- ______________________________________________________________________________________
 
@@ -133,12 +132,11 @@
      <option value="sklep">
   </datalist>
  <script>
- // alert("sklep Json:" + sklepJson);
+// alert("sklep Json:" + sklepJson);
   var sklepList = JSON.parse(sklepJson);
-  //alert(sklepList);
+//alert(sklepList);
   listaSklepovFunction(sklepList);
   </script>
-
 <br><br>
  <fieldset class="zaklucek">premedikacija 
   <div id="zaklucek">
@@ -152,7 +150,6 @@
 </div>
 </form>
 
-
 <!-- ______________________________________________________________________________________
 
 ...........................Tretji del TISK................................-->
@@ -160,27 +157,24 @@
 <div class="celaStran" id="tretja">
   <!--<div id="logo"><img  id="imgBol" src="logoSBI.png"></div>-->
   <div id="logo">
-  </div>
-  
+  </div>  
   <script>
-  if (!localStorage.getItem("aktivnaBolnisnica") == "") {
+    if (!localStorage.getItem("aktivnaBolnisnica") == "") {
 //logo = document.getElementById("logo").innerHTML;
 //alert (logo);
-boln = localStorage.getItem("aktivnaBolnisnica");
+    boln = localStorage.getItem("aktivnaBolnisnica");
 //alert (boln);
-
-logo = '<img  id="';
-logo = logo + 'imgBol"';
-logo = logo + 'src="loga/logo' + boln + '.png"';
-logo = logo + 'alt=' + boln + '>';
+    logo = '<img  id="';
+    logo = logo + 'imgBol"';
+    logo = logo + 'src="loga/logo' + boln + '.png"';
+    logo = logo + 'alt=' + boln + '>';
 //alert (logo);
-document.getElementById("logo").innerHTML = logo;
+    document.getElementById("logo").innerHTML = logo;
   }
-   </script>
-   
-  <h1>Anesteziološki pregled</h1>
-   <div id="nalepkaR">nalepka</div> 
-    <p id="obravnavaR"></p>  
+   </script>   
+<h1>Anesteziološki pregled</h1>
+<div id="nalepkaR">nalepka</div> 
+<p id="obravnavaR"></p>  
 <div class="paragrafi">
 <div class="prvigrafi">	
     <p id="diagnozaR">op.diagnoza</p>
@@ -192,7 +186,6 @@ document.getElementById("logo").innerHTML = logo;
   <span style="padding-left:10px;">Mallampati:</span> <span id="mallR" class="kvadrat" >.</span> 
   <b><span style="padding-left:15px;font-size:120%;">Alergija:</span> <span id="alergijaR" style= "font-size:120%;"></span></b>
   </div>
-
  </div>
   <div class="velka" id="izvidiR">Izvidi in opombe</div>
 </div> 

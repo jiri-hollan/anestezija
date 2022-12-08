@@ -1,56 +1,51 @@
 function odjavaFunction() { 
-	 localStorage.setItem("imeZdravnika", "");
-	 localStorage.setItem("aktivnaBolnisnica","");
-	 localStorage.setItem("mestoBolnisnice","");
-     sessionStorage.removeItem("testJSON");
-	 sessionStorage.removeItem("bolnikId");
-     window.open("zdravnik.php", "_self");
-	 //alert ("odjava");
-     sbFunction();	 
+  localStorage.setItem("imeZdravnika", "");
+  localStorage.setItem("aktivnaBolnisnica","");
+  localStorage.setItem("mestoBolnisnice","");
+  sessionStorage.removeItem("testJSON");
+  sessionStorage.removeItem("bolnikId");
+  window.open("zdravnik.php", "_self");
+  //alert ("odjava");
+  sbFunction();	 
  }
 
 function klousFunction(){
-close();
+   close();
 }
 
 //------shranjevanje v bazo pri prehodu na novega bolnika---
 var izbris;
 function novBolnikFunction(izbris) {
-
-switch (izbris) {
-  case 0: // shrani v bazo
-    stariFunction();
+  switch (izbris) {
+   case 0: // shrani v bazo
+     stariFunction();
     break;
-  case 1: //naloži praznoi formular
-    noviFunction();
+   case 1: //naloži praznoi formular
+     noviFunction();
     break;
-
-
-  default:
+   default:
     //text = "No value found";
 }
 
 function stariFunction() {
 //alert ('v stariFunction fajl odjava'+localStorage.getItem("aktivnaBolnisnica"));
 //alert(localStorage.getItem("bazeBolnisnice"));
-let x=localStorage.getItem("aktivnaBolnisnica");
-let y=localStorage.getItem("bazeBolnisnice");
-let z= y.require_onces(x);
+  let x=localStorage.getItem("aktivnaBolnisnica");
+  let y=localStorage.getItem("bazeBolnisnice");
+  let z= y.require_onces(x);
 //alert(z);
-	//IF: localStorage.getItem("aktivnaBolnisnica")== bolnišnica s statusom 2
-		if (z){
+//IF: localStorage.getItem("aktivnaBolnisnica")== bolnišnica s statusom 2
+	if (z){
 //alert ('v stariFunction');
-  var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
-  if (r == true) {
-	//alert ('odjava.js bolnikId: '+sessionStorage.getItem("bolnikId"));  
- // alert ('pred vstavljanjem v bazo');
-  document.getElementById("ustanova").value= localStorage.getItem("aktivnaBolnisnica");
-  document.getElementById("frm").submit();
+      var r = confirm("Za shranjevanje v podatkovno bazo\n Pritisni v redu ali prekliči.");
+      if (r == true) {
+//alert ('odjava.js bolnikId: '+sessionStorage.getItem("bolnikId"));  
+// alert ('pred vstavljanjem v bazo');
+        document.getElementById("ustanova").value= localStorage.getItem("aktivnaBolnisnica");
+        document.getElementById("frm").submit();
 //alert ('shranjeno v bazo');
-//  alert ('po vstavljanju v bazo');
-//location.reload();
+// alert ('po vstavljanju v bazo');
   } else {
-
 location.reload();
   }
  // alert ('nov bolnik');

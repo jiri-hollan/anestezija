@@ -6,22 +6,18 @@ require_once 'vnosVrstice.php';
  <body onload="stolpciFuncton()">
  <a id="buttonNazaj" href="bolnik.php" >Nazaj</a>
 <script>
-function stolpciFuncton() {
-const poljeJS = ["pregledId", "datPregleda", "imeZdravnika"];
-const poljeJSON = JSON.stringify(poljeJS);
-document.getElementById("data").value = poljeJSON;
-}
+ function stolpciFuncton() {
+ const poljeJS = ["pregledId", "datPregleda", "imeZdravnika"];
+ const poljeJSON = JSON.stringify(poljeJS);
+ document.getElementById("data").value = poljeJSON;
+ }
 </script>
 <?php 
-//session_start();
 if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
-echo '
-<div id="kontejner">';
+echo '<div id="kontejner">';
 ?>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" autocomplete="off">
 <?php 
-
-
 echo '
 <input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
 <label for "ustanova">bolnisnica:</label>
@@ -38,7 +34,6 @@ echo 'let x=localStorage.getItem("aktivnaBolnisnica");';
 //echo  'alert(x);';
 echo 'document.getElementById("ustanova").value= x;';
 echo '</script>';
-
 }
  require_once 'sabloni/zapati.php';
 ?>

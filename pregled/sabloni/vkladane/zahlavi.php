@@ -4,9 +4,8 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-    <title>Novi bolnik</title>
-    <link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
-	<!--xx<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>-->
+<title>Novi bolnik</title>
+<link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
 <script src="js/vpis.js?<?php echo time(); ?>"></script>
 <script src="js/report.js?<?php echo time(); ?>"></script>
 <script src="js/preklopCss.js?<?php echo time(); ?>"></script>
@@ -20,8 +19,5 @@
 <script src="js/sklepi.js?<?php echo time(); ?>"></script>
 <link rel="stylesheet" type="text/css" href="css/novPolnjenje.css?<?php echo time(); ?>">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css?<?php echo time(); ?>">
-
 </head>
-
-     <body onload="vpisFunction()">
-	 
+<body onload="vpisFunction()">

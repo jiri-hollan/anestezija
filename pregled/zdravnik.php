@@ -4,9 +4,8 @@
 <meta http-equiv="cache-control" content="No-Cache">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anestiz-set</title> 
-    <link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
-	<!--xx<link href='../favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>-->
+<title>Anestiz-set</title> 
+<link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
 <script src="js/prijava.js?<?php echo time(); ?>"></script> 
 <script src="js/odjava.js?<?php echo time(); ?>"></script>
 <link rel="stylesheet" type="text/css" href="css/zdravnik.css?<?php echo time(); ?>">
@@ -36,7 +35,6 @@ ________________________________________________________________________________
 </div>
 <div class="navbar" id="navBolnisnice" style='display:z-index:1;'>
 <?php
-
 require_once('../skupne/home.php');
 require_once('zapisVsi.php');
 require_once('bolnisnice.php');
