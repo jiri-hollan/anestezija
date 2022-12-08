@@ -14,5 +14,5 @@ if (isset($_REQUEST["tabulka"])){
 <p id="tabSent"></p>
 <p id="posli"></p>
 </form>
-<br>
+
 <p id="demo3"></p>

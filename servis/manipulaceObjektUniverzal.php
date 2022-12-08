@@ -1,5 +1,6 @@
  <?php 
  require_once('sabloni/vkladane/zahlavi.php');
+ //require_once '../skupne/sabloni/zahlavi.php';
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../skupne/database.php';
@@ -231,7 +232,7 @@ foreach (json_decode($this->dataPreg) as $key) {
      for ($i = 0; $i < $dolzina; $i++) {
        foreach ($vybrano[$i] as $key => $value) {
    // echo "$key: $value\n";
-	   echo " $key: <input name=$key value=$value\n></input>";
+	   echo " $key:<br> <input id=$key name=$key value='".$value."'></input><br>";
 	//echo "$value\n";
       }//od foreach	 
 	 echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button class='submit' type='submit'>potrdi</button><button type='reset'>reset</button> ";
