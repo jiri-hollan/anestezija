@@ -249,7 +249,6 @@ echo 'NISTE PRIJAVLJENI';
   }// od construct
 }// od class profil
 //________________________________konec Profil________________________
-//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 class SpremembaG extends Prihlaseni  {
 	public $tabulka;
