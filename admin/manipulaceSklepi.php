@@ -9,7 +9,7 @@ require_once '../skupne/sabloni/zahlavi.php';
 <p id="demo"></p>
 <p id="posli"></p>
 </form>
- <br>
+
 <p id="demo3"></p>
 <?php
  
@@ -158,11 +158,11 @@ $vyber->vyber($tabulka, $stolpci, $podminka);
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
-echo "<br>";
+//echo "<br>";
 echo "število vybranych zapisov= " . count($vybrano);
 $dolzina=count($vybrano);
 //echo $vybrano[1];
-echo "<br>";
+//echo "<br>";
 echo "<form  method='post'>";
 for ($i = 0; $i < $dolzina; $i++) {
 foreach ($vybrano[$i] as $key => $value) {
@@ -170,7 +170,7 @@ foreach ($vybrano[$i] as $key => $value) {
 	echo " $key:<br> <input id=$key name=$key value='".$value."'></input><br>";
 	//echo "$value\n";
 }//od foreach
-echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button type='submit'>submit</button><button type='reset'>reset</button> ";
+echo "<input type='hidden' name='akce' value='uredi'></input><button type='submit'>submit</button><button type='reset'>reset</button> ";
 echo "</form>";
 }//od for	
 	
