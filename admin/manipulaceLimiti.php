@@ -1,7 +1,6 @@
 <?php
 require_once '../skupne/sabloni/zahlavi.php';
 ?>
-<!--konec zahlavi-->
 <h2>Urejanje limitov</h2>
 <button onclick="izborFunction('vyber')">izberi</button>
 <button onclick="izborFunction('vloz')">vlož</button>
@@ -9,36 +8,20 @@ require_once '../skupne/sabloni/zahlavi.php';
 <input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
 <p id="posli"></p>
-<!--<input type="submit" name="submit" value="Submit"> -->
 </form>
  <br>
-<!-- <p id="demo1">demo1</p>
-<p id="demo2">demo2</p>-->
 <p id="demo3"></p>
 <?php
- 
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 require_once '../skupne/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
-
- // $ime = test_input($_POST["ime"]);
-  //$min = test_input($_POST["min"]);
- // $max = test_input($_POST["max"]);
   echo strtoupper($akce) .': ';
-//  echo strtoupper($bolnisnica) .'<br>';
-  //echo var_dump($max) .'<br>';
-  //$akce = naredi($akce);
 switch ($akce) {
   case "vyber":
-   // echo "to je vyber.<br>";
-  // if ($bolnisnica == "") {
 	$podminka = NULL;
-/*} else {
-    $podminka = array("bolnisnica"=>$bolnisnica);
-}*/
     vyberFunction($podminka);
     break;
 case "vloz":
@@ -60,11 +43,9 @@ case "uredi":
     $data= array("bolnisnica"=>$bolnisnica, "skupina"=>$skupina, "ime"=>$ime, "min"=>$min, "max"=>$max);
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
-
     break;
   default:
-    echo "ni izvelo case";
-	
+    echo "ni izvelo case";	
 }//od switch
 }//od if
 
@@ -75,8 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
      $id = test_input($_GET["id"]);
 	 echo "id v bazi= " .  $id;
 	echo "<br>";
-	// var_dump($id);
-	// echo "<br>"; 
+// var_dump($id);
 	 $podminka = array("id"=>$id);
      editFunction($podminka);
     break;
@@ -86,10 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 	echo "<br>";
     $podminka = array("id"=>$id);
 	odstraniFunction($podminka);
-    // odstraniFunction();
     break;	
-	
-    /*  ...*/
   default:
     echo "ni izvelo get case"; 
   }//od switch	  
@@ -98,27 +75,17 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 
 
 function vyberFunction($podminka){
-//$tabulka="uporabnikiTbl2";
 $tabulka="limitiTbl";
 $stolpci=["*"];
-//$stolpci=["ime","min"];
-//$podminka = array("ime"=>"Jiří");
-//$podminka = array("bolnisnica"=>$bolnisnica);
-//$podminka = array("ime"=>"Jiří", "Ben"=>"37", "Joe"=>"43");
-
 $vyber = new database();
-//$vyber = new database($tabulka, $stolpci, $podminka );
-//$vyber->vyber($tabulka, $stolpci, $podminka);
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
 echo "<br>";
 echo count($vybrano);
-//$dolzina=count($vybrano);
 //echo $vybrano[1];
 echo "<br>";
 if(count($vybrano)>0){
-
 echo "<table id='osebe' style='border: solid 1px black;'>";
 echo "<tr><th>Id</th><th>bolnisnica</><th>skupina</><th>ime</th><th>min</th><th>max</th></tr>";
 
@@ -126,7 +93,6 @@ class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
         parent::__construct($it, self::LEAVES_ONLY);
     }
-
     function current() { 
 		 return "<td  >"  . parent::current() . "</td>";
     }
@@ -137,15 +103,12 @@ class TableRows extends RecursiveIteratorIterator {
 		$a = 'onclick="' . "izborFunction('uredi')" . '"';
 		$b = 'onclick="' . "izborFunction('odstrani')" . '"';
         echo "<td onclick=" . '"izborFunction('. "'uredi'".')"'.'"' . ">uredi</td>
-		<td onclick=" . '"izborFunction('. "'odstrani'".')"'.'"' . ">odstrani</td>
-		
+		<td onclick=" . '"izborFunction('. "'odstrani'".')"'.'"' . ">odstrani</td>		
 		</tr>" . "\n";
-    }
-}
-
+    }//od funkcije endChildern
+}//od class TableRows
 foreach(new TableRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
         echo $v;
-
 }//od foreach
 }//od if(cout)
 else{
@@ -154,12 +117,8 @@ echo "Za izbrano bolnisnico ni zapisa v bazi";
 }//od vyberFunction  
 
 function vlozFunction($data){
-//$tabulka="uporabnikiTbl2";
 $tabulka="limitiTbl";
-//$data= array("bolnisnica"=>"izola", "ime"=>"Lela", "min"=>"Hollan", "max"=>"1");
-
 $vloz = new database($tabulka,$data);
-//$vloz->vloz($tabulka,$data);
 $vlozeno=$vloz->vloz($tabulka,$data );
 //echo $vlozeno[1];
 echo "<br>";
@@ -186,26 +145,20 @@ echo "<br>";
 echo "<form  method='post'>";
 for ($i = 0; $i < $dolzina; $i++) {
 foreach ($vybrano[$i] as $key => $value) {
-   // echo "$key: $value\n";
-	echo " $key: <input name=$key value=$value\n></input>";
-	//echo "$value\n";
+// echo "$key: $value\n";
+	echo " $key:<br> <input id=$key name=$key value='".$value."'></input><br>";
 }//od foreach
 echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button type='submit'>submit</button><button type='reset'>reset</button> ";
 echo "</form>";
-}//od for	
-	
-	
-	
+}//od for		
 }//od editFunction
 
 function odstraniFunction($podminka){
-	//echo 'odstraniFunction še ni napisana';
 	$tabulka="limitiTbl";
 	$odstrani = new database();
 	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
 	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
 }//od odstraniFunction
-
 ?>
 <script src="js/manipulaceLimiti.js?<?php echo time(); ?>">
 </script>
