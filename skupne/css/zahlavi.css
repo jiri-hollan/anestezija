@@ -28,12 +28,25 @@ body {
 }
 
 input {
-   background-color: yellow; 
+   /*background-color: yellow; 
      width: auto;
-	   text-overflow: ellipsis;
+	   text-overflow: ellipsis;*/
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: yellow;
 }
 
 #sklep {
-	 background-color: white;
-	    width: 1000px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
