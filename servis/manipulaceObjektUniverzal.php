@@ -224,10 +224,10 @@ foreach (json_decode($this->dataPreg) as $key) {
 	 $stolpci=["*"];
 	 $vyber = new database();
 	 $vybrano=$vyber->vyber($this->tabulka, $stolpci, $podminka );
-	 echo "<br>";
+	 //echo "<br>";
      //echo "število vybranych zapisov= " . count($vybrano);
      $dolzina=count($vybrano);
-	 echo "<br>";
+	 //echo "<br>";
      echo "<form  method='post'>";
      for ($i = 0; $i < $dolzina; $i++) {
        foreach ($vybrano[$i] as $key => $value) {
