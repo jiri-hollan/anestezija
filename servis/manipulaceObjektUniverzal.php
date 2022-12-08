@@ -224,16 +224,13 @@ foreach (json_decode($this->dataPreg) as $key) {
 	 $stolpci=["*"];
 	 $vyber = new database();
 	 $vybrano=$vyber->vyber($this->tabulka, $stolpci, $podminka );
-	 //echo "<br>";
-     //echo "število vybranych zapisov= " . count($vybrano);
+//echo "število vybranych zapisov= " . count($vybrano);
      $dolzina=count($vybrano);
-	 //echo "<br>";
      echo "<form  method='post'>";
      for ($i = 0; $i < $dolzina; $i++) {
        foreach ($vybrano[$i] as $key => $value) {
-   // echo "$key: $value\n";
+// echo "$key: $value\n";
 	   echo " $key:<br> <input id=$key name=$key value='".$value."'></input><br>";
-	//echo "$value\n";
       }//od foreach	 
 	 echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button class='submit' type='submit'>potrdi</button><button type='reset'>reset</button> ";
      echo "</form>";
