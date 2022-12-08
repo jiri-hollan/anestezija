@@ -60,7 +60,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
    case "uredi":
      $id = test_input($_GET["id"]);
 	 echo "id v bazi= " .  $id;
-	 //xxecho "<br>";
 // var_dump($id);
 	 $podminka = array("id"=>$id);
      editFunction($podminka);
@@ -68,7 +67,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
    case "odstrani":
     $id = test_input($_GET["id"]);
 	echo "id v bazi= " .  $id;
-	 //xxecho "<br>";
     $podminka = array("id"=>$id);
 	odstraniFunction($podminka);
     break;	

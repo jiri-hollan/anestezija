@@ -6,8 +6,6 @@ $nazaj="../admin1/vertikalMenu.php";
 
 <h2>kompetence uporabnikov</h2>
 <button onclick="izborFunction('vyber')">izberi</button>
-<!--xx<button onclick="izborFunction('vloz')">vlož</button>xx-->
-
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
  <input type="hidden" id="akceId" name="akce" value="">
  <input type="hidden" id="nazaj" name="nazaj" value="<?php echo $nazaj;?>">

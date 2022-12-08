@@ -85,7 +85,6 @@ function vyberFunction($podminka){
 //echo var_dump($vybrano);
   echo count($vybrano);
 //echo $vybrano[1];
-  //XXecho "<br>";
   if(count($vybrano)>0){
    echo "<table id='osebe' style='border: solid 1px black;'>";
    echo "<tr><th>Id</th><th>mesto</><th>nazivB</th><th>status</th></tr>";

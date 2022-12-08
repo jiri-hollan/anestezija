@@ -11,7 +11,6 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
    <meta http-equiv="refresh" content="0;url=frontend/menuFile1.php" />
    <title>Anestiz</title>  
    <link rel="shortcut icon" href="favicon.ico?<?php echo time(); ?>">
-  <!--xx <link href='favicon120.png?<?php echo time(); ?>' rel='icon' sizes='120x120'/>-->
 </head>
  <body>
  </body>  

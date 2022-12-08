@@ -58,7 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 	   case "uredi":
      $id = test_input($_GET["id"]);
 	 echo "id v bazi= " .  $id;
-	//xxecho "<br>";
 // var_dump($id);
 // echo "<br>"; 
 	 $podminka = array("id"=>$id);
@@ -83,11 +82,9 @@ function vyberFunction($podminka){
  $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
- //XXecho "<br>";
  echo count($vybrano);
 //$dolzina=count($vybrano);
 //echo $vybrano[1];
- //xxecho "<br>";
 if(count($vybrano)>0){
  echo "<table id='osebe' style='border: solid 1px black;'>";
  echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>status</th></tr>";

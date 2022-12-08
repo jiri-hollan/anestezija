@@ -111,7 +111,6 @@ Class Prijava extends Prihlaseni {
 // od class Prijava	
 }
 //_____________________________________konec Prijava_______________________________________________
-//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Class Registrace extends Prihlaseni {
     public $data;
@@ -213,7 +212,6 @@ require_once('../skupne/posta.php');
 }
 
 //____________________________konec Registrace_______________________________
-//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 Class Profil extends Prihlaseni {
     public $data;

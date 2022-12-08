@@ -136,10 +136,4 @@ try {
 $conn = null;
 }//uzavírací zavorky function pokaziStolpce
 //-------------------konec function pokaziStolpce-------
-
-public function xxxx($yyyy) {
-  $conn = null;
-}//uzavírací zavorky function xxxx
-//-------------------konec function xxxx-------
-}//uzavírací zavorky class DatabaseGloboka
 ?>
