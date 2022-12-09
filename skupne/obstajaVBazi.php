@@ -15,11 +15,12 @@ class DatabaseGloboka {
 public function pokaziTable() {
 try {
    //$sql = "SHOW TABLES";	
-   $sql = "SHOW TABLES like 'bolnikTblx'";
+   $sql = "SHOW TABLES like 'bolnikTbl'";
    $statement = $this->conn->prepare($sql);
    $statement->execute();
    $tables = $statement->fetchAll(PDO::FETCH_BOTH);
   // var_dump($tables);
+   echo count($tables);
    echo '<br>';
 if (!is_null($tables)) {
   echo "Variable 'tables' is set.<br>";
