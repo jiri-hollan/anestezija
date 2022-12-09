@@ -14,21 +14,32 @@ class DatabaseGloboka {
 //-----------------konec construct--------------
 public function pokaziTable() {
 try {
-	$sql = "SHOW TABLES";
-//Prepare our SQL statement,
- $statement = $this->conn->prepare($sql);
-//Execute the statement.
+   //$sql = "SHOW TABLES";	
+   $sql = "SHOW TABLES like 'bolnikTblx'";
+   $statement = $this->conn->prepare($sql);
    $statement->execute();
-//Fetch the rows from our statement.
-//$tables = $statement->fetchAll(PDO::FETCH_NUM);
    $tables = $statement->fetchAll(PDO::FETCH_BOTH);
+  // var_dump($tables);
+   echo '<br>';
+if (is_null($tables)) {
+  echo "Variable 'tables' is set.<br>";
+}
+   
 //Loop through our table names.
 foreach($tables as $table){
 //Print the table name out onto the page.
-//echo $table[0], '<br>';
+if (is_null($table)) {
+  echo "Variable 'table' is not set.<br>";
+}
+
+if (!is_null($table)) {
+  echo "Variable 'table' is set.<br>";
+}
+
 	print_r($table);
 	echo '<br>';
-print("\n");
+    print("\n");
+	//return $tables;
 } 
 }
 
