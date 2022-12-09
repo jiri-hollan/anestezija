@@ -39,4 +39,6 @@ $conn = null;
 }//uzavírací zavorky function pokaziTable
 //-------------------konec function pokaziTable-------
 }//uzavírací zavorky class DatabaseGloboka
+$databaseGloboka=new DatabaseGloboka;
+$databaseGloboka->pokaziTable();
 ?>
