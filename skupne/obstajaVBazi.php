@@ -21,7 +21,7 @@ try {
    $tables = $statement->fetchAll(PDO::FETCH_BOTH);
   // var_dump($tables);
    echo '<br>';
-if (is_null($tables)) {
+if (!is_null($tables)) {
   echo "Variable 'tables' is set.<br>";
 }
    
