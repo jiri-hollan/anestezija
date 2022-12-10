@@ -33,28 +33,6 @@ try {
 	   default:
 	   echo'pri iskanju tabele prišlo do napake';
    }
-   /*
-if ($obstaja===1) {
-  echo "iskana tabela obstaja.<br>";
-}*/
- /*xx  
-//Loop through our table names.
-foreach($tables as $table){
-//Print the table name out onto the page.
-if (is_null($table)) {
-  echo "Variable 'table' is not set.<br>";
-}
-
-if (!is_null($table)) {
-  echo "Variable 'table' is set.<br>";
-}
-
-	print_r($table);
-	echo '<br>';
-    print("\n");
-	//return $tables;
-} 
-xx*/
 }
 
 catch(PDOException $e) {
