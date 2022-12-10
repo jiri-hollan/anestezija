@@ -15,7 +15,7 @@ class DatabaseGloboka {
 public function pokaziTable() {
 try {
    //$sql = "SHOW TABLES";	
-   $sql = "SHOW TABLES like 'bolnikTbla'";
+   $sql = "SHOW TABLES like 'bolnikTbl'";
    $statement = $this->conn->prepare($sql);
    $statement->execute();
    $tables = $statement->fetchAll(PDO::FETCH_BOTH);
