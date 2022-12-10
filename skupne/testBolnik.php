@@ -15,16 +15,28 @@ class DatabaseGloboka {
 public function pokaziTable() {
 try {
    //$sql = "SHOW TABLES";	
-   $sql = "SHOW TABLES like 'bolnikTbl'";
+   $sql = "SHOW TABLES like 'bolnikTbla'";
    $statement = $this->conn->prepare($sql);
    $statement->execute();
    $tables = $statement->fetchAll(PDO::FETCH_BOTH);
   // var_dump($tables);
-   echo count($tables);
+  $obstaja=count($tables);
+   echo $obstaja;
    echo '<br>';
-if (!is_null($tables)) {
-  echo "Variable 'tables' is set.<br>";
-}
+   switch($obstaja){
+	   case 1:
+	     echo "iskana tabela obstaja.<br>";
+	   break;
+	   case 0:
+	     echo'iskane tabele ni';
+	   break;
+	   default:
+	   echo'pri iskanju tabele prišlo do napake';
+   }
+   /*
+if ($obstaja===1) {
+  echo "iskana tabela obstaja.<br>";
+}*/
  /*xx  
 //Loop through our table names.
 foreach($tables as $table){
