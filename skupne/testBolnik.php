@@ -25,7 +25,7 @@ try {
 if (!is_null($tables)) {
   echo "Variable 'tables' is set.<br>";
 }
-   
+ /*xx  
 //Loop through our table names.
 foreach($tables as $table){
 //Print the table name out onto the page.
@@ -42,6 +42,7 @@ if (!is_null($table)) {
     print("\n");
 	//return $tables;
 } 
+xx*/
 }
 
 catch(PDOException $e) {
