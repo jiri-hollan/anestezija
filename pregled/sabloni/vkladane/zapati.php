@@ -10,6 +10,8 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
      <span class="navSpan" id="novB" onclick="novBolnikFunction(1);">Nov bolnik</span>
 	 <div id="najdiZapis"class="dropdown">
 <?php
+$database=new Database;
+$database->testrajBolnik();
   if (isset($_SESSION["pristop"]))  {
   if ($_SESSION["pristop"]==3) {	 
 echo '
