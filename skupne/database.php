@@ -250,7 +250,7 @@ try {
    $tables = $statement->fetchAll(PDO::FETCH_BOTH);
   // var_dump($tables);
   $obstaja=count($tables);
-   echo $obstaja;
+  /* echo $obstaja;
    echo '<br>';
    switch($obstaja){
 	   case 1:
@@ -261,7 +261,8 @@ try {
 	   break;
 	   default:
 	   echo'pri iskanju tabele prišlo do napake';
-   }
+   }*/
+   return $obstaja;
 }
 
 catch(PDOException $e) {
