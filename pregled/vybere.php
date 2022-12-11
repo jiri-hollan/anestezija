@@ -13,6 +13,9 @@ require_once 'vnosVrstice.php';
  }
 </script>
 <?php 
+$database=new Database;
+$database->testirajBolnik();
+if($database->bolnikObstaja==1){
 if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '<div id="kontejner">';
 ?>
@@ -34,6 +37,7 @@ echo 'let x=localStorage.getItem("aktivnaBolnisnica");';
 //echo  'alert(x);';
 echo 'document.getElementById("ustanova").value= x;';
 echo '</script>';
+}
 }
  require_once 'sabloni/zapati.php';
 ?>
