@@ -34,13 +34,9 @@ echo '
 $database=new Database;
 $database->testirajBolnik();
 if($database->bolnikObstaja==1){
-  if (isset($_SESSION["pristop"]))  {
-  if ($_SESSION["pristop"]==3) {	 
-echo '
-     <span class="navSpan" id="submitFrm" onclick="return reportFunction'."('s')".'">shrani</span>
-';
-} 
-  }
+ echo '<span class="navSpan" id="submitFrm" onclick="return reportFunction'."('s')".'">shrani</span>';
+  }else{
+	echo '<span class="navSpan" id="submitFrm" ></span>';  
   }
 ?> 
   <!--   <span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span> -->
