@@ -12,7 +12,7 @@ class Database {
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
 	}//uzavírací zavorky __construct	
 //-----------------konec construct--------------
-public function pokaziTable() {
+public function testrajBolnik() {
 try {
    //$sql = "SHOW TABLES";	
    $sql = "SHOW TABLES like 'bolnikTbl'";
@@ -39,9 +39,9 @@ catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
     }
 $conn = null;
-}//uzavírací zavorky function pokaziTable
-//-------------------konec function pokaziTable-------
+}//uzavírací zavorky function testrajBolnik
+//-------------------konec function testrajBolnik-------
 }//uzavírací zavorky class Database
 $database=new Database;
-$database->pokaziTable();
+$database->testrajBolnik();
 ?>

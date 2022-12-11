@@ -240,5 +240,36 @@ if (is_array($podminka)){
 	return $pocetOdstranenych;
 	}// od function odstrani		
 //......konec odstrani......................
+
+public function testrajBolnik() {
+try {
+   //$sql = "SHOW TABLES";	
+   $sql = "SHOW TABLES like 'bolnikTbl'";
+   $statement = $this->conn->prepare($sql);
+   $statement->execute();
+   $tables = $statement->fetchAll(PDO::FETCH_BOTH);
+  // var_dump($tables);
+  $obstaja=count($tables);
+   echo $obstaja;
+   echo '<br>';
+   switch($obstaja){
+	   case 1:
+	     echo "iskana tabela obstaja.<br>";
+	   break;
+	   case 0:
+	     echo'iskane tabele ni';
+	   break;
+	   default:
+	   echo'pri iskanju tabele prišlo do napake';
+   }
+}
+
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+    }
+$conn = null;
+}//uzavírací zavorky function testrajBolnik
+//-------------------konec function testraj
+
 	
 }//uzavírací zavorky class Database
