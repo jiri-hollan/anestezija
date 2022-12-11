@@ -12,7 +12,7 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
 <?php
 $database=new Database;
 $database->testrajBolnik();
-if($database->obstaja==1){
+if($database->bolnikObstaja==1){
   if (isset($_SESSION["pristop"]))  {
   if ($_SESSION["pristop"]==3) {	 
 echo '

@@ -5,7 +5,7 @@ class Database {
 	public $password = '';
 	public $dbname = '';
 	public $connn = '';
-	public $obstaja= '';
+	public $bolnikObstaja= '';
 	public Function __construct(){
 	require 'streznik.php';
       //$this->servername = "sh17.neoserv.si";
@@ -250,12 +250,12 @@ try {
    $statement->execute();
    $tables = $statement->fetchAll(PDO::FETCH_BOTH);
   // var_dump($tables);
-  $obstaja=count($tables);
-  /* echo $obstaja;
+  $bolnikObstaja=count($tables);
+  /* echo $bolnikObstaja;
    echo '<br>';
-   switch($obstaja){
+   switch($bolnikObstaja){
 	   case 1:
-	     echo "iskana tabela obstaja.<br>";
+	     echo "iskana tabela bolnikObstaja.<br>";
 	   break;
 	   case 0:
 	     echo'iskane tabele ni';
@@ -263,7 +263,7 @@ try {
 	   default:
 	   echo'pri iskanju tabele prišlo do napake';
    }*/
-   $this->obstaja = $obstaja;
+   $this->bolnikObstaja = $bolnikObstaja;
    return $this;
 }
 
