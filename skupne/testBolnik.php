@@ -1,5 +1,5 @@
 <?php
-class DatabaseGloboka {
+class Database {
 	public $servername = '';
 	public $username = '';
 	public $password = '';
@@ -41,7 +41,7 @@ catch(PDOException $e) {
 $conn = null;
 }//uzavírací zavorky function pokaziTable
 //-------------------konec function pokaziTable-------
-}//uzavírací zavorky class DatabaseGloboka
-$databaseGloboka=new DatabaseGloboka;
-$databaseGloboka->pokaziTable();
+}//uzavírací zavorky class Database
+$database=new Database;
+$database->pokaziTable();
 ?>
