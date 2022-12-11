@@ -12,6 +12,7 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
 <?php
 $database=new Database;
 $database->testrajBolnik();
+if($obstaja==1){
   if (isset($_SESSION["pristop"]))  {
   if ($_SESSION["pristop"]==3) {	 
 echo '
@@ -21,6 +22,7 @@ echo '
 </div>
 ';
 } 
+  }
   }
 ?> 
 </div>
