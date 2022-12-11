@@ -242,7 +242,7 @@ if (is_array($podminka)){
 	}// od function odstrani		
 //......konec odstrani......................
 
-public function testrajBolnik() {
+public function testirajBolnik() {
 try {
    //$sql = "SHOW TABLES";	
    $sql = "SHOW TABLES like 'bolnikTbl'";
