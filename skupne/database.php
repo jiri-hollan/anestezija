@@ -1,29 +1,15 @@
  <?php
-
 class Database {
-	
 	public $servername = '';
 	public $username = '';
 	public $password = '';
 	public $dbname = '';
 	public $connn = '';
-	
 	public Function __construct(){
 	require 'streznik.php';
       //$this->servername = "sh17.neoserv.si";
-   /*   $this->servername = $_SERVER['SERVER_NAME'];	  
-      $this->username = "anestiz";
-      $this->password = "laringoskop";
-      $this->dbname = "anestiz_navodila";
-
-          if ( $_SERVER['SERVER_NAME']=="localhost") {
-              $this->username = "root";
-              $this->password = "";
-              $this->dbname = "navodila";
-            }*/
 		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname . ';charset=UTF8', $this->username, $this->password);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
-	
 	}//uzavírací zavorky __construct	
 //-----------------konec construct--------------
 
