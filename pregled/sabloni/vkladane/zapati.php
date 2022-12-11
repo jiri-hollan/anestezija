@@ -11,8 +11,8 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
 	 <div id="najdiZapis"class="dropdown">
 <?php
 $database=new Database;
-$obstaja = $database->testrajBolnik();
-if($obstaja==1){
+$database->testrajBolnik();
+if($database->obstaja==1){
   if (isset($_SESSION["pristop"]))  {
   if ($_SESSION["pristop"]==3) {	 
 echo '

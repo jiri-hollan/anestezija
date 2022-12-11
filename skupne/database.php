@@ -5,6 +5,7 @@ class Database {
 	public $password = '';
 	public $dbname = '';
 	public $connn = '';
+	public $obstaja= '';
 	public Function __construct(){
 	require 'streznik.php';
       //$this->servername = "sh17.neoserv.si";
@@ -262,7 +263,8 @@ try {
 	   default:
 	   echo'pri iskanju tabele prišlo do napake';
    }*/
-   return $obstaja;
+   $this->obstaja = $obstaja;
+   return $this;
 }
 
 catch(PDOException $e) {
