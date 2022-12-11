@@ -13,15 +13,13 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
 $database=new Database;
 $database->testirajBolnik();
 if($database->bolnikObstaja==1){
-  if (isset($_SESSION["pristop"]))  {
-  if ($_SESSION["pristop"]==3) {	 
+	if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '
 <button class="dropbtn">najdi</button>
 <div class="dropdown-content">
 <a href="vybere.php">baze</a>
 </div>
 ';
-} 
   }
   }
 ?> 
