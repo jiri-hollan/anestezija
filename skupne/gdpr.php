@@ -14,7 +14,7 @@ class Database {
 //-----------------konec construct--------------
 public function vyber ($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
-//echo '<br>'.$sloupceSQL;
+echo '<br>sloupceSQL..:'.$sloupceSQL;
 	$podminkaSQL = '';
 	$parametry = array();
 	$poradiSQL = '';
@@ -33,13 +33,14 @@ public function vyber ($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
 	if ($poradi!=NULL){
 	   $poradiSQL = " ORDER BY " . $poradi;	
 	}
-// echo $poradiSQL;
-// echo '<br>';
-// echo var_dump($parametry) . "<br>";
-// echo var_dump($podminka) . "<br>";
-// echo var_dump($podminkaSQL );
+ echo '<br>poradiSQL...:'.$poradiSQL;
+ echo '<br>parametry...:'.var_dump($parametry);
+ echo '<br>podminka...:'.var_dump($podminka);
+ echo '<br>podminkaSQL...:'.var_dump($podminkaSQL );
+ 
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL. $poradiSQL);
-//var_dump($dotaz);
+	
+ echo '<br>dotaz...:'.var_dump($dotaz);
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
@@ -61,7 +62,7 @@ $tabulka="omejitve";
 $sloupce=["nivo"];
 $podminka=["razlog"=>"gdpr"];
 $database= new Database;
-$gdpr=$database->vyber($tabulka,$sloupce);
+$gdpr=$database->vyber($tabulka,$sloupce,$podminka);
 var_dump($gdpr);
 echo $gdpr->nivo;
 ?>
