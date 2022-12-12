@@ -14,6 +14,9 @@
 
   <label for="uporabniki">uporabniki</label>
   <input type="radio" id="uporabniki" name="name" value="uporabniki">
+  
+  <label for="omejitve">omejitve</label>
+  <input type="radio" id="omejitve" name="name" value="omejitve"> 
   <br><br>
   <input type="submit" name="submit" value="Submit">  
   <br>
@@ -60,7 +63,11 @@ $definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 $databaseGloboka->naredi('uporabnikiTbl2', $definice);
 break;
 
-case "":
+case "omejitve":
+$definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    razlog VARCHAR(30) NOT NULL,
+    nivo INT(3) NOT NULL";
+$databaseGloboka->naredi('omejitveTbl', $definice);
 
 break;
 
