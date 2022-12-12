@@ -9,10 +9,10 @@ class Database {
 	public Function __construct(){
 	require 'streznik.php';
 		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname . ';charset=UTF8', $this->username, $this->password);
-        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION		
+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  }//uzavírací zavorky __construct	
 //-----------------konec construct--------------
-public ($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
+public function vyber ($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
 //echo '<br>'.$sloupceSQL;
 	$podminkaSQL = '';
@@ -53,4 +53,13 @@ public ($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
  }// od function vyber
 //............konec vyber..........................................
 }//uzavírací zavorky class Database
+?>
+
+<?php
+// aktivace
+$tabulka="gdpr";
+$sloupce=["gdpr"];
+$database= new Database;
+$gdpr=$database->vyber($tabulka,$sloupce);
+
 ?>
