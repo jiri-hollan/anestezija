@@ -65,5 +65,8 @@ $database= new Database;
 $gdpr=$database->vyber($tabulka,$sloupce,$podminka);
 var_dump($gdpr);
 echo '<br>Nivo=';
-echo $gdpr->nivo;
+echo'<br>';
+echo var_dump($gdpr[0]);
+echo '<br>'.$gdpr[0]['nivo'];
+//echo $gdpr->nivo;
 ?>
