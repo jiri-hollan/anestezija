@@ -8,14 +8,13 @@ class Database {
 	public $bolnikObstaja= '';
 	public Function __construct(){
 	require 'streznik.php';
-      //$this->servername = "sh17.neoserv.si";
 		$this->conn = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->dbname . ';charset=UTF8', $this->username, $this->password);
-        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		
-	}//uzavírací zavorky __construct	
+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION		
+ }//uzavírací zavorky __construct	
 //-----------------konec construct--------------
-public function vyber($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
+public ($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
-	//echo '<br>'.$sloupceSQL;
+//echo '<br>'.$sloupceSQL;
 	$podminkaSQL = '';
 	$parametry = array();
 	$poradiSQL = '';
@@ -29,33 +28,29 @@ public function vyber($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
 			}
 			$parametry[$i] = $hodnota;
 			$i++;
-		}
-	}
+		}//od foreach ($podminka
+	}// od if array
 	if ($poradi!=NULL){
 	   $poradiSQL = " ORDER BY " . $poradi;	
 	}
-
-	//echo $poradiSQL;
-	// echo '<br>';
-	// echo var_dump($parametry) . "<br>";
-	 // echo var_dump($podminka) . "<br>";
-	 // echo var_dump($podminkaSQL );
+// echo $poradiSQL;
+// echo '<br>';
+// echo var_dump($parametry) . "<br>";
+// echo var_dump($podminka) . "<br>";
+// echo var_dump($podminkaSQL );
 	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka". $podminkaSQL. $poradiSQL);
-	//var_dump($dotaz);
+//var_dump($dotaz);
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
-		//echo '<br>v try vyber';
+//echo '<br>v try vyber';
 	  }catch (PDException $e) {
 		  echo $e->getMessage();
 		  $zaznamy = false;
-	  }
-	  
+	  }	  
 	  $dotaz->closeCursor();
 	  return $zaznamy;
-	}
-//............konec vyber.............................................................
-
-
+ }// od function vyber
+//............konec vyber..........................................
 }//uzavírací zavorky class Database
 ?>
