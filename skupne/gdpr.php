@@ -64,5 +64,6 @@ $podminka=["razlog"=>"gdpr"];
 $database= new Database;
 $gdpr=$database->vyber($tabulka,$sloupce,$podminka);
 var_dump($gdpr);
+echo '<br>Nivo=';
 echo $gdpr->nivo;
 ?>
