@@ -57,9 +57,11 @@ public function vyber ($tabulka, $sloupce, $podminka = NULL, $poradi = NULL){
 
 <?php
 // aktivace
-$tabulka="gdpr";
-$sloupce=["gdpr"];
+$tabulka="omejitve";
+$sloupce=["nivo"];
+$podminka=["razlog"=>"gdpr"];
 $database= new Database;
 $gdpr=$database->vyber($tabulka,$sloupce);
-
+var_dump($gdpr);
+echo $gdpr->nivo;
 ?>
