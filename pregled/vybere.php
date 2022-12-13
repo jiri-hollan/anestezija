@@ -15,7 +15,7 @@ require_once 'vnosVrstice.php';
 <?php 
 $database=new Database;
 $database->testirajBolnik();
-if($database->bolnikObstaja==2){
+if($database->bolnikObstaja==2&&$gdpr==1){
 if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '<div id="kontejner">';
 ?>

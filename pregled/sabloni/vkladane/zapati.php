@@ -10,9 +10,10 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
      <span class="navSpan" id="novB" onclick="novBolnikFunction(1);">Nov bolnik</span>
 	 <div id="najdiZapis"class="dropdown">
 <?php
+require_once('../skupne/aktivace.php');
 $database=new Database;
 $database->testirajBolnik();
-if($database->bolnikObstaja==2){
+if($database->bolnikObstaja==2&&$gdpr==1){
 	if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '
 <button class="dropbtn">najdi</button>
@@ -31,7 +32,7 @@ echo '
 <?php
 $database=new Database;
 $database->testirajBolnik();
-if($database->bolnikObstaja==2){
+if($database->bolnikObstaja==2&&$gdpr==1){
  echo '<span class="navSpan" id="submitFrm" onclick="return reportFunction'."('s')".'">shrani</span>';
   }else{
 	echo '<span class="navSpan" id="submitFrm" ></span>';  
