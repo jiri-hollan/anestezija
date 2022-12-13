@@ -4,7 +4,7 @@ require_once '../skupne/sabloni/zahlavi.php';
 $nazaj="../admin1/vertikalMenu.php";
 ?>
 
-<h2>kompetence uporabnikov</h2>
+<h2>Omejitve</h2>
 <button onclick="izborFunction('vyber')">izberi</button>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
  <input type="hidden" id="akceId" name="akce" value="">
@@ -36,9 +36,12 @@ switch ($akce) {
 }
     vyberFunction($podminka);
   break; 	 
-case "vloz":
-     echo "ni dovoljeno";
-   break; 
+ case "vloz":
+    $razlog = test_input($_POST["razlog"]);
+    $nivo = test_input($_POST["nivo"]);  
+    $data= array("mesto"=>$mesto, "razlog"=>$razlog, "nivo"=>$nivo);
+    vlozFunction($data);
+    break;
 case "uredi":
     $tabulka="omejitveTbl";
     $id=test_input($_POST["id"]);
@@ -59,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["akce"])) {
 switch ($akce) {
 case "uredi":
      $id = test_input($_GET["id"]);
-	 echo "id uporabnika= " .  $id;
+	 echo "id omejitve= " .  $id;
 	 echo "<br>";
 	// var_dump($id);
 	// echo "<br>"; 
@@ -68,7 +71,7 @@ case "uredi":
    break;
 case "odstrani":
       $id = test_input($_GET["id"]);
-	 echo "id uporabnika= " .  $id;
+	 echo "id omejitve= " .  $id;
 	echo "<br>";
     $podminka = array("id"=>$id);
 	odstraniFunction($podminka);
@@ -170,10 +173,10 @@ function odstraniFunction($podminka){
 	$tabulka="omejitveTbl";
 	$odstrani = new database();
 	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
-	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
+	echo 'Odstranjena je bila '.$odstranjeno.' omejitev';
 }//od odstraniFunction
 ?>
-<script src="js/manipulaceUporabniki.js?<?php echo time(); ?>">
+<script src="js/manipulaceOmejitve.js?<?php echo time(); ?>">
 </script>
 <?php
 require_once '../skupne/sabloni/zapati.php';
