@@ -7,11 +7,12 @@ switch(akce) {
     break; 
 
  case "vloz":
-    $razlog = test_input($_POST["razlog"]);
-    $nivo = test_input($_POST["nivo"]);  
-    $data= array("mesto"=>$mesto, "razlog"=>$razlog, "nivo"=>$nivo);
-    vlozFunction($data);
+    razlog= '<input type="text" id="razlogId" name="razlog" value="" placeholder="razlog" required>';
+    nivo= '<input type="int" id="nivoId" name="nivo" value="" placeholder="nivo" required>';
+    document.getElementById("demo").innerHTML = razlog + nivo;
+	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
+
 
   case "uredi":
   if(document.getElementById("osebe")!=null){

@@ -6,6 +6,7 @@ $nazaj="../admin1/vertikalMenu.php";
 
 <h2>Omejitve</h2>
 <button onclick="izborFunction('vyber')">izberi</button>
+<button onclick="izborFunction('vloz')">vlož</button>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
  <input type="hidden" id="akceId" name="akce" value="">
  <input type="hidden" id="nazaj" name="nazaj" value="<?php echo $nazaj;?>">
@@ -39,7 +40,7 @@ switch ($akce) {
  case "vloz":
     $razlog = test_input($_POST["razlog"]);
     $nivo = test_input($_POST["nivo"]);  
-    $data= array("mesto"=>$mesto, "razlog"=>$razlog, "nivo"=>$nivo);
+    $data= array("razlog"=>$razlog, "nivo"=>$nivo);
     vlozFunction($data);
     break;
 case "uredi":
