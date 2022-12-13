@@ -12,7 +12,8 @@ require_once 'vnosVrstice.php';
  document.getElementById("data").value = poljeJSON;
  }
 </script>
-<?php 
+<?php
+require_once('../skupne/aktivace.php');
 $database=new Database;
 $database->testirajBolnik();
 if($database->bolnikObstaja==2&&$gdpr==1){
