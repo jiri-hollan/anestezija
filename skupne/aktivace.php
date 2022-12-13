@@ -2,7 +2,7 @@
 <?php
 require_once'database.php';
 // aktivace
-$tabulka="omejitveTbl";
+$tabulka="bolnikOmejitve";
 $sloupce=["nivo"];
 $podminka=["razlog"=>"gdpr"];
 $database= new Database;

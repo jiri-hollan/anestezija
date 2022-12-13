@@ -12,7 +12,7 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
 <?php
 $database=new Database;
 $database->testirajBolnik();
-if($database->bolnikObstaja==1){
+if($database->bolnikObstaja==2){
 	if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '
 <button class="dropbtn">najdi</button>
@@ -31,7 +31,7 @@ echo '
 <?php
 $database=new Database;
 $database->testirajBolnik();
-if($database->bolnikObstaja==1){
+if($database->bolnikObstaja==2){
  echo '<span class="navSpan" id="submitFrm" onclick="return reportFunction'."('s')".'">shrani</span>';
   }else{
 	echo '<span class="navSpan" id="submitFrm" ></span>';  

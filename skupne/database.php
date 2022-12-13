@@ -245,7 +245,7 @@ if (is_array($podminka)){
 public function testirajBolnik() {
 try {
    //$sql = "SHOW TABLES";	
-   $sql = "SHOW TABLES like 'bolnikTbl'";
+   $sql = "SHOW TABLES like 'bolnik%'";
    $statement = $this->conn->prepare($sql);
    $statement->execute();
    $tables = $statement->fetchAll(PDO::FETCH_BOTH);

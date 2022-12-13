@@ -44,7 +44,7 @@ switch ($akce) {
     vlozFunction($data);
     break;
 case "uredi":
-    $tabulka="omejitveTbl";
+    $tabulka="bolnikOmejitve";
     $id=test_input($_POST["id"]);
 	$razlog = test_input($_POST["razlog"]);
 	$nivo = test_input($_POST["nivo"]);	
@@ -84,7 +84,7 @@ case "odstrani":
 }//od if
 
 function vyberFunction($podminka){
-   $tabulka="omejitveTbl";
+   $tabulka="bolnikOmejitve";
    $stolpci=["*"];
    $vyber = new database();
    $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
@@ -129,7 +129,7 @@ else{
 }//od vyberFunction  
 
 function vlozFunction($data){
-   $tabulka="omejitveTbl";
+   $tabulka="bolnikOmejitve";
    $vloz = new database($tabulka,$data);
    $vlozeno=$vloz->vloz($tabulka,$data );
 //echo $vlozeno[1];
@@ -142,7 +142,7 @@ function vlozFunction($data){
 
 function editFunction($podminka){
 //	echo 'editFunction pošalje podatke v urediFunction';
-   $tabulka="omejitveTbl";
+   $tabulka="bolnikOmejitve";
    $stolpci=["*"];
    $vyber = new database($tabulka, $stolpci, $podminka );
    $vyber->vyber($tabulka, $stolpci, $podminka);
@@ -171,7 +171,7 @@ function editFunction($podminka){
 
 function odstraniFunction($podminka){
 //odstrani zapis
-	$tabulka="omejitveTbl";
+	$tabulka="bolnikOmejitve";
 	$odstrani = new database();
 	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
 	echo 'Odstranjena je bila '.$odstranjeno.' omejitev';
