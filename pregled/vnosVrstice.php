@@ -44,7 +44,11 @@ switch ($doBaze) {
 	echo 'doBaze ni v definiranih vrednosteh';
 }
 }//od if $_SERVER
-}//od if base gdpr
+}//od if base gdpr 
+else{
+	header('Location: bolnik.php');
+}
+
 Class Apregled {
 	public $conn;
 	public $zaklad;
