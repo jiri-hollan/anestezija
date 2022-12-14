@@ -1,6 +1,10 @@
 
 <?php
 require_once '../skupne/database.php';
+require_once('../skupne/aktivace.php');
+$database=new Database;
+$database->testirajBolnik();
+if($database->bolnikObstaja==2&&$gdpr==1){
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze'])&&isset($_POST['ustanova'])){
 		$doBaze  = $_POST['doBaze'];
@@ -40,7 +44,7 @@ switch ($doBaze) {
 	echo 'doBaze ni v definiranih vrednosteh';
 }
 }//od if $_SERVER
-
+}//od if base gdpr
 Class Apregled {
 	public $conn;
 	public $zaklad;
