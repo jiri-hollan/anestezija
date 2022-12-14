@@ -244,8 +244,6 @@ if (is_array($podminka)){
 
 public function testirajBolnik() {
 try {
-//xx$sql = "SHOW TABLES";	
-//xx $sql = "SHOW TABLES like 'bolnik%'";  
   $sql = "SHOW TABLES FROM `navodila` WHERE `Tables_in_navodila` LIKE 'bolnikTbl' OR `Tables_in_navodila` LIKE 'bolnikOmejitve'";
   $statement = $this->conn->prepare($sql);   
   $statement->execute();
