@@ -251,19 +251,7 @@ try {
    $tables = $statement->fetchAll(PDO::FETCH_BOTH);
   // var_dump($tables);
   $bolnikObstaja=count($tables);
-  /* echo $bolnikObstaja;
-   echo '<br>';
-   switch($bolnikObstaja){
-	   case 1:
-	     echo "iskana tabela bolnikObstaja.<br>";
-	   break;
-	   case 0:
-	     echo'iskane tabele ni';
-	   break;
-	   default:
-	   echo'pri iskanju tabele prišlo do napake';
-   }*/
-   $this->bolnikObstaja = $bolnikObstaja;
+  $this->bolnikObstaja = $bolnikObstaja;
    return $this;
 }
 
