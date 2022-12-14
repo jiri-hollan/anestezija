@@ -244,12 +244,13 @@ if (is_array($podminka)){
 
 public function testirajBolnik() {
 try {
-   //$sql = "SHOW TABLES";	
-   $sql = "SHOW TABLES like 'bolnik%'";
-   $statement = $this->conn->prepare($sql);
-   $statement->execute();
-   $tables = $statement->fetchAll(PDO::FETCH_BOTH);
-  // var_dump($tables);
+//xx$sql = "SHOW TABLES";	
+//xx $sql = "SHOW TABLES like 'bolnik%'";  
+  $sql = "SHOW TABLES FROM `navodila` WHERE `Tables_in_navodila` LIKE 'bolnikTbl' OR `Tables_in_navodila` LIKE 'bolnikOmejitve'";
+  $statement = $this->conn->prepare($sql);   
+  $statement->execute();
+  $tables = $statement->fetchAll(PDO::FETCH_BOTH);
+// var_dump($tables);
   $bolnikObstaja=count($tables);
   $this->bolnikObstaja = $bolnikObstaja;
    return $this;
