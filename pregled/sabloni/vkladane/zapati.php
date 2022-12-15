@@ -12,12 +12,14 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
 <?php
 require_once('../skupne/aktivace.php');
 if($gdpr==1){
+if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {	
 echo '
 <button class="dropbtn">najdi</button>
 <div class="dropdown-content">
 <a href="vybere.php">baze</a>
 </div>
 ';
+}
   }
 ?> 
 </div>
