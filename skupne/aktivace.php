@@ -19,6 +19,7 @@ echo 'localStorage.setItem("gdpr",'.$gdpr.');';
 echo'</script>';
 }
 }else{
-$gdpr=0;	
+$gdpr=0;
+echo 'localStorage.setItem("gdpr",'.$gdpr.');';
 }
 ?>
