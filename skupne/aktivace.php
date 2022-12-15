@@ -6,7 +6,7 @@ $database=new Database;
 $database->testirajBolnik();
 if($database->bolnikObstaja==2){
 $tabulka="bolnikOmejitve";
-$sloupce=["nivo"];
+$sloupce=["razlog", "nivo"];
 $podminka=["razlog"=>"gdpr"];
 $database= new Database;
 $gdpr=$database->vyber($tabulka,$sloupce,$podminka);
