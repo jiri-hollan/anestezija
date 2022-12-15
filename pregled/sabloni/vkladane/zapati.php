@@ -18,12 +18,14 @@ if($database->bolnikObstaja==2&&$gdpr==1){
 	if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 		xx*/
 if($gdpr==1){
+		if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '
 <button class="dropbtn">najdi</button>
 <div class="dropdown-content">
 <a href="vybere.php">baze</a>
 </div>
 ';
+	}
   }
  // }
 ?> 
