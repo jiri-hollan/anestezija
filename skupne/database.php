@@ -244,7 +244,9 @@ if (is_array($podminka)){
 
 public function testirajBolnik() {
 try {
-  $sql = "SHOW TABLES FROM `navodila` WHERE `Tables_in_navodila` LIKE 'bolnikTbl' OR `Tables_in_navodila` LIKE 'bolnikOmejitve'";
+	$kje='Tables_in_'.$this->dbname;
+  //xx$sql = "SHOW TABLES FROM `navodila` WHERE `Tables_in_navodila` LIKE 'bolnikTbl' OR `Tables_in_navodila` LIKE 'bolnikOmejitve'";
+  $sql = "SHOW TABLES FROM $this->dbname  WHERE $kje LIKE 'bolnikTbl' OR $kje LIKE 'bolnikOmejitve'";
   $statement = $this->conn->prepare($sql);   
   $statement->execute();
   $tables = $statement->fetchAll(PDO::FETCH_BOTH);
