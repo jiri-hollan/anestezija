@@ -20,6 +20,8 @@ echo'</script>';
 }
 }else{
 $gdpr=0;
+echo'<script>';
 echo 'localStorage.setItem("gdpr",'.$gdpr.');';
+echo'</script>';
 }
 ?>
