@@ -28,6 +28,7 @@ function novBolnikFunction(izbris) {
 }
 
 function stariFunction() {
+if(localStorage.getItem("gdpr")==1){	
 //alert ('v stariFunction fajl odjava'+localStorage.getItem("aktivnaBolnisnica"));
 //alert(localStorage.getItem("bazeBolnisnice"));
   let x=localStorage.getItem("aktivnaBolnisnica");
@@ -54,6 +55,9 @@ location.reload();
     alert ( localStorage.getItem("aktivnaBolnisnica") + ' ni možno schraniti v podatkovno bazo');	
 	location.reload();	
 	}
+}else{
+location.reload();	
+}
 }//--od stariFunction
 
 

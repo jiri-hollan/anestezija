@@ -12,11 +12,11 @@ $database= new Database;
 $gdpr=$database->vyber($tabulka,$sloupce,$podminka);
 //echo '<br>'.count($gdpr).'<br>';
 if(count($gdpr)==1){
-$gdpr=	$gdpr[0]['nivo'];
-$omejitevGdpr=$gdpr[0];
-//echo var_dump($omejitevGdpr);
-//echo var_dump($gdpr);
-//echo '<br>'.$gdpr;
+$omejitevGdpr=$gdpr[0];	
+$gdpr=	$omejitevGdpr['nivo'];
+echo'<script>';
+echo 'localStorage.setItem("gdpr",'.$gdpr.');';
+echo'</script>';
 }
 }else{
 $gdpr=0;	
