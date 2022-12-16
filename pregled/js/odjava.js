@@ -18,6 +18,7 @@ var izbris;
 function novBolnikFunction(izbris) {
   switch (izbris) {
    case 0: // shrani v bazo
+       danesFunction();
      stariFunction();
     break;
    case 1: //naloži praznoi formular
@@ -30,7 +31,6 @@ function novBolnikFunction(izbris) {
 function stariFunction() {
 if(localStorage.getItem("gdpr")==1){	
 //alert ('v stariFunction fajl odjava'+localStorage.getItem("aktivnaBolnisnica"));
-//alert(localStorage.getItem("bazeBolnisnice"));
   let x=localStorage.getItem("aktivnaBolnisnica");
   let y=localStorage.getItem("bazeBolnisnice");
   let z= y.includes(x);
