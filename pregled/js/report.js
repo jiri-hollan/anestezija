@@ -1,10 +1,8 @@
  var datRojstva;
  var a;
-
- //alert('report: '+sessionStorage.getItem("bolnikId"));
- function reportFunction(a)
- {
-	formFunction(); 
+//alert('report: '+sessionStorage.getItem("bolnikId"));
+ function reportFunction(a){
+ formFunction(); 
  var x;	 
  var x1 = document.getElementById("frm")["oddelek"].value;
  var x2 = document.getElementById("frm")["dgOperativna"].value;
@@ -16,61 +14,43 @@
  var x8 = document.getElementById("ime").value;
  var x9 = document.getElementById("priimek").value;
  var x10 = datRojstva;
- /*var x11 = document.getElementById("frm")["stevMaticna"].value;
+/*var x11 = document.getElementById("frm")["stevMaticna"].value;
 var x12 = document.getElementById("frm")["stevMaticna"].value;*/
-  
-  
   if (x1 == "") {
     alert("oddelek mora biti vpisan");
     return false;
-  }
-
-else if (x2 == "") {
+  }else if (x2 == "") {
     alert("dgOperativna mora biti vpisana");
     return false;
-  }
-
-else if (x3 == "") {
+  }else if (x3 == "") {
     alert("opNacrtovana mora biti vpisana");
     return false;
-  }
-
-  else if (x4 == "") {
+  }else if (x4 == "") {
     alert("teza mora biti vpisana");
     return false;
-  }
- else if (x5 == "") {
+  }else if (x5 == "") {
     alert("visina mora biti vpisana");
     return false;
-  }
-else if (x6 == "") {
+  }else if (x6 == "") {
     alert("izvidiInOpombe ne smejo biti prazni");
     return false;
-  }
-else if (x7 == "") {
+  }else if (x7 == "") {
     alert("sklep mora biti vpisan");
     return false;
-  }
-else if (x8 == "") {
+  }else if (x8 == "") {
     alert("Ime mora biti vpisano");
     return false;
-  }
-else if (x9 == "") {
+  }else if (x9 == "") {
     alert("priimek mora biti vpisan");
     return false;
-  }
-else if (x10 == "") {
+  }else if (x10 == "") {
     alert("datum rojstva mora biti vpisan");
     return false;
-  }
-/*else if (x11 == "") {
-    alert("teza mora biti vpisana");
-    return false;
-  }*/
-
- else {
-
-  
+/*}else if (x11 == "") {
+alert("teza mora biti vpisana");
+return false;
+}*/
+  }else {
      document.getElementById("prva").style.display = "none"; 
      document.getElementById("druga").style.display = "none";
      document.getElementById("tretja").style.display = "block";
@@ -85,20 +65,17 @@ document.getElementById("nalepkaR").innerHTML=nalepka;
 obravnava = danes;
 obravnava = "<h3>" + obravnava + " " + "za odd. " + document.getElementById("zaOdd").value + "</h3>" ;
 document.getElementById("obravnavaR").innerHTML=obravnava;
-
 diagnoza =  "Op.diagnoza: " +    "<b>" + document.getElementById("dgOperativna").value + "</b>";
 document.getElementById("diagnozaR").innerHTML=diagnoza;
 diagnoza =  "predvidena op.: " +    "<b>" + document.getElementById("opNacrtovana").value + "</b>";
 document.getElementById("operacijaR").innerHTML=diagnoza;
 //..................................če ni vpisana vrednost............................................................................
-function xFunction(x)
- {
+function xFunction(x){
 if((x === undefined || x == null || x.length <= 0))  {
 x = "....";
 //alert(typeof x + x);
 return x;
-     }
-  else {
+     }else {
   //x = x;
   return x;
      }
@@ -135,14 +112,12 @@ var i;
 var videz;
 var lab = document.getElementById("lab").getElementsByTagName("label");
 var vred =document.getElementById("lab").getElementsByClassName("lab"); 
-for (i = 0; i < lab.length; i++) 
-{  
-if (vred[i].value.length > 0 && vred[i].value!=0)
-   {
+for (i = 0; i < lab.length; i++) {  
+ if (vred[i].value.length > 0 && vred[i].value!=0){
 	var videz = vred[i].style.fontWeight;	   
    text += '<span style= "font-weight:' + videz + '">' + lab[i].innerHTML + vred[i].value + "</span>," + "&nbsp" + " ";
    }
-}
+}//od if
 document.getElementById("labR").innerHTML = text;
 //....................EKG....................................................................
 
@@ -173,8 +148,6 @@ document.getElementById("alergijaR").innerHTML= alergija;
 var ekg = document.getElementById("ekg").value;
 ekg = opisFunction(ekg, "<hr>EKG:");
 //alert(ekg);
-
-
 //...........................RTG................................................................
 var rtg = document.getElementById("rtg").value;
 rtg = opisFunction(rtg, "<hr>RTG:");
@@ -242,12 +215,9 @@ switch (a) {
   default:
     text = "No value found";
 }
-
-
-//....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
 }
  }
-
+//....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
 function opisFunction(m,n)
 {
 if (m.length > 0) {
@@ -264,10 +234,8 @@ return m;
 function izvidiFunction(m,n)
 {
 if (m.length > 0) {
-   m =  n + "<span class='besedilo'> &emsp;"  + m + "</span><br><br>";
-  
-}
-else {
+   m =  n + "<span class='besedilo'> &emsp;"  + m + "</span><br><br>";  
+}else {
   m = "";
     }
 return m;
@@ -278,8 +246,7 @@ function natisniFunction() {
   document.getElementById("navbar").style.display = "none"; 
   window.print();
   ogledFunction();
-   }
-else {
+   }else {
   ogledFunction();
     }
 }
@@ -313,9 +280,4 @@ function pomocFunction() {
  prompt("Če ni nastavljena pot do  ciljne mape za PDF jo nastavi.\nSkopiraj spodnji naslov in ga prilepi kot pot.", pot );
 }
 
-
-/*function odjavaFunction() { 
-	 localStorage.setItem("imeZdravnika", "");
-     window.open("zdravnik.php", "_self");             
-}*/
 

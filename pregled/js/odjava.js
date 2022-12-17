@@ -5,16 +5,16 @@ function odjavaFunction() {
   sessionStorage.removeItem("testJSON");
   sessionStorage.removeItem("bolnikId");
   window.open("zdravnik.php", "_self");
-  //alert ("odjava");
+//alert ("odjava");
   sbFunction();	 
  }
-
+//--------------------------------------------------
 function klousFunction(){
    close();
 }
-
 //------shranjevanje v bazo pri prehodu na novega bolnika---
 var izbris;
+//--------------------------------------------------
 function novBolnikFunction(izbris) {
   switch (izbris) {
    case 0: // shrani v bazo
@@ -45,11 +45,11 @@ if(localStorage.getItem("gdpr")==1){
         document.getElementById("ustanova").value= localStorage.getItem("aktivnaBolnisnica");
         document.getElementById("frm").submit();
 //alert ('shranjeno v bazo');
-// alert ('po vstavljanju v bazo');
+//alert ('po vstavljanju v bazo');
   } else {
 location.reload();
   }
- // alert ('nov bolnik');
+// alert ('nov bolnik');
 	}//od if
 	else {
     alert ( localStorage.getItem("aktivnaBolnisnica") + ' ni možno schraniti v podatkovno bazo');	
@@ -59,8 +59,7 @@ location.reload();
 location.reload();	
 }
 }//--od stariFunction
-
-
+//--------------------------------------------
 function noviFunction() {
 	//alert ("V noviFunction");
  sessionStorage.removeItem("testJSON");	
@@ -69,7 +68,4 @@ document.getElementById("novBLegend").style.visibility = "visible";
 location.reload();	
 }
 }//---od novBolnikFunction
-
-
-
 //------konec pri prehodu na novega bolnika---

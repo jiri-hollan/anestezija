@@ -21,13 +21,13 @@ ________________________________________________________________________________
 <h1>Prijava</h1>
 	 <!-- Izbira bolnišnice -->
 <label for="bolnisnica" >Bolnišnica:</label> 
-<input id="bolnisnica"  list="bolnisnice" name="bolnisnica"  onfocusout="sbFunction(1)" required autocomplete="off"> 
+<input id="bolnisnica"  list="bolnisnice" name="bolnisnica"  onkeyup="sbFunction(1)" required autocomplete="off"> 
   <datalist id="bolnisnice">  
     <option value='Bolnišnica'>    
   </datalist>
 	 <!-- Izbira zdravnika -->
 <br><br><label for="zdravnik" > Zdravnik:</label> 
-<input id="zdravnik"  list="zdravniki" name="zdravnik"  onfocusout="zdravnikFunction()" required> 
+<input id="zdravnik"  list="zdravniki" name="zdravnik"  onkeyup="zdravnikFunction()" required> 
   <datalist id="zdravniki">  
     <option value='ime zdravnika'>    
   </datalist>
@@ -42,14 +42,14 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
 ?>
  <script>
    var seznamBolnisnicx = JSON.parse(seznamBolnisnicJson);
-  // alert(seznamBolnisnicJson);
+// alert(seznamBolnisnicJson);
    var mestoBolnisniceX = JSON.parse(mestoBolnisniceJson);
    listaBolnisnicFunction(mestoBolnisniceX );
- // alert("celo ime Json:" + celoImeJson);
+// alert("celo ime Json:" + celoImeJson);
   var zdravListX = JSON.parse(celoImeJson);
-  //alert(zdravListX);
+//alert(zdravListX);
   listaZdravnikovFunction(zdravListX);
-  //alert(localStorage.getItem("bazeBolnisnice"));
+//alert(localStorage.getItem("bazeBolnisnice"));
   </script>
      <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
  </div>	 
