@@ -43,7 +43,7 @@ function naprejFunction() {
 function listaZdravnikovFunction(zdravListX) {
 //alert ("lista zdravnikov function");
 document.getElementById("pregledovalec").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-alert(localStorage.getItem("imeZdravnika"));
+//alert(localStorage.getItem("imeZdravnika"));
 //  koda, ki naredi array zdravList iz tabele pregledovalci	
 //alert(zdravListX);
  var zdravList  = zdravListX; 
