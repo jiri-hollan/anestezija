@@ -4,7 +4,7 @@
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../../skupne/database.php';
-
+ echo '<script src="js/manipulaceObjekt.js?<?php echo time(); ?>"></script>'; 
 //_____________________________________________________________
 if (isset($_REQUEST["akce"])) {
 	  $akce = new Test_input($_REQUEST["akce"]);
