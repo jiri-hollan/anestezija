@@ -1,4 +1,3 @@
-
 function zdravnikFunction() {  
 // Check browser support
 if (typeof(Storage) !== "undefined") {

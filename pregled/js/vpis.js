@@ -1,6 +1,3 @@
-
-
-
 function vpisFunction() {
 
 	   document.getElementById("navbar").style.display = "block";
