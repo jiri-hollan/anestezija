@@ -16,8 +16,8 @@ if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '
 <button class="dropbtn">najdi</button>
 <div class="dropdown-content">
-<form method="post" action=".htmlspecialchars($_SERVER["PHP_SELF"]).">
-
+<form method="post" action="vybere.php">
+<input type="submit" id="" name="" value="">
 <a href="vybere.php">matična št.</a>
 <a href="vybere.php">Priimek</a>
 </form>
