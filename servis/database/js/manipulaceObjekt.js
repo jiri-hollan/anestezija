@@ -19,12 +19,9 @@ switch(akce) {
 }
 }
 
-//const manipulace = new Manipulace("pregledovalciTbl");
-
-
 function Manipulace(tabulka) {
   this.tabulka=tabulka;
-alert("27to je tabulka: "+tabulka);
+alert("24.to je tabulka: "+tabulka);
 this.vyber= function()  {
 	this.akce="vyber";
 // omogoči izbiro bolnišnice 
@@ -57,7 +54,7 @@ this.vloz= function()  {
 };// od vloz
 
 this.edit= function()  {
- alert("v JS case edit: "+this.tabulka);
+alert("v JS case edit: "+this.tabulka);
   if(document.getElementById("osebe")!=null){
      document.getElementById("osebe").addEventListener("click", this.functionOver);
      }//od if
@@ -73,8 +70,9 @@ this.odstrani= function()  {
 }// od else
   };// od odstrani
 
-this.functionOver=  function(e) {
-	alert("v functionOver: "+this.tabulka);
+this.functionOver=  function(e) {	
+alert("74.v functionOver: "+tabulka);
+alert(tabulka);
   var x = e.target;
   if (x.nodeName == "TD") {
   var y = e.path[1];
@@ -83,8 +81,8 @@ this.functionOver=  function(e) {
  this.akce= x.innerHTML; 
  //alert("zahtevana akce: "+this.akce+" Tabulka: "+manipulace.tabulka);
  }//od if
- alert("tabulka= "+this.tabulka);
-   window.location.href = "manipulaceObjektUniverzal.php?akce=" + this.akce + "&id=" + row_value + "&tabulka="+ this.tabulka;
+alert("83.tabulka= "+tabulka);
+   window.location.href = "manipulaceObjektUniverzal.php?akce=" + this.akce + "&id=" + row_value + "&tabulka="+ tabulka;
   };//od function(e)
 
 
