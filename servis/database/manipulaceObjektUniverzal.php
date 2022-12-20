@@ -27,7 +27,7 @@ if (isset($_REQUEST["akce"])) {
   //var_dump($akce);
     echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
- echo "to je"."$". "tabulka in"."$"." bolnišnica ".$tabulka.$bolnisnica;
+ echo "to je "."$"."tabulka in "."$"."bolnišnica ".$tabulka.$bolnisnica;
   new $akce($bolnisnica, $tabulka);
 
 	  
@@ -185,7 +185,7 @@ foreach (json_decode($this->dataPreg) as $key) {
     }
     function endChildren() {
 		
-		 echo "<td class='urediCls' onclick=" . "preklop('edit', 'pregledovalciTbl')" . ">edit</td>		
+		 echo "<td class='urediCls' onclick=".'"' . "preklop('edit', 'pregledovalciTbl')".'"' . ">edit</td>		
 		<td class='odstraniCls' onclick=" . "preklop('odstrani', 'pregledovalciTbl')"  . ">odstrani</td>		
 		</tr>" . "\n";
  
