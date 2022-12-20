@@ -17,9 +17,9 @@ require_once('../skupne/aktivace.php');
 if($gdpr==1){
 if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '<div id="kontejner">';
-?>
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" autocomplete="off">
-<?php 
+echo'
+<form action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'" method="post" autocomplete="off">
+';
 echo '
 <input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
 <label for "ustanova">bolnišnica:</label>
