@@ -24,7 +24,7 @@ echo '
 <input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
 <label for "ustanova">bolnišnica:</label>
 <input id="ustanova" type="text" name="ustanova" value="" required ></input>
-<!--<label for "stevMaticna">matična št.</label>
+<!--<label for "stevMaticna">matična številka</label>
 <input   type="number" name="stevMaticna"  ></input>-->
 
 <label for "priimek">Priimek</label>

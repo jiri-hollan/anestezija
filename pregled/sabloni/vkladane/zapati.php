@@ -16,7 +16,7 @@ if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
 echo '
 <button class="dropbtn">najdi</button>
 <div class="dropdown-content">
-<a href="vybere.php">baze</a>
+<a href="vybere.php">Priimek</a>
 </div>
 ';
 }
