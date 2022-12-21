@@ -7,8 +7,8 @@
 <label for "stevMaticna">matična številka</label>
 <input   type="number" name="stevMaticna"  ></input>
 '; 
-	 $a2= '
-	 $a1= '<label for "priimek">Priimek</label>
+
+	 $a2= '<label for "priimek">Priimek</label>
 <input   type="text" name="priimek"  ></input>
 ';
 
