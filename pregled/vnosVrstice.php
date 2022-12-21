@@ -31,12 +31,15 @@ switch ($doBaze) {
     break;
   case 'aktualizuj':
     break;
-  case '':
+  case 'nov':
+  echo'nov';
     if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
 	$novaVnosVrstice = new SpremeniVpis;
 	}	
+    break;
+	case '':
     break;
   default:	
 	echo 'doBaze ni v definiranih vrednosteh';
