@@ -17,9 +17,9 @@ echo '
 <button class="dropbtn">najdi</button>
 <div class="dropdown-content">
 <form method="post" action="vybere.php">
-<button type="submit" id="" name="" priimek="">Priimek</button>
-
-<a href="vybere.php">matična št.</a>
+<button type="submit" id="" name="trazi" value="priimek">Priimek</button>
+<button type="submit" id="" name="trazi" value="stevMaticna">Matična št.</button>
+<!--<a href="vybere.php">matična št.</a>-->
 <!--<a href="vybere.php">Priimek</a>-->
 </form>
 </div>
