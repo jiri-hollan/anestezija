@@ -31,12 +31,15 @@ switch ($doBaze) {
     break;
   case 'aktualizuj':
     break;
-  case '':
+  case 'nov':
+  echo'nov';
     if ($_POST['bolnikId']=="") {
 	$novaVnosVrstice = new PrviVpis;
 	} else {
 	$novaVnosVrstice = new SpremeniVpis;
 	}	
+    break;
+	case '':
     break;
   default:	
 	echo 'doBaze ni v definiranih vrednosteh';
@@ -206,7 +209,7 @@ Class PreberiVpis extends Apregled {
    $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            //echo '<br>';
           //var_dump($prebrano);		  
-			echo 'Število najdenih zapisov vnos: '.count($prebrano);			
+			echo 'Število najdenih zapisov: '.count($prebrano);			
 Return	$prebrano;		
 } 
   
