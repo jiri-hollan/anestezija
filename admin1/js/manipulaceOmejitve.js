@@ -3,7 +3,7 @@ function izborFunction(akce) {
 switch(akce) {
   case "vyber":
     document.getElementById("demo").innerHTML = '<input type="text" id="razlogId" name="razlog" value="" placeholder="Razlog">';// omogoči izbiro po razlogu
-	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //to je submit
+	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Potrdi">'; //to je submit
     break; 
 
  case "vloz":
