@@ -55,7 +55,7 @@ for (i = 0; i < bolList.length; i++) {
 function functionOver (e) {
 var x = e.target;
 if (x.nodeName == "TD") {
-var y = e.path[1];
+var y = event.composedPath()[1];
 row_value = y.cells[0].innerHTML;
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
  }//od if 
