@@ -65,7 +65,8 @@
     <label for = "visina">Višina:<input id = "visina" type = "text" name = "visina" size="1" onkeyup="bmiFunction()" required>m</label> 
     <label for = "bmi">BMI: <input id = "bmi" type = "text" name = "bmi" id = "bmi" onclick = "bmiFunction()" readonly tabindex="-1"></label>  
     <label for = "krvniTlak">Krvni Tlak:<input id = "krTlak" type="text" name="krvniTlak" size="1" ></label>    
-    <label for = "pulz">Pulz:<input id = "pulz" type="text" name="pulz" size="1" ></label>  
+    <label for = "pulz">Pulz:<input id = "pulz" type="text" name="pulz" size="1" ></label> 
+	<label for = "spo2">SPO2:<input id = "spo2" type="text" name="spo2" size="1" ></label>
     <br> 
  </fieldset>
  <fieldset class="labor" id="lab">
