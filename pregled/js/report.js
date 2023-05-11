@@ -103,7 +103,11 @@ meritve =  meritve +  " " + " krvni tlak:" + "&nbsp" + "<b>" + x + "&nbsp" + "mm
 
 x = document.getElementById("pulz").value;
 x = xFunction(x);
-meritve =  meritve +  " " + " pulz:" + "&nbsp" + "<b>" + x + "&nbsp" + "/min " + "</b>";
+meritve =  meritve +  " " + " pulz:" + "&nbsp" + "<b>" + x + "&nbsp" + "/min " + "</b>" + "&nbsp";
+
+x = document.getElementById("spo2").value;
+x = xFunction(x);
+meritve =  meritve +  " " + " SPO2:" + "&nbsp" + "<b>" + x + "&nbsp"  + "</b>";
 document.getElementById("meritveR").innerHTML=meritve;
 
 //........laboratorij...................................................................................
