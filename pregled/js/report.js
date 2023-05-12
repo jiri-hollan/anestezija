@@ -103,11 +103,13 @@ meritve =  meritve +  " " + " krvni tlak:" + "&nbsp" + "<b>" + x + "&nbsp" + "mm
 
 x = document.getElementById("pulz").value;
 x = xFunction(x);
-meritve =  meritve +  " " + " pulz:" + "&nbsp" + "<b>" + x + "&nbsp" + "/min " + "</b>" + "&nbsp";
+meritve =  meritve  +  " " + " pulz:" + "&nbsp" + "<b>" + x + "&nbsp" + "/min " + "</b>" + "&nbsp";
 
 x = document.getElementById("spo2").value;
+videz = document.getElementById("spo2").style.fontWeight;
+alert(videz);
 x = xFunction(x);
-meritve =  meritve +  " " + " SPO2:" + "&nbsp" + "<b>" + x + "&nbsp" + "%" + "</b>";
+meritve =  meritve +'<span style= "font-weight:' + videz + '">'+  " " + " sPO2:" + "&nbsp" +  x + "&nbsp" + "%" +"</span>,";
 document.getElementById("meritveR").innerHTML=meritve;
 
 //........laboratorij...................................................................................
@@ -120,8 +122,8 @@ for (i = 0; i < lab.length; i++) {
  if (vred[i].value.length > 0 && vred[i].value!=0){
 	var videz = vred[i].style.fontWeight;	   
    text += '<span style= "font-weight:' + videz + '">' + lab[i].innerHTML + vred[i].value + "</span>," + "&nbsp" + " ";
-   }
-}//od if
+   }//od if
+}//od for
 document.getElementById("labR").innerHTML = text;
 //....................EKG....................................................................
 
