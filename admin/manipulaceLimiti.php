@@ -25,6 +25,7 @@ switch ($akce) {
     vyberFunction($podminka);
     break;
 case "vloz":
+    $skupina = test_input($_POST["skupina"]);
     $ime = test_input($_POST["ime"]);
     $min = test_input($_POST["min"]);
     $max = test_input($_POST["max"]);  
