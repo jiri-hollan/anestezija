@@ -71,7 +71,7 @@ diagnoza =  "predvidena op.: " +    "<b>" + document.getElementById("opNacrtovan
 document.getElementById("operacijaR").innerHTML=diagnoza;
 //..................................če ni vpisana vrednost............................................................................
 function xFunction(x){
-if((x === undefined || x == null || x.length <= 0))  {
+if((x === undefined || x == null || x == 0 || x.length <= 0))  {
 x = "....";
 //alert(typeof x + x);
 return x;
