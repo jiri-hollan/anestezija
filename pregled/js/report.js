@@ -107,7 +107,7 @@ meritve =  meritve +  " " + " pulz:" + "&nbsp" + "<b>" + x + "&nbsp" + "/min " +
 
 x = document.getElementById("spo2").value;
 x = xFunction(x);
-meritve =  meritve +  " " + " SPO2:" + "&nbsp" + "<b>" + x + "&nbsp"  + "</b>";
+meritve =  meritve +  " " + " SPO2:" + "&nbsp" + "<b>" + x + "&nbsp" + "%" + "</b>";
 document.getElementById("meritveR").innerHTML=meritve;
 
 //........laboratorij...................................................................................
