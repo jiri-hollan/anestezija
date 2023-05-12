@@ -107,7 +107,7 @@ meritve =  meritve  +  " " + " pulz:" + "&nbsp" + "<b>" + x + "&nbsp" + "/min " 
 
 x = document.getElementById("spo2").value;
 videz = document.getElementById("spo2").style.fontWeight;
-alert(videz);
+//alert(videz);
 x = xFunction(x);
 meritve =  meritve +'<span style= "font-weight:' + videz + '">'+  " " + " sPO2:" + "&nbsp" +  x + "&nbsp" + "%" +"</span>,";
 document.getElementById("meritveR").innerHTML=meritve;
