@@ -146,7 +146,7 @@ position: relative;
     border-style:solid; */
     margin: 1px;  
 }
-/*
+
 #izvidiR hr {
   display: block;
   margin-top: 0.5em;
@@ -157,7 +157,7 @@ position: relative;
   border-width: 1px;
   color: LightGray;
 }
-*/
+/*
 #izvidiR .nadpis{
  font-size:100%;
  font-weight: bold; 
@@ -165,6 +165,7 @@ position: relative;
  margin-bottom:0px;
  margin-left:0px;
 }
+*/
 #izvidiR .besedilo{
  padding-left: 20px;
  /*text-indent: 20px;*/
