@@ -113,7 +113,7 @@ meritve =  meritve +'<span style= "font-weight:' + videz + '">'+  " " + " sPO2:"
 document.getElementById("meritveR").innerHTML=meritve;
 
 //........laboratorij...................................................................................
-var text = "Lab.: ";
+var text = "<span class='nadpis'>" + "Lab.: " + "</span>";
 var i;
 var videz;
 var lab = document.getElementById("lab").getElementsByTagName("label");

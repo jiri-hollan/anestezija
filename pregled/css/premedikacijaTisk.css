@@ -85,6 +85,13 @@ position: relative;
 .meritveR {
    
 }
+.nadpis{
+ font-size:100%;
+ font-weight: bold; 
+ padding-bottom: 0px;
+ margin-bottom:0px;
+ margin-left:0px;
+}
 .labR {
    /*  position: relative;
     top: 2px;
@@ -139,7 +146,7 @@ position: relative;
     border-style:solid; */
     margin: 1px;  
 }
-
+/*
 #izvidiR hr {
   display: block;
   margin-top: 0.5em;
@@ -150,7 +157,7 @@ position: relative;
   border-width: 1px;
   color: LightGray;
 }
-
+*/
 #izvidiR .nadpis{
  font-size:100%;
  font-weight: bold; 
