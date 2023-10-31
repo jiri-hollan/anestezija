@@ -123,7 +123,13 @@
      <datalist id="mally">
      <option value='st mall'>
      </datalist>
-     <label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>
+	 <!-- odvisnosti-->
+	 <label>Opiati:<input id="opiaty" class="ocena" type="text"   list="opi"  name="opiaty" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'Opiati', 'opi')"  onkeypress=" return isNumber(event, opia)" onfocusout=  "laborFunction(name,value)" /></label> 
+     <datalist id="opi">
+     <option value='st opi'>
+     </datalist>
+	 <!-- ...................................................-->
+     <br><label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>
   </fieldset>
  	<label for="izvidiInOpombe">Izvidi in opombe:</label><br>  
     <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
