@@ -124,11 +124,18 @@
      <option value='st mall'>
      </datalist>
 	 <!-- odvisnosti-->
-	 <label>Opiati:<input id="opiaty" class="ocena" type="text"   list="opi"  name="opiaty" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'Opiati', 'opi')"  onkeypress=" return isNumber(event, opia)" onfocusout=  "laborFunction(name,value)" /></label> 
-     <datalist id="opi">
-     <option value='st opi'>
+	 <!-- opiati-->
+	 <label>Opiati:<input id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'opiati', 'opia')"  onkeypress=" return isNumber(event, opi)" onfocusout=  "laborFunction(name,value)" /></label> 
+     <datalist id="opia">
+     <option value='st opia'>
      </datalist>
-	 <!-- ...................................................-->
+	 <!-- druge odvisnosti-->
+	 <label>Druge ovisnosti:<input id="dovisnosti" class="ocena" type="text"   list="dovis"  name="dovisnosti" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'dovisnosti', 'dovis')"  onkeypress=" return isNumber(event, dovi)" onfocusout=  "laborFunction(name,value)" /></label> 
+     <datalist id="dovis">
+     <option value='st dovis'>
+     </datalist>
+	 
+	 <!-- .....Konec odvisnosti..............................................-->
      <br><label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>
   </fieldset>
  	<label for="izvidiInOpombe">Izvidi in opombe:</label><br>  
