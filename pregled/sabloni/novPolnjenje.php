@@ -115,22 +115,22 @@
     <textarea id="terPredhodna" class="mala" rows="4" cols="200" name="terPredhodna"></textarea>
  <fieldset id= "asamal" >
     <legend></legend>
-     <label>ASA:<input id="asa" class="ocena" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)" onfocusout=  "laborFunction(name,value)" /></label>  
+     <label class="zacetekAsa">ASA:<input id="asa" class="ocena" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)" onfocusout=  "laborFunction(name,value)" /></label>  
 	<datalist id="ase">
     <option value='st asa'>
     </datalist>
-	      <label>Mallampati:<input id="mallampati" class="ocena" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" /></label> 
+	      <label class="zacetekAsa">Mallampati:<input id="mallampati" class="ocena" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" /></label> 
      <datalist id="mally">
      <option value='st mall'>
      </datalist>
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
-	 <label>Opiati:<input id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'opiati', 'opia')"  onkeypress=" return isNumber(event, opi)" onfocusout=  "laborFunction(name,value)" /></label> 
+	 <label class="zacetekAsa">Opiati:<input id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'opiati', 'opia')"  onkeypress=" return isNumber(event, opi)" onfocusout=  "laborFunction(name,value)" /></label> 
      <datalist id="opia">
      <option value='st opia'>
      </datalist>
 	 <!-- druge odvisnosti-->
-	 <label>Druge ovisnosti:<input id="dovisnosti" class="ocena" type="text"   list="dovis"  name="dovisnosti" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'dovisnosti', 'dovis')"  onkeypress=" return isNumber(event, dovi)" onfocusout=  "laborFunction(name,value)" /></label> 
+	 <label class="zacetekAsa">Druge ovisnosti:<input id="dovisnosti" class="ocena" type="text"   list="dovis"  name="dovisnosti" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'dovisnosti', 'dovis')"  onkeypress=" return isNumber(event, dovi)" onfocusout=  "laborFunction(name,value)" /></label> 
      <datalist id="dovis">
      <option value='st dovis'>
      </datalist>

@@ -176,6 +176,9 @@ fieldset.labor textarea {
   padding: 20px 2px;  
   height: auto;  
 } 
+.zacetekAsa {
+	padding: 20px 20px;
+}
  
 fieldset.alergija label {
   width:auto;
