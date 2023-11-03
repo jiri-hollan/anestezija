@@ -145,6 +145,20 @@ var mall = document.getElementById("mallampati");
 //alert(mall);
 document.getElementById("mallR").innerHTML= mall.value;
 document.getElementById("mallR").style="font-weight:"+mall.style.fontWeight;
+
+var opi = document.getElementById("opiati");
+//alert(opi);
+document.getElementById("opiaR").innerHTML= opia.value;
+document.getElementById("opiaR").style="font-weight:"+opia.style.fontWeight;
+
+
+var dovis = document.getElementById("dovisnosti");
+//alert(dovis);
+document.getElementById("dovisnostiR").innerHTML= dovis.value;
+document.getElementById("dovisnostiR").style="font-weight:"+dovis.style.fontWeight;
+
+
+
 var alergija = document.getElementById("alergija").value;
 //alert(alergija);
 document.getElementById("alergijaR").innerHTML= alergija;
