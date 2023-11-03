@@ -196,7 +196,7 @@
     <p id="meritveR">meritve</p>
     <p id="labR">lab</p>
   <div class="asmalR">
-    <span style="padding-left:40px;">ASA: </span>
+    <span style="padding-left:1px;">ASA: </span>
   <span id="asaR"​ class="kvadrat" >.</span>
   <span style="padding-left:10px;">Mallampati:</span> 
   <span id="mallR" class="kvadrat" >.</span> 
