@@ -15,6 +15,13 @@ echo '
    <label for="limiti">limiti</label>
    <input type="radio" id="limiti" name="name" value="limiti">
    
+   /*.....................................................*/
+    <label for="ocena">ocena</label>
+   <input type="radio" id="ocena" name="name" value="ocena">
+   
+   
+   
+     /*.....................................................*/ 
    <label for="pregledovalci">pregledovalci</label>
    <input type="radio" id="pregledovalci" name="name" value="pregledovalci">
    
@@ -76,7 +83,18 @@ $definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	`max` float(4) NOT NULL";
 $databaseGloboka->naredi('limitiTbl', $definice);
 break;
+/*.............................................................*/
 
+case "ocena":
+$definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	`skupina` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
+	`ime` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+    `min` varchar(4) NOT NULL,
+	`max` varchar(4) NOT NULL";
+$databaseGloboka->naredi('ocenaTbl', $definice);
+break;
+
+/*...............................................................*/
 case "pregledovalci":
 $definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	`bolnisnica` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
