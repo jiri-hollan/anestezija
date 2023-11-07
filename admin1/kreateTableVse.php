@@ -15,13 +15,9 @@ echo '
    <label for="limiti">limiti</label>
    <input type="radio" id="limiti" name="name" value="limiti">
    
-   /*.....................................................*/
     <label for="ocena">ocena</label>
    <input type="radio" id="ocena" name="name" value="ocena">
-   
-   
-   
-     /*.....................................................*/ 
+
    <label for="pregledovalci">pregledovalci</label>
    <input type="radio" id="pregledovalci" name="name" value="pregledovalci">
    
