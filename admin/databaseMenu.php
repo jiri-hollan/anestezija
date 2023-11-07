@@ -17,6 +17,7 @@ echo '
 <input type="submit"  name="imeTable" value="uporabnikiTbl2">
 <input type="submit"  name="imeTable" value="pregledovalciTbl">
 <input type="submit"  name="imeTable" value="limitiTbl">
+<input type="submit"  name="imeTable" value="ocenaTbl">
 <input type="submit"  name="imeTable" value="sklepiTbl">
 <input type="submit"  name="imeTable" value="bolnisniceTbl">
 </form>
@@ -26,6 +27,7 @@ echo '
 <ul id="linky">
 <li><a href="../admin/manipulacePregledovalci.php?nazaj='.$nazaj.'">pregledovalci</a></li>
 <li><a href="../admin/manipulaceLimiti.php?nazaj='.$nazaj.'">limiti</a></li>
+<li><a href="../admin/manipulaceOcena.php?nazaj='.$nazaj.'">ocena</a></li>
 <li><a href="../admin/manipulaceSklepi.php?nazaj='.$nazaj.'">sklepi</a></li>
 <li><a href="../admin/manipulaceBolnisnice.php?nazaj='.$nazaj.'">bolnišnice</a></li><br>
 </ul>
