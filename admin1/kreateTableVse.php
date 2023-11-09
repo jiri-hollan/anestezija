@@ -6,28 +6,28 @@ echo '
 <h2>Naredi tabelo</h2>
 <form method="post" action="'. htmlspecialchars($_SERVER["PHP_SELF"]).'">  
 
-  <label for="besedila">besedila</label>
+  <label for="besedila"><span class="imenaFilov">besedila</span></label>
   <input type="radio" id="besedila" name="name" value="besedila">
 
-  <label for="uporabniki">uporabniki</label>
+  <label for="uporabniki"><span class="imenaFilov">uporabniki</span></label>
   <input type="radio" id="uporabniki" name="name" value="uporabniki">
   
-   <label for="limiti">limiti</label>
+   <label for="limiti"><span class="imenaFilov">limiti</span></label>
    <input type="radio" id="limiti" name="name" value="limiti">
    
-    <label for="ocena">ocena</label>
+    <label for="ocena"><span class="imenaFilov">ocena</span></label>
    <input type="radio" id="ocena" name="name" value="ocena">
 
-   <label for="pregledovalci">pregledovalci</label>
+   <label for="pregledovalci"><span class="imenaFilov">pregledovalci</span></label>
    <input type="radio" id="pregledovalci" name="name" value="pregledovalci">
    
-   <label for="bolnisnice">bolnisnice</label>
+   <label for="bolnisnice"><span class="imenaFilov">bolnisnice</span></label>
    <input type="radio" id="bolnisnice" name="name" value="bolnisnice">  
     
-   <label for="sklepi">sklepi</label>
+   <label for="sklepi"><span class="imenaFilov">sklepi</span></label>
    <input type="radio" id="sklepi" name="name" value="sklepi"> 
       
-   <label for="bolnik">bolnik</label>
+   <label for="bolnik"><span class="imenaFilov">bolnik</span></label>
    <input type="radio" id="bolnik" name="name" value="bolnik"> 
    <input type="hidden" name="nazaj" value='. $nazaj.'>
   <br><br>
