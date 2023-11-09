@@ -73,6 +73,7 @@ break;
 
 case "limiti":
 $definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	`bolnisnica` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
 	`skupina` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
 	`ime` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
     `min` float(4) NOT NULL,
@@ -83,6 +84,7 @@ break;
 
 case "ocena":
 $definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	`bolnisnica` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
 	`skupina` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
 	`ime` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
     `min` varchar(4) NOT NULL,
