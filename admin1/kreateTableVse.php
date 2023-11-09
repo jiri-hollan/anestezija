@@ -84,11 +84,10 @@ break;
 
 case "ocena":
 $definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	`bolnisnica` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
-	`skupina` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
+	`bolnisnica` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,		
 	`ime` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
-    `min` varchar(4) NOT NULL,
-	`max` varchar(4) NOT NULL";
+	`ocena` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,	
+    `status` int(3) NOT NULL";
 $databaseGloboka->naredi('ocenaTbl', $definice);
 break;
 
