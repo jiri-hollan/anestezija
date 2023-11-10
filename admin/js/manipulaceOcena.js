@@ -8,11 +8,10 @@ switch(akce) {
 
   case "vloz":
     bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="bolnišnica" required>';
-    skupina= '<input type="text" id="skupinaId" name="skupina" value="" placeholder="skupina" required>';
     ime= '<input type="text" id="imeId" name="ime" value="" placeholder="ime" required>';
-    min= '<input type="text" id="minId" name="min" value="" placeholder="min" required>';
-    max= '<input type="int" id="maxId" name="max" value="" placeholder="max" required>';
-    document.getElementById("demo").innerHTML = bolnisnica + skupina + ime + min + max;
+    ocena= '<input type="text" id="ocenaId" name="ocena" value="" placeholder="ocena" required>';
+    status= '<input type="text" id="statusId" name="status" value="" placeholder="status" required>';
+    document.getElementById("demo").innerHTML = bolnisnica + ime + ocena + status;
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset">'; //submit+reset
     break;
   case "uredi":

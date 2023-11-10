@@ -25,23 +25,21 @@ switch ($akce) {
     vyberFunction($podminka);
     break;
 case "vloz":
-    $skupina = test_input($_POST["skupina"]);
     $ime = test_input($_POST["ime"]);
-    $min = test_input($_POST["min"]);
-    $max = test_input($_POST["max"]);  
-    $data= array("bolnisnica"=>$bolnisnica, "skupina"=>$skupina, "ime"=>$ime, "min"=>$min, "max"=>$max);
+    $ocena = test_input($_POST["ocena"]);
+    $status = test_input($_POST["status"]);  
+    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "ocena"=>$ocena, "status"=>$status);
     vlozFunction($data);
     break;
 case "uredi":
     $tabulka="ocenaTbl";
     $id=test_input($_POST["id"]);
-    $skupina=test_input($_POST["skupina"]);	
+    $ime=test_input($_POST["ime"]);	
     $bolnisnica=test_input($_POST["bolnisnica"]);
-    $ime = test_input($_POST["ime"]);
-	$min = test_input($_POST["min"]);
-	$max = test_input($_POST["max"]); 
+    $ocena = test_input($_POST["ocena"]);
+	$status = test_input($_POST["status"]);
 	$podminka = array("id"=>$id);
-    $data= array("bolnisnica"=>$bolnisnica, "skupina"=>$skupina, "ime"=>$ime, "min"=>$min, "max"=>$max);
+    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "ocena"=>$ocena, "status"=>$status);
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
     break;
@@ -88,7 +86,7 @@ echo count($vybrano);
 echo "<br>";
 if(count($vybrano)>0){
 echo "<table id='osebe' style='border: solid 1px black;'>";
-echo "<tr><th>Id</th><th>bolnisnica</><th>skupina</><th>ime</th><th>min</th><th>max</th></tr>";
+echo "<tr><th>Id</th><th>bolnisnica</><th>ime</><th>ocena</th><th>status</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {

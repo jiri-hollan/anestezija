@@ -66,6 +66,11 @@ if (isset($_REQUEST["akce"])) {
 	  case "sklepiTbl":
 	  $this->dataPreg= '["bolnisnica", "sklep", "status"]';
 	  break;
+	  
+	  case "ocenaTbl":
+	  $this->dataPreg= '["bolnisnica", "ime", "ocena", "status"]';
+	  break;
+	  
 	  case "limitiTbl":
 	  $this->dataPreg= '["bolnisnica", "skupina", "ime", "min", "max"]';
 	  break;
@@ -185,6 +190,12 @@ foreach (json_decode($this->dataPreg) as $key) {
 	case "sklepiTbl":
     echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>status</th></tr>";
     break;
+	
+	case "sklepiTbl":
+    echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>ocena</th><th>status</th></tr>";
+    break;
+	
+	
 	case "limitiTbl":
     echo "<tr><th>Id</th><th>bolnišnica</><th>skupina</th><th>ime</th><th>min</th><th>max</th></tr>";
     break;
@@ -266,6 +277,11 @@ break;
 case "pregledovalciTbl":
 echo '<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>"></script>'; 
 break;
+
+case "ocenaTbl":
+echo '<script src="js/manipulaceOcena.js?<?php echo time(); ?>"></script>'; 
+break;
+
 case "limitiTbl":
 echo '<script src="js/manipulaceLimiti.js?<?php echo time(); ?>"></script>'; 
 break;
