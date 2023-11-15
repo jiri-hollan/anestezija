@@ -125,12 +125,12 @@
      </datalist>
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
-	 <label class="zacetekAsa">Opiati:<input id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="2"  onfocus="stevilkaFunction(5, 'opiati', 'opia')"  onkeypress=" return isNumber(event, opi)" onfocusout=  "laborFunction(name,value)" /></label> 
+	 <label class="zacetekAsa">Opiati:<input id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="2" /></label> 
      <datalist id="opia">
      <option value='st opia'>
      </datalist>
 	 <!-- druge odvisnosti-->
-	 <label class="zacetekAsa">Druge ovisnosti:<input id="dovisnosti" class="ocena" type="text"   list="dovis"  name="dovisnosti" size="1" maxlength="2"  onfocus="stevilkaFunction(5, 'dovisnosti', 'dovis')"  onkeypress=" return isNumber(event, dovi)" onfocusout=  "laborFunction(name,value)" /></label> 
+	 <label class="zacetekAsa">Druge ovisnosti:<input id="dovisnosti" class="ocena" type="text"   list="dovis"  name="dovisnosti" size="1" maxlength="2" /></label> 
      <datalist id="dovis">
      <option value='st dovis'>
      </datalist>
