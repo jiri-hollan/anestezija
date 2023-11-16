@@ -125,7 +125,7 @@
      </datalist>
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
-	 <label class="zacetekAsa">Opiati:<input id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="2" /></label> 
+	 <label class="zacetekAsa">Opiati:<input id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="2" required /></label> 
      <datalist id="opia">
      <option value='st opia'>
      </datalist>
@@ -197,7 +197,7 @@
     <p id="labR">lab</p>
   <div class="asmalR">
     <span style="padding-left:1px;">ASA: </span>
-    <span id="asaR"​ class="kvadrat" >.</span>
+    <span id="asaR" class="kvadrat" >.</span>
     <span style="padding-left:10px;">Mallampati:</span> 
     <span id="mallR" class="kvadrat" >.</span> 
     <span style="padding-left:10px;">Opiati:</span> 
