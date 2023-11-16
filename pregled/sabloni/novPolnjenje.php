@@ -131,10 +131,12 @@
 	  <option value="ne">NE</option>
      </select>
 	 <!-- druge odvisnosti-->
-	 <label class="zacetekAsa">Druge ovisnosti:<input id="dovisnosti" class="ocena" type="text"   list="dovis"  name="dovisnosti" size="1" maxlength="2" /></label> 
-     <datalist id="dovis">
-      <option value='st dovis'>
-     </datalist>
+	 <label class="zacetekAsa">Druge ovisnosti:</label> 
+	 <select id="dovisnosti" class="ocena" type="text"  name="dovisnosti" size="1" maxlength="2">
+      <option value=".">Preskoči</option>	 
+      <option value="da">DA</option>
+	  <option value="ne">NE</option>
+     </select>
 	 
 	 <!-- .....Konec odvisnosti..............................................-->
      <br><label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>
@@ -203,8 +205,8 @@
     <span id="mallR" class="kvadrat" >.</span> 
     <span style="padding-left:10px;">Opiati:</span> 
     <span id="opiaR" class="kvadrat" >.</span>
-    <span style="padding-left:10px;">Druge ovisnosti:</span> 
-    <span id="dovisR" class="kvadrat" >.</span>	
+    <span id="labDovisnostiR" style="padding-left:10px;">Druge ovisnosti:</span> 
+    <span id="dovisnostiR" class="kvadrat" >.</span>	
   </div>
   <b><span style="font-size:120%;">Alergija:</span> <span id="alergijaR" style= "font-size:120%;"></span></b>
  </div>
