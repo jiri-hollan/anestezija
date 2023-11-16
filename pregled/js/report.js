@@ -154,16 +154,17 @@ document.getElementById("opiaR").style="font-weight:"+opia.style.fontWeight;
 
 var dovis = document.getElementById("dovisnosti");
 //alert(dovis);
-/*	if dovis="da"|| dovis="ne"){
 document.getElementById("dovisnostiR").innerHTML= dovis.value;
-document.getElementById("dovisnostiR").style="font-weight:"+dovis.style.fontWeight;
-else{*/
+if (dovis.value=="da"|| dovis.value=="ne"){	
+document.getElementById("dovisnostiR").style="font-weight:"+dovis.style.fontWeight;	
+document.getElementById("labDovisnostiR").style.visibility = "visible";
+}
+else{	
 document.getElementById("labDovisnostiR").style.visibility = "hidden";
 document.getElementById("dovisnostiR").style.visibility = "hidden";
-/*
        }//od else
-	}//od if dovis
-*/
+		   
+
 var alergija = document.getElementById("alergija").value;
 //alert(alergija);
 document.getElementById("alergijaR").innerHTML= alergija;
