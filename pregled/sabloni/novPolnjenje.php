@@ -125,14 +125,15 @@
      </datalist>
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
-	 <label class="zacetekAsa">Opiati:<input id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="2" required /></label> 
-     <datalist id="opia">
-     <option value='st opia'>
-     </datalist>
+	 <label class="zacetekAsa">Opiati:</label>
+	 <select id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="2" required > 
+      <option value="da">DA</option>
+	  <option value="ne">NE</option>
+     </select>
 	 <!-- druge odvisnosti-->
 	 <label class="zacetekAsa">Druge ovisnosti:<input id="dovisnosti" class="ocena" type="text"   list="dovis"  name="dovisnosti" size="1" maxlength="2" /></label> 
      <datalist id="dovis">
-     <option value='st dovis'>
+      <option value='st dovis'>
      </datalist>
 	 
 	 <!-- .....Konec odvisnosti..............................................-->
@@ -142,8 +143,8 @@
     <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
 
 <label>Sklep:<input id="sklep"  list="sklepi" name="sklep" required></label> 
- <datalist id="sklepi">
-     <option value="sklep">
+  <datalist id="sklepi">
+   <option value="sklep">
   </datalist>
  <script>
 // alert("sklep Json:" + sklepJson);
