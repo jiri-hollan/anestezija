@@ -126,7 +126,7 @@
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
 	 <label class="zacetekAsa">Opiati:</label>
-	 <select id="opiati" class="ocena" type="text"   list="opia"  name="opiati" size="1" maxlength="2" required > 
+	 <select id="opiati" class="ocena" type="text"  name="opiati" size="1" maxlength="2" required > 
       <option value="da">DA</option>
 	  <option value="ne">NE</option>
      </select>

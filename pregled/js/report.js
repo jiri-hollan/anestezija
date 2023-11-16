@@ -146,7 +146,7 @@ var mall = document.getElementById("mallampati");
 document.getElementById("mallR").innerHTML= mall.value;
 document.getElementById("mallR").style="font-weight:"+mall.style.fontWeight;
 
-var opi = document.getElementById("opiati");
+var opia = document.getElementById("opiati");
 //alert(opi);
 document.getElementById("opiaR").innerHTML= opia.value;
 document.getElementById("opiaR").style="font-weight:"+opia.style.fontWeight;
