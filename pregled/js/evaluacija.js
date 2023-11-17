@@ -28,10 +28,25 @@ function labevalFunction(){
 const iskano =  document.getElementsByClassName("lab osnovne");
 const ocena =  document.getElementsByClassName("ocena");
 for (let i = 0; i < iskano.length; i++) {
+	
 // laborFunction spremeni styl glede na limite
 laborFunction(iskano[i].name,iskano[i].value);  
 }
 for (let i = 0; i < ocena.length; i++) {
+	console.log(ocena[i].name);
+	console.log(ocena[i].value); 
+/*if(isNaN(ocena[i].value)){	
+	switch (ocena[i].value) {
+	case "ne":
+		ocena[i].value=0;
+	break;
+	case "da" :
+		ocena[i].value=1,1;
+	break
+	default:
+		ocena[i].value=1,1;
+	}
+}*/
 // laborFunction spremeni styl glede na limite
 laborFunction(ocena[i].name,ocena[i].value);  
 }
