@@ -25,8 +25,8 @@ if(vrednost == ""||vrednost == 0||vrednost=== null) {
  }
  }//id if limitilab(ime)
 else{
-console.log("v else");
-console.log(vrednost);
+//console.log("v else");
+//console.log(vrednost);
 	switch (vrednost) {
 	case "NE":
     document.getElementById(ime).style.color = "#00000"; 
@@ -37,7 +37,7 @@ console.log(vrednost);
    document.getElementById(ime).style.fontWeight = "bolder";
    break; 
   default:
-console.log("nekaj je narobe");  
+//console.log("nekaj je narobe");  
 		
 }//od switch
 }//od else
