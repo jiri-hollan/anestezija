@@ -132,19 +132,24 @@
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
 	 <label class="zacetekAsa">Opiati:
-	 <select id="opiati" class="ocenaOvisnosti" type="text" list="listOpiati" name="opiati" size="1" maxlength="2" onfocusout=  "laborFunction(name,value)"required > 
-     <option value="NE"selected >NE</option>
-	 <option value="DA">DA</option>
-     </select>
+	 <input id="opiati" class="ocenaOvisnosti" type="text" list="opiatiList" name="opiati" size="1" maxlength="2" onfocusout=  "laborFunction(name,value)"required /> 
 	 </label>
+	 <datalist id="opiatiList">
+     <option value="NE" >
+	 <option value="DA">
+     </datalist>
+
 	 <!-- druge odvisnosti-->
 	 <label class="zacetekAsa">Druge ovisnosti:
-	 <select id="dovisnosti" class="ocenaOvisnosti" type="text"  name="dovisnosti" size="1" maxlength="2" onfocusout=  "laborFunction(name,value)">
-     <option value=""selected ></option>	 
-     <option value="NE">NE</option>
-	 <option value="DA">DA</option>
-     </select>
+	 <input id="dovisnosti" class="ocenaOvisnosti" type="text" list="dovisnostiList" name="dovisnosti" size="1" maxlength="2" onfocusout=  "laborFunction(name,value)">
+	 </input>
 	 </label> 
+	 <datalist id="dovisnostiList">	 
+     <option value="">	 
+     <option value="NE">
+	 <option value="DA">
+     </datalist>	 
+
 	 <!-- .....Konec odvisnosti..............................................-->
      <br><label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>
   </fieldset>
