@@ -21,7 +21,7 @@ function formNazajFunction(person1) {
 //alert ('obnovaForme45');
 	if (sessionStorage.getItem("testJSON")!=null){
 	  let text = sessionStorage.getItem("testJSON");
-console.log(text);	
+//console.log(text);	
       let obj = JSON.parse(text);
 //alert (obj.izvidiInOpombe);	
 var inputs = document.getElementById("frm").elements;
@@ -29,7 +29,7 @@ for (i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" ||inputs[i].nodeName === "TEXTAREA") {
 	 var kljuc=inputs[i].name;
 //alert (kljuc);
-console.log(kljuc);
+//console.log(kljuc);
 	 if (obj[kljuc] !== undefined) {
 		document.getElementsByName(kljuc)[0].value = obj[kljuc].replace(/\&quot;/g,'\\"').replace(/\&amp;/g, "&"); 
 	 }
