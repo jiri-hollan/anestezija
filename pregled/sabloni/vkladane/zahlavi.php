@@ -10,7 +10,6 @@
 <script src="js/report.js?<?php echo time(); ?>"></script>
 <script src="js/preklopCss.js?<?php echo time(); ?>"></script>
 <script src="js/odjava.js?<?php echo time(); ?>"></script>
-<!--<script src="js/stevilke.js?<?php echo time(); ?>"></script>-->
 <script src="js/evaluacija.js?<?php echo time(); ?>"></script>
 <script src="js/drugiIzvidi.js?<?php echo time(); ?>"></script>
 <script src="js/prijava.js?<?php echo time(); ?>"></script>
