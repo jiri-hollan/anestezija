@@ -1,11 +1,11 @@
 
 
-function stevilkaFunction(a,b,c) {
+function stevilkaFunction(dolzina,ident,lista) {
 //...dan od 1 do 31.....prikaz številčneizbire v "list".....................
-var b = "";
+var ident = "";
 var i;
-for (i = 1; i < a; i++) {
-b += "<option value=" +  i + ">"  +"<br>";
+for (i = 1; i < dolzina; i++) {
+ident += "<option value=" +  i + ">"  +"<br>";
 }
-document.getElementById(c).innerHTML = b;
+document.getElementById(lista).innerHTML = ident;
 }//poskusni napis
