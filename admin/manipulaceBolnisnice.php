@@ -32,10 +32,11 @@ switch ($akce) {
     vyberFunction($podminka);
     break;
 case "vloz":
+    $tabulka="bolnisniceTbl";
     $nazivB = test_input($_POST["nazivB"]);
     $status = test_input($_POST["status"]);  
     $data= array("mesto"=>$mesto, "nazivB"=>$nazivB, "status"=>$status);
-    vlozFunction($data);
+    vlozFunction($tabulka, $data);
     break;
 case "uredi":
     $tabulka="bolnisniceTbl";
@@ -115,7 +116,7 @@ function vyberFunction($podminka){
 }//od else
 }//od vyberFunction  
 
-function vlozFunction($data){
+function vlozFunction($tabulka,$data){
   $vloz = new database($tabulka,$data);
 //$vloz->vloz($tabulka,$data);
   $vlozeno=$vloz->vloz($tabulka,$data );
