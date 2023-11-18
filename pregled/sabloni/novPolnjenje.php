@@ -116,14 +116,14 @@
  <fieldset id= "asamal" >
     <legend></legend>
      <label class="zacetekAsa">ASA:
-	 <input id="asa" class="ocena" type="text"  list="asaList"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'asaList')"  onkeypress=" return isNumber(event, as)" onfocusout=  "laborFunction(name,value)" />
+	 <input id="asa" class="ocena" type="text"  list="asaList"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'asaList')"  onkeypress=" return isNumber(event, asaVar)" onfocusout=  "laborFunction(name,value)" />
 	 </label>  
 	 <datalist id="asaList">
      <option value='st asa'>
      </datalist>
 	 
 	 <label class="zacetekAsa">Mallampati:
-	 <input id="mallampati" class="ocena" type="text"   list="mallampatiList"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mallampatiList')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" />
+	 <input id="mallampati" class="ocena" type="text"   list="mallampatiList"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mallampatiList')"  onkeypress=" return isNumber(event, mallampatiVar)" onfocusout=  "laborFunction(name,value)" />
 	 </label> 
      <datalist id="mallampatiList">
      <option value='st mallampati'>
