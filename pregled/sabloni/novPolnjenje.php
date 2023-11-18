@@ -116,7 +116,7 @@
  <fieldset id= "asamal" >
     <legend></legend>
      <label class="zacetekAsa">ASA:
-	 <input id="asa" class="ocena" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)" onfocusout=  "laborFunction(name,value)" />
+	 <input id="asa" class="ocena" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, asaVar)" onfocusout=  "laborFunction(name,value)" />
 	 </label>  
 	 <datalist id="ase">
      <option value='st asa'>
