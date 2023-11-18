@@ -8,4 +8,4 @@ for (i = 1; i < dolzina; i++) {
 ident += "<option value=" +  i + ">"  +"<br>";
 }
 document.getElementById(lista).innerHTML = ident;
-}//poskusni napis
+}//od sevilkaFunction

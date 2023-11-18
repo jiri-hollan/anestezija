@@ -58,6 +58,17 @@ switch (x) {
 }// od switch
 }// od pozorFunction
 
+
+function stevilkaFunction(dolzina,ident,lista) {
+//...dan od 1 do 31.....prikaz številčneizbire v "list".....................
+var ident = "";
+var i;
+for (i = 1; i < dolzina; i++) {
+ident += "<option value=" +  i + ">"  +"<br>";
+}
+document.getElementById(lista).innerHTML = ident;
+}//od sevilkaFunction
+
 //-----dovoljene vrednosti-------------
 var as = ["1", "2", "3", "4", "5"];
 var mal = ["1", "2", "3", "4"];
