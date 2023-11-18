@@ -125,19 +125,20 @@
      </datalist>
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
-	 <label class="zacetekAsa">Opiati:</label>
+	 <label class="zacetekAsa">Opiati:
 	 <select id="opiati" class="ocenaOvisnosti" type="text"  name="opiati" size="1" maxlength="2" required > 
       <option value="ne">NE</option>
 	  <option value="da">DA</option>
      </select>
+	 </label>
 	 <!-- druge odvisnosti-->
-	 <label class="zacetekAsa">Druge ovisnosti:</label> 
+	 <label class="zacetekAsa">Druge ovisnosti:
 	 <select id="dovisnosti" class="ocenaOvisnosti" type="text"  name="dovisnosti" size="1" maxlength="2">
       <option value=".">Preskoči</option>	 
       <option value="ne">NE</option>
 	  <option value="da">DA</option>
      </select>
-	 
+	 </label> 
 	 <!-- .....Konec odvisnosti..............................................-->
      <br><label for="alergija">Alergija:<input id="alergija" type="text" value="ni znano" name="alergija"  ></label>
   </fieldset>
