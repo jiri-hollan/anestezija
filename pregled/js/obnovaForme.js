@@ -21,7 +21,7 @@ function formNazajFunction(person1) {
 //alert ('obnovaForme45');
 	if (sessionStorage.getItem("testJSON")!=null){
 	  let text = sessionStorage.getItem("testJSON");
-//alert (text);	
+console.log(text);	
       let obj = JSON.parse(text);
 //alert (obj.izvidiInOpombe);	
 var inputs = document.getElementById("frm").elements;
