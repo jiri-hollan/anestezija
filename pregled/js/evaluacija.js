@@ -29,15 +29,21 @@ else{
 //console.log(vrednost);
 	switch (vrednost) {
 	case "NE":
-    document.getElementById(ime).style.color = "#00000"; 
-    //document.getElementById(ime).style.fontWeight = "bolder";
+console.log=("NE");		
+    pozorFunction(ime, 3);	
+
    break;	
   case "DA":
-   document.getElementById(ime).style.color = "Crimson"; 
-   document.getElementById(ime).style.fontWeight = "bolder";
-   break; 
+   console.log=("DA");
+     pozorFunction(ime, 1);	
+	  
+   break;
+   case "":
+//ne naredi nič
+console.log=("prazen niz");
+   break;
   default:
-//console.log("nekaj je narobe");  
+console.log("nekaj je narobe");  
 		
 }//od switch
 }//od else
