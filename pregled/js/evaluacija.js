@@ -110,15 +110,5 @@ function isNumber(evt, a)
       return false;
 }//od isNumber
 
-function jeDovoljeno(evt, a){
- var allowed_characters = a;   
-    if (allowed_characters.indexOf(evt.key) > -1) {
-      return true;
-    }
-      return false;	
-	
-}//od jeDovoljeno
-
-
 
 //-------konec dovoljene vrednosti-----
