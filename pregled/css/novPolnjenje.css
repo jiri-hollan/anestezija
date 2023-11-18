@@ -20,6 +20,15 @@ input:required:invalid{
   border: 3px solid #555;
   /*background-color: LightYellow;*/
 }
+#druga select:hover {
+  border: 3px solid #555;
+  background-color: LightYellow;
+}
+#druga select:focus {
+  border: 3px solid #555;
+  /*background-color: LightYellow;*/
+}
+
 fieldset {
   padding: 20px 2px;
   width:99%; 
@@ -179,6 +188,11 @@ fieldset.labor textarea {
 .zacetekAsa {
 	padding: 20px 20px;
 }
+
+.ocenaOvisnosti select{
+display: none;
+}
+
  
 fieldset.alergija label {
   width:auto;
