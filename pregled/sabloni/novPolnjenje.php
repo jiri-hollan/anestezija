@@ -126,13 +126,13 @@
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
 	 <label class="zacetekAsa">Opiati:</label>
-	 <select id="opiati" class="ocena" type="text"  name="opiati" size="1" maxlength="2" required > 
+	 <select id="opiati" class="ocenaOvisnosti" type="text"  name="opiati" size="1" maxlength="2" required > 
       <option value="ne">NE</option>
 	  <option value="da">DA</option>
      </select>
 	 <!-- druge odvisnosti-->
 	 <label class="zacetekAsa">Druge ovisnosti:</label> 
-	 <select id="dovisnosti" class="ocena" type="text"  name="dovisnosti" size="1" maxlength="2">
+	 <select id="dovisnosti" class="ocenaOvisnosti" type="text"  name="dovisnosti" size="1" maxlength="2">
       <option value=".">Preskoči</option>	 
       <option value="ne">NE</option>
 	  <option value="da">DA</option>
