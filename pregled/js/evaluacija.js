@@ -53,6 +53,7 @@ console.log("nekaj je narobe");
 function labevalFunction(){
 const iskano =  document.getElementsByClassName("lab osnovne");
 const ocena =  document.getElementsByClassName("ocena");
+const ocenaOvisnosti =  document.getElementsByClassName("ocenaOvisnosti");
 for (let i = 0; i < iskano.length; i++) {
 // laborFunction spremeni styl glede na limite
 laborFunction(iskano[i].name,iskano[i].value);  
@@ -62,6 +63,10 @@ for (let i = 0; i < ocena.length; i++) {
 laborFunction(ocena[i].name,ocena[i].value);  
 }
 //alert (ocena[1].name + " = " + ocena[1].value);
+for (let i = 0; i < ocenaOvisnosti.length; i++) {
+// laborFunction spremeni styl glede na limite
+laborFunction(ocenaOvisnosti[i].name,ocenaOvisnosti[i].value);  
+}
 } //od funkcije labevalFunction
 
 function pozorFunction(ime, x) { 
