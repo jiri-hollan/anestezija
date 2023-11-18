@@ -133,16 +133,16 @@
 	 <!-- opiati-->
 	 <label class="zacetekAsa">Opiati:
 	 <select id="opiati" class="ocenaOvisnosti" type="text" list="listOpiati" name="opiati" size="1" maxlength="2" onfocusout=  "laborFunction(name,value)"required > 
-     <option value="ne"selected >NE</option>
-	 <option value="da">DA</option>
+     <option value="NE"selected >NE</option>
+	 <option value="DA">DA</option>
      </select>
 	 </label>
 	 <!-- druge odvisnosti-->
 	 <label class="zacetekAsa">Druge ovisnosti:
-	 <select id="dovisnosti" class="ocenaOvisnosti" type="text"  name="dovisnosti" size="1" maxlength="2">
-     <option value=""selected >Preskoči</option>	 
-     <option value="ne">NE</option>
-	 <option value="da">DA</option>
+	 <select id="dovisnosti" class="ocenaOvisnosti" type="text"  name="dovisnosti" size="1" maxlength="2" onfocusout=  "laborFunction(name,value)">
+     <option value=""selected ></option>	 
+     <option value="NE">NE</option>
+	 <option value="DA">DA</option>
      </select>
 	 </label> 
 	 <!-- .....Konec odvisnosti..............................................-->

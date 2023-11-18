@@ -2,7 +2,9 @@
 {
  //console.log(ime);	
  const LIMITIlab = JSON.parse(limitiJson);
- //console.log(LIMITIlab);
+//console.log(LIMITIlab);
+if(LIMITIlab[ime]!=undefined){
+//console.log(LIMITIlab[ime]);
  max = LIMITIlab[ime]["max"];
  max = parseFloat(max);
 //console.log(max);
@@ -21,6 +23,24 @@ if(vrednost == ""||vrednost == 0||vrednost=== null) {
   }else {
     pozorFunction(ime, 3);	
  }
+ }//id if limitilab(ime)
+else{
+console.log("v else");
+console.log(vrednost);
+	switch (vrednost) {
+	case "NE":
+    document.getElementById(ime).style.color = "#00000"; 
+    //document.getElementById(ime).style.fontWeight = "bolder";
+   break;	
+  case "DA":
+   document.getElementById(ime).style.color = "Crimson"; 
+   document.getElementById(ime).style.fontWeight = "bolder";
+   break; 
+  default:
+console.log("nekaj je narobe");  
+		
+}//od switch
+}//od else
 }//od function laborFunction
 //-------------------------------------------------------------------------------------------------------
 //labevalFunction preveri limite lab. vrednosti pri načitanju bolnika iz baze

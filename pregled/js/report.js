@@ -155,7 +155,7 @@ document.getElementById("opiaR").style="font-weight:"+opia.style.fontWeight;
 var dovis = document.getElementById("dovisnosti");
 //alert(dovis);
 document.getElementById("dovisnostiR").innerHTML= dovis.value;
-if (dovis.value=="da"|| dovis.value=="ne"){	
+if (dovis.value=="DA"|| dovis.value=="NE"){	
 document.getElementById("dovisnostiR").style="font-weight:"+dovis.style.fontWeight;	
 document.getElementById("labDovisnostiR").style.visibility = "visible";
 }
