@@ -115,28 +115,34 @@
     <textarea id="terPredhodna" class="mala" rows="4" cols="200" name="terPredhodna"></textarea>
  <fieldset id= "asamal" >
     <legend></legend>
-     <label class="zacetekAsa">ASA:<input id="asa" class="ocena" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)" onfocusout=  "laborFunction(name,value)" /></label>  
-	<datalist id="ase">
-    <option value='st asa'>
-    </datalist>
-	      <label class="zacetekAsa">Mallampati:<input id="mallampati" class="ocena" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" /></label> 
+     <label class="zacetekAsa">ASA:
+	 <input id="asa" class="ocena" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)" onfocusout=  "laborFunction(name,value)" />
+	 </label>  
+	 <datalist id="ase">
+     <option value='st asa'>
+     </datalist>
+	 
+	 <label class="zacetekAsa">Mallampati:
+	 <input id="mallampati" class="ocena" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" />
+	 </label> 
      <datalist id="mally">
      <option value='st mall'>
      </datalist>
+	 
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
 	 <label class="zacetekAsa">Opiati:
-	 <select id="opiati" class="ocenaOvisnosti" type="text"  name="opiati" size="1" maxlength="2" required > 
-      <option value="ne">NE</option>
-	  <option value="da">DA</option>
+	 <select id="opiati" class="ocenaOvisnosti" type="text" list="listOpiati" name="opiati" size="1" maxlength="2" required > 
+     <option value="ne">NE</option>
+	 <option value="da">DA</option>
      </select>
 	 </label>
 	 <!-- druge odvisnosti-->
 	 <label class="zacetekAsa">Druge ovisnosti:
 	 <select id="dovisnosti" class="ocenaOvisnosti" type="text"  name="dovisnosti" size="1" maxlength="2">
-      <option value=".">Preskoči</option>	 
-      <option value="ne">NE</option>
-	  <option value="da">DA</option>
+     <option value="">Preskoči</option>	 
+     <option value="ne">NE</option>
+	 <option value="da">DA</option>
      </select>
 	 </label> 
 	 <!-- .....Konec odvisnosti..............................................-->
