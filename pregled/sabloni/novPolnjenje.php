@@ -123,7 +123,7 @@
      </datalist>
 	 
 	 <label class="zacetekAsa">Mallampati:
-	 <input id="mallampati" class="ocena" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mal)" onfocusout=  "laborFunction(name,value)" />
+	 <input id="mallampati" class="ocena" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mallampati', 'mally')"  onkeypress=" return isNumber(event, mallampatiVar)" onfocusout=  "laborFunction(name,value)" />
 	 </label> 
      <datalist id="mally">
      <option value='st mall'>

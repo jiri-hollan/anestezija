@@ -91,7 +91,7 @@ document.getElementById(lista).innerHTML = ident;
 
 //-----dovoljene vrednosti-------------
 var asaVar = ["1", "2", "3", "4", "5"];
-var mal = ["1", "2", "3", "4"];
+var mallampatiVar = ["1", "2", "3", "4"];
 var allNumb = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 function isNumber(evt, a)
 { 
