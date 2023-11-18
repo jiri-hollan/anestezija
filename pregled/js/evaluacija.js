@@ -93,6 +93,8 @@ document.getElementById(lista).innerHTML = ident;
 var asaVar = ["1", "2", "3", "4", "5"];
 var mallampatiVar = ["1", "2", "3", "4"];
 var allNumb = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+var opiatiVar = ["DA", "NE"];
+var dovisnostiVar = ["DA", "NE",""];
 function isNumber(evt, a)
 { 
     var allowed_characters = a;   
@@ -101,4 +103,16 @@ function isNumber(evt, a)
     }
       return false;
 }//od isNumber
+
+function jeDovoljeno(evt, a){
+ var allowed_characters = a;   
+    if (allowed_characters.indexOf(evt.key) > -1) {
+      return true;
+    }
+      return false;	
+	
+}//od jeDovoljeno
+
+
+
 //-------konec dovoljene vrednosti-----
