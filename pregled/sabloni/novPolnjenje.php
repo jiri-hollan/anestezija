@@ -132,7 +132,7 @@
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
 	 <label class="zacetekAsa">Opiati:
-	 <select id="opiati" class="ocenaOvisnosti" type="text"  name="opiati" size="1" maxlength="2" required > 
+	 <select id="opiati" class="ocenaOvisnosti" type="text"  name="opiati" size="1" maxlength="2" onfocusout=  "laborFunction(name,value)"required > 
      <option value="NE"selected>NE</option>
 	 <option value="DA">DA</option>
      </select>
@@ -140,7 +140,7 @@
 	 <!-- druge odvisnosti-->
 	 <label class="zacetekAsa">Druge ovisnosti:
 	 <select id="" class="ocenaOvisnosti" type="text"  name="dovisnosti" size="1" maxlength="2">
-     <option value=""selected ></option>	 
+     <option value="."selected ></option>	 
      <option value="NE">NE</option>
 	 <option value="DA">DA</option>
      </select>
