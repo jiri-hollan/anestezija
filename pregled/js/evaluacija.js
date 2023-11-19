@@ -104,8 +104,8 @@ document.getElementById(lista).innerHTML = ident;
 var asaVar = ["1", "2", "3", "4", "5"];
 var mallampatiVar = ["1", "2", "3", "4"];
 var allNumb = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-var opiatiVar = ["DA", "NE"];
-var dovisnostiVar = ["DA", "NE",""];
+var opiatiVar = ["D", "N", "A", "E"];
+var dovisnostiVar = ["D", "N","", "A", "E"];
 function isNumber(evt, a)
 { 
     var allowed_characters = a;   
