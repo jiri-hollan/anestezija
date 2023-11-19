@@ -27,6 +27,7 @@ if(vrednost == ""||vrednost == 0||vrednost=== null) {
 else{
 //console.log("v else");
 //console.log(vrednost);
+vrednost=vrednost.toUpperCase();
 	switch (vrednost) {
 	case "NE":
 console.log=("NE");		
@@ -43,7 +44,7 @@ console.log=("NE");
 console.log=("prazen niz");
    break;
   default:
-console.log("nekaj je narobe");  
+console.log=("nekaj je narobe");  
 		
 }//od switch
 }//od else
@@ -104,8 +105,8 @@ document.getElementById(lista).innerHTML = ident;
 var asaVar = ["1", "2", "3", "4", "5"];
 var mallampatiVar = ["1", "2", "3", "4"];
 var allNumb = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-var opiatiVar = ["D", "N", "A", "E"];
-var dovisnostiVar = ["D", "N","", "A", "E"];
+var opiatiVar = ["D", "d", "N", "n", "",  "A", "a", "E", "e"];
+var dovisnostiVar = ["D", "d", "N", "n", "",  "A", "a", "E", "e"];
 function isNumber(evt, a)
 { 
     var allowed_characters = a;   
@@ -114,6 +115,5 @@ function isNumber(evt, a)
     }
       return false;
 }//od isNumber
-
 
 //-------konec dovoljene vrednosti-----

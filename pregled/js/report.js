@@ -153,13 +153,13 @@ document.getElementById("mallR").style="font-weight:"+mall.style.fontWeight;
 
 var opia = document.getElementById("opiati");
 //alert(opi);
-document.getElementById("opiaR").innerHTML= opia.value;
+document.getElementById("opiaR").innerHTML= opia.value.toUpperCase();
 document.getElementById("opiaR").style="font-weight:"+opia.style.fontWeight;
 
 
 var dovis = document.getElementById("dovisnosti");
 //alert(dovis);
-document.getElementById("dovisnostiR").innerHTML= dovis.value;
+document.getElementById("dovisnostiR").innerHTML= dovis.value.toUpperCase();
 if (dovis.value=="DA"|| dovis.value=="NE"){	
 document.getElementById("dovisnostiR").style="font-weight:"+dovis.style.fontWeight;	
 document.getElementById("labDovisnostiR").style.visibility = "visible";
