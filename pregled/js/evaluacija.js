@@ -45,7 +45,7 @@ console.log=("prazen niz");
    break;
   default:
 console.log=("nekaj je narobe");  
-		
+    pozorFunction(ime, 2);	
 }//od switch
 }//od else
 }//od function laborFunction
