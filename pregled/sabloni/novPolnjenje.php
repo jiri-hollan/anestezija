@@ -140,7 +140,7 @@
      </datalist>
 
 	 <!-- druge odvisnosti-->
-	 <label class="zacetekAsa">Druge ovisnosti:
+	 <label class="zacetekAsa">Druge odvisnosti:
 	 <input id="dovisnosti" class="ocenaOvisnosti" type="text" list="dovisnostiList" name="dovisnosti" size="1" maxlength="2" onkeypress=" return isNumber(event, dovisnostiVar)" onfocusout=  "laborFunction(name,value)">
 	 </input>
 	 </label> 
@@ -217,7 +217,7 @@
     <span id="mallR" class="kvadrat" >.</span> 
     <span style="padding-left:10px;">Opiati:</span> 
     <span id="opiaR" class="kvadrat" >.</span>
-    <span id="labDovisnostiR" style="padding-left:10px;">Druge ovisnosti:</span> 
+    <span id="labDovisnostiR" style="padding-left:10px;">Druge odvisnosti:</span> 
     <span id="dovisnostiR" class="kvadrat" >.</span>	
   </div>
   <b><span style="font-size:120%;">Alergija:</span> <span id="alergijaR" style= "font-size:120%;"></span></b>
