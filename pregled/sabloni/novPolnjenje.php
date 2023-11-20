@@ -132,7 +132,7 @@
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
 	 <label class="zacetekAsa">Opiati:
-	 <input id="opiati" class="ocenaOvisnosti" value="NE" type="text" list="opiatiList" name="opiati" size="1" maxlength="2" onkeypress=" return isNumber(event, opiatiVar)"  onfocusout=  "laborFunction(name,value)"required /> 
+	 <input id="opiati" class="ocenaOvisnosti" value="NE" type="text" list="opiatiList" name="opiati" size="2" maxlength="2" onkeypress=" return isNumber(event, opiatiVar)"  onfocusout=  "laborFunction(name,value)"required /> 
 	 </label>
 	 <datalist id="opiatiList">
      <option value="NE" >
@@ -141,7 +141,7 @@
 
 	 <!-- druge odvisnosti-->
 	 <label class="zacetekAsa">Druge odvisnosti:
-	 <input id="dovisnosti" class="ocenaOvisnosti" type="text" list="dovisnostiList" name="dovisnosti" size="1" maxlength="2" onkeypress=" return isNumber(event, dovisnostiVar)" onfocusout=  "laborFunction(name,value)">
+	 <input id="dovisnosti" class="ocenaOvisnosti" type="text" list="dovisnostiList" name="dovisnosti" size="2" maxlength="2" onkeypress=" return isNumber(event, dovisnostiVar)" onfocusout=  "laborFunction(name,value)">
 	 </input>
 	 </label> 
 	 <datalist id="dovisnostiList">	 
