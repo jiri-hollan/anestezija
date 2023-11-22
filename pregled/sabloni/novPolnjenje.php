@@ -131,7 +131,7 @@
 	 
 	 <!-- odvisnosti-->
 	 <!-- opiati-->
-	 <label id="opiatiLabel" class="zacetekAsa" >Opiati:
+	 <label class="zacetekAsa" >Opiati:
 	 <input id="opiati" class="ocenaOvisnosti" value="NE" type="text" list="opiatiList" name="opiati" size="2" maxlength="2" onkeypress=" return isNumber(event, opiatiVar)"  onfocusout=  "laborFunction(name,value)"required /> 
 	 </label>
 	 <datalist id="opiatiList">
