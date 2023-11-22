@@ -182,11 +182,11 @@ fieldset.labor textarea {
 
  #asamal {
   position: relative;
-  padding: 20px 2px;  
+  padding: 5px 2px 5px 1px;  
   height: auto;  
 } 
 .zacetekAsa {
-	padding: 20px 20px;
+	padding: 1px 10px 1px 18px;
 }
 
 .ocenaOvisnosti select{
