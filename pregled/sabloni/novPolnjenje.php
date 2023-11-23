@@ -215,10 +215,14 @@
     <span id="asaR" class="kvadrat" >.</span>
     <span style="padding-left:10px;">Mallampati:</span> 
     <span id="mallR" class="kvadrat" >.</span> 
+	
     <span style="padding-left:10px;">Opiati:</span> 
     <span id="opiaR" class="kvadrat" >.</span>
-    <span id="labDovisnostiR" style="padding-left:10px;">Druge odvisnosti:</span> 
-    <span id="dovisnostiR" class="kvadrat" >.</span>	
+	
+	    <span id="dovisnostiLabelR"style="padding-left:10px;">Druge odvisnosti:</span>
+	    <span id="dovisnostiR" class="kvadrat" >.</span>
+	
+
   </div>
   <b><span style="font-size:120%;">Alergija:</span> <span id="alergijaR" style= "font-size:120%;"></span></b>
  </div>

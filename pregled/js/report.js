@@ -153,20 +153,25 @@ document.getElementById("mallR").style="font-weight:"+mall.style.fontWeight;
 
 var opia = document.getElementById("opiati");
 //alert(opi);
-document.getElementById("opiaR").innerHTML= opia.value.toUpperCase();
+//console.log("opia: "+opia.value);
+opia.value=opia.value.toUpperCase();
+document.getElementById("opiaR").innerHTML= opia.value;
 document.getElementById("opiaR").style="font-weight:"+opia.style.fontWeight;
 
 
 var dovis = document.getElementById("dovisnosti");
 //alert(dovis);
-document.getElementById("dovisnostiR").innerHTML= dovis.value.toUpperCase();
+//console.log("dovis: "+dovis.value);
+dovis.value=dovis.value.toUpperCase();
+
+document.getElementById("dovisnostiR").innerHTML= dovis.value;
 if (dovis.value=="DA"|| dovis.value=="NE"){	
 document.getElementById("dovisnostiR").style="font-weight:"+dovis.style.fontWeight;	
-document.getElementById("labDovisnostiR").style.visibility = "visible";
+document.getElementById("dovisnostiLabelR").style.visibility = "visible";
 }
 else{	
-document.getElementById("labDovisnostiR").style.visibility = "hidden";
 document.getElementById("dovisnostiR").style.visibility = "hidden";
+document.getElementById("dovisnostiLabelR").style.visibility = "hidden";
        }//od else
 		   
 
