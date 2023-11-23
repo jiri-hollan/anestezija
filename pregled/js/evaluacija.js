@@ -25,26 +25,26 @@ if(vrednost == ""||vrednost == 0||vrednost=== null) {
  }
  }//id if limitilab(ime)
 else{
-//console.log("v else");
-//console.log(vrednost);
+console.log("v else");
+console.log(vrednost);
 vrednost=vrednost.toUpperCase();
 	switch (vrednost) {
 	case "NE":
-console.log=("NE");		
+console.log("NE");		
     pozorFunction(ime, 3);	
 
    break;	
   case "DA":
-   console.log=("DA");
+   console.log("DA");
      pozorFunction(ime, 1);	
 	  
    break;
    case "":
 //ne naredi nič
-console.log=("prazen niz");
+console.log("prazen niz");
    break;
   default:
-console.log=("nekaj je narobe");  
+console.log("nekaj je narobe");  
     pozorFunction(ime, 2);	
 }//od switch
 }//od else
