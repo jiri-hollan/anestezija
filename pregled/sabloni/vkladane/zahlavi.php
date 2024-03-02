@@ -8,6 +8,7 @@
 <link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
 <script src="js/vpis.js?<?php echo time(); ?>"></script>
 <script src="js/report.js?<?php echo time(); ?>"></script>
+<script src="js/prenos.js?<?php echo time(); ?>"></script>
 <script src="js/preklopCss.js?<?php echo time(); ?>"></script>
 <script src="js/odjava.js?<?php echo time(); ?>"></script>
 <script src="js/evaluacija.js?<?php echo time(); ?>"></script>
@@ -18,5 +19,6 @@
 <script src="js/sklepi.js?<?php echo time(); ?>"></script>
 <link rel="stylesheet" type="text/css" href="css/novPolnjenje.css?<?php echo time(); ?>">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css?<?php echo time(); ?>">
+<link rel="stylesheet" type="text/css" href="css/premedikacijaPrenos.css?<?php echo time(); ?>">
 </head>
 <body onload="vpisFunction()">
