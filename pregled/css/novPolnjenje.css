@@ -11,7 +11,11 @@ p {
 .levo {
 	  text-align: left; 
 }
-
+.desno {
+	  align: right;
+      background-color: yellow; 
+	  color: red;
+}
 
 input:required:invalid{
   background-color: yellow;

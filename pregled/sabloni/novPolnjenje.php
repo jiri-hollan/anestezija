@@ -238,7 +238,7 @@
 ...........................Četrti del PRENOS................................-->
 
 <div class="celaStran" id="cetrta">
-  
+<button class="desno" onclick="ogledFunction()">X</button> 
 <p class="levo" id="obravnavaPr"></p>
 <p class="levo" id="nalepkaPr">nalepka</p> 
 <p class="levo" id="diagnozaPr">op.diagnoza</p>
