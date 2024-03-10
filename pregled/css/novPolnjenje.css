@@ -15,6 +15,7 @@ p {
 	  align: right;
       background-color: yellow; 
 	  color: red;
+	  border-style: none; 
 }
 
 input:required:invalid{
