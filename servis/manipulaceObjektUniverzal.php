@@ -191,7 +191,7 @@ foreach (json_decode($this->dataPreg) as $key) {
     echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>status</th></tr>";
     break;
 	
-	case "sklepiTbl":
+	case "ocenaTbl":
     echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>ocena</th><th>status</th></tr>";
     break;
 	
