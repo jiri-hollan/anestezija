@@ -7,7 +7,7 @@ class Vertikal extends Administrace {
    public function __construct() {
 	       parent::__construct();
 		   
-  if (isset($_SESSION["status"]) && $_SESSION["status"] == 3)  {
+  if (isset($_SESSION["upstatus"]) && $_SESSION["upstatus"] == 3)  {
 $nazaj="../admin1/vertikalMenu.php";	  
 echo '
 
@@ -21,11 +21,11 @@ echo '
 <li><a href="pokaziStolpce.php?nazaj='.$nazaj.'">pokaži Stolpce</a></li>
 <li><a href="serverInformace.php?nazaj='.$nazaj.'">Informace o serveru</a></li>
 </ul>
-<h1>Menu navodila</h1>
+<h1>Menu premedikacija</h1>
 <ul id="linky1">
 <li><a href="../admin1/manipulaceOmejitve.php?nazaj='.$nazaj.'">Omejitve</a></li>
 <li><a href="../admin1/manipulaceUporabniki.php?nazaj='.$nazaj.'">uporabniki</a></li>
-<li><a href="kreateBaseNavodila.php?nazaj='.$nazaj.'">naredi bazo: navodila</a></li>
+<li><a href="kreateBasepremedikacija.php?nazaj='.$nazaj.'">naredi bazo: premedikacija</a></li>
 <li><a href="kreateTableVse.php?nazaj='.$nazaj.'">naredi tabele</a></li>
 </ul>
 ';
