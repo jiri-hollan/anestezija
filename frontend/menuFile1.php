@@ -1,6 +1,4 @@
 <?php
-//echo 'Menu anestiz';
-require_once('sabloni/vkladane/zahlavi.php');
 require_once('administrace.php');
 
 class MenuAnestiz  {
