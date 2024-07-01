@@ -17,7 +17,7 @@ require_once '../skupne/database.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
-  echo strtoupper($akce) .': ';
+ // echo strtoupper($akce) .': ';
   echo strtoupper($bolnisnica) .'<br>';
 //echo var_dump($pregledovalciStatus) .'<br>';
 switch ($akce) {
@@ -82,8 +82,8 @@ function vyberFunction($podminka){
   $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
-  echo "<br>";
-  echo count($vybrano);
+ // echo "<br>";
+  echo 'Število zapisov: '. count($vybrano);
 //$dolzina=count($vybrano);
 //echo $vybrano[1];
   echo "<br>";
@@ -126,7 +126,7 @@ function vlozFunction($data){
 echo "<br>";
 echo var_dump($vlozeno);
 echo "<br>";
-echo count($vlozeno);
+echo 'Vloženo: '.count($vlozeno);
 echo "<br>";
 }//od vlozFunction
 
@@ -139,7 +139,7 @@ function editFunction($podminka){
   $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
 //echo var_dump($vybrano);
-  echo "<br>";
+ // echo "<br>";
   echo "število izbranih zapisov= " . count($vybrano);
   $dolzina=count($vybrano);
 //echo $vybrano[1];
