@@ -1,4 +1,3 @@
-
 <?php
 require_once '../skupne/sabloni/zahlavi.php';
 ?>
@@ -31,6 +30,7 @@ switch ($akce) {
     vyberFunction($podminka);
     break;
 case "vloz":
+    $bolnisnica = test_input($_POST["bolnisnica"]);
     $ime = test_input($_POST["ime"]);
     $priimek = test_input($_POST["priimek"]);
     $pregledovalciStatus = test_input($_POST["pregledovalciStatus"]);  

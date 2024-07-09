@@ -10,8 +10,9 @@
   <form class="modal-content animate" autocomplete="off" action="<?php echo $_SERVER['PHP_SELF'] . '?r=singin'?>" method="post">
     <div class="container">
       <h1>Registracija</h1>
-      <label for="ime"><b>Ime in priimek</b></label><br>
+      <label for="ime"><b>Bolnisnica, ime in priimek</b></label><br>
 	  <span>
+      <input type="text" class="imePriimek" placeholder=" Bolnisnica" name="bolnisnica" required>	 	  
       <input type="text" class="imePriimek" placeholder=" Ime" name="ime" required>	  
       <input type="text" class="imePriimek" placeholder="Priimek" name="priimek" required><br>	  
 	  </span>

@@ -1,4 +1,3 @@
-
 <?php
 require_once '../skupne/sabloni/zahlavi.php';
 $nazaj="../admin1/vertikalMenu.php";
@@ -44,12 +43,13 @@ case "uredi":
     $id=test_input($_POST["id"]);
     //$email=test_input($_POST["email"]);
     //$uname=test_input($_POST["uname"]);	
+    $bolnisnica = test_input($_POST["bolnisnica"]);	
     $ime = test_input($_POST["ime"]);
 	$priimek = test_input($_POST["priimek"]);
 	$upstatus = test_input($_POST["upstatus"]);
 	$pristop = test_input($_POST["pristop"]);	
 	$podminka = array("id"=>$id);
-    $data= array("ime"=>$ime, "priimek"=>$priimek, "upstatus"=>$upstatus, "pristop"=>$pristop);	
+    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "upstatus"=>$upstatus, "pristop"=>$pristop);	
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
    break;
