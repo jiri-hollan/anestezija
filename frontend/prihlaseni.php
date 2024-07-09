@@ -325,7 +325,7 @@ class SpremembaU extends Prihlaseni  {
 	$uname=0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	//echo 'v server rekvest';
-	var_dump($_POST["sUname"]);
+	//var_dump($_POST["sUname"]);
 	//var_dump($_POST["id"]);
 	if (isset($_SESSION["uname"]) && !empty($_POST["sUname"])) {
 	$podminka['uname'] = $_SESSION["uname"];
@@ -345,7 +345,8 @@ $uporabnikiTbl = $this->conn->aktualizuj($tabulka,$data,$podminka);
 //aktualizuj($tabulka,$data,$podminka);
 //echo 'Število aktualiziranih zapisov: ' . $uporabnikiTbl
      if ($uporabnikiTbl == 1) {
-		echo 'Vaše uporabniško ime je spremenjeno'; 
+		echo 'Vaše novo uporabniško ime je:<bh>'.strtoupper($uname).'</b>';
+; 
 	 }
   }
 	
