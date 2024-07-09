@@ -157,7 +157,7 @@ function editFunction($podminka){
    echo "<form  method='post'>";
    for ($i = 0; $i < $dolzina; $i++) {
      foreach ($vybrano[$i] as $key => $value) {
-      if($key=="id"||$key=="ime"||$key=="priimek"){
+      if($key=="id"||$key=="bolnisnica"||$key=="ime"||$key=="priimek"){
 	   echo " $key: <input name=$key value=$value readonly\n></input>";	
 }	 
      if($key=="upstatus"||$key=="pristop"){	
