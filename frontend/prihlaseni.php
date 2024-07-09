@@ -325,11 +325,11 @@ class SpremembaU extends Prihlaseni  {
 	$uname=0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	//echo 'v server rekvest';
-	//var_dump($_POST["sUname"]);
+	var_dump($_POST["sUname"]);
 	//var_dump($_POST["id"]);
 	if (isset($_SESSION["uname"]) && !empty($_POST["sUname"])) {
 	$podminka['uname'] = $_SESSION["uname"];
-
+	$sUname = $_POST["sUname"];
 	$podminka['uname'] = $sUname;
 	
 	
