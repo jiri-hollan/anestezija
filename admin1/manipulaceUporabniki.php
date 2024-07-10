@@ -96,6 +96,8 @@ function vyberFunction($podminka){
 //echo $vybrano[1];
 echo "<br>";
 if(count($vybrano)>0){
+	  echo'<P><b>upstatus:</b> 0=izključen 1=pridruženi 2=član</P>';
+  echo'<P><b>pristop:</b>1=na seznamu 2=vlaganje v bazo 3=pogled v bazo</P>';
   echo "<table id='osebe' style='border: solid 1px black;'>";
   echo "<tr><th>Id</th><th>e-mail</><th>uporabnik</th><th>geslo</th><th>bolnisnica</th><th>ime</th><th>priimek</th><th>upstatus</th><th>pristop</th></tr>";
 
@@ -158,7 +160,7 @@ function editFunction($podminka){
    for ($i = 0; $i < $dolzina; $i++) {
      foreach ($vybrano[$i] as $key => $value) {
       if($key=="id"||$key=="bolnisnica"||$key=="ime"||$key=="priimek"){
-	   echo " $key: <input name=$key value=$value readonly\n></input>";	
+	   echo " $key: <input name=$key value=$value readonly style='background-color:ivory;'\n></input>";	
 }	 
      if($key=="upstatus"||$key=="pristop"){	
 	  echo " $key: <input name=$key value=$value \n></input>";
