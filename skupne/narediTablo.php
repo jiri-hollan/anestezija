@@ -35,11 +35,11 @@ $conn = null;
 public function narediSql($kodaSql) {
 try {    
     $sql = $kodaSql;
-	echo "<br>";
-	echo $sql . "<br>" ;
+	//echo "<br>";
+	//echo $sql . "<br>" ;
 // use exec() because no results are returned
     $this->conn->exec($sql);
-    echo "Stavek SQL izvrsen";
+   // echo "Stavek SQL izvrsen";
     }
 catch(PDOException $e)
     { 
