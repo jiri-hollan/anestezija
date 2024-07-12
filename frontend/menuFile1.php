@@ -1,6 +1,6 @@
 <?php
 require_once('administrace.php');
-
+include_once "../skupne/pregledovalciKomb.php";
 class MenuAnestiz  {
    public function __construct() {
    require_once('../skupne/menu-items.php');          
