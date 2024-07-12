@@ -1,4 +1,5 @@
 <?php
+//echo '<script>alert("V pregledovalciKomb");</script>';
 $kodaSql = "CREATE OR REPLACE VIEW pregledovalciKomb AS
 SELECT bolnisnica, ime, priimek FROM uporabnikiTbl WHERE pristop >=1
 UNION
