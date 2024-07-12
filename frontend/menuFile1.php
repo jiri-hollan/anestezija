@@ -12,6 +12,7 @@ echo '
 	   switch ($_SESSION["upstatus"]) {		   
 	case 0:
 	  echo $a0;
+	  echo "<p style='color: black;'>vaša registracija še ni overjena</>";
     break; 
 	case 1:
 	  echo $a0.$a1;
