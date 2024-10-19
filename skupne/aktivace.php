@@ -1,4 +1,3 @@
-
 <?php
 require_once'database.php';
 // aktivace
@@ -11,9 +10,25 @@ $podminka=["razlog"=>"gdpr"];
 $database= new Database;
 $gdpr=$database->vyber($tabulka,$sloupce,$podminka);
 //echo '<br>'.count($gdpr).'<br>';
+
 if(count($gdpr)==1){
-$omejitevGdpr=$gdpr[0];	
-$gdpr=	$omejitevGdpr['nivo'];
+$omejitevGdpr=$gdpr[0];		
+	switch($omejitevGdpr['nivo']){
+	case "0":
+	$gdpr=$_SESSION["uporabnikGdpr"]; 
+    break;
+	
+	case "1":
+	$gdpr=$omejitevGdpr; 
+    break;	
+	
+	case "2":
+	$gdpr=0; 
+    break;
+	
+    default:
+    echo "ni izvelo case";			
+	}
 echo'<script>';
 echo 'localStorage.setItem("gdpr",'.$gdpr.');';
 echo'</script>';

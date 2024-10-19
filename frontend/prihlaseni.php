@@ -8,6 +8,7 @@ Class Prihlaseni {
 	public $zaklad;
 	public $upstatus;
 	public $pristop;
+	public $gdpr;
 	
 	public function __construct() {
 	  $this->conn = new Database();
@@ -70,11 +71,12 @@ Class Prijava extends Prihlaseni {
 	//od function inicializuj		
 	}
 	
-	public function prihlaseniUspesne($upstatus, $pristop, $uname){
+	public function prihlaseniUspesne($upstatus, $pristop, $gdpr, $uname){
 	   $_SESSION['uporabnikPrihlasen'] = true;
 	   $_SESSION["casova_znamka"] = time();
 	   $_SESSION["upstatus"] = $upstatus;
 	   $_SESSION["pristop"] = $pristop;
+	   $_SESSION["uporabnikGdpr"] = $gdpr;
 	   $_SESSION["uname"] = $uname;
 	  //echo $upstatus;
 	echo '<script type="text/JavaScript"> 
@@ -89,17 +91,19 @@ Class Prijava extends Prihlaseni {
 	public function overUdaje() {
 		if (!empty($_POST['uname']) && !empty($_POST['geslo'])){
 			$geslo = md5($_POST['geslo']);
-			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('upstatus', 'pristop', 'uname'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
+			$uporabnikiTbl = $this->conn->vyber('uporabnikiTbl', array('upstatus', 'pristop', 'gdpr', 'uname'), array('uname'=>$_POST['uname'], 'geslo'=>$geslo));
 
 		if (count($uporabnikiTbl) == 1)	{
 			$upstatus=$uporabnikiTbl[0]['upstatus'];			
 			//echo $upstatus;
 			$pristop=$uporabnikiTbl[0]['pristop'];			
-			//echo $pristop;			
+			//echo $pristop;
+			$gdpr=$uporabnikiTbl[0]['gdpr'];			
+			//echo $gdpr;			
 			$uname=$uporabnikiTbl[0]['uname'];
 			echo $uname;
 		// echo $upstatus;
-			$this->prihlaseniUspesne($upstatus, $pristop,  $uname);
+			$this->prihlaseniUspesne($upstatus, $pristop, $gdpr, $uname);
 		} else {
 			//echo 'iz funkcije overUdaje';
 			return $this->prihlaseniSelhalo();
@@ -124,6 +128,7 @@ $registracija=true;
 $email=$geslo=$ime=$priimek=$uname=0;
 $upstatus = 0;
 $pristop = 0;
+$gdpr = 0;
 $nameTable = "uporabnikiTbl";
 
 	
@@ -175,6 +180,7 @@ if ($_POST["geslo"]!=$_POST["psw-repeat"]) {
   }
     $data['upstatus'] = $upstatus;
 	$data['pristop'] = $pristop;
+	$data['gdpr'] = $gdpr;	
   //echo '<br>upstatus: ' .$upstatus;
   //echo'<br>data: '. $data["upstatus"].'<br>';
 }
