@@ -19,7 +19,7 @@ $omejitevGdpr=$gdpr[0];
     break;
 	
 	case "1":
-	$gdpr=$omejitevGdpr; 
+	$gdpr=$omejitevGdpr['nivo']; 
     break;	
 	
 	case "2":
