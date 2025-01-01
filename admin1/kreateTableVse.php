@@ -29,6 +29,13 @@ echo '
       
    <label for="bolnik"><span class="imenaFilov">bolnik</span></label>
    <input type="radio" id="bolnik" name="name" value="bolnik"> 
+   
+   <label for="delo"><span class="imenaFilov">delo</span></label>
+   <input type="radio" id="delo" name="name" value="delo">  
+ 
+   <label for="opravilo"><span class="imenaFilov">opravilo</span></label>
+   <input type="radio" id="opravilo" name="name" value="opravilo"> 
+ 
    <input type="hidden" name="nazaj" value='. $nazaj.'>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
@@ -65,9 +72,10 @@ $definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	`geslo` varchar(255) CHARACTER SET utf8 COLLATE utf8_slovenian_ci NOT NULL,
 	`ime` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
 	`priimek` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+	`stevilkaZdrav` int(3),
     `upstatus` int(3) NOT NULL,
     `pristop` int(3) NOT NULL,	
-	UNIQUE (email, uname)";
+	UNIQUE (email, uname)";	
 $databaseGloboka->naredi('uporabnikiTbl', $definice);
 break;
 
@@ -168,6 +176,24 @@ premedikacija VARCHAR(255),
 sklep VARCHAR(255),
 bolnikStatus CHARACTER(15)";
 $databaseGloboka->naredi('bolnikTbl', $definice);
+break; 
+
+case "delo":
+$definice= "id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    vpis_date   TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	 stevilkaZdravnika  int(3),
+	 opravilo  VARCHAR(255),
+	 sifraOpravila int(3),
+	 datumOpravila date,
+	 casOpravila int(11)";
+$databaseGloboka->naredi('deloTbl', $definice);
+break;
+
+case "opravilo":
+$definice= " id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	sifraOpravila int(3),
+	opravilo VARCHAR(225)";
+$databaseGloboka->naredi('opravilaTbl', $definice);	
 break;
 
 /*
