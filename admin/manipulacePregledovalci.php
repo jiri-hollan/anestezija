@@ -161,7 +161,9 @@ function odstraniFunction($podminka){
 	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
 	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
 }//od odstraniFunction
-
-echo'<script src="js/manipulacePregledovalci.js?'.time().'"></script>';
+?>
+<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>">
+</script>
+<?php
 require_once '../skupne/sabloni/zapati.php';
 ?>
