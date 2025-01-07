@@ -18,18 +18,29 @@ $stevilkaZdravnika=($vybrano[0]["stevilkaZdravnika"]);
 $ime=($vybrano[0]["ime"]);	
 $priimek=($vybrano[0]["priimek"]);
 $bolnisnica=($vybrano[0]["bolnisnica"]);	
-$identifikace=' '.$stevilkaZdravnika.' '.$ime.' '.$priimek.' '.$bolnisnica;
+//----------------------------------
+if($stevilkaZdravnika>0){
+	$identifikace=' '.$stevilkaZdravnika.' '.$ime.' '.$priimek.' '.$bolnisnica;
 $GLOBALS['stevilkaZdravnika']=$stevilkaZdravnika;
 $GLOBALS['identifikace']=$identifikace;
 //echo $GLOBALS['identifikace'];
-}//od if(cout)
-	else{
-   echo "Za izbranega uporabnika ni zapisa v bazi";	
-}//od else
 echo'<script>
 identifikace="'.$GLOBALS['identifikace'].'";
 identifikaceFunction(identifikace);
 </script>';
+	}else{
+		   echo "V bazi ni vaše zdravniške številke";
+		   echo "<script>
+		   alert('V bazi ni vaše zdravniške številke');		   
+		  window.location.replace('../frontend/deloMenu.php');
+		  </script>";
+	}
+
+}//od if(cout)
+	else{
+   echo "Za izbranega uporabnika ni zapisa v bazi";	
+}//od else
+
 	}//od construct
 		}//od class vyber uporabnika
 ?>
