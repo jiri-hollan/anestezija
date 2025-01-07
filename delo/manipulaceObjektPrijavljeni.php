@@ -1,7 +1,6 @@
  <?php 
  session_start();
 $uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
- //require_once('../servis/sabloni/vkladane/zahlavi.php');
  require_once('../skupne/sabloni/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('../servis/sabloni/formBaze.php');
@@ -78,7 +77,7 @@ if (isset($_REQUEST["akce"])) {
 	 
 	  
 	   case "deloTbl":	   
-	  $this->dataPreg= '["vpis_date", "stevilkaZdravnika", "opravilo", "sifraOpravila", "datumOpravila",  "casOpravila"]';
+	  $this->dataPreg= '["stevilkaZdravnika", "opravilo", "sifraOpravila", "datumOpravila",  "casOpravila"]';
 	  break;
 	  
 	  default:
@@ -112,6 +111,7 @@ foreach (json_decode($this->dataPreg) as $key) {
     $value= new Test_input($_REQUEST[$key]); 
 	$value= $value->get_test();	
     $data =array_push_assoc($data, $key, $value);
+//var_dump($data);	
 }
 
     $this->podminka = array("id"=>$this->id);
@@ -142,6 +142,7 @@ foreach (json_decode($this->dataPreg) as $key) {
    }//od else
    $this->poradi=$poradi;
    $this->tabulka=$tabulka;
+   $this->stolpci= array('id', 'vpis_date', 'opravilo', 'datumOpravila', 'casOpravila');
 $vyber = new database();
 $vybrano=$vyber->vyber($this->tabulka, $this->stolpci, $this->podminka, $this->poradi );
 echo "<br>";
@@ -216,7 +217,11 @@ foreach (json_decode($this->dataPreg) as $key) {
 		
 	
 	case "deloTbl":
-    echo "<tr><th>Id</th><th>vpis_date</><th>stevilkaZdravnika</th><th>opravilo</th><th>sifraOpravila</th><th>datumOpravila</th><th>casOpravila</th></tr>";
+    /*Glava tabele vseh stolpcev  */
+	//echo "<tr><th>Id</th><th>vpis_date</><th>stevilkaZdravnika</th><th>opravilo</th><th>sifraOpravila</th><th>datumOpravila</th><th>casOpravila</th></tr>";
+	/* glava za izbrane stolpce */
+	//---------------------------------------------------------
+	echo "<tr><th>id</><th>vpisano dne</><th>opravilo</th><th>datumOpravila</th><th>casOpravila</th></tr>";
     break;
 	default:
 	echo "";
@@ -256,14 +261,34 @@ foreach (json_decode($this->dataPreg) as $key) {
 //echo "število izbranih zapisov= " . count($vybrano);
      $dolzina=count($vybrano);
      echo "<form  method='post'>";
-     for ($i = 0; $i < $dolzina; $i++) {
-       foreach ($vybrano[$i] as $key => $value) {
+
+	//------------------------------------------------------------------------
+
+$skrito=array("id"=>"", "vpis_date"=>"", "stevilkaZdravnika"=>"", "sifraOpravila"=>"");
+$result=array_diff_key($vybrano[0],$skrito);
+$vidno=array("vpis_date"=>"", "opravilo"=>"", "datumOpravila"=>"", "casOpravila"=>"");
+$neopazno=array_diff_key($vybrano[0],$vidno);
+//___________________________	
+	   foreach ($neopazno as $key => $value) {
+			   echo "  <input type='hidden' id=$key name=$key value='".$value."'></input>";
+      }//od foreach	
+	
+       foreach ($result as $key => $value) {
+		   
 // echo "$key: $value\n";
+/*--------tu bo koda za izbiro vidnih polj za popravilo vnosa opravila*/
+
+/*
+
+polja deloTbl
+"id"=>"", "vpis_date"=>"", "stevilkaZdravnika"=>"", "opravilo"=>"", "sifraOpravila"=>"", "datumOpravila"=>"", "casOpravila"=>"",
+
+-------*/
 	   echo " $key:<br> <input id=$key name=$key value='".$value."'></input><br>";
       }//od foreach	 
 	 echo "<input type='hidden' name='akce' value='uredi'></input><button class='submit' type='submit'>potrdi</button><button type='reset'>reset</button> ";
      echo "</form>";
-       }//od for	
+
 	 }//od construct	
 	}//od class edit
 //________________________________________________________________________________________________
