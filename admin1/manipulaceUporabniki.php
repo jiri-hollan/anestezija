@@ -183,6 +183,7 @@ function odstraniFunction($podminka){
 echo'
 <script src="js/manipulaceUporabniki.js?'.time().'">
 </script>
-<?php
+
 require_once '../skupne/sabloni/zapati.php';
 ';
+<?php
