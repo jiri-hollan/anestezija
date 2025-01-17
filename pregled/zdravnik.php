@@ -1,3 +1,6 @@
+<?php
+require_once('../skupne/administrace.php');
+?>
 <!DOCTYPE html>
 <html lang="sl-SI">
 <head>
