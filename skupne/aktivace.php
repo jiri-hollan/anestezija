@@ -1,4 +1,8 @@
 <?php
+$uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
+if($uname ==""){
+$gdpr=0;	
+}else{
 require_once'database.php';
 // aktivace
 $database=new Database;
@@ -9,6 +13,7 @@ $sloupce=["razlog", "nivo"];
 $podminka=["razlog"=>"gdpr"];
 $database= new Database;
 $gdpr=$database->vyber($tabulka,$sloupce,$podminka);
+
 //echo '<br>'.count($gdpr).'<br>';
 
 if(count($gdpr)==1){
@@ -28,15 +33,20 @@ $omejitevGdpr=$gdpr[0];
 	
     default:
     echo "ni izvelo case";			
-	}
+	}//od switch
 echo'<script>';
 echo 'localStorage.setItem("gdpr",'.$gdpr.');';
 echo'</script>';
+}//od if cout
+else{
+echo'aktivace linija 37';	
 }
-}else{
+}//od if database obstaja
+else{
 $gdpr=0;
 echo'<script>';
 echo 'localStorage.setItem("gdpr",'.$gdpr.');';
 echo'</script>';
+}
 }
 ?>
