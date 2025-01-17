@@ -3,7 +3,7 @@ $a0= '
       <li><a href="../navodila/navodilaKovid.php">Navodila</a> </li>
       <li><span onclick=sbFunction("spomin")>Pregled</span>  </li>
 	  <li><a href="../frontend/interevropa.php">INTEREVROPA</a> </li>
-      <li><a href="../oddelek/razpisMeseci.php?pogled=dez">Dežurstva</a> </li>'; 
+ <!-- <li><a href="../oddelek/razpisMeseci.php?pogled=dez">Dežurstva</a> </li>-->'; 
 $a1= '';
 $a2= '<li><a href="../servis/menuUpload.php">servis</a> </li>
 	  <li><a href="../servis/nastavitveMenu.php">nastavitve</a> </li>'; 
