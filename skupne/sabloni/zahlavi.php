@@ -10,7 +10,6 @@
 </head>
 <body>
 <div class="topnav">
-  <span id="poPotrebi"></span>
 <?php
 if (isset($_GET['nazaj'])){
 //$nazaj = $_GET['nazaj'];

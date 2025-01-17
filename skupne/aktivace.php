@@ -28,16 +28,12 @@ $omejitevGdpr=$gdpr[0];
 	
     default:
     echo "ni izvelo case";			
-	}//od switch
+	}
 echo'<script>';
 echo 'localStorage.setItem("gdpr",'.$gdpr.');';
 echo'</script>';
-}//od if cout
-else{
-echo'aktivace linija 37';	
 }
-}//od if database obstaja
-else{
+}else{
 $gdpr=0;
 echo'<script>';
 echo 'localStorage.setItem("gdpr",'.$gdpr.');';
