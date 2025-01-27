@@ -21,11 +21,11 @@ $bolnisnica=($vybrano[0]["bolnisnica"]);
 //----------------------------------
 if($stevilkaZdravnika>0){
 	$identifikace=' '.$stevilkaZdravnika.' '.$ime.' '.$priimek.' '.$bolnisnica;
-$GLOBALS['stevilkaZdravnika']=$stevilkaZdravnika;
-$GLOBALS['identifikace']=$identifikace;
-//echo $GLOBALS['identifikace'];
+$this->stevilkaZdravnika=$stevilkaZdravnika;
+$this->identifikace=$identifikace;
+//echo $this->identifikace;
 echo'<script>
-identifikace="'.$GLOBALS['identifikace'].'";
+identifikace="'.$this->identifikace.'";
 identifikaceFunction(identifikace);
 </script>';
 	}else{

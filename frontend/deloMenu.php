@@ -1,8 +1,12 @@
 <?php
-require_once('administrace.php');
+require_once('../skupne/administrace.php');
+require_once('sabloni/vkladane/zahlavi.php');
 class MenuDelo  {
    public function __construct() {
-   require_once('../delo/menuDelo-items.php');          
+   require_once('../delo/menuDelo-items.php'); 
+
+
+   
 echo '
 <nav id= "glavnaNav">
 <ul>';
@@ -36,17 +40,19 @@ echo '
       echo '</ul></nav>';
    }//od construct
 }//od class MenuDelo  
-$adminAnestiz = new MenuDelo(); 
+  new MenuDelo(); 
 $uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
-require_once('sabloni/vkladane/zapati.php'); 
-?>
+echo'
 <script>	
-if("<?= $uname ?>"==""){
+if("'.$uname.'"==""){
 	document.getElementById("uname").innerHTML = "niste prijavljeni ";	
 }else{
 
-	document.getElementById("uname").innerHTML = "prijavljen je: " + " " + "<?= $uname ?>";
+	document.getElementById("uname").innerHTML = "prijavljen je: " + " " + "'.$uname.'";
 	}
 	document.getElementById("dom").innerHTML = "domov";		
 </script>
+';
+require_once('sabloni/vkladane/zapati.php'); 
 
+?>

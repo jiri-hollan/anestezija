@@ -7,11 +7,12 @@ if(identifikace==""){
 	}
 } // od identifikaceFunction
 
-function izborFunction(akce,stevilkaZd) {
+function izborZdFunction(akce,stevilkaZd) {
 
   document.getElementById("akceId").value = akce;
 switch(akce) {
   case "vyber":
+  alert("delo.js linija 15");
     document.getElementById("demo").innerHTML = '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica">';// omogoči izbiro bolnišnice
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
     break; 
@@ -61,24 +62,24 @@ switch(akce) {
   default:
     // code block
  }//od switch
-} // od izborFunction
+
 
 //----------------------------------------------------------------------------------------
 function functionOver (e) {
 let x = e.target;
 if (x.nodeName == "TD") {
 let y = event.composedPath()[1];
-let row_value = y.cells[0].innerHTML;
+let id = y.cells[0].innerHTML;
  /* document.getElementById("demo1").innerHTML = "Triggered by a " + x.nodeName + " element";
   document.getElementById("demo2").innerHTML = "Triggered by a " + x.innerHTML + " element";  */
-  document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
+  document.getElementById("demo3").innerHTML = "id v bazi je= " + id ;  
  }//od if
  
- window.location.href = "manipulacePregledovalci.php?akce=" + x.innerHTML + "&id=" + row_value;
+ window.location.href = "manipulacePregledovalci.php?akce=" + x.innerHTML + "&id=" + id;
   
 }//od function(e)
 //-----------------------------------------------------------------------------
-
+} // od izborFunction
 function listaOpravilFunction(opraviloList) {
 //alert ("lista opravil function");
 console.log("opravila.js"+opraviloList);
@@ -98,7 +99,7 @@ document.getElementById("opravilaId").innerHTML = text;
 function zadnjiAlertFunction() {
 let x= document.getElementById("opraviloId").value;
 	//alert("X=:"+x);
-	document.getElementById("sifraId").value = "";	
+	//document.getElementById("sifraId").value = "";	
 }
 	  
 	 //----------------------------------------------------------------------------

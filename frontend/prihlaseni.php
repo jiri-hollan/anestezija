@@ -1,20 +1,22 @@
  <?php
 session_start();
 require_once('../skupne/database.php');
+require_once('../koren.php');
 global $r;
-	  require_once('sabloni/prihlasovaci-formular.php');
+require_once('sabloni/prihlasovaci-formular.php');
 Class Prihlaseni {
 	public $conn;
 	public $zaklad;
 	public $upstatus;
 	public $pristop;
 	public $gdpr;
-	
-	public function __construct() {
+	public $koren;	
+	public function __construct($koren) {
+	//echo"('KOREN: '.$koren)";	
 	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
-		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/frontend/'; 
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/'.$koren.'/frontend/'; 
 	  }else {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
@@ -27,8 +29,8 @@ Class Prihlaseni {
 //___________________________________- potomstvo_______________________________________________
 Class odjava extends Prihlaseni {
 		
-	public function __construct() {
-		    parent::__construct();
+	public function __construct($koren) {
+		    parent::__construct($koren);
 	
 
 	  //echo 'odhlašovani';
@@ -59,8 +61,8 @@ Class odjava extends Prihlaseni {
 Class Prijava extends Prihlaseni {
 	
 	
-	public function __construct() {
-		    parent::__construct();
+	public function __construct($koren) {
+		    parent::__construct($koren);
 	 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		  $chiba = $this->overUdaje();
 		  //echo var_dump($chiba);
@@ -120,8 +122,8 @@ Class Registrace extends Prihlaseni {
     public $data;
     public $nameTable;
    
-	public function __construct() {
-		    parent::__construct();
+	public function __construct($koren) {
+		    parent::__construct($koren);
 			
 			
 $registracija=true;
@@ -235,8 +237,8 @@ Class Profil extends Prihlaseni {
     public $data;
     public $nameTable;
    
-	public function __construct() {
-		    parent::__construct();
+	public function __construct($koren) {
+		    parent::__construct($koren);
 			
 			
 //$registracija=true;
@@ -273,8 +275,8 @@ class SpremembaG extends Prihlaseni  {
     public $data;
     public $podminka;
 
- public function __construct() {
-		    parent::__construct();
+ public function __construct($koren) {
+		    parent::__construct($koren);
 			
     $tabulka = 'uporabnikiTbl';
 	$geslo=0;
@@ -324,8 +326,8 @@ class SpremembaU extends Prihlaseni  {
     public $data;
     public $podminka;
 
- public function __construct() {
-		    parent::__construct();
+ public function __construct($koren) {
+		    parent::__construct($koren);
 			
     $tabulka = 'uporabnikiTbl';
 	$uname=0;
@@ -379,8 +381,8 @@ class SpremembaZdr extends Prihlaseni  {
     public $data;
     public $podminka;
 
- public function __construct() {
-		    parent::__construct();
+ public function __construct($koren) {
+		    parent::__construct($koren);
 			
     $tabulka = 'uporabnikiTbl';
 	$stevilkaZdravnika=0;
@@ -437,37 +439,37 @@ if (isset($_GET['r'])) {
 switch ($r) {
   case "login":
     
-      $prihlaseni = new Prijava;
+      $prihlaseni = new Prijava($koren);
     //echo "poskušate se logirati!"; 
    break;
    
  case "singin":
-  $prihlaseni = new Registrace;
+  $prihlaseni = new Registrace($koren);
     //echo "Poskušate se registrirati!";
    break;
    
 case "logout":
-  $prihlaseni = new Odjava;
+  $prihlaseni = new Odjava($koren);
     //echo "Poskušate se odjaviti!"; 
    break;  
    
 case "profil":
-  $prihlaseni = new Profil;
+  $prihlaseni = new Profil($koren);
     //echo "V profilu"; 
    break;  
    
 case "spremembaG":
-  $prihlaseni = new SpremembaG;
+  $prihlaseni = new SpremembaG($koren);
     //echo "V profilu"; 
    break;  
    
  case "spremembaU":
-  $prihlaseni = new SpremembaU;
+  $prihlaseni = new SpremembaU($koren);
     //echo "V profilu"; 
    break;    
    
  case "spremembaZdr":
-  $prihlaseni = new SpremembaZdr;
+  $prihlaseni = new SpremembaZdr($koren);
     //echo "V profilu"; 
    break;    
       

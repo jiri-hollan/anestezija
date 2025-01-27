@@ -4,11 +4,13 @@ require_once('../skupne/database.php');
 class Administrace {
 	public $conn;
 	public $zaklad;	
-	public function __construct() {
+	public $koren;
+	public function __construct($koren) {
+	//echo"('KOREN: '.$koren)";
 	  $this->conn = new Database();
-      $this->zaklad = new stdClass();
+      $this->zaklad = new stdClass();	  
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
-		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/anestiz/admin/'; 
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/'.$koren.'/admin/';	 
 	  }else {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/admin/';  
 	  }
@@ -34,3 +36,4 @@ class Administrace {
 	  }	  
 }//od construct	
 }//0d class administrace
+?>

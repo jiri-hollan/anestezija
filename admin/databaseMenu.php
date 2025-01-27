@@ -2,7 +2,6 @@
 require_once('../frontend/sabloni/vkladane/zahlavi.php');
 echo 'Menipulacija z bazo';
 require_once('administrace.php');
-
 class Manipulace extends Administrace {
    public function __construct() {
 	       parent::__construct();		   
@@ -35,10 +34,10 @@ echo '
 </div>
 ';
     } else {
-	   echo	' <h2>za ta del niste pooblaščeni</h2>';
-}
-}//od construct 
+	       echo	' <h2>za ta del niste pooblaščeni</h2>';
+           }
+  }//od construct 
 }//od class Manipulace  
- $adminManipulace = new Manipulace(); 
+ new Manipulace(); 
 require_once('sabloni/vkladane/zapati.php'); 
 ?>
