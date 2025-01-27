@@ -8,7 +8,7 @@ class Administrace {
 	public function __construct() {
 	 $this->conn = new Database();
      $this->zaklad = new stdClass();
-	 $koren='delo';	 
+	 $koren='anestiz';	 
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/'.$koren.'/frontend/';
 		 echo"('KOREN: '.$koren)";
