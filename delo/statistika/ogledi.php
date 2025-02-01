@@ -1,52 +1,4 @@
- <?php 
- session_start();
-$uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
- require_once('../skupne/sabloni/zahlavi.php');
-/* V tom failu so funkcije za spreminjanje tabele databaze*/
- require_once('sabloni/formDelo.php');//komentar: gumbi "izberi vlož"
- require_once ('../skupne/database.php');
- require_once ('identifikace.php');
- echo'<script src="js/delo.js?'.time().'"></script>';
- 	$podminka = array("uname"=>$uname);
-	$stevilkaUporabnika=new VyberUporabnika($podminka);
-	$stevilkaUporabnika=$stevilkaUporabnika->stevilkaZdravnika;
-	//var_dump ($stevilkaUporabnika);	
-//_____________________________________________________________
-if (isset($_REQUEST["akce"])) {
-	  $akce = new Test_input($_REQUEST["akce"]);
-	  $akce = $akce->get_test();
-
-  
-  //______________________________________________________
-   if (isset($_REQUEST["datumVpisa"])){
-	  $datumOpravila = new Test_input($_REQUEST['datumVpisa']); 
-      $datumOpravila = $datumOpravila->get_test();
-	  
-  }else {
-	 $datumOpravila = "";   
-  }
-  //------------------------------------------------------
- if (isset($tabulka)){
-	  $tabulka= $tabulka; 
-  }else if (isset($_REQUEST["tabulka"])){
-	  $tabulka= new Test_input($_REQUEST["tabulka"]);
-	  $tabulka = $tabulka->get_test();
-  }else {
-	  echo "<script>alert(ni tabulke v post);</script>";
-  }
-  //var_dump($akce);
-  echo strtoupper($akce) .': ';
-  echo '<b>dne: </b>'.($datumOpravila) .'<br>';
- //echo "tabulka je: ".$tabulka;
-  new $akce($stevilkaUporabnika, $datumOpravila, $tabulka);
-
-	  
-}//od if akce
-/*else {
-	 echo'akce ni določena'; 
-  }*/
-//_________________________________
- 
+<?php
  	class Test_input {
 	public $test;	
   function __construct($test) {
@@ -118,7 +70,7 @@ foreach (json_decode($this->dataPreg) as $key) {
 
     $this->podminka = array("id"=>$this->id);
 	    $this->data = $data;
-    	$aktualizuj = new database();
+    	$aktualizuj = new databaseS();
 		$aktualizovano=$aktualizuj->aktualizuj($this->tabulka,$this->data,$this->podminka);
 }
 }// od class uredi
@@ -145,12 +97,12 @@ foreach (json_decode($this->dataPreg) as $key) {
    $this->poradi=$poradi;
    $this->tabulka=$tabulka;
    $this->stolpci= array('id', 'vpis_date', 'sifraOpravila', 'opravilo', 'datumOpravila', 'casOpravila');
-$vyber = new database();
+$vyber = new databaseS();
 $vybrano=$vyber->vyber($this->tabulka, $this->stolpci, $this->podminka, $this->poradi );
 echo "<br>";
 if(count($vybrano)>0){	
 	
-foreach(new TableRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
+foreach(new TableR(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
         echo $v;
 
 }//od foreach
@@ -162,7 +114,7 @@ foreach(new TableRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
    }//od else
    $this->stolpec=array("casOpravila");   
    $this->tabulka=$tabulka;
-$sestej = new database();
+$sestej = new databaseS();
 $sesteto=$sestej->suma($this->tabulka, $this->stolpec, $this->podminka);
 $sestevek= $sesteto[0]["SUM(casOpravila)"];
 //echo "<br>".$sestevek;
@@ -199,7 +151,7 @@ foreach (json_decode($this->dataPreg) as $key) {
     $data =array_push_assoc($data, $key, $value);
 }
      $this->data = $data;
-     $vloz = new database();
+     $vloz = new databaseS();
      $vlozeno=$vloz->vloz($this->tabulka,$this->data);
     //echo $vlozeno[1];
      echo "<br>";
@@ -211,23 +163,20 @@ foreach (json_decode($this->dataPreg) as $key) {
 }// od class Vloz
 
 //-------------------------iterator-----------------------------------------------------
-	class TableRows extends RecursiveIteratorIterator {
+	class TableR extends RecursiveIteratorIterator {
     function __construct($it) {
 		//echo $_REQUEST["tabulka"];
 	echo "<table id='osebe' style='border: solid 1px black;'>";
-	switch ($_REQUEST["tabulka"]){
+
 		
 	
-	case "deloTbl":
+	//case "deloTbl":
     /*Glava tabele vseh stolpcev  
 	*echo *"<tr><th>Id</th><th>vpis_date</><th>stevilkaZdravnika</th><th>opravilo</th><th>sifraOpravila</th><th>d*atumOpravila</th><th>casOpravila</th></tr>";*/
 	
 	/* glava za izbrane stolpce ----------------------------------*/
 	echo "<tr><th>id</><th>vpisano dne</><th>šifra opravila</th><th>opravilo</th><th>datumOpravila</th><th>casOpravila</th></tr>";
-    break;
-	default:
-	echo "";
-	}
+
         parent::__construct($it, self::LEAVES_ONLY);
     }
     function current() { 
@@ -258,7 +207,7 @@ foreach (json_decode($this->dataPreg) as $key) {
 	 $this->tabulka = $tabulka->get_test();	 
 	 $podminka = array("id"=>$this->id);	
 	 $stolpci=["*"];
-	 $vyber = new database();
+	 $vyber = new databaseS();
 	 $vybrano=$vyber->vyber($this->tabulka, $stolpci, $podminka );
 //echo "število izbranih zapisov= " . count($vybrano);
      $dolzina=count($vybrano);
@@ -268,6 +217,7 @@ $skrito=array("id"=>"", "vpis_date"=>"", "stevilkaZdravnika"=>"", "sifraOpravila
 $result=array_diff_key($vybrano[0],$skrito);
 $vidno=array("vpis_date"=>"","opravilo"=>"", "datumOpravila"=>"", "casOpravila"=>"");
 $neopazno=array_diff_key($vybrano[0],$vidno);
+echo "<b>Številka Zdravnika".$vybrano[0]['stevilkaZdravnika']."</b><br><br>";
 //___________________________	
 	   foreach ($neopazno as $key => $value) {
 			   echo "  <input type='hidden' id=$key name=$key value='".$value."'></input>";
@@ -284,7 +234,7 @@ $neopazno=array_diff_key($vybrano[0],$vidno);
 	   echo " $key:<br> <input id=$key name=$key value='".$value."'></input><br>";
       }//od foreach	
 	  
-	 echo "<input type='hidden' name='akce' value='uredi'></input><button class='submit' type='submit'>potrdi</button><button type='reset'>reset</button> ";
+	 echo "<input type='hidden' name='akce' value='uredi'></input><button class='submit' type='submit'>potrdi1</button><button type='reset'>reset</button> ";
      echo "</form>";
 
 	 }//od construct	
@@ -303,7 +253,7 @@ $neopazno=array_diff_key($vybrano[0],$vidno);
 	 echo "<br>";
 	 $stolpci=["*"];	 
 	 $podminka = array("id"=>$this->id);
-	 $odstrani = new database();
+	 $odstrani = new databaseS();
     $najdeno=$odstrani->vyber($this->tabulka, $stolpci, $podminka ); 
 	print_r($najdeno);
 	$odstranjeno=$odstrani->odstrani($this->tabulka, $podminka );
@@ -315,7 +265,7 @@ $neopazno=array_diff_key($vybrano[0],$vidno);
 if (isset($_REQUEST["tabulka"])){  //komentar: se zažene, ko se odpre ta fajl
 switch($_REQUEST["tabulka"]){
 case "deloTbl":
-echo '<script src="js/ogledDelo.js?'.time().'"></script>'; //komentar: le vlkjuči ogledDelo.js" 
+echo '<script src="../js/ogledDelo.js?'.time().'"></script>'; //komentar: le vlkjuči ogledDelo.js" 
 break;
 }
 }//od if isset request
