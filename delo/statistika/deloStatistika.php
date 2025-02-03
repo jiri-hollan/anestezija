@@ -112,7 +112,7 @@ case 'semaforZdravnik':
        if ($this_stevilkaZdravnika >0) {
        //$podminka = array("stevilkaZdravnika="=>$this_stevilkaZdravnika);
 	   $podminka["stevilkaZdravnika="] = $this_stevilkaZdravnika;
-	   $podminka["datumOpravila="]=date("Y-m-d");
+	   //$podminka["datumOpravila="]=date("Y-m-d");
 //echo 'podminka'. $podminka ["datumOpravila="];  
        } else {
 	   $podminka = NULL;
@@ -150,7 +150,7 @@ case'semaforDatum':
 		 $podminka["sifraOpravila="] = $this_sifraOpravila;
 		  }else{$this_sifraOpravila =NULL;}
          echo'<input type="hidden" id="stevilkaZdravnikaIdId" name="stevilkaZdravnika" value="'.$this_stevilkaZdravnika.'" form="formaPogojiId">';
-         echo'<br>Številka zdravnika= '.$this_stevilkaZdravnika.'<br>'; 
+         echo'<br>ŠTEVILKA ZDRAVNIKA= '.$this_stevilkaZdravnika.'<br>'; 
 //var_dump($podminka); 
          new SestevekDela($podminka);
 	    }//od if POST 
