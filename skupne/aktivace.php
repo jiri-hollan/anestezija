@@ -1,8 +1,4 @@
 <?php
-$uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
-if($uname ==""){
-$gdpr=0;	
-}else{
 require_once'database.php';
 // aktivace
 $database=new Database;
@@ -13,14 +9,15 @@ $sloupce=["razlog", "nivo"];
 $podminka=["razlog"=>"gdpr"];
 $database= new Database;
 $gdpr=$database->vyber($tabulka,$sloupce,$podminka);
-
 //echo '<br>'.count($gdpr).'<br>';
 
 if(count($gdpr)==1){
 $omejitevGdpr=$gdpr[0];		
 	switch($omejitevGdpr['nivo']){
 	case "0":
+	if (isset($_SESSION["uporabnikGdpr"])) {
 	$gdpr=$_SESSION["uporabnikGdpr"]; 
+	}
     break;
 	
 	case "1":
@@ -47,6 +44,5 @@ $gdpr=0;
 echo'<script>';
 echo 'localStorage.setItem("gdpr",'.$gdpr.');';
 echo'</script>';
-}
 }
 ?>

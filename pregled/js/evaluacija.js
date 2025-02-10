@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
  function laborFunction(ime,vrednost)
 {
  //console.log(ime);	
@@ -7,42 +6,12 @@
 if(LIMITIlab[ime]!=undefined){
 //console.log(LIMITIlab[ime]);
  max = LIMITIlab[ime]["max"];
-=======
-
-var hb = {min:100, max:150};
-var ks = {min:3.6, max:6.1};
-var inr = {min:0.8, max:1.3};
-var aptc = {min:28, max:40};
-var trombociti = {min:150, max:410};
-var kreatinin = {min:72, max:127};
-var laktat = {min:0, max:1.8};
-var pbnp = {min:0, max:100};
-var pct = {min:0, max:0.05};
-var crp = {min:0, max:8};
-var na = {min:136, max:145};
-var k = {min:3.8, max:5};
-
-
- function laborFunction(ime,vrednost)
-{	
-  
- max = window[ime]["max"];
-  console.log(max);
-  min = window[ime]["min"];
- console.log(min);
-/* max = limitiJsonx[ime]["max"];
->>>>>>> Stashed changes
  max = parseFloat(max);
 //console.log(max);
   min = LIMITIlab[ime]["min"];
    min = parseFloat(min);
-<<<<<<< Updated upstream
 //console.log(min);
 
-=======
- console.log(min);
-*/
->>>>>>> Stashed changes
 if(vrednost == ""||vrednost == 0||vrednost=== null) { 
 	 pozorFunction(ime, 2);	
   }else if(vrednost != "" && vrednost>max) {

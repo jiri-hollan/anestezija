@@ -1,6 +1,7 @@
-	//alert("ogled DELO JS");
- tabulka="deloTbl";
-	//alert(tabulka);
+	//alert("ogled STATISTIKA JS");
+//tabulka="deloTbl";
+let tabulka;
+//alert(tabulka);
 //////////////////////////////////////////////////////////////////////////////7
 function izborOgledFunction(akce, tabulka) {
 //alert(tabulka);
@@ -20,7 +21,7 @@ document.getElementById("demo").innerHTML = '<input id="datumVpisaId" type="date
 //alert(text);
 //document.getElementById("datumVpisaId").value = text;
   document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
-  document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //komentar: submit v ogledObjektPrijavljeni.php
+  document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //komentar: submit v ogledTable.php
     break; 
 
   case "vloz":
@@ -53,7 +54,7 @@ document.getElementById("demo").innerHTML = '<input id="datumVpisaId" type="date
 //////////////////// konec izborFunction /////////////////////////////////////////
 
 function functionOver (e,tabulka="deloTbl") {
-//alert(ogledStatistika.js 'F.Over 56');	
+//alert('F.Over 56');	
 let x = e.target;
 if (x.nodeName == "TD") {
 let y = event.composedPath()[1];
@@ -61,7 +62,7 @@ id = y.cells[0].innerHTML;
 //alert(id);
   document.getElementById("demo3").innerHTML = "id v bazi je= " + id ;  
  }//od if 
-//alert( "../ogledObjektPrijavljeni.php?akce=" + x.innerHTML + "&id=" + id + "&tabulka="+ tabulka );
-  window.location.href = "../ogledObjektPrijavljeni.php?akce=" + x.innerHTML + "&id=" + id + "&tabulka="+ tabulka; 
+// alert( "ogledTable.php?akce=" + x.innerHTML + "&id=" + id + "&tabulka="+ tabulka );
+  window.location.href = "ogledTable.php?akce=" + x.innerHTML + "&id=" + id + "&tabulka="+ tabulka; 
 }//od function(e)
 } // od izborFunction

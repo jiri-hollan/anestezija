@@ -1,13 +1,13 @@
-var tabulka="limitiTbl";
-function izborFunction(akce) {
-  document.getElementById("akceId").value = akce;
+let tabulka;
+function izborFunction(akce, tabulka) {
+document.getElementById("akceId").value = akce;
 switch(akce) {
   case "vyber":
 // omogoči izbiro bolnišnice 	
   document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
-  var bolList  =["Izola","Jesenice",];
-  var text = "";
-  var i;
+  const bolList  =["Izola","Jesenice",];
+  let text = "";
+  let i;
   for (i = 0; i < bolList.length; i++) {
    text += "<option value='" +  bolList[i] + "'>"  +"<br>";
 }//od for
@@ -37,7 +37,7 @@ switch(akce) {
   case "odstrani": 
   if ( confirm("Odstranim en zapis?") == true) {
     if(document.getElementById("osebe")!=null){
-    document.getElementById("osebe").addEventListener("click", functionOver);
+   return document.getElementById("osebe").addEventListener("click", functionOver);
       }
 } else {
   text = "You canceled!";
@@ -46,14 +46,19 @@ switch(akce) {
   default:
     // code block
  }//od switch
-} // od izborFunction
+
 //----------------------------------------------------------------------------------------
+
 function functionOver (e) {
-var x = e.target;
+ x = e.target;
 if (x.nodeName == "TD") {
-var y = event.composedPath()[1];
+ y = event.composedPath()[1];
 row_value = y.cells[0].innerHTML;
-  document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
+//alert("x= "+x.innerHTML+" row value= "+row_value);
+  document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ; 
+//return;
+//alert(tabulka);  
+  window.location.href = "manipulaceObjektUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka=" + tabulka;  
  }//od if 
- window.location.href = "manipulaceObjektUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value+ "&tabulka="+ tabulka;  
 }//od function(e)
+} // od izborFunction
