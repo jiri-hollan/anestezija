@@ -20,8 +20,9 @@ if (isset($_REQUEST["akce"])) {
    if (isset($_REQUEST["datumVpisa"])){
 	  $datumOpravila = new Test_input($_REQUEST['datumVpisa']); 
       $datumOpravila = $datumOpravila->get_test();
-	  
+echo"<script>alert('linija 23');</script>"; 
   }else {
+echo"<script>alert('linija 25');</script>";  
 	 $datumOpravila = "";   
   }
   //------------------------------------------------------
@@ -79,6 +80,7 @@ if (isset($_REQUEST["akce"])) {
 	  break;
 	  
 	  case "ocenaTbl":
+echo"<script>alert('linija 83');</script>"; 
 	  $this->dataPreg= '["bolnisnica", "ime", "ocena", "ocenaStatus"]';
 	  break;
 	  
@@ -209,6 +211,7 @@ foreach (json_decode($this->dataPreg) as $key) {
     break;
 	
 	case "ocenaTbl":
+echo"<script>alert('linija 214');</script>"; 
     echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>ocena</th><th>ocenaStatus</th></tr>";
     break;
 	
@@ -296,6 +299,7 @@ echo '<script src="js/manipulacePregledovalci.js?'.time().'"></script>';
 break;
 
 case "ocenaTbl":
+echo"<script>alert('linija 302');</script>"; 
 echo '<script src="js/manipulaceOcena.js?'.time().'"></script>'; 
 break;
 
