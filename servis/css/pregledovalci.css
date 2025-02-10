@@ -58,3 +58,17 @@ table {
  tr:hover {
   background-color: yellow;
 }
+
+td {
+  text-align: center;
+}
+
+th, td {
+  padding: 5px;
+}
+
+.glavaTable {
+  position: sticky;
+  top: 6%;	
+  overflow: hidden;	
+}

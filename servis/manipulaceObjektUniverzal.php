@@ -16,6 +16,15 @@ if (isset($_REQUEST["akce"])) {
   }else {
 	 $bolnisnica = "";   
   }
+  //______________________________________________________
+   if (isset($_REQUEST["datumVpisa"])){
+	  $datumOpravila = new Test_input($_REQUEST['datumVpisa']); 
+      $datumOpravila = $datumOpravila->get_test();
+	  
+  }else {
+	 $datumOpravila = "";   
+  }
+  //------------------------------------------------------
  if (isset($tabulka)){
 	  $tabulka= $tabulka; 
   }else if (isset($_REQUEST["tabulka"])){
@@ -52,13 +61,15 @@ if (isset($_REQUEST["akce"])) {
  ?>
 <?php 
  class DostopPost{
+  public $datumOpravila;		 
   public $bolnisnica;		
   public $tabulka;
-  function __construct($bolnisnica="", $tabulka="") {
+  function __construct($bolnisnica="", $tabulka="",$datumOpravila="") {
 	    $bolnisnica=strtolower($bolnisnica); 
         $bolnisnica=ucfirst($bolnisnica); 
 	    $this->bolnisnica = $bolnisnica;
         $this->tabulka = $tabulka; 
+		$this->datumOpravila = $datumOpravila;
 		 switch($this->tabulka){
 	  case "pregledovalciTbl":
 	  $this->dataPreg= '["bolnisnica", "ime", "priimek", "pregledovalciStatus"]';
@@ -74,6 +85,11 @@ if (isset($_REQUEST["akce"])) {
 	  case "limitiTbl":
 	  $this->dataPreg= '["bolnisnica", "skupina", "ime", "min", "max"]';
 	  break;
+	  
+	   case "deloTbl":
+	  $this->dataPreg= '["vpis_date", "stevilkaZdravnika", "opravilo", "sifraOpravila", "datumOpravila",  "casOpravila"]';
+	  break;
+	  
 	  default:
 	  echo "tabulka ni določena";
   }
@@ -82,6 +98,7 @@ if (isset($_REQUEST["akce"])) {
 }//od class dostopPost
 //____________________________________________________________________________________________
 	class Uredi extends DostopPost{
+  public $datumOpravila;	
   public $id;
   public $ime;
   public $priimek;
@@ -272,19 +289,24 @@ if (isset($_REQUEST["tabulka"])){
 
 switch($_REQUEST["tabulka"]){
 case "sklepiTbl":
-echo '<script src="js/manipulaceSklepi.js?<?php echo time(); ?>"></script>'; 
+echo '<script src="js/manipulaceSklepi.js?'.time().'"></script>'; 
 break;
 case "pregledovalciTbl":
-echo '<script src="js/manipulacePregledovalci.js?<?php echo time(); ?>"></script>'; 
+echo '<script src="js/manipulacePregledovalci.js?'.time().'"></script>'; 
 break;
 
 case "ocenaTbl":
-echo '<script src="js/manipulaceOcena.js?<?php echo time(); ?>"></script>'; 
+echo '<script src="js/manipulaceOcena.js?'.time().'"></script>'; 
 break;
 
 case "limitiTbl":
-echo '<script src="js/manipulaceLimiti.js?<?php echo time(); ?>"></script>'; 
+echo '<script src="js/manipulaceLimiti.js?'.time().'"></script>'; 
 break;
+
+case "deloTbl":
+echo '<script src="js/manipulaceDelo.js?'.time().'"></script>'; 
+break;
+
 }
 }
 ?>

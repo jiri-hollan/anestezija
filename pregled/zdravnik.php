@@ -1,6 +1,5 @@
 <?php
-require_once('../skupne/administrace.php');
-?>
+echo'
 <!DOCTYPE html>
 <html lang="sl-SI">
 <head>
@@ -8,19 +7,13 @@ require_once('../skupne/administrace.php');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anestiz-set</title> 
-<link rel="shortcut icon" href="../favicon.ico?<?php echo time(); ?>">
-<script src="js/prijava.js?<?php echo time(); ?>"></script> 
-<script src="js/odjava.js?<?php echo time(); ?>"></script>
-<link rel="stylesheet" type="text/css" href="css/zdravnik.css?<?php echo time(); ?>">
+<link rel="shortcut icon" href="../favicon.ico?'.time().'">
+<script src="js/prijava.js?'.time().'"></script> 
+<script src="js/odjava.js?'.time().'"></script>
+<link rel="stylesheet" type="text/css" href="css/zdravnik.css?'.time().'">
 </head>
-<body>
-<div class="topnav">
-  <a id="dom" class="active" href="../frontend/menuFile1.php">Domov</a>
-  <a id="prij" href="../frontend/prihlaseni.php?r=logout&stav=odhlasit">Prijava</a>
-  <!--<a href="../frontend/prihlaseni.php?r=profil">Moj profil</a>-->
-  <span id="uname">odjavljen</span>
-
-</div>
+<body>';
+?>
 <!--_____________________________________________________________________________________________________________________
 ZA DOLOČITEV BOLNIŠNICE JE POTREBNO VPISATI PARAMETR FUNKCIJE sbFunction ZA IZOLO "i" ZA JESENICE "j"
 oziroma to določi izbira NAV bara, če je ta aktivirana
@@ -41,15 +34,14 @@ ________________________________________________________________________________
   <datalist id="zdravniki">  
     <option value='ime zdravnika'>    
   </datalist>
-<p> <button onclick="naprejFunction()">Naprej</button><button id="reset" onclick="odjavaFunction()">RESET</button>
+<p> <button onclick="naprejFunction()">Naprej</button>
 </div>
 <div class="navbar" id="navBolnisnice" style='display:z-index:1;'>
 <?php
 require_once('../skupne/home.php');
 require_once('zapisVsi.php');
 require_once('bolnisnice.php');
-require_once('sabloni/prijavljenJe.php');
-//echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
+echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 ?>
  <script>
    var seznamBolnisnicx = JSON.parse(seznamBolnisnicJson);
@@ -62,7 +54,7 @@ require_once('sabloni/prijavljenJe.php');
   listaZdravnikovFunction(zdravListX);
 //alert(localStorage.getItem("bazeBolnisnice"));
   </script>
-
+     <span class="" id="odjava" onclick="odjavaFunction()">RESET</span>
  </div>	 
 </body>
 </html>

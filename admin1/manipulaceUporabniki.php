@@ -14,7 +14,6 @@ $nazaj="../admin1/vertikalMenu.php";
  <br>
 <p id="demo3"></p>
 <?php
- 
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 require_once '../skupne/database.php';
 
@@ -47,9 +46,11 @@ case "uredi":
     $ime = test_input($_POST["ime"]);
 	$priimek = test_input($_POST["priimek"]);
 	$upstatus = test_input($_POST["upstatus"]);
-	$pristop = test_input($_POST["pristop"]);	
+	$pristop = test_input($_POST["pristop"]);
+	$gdpr = test_input($_POST["gdpr"]);
+	$stevilkaZdravnika = test_input($_POST["stevilkaZdravnika"]);	
 	$podminka = array("id"=>$id);
-    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "upstatus"=>$upstatus, "pristop"=>$pristop);	
+    $data= array("bolnisnica"=>$bolnisnica, "ime"=>$ime, "priimek"=>$priimek, "stevilkaZdravnika"=>$stevilkaZdravnika , "pristop"=>$pristop, "gdpr"=>$gdpr, "upstatus"=>$upstatus);	
 	$aktualizuj = new database($tabulka,$data,$podminka);
 	$aktualizovano=$aktualizuj->aktualizuj($tabulka,$data,$podminka);
    break;
@@ -85,7 +86,7 @@ case "odstrani":
 
 function vyberFunction($podminka){
    $tabulka="uporabnikiTbl";
-   $stolpci=["*"];
+   $stolpci=["id", "email", "uname", "geslo", "bolnisnica", "ime", "priimek", "stevilkaZdravnika", "upstatus", "pristop", "gdpr"];
    $vyber = new database();
    $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
@@ -96,10 +97,11 @@ function vyberFunction($podminka){
 //echo $vybrano[1];
 echo "<br>";
 if(count($vybrano)>0){
-	  echo'<P><b>upstatus:</b> 0=izključen 1=pridruženi 2=član</P>';
+  echo'<P><b>upstatus:</b> 0=izključen 1=pridruženi 2=član</P>';
   echo'<P><b>pristop:</b>1=na seznamu 2=vlaganje v bazo 3=pogled v bazo</P>';
+  echo'<P><b>GDPR:</b>0=prevzame nastavitev programa(0 ali 1) 1=baza vedno dostopna 2=baza nedostopna</P>';
   echo "<table id='osebe' style='border: solid 1px black;'>";
-  echo "<tr><th>Id</th><th>e-mail</><th>uporabnik</th><th>geslo</th><th>bolnisnica</th><th>ime</th><th>priimek</th><th>upstatus</th><th>pristop</th></tr>";
+  echo "<tr class='glavaTable'><th>Id</th><th>e-mail</><th>uporabnik</th><th>geslo</th><th>bolnisnica</th><th>ime</th><th>priimek</th><th>stevilkaZdravnika</th><th>pristop</th><th>GDPR</th><th>upstatus</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
@@ -115,7 +117,7 @@ class TableRows extends RecursiveIteratorIterator {
 		$a = 'onclick="' . "izborFunction('uredi')" . '"';
 		$b = 'onclick="' . "izborFunction('odstrani')" . '"';
         echo "<td onclick=" . '"izborFunction('. "'uredi'".')"'.'"' . ">uredi</td>
-		<!--<td onclick=" . '"izborFunction('. "'odstrani'".')"'.'"' . ">odstrani</td>-->		
+		<td onclick=" . '"izborFunction('. "'odstrani'".')"'.'"' . ">odstrani</td>		
 		</tr>" . "\n";
 }//od endChildren
 }// od class TableRows
@@ -160,9 +162,16 @@ function editFunction($podminka){
    for ($i = 0; $i < $dolzina; $i++) {
      foreach ($vybrano[$i] as $key => $value) {
       if($key=="id"||$key=="bolnisnica"||$key=="ime"||$key=="priimek"){
-	   echo " $key: <input name=$key value=$value readonly style='background-color:ivory;'\n></input>";	
+		  if($value==NULL){
+			  $value=" ";
+			  //var_dump($value);
+			  	   echo " $key: <input name=$key  style='background-color:ivory;'\n></input>";	
+			  }else{
+					   echo " $key: <input name=$key value=$value  style='background-color:ivory;'\n></input>";	  
+			  }
+
 }	 
-     if($key=="upstatus"||$key=="pristop"){	
+     if($key=="upstatus"||$key=="pristop"||$key=="gdpr"||$key=="stevilkaZdravnika"){	
 	  echo " $key: <input name=$key value=$value \n></input>";
 }	
 }//od foreach
@@ -178,9 +187,7 @@ function odstraniFunction($podminka){
 	$odstranjeno=$odstrani->odstrani($tabulka, $podminka );
 	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
 }//od odstraniFunction
-?>
-<script src="js/manipulaceUporabniki.js?<?php echo time(); ?>">
-</script>
-<?php
+echo'
+<script src="js/manipulaceUporabniki.js?'.time().'"></script>';
 require_once '../skupne/sabloni/zapati.php';
 ?>
