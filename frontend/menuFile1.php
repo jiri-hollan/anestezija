@@ -1,5 +1,6 @@
 <?php
-require_once('administrace.php');
+require_once('../skupne/administrace.php');
+require_once('sabloni/vkladane/zahlavi.php');
 include_once "../skupne/pregledovalciKomb.php";
 class MenuAnestiz  {
    public function __construct() {
@@ -37,7 +38,7 @@ echo '
       echo '</ul></nav>';
    }//od construct
 }//od class MenuAnestiz  
-$adminAnestiz = new MenuAnestiz(); 
+  new MenuAnestiz(); 
 $uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
 require_once('sabloni/vkladane/zapati.php'); 
 ?>

@@ -1,0 +1,45 @@
+.kratke{
+  width: 80px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+#casId::-webkit-outer-spin-button,
+#casId::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#casId[type=number] {
+  -moz-appearance: textfield;
+}
+div.glavni {
+  position: relative;
+  width: 460px;
+    padding: 20px;
+ /* height: 100px;*/
+ /* border: 3px solid #73AD21;*/
+} 
+
+div.notranji {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  padding: 20px;
+  width: 300px;
+  /*height: 100px;*/
+  /*border: 3px solid #73AD21;*/
+}
+
+#opravilaId{
+  width: 200px;	
+}
+div.statistikaNotranji {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  padding: 20px;
+  width: 300px;
+  /*height: 100px;*/
+  /*border: 3px solid #73AD21;*/
+}
