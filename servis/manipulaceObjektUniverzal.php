@@ -79,14 +79,6 @@ echo"<script>alert('linija 25');</script>";
 	  $this->dataPreg= '["bolnisnica", "sklep", "sklepiStatus"]';
 	  break;
 	  
-	  case "ocenaTbl":
-echo"<script>alert('linija 83');</script>"; 
-	  $this->dataPreg= '["bolnisnica", "ime", "ocena", "ocenaStatus"]';
-	  break;
-	  
-	  case "limitiTbl":
-	  $this->dataPreg= '["bolnisnica", "skupina", "ime", "min", "max"]';
-	  break;
 	  
 	   case "deloTbl":
 	  $this->dataPreg= '["vpis_date", "stevilkaZdravnika", "opravilo", "sifraOpravila", "datumOpravila",  "casOpravila"]';
@@ -210,12 +202,6 @@ foreach (json_decode($this->dataPreg) as $key) {
     echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>sklepiStatus</th></tr>";
     break;
 	
-	case "ocenaTbl":
-echo"<script>alert('linija 214');</script>"; 
-    echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>ocena</th><th>ocenaStatus</th></tr>";
-    break;
-	
-	
 	case "limitiTbl":
     echo "<tr><th>Id</th><th>bolnišnica</><th>skupina</th><th>ime</th><th>min</th><th>max</th></tr>";
     break;
@@ -296,11 +282,6 @@ echo '<script src="js/manipulaceSklepi.js?'.time().'"></script>';
 break;
 case "pregledovalciTbl":
 echo '<script src="js/manipulacePregledovalci.js?'.time().'"></script>'; 
-break;
-
-case "ocenaTbl":
-echo"<script>alert('linija 302');</script>"; 
-echo '<script src="js/manipulaceOcena.js?'.time().'"></script>'; 
 break;
 
 case "limitiTbl":
