@@ -1,7 +1,7 @@
-
 <?php
 require_once '../skupne/database.php';
 require_once('../skupne/aktivace.php');
+echo"<script>alert('GDPR='.$gdpr);</script>";
 if($gdpr==1){
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze'])&&isset($_POST['ustanova'])){
@@ -207,7 +207,7 @@ Class PreberiVpis extends Apregled {
    $prebrano = $this->conn->vyber($this->nameTable, $this->stolpci, $this->podminka);
            //echo '<br>';
           //var_dump($prebrano);		  
-			echo 'Število najdenih zapisov vnos: '.count($prebrano);			
+			echo 'Število najdenih zapisov: '.count($prebrano);			
 Return	$prebrano;		
 } 
   

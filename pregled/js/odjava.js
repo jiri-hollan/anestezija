@@ -31,6 +31,7 @@ function novBolnikFunction(izbris) {
 function stariFunction() {
 if(localStorage.getItem("gdpr")==1){	
 //alert ('v stariFunction fajl odjava'+localStorage.getItem("aktivnaBolnisnica"));
+//alert('GDPR= '+localStorage.getItem("gdpr"));
   let x=localStorage.getItem("aktivnaBolnisnica");
   let y=localStorage.getItem("bazeBolnisnice");
   let z= y.includes(x);
@@ -44,18 +45,18 @@ if(localStorage.getItem("gdpr")==1){
 // alert ('pred vstavljanjem v bazo');
         document.getElementById("ustanova").value= localStorage.getItem("aktivnaBolnisnica");
         document.getElementById("frm").submit();
-//alert ('shranjeno v bazo');
 //alert ('po vstavljanju v bazo');
   } else {
-location.reload();
-  }
+         location.reload();
+         }
 // alert ('nov bolnik');
 	}//od if
 	else {
-    alert ( localStorage.getItem("aktivnaBolnisnica") + ' ni možno schraniti v podatkovno bazo');	
-	location.reload();	
-	}
+         alert ( localStorage.getItem("aktivnaBolnisnica") + ' ni možno schraniti v podatkovno bazo');	
+	     location.reload();	
+	     }
 }else{
+	alert('GDPR ne shranjuje= ?'+localStorage.getItem("gdpr"));
 location.reload();	
 }
 }//--od stariFunction

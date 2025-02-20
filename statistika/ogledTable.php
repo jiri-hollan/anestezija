@@ -1,13 +1,14 @@
 <?php 
  @session_start();
 $uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
+$nazaj="statistikaMenu.php";
  require_once('sabloni/zahlavi.php');
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formDelo.php');//komentar: gumbi "izberi vlož"
  require_once ('databaseS.php');
  require_once ('identifikace.php');
  require_once ('ogledi.php');
- echo'<script src="../js/delo.js?'.time().'"></script>';
+ echo'<script src="../delo/js/delo.js?'.time().'"></script>';
  	$podminka = array("uname"=>$uname);
 	$stevilkaUporabnika=new VyberUporabnika($podminka);
 	$stevilkaUporabnika=$stevilkaUporabnika->stevilkaZdravnika;

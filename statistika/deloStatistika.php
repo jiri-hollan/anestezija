@@ -1,7 +1,7 @@
 <?php
 require_once 'administrace.php';
 require_once 'databaseS.php';
-//require_once '../../skupne/database.php';
+//require_once '../skupne/database.php';
 $nazaj="statistikaMenu.php";
 require_once('sabloni/zahlavi.php');
 //require_once 'sabloni/forma.php';
@@ -11,6 +11,9 @@ require_once ('ogledStatistika.php');
 echo'<script src="js/statistika.js?'.time().'"></script>';
 echo'<script src="js/poDatumu.js?'.time().'"></script>';
 echo'<script src="js/ogledStatistika.js?'.time().'"></script>';
+if(isset($_REQUEST['semafor'])){
+new Podminka();
+}else{echo"Nekaj je narobe, obvestite admina!";}
 /**
 *V prvem bloku pobere iz uporabnikiTbl vse zapise v katerih je vnesena številka zdravnika
 *in prikaže ime, priimek, številka zdravnika, upstatus in gdpr.
@@ -173,14 +176,14 @@ new Vyber($this_stevilkaZdravnika,$this_datumOpravila,'deloTbl');
 break;
 
 default:
-echo'linija167';	 
+echo'linija 179';	 
  	 }//od switch semafor	 
  }//od construct  
 }//od class Podminka
 //CCCCCCCCCCCCCCCCCCCC KONEC CLASS PODMINKA CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-new Podminka();
+
 echo'<script src="js/manipulaceZdravniki.js?'.time().'"></script>';
 require_once 'sabloni/prijavljenJe.php';
-require_once '../../skupne/sabloni/zapati.php';
+require_once '../skupne/sabloni/zapati.php';
 ?>
