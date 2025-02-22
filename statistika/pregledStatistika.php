@@ -3,15 +3,49 @@ require_once 'administrace.php';
 require_once 'databaseS.php';
 $nazaj="statistikaMenu.php";
 require_once('sabloni/zahlavi.php');
-require_once('sabloni/formaPogoji.php');
+require_once('sabloni/forma.php');
 require_once('opraviloVsiS.php');
 require_once ('ogledStatistika.php');
-//echo'<script src="js/statistika.js?'.time().'"></script>';
-//echo'<script src="js/poDatumu.js?'.time().'"></script>';
-//echo'<script src="js/ogledStatistika.js?'.time().'"></script>';
+echo'<script src="js/bolnikPogoji.js?'.time().'"></script>';
 if(isset($_REQUEST['semafor'])){
-new countPregled();
-}else{echo"Nekaj je narobe, obvestite admina!";}
+/***
+za enkrat semafor nerabi parameter, ker ni več opcij
+vseeno sem dal v switch
+**/
+ if(isset($_GET['semafor'])){
+  switch ($_GET['semafor']){
+    case "d":
+	$podminka=NULL;
+     new countPregled($podminka);
+    break;
+    default:
+     echo"semafor GET ni pravi";
+  }
+ }
+ 
+ if(isset($_POST['semafor'])){
+  switch ($_POST['semafor']){
+	case "d":
+         $podminka = [];
+   	     $danes='"'.date("Y-m-d").'"';
+		 if(isset($_POST['zacDatum'])){
+		 $this_zacDatum = $_POST['zacDatum'];
+		 $podminka["datPregleda>="] = $this_zacDatum;
+		 }else{$this_zacDatum =NULL;}
+		 if(isset($_POST['koncDatum'])){
+		 $this_koncDatum = $_POST['koncDatum'];
+		 $podminka["datPregleda<="] = $this_koncDatum;
+		  }else{$this_koncDatum =NULL;}
+//var_dump($podminka); 
+       //  new SestevekDela($podminka);	
+      new countPregled($podminka);
+    break;
+    default:
+	echo $_POST['semafor'];
+     echo"semafor POST ni pravi";	  
+  }
+ }
+}else{echo"ni REQUEST";}
 /************************************************************
 *Tu pridejo predlogi SQL za pregled polj v tabli bolnikTbl
 *naj bi vsbovali datum od-do ali določeno leto mesec ...
@@ -33,12 +67,13 @@ ORDER BY steviloZapisov DESC;
 //CCCCCCCCCCCCCCC CLASS countPregled  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 class countPregled {
 public $tabulka;
-function __construct() {
+function __construct($podminka) {
 $tabulka = 'bolnikTbl';
 $stolpci=["imeZdravnika"];
 $grupa=["imeZdravnika"];
+//$podminka=$podminka;
    $counta = new databaseS();
-   $vybrano=$counta->counta($tabulka, $stolpci, $grupa );
+   $vybrano=$counta->counta($tabulka, $stolpci, $grupa, $podminka);
 //echo "<br>";
 //echo var_dump($vybrano);
 //echo "<br>";
@@ -54,15 +89,22 @@ $grupa=["imeZdravnika"];
     foreach(new DeloRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
         echo $v;
    }//od foreach
+  echo"</table>";
   }//od if(cout)
- else {
- echo 'V izbranem terminu ni zapisov o opravljenem delu ';
- }	 
+ else{
+     echo 'V izbranem terminu ni zapisov o opravljenem delu ';
+     }
+		$danes='"'.date("Y-m-d").'"';
+	echo"<script>intervalFunction($danes)</script>"; 
+//echo"<div id='intervalId'>razdoblje</div>";
+
+
+
  }//od construct  
 }//od class VyberImaStevilko
 //CCCCCCCCCCCCC KONEC  CLASS SestevekDela  CCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-//CCCCCCCCCCCCCCC CLASS TABLE ROWS CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+//CCCCCCCCCCCCCCC CLASS delo ROWS CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 class DeloRows extends RecursiveIteratorIterator {
     function __construct($it) {
         parent::__construct($it, self::LEAVES_ONLY);
@@ -74,9 +116,8 @@ class DeloRows extends RecursiveIteratorIterator {
         echo "<tr>";
     }
     function endChildren() {
-	  //echo "<td onclick=" . '"poDatumuFunction('. "'vyber'".')"'.'"' . ">izberi</td></tr>" . "\n";
       //echo '<td onclick="poDatumuFunction('."'vyber'".')">izberi</td></tr>';	  
         echo '</tr>';
     }//od endChildren
 }// od class DeloRows
-//CCCCCCCCCCCCCCC KONEC CLASS TABLE ROWS CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+//CCCCCCCCCCCCCCC KONEC CLASS delo ROWS CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC

@@ -70,5 +70,19 @@ th, td {
 .glavaTable {
   position: sticky;
   top: 6%;	
-  overflow: hidden;	
+  overflow: hidden;
+}
+
+
+
+#pogojId {
+position: fixed;	
+top: 40px;
+left: 400px;	
+}
+
+#posli {
+position: fixed;	
+top: 200px;
+left: 450px;		
 }
