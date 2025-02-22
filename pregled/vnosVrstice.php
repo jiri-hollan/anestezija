@@ -1,7 +1,7 @@
 <?php
 require_once '../skupne/database.php';
 require_once('../skupne/aktivace.php');
-echo"<script>alert('GDPR='.$gdpr);</script>";
+//echo"<script>alert('GDPR='.$gdpr);</script>";
 if($gdpr==1){
 if ($_SERVER['REQUEST_METHOD']== 'POST') {
 	if (isset($_POST['doBaze'])&&isset($_POST['ustanova'])){
@@ -76,45 +76,35 @@ Class PrviVpis extends Apregled {
 		    parent::__construct();
 
 
-if (!empty($_POST)) {
+if(!empty($_POST)) {
 // define variables and set to empty values
-$najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
-
-
+  $najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
 // Looping through an array using for 
 //echo "\nLOOPING array z uporabo for: \n"; 
+  foreach ($this->stolpci as $stolpec) {
+    if(isset($_POST[$stolpec])){
+//echo $_POST[$stolpec];
+      $data[$stolpec] = trim($_POST[$stolpec]);
+      $data[$stolpec] = stripslashes($data[$stolpec]); 
+      $data[$stolpec] = htmlspecialchars($data[$stolpec]);
+      }else{
+            echo $stolpec . ' ne obstaja';
+           }
+  }//od foreach
+  $ulozeno = $this->conn->vloz($this->nameTable, $data);
 
-foreach ($this->stolpci as $stolpec) {
-	
-if (isset($_POST[$stolpec])) {
-	//echo $_POST[$stolpec];
-		$data[$stolpec] = trim($_POST[$stolpec]);
-		$data[$stolpec] = stripslashes($data[$stolpec]); 
-		$data[$stolpec] = htmlspecialchars($data[$stolpec]);
- } else {
-	echo $stolpec . ' ne obstaja';
-  }
-  
-	
-}//od foreach
-
-$ulozeno = $this->conn->vloz($this->nameTable, $data);
-			echo 'Zapis vnesen v tabelo';
-			//var_dump ($ulozeno);			
-            //echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
-			echo '<br>last id: '.$ulozeno["lastId"];
-			
-		 $bolnikId = $ulozeno["lastId"];
-
-    echo '<script>';
-    echo 'sessionStorage.setItem("bolnikId",'. $bolnikId .');';		
-    //echo 'alert("vnos vrstice: "+sessionStorage.getItem("bolnikId"));';
-    echo 'alert("shranjeno v bazo");';	
-	echo 'window.location.href = "bolnik\.php";';
-    echo '</script>';	
-	return;		
+//var_dump ($ulozeno);			
+//echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
+  echo '<br>last id: '.$ulozeno["lastId"];
+  $bolnikId = $ulozeno["lastId"];
+  echo '<script>';
+  echo 'sessionStorage.setItem("bolnikId",'. $bolnikId .');';		
+//echo 'alert("vnos vrstice: "+sessionStorage.getItem("bolnikId"));';
+  echo 'alert("shranjeno v bazo");';	
+  echo 'window.location.href = "bolnik\.php";';
+  echo '</script>';	
+  return;		
 } //od if 
-
 	} //od construct
 	} //od class PrviVpis
 	
@@ -122,51 +112,45 @@ $ulozeno = $this->conn->vloz($this->nameTable, $data);
 //-------------------------------------------konec PrviVpis---------------------------
 
 Class SpremeniVpis extends Apregled {
-		
 	public function __construct() {
 		    parent::__construct();
-
-	//echo 'V spremeni Vpis';
-	if (!empty($_POST)) {
+//exit("V spremeni Vpis");
+  if(!empty($_POST)) {
 // define variables and set to empty values
-$najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
-
-
+    $najdene = $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
 // Looping through an array using for 
 //echo "\nLOOPING array z uporabo for: \n"; 
-
-foreach ($this->stolpci as $stolpec) {
-	
-if (isset($_POST[$stolpec])) {
-	//echo $_POST[$stolpec];
-		$data[$stolpec] = ($_POST[$stolpec]);
- } else {
-	echo $stolpec . ' ne obstaja';
-  }	
+    foreach ($this->stolpci as $stolpec) {
+    if(isset($_POST[$stolpec])) {
+//echo $_POST[$stolpec];
+      $data[$stolpec] = ($_POST[$stolpec]);
+      }else{
+           echo $stolpec . ' ne obstaja';
+           }	
 }//od foreach
 	
-if (isset($_POST['bolnikId'])) {
-	//echo $_POST['bolnikId'];
-		$podminka['pregledId'] = ($_POST['bolnikId']);
- } else {
-	echo 'bolnik Id ne obstaja';
-	    echo '<script>';
-	
-    //echo 'alert("bolnik Id ne obstaja");';
-	echo 'window.location.href = "bolnik\.php";';
-    echo '</script>';	
-	
-  }	
+if(isset($_POST['bolnikId'])) {
+//echo $_POST['bolnikId'];
+  $podminka['pregledId'] = ($_POST['bolnikId']);
+  } else {
+        echo 'bolnik Id ne obstaja';
+        echo '<script>';
+//echo 'alert("bolnik Id ne obstaja");';
+        echo 'window.location.href = "bolnik\.php";';
+        echo '</script>';	
+        }
+    $ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
+//exit("<br>počet vloženych: ".var_dump ($ulozeno));
+	if($ulozeno==1){
+		echo "<script>alert('Zapis posodobljen');
+		window.location.href = 'bolnik\.php';
+		</script>";
+	}else{
+		header('Location: bolnik.php');
+	}
 
-//$database = new database;
-//var_dump ($database);
-$ulozeno = $this->conn->aktualizuj($this->nameTable, $data, $podminka );
-			echo 'Zapis aktualizovan in shranjen v tabelo';
-			//var_dump ($ulozeno);			
-            //echo '<br>počet vloženych: '.$ulozeno["pocetVlozenych"];
-			header('Location: bolnik.php');
 
-	}//od if
+    }//od if
 } //od construct
 	} //od class SpremeniVpis
 	
