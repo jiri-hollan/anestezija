@@ -398,9 +398,10 @@ public function suma($tabulka, $sloupce, $podminka = NULL){
 //....................funkcija counta v razvoju.........................................
 public function counta($tabulka, $sloupce, $grupa, $podminka = NULL){
 	$sloupceSQL = implode(', ', $sloupce);
-	//echo '<br>$sloupceSQL= ';
-	//var_dump($sloupceSQL);
-	$grupaSQL = implode(', ', $grupa);	
+//echo '<br>$sloupceSQL= ';
+//var_dump($sloupceSQL);
+	$grupaSQL = implode(', ', $grupa);
+//var_dump($grupaSQL);	
 	$podminkaSQL = '';
 	$parametry = array();
 
@@ -446,5 +447,38 @@ public function counta($tabulka, $sloupce, $grupa, $podminka = NULL){
 	  return $zaznamy;
 	}
 //............konec counta............................................................
+
+//................ funkcija skupina .................................................
+public function skupina($tabulka, $sloupce, $grupa= NULL, $podminka = NULL){
+		$sloupceSQL = implode(', ', $sloupce);
+
+//echo $sloupceSQL;  
+$dotaz = $this->conn->prepare("SELECT 
+        CASE
+		    WHEN $sloupceSQL < 10 THEN $sloupceSQL
+		    WHEN $sloupceSQL BETWEEN 10 AND 100 THEN TRUNCATE($sloupceSQL, -1)           
+		    WHEN $sloupceSQL BETWEEN 100 AND 110 THEN TRUNCATE($sloupceSQL, -2)
+		END
+		AS skupina, count(*) AS število
+    FROM 
+        $tabulka
+    GROUP BY skupina ORDER BY ABS(skupina);");
+
+
+try {
+		$dotaz->execute();		
+		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
+		//echo '<br>v try vyber';
+	  }catch (PDException $e) {
+		  echo $e->getMessage();
+		  $zaznamy = false;
+	  }
+	  
+	  $dotaz->closeCursor();
+	  return $zaznamy;
+}
+//................ konec skupina .....................................................
+
+
 
 }//uzavírací zavorky class DatabaseS
