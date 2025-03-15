@@ -418,22 +418,17 @@ public function counta($tabulka, $sloupce, $grupa, $podminka = NULL){
 		}
 	}
 
-	//echo '<br>parametry= ';
-	//var_dump($parametry);
-	/* echo "<br>podminka= ";
-	 var_dump($podminka);
-	echo "<br>podminka SQL: ";*/
-	//var_dump($podminkaSQL );
+//echo '<br>parametry= ';
+//var_dump($parametry);
+/* echo "<br>podminka= ";
+var_dump($podminka);
+echo "<br>podminka SQL: ";*/
+//var_dump($podminkaSQL );
 	
-//$dotaz = $this->conn->prepare("SELECT  $sloupceSQL  FROM $tabulka". $podminkaSQL. $poradiSQL. " GROUP BY datumOpravila");
-	
-	$dotaz = $this->conn->prepare("SELECT $sloupceSQL, COUNT(*) AS steviloZapisov FROM $tabulka $podminkaSQL GROUP BY $grupaSQL ORDER BY $grupaSQL");	
-	
-//(SELECT imeZdravnika, COUNT(*) AS steviloZapisov FROM bolnikTbl GROUP BY imeZdravnika ORDER BY steviloZapisov DESC);
-	
-	
-	
-	//var_dump($dotaz);
+	$dotaz = $this->conn->prepare("SELECT $sloupceSQL, COUNT(*) AS steviloZapisov FROM $tabulka $podminkaSQL GROUP BY $grupaSQL ORDER BY $grupaSQL");
+/*echo"<br><br>";	
+var_dump($dotaz);
+echo"<br><br>";*/
 	try {
 		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
@@ -451,8 +446,30 @@ public function counta($tabulka, $sloupce, $grupa, $podminka = NULL){
 //................ funkcija skupina .................................................
 public function skupina($tabulka, $sloupce, $grupa= NULL, $podminka = NULL){
 		$sloupceSQL = implode(', ', $sloupce);
+		
+	$podminkaSQL = '';
+	$parametry = array();
 
-//echo $sloupceSQL;  
+	if (is_array($podminka)){
+		$i = 0;
+		foreach ($podminka as $sloupec=>$hodnota){
+			if ($i == 0){
+				$podminkaSQL .=" WHERE $sloupec ?";				
+			}else {
+				$podminkaSQL .=" AND $sloupec  ?";
+			}
+			$parametry[$i] = $hodnota;
+			$i++;
+		}
+	}
+/*
+echo '<br>parametry= ';
+var_dump($parametry);
+ echo "<br>podminka= ";
+var_dump($podminka);
+echo "<br>podminka SQL: ";
+var_dump($podminkaSQL );*/
+	
 $dotaz = $this->conn->prepare("SELECT 
         CASE
 		    WHEN $sloupceSQL < 10 THEN $sloupceSQL
@@ -462,12 +479,14 @@ $dotaz = $this->conn->prepare("SELECT
 		END
 		AS skupina, count(*) AS stevilo
     FROM 
-        $tabulka
-    GROUP BY skupina ORDER BY ABS(skupina);");
-
+        $tabulka $podminkaSQL
+    GROUP BY skupina ORDER BY ABS(skupina)");
+/*echo"<br><br>";	
+var_dump($dotaz);
+echo"<br><br>";*/
 
 try {
-		$dotaz->execute();		
+		$dotaz->execute($parametry);		
 		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
 		//echo '<br>v try vyber';
 	  }catch (PDException $e) {

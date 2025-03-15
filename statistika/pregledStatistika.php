@@ -14,64 +14,51 @@ za enkrat semafor nerabi parameter, ker ni več opcij
 vseeno sem dal v switch
 **/
  if(isset($_GET['semafor'])){
-  switch ($_GET['semafor']){
+	$semafor = $_GET['semafor'];
+  //switch ($_GET['semafor']){
+  switch ($semafor){	  
     case "pregledovalec":
 /***prikaže število pregledov za celotno razdobje po zdravnikih***/
-	$podminka=NULL;
 	$stolpci=["imeZdravnika"];
 	$grupa=["imeZdravnika"];
-     new countPregled($tabulka, $stolpci, $grupa, $podminka);
+    $podminka=NULL;
+     new countPregled($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
 	case "asa":
 	$stolpci=["asa"];
 	$grupa=["asa"];
-	$interval=[];
-	$kriteriji=[];
-	 new poKriterijih($tabulka, $stolpci, $grupa, $interval, $kriteriji);
+    $podminka=NULL;
+	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
 	break;
 	case "mallampati":
 	$stolpci=["mallampati"];
 	$grupa=["mallampati"];
-	$interval=[];
-	$kriteriji=[];
-	 new poKriterijih($tabulka, $stolpci, $grupa, $interval, $kriteriji);
+    $podminka=NULL;
+	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
 	break;
 	case "sklep":
 	$stolpci=["sklep"];
 	$grupa=["sklep"];
-	$interval=[];
-	$kriteriji=[];
-	 new poKriterijih($tabulka, $stolpci, $grupa, $interval, $kriteriji);
+    $podminka=NULL;
+	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
 	break;	
 	case "opiati":
 	$stolpci=["opiati"];
 	$grupa=["opiati"];
-	$interval=[];
-	$kriteriji=[];
-	 new poKriterijih($tabulka, $stolpci, $grupa, $interval, $kriteriji);
+    $podminka=NULL;
+	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
 	break;
 	case "alergija":
 	$stolpci=["alergija"];
 	$grupa=["alergija"];
-	$interval=[];
-	$kriteriji=[];
-	 new poKriterijih($tabulka, $stolpci, $grupa, $interval, $kriteriji);
+    $podminka=NULL;
+	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
 	break;	
-	case "starost":
+    case "starost":
 	$stolpci=["starost"];
 	$grupa=["starost"];
-	$interval=[];
-	$kriteriji=[];
-	 new poKriterijih($tabulka, $stolpci, $grupa, $interval, $kriteriji);
-	break;	
-	case "skupina":
-	$stolpci=["starost"];
-	$grupa=["starost"];
-	$interval=[];
-	$kriteriji=[];
-	 new poStarosti($tabulka, $stolpci, $grupa, $interval, $kriteriji);
-	/*  $skupina = new databaseS();
-  $vybrano=$skupina->skupina($tabulka, $stolpci=NULL, $grupa=NULL, $podminka=NULL);*/
+    $podminka=NULL;
+	 new poStarosti($tabulka, $stolpci, $grupa, $podminka, $semafor);
 	break;	
     default:
      echo"semafor GET ni pravi";
@@ -79,12 +66,6 @@ vseeno sem dal v switch
  }
  
  if(isset($_POST['semafor'])){
-  switch ($_POST['semafor']){
-	case "pregledovalecDatum":
-/**************************************************************
-*semafor dDatum poslan iz bolnikPogoji.js
-*prikaže število pregledov po zdravnikih za določen interval
-***************************************************************/
 	 $podminka = [];
 	 $danes='"'.date("Y-m-d").'"';
 	 if(isset($_POST['zacDatum'])){
@@ -96,13 +77,51 @@ vseeno sem dal v switch
 	 $podminka["datPregleda<="] = $this_koncDatum;
 	  }else{$this_koncDatum =NULL;}
 //var_dump($podminka); 
+  switch ($_POST['semafor']){
+	case "pregledovalec":
+/**************************************************************
+*semafor dDatum poslan iz bolnikPogoji.js
+*prikaže število pregledov po zdravnikih za določen interval
+***************************************************************/
+
 	 $stolpci=["imeZdravnika"];
 	 $grupa=["imeZdravnika"];
-      new countPregled($tabulka, $stolpci, $grupa, $podminka);
+      new countPregled($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
     break;
+	case "asa":
+	$stolpci=["asa"];
+	$grupa=["asa"];
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+    break;
+	case "mallampati":
+	$stolpci=["mallampati"];
+	$grupa=["mallampati"];
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+    break;
+	case "sklep":
+	$stolpci=["sklep"];
+	$grupa=["sklep"];
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+    break;
+	case "opiati":
+	$stolpci=["opiati"];
+	$grupa=["opiati"];
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+    break;
+	case "alergija":
+	$stolpci=["alergija"];
+	$grupa=["alergija"];
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+    break;
+	case "starost":
+	$stolpci=["starost"];
+	$grupa=["starost"];
+      new poStarosti($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+    break;
+	
     default:
 	echo $_POST['semafor'];
-     echo"semafor POST ni pravi";	  
+     echo" semafor POST ni pravi";	  
   }
  }
 }else{echo"ni REQUEST";}
@@ -127,7 +146,7 @@ ORDER BY steviloZapisov DESC;
 //CCCCCCCCCCCCCCC CLASS countPregled  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 class countPregled {
 public $tabulka;
-function __construct($tabulka, $stolpci, $grupa, $podminka) {
+function __construct($tabulka, $stolpci, $grupa, $podminka, $semafor) {
    $counta = new databaseS();
    $vybrano=$counta->counta($tabulka, $stolpci, $grupa, $podminka);
 //echo "<br>";
@@ -138,6 +157,7 @@ function __construct($tabulka, $stolpci, $grupa, $podminka) {
 //echo 'deloStatistika.php linija 72 '. count($vybrano);
 //echo "<br>";
 //echo "<br>";
+//var_dump($semafor);
   if(count($vybrano)>0){
 	  if(isset($podminka["datPregleda>="])||isset($podminka["datPregleda<="])){
       echo "&nbsp;od:&nbsp;".$podminka["datPregleda>="]."&nbsp;&nbsp;do:&nbsp;".$podminka["datPregleda<="]."<br>";
@@ -155,7 +175,8 @@ function __construct($tabulka, $stolpci, $grupa, $podminka) {
      echo 'V izbranem terminu ni zapisov o opravljenem delu ';
      }
 		$danes='"'.date("Y-m-d").'"';
-	echo"<script>intervalFunction($danes)</script>"; 
+//echo $semafor;
+	echo"<script>intervalFunction($danes, '$semafor')</script>"; 
 //echo"<div id='intervalId'>razdoblje</div>";
  }//od construct  
 }//od class CountPregled
@@ -170,10 +191,11 @@ class poKriterijih {
 *"SELECT $sloupceSQL, COUNT(*) AS steviloZapisov FROM $tabulka $podminkaSQL GROUP BY $grupaSQL ORDER BY $grupaSQL"
 *******************************************************************/
 public $tabulka;
-function __construct($tabulka, $stolpci, $grupa=[], $interval=NULL, $kriterij=NULL){
+function __construct($tabulka, $stolpci, $grupa, $podminka, $semafor){
 //$tabulka = 'bolnikTbl';
 //var_dump($grupa);
-  $this->podminka=array_merge($interval,$kriterij);
+//var_dump($semafor);
+  $this->podminka=$podminka;
   $counta = new databaseS();
   $vybrano=$counta->counta($tabulka, $stolpci, $grupa, $this->podminka);
     if(count($vybrano)>0){
@@ -194,6 +216,9 @@ function __construct($tabulka, $stolpci, $grupa=[], $interval=NULL, $kriterij=NU
 	 echo "&nbsp;od:&nbsp;".$podminka["datPregleda>="]."&nbsp;&nbsp;do:&nbsp;".$podminka["datPregleda<="]."<br>";	 
      echo 'V izbranem terminu ni zapisov o opravljenem delu ';
      }
+$danes='"'.date("Y-m-d").'"';
+//echo $semafor;
+echo"<script>intervalFunction($danes, '$semafor')</script>"; 
   }
 }
 //CCCCCCCCCCCCCCC konec CLASS po Kriterijih CCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -224,16 +249,14 @@ class poStarosti {
 *"SELECT $sloupceSQL, COUNT(*) AS steviloZapisov FROM $tabulka $podminkaSQL GROUP BY $grupaSQL ORDER BY $grupaSQL"
 *******************************************************************/
 public $tabulka;
-function __construct($tabulka, $stolpci, $grupa=[], $interval=NULL, $kriterij=NULL){
+function __construct($tabulka, $stolpci, $grupa, $podminka, $semafor){
 //$tabulka = 'bolnikTbl';
 //var_dump($grupa);
-  $this->podminka=array_merge($interval,$kriterij);
+//var_dump($semafor);
+  $this->podminka=$podminka;
   $skupina = new databaseS();
   $vybrano=$skupina->skupina($tabulka, $stolpci, $grupa, $this->podminka);
     if(count($vybrano)>0){
-	/*  if(isset($podminka["datPregleda>="])||isset($podminka["datPregleda<="])){
-      echo "&nbsp;od:&nbsp;".$podminka["datPregleda>="]."&nbsp;&nbsp;do:&nbsp;".$podminka["datPregleda<="]."<br>";
-      }*/
   echo "<table id='pocet' style='border: solid 1px black;'>";
 /* nadpisi se morajo ujemati s prikazanimi stlpci v vyberFunction*/
 //var_dump($grupa[0]);
@@ -248,6 +271,9 @@ function __construct($tabulka, $stolpci, $grupa=[], $interval=NULL, $kriterij=NU
 	 echo "&nbsp;od:&nbsp;".$podminka["datPregleda>="]."&nbsp;&nbsp;do:&nbsp;".$podminka["datPregleda<="]."<br>";	 
      echo 'V izbranem terminu ni zapisov o opravljenem delu ';
      }
+$danes='"'.date("Y-m-d").'"';
+//echo $semafor;
+echo"<script>intervalFunction($danes, '$semafor')</script>"; 
   }
 }
 //CCCCCCCCCCCCCCC konec CLASS po starosti CCCCCCCCCCCCCCCCCCCCCCCCCCC
