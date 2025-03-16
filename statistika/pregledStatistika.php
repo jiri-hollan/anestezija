@@ -3,9 +3,12 @@ require_once 'administrace.php';
 require_once 'databaseS.php';
 $nazaj="statistikaMenu.php";
 require_once('sabloni/zahlavi.php');
-require_once('sabloni/forma.php');
+//require_once('sabloni/forma.php');
 require_once('opraviloVsiS.php');
 require_once ('ogledStatistika.php');
+echo'<script src="js/bolnikPogoji.js?'.time().'"></script>';
+echo"<div class='flex-container'>";
+require_once('sabloni/forma.php');
 echo'<script src="js/bolnikPogoji.js?'.time().'"></script>';
 if(isset($_REQUEST['semafor'])){
   $tabulka="bolnikTbl";
@@ -173,7 +176,7 @@ function __construct($tabulka, $stolpci, $grupa, $podminka, $semafor) {
 	  if(isset($podminka["datPregleda>="])||isset($podminka["datPregleda<="])){
       echo "&nbsp;od:&nbsp;".$podminka["datPregleda>="]."&nbsp;&nbsp;do:&nbsp;".$podminka["datPregleda<="]."<br>";
       }
-  echo "<table id='pocet' style='border: solid 1px black;'>";
+  echo "<table id='pocet'>";
 /* nadpisi se morajo ujemati s prikazanimi stlpci v vyberFunction*/
   echo "<tr class='glavaTable'><th>ime Zdravnika</th><th>stevilo pregledov</th></tr>";
     foreach(new DeloRows(new RecursiveArrayIterator($vybrano)) as $k=>$v) {
@@ -213,7 +216,7 @@ function __construct($tabulka, $stolpci, $grupa, $podminka, $semafor){
 	/*  if(isset($podminka["datPregleda>="])||isset($podminka["datPregleda<="])){
       echo "&nbsp;od:&nbsp;".$podminka["datPregleda>="]."&nbsp;&nbsp;do:&nbsp;".$podminka["datPregleda<="]."<br>";
       }*/
-  echo "<table id='pocet' style='border: solid 1px black;'>";
+  echo "<table id='pocet'>";
 /* nadpisi se morajo ujemati s prikazanimi stlpci v vyberFunction*/
 //var_dump($grupa[0]);
 //echo strtoupper($grupa[0]);
@@ -268,7 +271,7 @@ function __construct($tabulka, $stolpci, $grupa, $podminka, $semafor){
   $skupina = new databaseS();
   $vybrano=$skupina->skupina($tabulka, $stolpci, $grupa, $this->podminka);
     if(count($vybrano)>0){
-  echo "<table id='pocet' style='border: solid 1px black;'>";
+  echo "<table id='pocet'>";
 /* nadpisi se morajo ujemati s prikazanimi stlpci v vyberFunction*/
 //var_dump($grupa[0]);
 //echo strtoupper($grupa[0]);
@@ -292,5 +295,5 @@ echo"<script>intervalFunction($danes, '$semafor')</script>";
 
 
 
-
+echo"</div>";
 ?>
