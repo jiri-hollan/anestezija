@@ -53,7 +53,7 @@ input {
 table {
   border: 1px solid black;
   top: 50px;
-  width: 30%;
+  max-width: 50%;
   order: 1;
 }
 	
@@ -71,7 +71,7 @@ th, td {
 
 .glavaTable {
   position: sticky;
-  top: 6%;	
+  top: 0;	
   overflow: hidden;
   background-color: Cornsilk;
 }
@@ -98,11 +98,14 @@ top: 200px;*/
 left: 50px;	
 }
 .flex-container {
+  position: relative;
   display: flex;
+  top: 50px;
   background-color: #f1f1f1;
+  max-width: 900px;
 }
 
 .flex-container  form {
 	  position: sticky;
-  top: 6%;	
+  top: 0;	
 }
