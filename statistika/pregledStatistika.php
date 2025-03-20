@@ -12,69 +12,20 @@ require_once('sabloni/forma.php');
 echo'<script src="js/bolnikPogoji.js?'.time().'"></script>';
 if(isset($_REQUEST['semafor'])){
   $tabulka="bolnikTbl";
-/***
-za enkrat semafor nerabi parameter, ker ni več opcij
-vseeno sem dal v switch
-**/
+/*************************************************
+*$_GET semafor poslan iz statistikaMenu,
+*definiran v menuStatistika_items
+**************************************************/ 
  if(isset($_GET['semafor'])){
 	$semafor = $_GET['semafor'];
-  //switch ($_GET['semafor']){
-  switch ($semafor){	  
-    case "pregledovalec":
-/***prikaže število pregledov za celotno razdobje po zdravnikih***/
-	$stolpci=["imeZdravnika"];
-	$grupa=["imeZdravnika"];
     $podminka=NULL;
-     new countPregled($tabulka, $stolpci, $grupa, $podminka, $semafor);
-    break;
-	case "asa":
-	$stolpci=["asa"];
-	$grupa=["asa"];
-    $podminka=NULL;
-	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
-	break;
-	case "mallampati":
-	$stolpci=["mallampati"];
-	$grupa=["mallampati"];
-    $podminka=NULL;
-	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
-	break;
-	case "sklep":
-	$stolpci=["sklep"];
-	$grupa=["sklep"];
-    $podminka=NULL;
-	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
-	break;	
-	case "opiati":
-	$stolpci=["opiati"];
-	$grupa=["opiati"];
-    $podminka=NULL;
-	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
-	break;
-	case "druge_Ovisnosti":
-	$stolpci=["dovisnosti"];
-	$grupa=["dovisnosti"];
-    $podminka=NULL;
-	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
-	break;
-	case "alergija":
-	$stolpci=["alergija"];
-	$grupa=["alergija"];
-    $podminka=NULL;
-	 new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
-	break;	
-    case "starost":
-	$stolpci=["starost"];
-	$grupa=["starost"];
-    $podminka=NULL;
-	 new poStarosti($tabulka, $stolpci, $grupa, $podminka, $semafor);
-	break;	
-    default:
-     echo"semafor GET ni pravi";
-  }
- }
- 
+	 }
+ /**************************************************************
+*$_POST semafor poslan iz bolnikPogoji.js
+*prikaže število pregledov po zdravnikih za določen interval
+***************************************************************/
  if(isset($_POST['semafor'])){
+	 $semafor = $_POST['semafor'];
 	 $podminka = [];
 	 $danes='"'.date("Y-m-d").'"';
 	 if(isset($_POST['zacDatum'])){
@@ -85,59 +36,62 @@ vseeno sem dal v switch
 	 $this_koncDatum = $_POST['koncDatum'];
 	 $podminka["datPregleda<="] = $this_koncDatum;
 	  }else{$this_koncDatum =NULL;}
+
+
 //var_dump($podminka); 
-  switch ($_POST['semafor']){
+ }
+  switch ($semafor){
 	case "pregledovalec":
-/**************************************************************
-*semafor dDatum poslan iz bolnikPogoji.js
-*prikaže število pregledov po zdravnikih za določen interval
-***************************************************************/
 
 	 $stolpci=["imeZdravnika"];
 	 $grupa=["imeZdravnika"];
-      new countPregled($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+      new countPregled($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
 	case "asa":
 	$stolpci=["asa"];
 	$grupa=["asa"];
-      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
 	case "mallampati":
 	$stolpci=["mallampati"];
 	$grupa=["mallampati"];
-      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
 	case "sklep":
 	$stolpci=["sklep"];
 	$grupa=["sklep"];
-      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
 	case "opiati":
 	$stolpci=["opiati"];
 	$grupa=["opiati"];
-      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
 	case "druge_Ovisnosti":
 	$stolpci=["dovisnosti"];
 	$grupa=["dovisnosti"];
-      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
 	case "alergija":
 	$stolpci=["alergija"];
 	$grupa=["alergija"];
-      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
 	case "starost":
 	$stolpci=["starost"];
 	$grupa=["starost"];
-      new poStarosti($tabulka, $stolpci, $grupa, $podminka, $_POST['semafor']);
+      new poStarosti($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
-	
+	case "spo2":
+	$stolpci=["spo2"];
+	$grupa=["spo2"];
+      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
+    break;	
     default:
-	echo $_POST['semafor'];
-     echo" semafor POST ni pravi";	  
+	echo $semafor;
+     echo" semafor GET ali POST ni pravi";	  
   }
- }
+
 }else{echo"ni REQUEST";}
 /************************************************************
 *Tu pridejo predlogi SQL za pregled polj v tabli bolnikTbl
