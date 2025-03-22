@@ -42,9 +42,8 @@ if(isset($_REQUEST['semafor'])){
  }
   switch ($semafor){
 	case "pregledovalec":
-
-	 $stolpci=["imeZdravnika"];
-	 $grupa=["imeZdravnika"];
+	$stolpci=["imeZdravnika"];
+	$grupa=["imeZdravnika"];
       new countPregled($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
 	case "asa":
@@ -77,16 +76,91 @@ if(isset($_REQUEST['semafor'])){
 	$grupa=["alergija"];
       new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
     break;
+//.........................................................................
 	case "starost":
 	$stolpci=["starost"];
 	$grupa=["starost"];
-      new poStarosti($tabulka, $stolpci, $grupa, $podminka, $semafor);
+	  $sloupceSQL = implode(', ', $stolpci);
+  $razvrstitev ="CASE
+		    WHEN $sloupceSQL < 10 THEN $sloupceSQL
+		    WHEN $sloupceSQL BETWEEN 10 AND 100 THEN TRUNCATE($sloupceSQL, -1)           
+		    WHEN $sloupceSQL BETWEEN 100 AND 110 THEN TRUNCATE($sloupceSQL, -2)
+			ELSE '200&nbspneveljaven&nbspvnos'
+		END";
+      new poStarosti($tabulka, $stolpci, $razvrstitev, $grupa, $podminka, $semafor);
     break;
+//.........................................................................
+	case "ks":	
+		$stolpci=["ks"];
+	    $grupa=["ks"];
+	    $sloupceSQL = implode(', ', $stolpci);
+  $razvrstitev ="CASE
+		    WHEN $sloupceSQL < 1 THEN 'ni&nbsppodatkov'
+			WHEN $sloupceSQL BETWEEN 1 AND 3 THEN TRUNCATE($sloupceSQL, 0) 
+		    WHEN $sloupceSQL BETWEEN 3 AND 5 THEN TRUNCATE($sloupceSQL, 0)           
+		    WHEN $sloupceSQL BETWEEN 5 AND 10 THEN TRUNCATE($sloupceSQL, 0)
+			WHEN $sloupceSQL BETWEEN 10 AND 19 THEN TRUNCATE($sloupceSQL, 0)
+			WHEN $sloupceSQL BETWEEN 20 AND 50 THEN TRUNCATE($sloupceSQL, -1)
+			ELSE 'verjetno&nbspneveljaven&nbspvnos'
+		END";
+      new poStarosti($tabulka, $stolpci, $razvrstitev, $grupa, $podminka, $semafor);
+    break;
+//.........................................................................
+	case "hb":	
+		$stolpci=["hb"];
+	    $grupa=["hb"];
+	    $sloupceSQL = implode(', ', $stolpci);
+  $razvrstitev ="CASE
+		    WHEN $sloupceSQL < 1 THEN 'ni&nbsppodatkov'
+			WHEN $sloupceSQL BETWEEN 50 AND 200 THEN TRUNCATE($sloupceSQL, -1)
+			ELSE 'verjetno&nbspneveljaven&nbspvnos'
+		END";
+      new poStarosti($tabulka, $stolpci, $razvrstitev, $grupa, $podminka, $semafor);
+    break;
+//.........................................................................
+	case "trombociti":	
+		$stolpci=["trombociti"];
+	    $grupa=["trombociti"];
+	    $sloupceSQL = implode(', ', $stolpci);
+  $razvrstitev ="CASE
+		    WHEN $sloupceSQL < 1 THEN ' ni&nbsppodatkov'
+			WHEN $sloupceSQL BETWEEN 1 AND 150 THEN '<150'            
+		    WHEN $sloupceSQL BETWEEN 100 AND 999 THEN TRUNCATE($sloupceSQL, -2)
+			WHEN $sloupceSQL BETWEEN 1000 AND 20000 THEN TRUNCATE($sloupceSQL, -3)
+			ELSE 'verjetno&nbspneveljaven&nbspvnos'
+		END";
+      new poStarosti($tabulka, $stolpci, $razvrstitev, $grupa, $podminka, $semafor);
+    break;
+//.........................................................................
+	case "pbnp":	
+		$stolpci=["pbnp"];
+	    $grupa=["pbnp"];
+	    $sloupceSQL = implode(', ', $stolpci);
+  $razvrstitev ="CASE
+		    WHEN $sloupceSQL < 1 THEN ' ni&nbsppodatkov'
+			WHEN $sloupceSQL BETWEEN 1 AND 99 THEN '<100'            
+		    WHEN $sloupceSQL BETWEEN 100 AND 999 THEN TRUNCATE($sloupceSQL, -2)
+			WHEN $sloupceSQL BETWEEN 1000 AND 20000 THEN TRUNCATE($sloupceSQL, -3)
+			ELSE 'verjetno&nbspneveljaven&nbspvnos'
+		END";
+      new poStarosti($tabulka, $stolpci, $razvrstitev, $grupa, $podminka, $semafor);
+    break;
+//.........................................................................
+
 	case "spo2":
 	$stolpci=["spo2"];
 	$grupa=["spo2"];
-      new poKriterijih($tabulka, $stolpci, $grupa, $podminka, $semafor);
-    break;	
+	$sloupceSQL = implode(', ', $stolpci);
+  $razvrstitev ="CASE
+		    WHEN $sloupceSQL < 1 THEN ' ni&nbsppodatkov'          
+		    WHEN $sloupceSQL BETWEEN 50 AND 100 THEN TRUNCATE($sloupceSQL, 1)
+			ELSE 'verjetno&nbspneveljaven&nbspvnos'
+		END";
+      new poStarosti($tabulka, $stolpci, $razvrstitev, $grupa, $podminka, $semafor);
+	  
+	  
+    break;
+//.........................................................................
     default:
 	echo $semafor;
      echo" semafor GET ali POST ni pravi";	  
@@ -221,13 +295,13 @@ class poStarosti {
 *"SELECT $sloupceSQL, COUNT(*) AS steviloZapisov FROM $tabulka $podminkaSQL GROUP BY $grupaSQL ORDER BY $grupaSQL"
 *******************************************************************/
 public $tabulka;
-function __construct($tabulka, $stolpci, $grupa, $podminka, $semafor){
+function __construct($tabulka, $stolpci, $razvrstitev, $grupa, $podminka, $semafor){
 //$tabulka = 'bolnikTbl';
 //var_dump($grupa);
 //var_dump($semafor);
   $this->podminka=$podminka;
   $skupina = new databaseS();
-  $vybrano=$skupina->skupina($tabulka, $stolpci, $grupa, $this->podminka);
+  $vybrano=$skupina->skupina($tabulka, $stolpci, $grupa, $this->podminka, $razvrstitev);
     if(count($vybrano)>0){
 	  echo"<div class='udaje'>";
 	  if(isset($podminka["datPregleda>="])||isset($podminka["datPregleda<="])){

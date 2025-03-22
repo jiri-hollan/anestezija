@@ -11,6 +11,10 @@ $a2= '<li><a href="pregledStatistika.php?semafor=asa">ASA</a></li>
 <li><a href="pregledStatistika.php?semafor=alergija">alergija</a></li>
 <li><a href="pregledStatistika.php?semafor=starost">starost</a></li>
 <li><a href="pregledStatistika.php?semafor=spo2">spo2</a></li>
+<li><a href="pregledStatistika.php?semafor=ks">ks</a></li>
+<li><a href="pregledStatistika.php?semafor=hb">hb</a></li>
+<li><a href="pregledStatistika.php?semafor=trombociti">trombociti</a></li>
+<li><a href="pregledStatistika.php?semafor=pbnp">pbnp</a></li>
 ';
 $a3= '<br>
 .....................................
