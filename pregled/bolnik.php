@@ -6,4 +6,11 @@ require_once('sklepVsi.php');
 require_once('../skupne/database.php');
 require_once ('sabloni/novPolnjenje.php');
 require_once('sabloni/vkladane/zapati.php');
+if(!empty($_SESSION["uname"])){
+$uname = "<div id='stanje' class='stanjeDa'>prijavljen je: ".$_SESSION["uname"]."</div>";
+}else{
+$uname = "<div id='stanje' class='stanjeNe'>Niste prijavljeni</div>";	
+
+}
+echo"$uname";
 ?>
