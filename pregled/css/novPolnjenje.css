@@ -1,5 +1,14 @@
 /* CSS za novPolnjenje.HTML*/
 
+#druga {
+display: none;	
+}
+#tretja {
+display: none;	
+}
+#cetrta {
+display: none;	
+}
 
 h1 {
   text-align: center;
@@ -99,7 +108,7 @@ fieldset.zacetek  {
 
 div.glavna {
   position: relative;
-  margin-top: 50px;
+  margin-top: 70px;
   padding: 0px 20px;
   max-width:1000px; 
   background-color: lightblue;  
