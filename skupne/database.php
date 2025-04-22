@@ -351,7 +351,7 @@ public function suma($tabulka, $sloupce, $podminka = NULL){
 //............konec sum............................................................	
 
 
-//..........začetek celoImeNbsp.................
+//..........začetek ciscenje.................
 public function ciscenje($tabulka='bolnikTbl', $sloupce='imeZdravnika'){
 $dotaz = $this->conn->prepare("UPDATE $tabulka SET $sloupce = REPLACE($sloupce, ' ', UNHEX('C2A0'))  ");
 var_dump($dotaz);
@@ -367,6 +367,55 @@ try {
 $dotaz->closeCursor();
 return $zaznamy;	
 }//konec function ciscenje
-//........konec celoImeNbsp.....................
+//........konec ciscenje.....................
+
+//.........začetek otroska...................
+public function otroska($tabulka, $sloupce, $podminka, $poradi){
+	$sloupceSQL = implode(', ', $sloupce);
+	//echo '<br>'.$sloupceSQL;
+	$podminkaSQL = '';
+	$parametry = array();
+	$poradiSQL = '';
+       if (is_array($podminka)){
+		$i = 0;
+		foreach ($podminka as $sloupec=>$hodnota){
+			if ($i == 0){
+				$podminkaSQL .=" WHERE $sloupec ?";				
+			}else {
+				$podminkaSQL .=" AND $sloupec  ?";
+			}
+			$parametry[$i] = $hodnota;
+			$i++;
+		}
+	}
+	if ($poradi!=NULL){
+	   $poradiSQL = " ORDER BY " . $poradi;	
+	}
+
+	/* echo "Poradi: ".$poradiSQL;
+	 echo '<br>';
+	 echo" parametry: ". var_dump($parametry) . "<br>";
+	 echo " Podminka: ".var_dump($podminka) . "<br>";
+	 echo " podminkaSQL: ".var_dump($podminkaSQL );*/
+	$dotaz = $this->conn->prepare("SELECT $sloupceSQL FROM $tabulka $podminkaSQL $poradiSQL DESC LIMIT 1");
+	//var_dump($dotaz);
+	try {
+		$dotaz->execute($parametry);		
+		$zaznamy = $dotaz->fetchAll(PDO::FETCH_ASSOC);
+		//echo '<br>v try vyber';
+	  }catch (PDException $e) {
+		  echo $e->getMessage();
+		  $zaznamy = false;
+	  }
+	  
+	  $dotaz->closeCursor();
+	  //var_dump($zaznamy);
+	  return $zaznamy;	
+	
+}//konec function otroska
+//.........konec otroska.....................
+
+
 
 }//uzavírací zavorky class Database
+

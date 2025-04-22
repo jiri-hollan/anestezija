@@ -8,6 +8,7 @@ echo'
 <meta charset="UTF-8">
 <title>Novi bolnik</title>
 <link rel="shortcut icon" href="../favicon.ico?'.time().'">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="js/vpis.js?'.time().'"></script>
 <script src="js/report.js?'.time().'"></script>
 <script src="js/prenos.js?'.time().'"></script>
@@ -19,9 +20,11 @@ echo'
 <script src="js/obnovaForme.js?'.time().'"></script>
 <script src="js/vypocty.js?'.time().'"></script>
 <script src="js/sklepi.js?'.time().'"></script>
+<script src="../otroska/js/premedikacija.js?'.time().'"></script>
 <link rel="stylesheet" type="text/css" href="css/novPolnjenje.css?'.time().'">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css?'.time().'">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaPrenos.css?'.time().'">
+<link rel="stylesheet" type="text/css" href="../otroska/css/doziranje.css?'.time().'">
 </head>
 <body onload="vpisFunction()">';
 ?>
