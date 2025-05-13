@@ -32,6 +32,7 @@ if(isset($_GET['ucinkovina'])&&isset($_GET['teza'])&&isset($_GET['sprememba'])){
 	require_once 'sabloni/formaOtroskaPremedikacija.php';
 }
 //poskusni class Premedikace:
+/*
 class Premedikace {
 	public $ucinkovina = '';
 	public $teza = '';	
@@ -47,38 +48,38 @@ class Premedikace {
 	
 	function get_name() {
     return $this->ucinkovina;
-	}
-}//od class Premedikace
+	} 
+}//od class Premedikace  */
 
 abstract class VyberTezo {
 public $tabulka;
 public $teza;
 public $poradi;
 public function __construct( $teza, $poradi) {
-	    $this->tabulka="premedikacijaTbl";
+	    $this->tabulka="premedikacija1Tbl";
 		$this->teza = $teza;
 		$this->poradi = $poradi;	
 	    $this->podminka["teza<="] = $this->teza;
 		$this->vyber = new database();
 
-//$stolpci=["id", "teza", "midazolamDoza", "midazolamKoncentracija", "midazolamNavodila", "dexmedetomidinDoza", "dexmedetomidinKoncentracija", "dexmedetomidinNavodila", "ketaminDoza", "ketaminKoncentracija", "ketaminNavodila"];
-//echo"<tr class='glavaTable'><th>id</th><th>teza</th><th>midazolamDoza</th><th>midazolamKoncentracija</th><th>midazolamNavodila</th><th>dexmedetomidinDoza</th><th>dexmedetomidinKoncentracija</th><th>dexmedetomidinNavodila</th><th>ketaminDoza</th><th>ketaminKoncentracija</th><th>ketaminNavodila</th></tr>";
+//$stolpci=["id", "ucinkovina", "teza", "doza", "koncentracija", "navodila"];
+//echo"<tr class='glavaTable'><th>id</th><th>ucinkovina</th><th>teza</th><th>doza</th><th>koncentracija</th><th>navodila</th></tr>";
  }//od construct  
 }//od class VyberTezo
 //CCCCCCCCCCCCC KONEC  CLASS VyberTezo CCCCCCCCCCCCCCCCCCCCCCCCCCC
  class Midazolam extends VyberTezo {
 	    public function __construct( $teza, $poradi) {
         parent::__construct( $teza, $poradi);
-
-		$stolpci=["id", "teza", "midazolamDoza", "midazolamKoncentracija", "midazolamNavodila"];
+        $this->podminka+= ["ucinkovina=" => "midazolam"];
+		$stolpci=["id", "ucinkovina", "teza", "doza", "koncentracija", "navodila"];
         $this->vybrano=$this->vyber->otroska($this->tabulka,$stolpci, $this->podminka, $this->poradi );
     }//od construct
 public function izracunFunction() {
 	if(count($this->vybrano)>0){
-	 $dozaMg=$this->vybrano[0]["midazolamDoza"]*$this->teza;
-	  $dozaMl= round($dozaMg/$this->vybrano[0]['midazolamKoncentracija'],1);
+	 $dozaMg=$this->vybrano[0]["doza"]*$this->teza;
+	  $dozaMl= round($dozaMg/$this->vybrano[0]['koncentracija'],1);
 	  $premedikacija = "Midazolam $dozaMg mg to je $dozaMl ml";	  
-	  $navodila=$this->vybrano[0]["midazolamNavodila"];
+	  $navodila=$this->vybrano[0]["navodila"];
 	  $navodila= "$navodila oralno"; 
 	  echo json_encode([
 			"premedikacija" => $premedikacija,
@@ -92,11 +93,11 @@ public function izracunFunction() {
 }//od class Midazolam
 /*...........................................................................*/
 
- class dexmedetomidin extends VyberTezo {
+ class Dexmedetomidin extends VyberTezo {
 	 	     public function __construct( $teza, $poradi) {
         parent::__construct( $teza, $poradi);
-
-		$stolpci=["id", "teza", "dexmedetomidinDoza", "dexmedetomidinKoncentracija", "dexmedetomidinNavodila"];
+        $this->podminka+= ["ucinkovina=" => "dexmedetomidin"];
+		$stolpci=["id", "ucinkovina", "teza", "doza", "koncentracija", "navodila"];
         $this->vybrano=$this->vyber->otroska($this->tabulka,$stolpci, $this->podminka, $this->poradi );
 //echo $this->vybrano[1];
 //echo var_dump($this->vybrano);
@@ -109,15 +110,15 @@ public function izracunFunction() {
     }//od construct
 	public function izracunFunction() {
 	if(count($this->vybrano)>0){
-	 $dozaMg=$this->vybrano[0]["dexmedetomidinDoza"]*$this->teza;
-	  $dozaMl= round($dozaMg/$this->vybrano[0]['dexmedetomidinKoncentracija'],1);
+	 $dozaMg=$this->vybrano[0]["doza"]*$this->teza;
+	  $dozaMl= round($dozaMg/$this->vybrano[0]['koncentracija'],1);
 	  if($dozaMl>=0.6){
 		 $premedikacija = "Dexmedetomidin $dozaMg mg to je $dozaMl ml razpodelimo v obe nosnici"; 
 	  }else{
 		 $premedikacija = "Dexmedetomidin $dozaMg mg to je $dozaMl ml";  
 	  }
 	  //$premedikacija = "Dexmedetomidin $dozaMg mg to je $dozaMl ml";	  
-	  $navodila=$this->vybrano[0]["dexmedetomidinNavodila"];
+	  $navodila=$this->vybrano[0]["navodila"];
 	  $navodila = "$navodila nasalno";
 	  echo json_encode([
 			"premedikacija" => $premedikacija,
@@ -134,8 +135,8 @@ public function izracunFunction() {
  class Ketamin extends VyberTezo {
 	 	     public function __construct( $teza, $poradi) {
         parent::__construct( $teza, $poradi);
-
-		$stolpci=["id", "teza", "ketaminDoza", "ketaminKoncentracija", "ketaminNavodila"];
+        $this->podminka+= ["ucinkovina=" => "ketamin"];
+		$stolpci=["id", "ucinkovina", "teza", "doza", "koncentracija", "navodila"];
         $this->vybrano=$this->vyber->otroska($this->tabulka,$stolpci, $this->podminka, $this->poradi );
 //echo $this->vybrano[1];
 //echo var_dump($this->vybrano);
@@ -147,11 +148,11 @@ public function izracunFunction() {
 
     }//od construct
 	public function izracunFunction() {
-	if(count($this->vybrano)>0&& $this->vybrano[0]['ketaminKoncentracija']>0){
-	 $dozaMg=$this->vybrano[0]["ketaminDoza"]*$this->teza;
-	  $dozaMl= round($dozaMg/$this->vybrano[0]['ketaminKoncentracija'],1);
+	if(count($this->vybrano)>0&& $this->vybrano[0]['koncentracija']>0){
+	 $dozaMg=$this->vybrano[0]["doza"]*$this->teza;
+	  $dozaMl= round($dozaMg/$this->vybrano[0]['koncentracija'],1);
 	  $premedikacija = "Ketamin $dozaMg mg to je $dozaMl ml";	  
-	  $navodila=$this->vybrano[0]["ketaminNavodila"];
+	  $navodila=$this->vybrano[0]["navodila"];
 	  $navodila= "$navodila oralno"; 
 	  
 	

@@ -60,7 +60,7 @@ function ajax_get_premedikacija(elem) {
 	var teza = $("#teza").val();
 	var sprememba = $("#sprememba").val();	
 	$.ajax({
-		url: "/anestiz/otroska/otroskaPremedikacija.php",
+		url: "/delo/otroska/otroskaPremedikacija1.php",
 		data: {
 			"ucinkovina": ucinkovina,
 			"teza": teza,

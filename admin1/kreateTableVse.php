@@ -36,8 +36,9 @@ echo '
    <label for="opravilo"><span class="imenaFilov">opravilo</span></label>
    <input type="radio" id="opravilo" name="name" value="opravilo"> 
    
-   <label for="premedikacija"><span class="imenaFilov">premedikacija</span></label>
-   <input type="radio" id="premedikacija" name="name" value="premedikacija"> 
+ 
+   <label for="premedikacija1"><span class="imenaFilov">premedikacija1</span></label>
+   <input type="radio" id="premedikacija1" name="name" value="premedikacija1"> 
  
    <input type="hidden" name="nazaj" value='. $nazaj.'>
   <br><br>
@@ -199,23 +200,16 @@ $definice= " id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 $databaseGloboka->naredi('opravilaTbl', $definice);	
 break;
 
-case "premedikacija":
+case "premedikacija1":
 $definice= " 
   `id` INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  `ucinkovina` varchar(225) DEFAULT NULL,  
   `teza` int(3) DEFAULT NULL,
-  `midazolamDoza` decimal(3,1) DEFAULT NULL,
-  `midazolamKoncentracija` decimal(3,1) DEFAULT NULL,
-  `midazolamNavodila` varchar(225) DEFAULT NULL,
-  `dexmedetomidinDoza` decimal(3,1) DEFAULT NULL,
-  `dexmedetomidinKoncentracija` decimal(3,1) DEFAULT NULL,
-  `dexmedetomidinNavodila` varchar(225) DEFAULT NULL,
-  `ketaminDoza` decimal(3,1) DEFAULT NULL,
-  `ketaminKoncentracija` decimal(3,1)  DEFAULT NULL,
-  `ketaminNavodila` varchar(225) DEFAULT NULL";
-
-$databaseGloboka->naredi('premedikacijaTbl', $definice);	
+  `doza` decimal(3,1) DEFAULT NULL,
+  `koncentracija` decimal(3,1) DEFAULT NULL,
+  `navodila` varchar(225) DEFAULT NULL";  
+$databaseGloboka->naredi('premedikacija1Tbl', $definice);	
 break;
-
 /*
 case "":
 $definice= "";
