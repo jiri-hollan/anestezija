@@ -8,17 +8,20 @@ $podminka=[""];
 $vyber = new database();
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
-//echo var_dump($vybrano);
+echo var_dump($vybrano);
 echo "<br>";
 try {
 //---------------------prikaže izbiro vnešenega besedila iz podatkov v bazi "navodila" tabela "besedilaTbl"------------------	
-
-echo '<ul id= "navodilaId">';
- foreach ($vybrano as $value) {
-  //var_dump($value);
-  echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
-}
-echo '</ul>';
+switch ($value["tematika"]){
+  case "COVID":
+    echo '<ul id= "navodilaId">';
+    foreach ($vybrano as $value) {
+//var_dump($value);
+        echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
+      }
+    echo '</ul>';
+  break;
+		}
     }
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
