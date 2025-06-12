@@ -8,20 +8,37 @@ $podminka=[""];
 $vyber = new database();
 $vybrano=$vyber->vyber($tabulka, $stolpci, $podminka );
 //echo $vybrano[1];
-echo var_dump($vybrano);
+//echo var_dump($vybrano);
 echo "<br>";
 try {
-//---------------------prikaže izbiro vnešenega besedila iz podatkov v bazi "navodila" tabela "besedilaTbl"------------------	
-switch ($value["tematika"]){
-  case "COVID":
-    echo '<ul id= "navodilaId">';
+//---------------------prikaže izbiro vnešenega besedila iz podatkov v bazi "navodila" tabela "besedilaTbl"------------------
+    $teme=array();
+    foreach ($vybrano as $value) {
+		$teme[] = $value["tematika"];
+		$teme = array_unique($teme);
+		}
+//echo var_dump($teme);
+//echo $value["tematika"];
+
+
+
+    echo '<ul class= "navodilaId">';
     foreach ($vybrano as $value) {
 //var_dump($value);
+if($value["tematika"]=="COVID"){
         echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
       }
-    echo '</ul>';
-  break;
-		}
+}
+    echo '</ul><br>';
+	
+    echo '<ul class= "navodilaId">';
+    foreach ($vybrano as $value) {
+//var_dump($value);
+if($value["tematika"]=="cellsaver"){
+        echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
+      }
+}
+    echo '</ul>';	
     }
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();

@@ -12,12 +12,16 @@
     //outline: #4CAF50 solid 3px;
 border-radius: 12%;  
 }
-#navodilaId {
+/*#navodilaId {
+  position: fixed;
+  font-size: 2em;
+  list-style-type: none;
+}*/
+.navodilaId {
   position: fixed;
   font-size: 2em;
   list-style-type: none;
 }
-
 
 a:hover {
   color: red;
