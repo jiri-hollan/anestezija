@@ -26,7 +26,7 @@ echo'<nav id= "navodilaNav">
 /********v seznamu prikaže tematike iz baze ********/
 foreach ($teme as $value){
 //echo $value;	
-echo'<li><a href="navodilaKovid.php?tematika='.$value.'">'.$value.'</a> </li>';
+echo'<li><a href="navodila.php?tematika='.$value.'">'.$value.'</a> </li>';
 }
 echo'</ul></nav>';
 require_once '../skupne/sabloni/zapati.php';
