@@ -25,7 +25,7 @@ try {
     echo '<ul class= "navodilaId">';
     foreach ($vybrano as $value) {
 //var_dump($value);
-if($value["tematika"]=="COVID"){
+if($value["tematika"]=="Kovid"){
         echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
       }
 }
@@ -34,7 +34,7 @@ if($value["tematika"]=="COVID"){
     echo '<ul class= "navodilaId">';
     foreach ($vybrano as $value) {
 //var_dump($value);
-if($value["tematika"]=="cellsaver"){
+if($value["tematika"]=="Cellsaver"){
         echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
       }
 }
