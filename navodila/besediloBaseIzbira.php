@@ -20,12 +20,12 @@ try {
 //echo var_dump($teme);
 //echo $value["tematika"];
 
-
+$tematika=$_GET['tematika'];
 
     echo '<ul class= "navodilaId">';
     foreach ($vybrano as $value) {
 //var_dump($value);
-if($value["tematika"]=="Kovid"){
+if($value["tematika"]==$tematika){
         echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
       }
 }
@@ -34,11 +34,13 @@ if($value["tematika"]=="Kovid"){
     echo '<ul class= "navodilaId">';
     foreach ($vybrano as $value) {
 //var_dump($value);
+/*
 if($value["tematika"]=="Cellsaver"){
         echo '<li><a href= "' . $value["direktorij"] . $value["fajl"] . '" >' . $value["naslov"] . '</a></li>';
-      }
+      }*/
 }
-    echo '</ul>';	
+    echo '</ul>';
+	
     }
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
