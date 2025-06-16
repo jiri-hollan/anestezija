@@ -1,6 +1,6 @@
 <?php
 	
-require_once '../../skupne/database.php';
+require_once '../skupne/database.php';
 
 if(isset($_GET['ucinkovina'])&&isset($_GET['teza'])&&isset($_GET['sprememba'])){
 	$ucinkovina=$_GET['ucinkovina'];
