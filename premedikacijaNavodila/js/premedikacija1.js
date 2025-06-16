@@ -51,11 +51,12 @@ function premedikacijaFunction(premedikacija, navodila){
      document.getElementById("pomoc").style.display = "block";
      document.getElementById("submitFrm").style.display = "none";
 	 document.getElementById("najdiZapis").style.display = "none";
+*/	 
 }
-*/
+
 
 function ajax_get_premedikacija(elem) {
-	$elem = $(elem);
+	$elem = $(elem);	
 	var ucinkovina = $elem.val();
 	var teza = $("#teza").val();
 	var sprememba = $("#sprememba").val();	
