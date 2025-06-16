@@ -1,6 +1,6 @@
 <?php
 require_once '../skupne/database.php';
-require_once 'sabloni/zahlavi.php';
+require_once 'sabloni/vkladane/zahlavi.php';
 require_once '../skupne/home.php';
 echo '<a id="buttonDomov" href="' . $home . '" >Domov</a>';
 //----------prijavni podatki za podatkovno bazo odvisno od uporabljenega strežnika------
