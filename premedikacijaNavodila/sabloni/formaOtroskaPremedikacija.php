@@ -11,7 +11,7 @@
       <input  onclick='ajax_get_premedikacija(this);' type='radio' id='ketaminId' class='ucinkovina' name='ucinkovina' value='ketamin'>
        <label for='ketaminId'>ketamin</label><br>	  
       <label for='tezaPremedikacijaId'><b>Teža: </b></label>
-      <input id='tezaPremedikacijaId' class='udaje' type = 'text' name='teza' value='1'  size="1" maxlength="4">kg
+      <input id='tezaPremedikacijaId' class='udaje' type = 'text' name='teza' value='2'  size="1" maxlength="4">kg
 	  <br>
 	  <label for="sprememba">Sprememba doze: <span id="faktorId"></span></label>
 	  <input type="range" id="sprememba" name="sprememba" min="0.5" max="2" step="0.1" value="1" list="tickmarks">
