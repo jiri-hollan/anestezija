@@ -58,7 +58,7 @@ function premedikacijaFunction(premedikacija, navodila){
 function ajax_get_premedikacija(elem) {
 	$elem = $(elem);	
 	var ucinkovina = $elem.val();
-	var teza = $("#teza").val();
+	var teza = $("#tezaPremedikacijaId").val();
 	var sprememba = $("#sprememba").val();	
 	$.ajax({
 		url: "/anestiz/premedikacijaNavodila/otroskaPremedikacija1.php",
