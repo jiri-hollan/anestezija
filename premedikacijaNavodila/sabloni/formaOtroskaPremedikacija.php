@@ -1,8 +1,8 @@
 
-<div id='doziranje'  class='modal'>
-<form id='otroskaFrm' class="modal-content animate" name='otroskaForma' method='post' action='premedikacija.php' autocomplete='off'> 
+<div id='doziranje' >
+<form id='otroskaFrm'  name='otroskaForma' method='post' action='premedikacija.php' autocomplete='off'> 
   <div class="container">
-  	  <button type="button" onclick="document.getElementById('doziranje').style.display='none'"class="close" title="zapri">&times;</button>
+  	 <!-- <button type="button" onclick="document.getElementById('doziranje').style.display='none'"class="close" title="zapri">&times;</button>-->
       <h3>Otroška premedikacija</h3>
       <input  onclick='ajax_get_premedikacija(this);' type='radio' id='midazolamId' class='ucinkovina' name='ucinkovina' value='midazolam'>
 	   <label for='midazolamId'>midazolam</label><br>
