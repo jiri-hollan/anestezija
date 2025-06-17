@@ -1,4 +1,4 @@
-
+/*
 function posli(){
 	document.getElementById('otroskaFrm').submit();
 }
@@ -9,7 +9,7 @@ function premedikacijaFunction(premedikacija, navodila){
 	alert('premedikacija');
 	console.log(document.getElementById('navodila').innerHTML); 
 }
-
+*/
 
 function ajax_get_premedikacija(elem) {
 	$elem = $(elem);	
