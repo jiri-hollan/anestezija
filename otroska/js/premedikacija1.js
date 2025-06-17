@@ -30,11 +30,12 @@ window.onclick = function(event) {
 }//od window.onclick
 }//od function schovej
 
-
+/*
 function posli(){
 	document.getElementById('otroskaFrm').submit();
 }
-
+*/
+/*
 function premedikacijaFunction(premedikacija, navodila){
 	document.getElementById('premedPredOp').value= premedikacija;
 	document.getElementById('navodila').value= navodila;
@@ -52,7 +53,7 @@ function premedikacijaFunction(premedikacija, navodila){
      document.getElementById("submitFrm").style.display = "none";
 	 document.getElementById("najdiZapis").style.display = "none";
 }
-
+*/
 
 function ajax_get_premedikacija(elem) {
 	$elem = $(elem);
