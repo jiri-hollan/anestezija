@@ -39,5 +39,8 @@ body {
 .prikaz {
 	font-size: 20px; 
  	border: 3px solid #ccc; 
+	border-radius: 5px;
 	width: 50%;
+	min-height: 20px;
+	padding: 5px 5px;
 }
