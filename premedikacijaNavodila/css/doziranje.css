@@ -1,41 +1,14 @@
-/*
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 	}
-*/
 
 #faktorId {
 	 font-size: 30px;
 }
 
-/*
-.modal input[type=text] {
-  width: 60px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  color: red;
-}
-*/
-/* Add a background color when the inputs get focus */
-/*
-input[type=text]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-input.udaje { 
-  float: left;
-  width: 50%;
-  display: inline;
- 
-}
-*/
-
 /* Set a style for all buttons */
-/*
+
 .knof{
   background-color: #4CAF50;
   color: white;
@@ -46,49 +19,15 @@ input.udaje {
   width: 100%;
   opacity: 0.9;
 }
-*/
+
 .knof,.cancelbtn,.potrdiBtn:hover {
   opacity:1;
-}
-
-
-/* Add Zoom Animation */
-/*
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-*/
-
-/* Clear floats */
-/*
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}*/
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .potrdiBtn {
-     width: 100%;
-  }
 }
 
 #sprememba {
   width: 40%;
 }
-/*
+
 #tezaPremedikacijaId {
 	font-size: 20px;
 	padding: 5px 5px;
@@ -96,7 +35,9 @@ input.udaje {
 	box-sizing: border-box;
 	border: 3px solid #ccc;
 	outline: none;
-}*/
-prikaz {
-   font-size: 20px;  
+}
+.prikaz {
+	font-size: 20px; 
+ 	border: 3px solid #ccc; 
+	width: 50%;
 }

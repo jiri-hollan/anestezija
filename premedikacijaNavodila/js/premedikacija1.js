@@ -4,10 +4,10 @@ function posli(){
 }
 
 function premedikacijaFunction(premedikacija, navodila){
-	document.getElementById('premedPredOp').value= premedikacija;
-	document.getElementById('navodila').value= navodila;
+	document.getElementById('premedPredOp').innerHTML= premedikacija;
+	document.getElementById('navodila').innerHTML= navodila;
 	alert('premedikacija');
-	console.log(document.getElementById('navodila').value); 
+	console.log(document.getElementById('navodila').innerHTML); 
 }
 
 
@@ -32,8 +32,8 @@ function ajax_get_premedikacija(elem) {
 		if (rsp.error !== undefined && rsp.error.length !== 0) {
 			alert(rsp.error);
 		} else {
-			$("#navodila").val(rsp.navodila);
-			$("#premedPredOp").val(rsp.premedikacija);
+			$("#navodila").html(rsp.navodila);
+			$("#premedPredOp").html(rsp.premedikacija);
 		}
 		
 	});

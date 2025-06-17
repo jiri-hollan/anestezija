@@ -1,6 +1,6 @@
 <?php
 echo'
-    <textarea id="navodila" class="prikaz"  name="navodila" placeholder="Navodila" rows="8"  ></textarea>
-	 <textarea id="premedPredOp" class="prikaz"  name="premedPredOp" rows="8" ></textarea>
+    <div id="navodila" class="prikaz"  name="navodila"  ></div>
+	 <div id="premedPredOp" class="prikaz"  name="premedPredOp" ></div>
 ';
 ?>
