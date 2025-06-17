@@ -17,7 +17,7 @@ function ajax_get_premedikacija(elem) {
 	var teza = $("#tezaPremedikacijaId").val();
 	var sprememba = $("#sprememba").val();	
 	$.ajax({
-		url: "/anestiz/premedikacijaNavodila/otroskaPremedikacija1.php",
+		url: "/premedikacijaNavodila/otroskaPremedikacija1.php",
 		data: {
 			"ucinkovina": ucinkovina,
 			"teza": teza,
