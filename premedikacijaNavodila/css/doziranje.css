@@ -95,13 +95,11 @@ input.udaje {
 /*
 #tezaPremedikacijaId {
 	font-size: 20px;
- padding: 5px 5px;
- margin: 5px 5px;
- box-sizing: border-box;
- border: 3px solid #ccc;
- webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
+	padding: 5px 5px;
+	margin: 5px 5px;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	outline: none;
 }*/
 prikaz {
    font-size: 20px;  

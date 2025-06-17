@@ -22,7 +22,7 @@ echo "<br>";
 //echo var_dump($teme);
 //echo $value["tematika"];
 echo'<nav id= "navodilaNav">
-<ul class= "navodilaId">';
+<ul class= "navodilaCl">';
 /********v seznamu prikaže tematike iz baze ********/
 foreach ($teme as $value){
 //echo $value;	

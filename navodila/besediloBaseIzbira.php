@@ -22,7 +22,7 @@ try {
 
 $tematika=$_GET['tematika'];
 
-    echo '<ul class= "navodilaId">';
+    echo '<ul class= "navodilaCl">';
     foreach ($vybrano as $value) {
 //var_dump($value);
 if($value["tematika"]==$tematika){
@@ -31,7 +31,7 @@ if($value["tematika"]==$tematika){
 }
     echo '</ul><br>';
 	
-    echo '<ul class= "navodilaId">';
+    echo '<ul class= "navodilaCl">';
     foreach ($vybrano as $value) {
 //var_dump($value);
 /*
