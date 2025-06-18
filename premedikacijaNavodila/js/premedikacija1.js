@@ -11,11 +11,35 @@ function premedikacijaFunction(premedikacija, navodila){
 }
 */
 
-function ajax_sprememba(){
-	var ucinkovina = $("input[name='ucinkovina']").val();	
+function ajax_sprememba(){    $(":radio:checked")
+	var ucinkovina = $(".ucinkovina:radio:checked").val();		
+//	var ucinkovina = $(":radio:checked").val();	
+//	var ucinkovina = $("input[name='ucinkovina']:checked").val();	
 	var teza = $("#tezaPremedikacijaId").val();
 	var sprememba = $("#sprememba").val();
-alert(ucinkovina);	
+//alert(ucinkovina);	
+	$.ajax({
+		//url: "/premedikacijaNavodila/otroskaPremedikacija1.php",
+		url: "/anestiz/premedikacijaNavodila/otroskaPremedikacija1.php",
+		data: {
+			"ucinkovina": ucinkovina,
+			"teza": teza,
+			"sprememba": sprememba
+	 	},
+		method: "GET",
+		dataType: "json",
+		cache: false,
+
+	})
+	.done(function( rsp ) {
+		if (rsp.error !== undefined && rsp.error.length !== 0) {
+			alert(rsp.error);
+		} else {
+			$("#navodila").html(rsp.navodila);
+			$("#premedPredOp").html(rsp.premedikacija);
+		}
+		
+	});
 }
 
 function ajax_get_premedikacija(elem) {
