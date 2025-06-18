@@ -1,5 +1,5 @@
 
-function ajax_sprememba(){    $(":radio:checked")
+function ajax_sprememba(){
 	var ucinkovina = $(".ucinkovina:radio:checked").val();		
 //	var ucinkovina = $(":radio:checked").val();	
 //	var ucinkovina = $("input[name='ucinkovina']:checked").val();	
