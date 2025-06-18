@@ -14,7 +14,8 @@ function premedikacijaFunction(premedikacija, navodila){
 function ajax_sprememba(){
 	var ucinkovina ;	
 	var teza = $("#tezaPremedikacijaId").val();
-	var sprememba = $("#sprememba").val();	
+	var sprememba = $("#sprememba").val();
+alert(sprememba);	
 }
 
 function ajax_get_premedikacija(elem) {
