@@ -11,6 +11,12 @@ function premedikacijaFunction(premedikacija, navodila){
 }
 */
 
+function ajax_sprememba(){
+	var ucinkovina ;	
+	var teza = $("#tezaPremedikacijaId").val();
+	var sprememba = $("#sprememba").val();	
+}
+
 function ajax_get_premedikacija(elem) {
 	$elem = $(elem);	
 	var ucinkovina = $elem.val();
@@ -22,7 +28,7 @@ function ajax_get_premedikacija(elem) {
 			"ucinkovina": ucinkovina,
 			"teza": teza,
 			"sprememba": sprememba
-		},
+	 	},
 		method: "GET",
 		dataType: "json",
 		cache: false,

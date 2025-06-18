@@ -14,7 +14,7 @@
       <input id='tezaPremedikacijaId' class='udaje' type = 'text' name='teza' value='2'  size="1" maxlength="4">kg
 	  <br>
 	  <label for="sprememba">Sprememba doze: <span id="faktorId"></span></label>
-	  <input type="range" id="sprememba" name="sprememba" min="0.5" max="2" step="0.1" value="1" list="tickmarks">
+	  <input onchange="ajax_sprememba();" type="range" id="sprememba" name="sprememba" min="0.5" max="2" step="0.1" value="1" list="tickmarks">
 	  <datalist id="tickmarks">
 		<option value="0.5"></option>
 		<option value="1"></option>
