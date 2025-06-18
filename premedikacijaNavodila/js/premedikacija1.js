@@ -1,15 +1,3 @@
-/*
-function posli(){
-	document.getElementById('otroskaFrm').submit();
-}
-
-function premedikacijaFunction(premedikacija, navodila){
-	document.getElementById('premedPredOp').innerHTML= premedikacija;
-	document.getElementById('navodila').innerHTML= navodila;
-	alert('premedikacija');
-	console.log(document.getElementById('navodila').innerHTML); 
-}
-*/
 
 function ajax_sprememba(){    $(":radio:checked")
 	var ucinkovina = $(".ucinkovina:radio:checked").val();		
@@ -17,8 +5,20 @@ function ajax_sprememba(){    $(":radio:checked")
 //	var ucinkovina = $("input[name='ucinkovina']:checked").val();	
 	var teza = $("#tezaPremedikacijaId").val();
 	var sprememba = $("#sprememba").val();
-//alert(ucinkovina);	
-	$.ajax({
+	ajax_aktualizuj(ucinkovina, teza, sprememba);	
+}
+
+function ajax_get_premedikacija(elem) {
+	$elem = $(elem);	
+	var ucinkovina = $elem.val();
+	var teza = $("#tezaPremedikacijaId").val();
+	var sprememba = $("#sprememba").val();
+	ajax_aktualizuj(ucinkovina, teza, sprememba);
+}
+
+function ajax_aktualizuj(ucinkovina, teza, sprememba){
+		$.ajax({
+		//za web
 		//url: "/premedikacijaNavodila/otroskaPremedikacija1.php",
 		url: "/anestiz/premedikacijaNavodila/otroskaPremedikacija1.php",
 		data: {
@@ -37,35 +37,6 @@ function ajax_sprememba(){    $(":radio:checked")
 		} else {
 			$("#navodila").html(rsp.navodila);
 			$("#premedPredOp").html(rsp.premedikacija);
-		}
-		
-	});
-}
-
-function ajax_get_premedikacija(elem) {
-	$elem = $(elem);	
-	var ucinkovina = $elem.val();
-	var teza = $("#tezaPremedikacijaId").val();
-	var sprememba = $("#sprememba").val();	
-	$.ajax({
-		url: "/anestiz/premedikacijaNavodila/otroskaPremedikacija1.php",
-		data: {
-			"ucinkovina": ucinkovina,
-			"teza": teza,
-			"sprememba": sprememba
-	 	},
-		method: "GET",
-		dataType: "json",
-		cache: false,
-
-	})
-	.done(function( rsp ) {
-		if (rsp.error !== undefined && rsp.error.length !== 0) {
-			alert(rsp.error);
-		} else {
-			$("#navodila").html(rsp.navodila);
-			$("#premedPredOp").html(rsp.premedikacija);
-		}
-		
-	});
+		}		
+	});	
 }
