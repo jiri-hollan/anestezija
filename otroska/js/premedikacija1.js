@@ -54,13 +54,27 @@ function premedikacijaFunction(premedikacija, navodila){
 	 document.getElementById("najdiZapis").style.display = "none";
 }
 */
+function ajax_sprememba(){
+	var ucinkovina = $(".ucinkovina:radio:checked").val();		
+//	var ucinkovina = $(":radio:checked").val();	
+//	var ucinkovina = $("input[name='ucinkovina']:checked").val();	
+	var teza = $("#tezaPremedikacijaId").val();
+	var sprememba = $("#sprememba").val();
+	ajax_aktualizuj(ucinkovina, teza, sprememba);	
+}
 
 function ajax_get_premedikacija(elem) {
 	$elem = $(elem);
 	var ucinkovina = $elem.val();
 	var teza = $("#teza").val();
 	var sprememba = $("#sprememba").val();	
-	$.ajax({
+		ajax_aktualizuj(ucinkovina, teza, sprememba);	
+}
+
+function ajax_aktualizuj(ucinkovina, teza, sprememba){
+		$.ajax({
+			//za web
+		//url: "/otroska/otroskaPremedikacija1.php",	
 		url: "/anestiz/otroska/otroskaPremedikacija1.php",
 		data: {
 			"ucinkovina": ucinkovina,
