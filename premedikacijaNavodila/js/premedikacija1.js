@@ -12,10 +12,10 @@ function premedikacijaFunction(premedikacija, navodila){
 */
 
 function ajax_sprememba(){
-	var ucinkovina ;	
+	var ucinkovina = $("input[name='ucinkovina']").val();	
 	var teza = $("#tezaPremedikacijaId").val();
 	var sprememba = $("#sprememba").val();
-alert(sprememba);	
+alert(ucinkovina);	
 }
 
 function ajax_get_premedikacija(elem) {
