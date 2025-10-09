@@ -172,7 +172,7 @@ function editFunction($podminka){
 
 }	 
      if($key=="upstatus"||$key=="pristop"||$key=="gdpr"||$key=="stevilkaZdravnika"){	
-	  echo " $key: <input name=$key value=$value \n></input>";
+	  echo "<br>$key: <input name=$key value=$value \n></input>";
 }	
 }//od foreach
    echo "<input type='hidden' name='akce' value='uredi'></input><br><br><button type='submit'>submit</button><button type='reset'>reset</button> ";
