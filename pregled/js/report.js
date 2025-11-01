@@ -279,11 +279,11 @@ return m;
 //............................................izvidiFunction ureja besedilni opis stanja...................................
 function izvidiFunction(m,n)
 {
-if (m.length > 0) {
-   alert(m.length + m);
-   m =  n + "<span class='besedilo'> &emsp;"  + m + "</span><br><br>";  
+if (m.length == 0) {
+	  m = "";
 }else {
-  m = "";
+	alert(m.length + m);
+	m =  n + "<span class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
     }
 return m;
 
