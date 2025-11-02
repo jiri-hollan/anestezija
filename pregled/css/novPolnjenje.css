@@ -279,6 +279,9 @@ div.velka{
   max-height: 200px;	
 }
 */
+  #izvid1 {
+	font-size: 0.8em;  
+  }
   .premedikacija {
   resize: none;
   width: 30%;
