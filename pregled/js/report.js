@@ -282,11 +282,11 @@ function izvidiFunction(m,n)
 if (m.length == 0) {
 	  m = "";
 }else if (m.length > 2500){
-	alert(m.length + 'več kot 2500 ' + m);
+	//alert(m.length + 'več kot 2500 ' + m);
 	m =  n + "<span id='izvid1' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
     
 }else {
-	alert(m.length + m);
+	//alert(m.length + m);
 	m =  n + "<span class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
     }
 return m;
