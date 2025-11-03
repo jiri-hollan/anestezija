@@ -290,7 +290,7 @@ if (m.length == 0) {
         
 }else {
 	//alert(m.length + m);
-	m =  n + "<span id='izvid'  class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
+	m =  n + "<span id='izvid0'  class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
     }
 return m;
 
