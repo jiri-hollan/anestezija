@@ -274,17 +274,7 @@ textarea.velka {
   background-color: #f8f8f8;
   resize: none;
 }
-/*
-div.velka{
-  max-height: 200px;	
-}
-*/
-  #izvid1 {
-	font-size: 0.8em;  
-  }
-  #izvid2 {
-	font-size: 0.7em;  
-  }  
+
   .premedikacija {
   resize: none;
   width: 30%;
