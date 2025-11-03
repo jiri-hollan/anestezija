@@ -190,12 +190,14 @@ div.velka{
 }
 */
   #izvid1 {
-	font-size: 0.8em;  
+	font-size: 0.9em;  
   }
   #izvid2 {
+	font-size: 0.8em;  
+  }  
+  #izvid3 {
 	font-size: 0.7em;  
   }  
-
 #premedikacijaR {
     position: absolute;
     bottom: 1.5cm;
