@@ -281,10 +281,10 @@ function izvidiFunction(m,n)
 {
 if (m.length == 0) {
 	  m = "";
-}else if (m.length > 3000){
+}else if (m.length > 2000){
 	//alert(m.length + 'več kot 3000 ' + m);
 	m =  n + "<span id='izvid2' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
-}else if (m.length > 2500){
+}else if (m.length > 1500){
 	//alert(m.length + 'več kot 2500 ' + m);
 	m =  n + "<span id='izvid1' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
         
