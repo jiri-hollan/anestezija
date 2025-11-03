@@ -270,7 +270,7 @@ if (m.length == 0) {
 	  m = "";	
 }else if (m.length > 70){
 	alert(m.length + 'več kot 70 ' + m);
-	m =  n + "<span class='izvid2' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 	
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "</span><br>"; 	
 }else {
   m =  "<span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
     }
