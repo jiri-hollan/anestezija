@@ -281,15 +281,18 @@ function izvidiFunction(m,n)
 {
 if (m.length == 0) {
 	  m = "";
-}else if (m.length > 2000){
-	//alert(m.length + 'več kot 3000 ' + m);
+}else if (m.length > 1400){
+	//alert(m.length + 'več kot 1400 ' + m);
+	m =  n + "<span id='izvid3' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
+}else if (m.length > 1200){
+	//alert(m.length + 'več kot 1200 ' + m);
 	m =  n + "<span id='izvid2' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
-}else if (m.length > 1500){
-	//alert(m.length + 'več kot 2500 ' + m);
+}else if (m.length > 800){
+	//alert(m.length + 'več kot 800 ' + m);
 	m =  n + "<span id='izvid1' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
         
 }else {
-	//alert(m.length + m);
+	//alert(m.length + 'manj kot 800 ' + m);
 	m =  n + "<span id='izvid0'  class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
     }
 return m;
