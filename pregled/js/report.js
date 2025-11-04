@@ -204,7 +204,7 @@ pred = opisFunction(pred, "<hr>Predhodna terapija:" );
 
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
-
+izvidi = izvidi.replace(/^\s*$(?:\r\n?|\n)/gm, "");
 izvidi = izvidi.replace(/\n/g, "<br>&emsp;&emsp;");
 izvidi = izvidiFunction(izvidi, "<hr>");
 
