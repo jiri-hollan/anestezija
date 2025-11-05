@@ -14,7 +14,7 @@ class Administrace {
 	  }else {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/admin/';  
 	  }
-	  $casoviLimit = 600;
+	  $casoviLimit = 6;
 	  if (isset($_SESSION["uporabnikPrihlasen"])) {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
 		  if ($uplinuliCas > $casoviLimit) {
