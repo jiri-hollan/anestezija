@@ -1,6 +1,8 @@
 <?php
 require_once('administrace.php');
 require_once('sabloni/zahlavi.php');
+require_once('../koren.php');
+new Administrace($koren); 
 class MenuDelo  {
    public function __construct() {
    require_once('menuStatistika-items.php'); 

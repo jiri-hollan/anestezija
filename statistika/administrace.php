@@ -9,12 +9,13 @@ class Administrace {
 	 $this->conn = new DatabaseS();
      $this->zaklad = new stdClass();	 
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
-		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/'.$koren.'/frontend/';	 
+		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/'.$koren.'/frontend/';
+			 echo"('KOREN: '.$koren)";	 
 	  }else {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
 //echo $this->zaklad->url;
-	  $casoviLimit = 60;
+	  $casoviLimit = 10;
 	  if (isset($_SESSION["uporabnikPrihlasen"])) {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
 		  if ($uplinuliCas > $casoviLimit) {

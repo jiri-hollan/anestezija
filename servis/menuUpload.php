@@ -1,5 +1,8 @@
 <?php
 require_once('sabloni/vkladane/zahlavi.php');
+require_once('../admin/administrace.php');
+require_once('../koren.php');
+new Administrace($koren); 
 ?>
  <section class="top-bar-section">
           <!-- Right Nav Section -->
