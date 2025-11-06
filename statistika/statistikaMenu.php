@@ -2,9 +2,10 @@
 require_once('administrace.php');
 require_once('sabloni/zahlavi.php');
 require_once('../koren.php');
-new Administrace($koren); 
-class MenuDelo  {
-   public function __construct() {
+//new Administrace($koren); 
+class MenuDelo  extends Administrace {
+   public function __construct($koren) {
+	       parent::__construct($koren);	
    require_once('menuStatistika-items.php'); 
    echo '<nav class= "statistikaNav"><ul>';
   if (isset($_SESSION["upstatus"]))  {
@@ -41,7 +42,7 @@ class MenuDelo  {
 }//od class MenuDelo 
  require_once('../skupne/aktivace.php');
  if($gdpr==1){
- new MenuDelo();
+ new MenuDelo($koren);
  }else{  header('Location: ../frontend/menuFile1.php');} 
 require_once 'sabloni/prijavljenJe.php';
 require_once('sabloni/zapati.php'); 

@@ -2,6 +2,7 @@
 require_once 'administrace.php';
 require_once 'databaseS.php';
 $nazaj="statistikaMenu.php";
+require_once('../koren.php');
 require_once('sabloni/zahlavi.php');
 require_once('sabloni/formaPogoji.php');
 require_once('opraviloVsiS.php');
@@ -40,9 +41,11 @@ GROUP BY datumOpravila;
 ';
 **/
 //CCCCCCCCCCCCCCC CLASS SestevekDela  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-class SestevekDela {
+class SestevekDela extends Administrace {
 public $tabulka;
-function __construct( $podminka) {
+
+   public function __construct($koren) {
+	       parent::__construct($koren);		
 $tabulka = 'deloTbl';
 //var_dump($podminka);
  //$podminka ["datumOpravila="]=date("Y-m-d");
@@ -128,7 +131,7 @@ case 'semaforZdravnik':
 
 	$danes='"'.date("Y-m-d").'"';
 	echo"<script>pogojFunction($danes, 'vnos',$this_stevilkaZdravnika)</script>";
-new SestevekDela($podminka);
+new SestevekDela($podminka, $koren);
 	 }//od if GET
 break;
 case'semaforDatum':
@@ -159,7 +162,7 @@ case'semaforDatum':
          echo'<input type="hidden" id="stevilkaZdravnikaIdId" name="stevilkaZdravnika" value="'.$this_stevilkaZdravnika.'" form="formaPogojiId">';
          echo'ŠTEVILKA ZDRAVNIKA= '.$this_stevilkaZdravnika.'<br>'; 
 //var_dump($podminka); 
-         new SestevekDela($podminka);
+         new SestevekDela($podminka,$koren);
 	    }//od if POST 
 break;
 case'semaforPregled':
