@@ -286,6 +286,9 @@ function izvidiFunction(m,n)
 {
 if (m.length == 0) {
 	  m = "";
+}else if (m.length > 1600){
+	//alert(m.length + 'več kot 1600 ' + m);
+	m =  n + "<span class='izvid4' class='besedilo'> &emsp;"  + m + "</span><br>"; 
 }else if (m.length > 1400){
 	//alert(m.length + 'več kot 1400 ' + m);
 	m =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + m + "</span><br>"; 
