@@ -268,9 +268,12 @@ function opisFunction(m,n)
 {
 if (m.length == 0) {
 	  m = "";	
+}else if (m.length > 110){
+	//alert(m.length + 'več kot 110 ' + m);
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 
 }else if (m.length > 70){
 	//alert(m.length + 'več kot 70 ' + m);
-	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "</span><br>"; 	
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
 }else {
   m =  "<span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
     }
@@ -283,15 +286,12 @@ function izvidiFunction(m,n)
 {
 if (m.length == 0) {
 	  m = "";
-}else if (m.length > 1600){
-	//alert(m.length + 'več kot 1600 ' + m);
-	m =  n + "<span class='izvid4' class='besedilo'> &emsp;"  + m + "</span><br>"; 
 }else if (m.length > 1400){
 	//alert(m.length + 'več kot 1400 ' + m);
-	m =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
+	m =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + m + "</span><br>"; 
 }else if (m.length > 1200){
 	//alert(m.length + 'več kot 1200 ' + m);
-	m =  n + "<span class='izvid2' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
+	m =  n + "<span class='izvid2' class='besedilo'> &emsp;"  + m + "</span><br>"; 
 }else if (m.length > 800){
 	//alert(m.length + 'več kot 800 ' + m);
 	m =  n + "<span class='izvid1' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
