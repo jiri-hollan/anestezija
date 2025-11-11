@@ -206,7 +206,8 @@ pred = opisFunction(pred, "<hr>Predhodna terapija:" );
 var izvidi = document.getElementById("izvidiInOpombe").value;
 izvidi = izvidi.replace(/^\s*$(?:\r\n?|\n)/gm, "");
 izvidi = izvidi.replace(/\n/g, "<br>&emsp;&emsp;");
-izvidi = izvidiFunction(izvidi, "<hr>");
+const novaLinija = (izvidi.match(new RegExp("<br>", "g")) || []).length;
+izvidi = izvidiFunction(izvidi, "<hr>",novaLinija );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
@@ -282,9 +283,10 @@ return m;
 }
  
 //............................................izvidiFunction ureja besedilni opis stanja...................................
-function izvidiFunction(m,n)
+function izvidiFunction(izvidi,n,novaLinija)
 {
-if (m.length == 0) {
+let m =	izvidi.length + 70 * novaLinija;
+if (izvidi.length == 0) {
 	  m = "";
 }else if (m.length > 1400){
 	alert(m.length + 'več kot 1400 ' + m);
