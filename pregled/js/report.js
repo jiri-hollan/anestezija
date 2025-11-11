@@ -206,7 +206,8 @@ pred = opisFunction(pred, "<hr>Predhodna terapija:" );
 var izvidi = document.getElementById("izvidiInOpombe").value;
 izvidi = izvidi.replace(/^\s*$(?:\r\n?|\n)/gm, "");
 izvidi = izvidi.replace(/\n/g, "<br>&emsp;&emsp;");
-izvidi = izvidiFunction(izvidi, "<hr>");
+const novaLinija = (izvidi.match(new RegExp("<br>", "g")) || []).length;
+izvidi = izvidiFunction(izvidi, "<hr>",novaLinija );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
@@ -282,28 +283,29 @@ return m;
 }
  
 //............................................izvidiFunction ureja besedilni opis stanja...................................
-function izvidiFunction(m,n)
+function izvidiFunction(izvidi,n,novaLinija)
 {
-if (m.length == 0) {
+let m =	izvidi.length + 30 * novaLinija;
+if (izvidi.length == 0) {
 	  m = "";
-}else if (m.length > 1600){
-	//alert(m.length + 'več kot 1600 ' + m);
-	m =  n + "<span class='izvid4' class='besedilo'> &emsp;"  + m + "</span><br>"; 
-}else if (m.length > 1400){
-	//alert(m.length + 'več kot 1400 ' + m);
-	m =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + m + "</span><br>"; 
-}else if (m.length > 1200){
-	//alert(m.length + 'več kot 1200 ' + m);
-	m =  n + "<span class='izvid2' class='besedilo'> &emsp;"  + m + "</span><br>"; 
-}else if (m.length > 800){
-	//alert(m.length + 'več kot 800 ' + m);
-	m =  n + "<span class='izvid1' class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
+}else if (m > 1600){
+	//alert(m + 'več kot 1600 ' + izvidi);
+	izvidi =  n + "<span class='izvid4' class='besedilo'> &emsp;"  + izvidi + "</span><br>"; 	  
+}else if (m > 1400){
+	//alert(m + 'več kot 1400 ' + izvidi);
+	izvidi =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + izvidi + "</span><br>"; 
+}else if (m  > 1200){
+	//alert(m  + 'več kot 1200 ' + izvidi);
+	izvidi =  n + "<span class='izvid2' class='besedilo'> &emsp;"  + izvidi + "</span><br>"; 
+}else if (m  > 800){
+	//alert(m  + 'več kot 800 ' + izvidi);
+	izvidi =  n + "<span class='izvid1' class='besedilo'> &emsp;"  + izvidi + "</span><br><br>"; 
         
 }else {
-	//alert(m.length + 'manj kot 800 ' + m);
-	m =  n + "<span class='izvid0'  class='besedilo'> &emsp;"  + m + "</span><br><br>"; 
+	//alert(m  + 'manj kot 800 ' + izvidi);
+	izvidi =  n + "<span class='izvid0'  class='besedilo'> &emsp;"  + izvidi + "</span><br><br>"; 
     }
-return m;
+return izvidi;
 
 }
 function natisniFunction() {
