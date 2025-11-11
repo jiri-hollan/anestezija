@@ -285,7 +285,7 @@ return m;
 //............................................izvidiFunction ureja besedilni opis stanja...................................
 function izvidiFunction(izvidi,n,novaLinija)
 {
-let m =	izvidi.length + 40 * novaLinija;
+let m =	izvidi.length + 30 * novaLinija;
 if (izvidi.length == 0) {
 	  m = "";
 }else if (m > 1400){
