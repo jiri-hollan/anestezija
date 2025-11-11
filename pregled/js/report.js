@@ -288,6 +288,9 @@ function izvidiFunction(izvidi,n,novaLinija)
 let m =	izvidi.length + 30 * novaLinija;
 if (izvidi.length == 0) {
 	  m = "";
+}else if (m > 1600){
+	alert(m + 'več kot 1600 ' + izvidi);
+	izvidi =  n + "<span class='izvid4' class='besedilo'> &emsp;"  + izvidi + "</span><br>"; 	  
 }else if (m > 1400){
 	alert(m + 'več kot 1400 ' + izvidi);
 	izvidi =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + izvidi + "</span><br>"; 
