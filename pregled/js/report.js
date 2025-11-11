@@ -290,10 +290,10 @@ if (izvidi.length == 0) {
 	  m = "";
 }else if (m > 1600){
 	//alert(m + 'več kot 1600 ' + izvidi);
-	izvidi =  n + "<span class='izvid4' class='besedilo'> &emsp;"  + izvidi + "<br></span>"; 	  
+	izvidi =  n + "<span class='izvid4' class='besedilo'> &emsp;"  + izvidi + "</span>"; 	  
 }else if (m > 1400){
 	//alert(m + 'več kot 1400 ' + izvidi);
-	izvidi =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + izvidi + "<br></span>"; 
+	izvidi =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + izvidi + "</span>"; 
 }else if (m  > 1200){
 	//alert(m  + 'več kot 1200 ' + izvidi);
 	izvidi =  n + "<span class='izvid2' class='besedilo'> &emsp;"  + izvidi + "<br></span>"; 
