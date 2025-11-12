@@ -316,11 +316,11 @@ function sklepFunction(m,n)
 {
 if (m.length == 0) {
 	  m = "";
-}else if (m.length > 280){
-	//alert(m.length + 'več kot 280 ' + m);
+}else if (m.length > 265){
+	//alert(m.length + 'več kot 265 ' + m);
 	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 	  
-}else if (m.length > 240){
-	//alert(m.length + 'več kot 240 ' + m);
+}else if (m.length > 225){
+	//alert(m.length + 'več kot 225 ' + m);
 	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 
 }else if (m.length > 200){
 	//alert(m.length + 'več kot 200 ' + m);
