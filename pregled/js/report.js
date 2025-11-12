@@ -211,7 +211,7 @@ izvidi = izvidiFunction(izvidi, novaLinija );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
-sklep = sklepFunction(sklep, "", "Sklep:" );
+sklep = sklepFunction(sklep, "Sklep:" );
 
 
 //......................celi opis................................................................
@@ -312,21 +312,21 @@ return izvidi;
 
 }
 //.......................................SklepFunction..............................
-function sklepFunction(m, l, n)
+function sklepFunction(m,n)
 {
 if (m.length == 0) {
 	  m = "";
-}else if (m.length > 120){
-	alert(m.length + 'več kot 120 ' + m);
-	m = "<span class='izvid3'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 	  
-}else if (m.length > 100){
-	alert(m.length + 'več kot 100 ' + m);
-	m = "<span class='izvid2'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 
-}else if (m.length > 70){
-	alert(m.length + 'več kot 70 ' + m);
-	m = "<span class='izvid1'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid1' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
+}else if (m.length > 280){
+	alert(m.length + 'več kot 280 ' + m);
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 	  
+}else if (m.length > 240){
+	alert(m.length + 'več kot 240 ' + m);
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 
+}else if (m.length > 200){
+	alert(m.length + 'več kot 200 ' + m);
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid1' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
 }else {
-  m = "<span class='izvid0'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
+  m = "<span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
     }
 return m;
 
