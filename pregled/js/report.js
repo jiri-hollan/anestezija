@@ -207,7 +207,7 @@ var izvidi = document.getElementById("izvidiInOpombe").value;
 izvidi = izvidi.replace(/^\s*$(?:\r\n?|\n)/gm, "");
 izvidi = izvidi.replace(/\n/g, "<br>&emsp;&emsp;");
 const novaLinija = (izvidi.match(new RegExp("<br>", "g")) || []).length;
-izvidi = izvidiFunction(izvidi, "<hr>",novaLinija );
+izvidi = izvidiFunction(izvidi, novaLinija );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
@@ -270,10 +270,10 @@ function opisFunction(m,n)
 if (m.length == 0) {
 	  m = "";	
 }else if (m.length > 110){
-	//alert(m.length + 'več kot 110 ' + m);
+	alert(m.length + 'več kot 110 ' + m);
 	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 
 }else if (m.length > 70){
-	//alert(m.length + 'več kot 70 ' + m);
+	alert(m.length + 'več kot 70 ' + m);
 	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
 }else {
   m =  "<span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
@@ -283,27 +283,27 @@ return m;
 }
  
 //............................................izvidiFunction ureja besedilni opis stanja...................................
-function izvidiFunction(izvidi,n,novaLinija)
+function izvidiFunction(izvidi, novaLinija)
 {
 let m =	izvidi.length + 30 * novaLinija;
 if (izvidi.length == 0) {
 	  m = "";
 }else if (m > 1600){
-	//alert(m + 'več kot 1600 ' + izvidi);
-	izvidi =  n + "<span class='izvid4' class='besedilo'> &emsp;"  + izvidi + "</span>"; 	  
+	alert(m + 'več kot 1600 ' + izvidi);
+	izvidi = "<span class='izvid4' class='besedilo'><hr> &emsp;"  + izvidi + "</span>"; 	  
 }else if (m > 1400){
-	//alert(m + 'več kot 1400 ' + izvidi);
-	izvidi =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + izvidi + "</span>"; 
+	alert(m + 'več kot 1400 ' + izvidi);
+	izvidi =  "<span class='izvid3' class='besedilo'><hr> &emsp;"  + izvidi + "</span>"; 
 }else if (m  > 1200){
-	//alert(m  + 'več kot 1200 ' + izvidi);
-	izvidi =  n + "<span class='izvid2' class='besedilo'> &emsp;"  + izvidi + "<br></span>"; 
+	alert(m  + 'več kot 1200 ' + izvidi);
+	izvidi =  "<span class='izvid2' class='besedilo'><hr> &emsp;"  + izvidi + "<br></span>"; 
 }else if (m  > 800){
-	//alert(m  + 'več kot 800 ' + izvidi);
-	izvidi =  n + "<span class='izvid1' class='besedilo'> &emsp;"  + izvidi + "<br><br></span>"; 
+	alert(m  + 'več kot 800 ' + izvidi);
+	izvidi =  "<span class='izvid1' class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 
         
 }else {
-	//alert(m  + 'manj kot 800 ' + izvidi);
-	izvidi =  n + "<span class='izvid0'  class='besedilo'> &emsp;"  + izvidi + "<br><br></span>"; 
+	alert(m  + 'manj kot 800 ' + izvidi);
+	izvidi =  "<span class='izvid0'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 
     }
 return izvidi;
 
