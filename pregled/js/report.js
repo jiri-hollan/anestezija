@@ -211,7 +211,7 @@ izvidi = izvidiFunction(izvidi, novaLinija );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
-sklep = opisFunction(sklep, "", "Sklep:" );
+sklep = sklepFunction(sklep, "Sklep:" );
 
 
 //......................celi opis................................................................
@@ -311,6 +311,27 @@ if (izvidi.length == 0) {
 return izvidi;
 
 }
+//.......................................SklepFunction..............................
+function sklepFunction(m,n)
+{
+if (m.length == 0) {
+	  m = "";
+}else if (m.length > 280){
+	//alert(m.length + 'več kot 280 ' + m);
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 	  
+}else if (m.length > 240){
+	//alert(m.length + 'več kot 240 ' + m);
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 
+}else if (m.length > 200){
+	//alert(m.length + 'več kot 200 ' + m);
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid1' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
+}else {
+  m = "<span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
+    }
+return m;
+
+}
+//.....................................natisniFunction..............................
 function natisniFunction() {
   if (confirm("natisni! bolnik= " + document.title)){
   document.getElementById("navbar").style.display = "none"; 
