@@ -268,13 +268,16 @@ switch (a) {
 function opisFunction(m,n)
 {
 if (m.length == 0) {
-	  m = "";	
-}else if (m.length > 110){
-	alert(m.length + 'več kot 110 ' + m);
-	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 
+	  m = "";
+}else if (m.length > 120){
+	alert(m.length + 'več kot 120 ' + m);
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 	  
+}else if (m.length > 100){
+	alert(m.length + 'več kot 100 ' + m);
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 
 }else if (m.length > 70){
 	alert(m.length + 'več kot 70 ' + m);
-	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
+	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid1' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
 }else {
   m =  "<span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
     }
