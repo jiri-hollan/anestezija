@@ -207,7 +207,7 @@ var izvidi = document.getElementById("izvidiInOpombe").value;
 izvidi = izvidi.replace(/^\s*$(?:\r\n?|\n)/gm, "");
 izvidi = izvidi.replace(/\n/g, "<br>&emsp;&emsp;");
 const novaLinija = (izvidi.match(new RegExp("<br>", "g")) || []).length;
-izvidi = izvidiFunction(izvidi, "<hr>",novaLinija );
+izvidi = izvidiFunction(izvidi, novaLinija );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
@@ -283,27 +283,27 @@ return m;
 }
  
 //............................................izvidiFunction ureja besedilni opis stanja...................................
-function izvidiFunction(izvidi,n,novaLinija)
+function izvidiFunction(izvidi,novaLinija)
 {
 let m =	izvidi.length + 30 * novaLinija;
 if (izvidi.length == 0) {
 	  m = "";
 }else if (m > 1600){
 	alert(m + 'več kot 1600 ' + izvidi);
-	izvidi =  n + "<span class='izvid4' class='besedilo'> &emsp;"  + izvidi + "</span><br>"; 	  
+	izvidi = "<span class='izvid4' class='besedilo'><hr> &emsp;"  + izvidi + "</span><br>"; 	  
 }else if (m > 1400){
 	alert(m + 'več kot 1400 ' + izvidi);
-	izvidi =  n + "<span class='izvid3' class='besedilo'> &emsp;"  + izvidi + "</span><br>"; 
+	izvidi = "<span class='izvid3' class='besedilo'><hr> &emsp;"  + izvidi + "</span><br>"; 
 }else if (m  > 1200){
 	alert(m  + 'več kot 1200 ' + izvidi);
-	izvidi =  n + "<span class='izvid2' class='besedilo'> &emsp;"  + izvidi + "</span><br>"; 
+	izvidi = "<span class='izvid2' class='besedilo'><hr> &emsp;"  + izvidi + "</span><br>"; 
 }else if (m  > 800){
 	alert(m  + 'več kot 800 ' + izvidi);
-	izvidi =  n + "<span class='izvid1' class='besedilo'> &emsp;"  + izvidi + "</span><br><br>"; 
+	izvidi = "<span class='izvid1' class='besedilo'><hr> &emsp;"  + izvidi + "</span><br><br>"; 
         
 }else {
 	alert(m  + 'manj kot 800 ' + izvidi);
-	izvidi =  n + "<span class='izvid0'  class='besedilo'> &emsp;"  + izvidi + "</span><br><br>"; 
+	izvidi = "<span class='izvid0'  class='besedilo'><hr> &emsp;"  + izvidi + "</span><br><br>"; 
     }
 return izvidi;
 
