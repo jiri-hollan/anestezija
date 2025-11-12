@@ -188,19 +188,19 @@ document.getElementById("alergijaR").innerHTML= alergija;
 //....................EKG....................................................................
 
 var ekg = document.getElementById("ekg").value;
-ekg = opisFunction(ekg, "<hr>EKG:");
+ekg = opisFunction(ekg, "<hr>", "EKG:");
 //alert(ekg);
 //...........................RTG................................................................
 var rtg = document.getElementById("rtg").value;
-rtg = opisFunction(rtg, "<hr>RTG:");
+rtg = opisFunction(rtg, "<hr>", "RTG:");
 
 //..............pridružene bolezni........................................................
 var prid = document.getElementById("dgPridruzene").value;
-prid = opisFunction(prid, "<hr>Pridružene bolezni:" );
+prid = opisFunction(prid, "<hr>", "Pridružene bolezni:" );
 
 //................................... predhodna terapija.........................................
 var pred = document.getElementById("terPredhodna").value;
-pred = opisFunction(pred, "<hr>Predhodna terapija:" );
+pred = opisFunction(pred, "<hr>", "Predhodna terapija:" );
 
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
@@ -211,7 +211,7 @@ izvidi = izvidiFunction(izvidi, novaLinija );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
-sklep = opisFunction(sklep, "Sklep:" );
+sklep = opisFunction(sklep, "", "Sklep:" );
 
 
 //......................celi opis................................................................
@@ -265,21 +265,21 @@ switch (a) {
  //....konec report function..............................
  
 //....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
-function opisFunction(m,n)
+function opisFunction(m, l, n)
 {
 if (m.length == 0) {
 	  m = "";
 }else if (m.length > 120){
 	alert(m.length + 'več kot 120 ' + m);
-	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 	  
+	m = "<span class='izvid3'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 	  
 }else if (m.length > 100){
 	alert(m.length + 'več kot 100 ' + m);
-	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 
+	m = "<span class='izvid2'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 
 }else if (m.length > 70){
 	alert(m.length + 'več kot 70 ' + m);
-	m = "<span class='nadpis'>" + n + "</span>"  +  "<span class='izvid1' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
+	m = "<span class='izvid1'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid1' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
 }else {
-  m =  "<span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
+  m = "<span class='izvid0'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
     }
 return m;
 
