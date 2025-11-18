@@ -378,7 +378,7 @@ function pomocFunction() {
 function alarmFunction(){
 	alert("miš se giblje");
 	const xhttp = new XMLHttpRequest();
-	 xhttp.open("GET", "gethint.php?q="+"a");
+	 xhttp.open("GET", "sessionKontrola.php?q="+"a");
 	 xhttp.send();   
 }
 
