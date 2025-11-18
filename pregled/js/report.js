@@ -375,5 +375,9 @@ function pomocFunction() {
  prompt("Če ni nastavljena pot do  ciljne mape za PDF jo nastavi.\nSkopiraj spodnji naslov in ga prilepi kot pot.", pot );
 }
 
+function alarmFunction(){
+	alert("miš se giblje");
+}
+
 
 
