@@ -10,7 +10,7 @@ require_once('../otroska/otroskaPremedikacija1.php');
 require_once('sabloni/vkladane/zapati.php');
 require_once('../skupne/administrace.php');
 require_once('../koren.php');
-require_once('../skupne/sessionkontrola.php');
+//require_once('../skupne/sessionkontrola.php');
 
 if(!empty($_SESSION["uname"])){
 $uname = "<div id='stanje' class='stanjeDa'>prijavljen je: ".$_SESSION["uname"]."</div>";

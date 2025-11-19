@@ -379,8 +379,8 @@ function alarmFunction(){
 	
 	alert("miš se giblje");
 	const xhttp = new XMLHttpRequest();
-	 xhttp.open("GET", "sessionKontrola.php?q="+"new administrace()");
-	 xhttp.send();   
+	 xhttp.open("GET", "../skupne/sessionKontrola.php?q="+"new administrace()");
+	 xhttp.send(); 
 }
 
 
