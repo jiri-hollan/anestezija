@@ -10,7 +10,7 @@ class Administrace {
      $this->zaklad = new stdClass();	 
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/'.$koren.'/frontend/';
-		 echo"('KOREN: '.$koren)";
+		 echo"('KOREN: '.$koren)<br>";
 	  }else {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
@@ -18,6 +18,7 @@ class Administrace {
 	  $casoviLimit = 600;
 	  if (isset($_SESSION["uporabnikPrihlasen"])) {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
+		  echo 'uplynulyCas: '.$uplinuliCas.'<br>';
 		  if ($uplinuliCas > $casoviLimit) {
 			  session_unset();
 			  session_destroy();
@@ -26,6 +27,7 @@ class Administrace {
 		  }
 	  }
 	  $_SESSION["casova_znamka"] = time();
+	  echo"administrace linija29";
 	  $prihlasen = $_SESSION['uporabnikPrihlasen'];
 	  if (empty($prihlasen)) {
 		  session_unset();
