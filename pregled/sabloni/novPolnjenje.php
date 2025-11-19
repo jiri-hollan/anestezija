@@ -1,4 +1,4 @@
-<form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" onmousemove="alarmFunction()"autocomplete="off"> 
+<form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" onclick="alarmFunction()"autocomplete="off"> 
 <fieldset class="novBolnik" id="prva">
     <legend id="novBLegend">Nov bolnik</legend>
     <h2 id="lab6"> </h2>
@@ -183,7 +183,7 @@
 
 ...........................Tretji del TISK................................-->
 
-<div class="celaStran" id="tretja" onmousemove="alarmFunction()">
+<div class="celaStran" id="tretja" onclick="alarmFunction()">
   <!--<div id="logo"><img  id="imgBol" src="logoSBI.png"></div>-->
   <div id="logo">
   </div>  
