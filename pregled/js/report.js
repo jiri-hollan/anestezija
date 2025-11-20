@@ -375,13 +375,19 @@ function pomocFunction() {
  prompt("Če ni nastavljena pot do  ciljne mape za PDF jo nastavi.\nSkopiraj spodnji naslov in ga prilepi kot pot.", pot );
 }
 
-function alarmFunction(){
-	
-	alert("miš se giblje");
-	const xhttp = new XMLHttpRequest();
-	 xhttp.open("GET", "../skupne/sessionKontrola.php?q="+"new administrace()");
-	 xhttp.send(); 
+function administraceFunction(){
+	alert("miš nekaj dela");	
+   $.ajax({
+    url : '../skupne/sessionKontrola.php?q="+"new administrace()"',
+   //  url : 'action/ajax.php',
+     type : 'POST',
+     success : function (result) {
+        console.log (result); // Here, you need to use response by PHP file.
+     },
+     error : function () {
+        console.log ('error');
+     }
+
+   });
 }
-
-
 
