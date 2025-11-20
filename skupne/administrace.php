@@ -6,6 +6,7 @@ class Administrace {
 	public $zaklad;
 	public $koren;	
 	public function __construct($koren) {
+			  echo"administrace linija9";
 	 $this->conn = new Database();
      $this->zaklad = new stdClass();	 
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
@@ -28,9 +29,10 @@ class Administrace {
 		  }
 	  }
 	  $_SESSION["casova_znamka"] = time();
-	  echo"administrace linija29";
+	  echo"administrace linija32";
 	  $prihlasen = $_SESSION['uporabnikPrihlasen'];
 	  if (empty($prihlasen)) {
+	  echo"administrace linija34";		  
 		  session_unset();
 		  session_destroy();
 	echo'<script>
@@ -41,6 +43,7 @@ class Administrace {
 		  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit'); 
 		  exit();
 	  } else {
+	  echo"administrace linija45";		  
 		  $this->conn = new Database();
 	  }  
 	}//od construct	
