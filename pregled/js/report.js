@@ -270,13 +270,13 @@ function opisFunction(m, l, n)
 if (m.length == 0) {
 	  m = "";
 }else if (m.length > 120){
-	alert(m.length + 'več kot 120 ' + m);
+	//alert(m.length + 'več kot 120 ' + m);
 	m = "<span class='izvid3'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 	  
 }else if (m.length > 100){
-	alert(m.length + 'več kot 100 ' + m);
+	//alert(m.length + 'več kot 100 ' + m);
 	m = "<span class='izvid2'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 
 }else if (m.length > 70){
-	alert(m.length + 'več kot 70 ' + m);
+	//alert(m.length + 'več kot 70 ' + m);
 	m = "<span class='izvid1'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid1' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
 }else {
   m = "<span class='izvid0'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
