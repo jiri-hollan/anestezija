@@ -24,15 +24,17 @@ class Administrace {
 			  echo ' čas je potekel: '.$uplinuliCas.'<br>'; 
 			  session_unset();
 			  session_destroy();
-			  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
+			  //header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
+			  $glava=$this->zaklad->url . 'prihlaseni.php?stav=neaktivni';
+			  die("<script> location.href = '$glava'; </script>");
 			  exit();
 		  }
 	  }
 	  $_SESSION["casova_znamka"] = time();
-	  echo"administrace linija32";
-	  $prihlasen = $_SESSION['uporabnikPrihlasen'];
-	  if (empty($prihlasen)) {
-	  echo"administrace linija34";		  
+	  echo"administrace linija34";
+	  //$prihlasen = $_SESSION['uporabnikPrihlasen'];
+	  if (empty($_SESSION['uporabnikPrihlasen'])) {
+	  echo"administrace linija37";		  
 		  session_unset();
 		  session_destroy();
 	echo'<script>
@@ -40,10 +42,12 @@ class Administrace {
 	sessionStorage.removeItem("bolnikId"); 
 	</script>';	  
 		  
-		  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit'); 
+		  //header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit');
+			  $glava=$this->zaklad->url . 'prihlaseni.php?stav=odhlasit';
+			  die("<script> location.href = '$glava'; </script>");		  
 		  exit();
 	  } else {
-	  echo"administrace linija45";		  
+	  echo"administrace linija50";		  
 		  $this->conn = new Database();
 	  }  
 	}//od construct	
