@@ -378,8 +378,7 @@ function pomocFunction() {
 function administraceFunction(){
 	alert("miš nekaj dela");	
    $.ajax({
-    url : '../skupne/sessionKontrola.php',
-   //  url : 'action/ajax.php',
+     url : '../skupne/sessionKontrola.php',
      type : 'POST',
      success : function (result) {
         console.log (result); // Here, you need to use response by PHP file.

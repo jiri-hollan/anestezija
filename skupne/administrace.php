@@ -20,6 +20,7 @@ class Administrace {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
 		  echo 'uplynulyCas: '.$uplinuliCas.'<br>';
 		  if ($uplinuliCas > $casoviLimit) {
+			  echo 'čas je potekel: '.$uplinuliCas.'<br>'; 
 			  session_unset();
 			  session_destroy();
 			  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
