@@ -15,7 +15,7 @@ class Administrace {
 		 $this->zaklad->url = 'http://' . $_SERVER['SERVER_NAME'].'/frontend/';  
 	  }
 //echo $this->zaklad->url;
-	  $casoviLimit = 100;
+	  $casoviLimit = 20;
 	  if (isset($_SESSION["uporabnikPrihlasen"])) {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
 		  echo ' uplynulyCas: '.$uplinuliCas.'<br>';
@@ -23,7 +23,7 @@ class Administrace {
 			  echo ' čas je potekel: '.$uplinuliCas.'<br>'; 
 			  session_unset();
 			  session_destroy();
-			  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
+			  //header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
 			  exit();
 		  }
 	  }
@@ -38,7 +38,7 @@ class Administrace {
 	sessionStorage.removeItem("bolnikId"); 
 	</script>';	  
 		  
-		  header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit'); 
+		  //header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit'); 
 		  exit();
 	  } else {
 		  $this->conn = new Database();
