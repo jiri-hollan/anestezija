@@ -23,7 +23,7 @@ oziroma to določi izbira NAV bara, če je ta aktivirana
 if(!empty($_SESSION["uname"])){
 $uname = "<span id='stanjeDa'>prijavljen je: ".$_SESSION["uname"]."</span>";
 }else{
-$uname = "<span id='stanjeNe'>Niste prijavljeni</span>";	
+$uname = "<span id='stanjeNe'>Niste prijavljeni</span><button class='knof' onclick='schovej(\'id02\')' style='width:auto;'>Prijava</button>";	
 }
 
 ?>
