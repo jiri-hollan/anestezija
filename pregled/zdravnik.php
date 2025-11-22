@@ -23,7 +23,8 @@ oziroma to določi izbira NAV bara, če je ta aktivirana
 if(!empty($_SESSION["uname"])){
 $uname = "<span id='stanjeDa'>prijavljen je: ".$_SESSION["uname"]."</span>";
 }else{
-$uname = "<span id='stanjeNe'>Niste prijavljeni</span><button class='knof' onclick='schovej(\'id02\')' style='width:auto;'>Prijava</button>";	
+$uname = "<span id='stanjeNe'>Niste prijavljeni</span>";
+//echo "<button class='knof' onclick='schovej(\'id02\')' style='width:auto;'>Prijava<button/>";
 }
 
 ?>
@@ -51,6 +52,7 @@ require_once('../skupne/home.php');
 require_once('zapisVsi.php');
 require_once('bolnisnice.php');
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
+	
 ?>
  <script>
    var seznamBolnisnicx = JSON.parse(seznamBolnisnicJson);
@@ -64,6 +66,7 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
 //alert(localStorage.getItem("bazeBolnisnice"));
   </script>
      <span class="" id="odjava" onclick="odjavaFunction()">RESET</span>
+	 <span class='knof' onclick='schovej("id02")' style='width:auto;'>Prijava</span>
 <?php
 echo"$uname";
 ?>
