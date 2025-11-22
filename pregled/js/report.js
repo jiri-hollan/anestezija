@@ -388,5 +388,8 @@ function administraceFunction(){
      }
 
    });
+   if(localStorage.getItem("gdpr")==0){
+	location.reload();   
+   }
 }
 
