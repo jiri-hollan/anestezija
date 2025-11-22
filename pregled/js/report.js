@@ -376,7 +376,7 @@ function pomocFunction() {
 }
 
 function administraceFunction(){
-	alert("miš nekaj dela");	
+//alert("miš nekaj dela");	
    $.ajax({
      url : '../skupne/sessionKontrola.php',
      type : 'POST',
