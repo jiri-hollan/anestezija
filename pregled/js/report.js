@@ -375,7 +375,7 @@ function pomocFunction() {
  prompt("Če ni nastavljena pot do  ciljne mape za PDF jo nastavi.\nSkopiraj spodnji naslov in ga prilepi kot pot.", pot );
 }
 
-function administraceFunction(){
+/*function administraceFunction(){
 	alert("miš nekaj dela");	
    $.ajax({
      url : '../skupne/sessionKontrola.php',
@@ -388,5 +388,8 @@ function administraceFunction(){
      }
 
    });
+}*/
+function administraceFunction(){
+	alert("miš nekaj dela");
+location.href = '../skupne/sessionKontrola.php'; 	
 }
-
