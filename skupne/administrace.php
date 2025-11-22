@@ -18,20 +18,20 @@ class Administrace {
 	  $casoviLimit = 20;
 	  if (isset($_SESSION["uporabnikPrihlasen"])) {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
-		  echo ' uplynulyCas: '.$uplinuliCas.'<br>';
+		  echo ' uplynulyCas: '.$uplinuliCas.'....';
 		  if ($uplinuliCas > $casoviLimit) {
-			  echo ' čas je potekel: '.$uplinuliCas.'<br>'; 
+			  echo ' čas je potekel: '.$uplinuliCas.'!!!!'; 
 			  session_unset();
 			  session_destroy();
 			  //header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
 			  exit();
 		  }else{$_SESSION["casova_znamka"] = time();}
 	  }else{
-	       echo"administrace linija29";
+	       echo" administrace linija30";
 		  if (empty($_SESSION['uporabnikPrihlasen'])) {
 			  session_unset();
 			  session_destroy();
-	/*echo'<script>
+	/*echo'<script> 
 	sessionStorage.removeItem("testJSON");	
 	sessionStorage.removeItem("bolnikId"); 
 	</script>';	*/    
