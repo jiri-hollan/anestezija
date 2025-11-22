@@ -38,6 +38,7 @@ class Administrace {
 	//header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit'); 
 			  exit();
 		  } else {
+	          echo" administrace linija41";			  
 			  $this->conn = new Database();
 		  }
 	  }
