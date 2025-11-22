@@ -292,20 +292,20 @@ let m =	izvidi.length + 30 * novaLinija;
 if (izvidi.length == 0) {
 	  m = "";
 }else if (m > 1600){
-	alert(m + 'več kot 1600 ' + izvidi);
+//alert(m + 'več kot 1600 ' + izvidi);
 	izvidi = "<span class='izvid4' class='besedilo'><hr> &emsp;"  + izvidi + "<br></span>"; 	  
 }else if (m > 1400){
-	alert(m + 'več kot 1400 ' + izvidi);
+//alert(m + 'več kot 1400 ' + izvidi);
 	izvidi =  "<span class='izvid3' class='besedilo'><hr> &emsp;"  + izvidi + "<br></span>"; 
 }else if (m  > 1200){
-	alert(m  + 'več kot 1200 ' + izvidi);
+//alert(m  + 'več kot 1200 ' + izvidi);
 	izvidi =  "<span class='izvid2' class='besedilo'><hr> &emsp;"  + izvidi + "<br></span>"; 
 }else if (m  > 800){
-	alert(m  + 'več kot 800 ' + izvidi);
+//alert(m  + 'več kot 800 ' + izvidi);
 	izvidi =  "<span class='izvid1' class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 
         
 }else {
-	alert(m  + 'manj kot 800 ' + izvidi);
+//alert(m  + 'manj kot 800 ' + izvidi);
 	izvidi =  "<span class='izvid0'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 
     }
 return izvidi;
