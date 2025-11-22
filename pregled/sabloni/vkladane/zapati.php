@@ -29,12 +29,12 @@ echo '
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
 <?php
 if($gdpr==1){
- echo '<span class="navSpan" id="submitFrm" onclick="return reportFunction'."('s')".'">shrani</span>';
+ //echo '<span class="navSpan" id="submitFrm" onclick="return reportFunction'."('s')".'">shrani</span>';
+ echo '<span class="navSpan" id="submitFrm" onclick="return reportFunction"(\'s\')>shrani</span>';
   }else{
 	echo '<span class="navSpan" id="submitFrm" ></span>';  
   }
 ?> 
-  <!--   <span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span> -->
  </div>	 
 </body>
 </html>
