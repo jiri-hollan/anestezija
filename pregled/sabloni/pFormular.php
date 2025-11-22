@@ -2,7 +2,6 @@
 <!-- ___________________________   Prijava       ___________________________________________-->
 <div id="id02" class="modal">
   
-<!--   <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF'] . '?r=login'?>" method="post" autocomplete="off"> action="../skupne/ogledTabele.php"-->
  <form class="modal-content animate" action="prihlaseni.php?r=login" method="post" autocomplete="off"> 
     <div class="container">
       <label for="uname1Id"><b>Uporabniško ime</b></label>
