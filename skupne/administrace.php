@@ -33,10 +33,10 @@ class Administrace {
 	  if (empty($prihlasen)) {
 		  session_unset();
 		  session_destroy();
-	echo'<script>
+	/*echo'<script>
 	sessionStorage.removeItem("testJSON");	
 	sessionStorage.removeItem("bolnikId"); 
-	</script>';	  
+	</script>';	*/  
 		  
 		  //header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit'); 
 		  exit();
