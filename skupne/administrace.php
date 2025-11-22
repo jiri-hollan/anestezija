@@ -7,6 +7,7 @@ class Administrace {
 	public $koren;	
 	public function __construct($koren) {
 			  echo"administrace linija9";
+			  echo"<script>alert('10');<script/>";			  
 	 $this->conn = new Database();
      $this->zaklad = new stdClass();	 
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
