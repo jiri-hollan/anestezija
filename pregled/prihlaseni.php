@@ -2,6 +2,7 @@
 @session_start();
 require_once('../skupne/database.php');
 require_once('../koren.php');
+require_once('zdravnik.php');
 global $r;
 //require_once('sabloni/prihlasovaci-formular.php');
 Class Prihlaseni {
