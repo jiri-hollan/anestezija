@@ -3,7 +3,12 @@
 require_once('../skupne/database.php');
 require_once('../koren.php');
 require_once('zdravnik.php');
+  	  echo '<script>console.log("prihlaseni 6");<script/>';
+	  echo '<script>alert("linija7");<script/>';
 global $r;
+$r = $_GET['r'];
+var_dump ($r);
+	  
 //require_once('sabloni/prihlasovaci-formular.php');
 Class Prihlaseni {
 	public $conn;
@@ -53,9 +58,9 @@ Class Prijava extends Prihlaseni {
 	   $_SESSION["uporabnikGdpr"] = $upGdpr;
 	   $_SESSION["uname"] = $uname;
 	  //echo $upstatus;
-	echo '<script type="text/JavaScript"> 
+	/*echo '<script type="text/JavaScript"> 
      location.replace("menuFile1.php"); 
-     </script>';
+     </script>';*/
 	   exit();
 	}	
 	public function prihlaseniSelhalo() {
@@ -107,42 +112,14 @@ if (isset($_GET['r'])) {
 	  $r = $_GET['r'];
 switch ($r) {
   case "login":
-    
+ 	  echo '<script>console.log("prihlaseni 112");<script/>';   
       $prihlaseni = new Prijava($koren);
+
+	 
     //echo "poskušate se logirati!"; 
    break;
- /*  
- case "singin":
-  $prihlaseni = new Registrace($koren);
-    //echo "Poskušate se registrirati!";
-   break;
-   
-case "logout":
-  $prihlaseni = new Odjava($koren);
-    //echo "Poskušate se odjaviti!"; 
-   break;  
-   
-case "profil":
-  $prihlaseni = new Profil($koren);
-    //echo "V profilu"; 
-   break;  
-   
-case "spremembaG":
-  $prihlaseni = new SpremembaG($koren);
-    //echo "V profilu"; 
-   break;  
-   
- case "spremembaU":
-  $prihlaseni = new SpremembaU($koren);
-    //echo "V profilu"; 
-   break;    
-   
- case "spremembaZdr":
-  $prihlaseni = new SpremembaZdr($koren);
-    //echo "V profilu"; 
-   break;  */  
-      
+ 
   default:
-    //echo "Your favorite color is neither red, blue, nor green!";
+  	  echo '<script>console.log("prihlaseni 118");<script/>';
 }
-}
+}else{echo '<script>console.log("prihlaseni 120");<script/>';}
