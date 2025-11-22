@@ -85,7 +85,7 @@ document.getElementById("bolnisnice").innerHTML = text;
 }
 /************************funkcja schovej************************/
 function schovej(a){
-alert (a);
+//alert (a);
 document.getElementById(a).style.display='block';
 // Get the modal
 var modal = document.getElementById(a);
