@@ -25,24 +25,22 @@ class Administrace {
 			  session_destroy();
 			  //header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
 			  exit();
-		  }
-	  }
-	  $_SESSION["casova_znamka"] = time();
-	  echo"administrace linija29";
-	  $prihlasen = $_SESSION['uporabnikPrihlasen'];
-	  if (empty($prihlasen)) {
-		  session_unset();
-		  session_destroy();
+		  }else{$_SESSION["casova_znamka"] = time();}
+	  }else{
+	       echo"administrace linija29";
+		  if (empty($_SESSION['uporabnikPrihlasen'])) {
+			  session_unset();
+			  session_destroy();
 	/*echo'<script>
 	sessionStorage.removeItem("testJSON");	
 	sessionStorage.removeItem("bolnikId"); 
-	</script>';	*/  
-		  
-		  //header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit'); 
-		  exit();
-	  } else {
-		  $this->conn = new Database();
-	  }  
+	</script>';	*/    
+	//header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=odhlasit'); 
+			  exit();
+		  } else {
+			  $this->conn = new Database();
+		  }
+	  }
 	}//od construct	
 }//0d class administrace
 ?>	
