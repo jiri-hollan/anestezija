@@ -58,9 +58,7 @@ Class Prijava extends Prihlaseni {
 	   $_SESSION["uporabnikGdpr"] = $upGdpr;
 	   $_SESSION["uname"] = $uname;
 	  //echo $upstatus;
-	/*echo '<script type="text/JavaScript"> 
-     location.replace("menuFile1.php"); 
-     </script>';*/
+	header('Location: bolnik.php');
 	   exit();
 	}	
 	public function prihlaseniSelhalo() {
