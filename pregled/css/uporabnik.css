@@ -17,7 +17,7 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-input.imePriimek { 
+.modal input.imePriimek { 
   float: left;
   width: 50%;
   display: inline;
