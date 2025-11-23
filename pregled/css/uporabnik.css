@@ -2,28 +2,29 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 	}
 
-.modal input[type=text], input[type=password] {
+.modal input[type=text], .modal input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  background-color: white;
 }
 
 /* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
+.modal input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
-
+/*
 .modal input.imePriimek { 
   float: left;
   width: 50%;
   display: inline;
  
 }
-
+*/
 
 /* Set a style for all buttons */
 .knof{
