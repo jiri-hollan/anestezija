@@ -8,6 +8,7 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
      <span class="" id="odjava" onclick="odjavaFunction()">RESET</span>
 <!-- Funkcija novBolnikFunction shrani formu u bazo in skoči na vpis novega bolnika -->
      <span class="navSpan" id="novB" onclick="novBolnikFunction(1);">Nov bolnik</span>
+	 <span class='knof' onclick='schovej("id02")' style='width:auto;'>Prijava</span>	 
 	 <div id="najdiZapis"class="dropdown">
 <?php
 require_once('../skupne/aktivace.php');
