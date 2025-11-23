@@ -2,7 +2,7 @@
 @session_start();
 require_once('../skupne/database.php');
 require_once('../koren.php');
-require_once('zdravnik.php');
+//require_once('zdravnik.php');
   	  echo '<script>console.log("prihlaseni 6");<script/>';
 	  echo '<script>alert("linija7");<script/>';
 global $r;
