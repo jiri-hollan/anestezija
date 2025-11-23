@@ -12,6 +12,7 @@ echo'
 <script src="js/prijava.js?'.time().'"></script> 
 <script src="js/odjava.js?'.time().'"></script>
 <link rel="stylesheet" type="text/css" href="css/zdravnik.css?'.time().'">
+<link rel="stylesheet" type="text/css" href="css/uporabnik.css?'.time().'">
 </head>
 <body>';
 

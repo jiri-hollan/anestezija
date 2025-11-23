@@ -25,6 +25,7 @@ echo'
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css?'.time().'">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaPrenos.css?'.time().'">
 <link rel="stylesheet" type="text/css" href="../otroska/css/doziranje.css?'.time().'">
+<link rel="stylesheet" type="text/css" href="css/uporabnik.css?'.time().'">
 </head>
 <body onload="vpisFunction()">';
 ?>
