@@ -354,7 +354,7 @@ function nazajFunction() {
     document.getElementById("predogled").style.display = "block";
 	document.getElementById("submitFrm").style.display = "none";
 	document.getElementById("najdiZapis").style.display = "none";
-    document.getElementById("prijavi").style.display = "none";  	
+    document.getElementById("prijavi").style.display = "block";  	
 }
 
 function ogledFunction() {
@@ -369,7 +369,7 @@ function ogledFunction() {
   document.getElementById("prenos").style.display = "block";
   document.getElementById("submitFrm").style.display = "block";
   document.getElementById("najdiZapis").style.display = "none"; 
-  document.getElementById("prijavi").style.display = "none";  
+  document.getElementById("prijavi").style.display = "block";  
 }
 
 function pomocFunction() {
@@ -384,7 +384,7 @@ function administraceFunction(){
      type : 'POST',
      success : function (result) {
         console.log (result); // Here, you need to use response by PHP file.           
-		$("#prijavi").css("display", "block");
+		$("#prijavi").css("display", result); //prevzame display iz administracije
      },
      error : function () {
         console.log ('error');

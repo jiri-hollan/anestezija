@@ -19,7 +19,7 @@ class Administrace {
 	  if (isset($_SESSION["uporabnikPrihlasen"])) {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
 		  if($uplinuliCas <= $casoviLimit){
-		      echo ' uplynulyCas: '.$uplinuliCas.'....';
+		      echo 'none';
               $_SESSION["casova_znamka"] = time();			  
 //echo $uplinuliCas;
 		  }
@@ -27,7 +27,7 @@ class Administrace {
 			  //echo ' čas je potekel: '.$uplinuliCas.' je več kot '.$casoviLimit; 
 			  session_unset();
 			  session_destroy();
-			  echo $uplinuliCas; 
+			  echo 'block'; 
 			  exit();
 		  }else{$_SESSION["casova_znamka"] = time();}
 	  }else{
