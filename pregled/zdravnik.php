@@ -68,8 +68,11 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
 //alert(localStorage.getItem("bazeBolnisnice"));
   </script>
      <span class="" id="odjava" onclick="odjavaFunction()">RESET</span>
-	 <span class='knof' onclick='schovej("id02")' style='width:auto;'>Prijava</span>
+	 <!--<span class='knof' onclick='schovej("id02")' style='width:auto;'>Prijava</span>-->
 <?php
+if(empty($_SESSION["uname"])){
+echo"<span class='knof' onclick='schovej(\"id02\")' style='width:auto;'>Prijava</span>";	
+}
 echo"$uname";
 ?>
  </div>	 
