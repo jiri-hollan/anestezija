@@ -18,9 +18,13 @@ class Administrace {
 	  $casoviLimit = 20;
 	  if (isset($_SESSION["uporabnikPrihlasen"])) {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
+		  if($uplinuliCas < $casoviLimit){
 		  echo ' uplynulyCas: '.$uplinuliCas.'....';
-		  if ($uplinuliCas > $casoviLimit) {
-			  echo ' čas je potekel: '.$uplinuliCas.'!!!!'; 
+		  //echo $uplinuliCas;
+		  }
+		  elseif ($uplinuliCas > $casoviLimit) {
+			  //echo ' čas je potekel: '.$uplinuliCas.' je več kot '.$casoviLimit; 
+			  echo $uplinuliCas; 
 			  session_unset();
 			  session_destroy();
 			  //header('Location: ' . $this->zaklad->url . 'prihlaseni.php?stav=neaktivni');
