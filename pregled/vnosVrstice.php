@@ -44,7 +44,11 @@ switch ($doBaze) {
 }//od if $_SERVER
 }//od if base gdpr 
 else{
-	header('Location: bolnik.php');
+	  echo '<script>';
+	  echo 'alert("NI SHRANJENO!");';
+	  echo 'window.location.href = "bolnik\.php";';
+	  echo '</script>';	
+	//header('Location: bolnik.php');
 }
 
 Class Apregled {
