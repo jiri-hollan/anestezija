@@ -34,7 +34,7 @@ echo '
 if($gdpr==1){
 // echo '<span class="navSpan" id="submitFrm" onmouseover="administraceFunction()" onclick="return reportFunction'."('s')".'">shrani</span>';
  
- echo "<span class='navSpan' id='submitFrm' onmouseover='administraceFunction()' onclick='return reportFunction(\'s\')'>shrani</span>";
+ echo "<span class='navSpan' id='submitFrm' onmouseover='administraceFunction()' onclick='return reportFunction(\"s\")'>shrani</span>";
  
   }else{
 	echo '<span class="navSpan" id="submitFrm" ></span>';  

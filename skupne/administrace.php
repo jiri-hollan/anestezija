@@ -31,10 +31,9 @@ class Administrace {
 			  exit();
 		  }else{$_SESSION["casova_znamka"] = time();}
 	  }else{
-	       echo" administrace linija30 ";		  
 			  session_unset();
 			  session_destroy();
-			  var_dump ($_SESSION);
+			  echo 'block';
 			  exit();		   
 	  }
 	}//od construct	
