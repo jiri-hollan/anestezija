@@ -383,7 +383,8 @@ function administraceFunction(){
      url : '../skupne/sessionKontrola.php',
      type : 'POST',
      success : function (result) {
-        console.log (result); // Here, you need to use response by PHP file.
+        console.log (result); // Here, you need to use response by PHP file.           
+		$("#prijavi").css("display", "block");
      },
      error : function () {
         console.log ('error');
