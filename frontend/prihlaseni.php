@@ -223,17 +223,14 @@ public function overUdaje($nameTable, $data) {
 			//return $this->prihlaseniSelhalo();
 			$ulozeno = $this->conn->vloz($nameTable, $data);
 			echo 'uspešno ste se registrirali,<br> pravice do dostopa vam bodo dodeljene po posvetu <br>z obveščevalnimi agencijami.';
+
+require_once('../skupne/posta.php');
 			echo'
-			<audio autoplay>
-			<source src="horse.ogg" type="audio/ogg">
-			<source src="horse.mp3" type="audio/mpeg">
+			<audio id="myVideo" autoplay>
 			<source src="../skupne/konj.mp3" type="audio/mpeg">			
 			ni našlo zvočne datoteke
 			</audio>
-			<script>			
-			<script/>
 			';
-require_once('../skupne/posta.php');		
 		}   
 	  }
 }
