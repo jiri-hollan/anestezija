@@ -227,7 +227,7 @@ public function overUdaje($nameTable, $data) {
 require_once('../skupne/posta.php');
 			echo'
 			<audio id="myVideo" autoplay>
-			<source src="../skupne/konj.mp3" type="audio/mpeg">			
+			<source src="../zvoki/konj.mp3" type="audio/mpeg">			
 			ni našlo zvočne datoteke
 			</audio>
 			';

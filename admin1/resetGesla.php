@@ -6,6 +6,7 @@ require_once '../skupne/sabloni/zahlavi.php';
 <input type="hidden" id="akceId" name="akce" value="vyber">
 <p id="demo"></p>
 <button type="submit" name="submit" value="Submit"><h2>izberi uporabnika</h2></button>
+Če ni drugače, je geslo za reset: anestiz12345
 <!--submit iz js -->
 </form>
 <p id="demo3"></p>
