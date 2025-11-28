@@ -232,7 +232,7 @@ require_once('../skupne/posta.php');
 			</audio>
 			';
 		}   
-	  }
+	 }
 }
 
 // od class Registrace	
