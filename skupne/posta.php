@@ -3,6 +3,7 @@ $to = "<jiri.hollan@gmail.com>";
 //$to .= ", <hocimin68@gmail.com>";
 $subject = "obvestilo anestiz";
 $from = '<noreply@sender.com>';
+//$from = '<anestiz@sh17.neoserv.si>';
 $message = "Nov uporabnik";
 $headers[] = "From: " .($from);
 $headers[] = "To: " .($to);
