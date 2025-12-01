@@ -226,12 +226,12 @@ public function overUdaje($nameTable, $data) {
 
 require_once('../skupne/posta.php');
 new Posta();
-			/*echo'
+			echo'
 			<audio id="myVideo" autoplay>
 			<source src="../zvoki/konj.mp3" type="audio/mpeg">			
 			ni našlo zvočne datoteke
 			</audio>
-			';*/
+			';
 		}   
 	 }
 }
