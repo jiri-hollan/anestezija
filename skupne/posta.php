@@ -1,4 +1,6 @@
 <?php
+Class Posta{
+	public function __construct($koren) {
 $to = "jiri.hollan@gmail.com";
 //$to .= ", <hocimin68@gmail.com>";
 $subject = "obvestilo anestiz";
@@ -23,5 +25,6 @@ $retval = mail($to,$subject,$message,implode("\r\n", $headers));
          }else {
             echo "Message could not be sent...";
          }
-
+	}//od construct
+}//od class posta
 ?>
