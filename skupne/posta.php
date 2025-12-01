@@ -1,8 +1,8 @@
 <?php
 Class Posta{
 	public function __construct() {
-$to = "jiri.hollan@gmail.com";
-//$to .= ", <hocimin68@gmail.com>";
+//$to = "jiri.hollan@gmail.com";
+$to = "<hocimin68@gmail.com>";
 $subject = "obvestilo anestiz";
 $from = 'noreply@sender.com';
 //$from = '<anestiz@sh17.neoserv.si>';
