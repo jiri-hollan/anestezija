@@ -1,16 +1,16 @@
 <?php
 Class Posta{
-	public function __construct($registriran) {
+	public function __construct($ime, $priimek, $email) {
 $to = "<jiri.hollan@gmail.com>";
 //$to .= ", <hocimin68@gmail.com>";
 $subject = "obvestilo anestiz";
 $from = 'noreply@sender.com';
 //$from = '<anestiz@sh17.neoserv.si>';
-$message = "<br>Nov uporabnik:". $registriran;
+$message = "<br>Nov uporabnik: ".$ime." ". $priimek;
 $headers[] = "From: " .($from);
 //$headers[] = "To: " .($to);
 //$headers[] = "CC: somebodyelse@example.com";
-$headers[] = "Reply-To: ".($from);
+$headers[] = "Reply-To: ".($email);
 $headers[] = "Return-Path: ".($from);
 $headers[] = "MIME-Version: 1.0"; 
 $headers[] = "Content-Type: text/html";

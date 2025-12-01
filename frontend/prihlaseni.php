@@ -225,7 +225,7 @@ public function overUdaje($nameTable, $data) {
 			echo 'uspešno ste se registrirali,<br> pravice do dostopa vam bodo dodeljene po posvetu <br>z obveščevalnimi agencijami.<br>';
 
 require_once('../skupne/posta.php');
-new Posta($data['priimek']);
+new Posta($data['ime'], $data['priimek'], $data['email']);
 			echo'
 			<audio id="myVideo" autoplay>
 			<source src="../zvoki/konj.mp3" type="audio/mpeg">			
