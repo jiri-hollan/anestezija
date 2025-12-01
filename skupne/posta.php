@@ -1,12 +1,12 @@
 <?php
 Class Posta{
-	public function __construct() {
+	public function __construct($registriran) {
 $to = "<jiri.hollan@gmail.com>";
 //$to .= ", <hocimin68@gmail.com>";
 $subject = "obvestilo anestiz";
 $from = 'noreply@sender.com';
 //$from = '<anestiz@sh17.neoserv.si>';
-$message = "Nov uporabnik";
+$message = $registriran ."Nov uporabnik";
 $headers[] = "From: " .($from);
 //$headers[] = "To: " .($to);
 //$headers[] = "CC: somebodyelse@example.com";
