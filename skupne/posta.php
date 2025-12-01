@@ -1,6 +1,6 @@
 <?php
 Class Posta{
-	public function __construct($koren) {
+	public function __construct() {
 $to = "jiri.hollan@gmail.com";
 //$to .= ", <hocimin68@gmail.com>";
 $subject = "obvestilo anestiz";
