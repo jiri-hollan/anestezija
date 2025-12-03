@@ -33,6 +33,7 @@ $("#loginForm").submit(function(e) {
         {
           console.log(kva); // show response from the php script.
 		     $(".modal") .css("display", "none");
+			 administraceFunction();
         }
     });
     
