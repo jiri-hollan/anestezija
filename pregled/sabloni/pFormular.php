@@ -32,6 +32,7 @@ $("#loginForm").submit(function(e) {
         success: function(kva)
         {
           console.log(kva); // show response from the php script.
+		     $(".modal") .css("display", "none");
         }
     });
     
