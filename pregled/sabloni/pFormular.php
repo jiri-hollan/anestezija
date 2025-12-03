@@ -33,6 +33,7 @@ $("#loginForm").submit(function(e) {
         {
           console.log(kva); // show response from the php script.
 		     $(".modal") .css("display", "none");
+			 $("#submitFrm") .html("<button id='subButton' onmouseover='administraceFunction()' onclick='return reportFunction(\"s\")'>shrani</button>");
 			 administraceFunction();
         }
     });
