@@ -25,7 +25,7 @@ if(!empty($_SESSION["uname"])){
 $uname = "<span id='stanjeDa'>prijavljen je: ".$_SESSION["uname"]."</span>";
 }else{
 $uname = "<span id='stanjeNe'>Niste prijavljeni</span>";
-//echo "<button class='knof' onclick='schovej(\'id02\')' style='width:auto;'>Prijava<button/>";
+//echo "<button class='knof' onclick='schovej(\'id02\')' style='width:auto;'>Prijava</button>";
 }
 
 ?>
