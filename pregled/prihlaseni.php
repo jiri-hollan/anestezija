@@ -58,7 +58,6 @@ Class Prijava extends Prihlaseni {
 	   $_SESSION["uporabnikGdpr"] = $upGdpr;
 	   $_SESSION["uname"] = $uname;
 	  echo '<br>GDPR: '.$upGdpr.'<br>';
-	//header('Location: bolnik.php');
 	   exit();
 	}	
 	public function prihlaseniSelhalo() {
@@ -78,7 +77,7 @@ Class Prijava extends Prihlaseni {
 			$upGdpr=$uporabnikiTbl[0]['gdpr'];			
 //echo $upGdpr;			
 			$uname=$uporabnikiTbl[0]['uname'];
-			echo $uname;
+//echo $uname;
 // echo $upstatus;
 			$this->prihlaseniUspesne($upstatus, $pristop, $upGdpr, $uname);
 		} else {
