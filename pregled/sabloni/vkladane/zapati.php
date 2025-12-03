@@ -31,14 +31,18 @@ echo '
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
 	 <span class='knof' id="prijavi" onclick='schovej("id02")' style='width:auto;'>Prijava</span>
 <?php
+Class Shranba {
+public function __construct($gdpr=0) {
 if($gdpr==1){
  echo "<span class='navSpan' id='submitFrm' onmouseover='administraceFunction()' onclick='return reportFunction(\"s\")'>shrani</span>";
  
   }else{
 	echo '<span class="navSpan" id="submitFrm" ></span>';  
   }
+}//od construct
+}//od class shranba
+new Shranba($gdpr);
 ?> 
-  <!--   <span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span> -->
  </div>	 
 </body>
 </html>

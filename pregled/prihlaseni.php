@@ -58,6 +58,7 @@ Class Prijava extends Prihlaseni {
 	   $_SESSION["uporabnikGdpr"] = $upGdpr;
 	   $_SESSION["uname"] = $uname;
 	  echo '<br>GDPR: '.$upGdpr.'<br>';
+	  new Shranba($gdpr);
 	   exit();
 	}	
 	public function prihlaseniSelhalo() {
