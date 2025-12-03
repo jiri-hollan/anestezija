@@ -1,8 +1,28 @@
+<script>
+// this is the id of the form
+$("#loginForm").submit(function(e) {
 
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var actionUrl = form.attr('action');
+    
+    $.ajax({
+        type: "POST",
+        url: actionUrl,
+        data: form.serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+          alert(data); // show response from the php script.
+        }
+    });
+    
+});
+<script/>
 <!-- ___________________________   Prijava       ___________________________________________-->
 <div id="id02" class="modal">
   
- <form class="modal-content animate" action="prihlaseni.php?r=login" method="post" autocomplete="off"> 
+ <form id="loginForm" class="modal-content animate" action="prihlaseni.php?r=login" method="post" autocomplete="off"> 
     <div class="container">
       <label for="uname1Id"><b>Uporabniško ime</b></label>
       <input id="uname1Id" type="text" placeholder="Enter Username" name="uname" autocomplete="off" required>
