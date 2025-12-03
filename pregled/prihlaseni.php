@@ -2,9 +2,9 @@
 @session_start();
 require_once('../skupne/database.php');
 require_once('../koren.php');
-//require_once('zdravnik.php');
-  	  echo '<script>console.log("prihlaseni 6");</script>';
-	  echo '<script>alert("linija7");</script>';
+//z ajaxom se prikažejo echa v console.log celotna
+//echo '<script>console.log("prihlaseni 6");</script>';
+//echo '<script>alert("linija7");</script>';
 global $r;
 $r = $_GET['r'];
 var_dump ($r);
@@ -18,7 +18,7 @@ Class Prihlaseni {
 	public $upGdpr;
 	public $koren;	
 	public function __construct($koren) {
-	//echo"('KOREN: '.$koren)";	
+//echo"('KOREN: '.$koren)";	
 	  $this->conn = new Database();
 	  $this->zaklad = new stdClass();
 	  if ($_SERVER['SERVER_NAME']=="localhost"){
@@ -42,12 +42,12 @@ Class Prijava extends Prihlaseni {
 		    parent::__construct($koren);
 	 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		  $chiba = $this->overUdaje();
-		  //echo var_dump($chiba);
+//echo var_dump($chiba);
 	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
 		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' . 'Ponovno se prijavite.';		  
 	  }
 	  require_once('sabloni/prihlasovaci-formular.php');
-	//od function inicializuj		
+//od function inicializuj		
 	}
 	
 	public function prihlaseniUspesne($upstatus, $pristop, $upGdpr, $uname){
@@ -72,14 +72,14 @@ Class Prijava extends Prihlaseni {
 
 		if (count($uporabnikiTbl) == 1)	{
 			$upstatus=$uporabnikiTbl[0]['upstatus'];			
-			//echo $upstatus;
+//echo $upstatus;
 			$pristop=$uporabnikiTbl[0]['pristop'];			
-			//echo $pristop;
+//echo $pristop;
 			$upGdpr=$uporabnikiTbl[0]['gdpr'];			
-			echo $upGdpr;			
+//echo $upGdpr;			
 			$uname=$uporabnikiTbl[0]['uname'];
 			echo $uname;
-		// echo $upstatus;
+// echo $upstatus;
 			$this->prihlaseniUspesne($upstatus, $pristop, $upGdpr, $uname);
 		} else {
 			//echo 'iz funkcije overUdaje';
@@ -106,18 +106,18 @@ Class Prijava extends Prihlaseni {
 
 //$prihlaseni = new Prihlaseni;
 if (isset($_GET['r'])) {
-	 // echo 'poskus GET' . $_GET['r'];
+// echo 'poskus GET' . $_GET['r'];
 	  $r = $_GET['r'];
 switch ($r) {
   case "login":
- 	  echo '<script>console.log("prihlaseni 112");</script>';   
+//echo '<script>console.log("prihlaseni 112");</script>';   
       $prihlaseni = new Prijava($koren);
 
 	 
-    //echo "poskušate se logirati!"; 
+//echo "poskušate se logirati!"; 
    break;
  
   default:
-  	  echo '<script>console.log("prihlaseni 118");</script>';
+  	  echo 'prihlaseni linija 121<br>';
 }
-}else{echo '<script>console.log("prihlaseni 120");</script>';}
+}else{echo 'prihlaseni linija 123<br>';}
