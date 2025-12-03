@@ -32,7 +32,8 @@ echo '
 	 <span class='knof' id="prijavi" onclick='schovej("id02")' style='width:auto;'>Prijava</span>
 <?php
 if($gdpr==1){
- echo "<span class='navSpan' id='submitFrm' onmouseover='administraceFunction()' onclick='return reportFunction(\"s\")'>shrani</span>";
+ //echo "<span class='navSpan' id='submitFrm' onmouseover='administraceFunction()' onclick='return reportFunction(\"s\")'>shrani</span>";
+ echo "<span class='navSpan' id='submitFrm'><button id='subButton' onmouseover='administraceFunction()' onclick='return reportFunction(\"s\")'>shrani</button></span>";
  
   }else{
 	echo '<span class="navSpan" id="submitFrm" ></span>';  
