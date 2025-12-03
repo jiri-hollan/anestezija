@@ -25,7 +25,7 @@ if(!empty($_SESSION["uname"])){
 $uname = "<span id='stanjeDa'>prijavljen je: ".$_SESSION["uname"]."</span>";
 }else{
 $uname = "<span id='stanjeNe'>Niste prijavljeni</span>";
-//echo "<button class='knof' onclick='schovej(\'id02\')' style='width:auto;'>Prijava</button>";
+
 }
 
 ?>
@@ -68,7 +68,6 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
 //alert(localStorage.getItem("bazeBolnisnice"));
   </script>
      <span class="" id="odjava" onclick="odjavaFunction()">RESET</span>
-	 <!--<span class='knof' onclick='schovej("id02")' style='width:auto;'>Prijava</span>-->
 <?php
 if(empty($_SESSION["uname"])){
 	 echo"<span class='knof' onclick='schovej(\"id02\")' style='width:auto'>Prijava</span>";
