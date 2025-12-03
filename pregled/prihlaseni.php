@@ -3,8 +3,8 @@
 require_once('../skupne/database.php');
 require_once('../koren.php');
 //require_once('zdravnik.php');
-  	  echo '<script>console.log("prihlaseni 6");<script/>';
-	  echo '<script>alert("linija7");<script/>';
+  	  echo '<script>console.log("prihlaseni 6");</script>';
+	  echo '<script>alert("linija7");</script>';
 global $r;
 $r = $_GET['r'];
 var_dump ($r);
@@ -110,7 +110,7 @@ if (isset($_GET['r'])) {
 	  $r = $_GET['r'];
 switch ($r) {
   case "login":
- 	  echo '<script>console.log("prihlaseni 112");<script/>';   
+ 	  echo '<script>console.log("prihlaseni 112");</script>';   
       $prihlaseni = new Prijava($koren);
 
 	 
@@ -118,6 +118,6 @@ switch ($r) {
    break;
  
   default:
-  	  echo '<script>console.log("prihlaseni 118");<script/>';
+  	  echo '<script>console.log("prihlaseni 118");</script>';
 }
-}else{echo '<script>console.log("prihlaseni 120");<script/>';}
+}else{echo '<script>console.log("prihlaseni 120");</script>';}
