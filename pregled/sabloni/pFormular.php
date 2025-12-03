@@ -1,24 +1,4 @@
-<script>
-// this is the id of the form
-$("#loginForm").submit(function(e) {
 
-    e.preventDefault(); // avoid to execute the actual submit of the form.
-
-    var form = $(this);
-    var actionUrl = form.attr('action');
-    
-    $.ajax({
-        type: "POST",
-        url: actionUrl,
-        data: form.serialize(), // serializes the form's elements.
-        success: function(data)
-        {
-          alert(data); // show response from the php script.
-        }
-    });
-    
-});
-</script>
 <!-- ___________________________   Prijava       ___________________________________________-->
 <div id="id02" class="modal">
   
@@ -36,3 +16,24 @@ $("#loginForm").submit(function(e) {
     </div>
   </form>
 </div>
+<script>
+// this is the id of the form
+$("#loginForm").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var actionUrl = form.attr('action');
+    
+    $.ajax({
+        type: "POST",
+        url: actionUrl,
+        data: form.serialize(), // serializes the form's elements.
+        success: function(kva)
+        {
+          console.log(kva); // show response from the php script.
+        }
+    });
+    
+});
+</script>
