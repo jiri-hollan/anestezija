@@ -57,7 +57,7 @@ Class Prijava extends Prihlaseni {
 	   $_SESSION["pristop"] = $pristop;
 	   $_SESSION["uporabnikGdpr"] = $upGdpr;
 	   $_SESSION["uname"] = $uname;
-	  //echo $upstatus;
+	  echo '<br>GDPR: '.$upGdpr.'<br>';
 	//header('Location: bolnik.php');
 	   exit();
 	}	
