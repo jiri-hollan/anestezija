@@ -82,7 +82,7 @@ Class Prijava extends Prihlaseni {
 // echo $upstatus;
 			$this->prihlaseniUspesne($upstatus, $pristop, $upGdpr, $uname);
 		} else {
-			//echo 'iz funkcije overUdaje';
+//echo 'iz funkcije overUdaje';
 			return $this->prihlaseniSelhalo();
 		}   
 	  }
