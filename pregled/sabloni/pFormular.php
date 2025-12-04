@@ -18,7 +18,7 @@ $("#loginForm").submit(function(e) {
     });
     
 });
-<script/>
+</script>
 <!-- ___________________________   Prijava       ___________________________________________-->
 <div id="id02" class="modal">
   
