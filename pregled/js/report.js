@@ -353,11 +353,11 @@ function nazajFunction() {
     document.getElementById("nazaj").style.display = "none";
     document.getElementById("predogled").style.display = "block";
 	//document.getElementById("submitFrm").style.display = "none";
-	if(document.getElementById("submitFrm")==undefined);}//{alert("submitFrm nedefinirana 356")
+	if(document.getElementById("submitFrm")==undefined)}//{alert("submitFrm nedefinirana 356");
 	    else{document.getElementById("submitFrm").style.display = "none";} 	
 	document.getElementById("najdiZapis").style.display = "none";
     //document.getElementById("prijavi").style.display = "none"; 
-  if(document.getElementById("prijavi")==undefined);}//{alert("prijavi nedefinirana 359") 
+  if(document.getElementById("prijavi")==undefined)}//{alert("prijavi nedefinirana 359");
   else{document.getElementById("prijavi").style.display = "none";}
 }
 
@@ -372,11 +372,11 @@ function ogledFunction() {
   document.getElementById("nazaj").style.display = "block";
   document.getElementById("prenos").style.display = "block";
   //document.getElementById("submitFrm").style.display = "block";
-  if(document.getElementById("submitFrm")==undefined);}//{alert("submitFrm nedefinirana 372")
+  if(document.getElementById("submitFrm")==undefined)}//{alert("submitFrm nedefinirana 372");
  	    else{document.getElementById("submitFrm").style.display = "block";}  
   document.getElementById("najdiZapis").style.display = "none"; 
   //document.getElementById("prijavi").style.display = "block";
-  if(document.getElementById("prijavi")==undefined);}//{alert("prijavi nedefinirana 375")
+  if(document.getElementById("prijavi")==undefined)}//{alert("prijavi nedefinirana 375");
   else{document.getElementById("prijavi").style.display = "block";}
 }
 
