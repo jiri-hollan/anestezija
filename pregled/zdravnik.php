@@ -16,6 +16,7 @@ echo'
 </head>
 <body>';
 
+
 /************************************************************************************
 ZA DOLOČITEV BOLNIŠNICE JE POTREBNO VPISATI PARAMETR FUNKCIJE sbFunction ZA IZOLO "i" ZA JESENICE "j"
 oziroma to določi izbira NAV bara, če je ta aktivirana
