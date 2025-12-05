@@ -36,7 +36,7 @@ if($gdpr==1){
  echo "<span class='navSpan' id='submitFrm' onmouseover='administraceFunction()' onclick='return reportFunction(\"s\")'>shrani</span>";
  
   }else{
-	echo "<span class='knof' id='prijavi' onclick='schovej(\"id02\")' style='width:auto;'>Prijava</span>";  
+	echo "<span class='knof' id='prija' onclick='schovej(\"id02\")' style='width:auto;'>Prijava</span>";  
   }
 ?> 
   <!--   <span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span> -->
