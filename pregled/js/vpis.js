@@ -12,6 +12,7 @@ function vpisFunction() {
      document.getElementById("pomoc").style.display = "none";
      document.getElementById("prenos").style.display = "none";	 
      //document.getElementById("submitFrm").style.display = "none";
+	  if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 15");}
      document.getElementById("najdiZapis").style.display = "block";
 	 
      danesFunction();

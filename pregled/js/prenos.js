@@ -270,7 +270,8 @@ function prenos1Function() {
    document.getElementById("cetrta").style.display = "block"; 
   document.getElementById("predogled").style.display = "none";
   document.getElementById("nazaj").style.display = "block";
-  document.getElementById("submitFrm").style.display = "none";
+  //document.getElementById("submitFrm").style.display = "none";
+   if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 273");}
   document.getElementById("najdiZapis").style.display = "none"; 
   document.getElementById("stanje").style.display = "none"  
 }

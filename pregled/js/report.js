@@ -353,11 +353,12 @@ function nazajFunction() {
     document.getElementById("nazaj").style.display = "none";
     document.getElementById("predogled").style.display = "block";
 	//document.getElementById("submitFrm").style.display = "none";
+	if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 356");}
 	document.getElementById("najdiZapis").style.display = "none";
     //document.getElementById("prijavi").style.display = "none";  	
 }
 
-function ogledFunction() {
+function ogledFunction() { 
   //alert("poglej bolnik= " + document.title);
   document.getElementById("navbar").style.display = "block"; 
   document.getElementById("prva").style.display = "none"; 
@@ -368,6 +369,7 @@ function ogledFunction() {
   document.getElementById("nazaj").style.display = "block";
   document.getElementById("prenos").style.display = "block";
   //document.getElementById("submitFrm").style.display = "block";
+  if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 372");}
   document.getElementById("najdiZapis").style.display = "none"; 
   //document.getElementById("prijavi").style.display = "block";  
 }

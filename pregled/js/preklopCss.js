@@ -48,6 +48,7 @@ otroskaVklopFunction();
      document.getElementById("natisni").style.display = "block";
      document.getElementById("pomoc").style.display = "block";
      //document.getElementById("submitFrm").style.display = "none";
+	 if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 51");} 
 	 document.getElementById("najdiZapis").style.display = "none";
      //document.getElementById("prijavi").style.display = "none";  
 return false;
