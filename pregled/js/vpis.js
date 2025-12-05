@@ -11,7 +11,7 @@ function vpisFunction() {
      document.getElementById("natisni").style.display = "none";		 
      document.getElementById("pomoc").style.display = "none";
      document.getElementById("prenos").style.display = "none";	 
-     document.getElementById("submitFrm").style.display = "none";
+     //document.getElementById("submitFrm").style.display = "none";
      document.getElementById("najdiZapis").style.display = "block";
 	 
      danesFunction();
