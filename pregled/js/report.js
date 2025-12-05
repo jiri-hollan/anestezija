@@ -353,8 +353,7 @@ function nazajFunction() {
     document.getElementById("nazaj").style.display = "none";
     document.getElementById("predogled").style.display = "block";
 	document.getElementById("submitFrm").style.display = "none";
-	document.getElementById("najdiZapis").style.display = "none";
-    //document.getElementById("prijavi").style.display = "block";  	
+	document.getElementById("najdiZapis").style.display = "none";	
 }
 
 function ogledFunction() {
@@ -369,7 +368,6 @@ function ogledFunction() {
   document.getElementById("prenos").style.display = "block";
   document.getElementById("submitFrm").style.display = "block";
   document.getElementById("najdiZapis").style.display = "none"; 
-  //document.getElementById("prijavi").style.display = "block";  
 }
 
 function pomocFunction() {
