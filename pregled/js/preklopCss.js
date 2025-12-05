@@ -48,10 +48,12 @@ otroskaVklopFunction();
      document.getElementById("natisni").style.display = "block";
      document.getElementById("pomoc").style.display = "block";
      //document.getElementById("submitFrm").style.display = "none";
-	 if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 51");} 
+	 if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 51");}
+	    else{document.getElementById("submitFrm").style.display = "none";} 
 	 document.getElementById("najdiZapis").style.display = "none";
      //document.getElementById("prijavi").style.display = "none";
-  if(document.getElementById("prijavi")==undefined){alert("prijavi nedefinirana 54");}	 
+  if(document.getElementById("prijavi")==undefined){alert("prijavi nedefinirana 54");}
+    else{document.getElementById("prijavi").style.display = "none";}
 return false;
 
      }
