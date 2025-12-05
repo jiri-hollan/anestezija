@@ -369,6 +369,7 @@ function ogledFunction() {
   document.getElementById("tretja").style.display = "block";
   document.getElementById("cetrta").style.display = "none"; 
   document.getElementById("predogled").style.display = "none";
+  document.getElementById("natisni").style.display = "block"; 
   document.getElementById("nazaj").style.display = "block";
   document.getElementById("prenos").style.display = "block";
   //document.getElementById("submitFrm").style.display = "block";
