@@ -62,7 +62,8 @@ Class Prijava extends Prihlaseni {
 	   exit();
 	}	
 	public function prihlaseniSelhalo() {
-		echo 'Napačno uporabniško ime ali geslo. ';
+		//echo 'Napačno uporabniško ime ali geslo. ';
+		echo '<script>alert("Napačno uporabniško ime ali geslo.");</script> ';
 	   return ;
 	}	
 	public function overUdaje() {
