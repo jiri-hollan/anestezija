@@ -51,7 +51,10 @@ otroskaVklopFunction();
      document.getElementById("submitFrm").style.display = "none";
 	 }
 	 document.getElementById("najdiZapis").style.display = "none";
-    document.getElementById("prijavi").style.display = "none";  
+	  if(!document.getElementById("prijavi")=== undefined){
+         document.getElementById("prijavi").style.display = "none";
+	 }
+	 
 return false;
 
      }
