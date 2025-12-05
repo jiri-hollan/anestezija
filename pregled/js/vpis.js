@@ -14,7 +14,7 @@ function vpisFunction() {
      //document.getElementById("submitFrm").style.display = "none";
 	  if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 15");}
      document.getElementById("najdiZapis").style.display = "block";
-	 
+  if(document.getElementById("prijavi")==undefined){alert("prijavi nedefinirana 17");}	 
      danesFunction();
 	 formNazajFunction();
 	 administraceFunction();

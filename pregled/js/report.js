@@ -355,7 +355,8 @@ function nazajFunction() {
 	//document.getElementById("submitFrm").style.display = "none";
 	if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 356");}
 	document.getElementById("najdiZapis").style.display = "none";
-    //document.getElementById("prijavi").style.display = "none";  	
+    //document.getElementById("prijavi").style.display = "none"; 
+  if(document.getElementById("prijavi")==undefined){alert("prijavi nedefinirana 359");} 	
 }
 
 function ogledFunction() { 
@@ -371,7 +372,8 @@ function ogledFunction() {
   //document.getElementById("submitFrm").style.display = "block";
   if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 372");}
   document.getElementById("najdiZapis").style.display = "none"; 
-  //document.getElementById("prijavi").style.display = "block";  
+  //document.getElementById("prijavi").style.display = "block";
+  if(document.getElementById("prijavi")==undefined){alert("prijavi nedefinirana 375");}
 }
 
 function pomocFunction() {

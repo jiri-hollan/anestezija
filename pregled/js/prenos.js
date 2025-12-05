@@ -273,6 +273,7 @@ function prenos1Function() {
   //document.getElementById("submitFrm").style.display = "none";
    if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 273");}
   document.getElementById("najdiZapis").style.display = "none"; 
-  document.getElementById("stanje").style.display = "none"  
+  document.getElementById("stanje").style.display = "none" 
+   if(document.getElementById("prijavi")==undefined){alert("prijavi nedefinirana 277");} 
 }
  
