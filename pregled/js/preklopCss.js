@@ -47,11 +47,12 @@ otroskaVklopFunction();
      document.getElementById("novB").style.display = "block";
      document.getElementById("natisni").style.display = "block";
      document.getElementById("pomoc").style.display = "block";
-	 if(!document.getElementById("submitFrm")=== undefined){
+	 if(document.getElementById("submitFrm")!== undefined){
      document.getElementById("submitFrm").style.display = "none";
 	 }
 	 document.getElementById("najdiZapis").style.display = "none";
-	  if(!document.getElementById("prijavi")=== undefined){
+	 
+	  if(document.getElementById("prijavi")!== undefined){
          document.getElementById("prijavi").style.display = "none";
 	 }
 	 

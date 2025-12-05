@@ -11,7 +11,7 @@ function vpisFunction() {
      document.getElementById("natisni").style.display = "none";		 
      document.getElementById("pomoc").style.display = "none";
      document.getElementById("prenos").style.display = "none";	 
-			if(!document.getElementById("submitFrm")=== undefined){
+			if(document.getElementById("submitFrm")!= undefined){
 				document.getElementById("submitFrm").style.display = "none";
 				alert('vpis.js linija 16');
 				}else{alert('vpis.js linija 17');}
