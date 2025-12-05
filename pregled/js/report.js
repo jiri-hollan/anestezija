@@ -354,7 +354,7 @@ function nazajFunction() {
     document.getElementById("predogled").style.display = "block";
 	document.getElementById("submitFrm").style.display = "none";
 	document.getElementById("najdiZapis").style.display = "none";
-    //document.getElementById("prijavi").style.display = "block";  	
+    document.getElementById("prijavi").style.display = "none";  	
 }
 
 function ogledFunction() {
@@ -369,7 +369,7 @@ function ogledFunction() {
   document.getElementById("prenos").style.display = "block";
   document.getElementById("submitFrm").style.display = "block";
   document.getElementById("najdiZapis").style.display = "none"; 
-  //document.getElementById("prijavi").style.display = "block";  
+  document.getElementById("prijavi").style.display = "block";  
 }
 
 function pomocFunction() {
@@ -377,7 +377,7 @@ function pomocFunction() {
  prompt("Če ni nastavljena pot do  ciljne mape za PDF jo nastavi.\nSkopiraj spodnji naslov in ga prilepi kot pot.", pot );
 }
 
-function administraceFunction(){
+function administraceFunction(){/*
 //alert("miš nekaj dela");	
    $.ajax({
      url : '../skupne/sessionKontrola.php',
@@ -390,6 +390,6 @@ function administraceFunction(){
         console.log ('error');
      }
 
-   });
+   });*/
 }
 
