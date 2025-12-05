@@ -49,7 +49,7 @@ otroskaVklopFunction();
      document.getElementById("pomoc").style.display = "block";
      document.getElementById("submitFrm").style.display = "none";
 	 document.getElementById("najdiZapis").style.display = "none";
-     document.getElementById("prijavi").style.display = "none";  
+     //document.getElementById("prijavi").style.display = "none";  
 return false;
 
      }

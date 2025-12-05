@@ -29,7 +29,7 @@ echo '
      <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span>   
 	 <span class="navSpan" id="prenos" onclick="return prenosFunction('pr')">prenos</span>
      <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
-	 <span class='knof' id="prijavi" onclick='schovej("id02")' style='width:auto;'>Prijava</span>
+	 <!--<span class='knof' id="prijavi" onclick='schovej("id02")' style='width:auto;'>Prijava</span>-->
 <?php
 if($gdpr==1){
 // echo '<span class="navSpan" id="submitFrm" onmouseover="administraceFunction()" onclick="return reportFunction'."('s')".'">shrani</span>';
@@ -37,7 +37,7 @@ if($gdpr==1){
  echo "<span class='navSpan' id='submitFrm' onmouseover='administraceFunction()' onclick='return reportFunction(\"s\")'>shrani</span>";
  
   }else{
-	echo '<span class="navSpan" id="submitFrm" ></span>';  
+	echo "<span class='knof' id='prijavi' onclick='schovej(\"id02\")' style='width:auto;'>Prijava</span>";  
   }
 ?> 
   <!--   <span class="navSpan" id="submitFrm" onclick="return reportFunction('s')">shrani</span> -->
