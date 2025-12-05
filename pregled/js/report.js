@@ -354,7 +354,7 @@ function nazajFunction() {
     document.getElementById("predogled").style.display = "block";
 	document.getElementById("submitFrm").style.display = "none";
 	document.getElementById("najdiZapis").style.display = "none";
-    //document.getElementById("prijavi").style.display = "block";  	
+    document.getElementById("prijavi").style.display = "none";  	
 }
 
 function ogledFunction() {
