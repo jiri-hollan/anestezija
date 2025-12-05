@@ -367,7 +367,7 @@ function ogledFunction() {
   document.getElementById("predogled").style.display = "none";
   document.getElementById("nazaj").style.display = "block";
   document.getElementById("prenos").style.display = "block";
-  document.getElementById("submitFrm").style.display = "block";
+  //document.getElementById("submitFrm").style.display = "block";
   document.getElementById("najdiZapis").style.display = "none"; 
   //document.getElementById("prijavi").style.display = "block";  
 }
