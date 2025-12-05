@@ -351,6 +351,7 @@ function nazajFunction() {
     document.getElementById("tretja").style.display = "none";
     document.getElementById("cetrta").style.display = "none"; 	
     document.getElementById("nazaj").style.display = "none";
+    document.getElementById("natisni").style.display = "none"; 	
     document.getElementById("predogled").style.display = "block";
 	//document.getElementById("submitFrm").style.display = "none";
 	if(document.getElementById("submitFrm")==undefined){}//alert("submitFrm nedefinirana 356");
