@@ -271,11 +271,11 @@ function prenos1Function() {
   document.getElementById("predogled").style.display = "none";
   document.getElementById("nazaj").style.display = "block";
   //document.getElementById("submitFrm").style.display = "none";
-   if(document.getElementById("submitFrm")==undefined){alert("submitFrm nedefinirana 273");}
+   if(document.getElementById("submitFrm")==undefined);}//{alert("submitFrm nedefinirana 273")
    else{document.getElementById("submitFrm").style.display = "none";}  
   document.getElementById("najdiZapis").style.display = "none"; 
   document.getElementById("stanje").style.display = "none" 
-   if(document.getElementById("prijavi")==undefined){alert("prijavi nedefinirana 277");} 
+   if(document.getElementById("prijavi")==undefined);}//{alert("prijavi nedefinirana 277") 
     else{document.getElementById("prijavi").style.display = "none";} 
 }
  
