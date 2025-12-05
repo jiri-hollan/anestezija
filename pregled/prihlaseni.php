@@ -5,9 +5,9 @@ require_once('../koren.php');
 //require_once('zdravnik.php');
   	  echo '<script>console.log("prihlaseni 6");</script>';
 	  echo '<script>alert("linija7");</script>';
-global $r;
+/*global $r;
 $r = $_GET['r'];
-var_dump ($r);
+var_dump ($r);*/
 	  
 //require_once('sabloni/prihlasovaci-formular.php');
 Class Prihlaseni {
@@ -46,7 +46,7 @@ Class Prijava extends Prihlaseni {
 	  }else if (!empty($_GET['stav'] && $_GET['stav'] == 'neaktivni')){
 		  $oznameni = 'Ste odjavljeni zaradi neaktivnosti. ' . 'Ponovno se prijavite.';		  
 	  }
-	  require_once('sabloni/prihlasovaci-formular.php');
+	  require_once('sabloni/pFormular.php');
 	//od function inicializuj		
 	}
 	
