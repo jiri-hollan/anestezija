@@ -19,7 +19,7 @@ class Administrace {
 	  if (isset($_SESSION["uporabnikPrihlasen"])) {
 		  $uplinuliCas = time() - $_SESSION["casova_znamka"];
 		  if($uplinuliCas <= $casoviLimit){
-		      echo 'none';
+		      echo 'hidden';
               $_SESSION["casova_znamka"] = time();			  
 //echo $uplinuliCas;
 		  }
@@ -27,13 +27,13 @@ class Administrace {
 			  //echo ' čas je potekel: '.$uplinuliCas.' je več kot '.$casoviLimit; 
 			  session_unset();
 			  session_destroy();
-			  echo 'block'; 
+			  echo 'visible'; 
 			  exit();
 		  }else{$_SESSION["casova_znamka"] = time();}
 	  }else{
 			  session_unset();
 			  session_destroy();
-			  echo 'block';
+			  echo 'visible';
 			  exit();		   
 	  }
 	}//od construct	

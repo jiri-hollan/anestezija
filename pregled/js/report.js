@@ -384,7 +384,7 @@ function administraceFunction(){
      type : 'POST',
      success : function (result) {
         console.log (result); // Here, you need to use response by PHP file.           
-		$("#prijavi").css("display", result); //prevzame display iz administracije
+		$("#prijavi").css("visibility", result); //prevzame display iz administracije
      },
      error : function () {
         console.log ('error');
