@@ -401,7 +401,16 @@ background-color: black;
 	width:200px;
 	height: 20px;
     text-align: center;
+  animation-name: myAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
+
+@keyframes myAnimation {
+  50%   {background-color:red; }
+
+}
+
 .stanjeDa {
     color: black;	
     background-color:white;
