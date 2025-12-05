@@ -352,7 +352,9 @@ function nazajFunction() {
     document.getElementById("cetrta").style.display = "none"; 	
     document.getElementById("nazaj").style.display = "none";
     document.getElementById("predogled").style.display = "block";
-	//document.getElementById("submitFrm").style.display = "none";
+	 if(!document.getElementById("submitFrm")=== undefined){
+     document.getElementById("submitFrm").style.display = "none";
+	 }
 	document.getElementById("najdiZapis").style.display = "none";
     document.getElementById("prijavi").style.display = "none";  	
 }
@@ -367,7 +369,9 @@ function ogledFunction() {
   document.getElementById("predogled").style.display = "none";
   document.getElementById("nazaj").style.display = "block";
   document.getElementById("prenos").style.display = "block";
-  //document.getElementById("submitFrm").style.display = "block";
+	 if(!document.getElementById("submitFrm")=== undefined){
+     document.getElementById("submitFrm").style.display = "block";
+	 }
   document.getElementById("najdiZapis").style.display = "none"; 
   document.getElementById("prijavi").style.display = "block";  
 }
