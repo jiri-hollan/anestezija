@@ -52,7 +52,8 @@ $conn = null;
 public function ogled($imeTable) { 
 if ($imeTable!=""){
 try {
-    $sql = "select column_name from information_schema.columns where `TABLE_SCHEMA`='anestiz_navodila' and table_name =  '$imeTable'";
+    $dbname = $this->conn->query('select database()')->fetchColumn();
+    $sql = "select column_name from information_schema.columns where `TABLE_SCHEMA`='$dbname' and table_name =  '$imeTable'";
 //Prepare our SQL statement,
    $stmtl = $this->conn->prepare($sql);
 // echo "To so stolpci tabele: " . "$imeTable", "<br>";
