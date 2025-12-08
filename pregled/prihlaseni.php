@@ -66,7 +66,8 @@ Class Prijava extends Prihlaseni {
 		echo '
 		<script>
 		alert("Napačno uporabniško ime ali geslo.");
-		window.history.back();
+		//window.history.back();
+		window.location.href = "bolnik\.php";
 		</script> ';
 		
 	   return ;
