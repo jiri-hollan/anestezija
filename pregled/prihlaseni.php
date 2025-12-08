@@ -67,9 +67,8 @@ Class Prijava extends Prihlaseni {
 		<script>
 		alert("Napačno uporabniško ime ali geslo.");
 		//window.history.back();
-		window.location.href = "bolnik\.php";
+		window.location.href = "bolnik\.php?stran=tretja";
 		</script> ';
-		
 	   return ;
 	}	
 	public function overUdaje() {
