@@ -12,8 +12,11 @@ require_once('../skupne/administrace.php');
 require_once('../koren.php');
 require_once('sabloni/pFormular.php');
 //require_once('../skupne/sessionkontrola.php');
-$stran="prva";
-$stran = $_REQUEST['stran'];
+
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["stran"])) {
+$stran = $_GET['stran'];
+}else{$stran="prva";}
+
 if($stran=="prva"){
 echo'<body onload="vpisFunction()">';
 }elseif($stran=="tretja"){
