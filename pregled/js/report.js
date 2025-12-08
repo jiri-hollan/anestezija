@@ -1,4 +1,9 @@
-function vrniFunction(){window.location.href = "../frontend/menuFile1.php";}
+function vrniFunction(){
+     danesFunction();
+	 formNazajFunction();
+	reportFunction();
+	administraceFunction();	
+	}
 
 /********************************osebniFunction**********************************/
 function osebniFunction()
@@ -432,7 +437,7 @@ function vpisFunction() {
 	 formNazajFunction();
 	 administraceFunction();
 }
-
+/***********************************danesFunction***************************************************/
  //izračun današnjeg datuma in prikaz v ljudski obliki. V <input> vložena pravilna oblika datuma za QLS
    var danes;
   function danesFunction() {
