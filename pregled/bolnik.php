@@ -12,7 +12,7 @@ require_once('../skupne/administrace.php');
 require_once('../koren.php');
 require_once('sabloni/pFormular.php');
 //require_once('../skupne/sessionkontrola.php');
-$stran="prv";
+$stran="prva";
 //$name = $_REQUEST['stran'=""];
 if($stran=="prva"){
 echo'<body onload="vpisFunction()">';
