@@ -20,7 +20,7 @@ $stran = $_GET['stran'];
 if($stran=="prva"){
 echo'<body onload="vpisFunction()">';
 }elseif($stran=="tretja"){
-echo'<body onload="reportFunction()">';
+echo'<body onload="vrniFunction()">';
 	}
 	else{
 		echo'<body onload="vpisFunction()">';
