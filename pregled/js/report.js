@@ -430,6 +430,7 @@ function vpisFunction() {
 	 administraceFunction();
 }
 
+/*****************************danes function*********************************************/
  //izračun današnjeg datuma in prikaz v ljudski obliki. V <input> vložena pravilna oblika datuma za QLS
    var danes;
   function danesFunction() {
