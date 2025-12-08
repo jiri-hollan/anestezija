@@ -12,15 +12,15 @@ require_once('../skupne/administrace.php');
 require_once('../koren.php');
 require_once('sabloni/pFormular.php');
 //require_once('../skupne/sessionkontrola.php');
-$stran="prv";
-//$name = $_REQUEST['stran'=""];
+$stran="prva";
+$stran = $_REQUEST['stran'];
 if($stran=="prva"){
 echo'<body onload="vpisFunction()">';
-}/*elseif($stran=="tretja"){
+}elseif($stran=="tretja"){
 echo'<body onload="reportFunction()">';
-	}*/
+	}
 	else{
-		echo'<body onload="vrniFunction()">';
+		echo'<body onload="vpisFunction()">';
 	}
 	
 if(!empty($_SESSION["uname"])){
