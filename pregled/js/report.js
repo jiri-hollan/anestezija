@@ -1,4 +1,8 @@
-function vrniFunction(){window.location.href = "../frontend/menuFile1.php";}
+function vrniFunction(){
+     danesFunction();
+	 formNazajFunction();
+	 administraceFunction();
+	}
 
 /********************************osebniFunction**********************************/
 function osebniFunction()

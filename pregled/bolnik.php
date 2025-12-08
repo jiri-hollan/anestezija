@@ -20,7 +20,7 @@ echo'<body onload="vpisFunction()">';
 echo'<body onload="reportFunction()">';
 	}*/
 	else{
-		echo'<body onload="vpisFunction()">';
+		echo'<body onload="vrniFunction()">';
 	}
 	
 if(!empty($_SESSION["uname"])){
