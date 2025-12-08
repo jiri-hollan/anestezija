@@ -9,10 +9,10 @@ echo'
 <title>Novi bolnik</title>
 <link rel="shortcut icon" href="../favicon.ico?'.time().'">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="js/vpis.js?'.time().'"></script>
+<!--<script src="js/vpis.js?'.time().'"></script>-->
 <script src="js/report.js?'.time().'"></script>
 <script src="js/prenos.js?'.time().'"></script>
-<script src="js/preklopCss.js?'.time().'"></script>
+<!--<script src="js/preklopCss.js?'.time().'"></script>-->
 <script src="js/odjava.js?'.time().'"></script>
 <script src="js/evaluacija.js?'.time().'"></script>
 <script src="js/drugiIzvidi.js?'.time().'"></script>
