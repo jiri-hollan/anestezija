@@ -25,14 +25,4 @@ echo'
 <link rel="stylesheet" type="text/css" href="../otroska/css/doziranje.css?'.time().'">
 <link rel="stylesheet" type="text/css" href="css/uporabnik.css?'.time().'">
 </head>';
-$stran="prva";
-if($stran=="prva"){
-echo'<body onload="vpisFunction()">';
-}elseif($stran=="tretja"){
-echo'<body onload="reportFunction()">';
-	}
-	else{
-		echo'napačen $stran';
-	}
-
 ?>

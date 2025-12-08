@@ -12,7 +12,17 @@ require_once('../skupne/administrace.php');
 require_once('../koren.php');
 require_once('sabloni/pFormular.php');
 //require_once('../skupne/sessionkontrola.php');
-
+$stran="prv";
+//$name = $_REQUEST['stran'=""];
+if($stran=="prva"){
+echo'<body onload="vpisFunction()">';
+}/*elseif($stran=="tretja"){
+echo'<body onload="reportFunction()">';
+	}*/
+	else{
+		echo'<body onload="vpisFunction()">';
+	}
+	
 if(!empty($_SESSION["uname"])){
 $uname = "<div id='stanje' class='stanjeDa'>prijavljen je: ".$_SESSION["uname"]."</div>";
 }else{

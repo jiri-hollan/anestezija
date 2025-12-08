@@ -1,3 +1,6 @@
+function vrniFunction(){window.location.href = "../frontend/menuFile1.php";}
+
+/********************************osebniFunction**********************************/
 function osebniFunction()
  {
 
