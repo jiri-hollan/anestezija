@@ -1,6 +1,11 @@
 function usmeriFunction(){
 //odpre bolnik.php na želeni strani	
-	
+	  let fajl = getCookie("odpiralniFajl");
+	  document.cookie = "odpiralniFajl=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";//izniči cookie
+	      if (fajl == "" || fajl == null) {
+			vpisFunction();  
+		  }
+	  
 }
 
 /*************************osebniFunction*************************************/
