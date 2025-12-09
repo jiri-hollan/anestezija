@@ -3,13 +3,18 @@
 require_once('../skupne/database.php');
 require_once('../koren.php');
 //require_once('zdravnik.php');
-  	  echo '<script>console.log("prihlaseni 6");</script>';
+  	  echo '<script>
+	  <head>
+	  console.log("prihlaseni 6");
+	  document.cookie = "odpiralniFjl=reportFunction("p"); path=/";
+	  </head>
+	  </script>';
 //echo '<script>alert("linija7");</script>';
 /*global $r;
 $r = $_GET['r'];
 var_dump ($r);*/
 	  
-//require_once('sabloni/prihlasovaci-formular.php');
+
 Class Prihlaseni {
 	public $conn;
 	public $zaklad;
@@ -66,6 +71,7 @@ Class Prijava extends Prihlaseni {
 		echo '
 		<script>
 		alert("Napačno uporabniško ime ali geslo.");
+
 		window.history.back();
 		</script> ';
 		
