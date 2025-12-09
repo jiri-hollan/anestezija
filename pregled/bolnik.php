@@ -12,7 +12,7 @@ require_once('../skupne/administrace.php');
 require_once('../koren.php');
 require_once('sabloni/pFormular.php');
 //require_once('../skupne/sessionkontrola.php');
-
+echo'<body onload="usmeriFunction()">';
 if(!empty($_SESSION["uname"])){
 $uname = "<div id='stanje' class='stanjeDa'>prijavljen je: ".$_SESSION["uname"]."</div>";
 }else{

@@ -1,3 +1,10 @@
+function usmeriFunction(){
+//odpre bolnik.php na želeni strani	
+	
+}
+
+/*************************osebniFunction*************************************/
+
 function osebniFunction()
  {
 
