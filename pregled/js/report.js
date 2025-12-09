@@ -1,6 +1,5 @@
 function osebniFunction()
  {
-
  var w = document.getElementById("frm")["ime"].value;
  var x= document.getElementById("frm")["priimek"].value;
  var y =  datRojstva;
@@ -10,24 +9,19 @@ function osebniFunction()
     alert("Ime mora biti vpisano");
     return false;
   }
-
-else if (x == "") {
+    else if (x == "") {
     alert("priimek mora biti vpisan");
     return false;
   }
-
-else if (typeof y == "undefined") {
+    else if (typeof y == "undefined") {
     alert("datum rojstva mora biti vpisan");
     return false;
   }
-
-  else if (z == "") {
+    else if (z == "") {
     alert("matična številka mora biti vpisana");
     return false;
   }
-
-
- else {
+    else {
 
 priimek = document.getElementById("priimek").value;
 ime = document.getElementById("ime").value;
@@ -47,13 +41,13 @@ otroskaVklopFunction();
      document.getElementById("novB").style.display = "block";
      document.getElementById("natisni").style.display = "none";
      document.getElementById("pomoc").style.display = "block";
+	 document.getElementById("najdiZapis").style.display = "none";	 
      //document.getElementById("submitFrm").style.display = "none";
 	 if(document.getElementById("submitFrm")==undefined){}//alert("submitFrm nedefinirana 51");
-	    else{document.getElementById("submitFrm").style.display = "none";} 
-	 document.getElementById("najdiZapis").style.display = "none";
+	  else{document.getElementById("submitFrm").style.display = "none";} 
      //document.getElementById("prijavi").style.display = "none";
-  if(document.getElementById("prijavi")==undefined){}//alert("prijavi nedefinirana 54");
-    else{document.getElementById("prijavi").style.display = "none";}
+     if(document.getElementById("prijavi")==undefined){}//alert("prijavi nedefinirana 54");
+     else{document.getElementById("prijavi").style.display = "none";}
 return false;
 
      }
@@ -112,7 +106,7 @@ let modal = document.getElementById('doziranje');
   }else if (x10 == "") {
     alert("datum rojstva mora biti vpisan");
     return false;
- }else if (x11 == "") {
+  }else if (x11 == "") {
     alert("ovisnost mora biti opredeljena");
     return false;	
 	
@@ -401,9 +395,10 @@ function natisniFunction() {
   document.getElementById("stanje").style.display = "none"  
   window.print();
   ogledFunction();
-   }else {
+  }
+   else {
   ogledFunction();
-    }
+   }
 }
 
 /******************************vpisFunction********************************************/
@@ -418,29 +413,29 @@ function vpisFunction() {
      document.getElementById("novB").style.display = "block"; ;
      document.getElementById("natisni").style.display = "none";		 
      document.getElementById("pomoc").style.display = "none";
-     document.getElementById("prenos").style.display = "none";	 
+     document.getElementById("prenos").style.display = "none";
+     document.getElementById("najdiZapis").style.display = "block";	 
      //document.getElementById("submitFrm").style.display = "none";
 	  if(document.getElementById("submitFrm")==undefined){}//alert("submitFrm nedefinirana 15");
-	    else{document.getElementById("submitFrm").style.display = "none";} 	  
-     document.getElementById("najdiZapis").style.display = "block";
-  if(document.getElementById("prijavi")==undefined){}//alert("prijavi nedefinirana 17");
-    else{document.getElementById("prijavi").style.display = "none";}
-     danesFunction();
-	 formNazajFunction();
-	 administraceFunction();
+	  else{document.getElementById("submitFrm").style.display = "none";} 	  
+
+      if(document.getElementById("prijavi")==undefined){}//alert("prijavi nedefinirana 17");
+      else{document.getElementById("prijavi").style.display = "none";}
+	danesFunction();
+	formNazajFunction();
+	administraceFunction();
 }
 
 /*****************************danes function*********************************************/
  //izračun današnjeg datuma in prikaz v ljudski obliki. V <input> vložena pravilna oblika datuma za QLS
-   var danes;
-  function danesFunction() {
+var danes;
+function danesFunction() {
     var d = new Date();   
     danes = d.toLocaleString("sl-SI", {dateStyle: "medium",timeStyle: "short"});  
     //document.forms["frm1"].elements["datPregleda"].value = danes; 
-  document.getElementById("lab6").innerHTML = "Datum pregleda:  " + danes;
-  document.getElementById("datPregleda").value = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
-
-}
+    document.getElementById("lab6").innerHTML = "Datum pregleda:  " + danes;
+    document.getElementById("datPregleda").value = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+ }
 
 /********************************nazajFunction****************************************/
 
@@ -454,14 +449,15 @@ function nazajFunction() {
     document.getElementById("nazaj").style.display = "none";
     document.getElementById("natisni").style.display = "none"; 	
     document.getElementById("predogled").style.display = "block";
+	document.getElementById("najdiZapis").style.display = "none";	
 	//document.getElementById("submitFrm").style.display = "none";
 	if(document.getElementById("submitFrm")==undefined){}//alert("submitFrm nedefinirana 356");
-	    else{document.getElementById("submitFrm").style.display = "none";} 	
-	document.getElementById("najdiZapis").style.display = "none";
+	else{document.getElementById("submitFrm").style.display = "none";} 	
+
     //document.getElementById("prijavi").style.display = "none"; 
-  if(document.getElementById("prijavi")==undefined){}//alert("prijavi nedefinirana 359");
-  else{document.getElementById("prijavi").style.display = "none";}
-}
+    if(document.getElementById("prijavi")==undefined){}//alert("prijavi nedefinirana 359");
+    else{document.getElementById("prijavi").style.display = "none";}
+ }
 
 /*******************************ogledFunction**************************************/
 
@@ -476,21 +472,22 @@ function ogledFunction() {
   document.getElementById("natisni").style.display = "block"; 
   document.getElementById("nazaj").style.display = "block";
   document.getElementById("prenos").style.display = "block";
+  document.getElementById("najdiZapis").style.display = "none";   
   //document.getElementById("submitFrm").style.display = "block";
   if(document.getElementById("submitFrm")==undefined){}//alert("submitFrm nedefinirana 372");
- 	    else{document.getElementById("submitFrm").style.display = "block";}  
-  document.getElementById("najdiZapis").style.display = "none"; 
+  else{document.getElementById("submitFrm").style.display = "block";}  
+
   //document.getElementById("prijavi").style.display = "block";
   if(document.getElementById("prijavi")==undefined){}//alert("prijavi nedefinirana 375");
   else{document.getElementById("prijavi").style.display = "block";}
-}
+ }
 
 /********************************pomocFunction***************************************/
 
 function pomocFunction() {
   var pot = "\\\\hospital.local\\dfs\\EIT\\premedikacija\\pregledani bolniki";
- prompt("Če ni nastavljena pot do  ciljne mape za PDF jo nastavi.\nSkopiraj spodnji naslov in ga prilepi kot pot.", pot );
-}
+  prompt("Če ni nastavljena pot do  ciljne mape za PDF jo nastavi.\nSkopiraj spodnji naslov in ga prilepi kot pot.", pot );
+ }
 
 /***********************************administraceFunction*****************************************/
 
