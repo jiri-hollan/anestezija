@@ -1,15 +1,18 @@
 <?php
 echo "<table id='vrsticeTabela'>";
-class TableRows extends RecursiveIteratorIterator {
+class TableRows extends RecursiveIteratorIterator {	
     function __construct($it) {
         parent::__construct($it, self::LEAVES_ONLY);
     }
+#[\ReturnTypeWillChange]
     function current() {
         return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
     }
+#[\ReturnTypeWillChange]
     function beginChildren() {
         echo "<tr>";
     }
+#[\ReturnTypeWillChange]
     function endChildren() {
         echo "</tr>" . "\n";
     }
