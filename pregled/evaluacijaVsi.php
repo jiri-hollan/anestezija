@@ -1,6 +1,7 @@
 <?php
 //------upam da naredi primeren jason iz limitiTbl
 require_once '../skupne/database.php';
+#[AllowDynamicProperties]
 Class PoberZapise{
 	public $conn;
 	public function __construct() {

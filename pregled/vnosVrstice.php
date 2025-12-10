@@ -50,7 +50,7 @@ else{
 	  echo '</script>';	
 	//header('Location: bolnik.php');
 }
-
+#[AllowDynamicProperties]
 Class Apregled {
 	public $conn;
 	public $zaklad;

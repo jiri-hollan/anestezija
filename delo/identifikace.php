@@ -1,4 +1,5 @@
 <?php
+#[AllowDynamicProperties]
 class VyberUporabnika {
 public $podminka;
 function __construct($podminka="") {
