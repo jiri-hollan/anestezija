@@ -1,5 +1,6 @@
 <?php
 //------na temelju pregledId pobere podatke iz zapisa z bolnišnice
+#[AllowDynamicProperties]
 Class PoberZapis{
 	public $conn;
 	public $pristop;
