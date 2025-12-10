@@ -60,6 +60,7 @@ if (isset($_REQUEST["akce"])) {
  
  ?>
 <?php 
+#[AllowDynamicProperties]
  class DostopPost{
   public $datumOpravila;		 
   public $bolnisnica;		
@@ -192,6 +193,7 @@ foreach (json_decode($this->dataPreg) as $key) {
 }// od class Vloz
 
 //-------------------------iterator-----------------------------------------------------
+#[AllowDynamicProperties]
 	class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
 		//echo $_REQUEST["tabulka"];
