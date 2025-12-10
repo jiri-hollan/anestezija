@@ -1,6 +1,7 @@
 <?php
 //------seznam bolnišnic
 require_once '../skupne/database.php';
+#[AllowDynamicProperties]
 Class spisekBolnisnic{
 	public $conn;
 	public $bolnisnicaStatus; //vključena+baza=2, vljučena=1, nevključena=0
