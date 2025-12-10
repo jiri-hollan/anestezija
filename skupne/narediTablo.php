@@ -1,5 +1,5 @@
 <?php
-
+#[AllowDynamicProperties]
 class DatabaseGloboka {
 	public $servername = '';
 	public $username = '';
