@@ -1,3 +1,4 @@
+
 const person1 = {};	
 function formFunction() {
 //const person1 = {};	
@@ -29,7 +30,7 @@ for (i = 0; i < inputs.length; i++) {
 	 var kljuc=inputs[i].name;
 //alert (kljuc);
 //console.log(kljuc);
-	 if (obj[kljuc] !== undefined) {
+	 if (obj[kljuc] !== undefined && typeof obj[kljuc]== 'string') {
 		document.getElementsByName(kljuc)[0].value = obj[kljuc].replace(/\&quot;/g,'\\"').replace(/\&amp;/g, "&"); 
 	 }
 //alert(kljuc + ": " +person1[kljuc]);
