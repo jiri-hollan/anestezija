@@ -11,7 +11,7 @@ require_once '../skupne/narediTablo.php';
 $databaseView=new DatabaseView;
 $databaseView->narediSql($kodaSql);
 }
-
+#[AllowDynamicProperties]
 class DatabaseView {
 	public $servername = '';
 	public $username = '';
