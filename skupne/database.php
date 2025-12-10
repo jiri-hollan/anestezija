@@ -1,4 +1,5 @@
  <?php
+ #[AllowDynamicProperties]
 class Database {
 	public $servername = '';
 	public $username = '';
