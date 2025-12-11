@@ -309,7 +309,7 @@ class DeloRows extends RecursiveIteratorIterator {
     function __construct($it) {
         parent::__construct($it, self::LEAVES_ONLY);
     }
-    function current(): mixed { 
+    function current(): string { 
 		 return "<td  >"  . parent::current() . "</td>";
     }
     function beginChildren(): void {
