@@ -6,7 +6,7 @@ class NarediBazo {
 	public $servername = '';
 	public $username = '';
 	public $password = '';
-	public $connn = '';	
+	public $conn = '';	
 	public Function __construct(){
 	require_once '../skupne/streznik.php';
 
