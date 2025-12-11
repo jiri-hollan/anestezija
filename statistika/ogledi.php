@@ -179,7 +179,7 @@ foreach (json_decode($this->dataPreg) as $key) {
 
         parent::__construct($it, self::LEAVES_ONLY);
     }
-    function current(): mixed  { 
+    function current(): string  { 
 		 return "<td  >"  . parent::current(). "</td>";
     }
     function beginChildren(): void {
