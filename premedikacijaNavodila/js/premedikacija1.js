@@ -18,8 +18,9 @@ function ajax_get_premedikacija(elem) {
 
 function ajax_aktualizuj(ucinkovina, teza, sprememba){
 		$.ajax({
-		//za web
+//za web
 		url: "/premedikacijaNavodila/otroskaPremedikacija1.php",
+//za localhost
 		//url: "/anestiz/premedikacijaNavodila/otroskaPremedikacija1.php",
 		data: {
 			"ucinkovina": ucinkovina,

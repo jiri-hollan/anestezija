@@ -6,7 +6,6 @@ class Konekt {
 	public $servername = '';
 	public $username = '';
 	public $password = '';
-	public $dbname = '';
 	public $connn = '';
 	
 	public Function __construct(){
