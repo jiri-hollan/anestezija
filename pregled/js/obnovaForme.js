@@ -23,7 +23,7 @@ function formNazajFunction(person1) {
 	  let text = sessionStorage.getItem("testJSON");
 //console.log(text);	
       let obj = JSON.parse(text);
-//alert (obj.izvidiInOpombe);	
+//alert (obj.stevMaticna);	
 var inputs = document.getElementById("frm").elements;
 for (i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" ||inputs[i].nodeName === "TEXTAREA") {
