@@ -164,7 +164,7 @@ function odstraniFunction($podminka){
 	echo 'Odstranjen je bil '.$odstranjeno.' uporabnik';
 }//od odstraniFunction
 echo'
-<script src="js/manipulacepremedikacija1.js?'.time().'">
+<script src="js/manipulacepremedikacija.js?'.time().'">
 </script>
 ';
 require_once '../skupne/sabloni/zapati.php';
