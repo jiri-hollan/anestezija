@@ -268,7 +268,8 @@ class poKriterijih {
 * brez kriterijev pokaže le število zapisov kje se $stolpec nahaja
 *"SELECT $sloupceSQL, COUNT(*) AS steviloZapisov FROM $tabulka $podminkaSQL GROUP BY $grupaSQL ORDER BY $grupaSQL"
 *******************************************************************/
-public $tabulka;
+   public $tabulka;
+   public $podminka;
 function __construct($tabulka, $stolpci, $grupa, $podminka, $semafor){
 //$tabulka = 'bolnikTbl';
 //var_dump($grupa);
@@ -328,7 +329,8 @@ class poStarosti {
 * brez kriterijev pokaže le število zapisov kje se $stolpec nahaja
 *"SELECT $sloupceSQL, COUNT(*) AS steviloZapisov FROM $tabulka $podminkaSQL GROUP BY $grupaSQL ORDER BY $grupaSQL"
 *******************************************************************/
-public $tabulka;
+   public $tabulka;
+   public $podminka;
 function __construct($tabulka, $stolpci, $razvrstitev, $grupa, $podminka, $semafor){
 //$tabulka = 'bolnikTbl';
 //var_dump($grupa);
