@@ -34,6 +34,7 @@ for (i = 0; i < inputs.length; i++) {
 //console.log(kljuc+"="+obj[kljuc]);		 
 		document.getElementsByName(kljuc)[0].value = obj[kljuc].replace(/\&quot;/g,'\\"').replace(/\&amp;/g, "&"); 
 	 }else{
+		 document.getElementsByName(kljuc)[0].value = obj[kljuc];
 //console.log("elze "+kljuc+"="+obj[kljuc]);		 
 	 }
 //alert(kljuc + ": " +person1[kljuc]);
