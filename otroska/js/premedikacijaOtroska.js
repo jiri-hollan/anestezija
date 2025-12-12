@@ -72,11 +72,19 @@ function ajax_get_premedikacija(elem) {
 }
 
 function ajax_aktualizuj(ucinkovina, teza, sprememba){
+//alert(window.location.hostname);
+	if(window.location.hostname=="localhost"){
+		koren="anestiz/";		
+	}else{
+		koren="";
+	}
+
 		$.ajax({
 //za web
-		url: "/otroska/otroskaPremedikacija1.php",
+		//url: "/otroska/otroskaPremedikacija1.php",
 //za localhost
 		//url: "/anestiz/otroska/otroskaPremedikacija1.php",
+url: "/"+koren+"otroska/otroskaPremedikacija1.php",		
 		data: {
 			"ucinkovina": ucinkovina,
 			"teza": teza,
