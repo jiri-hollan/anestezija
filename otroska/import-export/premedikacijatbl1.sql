@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabele `premedikacijaTbl`
+-- Struktura tabele `premedikacija1Tbl`
 --
 
 CREATE TABLE `premedikacija1Tbl` (
