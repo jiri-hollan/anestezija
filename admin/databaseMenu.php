@@ -13,7 +13,7 @@ echo '
 <h1>ogled</h1>
 <form method="post" action="../skupne/ogledTabele.php">
 <input type="hidden"  name="nazaj" value="'.$nazaj.'">
-<input type="submit"  name="imeTable" value="besedilaTbl">
+<input type="submit"  name="imeTable" value="besedilaNovaTbl">
 <input type="submit"  name="imeTable" value="uporabnikiTbl">
 <input type="submit"  name="imeTable" value="pregledovalciTbl">
 <input type="submit"  name="imeTable" value="limitiTbl">
