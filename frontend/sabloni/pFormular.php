@@ -18,7 +18,7 @@
       <input type="text" class="imePriimek" placeholder="Priimek" name="priimek" required>  
       <input type="text" class="imePriimek" placeholder="št. zdravnika" name="stevilkaZdravnika" >
       <label for="emailId"><b>email</b></label>
-      <input id="emailId" type="text"  placeholder=" Email je potreben" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ni veljaven email naslov"  autocomplete="off" required><br>
+      <input id="emailId" type="text" class="imePriimek" placeholder=" Email je potreben" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ni veljaven email naslov"  autocomplete="off" required><br>
 
       <label for="unameId"><b>uname</b></label>
       <input id="unameId" type="text" placeholder=" Uporabniško ime" name="uname" autocomplete="off" required><br>
