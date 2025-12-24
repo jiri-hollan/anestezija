@@ -6,12 +6,12 @@
       <h1>Registracija</h1>
       <label for="bolnisnicaId"><b>Bolnisnica, ime, priimek in email</b></label><br>
 
-     <!-- <input id="bolnisnicaId" type="text" class="imePriimek" placeholder=" Bolnisnica" name="bolnisnica" required>	-->
-	 
-		<input id="bolnisnicaId" class="imePriimek" list="bolnisnice" name="bolnisnica"  onkeyup="sbFunction(1)" required autocomplete="off"> 
-	  <datalist id="bolnisnice">  
-		<option value='Bolnišnica'>    
-	  </datalist>
+<input id="bolnisnicaId" list="bolnisnice" class="imePriimek" placeholder=" Bolnisnica" name="bolnisnica" required>
+  <datalist id="bolnisnice">
+    <option value="Izola">
+    <option value="jesenice">
+    <option value="UKCLjubljana">	
+  </datalist>	
 
  	  
       <input type="text" class="imePriimek" placeholder=" Ime" name="ime" required>	  
