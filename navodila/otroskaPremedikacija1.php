@@ -31,25 +31,6 @@ if(isset($_GET['ucinkovina'])&&isset($_GET['teza'])&&isset($_GET['sprememba'])){
 } else {
 	require_once 'sabloni/formaOtroskaPremedikacija.php';
 }
-//poskusni class Premedikace:
-/*
-class Premedikace {
-	public $ucinkovina = '';
-	public $teza = '';	
-	public Function __construct($ucinkovina, $teza){
-	$podminka = [];	
-	$this->ucinkovina = $ucinkovina;
-	$this->teza = $teza;
-	$podminka["teza>="] = $this_teza;
-	echo 'Teža= '.$this->teza ;
-	echo'<br>';
-	echo 'Učinkovina= '.$this->ucinkovina;	
-	}
-	
-	function get_name() {
-    return $this->ucinkovina;
-	} 
-}//od class Premedikace  */
 
 abstract class VyberTezo {
 public $tabulka;
@@ -63,9 +44,6 @@ public function __construct( $teza, $poradi) {
 		$this->poradi = $poradi;	
 	    $this->podminka["teza<="] = $this->teza;
 		$this->vyber = new database();
-
-//$stolpci=["id", "ucinkovina", "teza", "doza", "koncentracija", "navodila"];
-//echo"<tr class='glavaTable'><th>id</th><th>ucinkovina</th><th>teza</th><th>doza</th><th>koncentracija</th><th>navodila</th></tr>";
  }//od construct  
 }//od class VyberTezo
 //CCCCCCCCCCCCC KONEC  CLASS VyberTezo CCCCCCCCCCCCCCCCCCCCCCCCCCC
