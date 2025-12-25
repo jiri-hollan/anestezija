@@ -13,6 +13,13 @@
   <option value="UKCL">UKC Ljubljana</option>
 </select>
 
+ <script>
+// alert("mestoBolnisniceJson:" + mestoBolnisniceJson);
+var mestoBolnisnice = JSON.parse(mestoBolnisniceJson);
+//alert(mestoBolnisnice);
+ listaBolnisnicFunction(mestoBolnisnice );
+  </script>
+
 
  	  <br>
       <input type="text" class="imePriimek" placeholder=" Ime" name="ime" required>	  
