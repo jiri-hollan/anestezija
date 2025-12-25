@@ -5,7 +5,7 @@ require_once('seznamBolnisnic.php');
 require_once('pFormular.php');
 echo '<script>';
 //echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
-echo 'alert(mestoBolnisniceJson);';
+//echo 'alert(mestoBolnisniceJson);';
 echo '</script>';
 
 ?>

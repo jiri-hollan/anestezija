@@ -28,7 +28,7 @@ $mestoBolnisniceJson = json_encode($mestoBolnisnice, JSON_UNESCAPED_UNICODE);
 //var_dump($mestoBolnisniceJson);
 echo '<script>';
 echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
-echo 'alert(mestoBolnisniceJson);';
+//echo 'alert(mestoBolnisniceJson);';
 echo '</script>';
 	}//od construct			
 	}//od class spisekBolnisnic
