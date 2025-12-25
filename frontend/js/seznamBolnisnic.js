@@ -1,5 +1,5 @@
 function seznamBolnisnicFunction(mestoBolnisnice) {
-//alert ("lista bolnisnic function");
+//alert ("seznamBolnisnicFunction");
 
 // koda, ki naredi array bolList iz tabele bolnisniceTab	
 
