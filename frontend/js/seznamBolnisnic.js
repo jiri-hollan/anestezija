@@ -1,4 +1,4 @@
-function listaBolnisnicFunction(mestoBolnisnice) {
+function seznamBolnisnicFunction(mestoBolnisnice) {
 //alert ("lista bolnisnic function");
 
 // koda, ki naredi array bolList iz tabele bolnisniceTab	
@@ -10,7 +10,7 @@ var i;
 for (i = 0; i < bolList.length; i++) {
   text += "<option value='" +  bolList[i]  + "'>"  +"<br>";
 }
-document.getElementById("bolnisnice").innerHTML = text;
+document.getElementById("bolnisnicaId").innerHTML = text;
 }
 
 function imenaBolnisnic(){

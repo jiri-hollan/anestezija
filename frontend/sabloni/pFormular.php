@@ -17,7 +17,7 @@
 // alert("mestoBolnisniceJson:" + mestoBolnisniceJson);
 var mestoBolnisnice = JSON.parse(mestoBolnisniceJson);
 //alert(mestoBolnisnice);
- listaBolnisnicFunction(mestoBolnisnice );
+ seznamBolnisnicFunction(mestoBolnisnice );
   </script>
 
 
