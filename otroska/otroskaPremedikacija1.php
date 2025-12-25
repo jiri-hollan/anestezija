@@ -70,6 +70,10 @@ public function __construct( $teza, $poradi) {
 }//od class VyberTezo
 //CCCCCCCCCCCCC KONEC  CLASS VyberTezo CCCCCCCCCCCCCCCCCCCCCCCCCCC
  class Midazolam extends VyberTezo {
+	 public $podminka;
+	 public $stolpci;
+	 public $vybrano;
+	 public $vyber;
 	    public function __construct( $teza, $poradi) {
         parent::__construct( $teza, $poradi);
         $this->podminka+= ["ucinkovina=" => "midazolam"];
@@ -101,6 +105,7 @@ public function izracunFunction() {
 	 public $podminka;
 	 public $stolpci;
 	 public $vyber;
+	 public $vybrano;
 	 	     public function __construct( $teza, $poradi) {
         parent::__construct( $teza, $poradi);
         $this->podminka+= ["ucinkovina=" => "dexmedetomidin"];
@@ -142,6 +147,10 @@ public function izracunFunction() {
 /*............................................................................*/
 
  class Ketamin extends VyberTezo {
+	 	 public $podminka;
+	 public $stolpci;
+	 public $vyber;
+	 public $vybrano;
 	 	     public function __construct( $teza, $poradi) {
         parent::__construct( $teza, $poradi);
         $this->podminka+= ["ucinkovina=" => "ketamin"];
