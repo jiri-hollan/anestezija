@@ -4,9 +4,7 @@ require_once('sabloni/vkladane/zahlavi.php');
 class MenuDelo  {
    public function __construct() {
    require_once('../delo/menuDelo-items.php'); 
-
-
-   
+ 
 echo '
 <nav id= "glavnaNav">
 <ul>';

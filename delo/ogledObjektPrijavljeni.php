@@ -68,6 +68,9 @@ if (isset($_REQUEST["akce"])) {
   public $stevilkaZdravnika;
   public $datumOpravila;		 		
   public $tabulka;
+  public $datumOpravila;
+  public $dataPreg;
+  
   function __construct($stevilkaZdravnika, $datumOpravila="",$tabulka="") {
 	    $datumOpravila=strtolower($datumOpravila); 
         $datumOpravila=ucfirst($datumOpravila); 
@@ -95,7 +98,9 @@ if (isset($_REQUEST["akce"])) {
   public $id;
   public $ime;
   public $priimek;
-  //public $status; 
+  public $dataPreg;
+  public $podminka;   
+
   public function __construct($stevilkaZdravnika, $datumOpravila, $tabulka) {
 	parent::__construct($stevilkaZdravnika, $datumOpravila, $tabulka);	
 	echo "case uredi <br>";
@@ -130,13 +135,11 @@ foreach (json_decode($this->dataPreg) as $key) {
   public $stevilkaZdravnika;  
   public $tabulka;
   public $poradi;
+  public $podminka;  
   function __construct($stevilkaZdravnika, $datumOpravila, $tabulka, $stolpci=["*"], $poradi=NULL) {
 	parent::__construct($stevilkaZdravnika, $datumOpravila, $tabulka);
     $this->stolpci = $stolpci;	
-	//echo "v class vyber";
-	
-	
-	
+//echo "v class vyber";	
 	if ($this->datumOpravila == "") {
 	    $this->podminka = array("stevilkaZdravnika"=>$stevilkaZdravnika);	
    } else {
@@ -182,6 +185,8 @@ echo "Za izbrani datum ni zapisa v bazi";
 
 //________________________________________________________________________________________	
 	class Vloz extends DostopPost {
+	public $tabulka;
+	public $dataPreg;
 
   function __construct($stevilkaZdravnika, $datumOpravila, $tabulka) {
 	parent::__construct($stevilkaZdravnika, $datumOpravila, $tabulka);

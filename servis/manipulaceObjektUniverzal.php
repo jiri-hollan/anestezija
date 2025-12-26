@@ -64,6 +64,7 @@ if (isset($_REQUEST["akce"])) {
   public $datumOpravila;		 
   public $bolnisnica;		
   public $tabulka;
+  public $dataPreg;  
   function __construct($bolnisnica="", $tabulka="",$datumOpravila="") {
 	    $bolnisnica=strtolower($bolnisnica); 
         $bolnisnica=ucfirst($bolnisnica); 
@@ -98,6 +99,8 @@ if (isset($_REQUEST["akce"])) {
   public $id;
   public $ime;
   public $priimek;
+  public $podminka; 
+  public $dataPreg;  
   //public $status; 
   public function __construct($bolnisnica, $tabulka) {
 	parent::__construct($bolnisnica, $tabulka);	

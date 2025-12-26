@@ -20,6 +20,7 @@
   public $stevilkaZdravnika;
   public $datumOpravila;		 		
   public $tabulka;
+  public $dataPreg;  
   function __construct($stevilkaZdravnika, $datumOpravila="",$tabulka="") {
 	    $datumOpravila=strtolower($datumOpravila); 
         $datumOpravila=ucfirst($datumOpravila); 
@@ -47,6 +48,9 @@
   public $id;
   public $ime;
   public $priimek;
+  public $dataPreg;
+  public $podminka;
+  public $data;  
   //public $status; 
   public function __construct($stevilkaZdravnika, $datumOpravila, $tabulka) {
 	parent::__construct($stevilkaZdravnika, $datumOpravila, $tabulka);	
@@ -82,6 +86,7 @@ foreach (json_decode($this->dataPreg) as $key) {
   public $stevilkaZdravnika;  
   public $tabulka;
   public $poradi;
+  public $podminka;  
   function __construct($stevilkaZdravnika, $datumOpravila, $tabulka, $stolpci=["*"], $poradi=NULL) {
 	parent::__construct($stevilkaZdravnika, $datumOpravila, $tabulka);
     $this->stolpci = $stolpci;	
@@ -134,7 +139,9 @@ echo "Za izbrani datum ni zapisa v bazi";
 
 //________________________________________________________________________________________	
 	class Vloz extends DostopPost {
-
+public $tabulka;
+public $dataPreg;
+public $data;
   function __construct($stevilkaZdravnika, $datumOpravila, $tabulka) {
 	parent::__construct($stevilkaZdravnika, $datumOpravila, $tabulka);
 	echo $tabulka;

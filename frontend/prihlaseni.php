@@ -28,12 +28,10 @@ Class Prihlaseni {
 
 //___________________________________- potomstvo_______________________________________________
 Class odjava extends Prihlaseni {
-		
+	public $odhlasi;	
 	public function __construct($koren) {
 		    parent::__construct($koren);
-	
-
-	  //echo 'odhlašovani';
+//echo 'odhlašovani';
 	  if (null !== ($_GET['stav'] || $_GET['stav'] == 'odhlasit')) {
 	  $this->odhlasi();
      }	
@@ -59,7 +57,8 @@ Class odjava extends Prihlaseni {
 
 //____________________________________konec clas odjava_______________________________________
 Class Prijava extends Prihlaseni {
-	
+	public $overUdaje;
+	public $conn;
 	
 	public function __construct($koren) {
 		    parent::__construct($koren);
