@@ -1,5 +1,6 @@
 <?php
-echo'<!DOCTYPE html>
+echo'
+<!DOCTYPE html>
 <html lang="sl-SI">
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
