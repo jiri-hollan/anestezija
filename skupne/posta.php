@@ -22,7 +22,7 @@ $retval = mail($to,$subject,$message,implode("\r\n", $headers));
          if( $retval == true ) {
             echo "Obvestilo poslano adminu...";
          }else {
-            echo "Message could not be sent...";
+            echo "Nekaj je narobe, obvestilo adminu ni bilo poslano!";
          }
 	}//od construct
 }//od class posta
