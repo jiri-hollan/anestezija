@@ -96,6 +96,7 @@ function vyberFunction($podminka){
 //echo $vybrano[1];
 echo "<br>";
 if(count($vybrano)>0){
+  echo'<P><b>GDPR:</b>0=prevzame nastavitev individualnega gdpr (0 ali 1) 1=baza vedno dostopna 2=baza nedostopna</P>';
   echo "<table id='osebe' style='border: solid 1px black;'>";
   echo "<tr><th>Id</th><th>razlog</th><th>nivo</th></tr>";
 
