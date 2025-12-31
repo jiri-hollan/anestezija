@@ -137,6 +137,7 @@ foreach (json_decode($this->dataPreg) as $key) {
   public $bolnisnica; 
   public $tabulka;
   public $poradi;
+  public $podminka;
   function __construct($bolnisnica, $tabulka, $stolpci=["*"], $poradi=NULL) {
 	parent::__construct($bolnisnica, $tabulka);
     $this->stolpci = $stolpci;	
@@ -165,17 +166,19 @@ echo "Za izbrano bolnisnico ni zapisa v bazi";
 }//od class vyber
 
 //________________________________________________________________________________________	
-	class Vloz extends DostopPost {
-
-  function __construct($bolnisnica, $tabulka) {
+class Vloz extends DostopPost {
+	public $tabulka;
+	public $data;
+	public $dataPreg;
+	function __construct($bolnisnica, $tabulka) {
 	parent::__construct($bolnisnica, $tabulka);
-	echo $tabulka;
-	$this->tabulka = $tabulka;
-	$data=array();
- function array_push_assoc($data, $key, $value){
-   $data[$key] = $value;
-   return $data;
-}
+	  echo $tabulka;
+	  $this->tabulka = $tabulka;
+	  $data=array();
+	function array_push_assoc($data, $key, $value){
+	  $data[$key] = $value;
+	  return $data;
+	}
 foreach (json_decode($this->dataPreg) as $key) {
 //echo "$key <br>";
     $value= new Test_input($_REQUEST[$key]); 
@@ -195,9 +198,10 @@ foreach (json_decode($this->dataPreg) as $key) {
 }// od class Vloz
 
 //-------------------------iterator-----------------------------------------------------
-	class TableRows extends RecursiveIteratorIterator {
+class TableRows extends RecursiveIteratorIterator {
+	public $tabulka;
     function __construct($it) {
-		//echo $_REQUEST["tabulka"];
+//echo $_REQUEST["tabulka"];
 		$this->tabulka=$_REQUEST["tabulka"];
 	echo "<table id='osebe' style='border: solid 1px black;'>";
 	switch ($this->tabulka){
