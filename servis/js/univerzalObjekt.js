@@ -47,9 +47,7 @@ switch(akce) {
 	for (i = 0; i < bolList.length; i++) {
 		text += "<option value='" +  bolList[i] + "'>"  +"<br>";
 	}
-	for (let i = 0; i < zaUrejat.length; i++) {
-		vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;	
-	}
+	
         document.getElementById("bolnisnice").innerHTML = text;
 		document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
 		document.getElementById("urejatSent").innerHTML =  '<input type="hidden" name="zaUrejat" value="'+zaUrejat+'">';		
