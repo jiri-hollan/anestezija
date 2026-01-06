@@ -30,10 +30,5 @@ Class PoberBolnisnice{
   echo '</script>';
 }//od construct	
 }//od class PoberBolnisnice
- /* if (isset($_GET['aktivnaBolnisnica'])) {
-	$aktivnaBolnisnica = $_GET['aktivnaBolnisnica'];
-  }else {$aktivnaBolnisnica = '';
-}
-//var_dump($aktivnaBolnisnica);*/
 new PoberBolnisnice(); 
 ?>
