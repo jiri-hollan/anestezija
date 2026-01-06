@@ -202,24 +202,16 @@ class TableRows extends RecursiveIteratorIterator {
 	public $tabulka;
     function __construct($vybrano) {
 //echo $_REQUEST["tabulka"];
-		$this->tabulka=$_REQUEST["tabulka"];
+	$this->tabulka=$_REQUEST["tabulka"];
 	echo "<table id='osebe' style='border: solid 1px black;'>";
-	switch ($this->tabulka){
-	case "pregledovalciTbl":
-    echo "<tr><th>Id</th><th>bolnišnica</><th>ime</th><th>priimek</th><th>pregledovalciStatus</th></tr>";
-    break;
-	
-	case "sklepiTbl":
-    echo "<tr><th>Id</th><th>bolnišnica</><th>sklep</th><th>sklepiStatus</th></tr>";
-    break;
-
-	case "limitiTbl":
-    echo "<tr><th>Id</th><th>bolnišnica</><th>skupina</th><th>ime</th><th>min</th><th>max</th></tr>";
-    break;
-	default:
-	echo "";
+	$glave=(array_keys($vybrano[0]));
+	echo '<tr>';
+	foreach ($glave as $value) {
+		echo "<th>$value </th>";
 	}
-        parent::__construct($vybrano, self::LEAVES_ONLY);
+	echo '</tr>';
+
+	parent::__construct($vybrano, self::LEAVES_ONLY);
     }
     function current():mixed { 
 		 return "<td  >"  . parent::current() . "</td>";
