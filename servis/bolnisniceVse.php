@@ -6,7 +6,7 @@ Class PoberZapis{
 	public $bolnisnicaStatus;
 	//public $pristop;
 	public $nameTable;
-	public function __construct($bolnisnica) {
+	public function __construct($bolnisnica) {		
  $this->bolnisnicaStatus = '1';
  $this->conn = new Database();	
  $this->nameTable = 'bolnisniceTbl';
@@ -26,6 +26,7 @@ Class PoberZapis{
   $bolnisnicaJson = json_encode($bolnisnica, JSON_UNESCAPED_UNICODE);
   echo '<script>';
   echo 'var bolnisnicaJson= ' . json_encode( $bolnisnicaJson, JSON_UNESCAPED_UNICODE) . ';';
+  echo 'alert(bolnisnicaJson);';
   echo '</script>';
 }//od construct	
 }//od class PoberZapis
