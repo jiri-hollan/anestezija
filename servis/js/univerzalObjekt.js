@@ -1,30 +1,59 @@
-let tabulka;
+let tabulka_global;
 function izborFunction(akce, tabulka) {
+	tabulka_global=tabulka; 
+	
+		let  zaUrejat = [];
+	let vnosi= "";
+		switch(tabulka) {
+		case "uporabnikiTbl":
+//alert(tabulka);
+			zaUrejat = ["email", "uname", "geslo", "bolnisnica", "ime", "priimek", "upstatus", "pristop", "gdpr", "stevilkaZdravnika"];			
+		break;
+		case "statusiTbl":
+//alert(tabulka);	
+			zaUrejat = ["status", "pomen",];	
+		break;
+		case "bolnisniceTbl":
+//alert(tabulka);	
+			zaUrejat = ["mesto", "nazivB", "bolnisnicaStatus"];
+		break;
+		case "limitiTbl":
+//console.log(tabulka);		
+			zaUrejat = ["bolnisnica", "skupina", "ime", "min", "max"];
+		break;
+		case "pregledovalciTbl":
+//console.log(tabulka);		
+			zaUrejat = ["bolnisnica", "ime", "priimek", "pregledovalciStatus"];
+		break;	
+		case "omejitveTbl":
+//console.log(tabulka);		
+			zaUrejat = ["razlog", "nivo"];
+		break;		
+		default:
+			zaUrejat = [];		
+			console.log(tabulka);		
+			console.log('za to tabuku ni še napisana koda');
+		}	
 document.getElementById("akceId").value = akce;
 switch(akce) {
   case "vyber":
-// omogoči izbiro bolnišnice 	
-  document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
-  const bolList  =["Izola","Jesenice",];
-  let text = "";
-  let i;
-  for (i = 0; i < bolList.length; i++) {
-   text += "<option value='" +  bolList[i] + "'>"  +"<br>";
-}//od for
-  document.getElementById("bolnisnice").innerHTML = text;
-  document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
-  document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
+		for (let i = 0; i < zaUrejat.length; i++) {
+	vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;	
+			}
+		document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
+		document.getElementById("urejatSent").innerHTML =  '<input type="hidden" name="zaUrejat" value="'+zaUrejat+'">';		
+		document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
     break; 
 
+
   case "vloz":
-    bolnisnica= '<input type="text" id="bolnisnicaId" name="bolnisnica" value="" placeholder="Bolnišnica" required>'; 
-    skupina= '<input type="text" id="skupinaId" name="skupina" value="" placeholder="skupina" required>';
-    ime= '<input type="int" id="imeId" name="ime" value="" placeholder="ime" required>';
-    min= '<input type="int" id="minId" name="min" value="" placeholder="min" required>';
-    max= '<input type="int" id="maxId" name="max" value="" placeholder="max" required>';
-    document.getElementById("demo").innerHTML = bolnisnica + skupina + ime + min + max;
-	document.getElementById("tabSent").innerHTML =  '<input type="hidden" name="tabulka" value="'+tabulka+'">';
-	document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset
+		for (let i = 0; i < zaUrejat.length; i++) {
+			vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;		
+			}
+		document.getElementById("demo").innerHTML = vnosi;			
+		document.getElementById("tabSent").innerHTML =  '<input type="hidden" name="tabulka" value="'+tabulka+'">';
+		document.getElementById("urejatSent").innerHTML =  '<input type="hidden" name="zaUrejat" value="'+zaUrejat+'">';	
+		document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset					
     break;
 
   case "edit":
@@ -57,8 +86,8 @@ row_value = y.cells[0].innerHTML;
 //alert("x= "+x.innerHTML+" row value= "+row_value);
   document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ; 
 //return;
-//alert(tabulka);  
-  window.location.href = "manipulaceObjektUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka=" + tabulka;  
+//alert(tabulka_global);  
+  window.location.href = "manipulaceObjektUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka=" + tabulka_global;  
  }//od if 
 }//od function(e)
 } // od izborFunction
