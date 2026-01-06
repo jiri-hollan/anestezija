@@ -24,10 +24,15 @@ Class PoberBolnisnice{
 }//od for 
 //var_dump($bolnisnica);
   $bolnisnicaJson = json_encode($bolnisnica, JSON_UNESCAPED_UNICODE);
-  echo '<script>';
-  echo 'var bolnisnicaJson= ' . json_encode( $bolnisnicaJson, JSON_UNESCAPED_UNICODE) . ';';
-  echo 'alert(bolnisnicaJson);';
-  echo '</script>';
+  echo($bolnisnicaJson);
+  echo'<script src="js/bolnisnice.js?'.time().'"></script>';
+  echo '<script> 
+  var bolnisnicaJson= ' . $bolnisnicaJson . '; 
+ listaBolnisnicFunction(bolnisnicaJson); 
+  var bolnisnicaJson= ' . json_encode( $bolnisnicaJson, JSON_UNESCAPED_UNICODE) . ';
+  alert(bolnisnicaJson); 
+  echo </script>';
+  
 }//od construct	
 }//od class PoberBolnisnice
 new PoberBolnisnice(); 
