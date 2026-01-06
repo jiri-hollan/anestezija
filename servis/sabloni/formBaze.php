@@ -12,6 +12,7 @@ if (isset($_REQUEST["tabulka"])){
 <input type="hidden" id="akceId" name="akce" value="">
 <p id="demo"></p>
 <p id="tabSent"></p>
+<p id="urejatSent"></p>
 <p id="posli"></p>
 </form>
 
