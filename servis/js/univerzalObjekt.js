@@ -47,6 +47,7 @@ switch(akce) {
   let i;
   for (i = 0; i < bolList.length; i++) {
    text += "<option value='" +  bolList[i] + "'>"  +"<br>";
+  }
 		for (let i = 0; i < zaUrejat.length; i++) {
 	vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;	
 			}
