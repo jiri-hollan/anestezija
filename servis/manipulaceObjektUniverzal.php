@@ -1,11 +1,23 @@
  <?php 
  require_once('sabloni/vkladane/zahlavi.php');
- //require_once '../skupne/sabloni/zahlavi.php';
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../skupne/database.php';
 
 /*********** akce pride iz neke od "manipulace____.js" ****************/
+if (isset($_REQUEST["zaUrejat"])) {
+	  $zaUrejat = new Test_input($_REQUEST["zaUrejat"]);
+	  $zaUrejat = $zaUrejat->get_test();
+//var_dump($zaUrejat);
+		if($zaUrejat==""){
+			$zaUrejat=[];
+		}else{
+			  $zaUrejat=(explode(',',$zaUrejat));
+//var_dump($zaUrejat);
+		}
+	}else{
+		$zaUrejat=[];
+	}
 if (isset($_REQUEST["akce"])) {
 	  $akce = new Test_input($_REQUEST["akce"]);
 	  $akce = $akce->get_test();
