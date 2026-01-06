@@ -1,12 +1,12 @@
 <?php
 //------na temelju pregledId pobere podatke iz zapisa z bolnišnice
 require_once '../skupne/database.php';
-Class PoberZapis{
+Class PoberBolnisnice{
 	public $conn;
 	public $bolnisnicaStatus;
 	//public $pristop;
 	public $nameTable;
-	public function __construct($bolnisnica) {		
+	public function __construct() {		
  $this->bolnisnicaStatus = '1';
  $this->conn = new Database();	
  $this->nameTable = 'bolnisniceTbl';
@@ -29,11 +29,11 @@ Class PoberZapis{
   echo 'alert(bolnisnicaJson);';
   echo '</script>';
 }//od construct	
-}//od class PoberZapis
-  if (isset($_GET['aktivnaBolnisnica'])) {
+}//od class PoberBolnisnice
+ /* if (isset($_GET['aktivnaBolnisnica'])) {
 	$aktivnaBolnisnica = $_GET['aktivnaBolnisnica'];
   }else {$aktivnaBolnisnica = '';
 }
-//var_dump($aktivnaBolnisnica);
-new PoberZapis($aktivnaBolnisnica); 
+//var_dump($aktivnaBolnisnica);*/
+new PoberBolnisnice(); 
 ?>
