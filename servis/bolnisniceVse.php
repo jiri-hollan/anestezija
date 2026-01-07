@@ -28,7 +28,7 @@ Class PoberBolnisnice{
   echo'<script src="js/bolnisnice.js?'.time().'"></script>';
   echo '<script> 
   var bolnisnicaJson= ' . $bolnisnicaJson . '; 
- listaBolnisnicFunction(bolnisnicaJson); 
+  listaBolnisnicFunction(bolnisnicaJson); 
   var bolnisnicaJson= ' . json_encode( $bolnisnicaJson, JSON_UNESCAPED_UNICODE) . ';
   alert(bolnisnicaJson); 
   echo </script>';

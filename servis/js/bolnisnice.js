@@ -1,4 +1,6 @@
-function listaSklepovFunction(sklepList) {
+function listaBolnisnicFunction(sklepList) {
+	
+	var bolnisnicaJson= ' . json_encode( $bolnisnicaJson, JSON_UNESCAPED_UNICODE) . ';
 //alert ("lista Sklepov function");
 console.log("sklepi.js");
 var text = "";

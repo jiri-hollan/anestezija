@@ -42,6 +42,7 @@ document.getElementById("akceId").value = akce;
 switch(akce) {
   case "vyber":
     document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onfocusout="bolnisnicaFunction()" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
+	
   const bolList  =["Izola","Jesenice",];
   let text = "";
   let i;
