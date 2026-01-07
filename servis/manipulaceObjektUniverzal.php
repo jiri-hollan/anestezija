@@ -3,7 +3,7 @@
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../skupne/database.php';
-
+ require_once('../skupne/seznamBolnisnic.php');
 /*********** akce pride iz neke od "manipulace____.js" ****************/
 if (isset($_REQUEST["zaUrejat"])) {
 	  $zaUrejat = new Test_input($_REQUEST["zaUrejat"]);
