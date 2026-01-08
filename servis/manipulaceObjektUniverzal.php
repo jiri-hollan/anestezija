@@ -1,11 +1,24 @@
  <?php 
+  require_once('../skupne/seznamBolnisnic.php');
  require_once('sabloni/vkladane/zahlavi.php');
- //require_once '../skupne/sabloni/zahlavi.php';
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
  require_once('sabloni/formBaze.php');
  require_once '../skupne/database.php';
 
 /*********** akce pride iz neke od "manipulace____.js" ****************/
+if (isset($_REQUEST["zaUrejat"])) {
+	  $zaUrejat = new Test_input($_REQUEST["zaUrejat"]);
+	  $zaUrejat = $zaUrejat->get_test();
+//var_dump($zaUrejat);
+		if($zaUrejat==""){
+			$zaUrejat=[];
+		}else{
+			  $zaUrejat=(explode(',',$zaUrejat));
+//var_dump($zaUrejat);
+		}
+	}else{
+		$zaUrejat=[];
+	}
 if (isset($_REQUEST["akce"])) {
 	  $akce = new Test_input($_REQUEST["akce"]);
 	  $akce = $akce->get_test();
@@ -282,25 +295,8 @@ class TableRows extends RecursiveIteratorIterator {
 tabulka pride od nastavitveMenu.php
 ***************************************/
 if (isset($_REQUEST["tabulka"])){
-  switch($_REQUEST["tabulka"]){
-  case "sklepiTbl":
-  echo '<script src="js/manipulaceSklepi.js?'.time().'"></script>'; 
-  break;
+	  echo '<script src="js/univerzalObjekt.js?'.time().'"></script>';
 
-  case "pregledovalciTbl":
-  echo '<script src="js/manipulacePregledovalci.js?'.time().'"></script>'; 
-  break;
-
-  case "limitiTbl":
-  echo '<script src="js/manipulaceLimiti.js?'.time().'"></script>'; 
-  break;
-/*********opravila niso za zdaj v menu nastavitve***********
-
-  case "opravilaTbl":
-  echo '<script src="js/manipulaceOpravila.js?'.time().'"></script>'; 
-  break;
-*******************************************************/
-}
 }
 ?>
 <!--zapati-->
