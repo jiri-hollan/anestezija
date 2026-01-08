@@ -3,10 +3,11 @@ if (isset($_REQUEST["tabulka"])){
   $tab=$_REQUEST["tabulka"];
 // echo "Tabulka je: ".$tab;
   echo rtrim($tab,"Tbl");
-  } 
+  }
+ var_dump($mestoBolnisniceJson);
 ?>
 <br>
-<button id="vyberId" onclick="izborFunction('vyber','<?php echo $tab;?>',<?php echo $mestoBolnisniceJson;?>'')">izberi</button>
+<button id="vyberId" onclick="izborFunction('vyber','<?php echo $tab;?>','<?php echo $mestoBolnisniceJson;?>')">izberi</button>
 <button id="vlozId" onclick="izborFunction('vloz','<?php echo $tab;?>')">vlož</button>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="hidden" id="akceId" name="akce" value="">
