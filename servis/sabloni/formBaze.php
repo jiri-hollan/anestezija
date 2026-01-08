@@ -5,15 +5,17 @@ if (isset($_REQUEST["tabulka"])){
   echo rtrim($tab,"Tbl");
   }
 //echo($spisek->mestoB);
- $mestoB=json_encode( $spisek->mestoB, JSON_UNESCAPED_UNICODE);
+//$spisek->mestoB
+//$mestoB je iz seznamBolnisnic.php
+$mestoB=$spisek->mestoB;
 //var_dump ($mestoB);
 ?>
 <script>
-const myArray = JSON.parse(<?php echo $mestoB;?>);
-//alert(myArray);
+const mestoB = JSON.parse(<?php echo $mestoB;?>);
+//alert(mestoB);
 </script>
 <br>
-<button id="vyberId" onclick="izborFunction('vyber','<?php echo $tab;?>', myArray)">izberi</button>
+<button id="vyberId" onclick="izborFunction('vyber','<?php echo $tab;?>', mestoB)">izberi</button>
 <button id="vlozId" onclick="izborFunction('vloz','<?php echo $tab;?>')">vlož</button>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="hidden" id="akceId" name="akce" value="">
