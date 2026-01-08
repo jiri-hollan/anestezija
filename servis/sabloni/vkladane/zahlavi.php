@@ -8,7 +8,7 @@ echo'
 <link rel="shortcut icon" href="../favicon.ico?'.time().'">
 <link rel="stylesheet" href="../frontend/sabloni/css/zahlavi.css?'.time().'">
 <link rel="stylesheet" href="../servis/css/pregledovalci.css?'.time().'">
-<script src="../skupne/js/seznamBolnisnic.js?'.time().'"></script> 
+//<script src="../skupne/js/seznamBolnisnic.js?'.time().'"></script> 
 <title>Anestiz</title>
 </head>
 <body>
