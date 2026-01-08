@@ -1,7 +1,8 @@
 let tabulka_global;
-function izborFunction(akce, tabulka) {
+function izborFunction(akce, tabulka, bolList) {
 	tabulka_global=tabulka; 
-	const bolList  =["Izola","Jesenice",];
+	//const bolList  =["Izola","Jesenice",];
+	alert(bolList);
 		let  zaUrejat = [];
 	let vnosi= "";
 		switch(tabulka) {
