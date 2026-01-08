@@ -4,13 +4,13 @@ if (isset($_REQUEST["tabulka"])){
 // echo "Tabulka je: ".$tab;
   echo rtrim($tab,"Tbl");
   }
- //echo($spisek->mestoB);
+//echo($spisek->mestoB);
  $mestoB=json_encode( $spisek->mestoB, JSON_UNESCAPED_UNICODE);
- var_dump ($mestoB);
+//var_dump ($mestoB);
 ?>
 <script>
 const myArray = JSON.parse(<?php echo $mestoB;?>);
-alert(myArray);
+//alert(myArray);
 </script>
 <br>
 <button id="vyberId" onclick="izborFunction('vyber','<?php echo $tab;?>', myArray)">izberi</button>
