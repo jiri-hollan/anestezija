@@ -4,6 +4,7 @@ require_once '../skupne/database.php';
 Class spisekBolnisnic{
 	public $conn;
 	public $nameTable;
+	public $mestoBolnisniceJson;
 	public function __construct() {
   $this->conn = new Database();	
   $this->nameTable = 'bolnisniceTbl'; 
@@ -24,14 +25,17 @@ array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);
 
 
 $mestoBolnisniceJson = json_encode($mestoBolnisnice, JSON_UNESCAPED_UNICODE);
-return $mestoBolnisniceJson; 
-var_dump($mestoBolnisniceJson);
+//var_dump($mestoBolnisniceJson);
+$this->mestoBolnisniceJson=$mestoBolnisniceJson;
+var_dump($this->mestoBolnisniceJson);
+return $this->mestoBolnisniceJson; 
+
 echo '<script>';
 echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
 //echo 'alert(mestoBolnisniceJson);';
 echo '</script>';
 	}//od construct			
 	}//od class spisekBolnisnic
-	new spisekBolnisnic();
-	//var_dump($mestoBolnisniceJson);
+$seznam=new spisekBolnisnic();
+	//var_dump($seznam);
 ?>
