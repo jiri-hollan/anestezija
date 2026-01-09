@@ -7,13 +7,10 @@ if (isset($_REQUEST["tabulka"])){
 //echo($spisek->mestoB);
 //$spisek->mestoB
 //$mestoB je iz seznamBolnisnic.php
-$mestoB=$spisek->mestoB;
+//$mestoB=$spisek->mestoB;
 //var_dump ($mestoB);
 ?>
-<script>
-const mestoB = JSON.parse(<?php echo $mestoB;?>);
-//alert(mestoB);
-</script>
+
 <br>
 <button id="vyberId" onclick="izborFunction('vyber','<?php echo $tab;?>', mestoB)">izberi</button>
 <button id="vlozId" onclick="izborFunction('vloz','<?php echo $tab;?>')">vlož</button>
