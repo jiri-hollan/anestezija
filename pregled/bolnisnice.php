@@ -51,8 +51,8 @@ echo 'var mestoBolnisniceJson= ' . json_encode( $mestoBolnisniceJson, JSON_UNESC
 echo 'var seznamBolnisnicJson= ' . json_encode( $seznamBolnisnicJson, JSON_UNESCAPED_UNICODE) . ';';
 echo 'var bazeBolnisniceJson= ' . json_encode( $bazeBolnisniceJson, JSON_UNESCAPED_UNICODE) . ';';
 
-echo 'const mestoBolnisniceX= JSON.parse(mestoBolnisniceJson);';
-echo 'const seznamBolnisnicX= JSON.parse(seznamBolnisnicJson);';
+echo 'const mestoBol= JSON.parse(mestoBolnisniceJson);';
+echo 'const seznamBol= JSON.parse(seznamBolnisnicJson);';
 echo 'const bazeBolnisnice=JSON.parse(bazeBolnisniceJson);';
 echo 'localStorage.setItem("bazeBolnisnice",bazeBolnisnice);';
 //echo 'alert(seznamBolnisnicJson);';

@@ -23,7 +23,7 @@ function sbFunction(bol="") {
       } else if (!bol=="") {
 // alert(seznamBolnisnicJson);
 //naredi array bolnišnic
-		 bolnisnica=seznamBolnisnicX; 
+		 bolnisnica=seznamBol; 
 		 bol = document.getElementById("bolnisnica").value || "" ;
          localStorage.setItem("aktivnaBolnisnica",bolnisnica[bol]);
          localStorage.setItem("mestoBolnisnice",bol);
