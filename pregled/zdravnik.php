@@ -62,9 +62,9 @@ echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "
   // var mestoBol = JSON.parse(mestoBolnisniceJson);
    listaBolnisnicFunction(mestoBol );
 // alert("celo ime Json:" + celoImeJson);
-  var zdravListX = JSON.parse(celoImeJson);
-//alert(zdravListX);
-  listaZdravnikovFunction(zdravListX);
+  var zdravList = JSON.parse(celoImeJson);
+//alert(zdravList);
+  listaZdravnikovFunction(zdravList);
 //alert(localStorage.getItem("bazeBolnisnice"));
   </script>
      <span class="" id="odjava" onclick="odjavaFunction()">RESET</span>

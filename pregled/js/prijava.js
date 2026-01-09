@@ -44,13 +44,13 @@ function naprejFunction() {
 	 window.open("bolnik.php", "_self"); 
 }
 //______________________________________________________
-function listaZdravnikovFunction(zdravListX) {
+function listaZdravnikovFunction(zdravList) {
 //alert ("lista zdravnikov function");
 document.getElementById("pregledovalec").innerHTML = "izvajalec:  " +"<b>"+ localStorage.getItem("imeZdravnika")+"</b>";
 //alert(localStorage.getItem("imeZdravnika"));
 //  koda, ki naredi array zdravList iz tabele pregledovalci	
-//alert(zdravListX);
- var zdravList  = zdravListX; 
+//alert(zdravList);
+ var zdravList  = zdravList; 
  document.getElementById("aktBolnisnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnisnice")+"</h1> "; 
 //alert (localStorage.getItem("aktivnaBolnisnica"));
  if (localStorage.getItem("aktivnaBolnisnica") === ""||localStorage.getItem("aktivnaBolnisnica") ==="undefined") {
