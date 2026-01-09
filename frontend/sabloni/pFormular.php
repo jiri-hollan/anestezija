@@ -14,9 +14,6 @@
 </select>
 
  <script>
-// alert("mestoBolnisniceJson:" + mestoBolnisniceJson);
-//var mestoBolnisnice = JSON.parse(mestoBolnisniceJson);
-//alert(mestoBolnisnice);
  seznamBolnisnicFunction(mestoB );
   </script>
 
