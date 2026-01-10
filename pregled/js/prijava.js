@@ -71,11 +71,8 @@ document.getElementById("zdravniki").innerHTML = text;
 function listaBolnisnicFunction(bolList) {
 	//alert ("lista bolnisnic function");
 document.getElementById("pregledovalec").innerHTML = "izvajalec:  " + localStorage.getItem("imeZdravnika");
-
 // koda, ki naredi array bolList iz tabele bolnisniceTab	
-
 //alert(bolList);
-var bolList  = bolList; 
 var text = "";
 var i;
 for (i = 0; i < bolList.length; i++) {
