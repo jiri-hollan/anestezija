@@ -3,7 +3,6 @@ function izborFunction(akce) {
 switch(akce) {
   case "vyber":
 	// omogoči izbiro bolnišnice
-	   // document.getElementById("demo").innerHTML = '<select id="bolnisnicaId"  class="imePriimek" placeholder=" Bolnisnica" name="bolnisnica" required><br><option value=""></option><option value="Izola">Izola</option></select>';		
 		seznamBolnisnicFunction(bolList);
 	document.getElementById("posli").innerHTML = '<input type="submit" name="submit" value="Submit">'; //submit
     break; 
