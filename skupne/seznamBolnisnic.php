@@ -20,7 +20,7 @@ Class spisekBolnisnic{
 array_push($mestoBolnisnice,$prebrano[$i]["mesto"]);
 //var_dump($mestoBolnisnice);
     }//od for 
-	//echo '<br>var dump mesto Bolnišnice:<br>';
+//echo '<br>var dump mesto Bolnišnice:<br>';
 //_______________________________________________________________________________
 
 
@@ -28,10 +28,11 @@ $mestoBolnisniceJson = json_encode($mestoBolnisnice, JSON_UNESCAPED_UNICODE);
 $this->bolList=json_encode( $mestoBolnisniceJson, JSON_UNESCAPED_UNICODE);
 
 //var_dump($mestoBolnisniceJson);
+//var_dump($this->bolList);
 
 echo '<script>;
 const bolList = JSON.parse('. $this->bolList.');
-//alert(mestoBolnisniceJson);
+//alert(bolList);
  </script>';
 	}//od construct			
 	}//od class spisekBolnisnic
