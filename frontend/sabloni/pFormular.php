@@ -5,14 +5,15 @@
     <div class="container">
       <h1>Registracija</h1>
       <label for="bolnisnicaId"><b>Bolnisnica</b></label><br>
-
+<!--
 <select id="bolnisnicaId"  class="imePriimek" placeholder=" Bolnisnica" name="bolnisnica" required><br>
   <option value=""></option>
   <option value="Izola">Izola</option>
   <option value="Jesenice">Jesenice</option>
   <option value="UKCL">UKC Ljubljana</option>
-</select>
-
+</select>-->
+<p id="demo"></p>
+<p id="bolnisnicaId"></p>
  <script>
  seznamBolnisnicFunction(bolList );
   </script>
