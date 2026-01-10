@@ -3,17 +3,21 @@ require_once '../skupne/sabloni/zahlavi.php';
 ?>
 <h2>Urejanje limitov</h2>
 <?php
+require_once '../skupne/seznamBolnisnic.php';
 require_once 'sabloni/izbira.php';
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 require_once '../skupne/database.php';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $akce = test_input($_POST["akce"]);
   $bolnisnica = test_input($_POST["bolnisnica"]);
   //echo  strtoupper($akce) .': ';
 switch ($akce) {
   case "vyber":
+   if ($bolnisnica == "") {
 	$podminka = NULL;
+} else {
+    $podminka = array("bolnisnica"=>$bolnisnica);
+}
     vyberFunction($podminka);
     break;
 case "vloz":
