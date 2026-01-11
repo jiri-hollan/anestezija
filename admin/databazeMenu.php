@@ -1,14 +1,27 @@
 <?php
-if (isset($_SESSION["upstatus"])&&$_SESSION["upstatus"]==4)  {
-require_once('sabloni/vkladane/zahlavi.php');
-echo 'napredna manipulacija z bazo';
-
+require_once('../admin/sabloni/vkladane/zahlavi.php');
+echo 'Menipulacija z bazo';
+require_once('administrace.php');
+require_once('../koren.php');
+class Manipulace extends Administrace {
+   public function __construct($koren) {
+	       parent::__construct($koren);		   
+  if (isset($_SESSION["upstatus"]) && $_SESSION["upstatus"] == 4)  {
+$nazaj="../admin/databazeMenu.php";
 echo '
-<h1>Menu databaze</h1>
-<ul id="linky1">
-<li><a href="kreateBaseBiznis.php ">naredi bazo: biznis</a></li>
-<li><a href="kreateTableVse.php ">naredi tabele</a></li>
-</ul>
+<div id="manipulace">
+<h1>ogled</h1>
+<form method="post" action="../skupne/ogledTabele.php">
+<input type="hidden"  name="nazaj" value="'.$nazaj.'">
+<input type="submit"  name="imeTable" value="besedilaNovaTbl">
+<input type="submit"  name="imeTable" value="uporabnikiTbl">
+<input type="submit"  name="imeTable" value="pregledovalciTbl">
+<input type="submit"  name="imeTable" value="limitiTbl">
+<input type="submit"  name="imeTable" value="opravilaTbl">
+<input type="submit"  name="imeTable" value="sklepiTbl">
+<input type="submit"  name="imeTable" value="bolnisniceTbl">
+<input type="submit"  name="imeTable" value="premedikacija1Tbl">
+</form>
 ';
 
 echo'
@@ -27,6 +40,11 @@ echo'
 
 ';
 
-require_once('sabloni/zapati.php'); 
-   }else{echo "napačen upStatus".$_SESSION["upstatus"];}
+  } else {
+	       echo	' <h2>za ta del niste pooblaščeni</h2>';
+           }
+  }//od construct 
+}//od class Manipulace  
+ new Manipulace($koren); 
+require_once('sabloni/vkladane/zapati.php'); 
 ?>

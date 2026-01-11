@@ -8,5 +8,5 @@
 	 $a2= '<li><a href="../statistika/statistikaMenu.php">statistika</a> </li>'; 
 	 $a3= '<li><a href="../servis/menuUpload.php">servis</a> </li>
 	       <li><a href="../servis/nastavitveMenu.php">nastavitve</a> </li>';
-	 $a4= '<li><a href="../admin/admin.php">database P</a> </li>';	 
+	 $a4= '<li><a href="../admin/databazeMenu.php">database P</a> </li>';	 
 ?>
