@@ -1,7 +1,7 @@
  function laborFunction(ime,vrednost)
 {
  //console.log(ime);	
- const LIMITIlab = JSON.parse(limitiJson);
+ //const LIMITIlab = JSON.parse(limitiJson);
 //console.log(LIMITIlab);
 if(LIMITIlab[ime]!=undefined){
 //console.log(LIMITIlab[ime]);

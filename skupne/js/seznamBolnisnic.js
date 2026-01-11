@@ -1,8 +1,8 @@
-function seznamBolnisnicFunction(mestoBolnisnice) {
-//alert ("seznamBolnisnicFunction");
+function seznamBolnisnicFunction(bolList) {
+//alert (bolList);
 // koda, ki naredi array bolList iz tabele bolnisniceTab	
 //alert(mestoBolnisnice);
-var bolList  = mestoBolnisnice; 
+	    document.getElementById("demo").innerHTML = '<select id="bolnisnicaId"  class="imePriimek" placeholder=" Bolnisnica" name="bolnisnica" required><br><option value=""></option><option value="Izola">Izola</option></select>';
 var text = "";
 var i;
 for (i = 0; i < bolList.length; i++) {

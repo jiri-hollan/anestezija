@@ -52,19 +52,16 @@ $uname = "<span id='stanjeNe'>Niste prijavljeni</span>";
 require_once('../skupne/home.php');
 require_once('zapisVsi.php');
 require_once('bolnisnice.php');
-require_once('sabloni/pFormular.php');
+require_once('sabloni/p1Formular.php');
 echo '<button id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 	
 ?>
  <script>
-   var seznamBolnisnicx = JSON.parse(seznamBolnisnicJson);
-// alert(seznamBolnisnicJson);
-   var mestoBolnisniceX = JSON.parse(mestoBolnisniceJson);
-   listaBolnisnicFunction(mestoBolnisniceX );
+   listaBolnisnicFunction(mestoBol );
 // alert("celo ime Json:" + celoImeJson);
-  var zdravListX = JSON.parse(celoImeJson);
-//alert(zdravListX);
-  listaZdravnikovFunction(zdravListX);
+  const zdravList = JSON.parse(celoImeJson);
+//alert(zdravList);
+  listaZdravnikovFunction(zdravList);
 //alert(localStorage.getItem("bazeBolnisnice"));
   </script>
      <span class="" id="odjava" onclick="odjavaFunction()">RESET</span>

@@ -11,15 +11,11 @@ echo'
 <link rel="stylesheet" href="../admin/sabloni/css/zahlavi.css?'.time().'">
 <link rel="stylesheet" href="../admin/sabloni/css/menuFile.css?'.time().'">
 <link rel="stylesheet" href="../admin/sabloni/css/uporabnikiNov.css?'.time().'">
-<link rel="stylesheet" href="../servis/css/pregledovalci.css?'.time().'">
-<script src="../admin/js/manipulacePogoj.js?'.time().'"></script> 
 </head>
 <body>
 <div class="topnav">
-  <a id="dom" class="active" href="../frontend/menuFile1.php">Domov</a>
-  <a id="prij" href="../frontend/prihlaseni.php?r=logout&stav=odhlasit">Prijava</a>
-  <a href="../frontend/prihlaseni.php?r=profil">Moj profil</a>
-  <span id="uname">odjavljen</span>
+  <a class="active" href="../frontend/menuFile1.php">Domov</a>
+  <a href="../frontend/prihlaseni.php?r=logout&stav=odhlasit">Odjava in prijava</a>
 </div>';
 
  function test_input($test) {

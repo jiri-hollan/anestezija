@@ -1,14 +1,14 @@
 <?php
 if (isset($_REQUEST["tabulka"])){
   $tab=$_REQUEST["tabulka"];
-// echo "Tabulka je: ".$tab;
-  echo rtrim($tab,"Tbl");
+//echo "Tabulka je: ".$tab;
+ echo strtoupper(rtrim($tab,"Tbl"));
   }
 //echo($spisek->bolList);
 //$spisek->bolList
 //$bolList je iz seznamBolnisnic.php
 //$bolList=$spisek->bolList;
-//var_dump ($bolList);
+//var_dump ($bolList);  
 ?>
 
 <br>

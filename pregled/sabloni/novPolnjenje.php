@@ -161,7 +161,7 @@
   </datalist>
  <script>
 // alert("sklep Json:" + sklepJson);
-  var sklepList = JSON.parse(sklepJson);
+  const sklepList = JSON.parse(sklepJson);
 //alert(sklepList);
   listaSklepovFunction(sklepList);
   </script>

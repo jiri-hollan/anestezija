@@ -8,6 +8,7 @@ echo'
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../skupne/css/zahlavi.css?'.time().'">
 <link rel="stylesheet" href="../servis/css/pregledovalci.css?'.time().'">
+<script src="../skupne/js/seznamBolnisnic.js?'.time().'"></script> 
 <title>Anestiz</title>
 <link rel="shortcut icon" href="../favicon.ico?'.time().'">
 </head>

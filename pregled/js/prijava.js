@@ -23,7 +23,7 @@ function sbFunction(bol="") {
       } else if (!bol=="") {
 // alert(seznamBolnisnicJson);
 //naredi array bolnišnic
-		 bolnisnica=seznamBolnisnicx; 
+		 bolnisnica=seznamBol; 
 		 bol = document.getElementById("bolnisnica").value || "" ;
          localStorage.setItem("aktivnaBolnisnica",bolnisnica[bol]);
          localStorage.setItem("mestoBolnisnice",bol);
@@ -44,13 +44,13 @@ function naprejFunction() {
 	 window.open("bolnik.php", "_self"); 
 }
 //______________________________________________________
-function listaZdravnikovFunction(zdravListX) {
+function listaZdravnikovFunction(zdravList) {
 //alert ("lista zdravnikov function");
 document.getElementById("pregledovalec").innerHTML = "izvajalec:  " +"<b>"+ localStorage.getItem("imeZdravnika")+"</b>";
 //alert(localStorage.getItem("imeZdravnika"));
 //  koda, ki naredi array zdravList iz tabele pregledovalci	
-//alert(zdravListX);
- var zdravList  = zdravListX; 
+//alert(zdravList);
+ var zdravList  = zdravList; 
  document.getElementById("aktBolnisnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnisnice")+"</h1> "; 
 //alert (localStorage.getItem("aktivnaBolnisnica"));
  if (localStorage.getItem("aktivnaBolnisnica") === ""||localStorage.getItem("aktivnaBolnisnica") ==="undefined") {
@@ -68,14 +68,11 @@ for (i = 0; i < zdravList.length; i++) {
 document.getElementById("zdravniki").innerHTML = text;
 }
 //__________________________________________________________________________________________
-function listaBolnisnicFunction(bolListX) {
+function listaBolnisnicFunction(bolList) {
 	//alert ("lista bolnisnic function");
 document.getElementById("pregledovalec").innerHTML = "izvajalec:  " + localStorage.getItem("imeZdravnika");
-
 // koda, ki naredi array bolList iz tabele bolnisniceTab	
-
-//alert(bolListX);
-var bolList  = bolListX; 
+//alert(bolList);
 var text = "";
 var i;
 for (i = 0; i < bolList.length; i++) {

@@ -3,6 +3,7 @@ require_once '../skupne/sabloni/zahlavi.php';
 ?>
 <h2>Prednastavljeni sklepi</h2>
 <?php
+require_once '../skupne/seznamBolnisnic.php';
 require_once 'sabloni/izbira.php';
 /* V tom failu so funkcije za spreminjanje tabele databaze*/
 require_once '../skupne/database.php';

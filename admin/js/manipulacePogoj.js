@@ -1,8 +1,10 @@
 let tabulka_global;
-function izborFunction(akce, tabulka, bolList) {
+//alert('definicija tabulke:  '+tabulka_global);
+function izborFunction(akce, tabulka,bolList) {
+//console.log(tabulka);
 	tabulka_global=tabulka; 
-	//const bolList  =["Izola","Jesenice",];
-		let  zaUrejat = [];
+//alert(tabulka);
+	let  zaUrejat = [];
 	let vnosi= "";
 		switch(tabulka) {
 		case "uporabnikiTbl":
@@ -28,20 +30,36 @@ function izborFunction(akce, tabulka, bolList) {
 		case "omejitveTbl":
 //console.log(tabulka);		
 			zaUrejat = ["razlog", "nivo"];
-		break;	
+		break;
 		case "sklepiTbl":
 //console.log(tabulka);		
 			zaUrejat = ["bolnisnica", "sklep", "sklepiStatus"];
-		break;				
+		break;
+		case "opravilaTbl":
+//console.log(tabulka);		
+			zaUrejat = ["bolnisnica", "opravilo", "sifraOpravila"];
+		break;	
+		case "premedikacija1Tbl":
+//console.log(tabulka);		
+			zaUrejat = ["ucinkovina", "teza", "doza", "koncentracija", "navodila"];
+		break;	
+/*			case "tabulka":
+//console.log(tabulka);		
+			zaUrejat = ["stolpec", "stolpec"];
+		break;			
+		case "tabulka":
+//console.log(tabulka);		
+			zaUrejat = ["stolpec", "stolpec"];
+		break;	*/				
 		default:
 			zaUrejat = [];		
 			console.log(tabulka);		
 			console.log('za to tabuku ni še napisana koda');
-		}	
-document.getElementById("akceId").value = akce;
-switch(akce) {
-  case "vyber":
-    document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica"  autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
+		}
+	document.getElementById("akceId").value = akce;
+	switch(akce) {
+	case "vyber":
+	    document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica"  autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
   let text = "";
   let i;
 	for (i = 0; i < bolList.length; i++) {
@@ -49,13 +67,16 @@ switch(akce) {
 	}
 	
         document.getElementById("bolnisnice").innerHTML = text;
+	
+		for (let i = 0; i < zaUrejat.length; i++) {
+	vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;	
+			}
 		document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
 		document.getElementById("urejatSent").innerHTML =  '<input type="hidden" name="zaUrejat" value="'+zaUrejat+'">';		
 		document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi">'; //submit
     break; 
 
-
-  case "vloz":
+    case "vloz":
 		for (let i = 0; i < zaUrejat.length; i++) {
 			vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;		
 			}
@@ -65,38 +86,33 @@ switch(akce) {
 		document.getElementById("posli").innerHTML = '<input class="submit" type="submit" name="submit" value="potrdi"><input type="reset" name="reset" value="Reset">'; //submit+reset					
     break;
 
-  case "edit":
-//alert("v JS case edit");
-   if(document.getElementById("osebe")!=null){
-   document.getElementById("osebe").addEventListener("click", functionOver);
-}
+	case "edit":
+		if(document.getElementById("osebe")!=null){
+			document.getElementById("osebe").addEventListener("click", functionOver);
+			}
     break;
 
-  case "odstrani": 
-  if ( confirm("Odstranim en zapis?") == true) {
-    if(document.getElementById("osebe")!=null){
-   return document.getElementById("osebe").addEventListener("click", functionOver);
-      }
-} else {
-  text = "You canceled!";
-}
+	case "odstrani": 
+		if ( confirm("Odstranim en zapis?") == true) {
+			if(document.getElementById("osebe")!=null){
+				document.getElementById("osebe").addEventListener("click", functionOver);
+			}
+		} else {
+			text = "You canceled!";
+		}
     break;	
-  default:
-    // code block
+	default:
  }//od switch
-
-//----------------------------------------------------------------------------------------
-
-function functionOver (e) {
- x = e.target;
-if (x.nodeName == "TD") {
- y = event.composedPath()[1];
-row_value = y.cells[0].innerHTML;
-//alert("x= "+x.innerHTML+" row value= "+row_value);
-  document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ; 
-//return;
-//alert(tabulka_global);  
-  window.location.href = "manipulaceObjektUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka=" + tabulka_global;  
- }//od if 
-}//od function(e)
 } // od izborFunction
+//----------------------------------------------------------------------------------------
+function functionOver (e) {
+var x = e.target;
+//alert(tabulka_global);
+//alert("functionOver");
+if (x.nodeName == "TD") {
+	var y = event.composedPath()[1];
+	row_value = y.cells[0].innerHTML;
+	document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
+	}//od if 
+  window.location.href = "manipulacePogojUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka="+ tabulka_global; 
+}//od function(e)
