@@ -35,7 +35,7 @@ echo'
 <li><a href="manipulacePogojUniverzal.php?tabulka=bolnisniceTbl">upravljanje bolnišnice</a></li>
 <li><a href="manipulacePogojUniverzal.php?tabulka=pregledovalciTbl">upravljanje pregledovalci</a></li>
 <li><a href="manipulacePogojUniverzal.php?tabulka=limitiTbl">upravljanje limiti</a></li>
-<li><a href="manipulacePogojUniverzal.php?tabulka=premedikacijaTbl">upravljanje premedikacija</a></li>
+<li><a href="manipulacePogojUniverzal.php?tabulka=premedikacija1Tbl">upravljanje premedikacija</a></li>
 </ul>
 
 ';

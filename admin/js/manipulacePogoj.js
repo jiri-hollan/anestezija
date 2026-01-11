@@ -30,7 +30,27 @@ function izborFunction(akce, tabulka,bolList) {
 		case "omejitveTbl":
 //console.log(tabulka);		
 			zaUrejat = ["razlog", "nivo"];
-		break;		
+		break;
+		case "sklepiTbl":
+//console.log(tabulka);		
+			zaUrejat = ["bolnisnica", "sklep", "sklepiStatus"];
+		break;
+		case "opravilaTbl":
+//console.log(tabulka);		
+			zaUrejat = ["bolnisnica", "opravilo", "sifraOpravila"];
+		break;	
+		case "premedikacija1Tbl":
+//console.log(tabulka);		
+			zaUrejat = ["ucinkovina", "teza", "doza", "koncentracija", "navodila"];
+		break;	
+/*			case "tabulka":
+//console.log(tabulka);		
+			zaUrejat = ["stolpec", "stolpec"];
+		break;			
+		case "tabulka":
+//console.log(tabulka);		
+			zaUrejat = ["stolpec", "stolpec"];
+		break;	*/				
 		default:
 			zaUrejat = [];		
 			console.log(tabulka);		
