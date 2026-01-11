@@ -11,6 +11,7 @@ echo'
 <link rel="stylesheet" href="../admin/sabloni/css/zahlavi.css?'.time().'">
 <link rel="stylesheet" href="../admin/sabloni/css/menuFile.css?'.time().'">
 <link rel="stylesheet" href="../admin/sabloni/css/uporabnikiNov.css?'.time().'">
+<link rel="stylesheet" href="../servis/css/pregledovalci.css?'.time().'">
 <script src="../admin/js/manipulacePogoj.js?'.time().'"></script> 
 </head>
 <body>
