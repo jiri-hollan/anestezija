@@ -50,6 +50,6 @@ echo '
       echo '</ul></nav>';
    }//od construct
 }//od class MenuBiznis  
-$adminKardiosi = new MenuBiznis(); 
+$adminAnestiz = new MenuBiznis(); 
 $uname = !empty($_SESSION["uname"]) ? $_SESSION["uname"] : "";
 ?>
