@@ -7,7 +7,7 @@ function izborFunction(akce, tabulka,bolList) {
 	let  zaUrejat = [];
 	let vnosi= "";
 	let text = "";
-	let i;
+	 i;
 		switch(tabulka) {
 		case "uporabnikiTbl":
 //alert(tabulka);
@@ -18,7 +18,7 @@ function izborFunction(akce, tabulka,bolList) {
 			zaUrejat = ["status", "pomen",];	
 		break;
 		case "bolnisniceTbl":
-//alert(tabulka);	
+//alert(tabulka);
 			zaUrejat = ["mesto", "nazivB", "bolnisnicaStatus"];
 		break;
 		case "limitiTbl":
