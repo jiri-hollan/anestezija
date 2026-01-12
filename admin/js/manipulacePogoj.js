@@ -7,7 +7,7 @@ function izborFunction(akce, tabulka,bolList) {
 	let  zaUrejat = [];
 	let vnosi= "";
 	let text = "";
-	 i;
+	let i;
 		switch(tabulka) {
 		case "uporabnikiTbl":
 //alert(tabulka);
