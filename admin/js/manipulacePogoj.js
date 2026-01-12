@@ -6,7 +6,7 @@ function izborFunction(akce, tabulka,bolList) {
 //alert(tabulka);
 	let  zaUrejat = [];
 	let vnosi= "";
-	let text = "";
+	let seznam = "";
 	let i;
 		switch(tabulka) {
 		case "uporabnikiTbl":
@@ -64,10 +64,10 @@ function izborFunction(akce, tabulka,bolList) {
 	    document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica"  autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
 
 	for (i = 0; i < bolList.length; i++) {
-		text += "<option value='" +  bolList[i] + "'>"  +"<br>";
+		seznam += "<option value='" +  bolList[i] + "'>"  +"<br>";
 	}
 	
-        document.getElementById("bolnisnice").innerHTML = text;
+        document.getElementById("bolnisnice").innerHTML = seznam;
 	
 		for (i = 0; i < zaUrejat.length; i++) {
 	vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;	
