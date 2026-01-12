@@ -6,6 +6,8 @@ function izborFunction(akce, tabulka,bolList) {
 //alert(tabulka);
 	let  zaUrejat = [];
 	let vnosi= "";
+	let text = "";
+	let i;
 		switch(tabulka) {
 		case "uporabnikiTbl":
 //alert(tabulka);
@@ -60,15 +62,14 @@ function izborFunction(akce, tabulka,bolList) {
 	switch(akce) {
 	case "vyber":
 	    document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica"  autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
-  let text = "";
-  let i;
+
 	for (i = 0; i < bolList.length; i++) {
 		text += "<option value='" +  bolList[i] + "'>"  +"<br>";
 	}
 	
         document.getElementById("bolnisnice").innerHTML = text;
 	
-		for (let i = 0; i < zaUrejat.length; i++) {
+		for (i = 0; i < zaUrejat.length; i++) {
 	vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;	
 			}
 		document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
@@ -77,7 +78,7 @@ function izborFunction(akce, tabulka,bolList) {
     break; 
 
     case "vloz":
-		for (let i = 0; i < zaUrejat.length; i++) {
+		for (i = 0; i < zaUrejat.length; i++) {
 			vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;		
 			}
 		document.getElementById("demo").innerHTML = vnosi;			
