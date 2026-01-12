@@ -107,11 +107,9 @@ function izborFunction(akce, tabulka,bolList) {
 } // od izborFunction
 //----------------------------------------------------------------------------------------
 function functionOver (e) {
-var x = e.target;
-//alert(tabulka_global);
-//alert("functionOver");
+let x = e.target;
 if (x.nodeName == "TD") {
-	var y = event.composedPath()[1];
+	let y = event.composedPath()[1];
 	row_value = y.cells[0].innerHTML;
 	document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
 	}//od if 
