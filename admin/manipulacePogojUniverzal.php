@@ -133,17 +133,17 @@ foreach ($this->zaUrejat as $key) {
 	  public $podminka;
   function __construct($pogoj, $tabulka,  $zaUrejat, $stolpci=["*"], $poradi=NULL) {
 	parent::__construct($pogoj, $tabulka, $zaUrejat);
-    $this->stolpci = $stolpci;	
+    $this->stolpci = $stolpci;
+	//$this->pogoj = $pogoj;
 //echo "v class vyber";
-	if ($this->pogoj == "") {
+	if ($pogoj == "") {
 	  $this->podminka = NULL;
   } else {
-	 var_dump($this->pogoj);
-    $poskus= '{"bolnisnica":"poskusna"}';
-	var_dump($poskus);
-	//$poskus= json_decode($poskus);
-	exit('to je exit');
-    $this->podminka = array("pogoj"=>$this->pogoj);
+   // $pogoj= '{"bolnisnica":"jesenice"}';
+	$this->pogoj= json_decode($pogoj, true);	
+	var_dump($this->pogoj);
+	//exit('to je exit');	
+    $this->podminka = $this->pogoj;
   }//od else
 	$this->poradi=$poradi;
 	$this->tabulka=$tabulka;

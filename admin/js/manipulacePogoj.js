@@ -118,8 +118,11 @@ if (x.nodeName == "TD") {
 
 //------------------------------------------------------------------------------------------
 function pogojFunction(name, value){
-	let pogoj;
-	pogoj = '{"'+name+'":"'+value+'"}';
+	let pogojJs ={};
+	pogojJs[name] = value;
+	console.log(pogojJs);
+	//pogoj = '{"'+name+'":"'+value+'"}';
+	const pogoj = JSON.stringify(pogojJs);
 //alert(pogoj);
 document.getElementById("pogojSkriti").innerHTML = '<input type="hidden" name="pogoj" value='+pogoj+'>';
 }//od pogojFunction
