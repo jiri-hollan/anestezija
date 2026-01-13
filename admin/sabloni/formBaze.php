@@ -17,7 +17,7 @@ if (isset($_REQUEST["tabulka"])){
 <p id="demo"></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="hidden" id="akceId" name="akce" value="">
-
+<p id="pogojSkriti"></p>
 <p id="tabSent"></p>
 <p id="urejatSent"></p>
 <p id="posli"></p>
