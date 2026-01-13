@@ -24,10 +24,10 @@ if (isset($_REQUEST["akce"])) {
 	  $akce = new Test_input($_REQUEST["akce"]);
 	  $akce = $akce->get_test();
 if (isset($_REQUEST["pogoj"])){
-	 /* $pogoj = new Test_input($_REQUEST['pogoj']); 
-      $pogoj = $pogoj->get_test();*/
-	  $pogoj = $_REQUEST['pogoj'];
-	  exit($pogoj);
+	 $pogoj = new Test_input($_REQUEST['pogoj']); 
+      $pogoj = $pogoj->get_test();
+	 // $pogoj = $_REQUEST['pogoj'];
+	 // exit($pogoj);
   }else {
 	 $pogoj = "";   
   } 
