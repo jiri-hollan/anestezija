@@ -43,7 +43,7 @@ if (isset($_REQUEST["pogoj"])){
 //var_dump($zaUrejat);
     echo strtoupper($akce) .': ';
     echo strtoupper($pogoj) .'<br>';
- exit($pogoj);
+ //exit($pogoj);
   new $akce($pogoj, $tabulka, $zaUrejat);
 
 	  
