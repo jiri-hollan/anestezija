@@ -61,7 +61,7 @@ function izborFunction(akce, tabulka,bolList) {
 	document.getElementById("akceId").value = akce;
 	switch(akce) {
 	case "vyber":
-	    document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onkeyup="alert(name+value)" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
+	    document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onkeyup="pogojFunction(name, value)" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
 
 	for (i = 0; i < bolList.length; i++) {
 		seznam += "<option value='" +  bolList[i] + "'>"  +"<br>";
@@ -115,3 +115,8 @@ if (x.nodeName == "TD") {
 	}//od if 
   window.location.href = "manipulacePogojUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka="+ tabulka_global; 
 }//od function(e)
+
+//------------------------------------------------------------------------------------------
+function pogojFunction(name, value){
+alert(name+':'+value);	
+}//od pogojFunction
