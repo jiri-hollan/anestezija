@@ -121,8 +121,8 @@ function pogojFunction(name, value){
 	let pogojJs ={};
 	pogojJs[name] = value;
 	console.log(pogojJs);
-	//pogoj = '{"'+name+'":"'+value+'"}';
 	const pogoj = JSON.stringify(pogojJs);
-//alert(pogoj);
+	console.log(pogoj);
+	
 document.getElementById("pogojSkriti").innerHTML = '<input type="hidden" name="pogoj" value='+pogoj+'>';
 }//od pogojFunction

@@ -139,10 +139,10 @@ foreach ($this->zaUrejat as $key) {
 	if ($pogoj == "") {
 	  $this->podminka = NULL;
   } else {
-   // $pogoj= '{"bolnisnica":"jesenice"}';
+//var_dump($pogoj);
 	$this->pogoj= json_decode($pogoj, true);	
 	var_dump($this->pogoj);
-	//exit('to je exit');	
+//exit('to je exit');	
     $this->podminka = $this->pogoj;
   }//od else
 	$this->poradi=$poradi;
