@@ -8,9 +8,9 @@ echo'
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin</title>
 <link rel="shortcut icon" href="../favicon.ico?'.time().'">
-<link rel="stylesheet" href="../admin/sabloni/css/zahlavi.css?'.time().'">
-<link rel="stylesheet" href="../admin/sabloni/css/menuFile.css?'.time().'">
-<link rel="stylesheet" href="../admin/sabloni/css/uporabnikiNov.css?'.time().'">
+<link rel="stylesheet" href="../admin/css/zahlavi.css?'.time().'">
+<link rel="stylesheet" href="../admin/css/menuFile.css?'.time().'">
+<link rel="stylesheet" href="../admin/css/uporabnikiNov.css?'.time().'">
 <link rel="stylesheet" href="../servis/css/pregledovalci.css?'.time().'">
 <script src="../admin/js/manipulacePogoj.js?'.time().'"></script> 
 </head>

@@ -6,6 +6,8 @@ function izborFunction(akce, tabulka,bolList) {
 //alert(tabulka);
 	let  zaUrejat = [];
 	let vnosi= "";
+	let seznam = "";
+	let i;
 		switch(tabulka) {
 		case "uporabnikiTbl":
 //alert(tabulka);
@@ -16,7 +18,7 @@ function izborFunction(akce, tabulka,bolList) {
 			zaUrejat = ["status", "pomen",];	
 		break;
 		case "bolnisniceTbl":
-//alert(tabulka);	
+//alert(tabulka);
 			zaUrejat = ["mesto", "nazivB", "bolnisnicaStatus"];
 		break;
 		case "limitiTbl":
@@ -59,16 +61,15 @@ function izborFunction(akce, tabulka,bolList) {
 	document.getElementById("akceId").value = akce;
 	switch(akce) {
 	case "vyber":
-	    document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica"  autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
-  let text = "";
-  let i;
+	    document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onkeyup="pogojFunction(name, value)" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
+
 	for (i = 0; i < bolList.length; i++) {
-		text += "<option value='" +  bolList[i] + "'>"  +"<br>";
+		seznam += "<option value='" +  bolList[i] + "'>"  +"<br>";
 	}
 	
-        document.getElementById("bolnisnice").innerHTML = text;
+        document.getElementById("bolnisnice").innerHTML = seznam;
 	
-		for (let i = 0; i < zaUrejat.length; i++) {
+		for (i = 0; i < zaUrejat.length; i++) {
 	vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;	
 			}
 		document.getElementById("tabSent").innerHTML = '<input type="hidden" name="tabulka" value="'+tabulka+'">';
@@ -77,7 +78,7 @@ function izborFunction(akce, tabulka,bolList) {
     break; 
 
     case "vloz":
-		for (let i = 0; i < zaUrejat.length; i++) {
+		for (i = 0; i < zaUrejat.length; i++) {
 			vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;		
 			}
 		document.getElementById("demo").innerHTML = vnosi;			
@@ -106,13 +107,22 @@ function izborFunction(akce, tabulka,bolList) {
 } // od izborFunction
 //----------------------------------------------------------------------------------------
 function functionOver (e) {
-var x = e.target;
-//alert(tabulka_global);
-//alert("functionOver");
+let x = e.target;
 if (x.nodeName == "TD") {
-	var y = event.composedPath()[1];
+	let y = event.composedPath()[1];
 	row_value = y.cells[0].innerHTML;
 	document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
 	}//od if 
   window.location.href = "manipulacePogojUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka="+ tabulka_global; 
 }//od function(e)
+
+//------------------------------------------------------------------------------------------
+function pogojFunction(name, value){
+	let pogojJs ={};
+	pogojJs[name] = value;
+	console.log(pogojJs);
+	const pogoj = JSON.stringify(pogojJs);
+	console.log(pogoj);
+	
+document.getElementById("pogojSkriti").innerHTML = '<input type="hidden" name="pogoj" value='+pogoj+'>';
+}//od pogojFunction
