@@ -27,7 +27,7 @@ if (isset($_REQUEST["pogoj"])){
 	 /* $pogoj = new Test_input($_REQUEST['pogoj']); 
       $pogoj = $pogoj->get_test();*/
 	  $pogoj = $_REQUEST['pogoj'];
-	  exit(var_dump($pogoj));
+	  exit($pogoj);
   }else {
 	 $pogoj = "";   
   } 
