@@ -138,6 +138,11 @@ foreach ($this->zaUrejat as $key) {
 	if ($this->pogoj == "") {
 	  $this->podminka = NULL;
   } else {
+	 var_dump($this->pogoj);
+    $poskus= '{"bolnisnica":"poskusna"}';
+	var_dump($poskus);
+	//$poskus= json_decode($poskus);
+	exit('to je exit');
     $this->podminka = array("pogoj"=>$this->pogoj);
   }//od else
 	$this->poradi=$poradi;
