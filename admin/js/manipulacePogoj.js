@@ -118,5 +118,8 @@ if (x.nodeName == "TD") {
 
 //------------------------------------------------------------------------------------------
 function pogojFunction(name, value){
+	let pogoj;
+	pogoj = '{"'+name+'":"'+value+'"}';
+alert(pogoj);
 alert(name+':'+value);	
 }//od pogojFunction
