@@ -120,6 +120,6 @@ if (x.nodeName == "TD") {
 function pogojFunction(name, value){
 	let pogoj;
 	pogoj = '{"'+name+'":"'+value+'"}';
-//alert(pogoj);
+alert(pogoj);
 document.getElementById("pogojSkriti").innerHTML = '<input type="hidden" name="pogoj" value="'+pogoj+'">';
 }//od pogojFunction

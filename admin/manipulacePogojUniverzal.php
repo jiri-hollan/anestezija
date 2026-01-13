@@ -24,9 +24,10 @@ if (isset($_REQUEST["akce"])) {
 	  $akce = new Test_input($_REQUEST["akce"]);
 	  $akce = $akce->get_test();
 if (isset($_REQUEST["pogoj"])){
-	  $pogoj = new Test_input($_REQUEST['pogoj']); 
-      $pogoj = $pogoj->get_test();
-	  
+	 /* $pogoj = new Test_input($_REQUEST['pogoj']); 
+      $pogoj = $pogoj->get_test();*/
+	  $pogoj = $_REQUEST['pogoj'];
+	  exit(var_dump($pogoj));
   }else {
 	 $pogoj = "";   
   } 
@@ -41,8 +42,8 @@ if (isset($_REQUEST["pogoj"])){
 //var_dump($akce);
 //var_dump($zaUrejat);
     echo strtoupper($akce) .': ';
-  echo strtoupper($pogoj) .'<br>';
- 
+    echo strtoupper($pogoj) .'<br>';
+ exit($pogoj);
   new $akce($pogoj, $tabulka, $zaUrejat);
 
 	  
