@@ -24,9 +24,9 @@ if (isset($_REQUEST["akce"])) {
 	  $akce = new Test_input($_REQUEST["akce"]);
 	  $akce = $akce->get_test();
 if (isset($_REQUEST["pogoj"])){
-	 $pogoj = new Test_input($_REQUEST['pogoj']); 
-      $pogoj = $pogoj->get_test();
-	 // $pogoj = $_REQUEST['pogoj'];
+	 //$pogoj = new Test_input($_REQUEST['pogoj']); 
+      //$pogoj = $pogoj->get_test();
+	  $pogoj = $_REQUEST['pogoj'];
 	 // exit($pogoj);
   }else {
 	 $pogoj = "";   
@@ -141,7 +141,7 @@ foreach ($this->zaUrejat as $key) {
   } else {
 //var_dump($pogoj);
 	$this->pogoj= json_decode($pogoj, true);	
-	var_dump($this->pogoj);
+//var_dump($this->pogoj);
 //exit('to je exit');	
     $this->podminka = $this->pogoj;
   }//od else
