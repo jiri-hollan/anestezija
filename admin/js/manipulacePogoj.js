@@ -4,7 +4,7 @@ function izborFunction(akce, tabulka,bolList) {
 //console.log(tabulka);
 	tabulka_global=tabulka; 
 //alert(tabulka);
-	let  zaUrejat = [];
+	let zaUrejat = [];
 	let vnosi= "";
 	let seznam = "";
 	let zaPogoj = "";
@@ -73,7 +73,7 @@ function izborFunction(akce, tabulka,bolList) {
 		for (i = 0; i < bolList.length; i++) {
 			seznam += "<option value='" +  bolList[i] + "'>"  +"<br>";
 		}	
-        document.getElementById("bolnisnice").innerHTML = seznam;
+			document.getElementById("bolnisnice").innerHTML = seznam;
 		}else{
 			console.log('zaPogoj ni določen');
 		}
