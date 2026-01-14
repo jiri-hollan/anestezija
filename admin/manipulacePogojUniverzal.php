@@ -159,7 +159,7 @@ foreach ($this->zaUrejat as $key) {
 	}//od foreach
   }//od if(cout)
 	else{
-	   echo "Ni zapisa v bazi";	
+	   echo "za izbrano bolnišnico ni zapisa v bazi";	
 	}//od else
   }//od vyberFunction  
 }//od class vyber
