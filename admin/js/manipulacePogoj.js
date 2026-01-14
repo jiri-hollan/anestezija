@@ -7,11 +7,13 @@ function izborFunction(akce, tabulka,bolList) {
 	let  zaUrejat = [];
 	let vnosi= "";
 	let seznam = "";
+	let zaPogoj = "";
 	let i;
 		switch(tabulka) {
 		case "uporabnikiTbl":
 //alert(tabulka);
-			zaUrejat = ["email", "uname", "geslo", "bolnisnica", "ime", "priimek", "upstatus", "pristop", "gdpr", "stevilkaZdravnika"];			
+			zaUrejat = ["email", "uname", "geslo", "bolnisnica", "ime", "priimek", "upstatus", "pristop", "gdpr", "stevilkaZdravnika"];
+			zaPogoj = "bolnisnica";
 		break;
 		case "statusiTbl":
 //alert(tabulka);	
@@ -24,10 +26,12 @@ function izborFunction(akce, tabulka,bolList) {
 		case "limitiTbl":
 //console.log(tabulka);		
 			zaUrejat = ["bolnisnica", "skupina", "ime", "min", "max"];
+			zaPogoj = "bolnisnica";			
 		break;
 		case "pregledovalciTbl":
 //console.log(tabulka);		
 			zaUrejat = ["bolnisnica", "ime", "priimek", "pregledovalciStatus"];
+			zaPogoj = "bolnisnica";
 		break;	
 		case "omejitveTbl":
 //console.log(tabulka);		
@@ -36,6 +40,7 @@ function izborFunction(akce, tabulka,bolList) {
 		case "sklepiTbl":
 //console.log(tabulka);		
 			zaUrejat = ["bolnisnica", "sklep", "sklepiStatus"];
+			zaPogoj = "bolnisnica";			
 		break;
 		case "opravilaTbl":
 //console.log(tabulka);		
@@ -59,16 +64,19 @@ function izborFunction(akce, tabulka,bolList) {
 			console.log('za to tabuku ni še napisana koda');
 		}
 	document.getElementById("akceId").value = akce;
+	
 	switch(akce) {
 	case "vyber":
+		if(zaPogoj=="bolnisnica"){
 	    document.getElementById("demo").innerHTML = '<input id="bolnisnicaId" list="bolnisnice" name="bolnisnica" value="" placeholder="Bolnišnica" onkeyup="pogojFunction(name, value)" autocomplete="off"><datalist id="bolnisnice"><option value="izbrana bolnisnica"> </datalist>';
 
-	for (i = 0; i < bolList.length; i++) {
-		seznam += "<option value='" +  bolList[i] + "'>"  +"<br>";
-	}
-	
+		for (i = 0; i < bolList.length; i++) {
+			seznam += "<option value='" +  bolList[i] + "'>"  +"<br>";
+		}	
         document.getElementById("bolnisnice").innerHTML = seznam;
-	
+		}else{
+			console.log('zaPogoj ni določen');
+		}
 		for (i = 0; i < zaUrejat.length; i++) {
 	vnosi += '<input type=\"text\" id=\"'+zaUrejat[i]+'Id\"  name=\"'+zaUrejat[i]+'\" value=\"\" placeholder=\"'+zaUrejat[i]+'\" required>' ;	
 			}
