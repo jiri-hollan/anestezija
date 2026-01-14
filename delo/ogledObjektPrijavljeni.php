@@ -68,7 +68,6 @@ if (isset($_REQUEST["akce"])) {
   public $stevilkaZdravnika;
   public $datumOpravila;		 		
   public $tabulka;
-  public $datumOpravila;
   public $dataPreg;
   
   function __construct($stevilkaZdravnika, $datumOpravila="",$tabulka="") {
