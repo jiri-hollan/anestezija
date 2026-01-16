@@ -5,7 +5,6 @@ function izborFunction(akce, tabulka,bolList) {
 //console.log(tabulka);
 	tabulka_global=tabulka; 
 //alert(tabulka);
-	//let zaUrejat = [];
 	let vnosi= "";
 	let seznam = "";
 	let zaPogoj = "";
