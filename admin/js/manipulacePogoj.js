@@ -1,10 +1,11 @@
 let tabulka_global;
 //alert('definicija tabulke:  '+tabulka_global);
+let zaUrejat = [];
 function izborFunction(akce, tabulka,bolList) {
 //console.log(tabulka);
 	tabulka_global=tabulka; 
 //alert(tabulka);
-	let zaUrejat = [];
+	//let zaUrejat = [];
 	let vnosi= "";
 	let seznam = "";
 	let zaPogoj = "";
@@ -123,7 +124,8 @@ if (x.nodeName == "TD") {
 	row_value = y.cells[0].innerHTML;
 	document.getElementById("demo3").innerHTML = "id v bazi je= " + row_value ;  
 	}//od if 
-  window.location.href = "manipulacePogojUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka="+ tabulka_global; 
+//alert(zaUrejat);
+  window.location.href = "manipulacePogojUniverzal.php?akce=" + x.innerHTML + "&id=" + row_value + "&tabulka="+ tabulka_global + "&zaUrejat=" + zaUrejat ; 
 }//od function(e)
 
 //------------------------------------------------------------------------------------------

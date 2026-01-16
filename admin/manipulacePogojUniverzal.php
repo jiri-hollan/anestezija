@@ -70,12 +70,12 @@ if (isset($_REQUEST["pogoj"])){
   public $pogoj;		
   public $tabulka;
   public $zaUrejat;
-  function __construct($pogoj="", $tabulka="", $zaUrejat=[]) {
+  function __construct($pogoj="", $tabulka="", $zaUrejat) {
 	    $pogoj=strtolower($pogoj); 
         $pogoj=ucfirst($pogoj); 
 	    $this->pogoj = $pogoj;
         $this->tabulka = $tabulka; 
-		
+//var_dump($zaUrejat);		
 	 if(sizeof($zaUrejat)===0){
 			  exit('ni seznama stolpcev za:'.$tabulka);
 		  }else{
