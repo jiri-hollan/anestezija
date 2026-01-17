@@ -1,5 +1,7 @@
 function prenosFunction(a){
- formFunction(); 
+ formFunction();
+ let i;
+ let videz;	
  let x;	 
  let x1 = document.getElementById("frm")["oddelek"].value;
  let x2 = document.getElementById("frm")["dgOperativna"].value;
@@ -122,8 +124,7 @@ document.getElementById("meritvePr").innerHTML=meritve;
 
 //........laboratorij...................................................................................
 let text = "<span class='nadpis'>" + "Lab.: " + "</span>";
-let i;
-let videz;
+
 let lab = document.getElementById("lab").getElementsByTagName("label");
 let vred =document.getElementById("lab").getElementsByClassName("lab"); 
 for (i = 0; i < lab.length; i++) {  

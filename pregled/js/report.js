@@ -59,6 +59,8 @@ return false;
  let a;
 //alert('report: '+sessionStorage.getItem("bolnikId"));
  function reportFunction(a){
+let i;
+let videz;	 
 let modal = document.getElementById('doziranje');
     modal.style.display = "none";
  formFunction(); 
@@ -182,8 +184,6 @@ document.getElementById("meritveR").innerHTML=meritve;
 
 //........laboratorij...................................................................................
 let text = "<span class='nadpis'>" + "Lab.: " + "</span>";
-let i;
-let videz;
 let lab = document.getElementById("lab").getElementsByTagName("label");
 let vred =document.getElementById("lab").getElementsByClassName("lab"); 
 for (i = 0; i < lab.length; i++) {  

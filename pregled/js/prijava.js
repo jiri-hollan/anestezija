@@ -50,7 +50,6 @@ document.getElementById("pregledovalec").innerHTML = "izvajalec:  " +"<b>"+ loca
 //alert(localStorage.getItem("imeZdravnika"));
 //  koda, ki naredi array zdravList iz tabele pregledovalci	
 //alert(zdravList);
- let zdravList  = zdravList; 
  document.getElementById("aktBolnisnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnisnice")+"</h1> "; 
 //alert (localStorage.getItem("aktivnaBolnisnica"));
  if (localStorage.getItem("aktivnaBolnisnica") === ""||localStorage.getItem("aktivnaBolnisnica") ==="undefined") {
