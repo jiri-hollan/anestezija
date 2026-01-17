@@ -1,17 +1,17 @@
 
 function otroskaFunction(){
-	   let teza = document. getElementById('teza').value;
+	let teza = document. getElementById('teza').value;
 //alert('teza'+teza);
 //document.getElementById('tezaPremedikacijaId').setAttribute("value",teza);
-		document.getElementById('tezaPremedikacijaId').value=teza;	
-		document.getElementById('doziranje').style.display='block';
+	document.getElementById('tezaPremedikacijaId').value=teza;	
+	document.getElementById('doziranje').style.display='block';
 // Get the modal
-let modal = document.getElementById('doziranje');
+	let modal = document.getElementById('doziranje');
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+	window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
 }//od window.onclick
 }//od function otroska
 	
@@ -21,7 +21,7 @@ function schovej(a){
 //alert (a);
 document.getElementById(a).style.display='block';
 // Get the modal
-var modal = document.getElementById(a);
+let modal = document.getElementById(a);
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -55,19 +55,19 @@ function premedikacijaFunction(premedikacija, navodila){
 }
 */
 function ajax_sprememba(){
-	var ucinkovina = $(".ucinkovina:radio:checked").val();		
-//	var ucinkovina = $(":radio:checked").val();	
-//	var ucinkovina = $("input[name='ucinkovina']:checked").val();	
-	var teza = $("#tezaPremedikacijaId").val();
-	var sprememba = $("#sprememba").val();
+	let ucinkovina = $(".ucinkovina:radio:checked").val();		
+//	let ucinkovina = $(":radio:checked").val();	
+//	let ucinkovina = $("input[name='ucinkovina']:checked").val();	
+	let teza = $("#tezaPremedikacijaId").val();
+	let sprememba = $("#sprememba").val();
 	ajax_aktualizuj(ucinkovina, teza, sprememba);	
 }
 
 function ajax_get_premedikacija(elem) {
 	$elem = $(elem);
-	var ucinkovina = $elem.val();
-	var teza = $("#teza").val();
-	var sprememba = $("#sprememba").val();	
+	let ucinkovina = $elem.val();
+	let teza = $("#teza").val();
+	let sprememba = $("#sprememba").val();	
 		ajax_aktualizuj(ucinkovina, teza, sprememba);	
 }
 
