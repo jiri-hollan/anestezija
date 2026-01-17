@@ -24,9 +24,9 @@ switch(akce) {
 
 //----------------------------------------------------------------------------------------
 function functionOver (e) {
-  var x = e.target;
+  let x = e.target;
   if (x.nodeName == "TD") {
-   var y = event.composedPath()[1];
+   let y = event.composedPath()[1];
    stevilkaZdravnika = y.cells[4].innerHTML;
    document.getElementById("demo3").innerHTML = "izbrana številka zdravnika= " + stevilkaZdravnika ;    
  }//od if 

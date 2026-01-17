@@ -29,9 +29,9 @@ switch(akce) {
 
 //----------------------------------------------------------------------------------------
 function datumOver (e) {
-  var x = e.target;
+  let x = e.target;
   if (x.nodeName == "TD") {
-   var y = event.composedPath()[1];
+   let y = event.composedPath()[1];
    datumOpravila = y.cells[0].innerHTML;
    stevilkaZdravnika = y.cells[1].innerHTML;  
 //alert("Šifra"+sifraOPravila);
