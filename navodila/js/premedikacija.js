@@ -1,18 +1,16 @@
 
 function ajax_sprememba(){
-	var ucinkovina = $(".ucinkovina:radio:checked").val();		
-//	var ucinkovina = $(":radio:checked").val();	
-//	var ucinkovina = $("input[name='ucinkovina']:checked").val();	
-	var teza = $("#tezaPremedikacijaId").val();
-	var sprememba = $("#sprememba").val();
+	let ucinkovina = $(".ucinkovina:radio:checked").val();		
+	let teza = $("#tezaPremedikacijaId").val();
+	let sprememba = $("#sprememba").val();
 	ajax_aktualizuj(ucinkovina, teza, sprememba);	
 }
 
 function ajax_get_premedikacija(elem) {
 	$elem = $(elem);	
-	var ucinkovina = $elem.val();
-	var teza = $("#tezaPremedikacijaId").val();
-	var sprememba = $("#sprememba").val();
+	let ucinkovina = $elem.val();
+	let teza = $("#tezaPremedikacijaId").val();
+	let sprememba = $("#sprememba").val();
 	ajax_aktualizuj(ucinkovina, teza, sprememba);
 }
 
