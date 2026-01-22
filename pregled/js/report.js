@@ -357,7 +357,7 @@ if (izvidi.length == 0) {
 }else if (m  > 1200){
 //alert(m  + 'več kot 1200 ' + izvidi);
 	izvidi =  "<span class='izvid2' class='besedilo'><hr> &emsp;"  + izvidi + "<br></span>"; 
-}else if (m  > 800){
+}else if (m  > 1000){
 //alert(m  + 'več kot 800 ' + izvidi);
 	izvidi =  "<span class='izvid1' class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 
         
