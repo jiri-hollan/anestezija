@@ -50,17 +50,16 @@ document.getElementById("pregledovalec").innerHTML = "izvajalec:  " +"<b>"+ loca
 //alert(localStorage.getItem("imeZdravnika"));
 //  koda, ki naredi array zdravList iz tabele pregledovalci	
 //alert(zdravList);
- var zdravList  = zdravList; 
  document.getElementById("aktBolnisnica").innerHTML = "<h1>"+localStorage.getItem("mestoBolnisnice")+"</h1> "; 
 //alert (localStorage.getItem("aktivnaBolnisnica"));
  if (localStorage.getItem("aktivnaBolnisnica") === ""||localStorage.getItem("aktivnaBolnisnica") ==="undefined") {
-   var zdravList  =[];
+    zdravList  =[];
 document.getElementById("aktBolnisnica").innerHTML = "<h1 style='color:Tomato;'>Bolnišnica ni določena</h1>"; 	
 //alert ("bolnišnica ni določena");
 } 
-var text = "";
-var naslov="&nbsp;dr.med";
-var i;
+let text = "";
+let naslov="&nbsp;dr.med";
+let i;
 for (i = 0; i < zdravList.length; i++) {
 	let povezano = zdravList[i].replace(/ /g, "&nbsp;");
     text += "<option value='" +  povezano + naslov + "'>"  +"<br>";
@@ -69,12 +68,13 @@ document.getElementById("zdravniki").innerHTML = text;
 }
 //__________________________________________________________________________________________
 function listaBolnisnicFunction(bolList) {
-	//alert ("lista bolnisnic function");
+let text = "";
+let i;
+//alert ("lista bolnisnic function");
 document.getElementById("pregledovalec").innerHTML = "izvajalec:  " + localStorage.getItem("imeZdravnika");
 // koda, ki naredi array bolList iz tabele bolnisniceTab	
 //alert(bolList);
-var text = "";
-var i;
+
 for (i = 0; i < bolList.length; i++) {
   text += "<option value='" +  bolList[i]  + "'>"  +"<br>";
 }
@@ -83,13 +83,13 @@ document.getElementById("bolnisnice").innerHTML = text;
 /************************funkcja schovej************************/
 function schovej(a){
 //alert (a);
-document.getElementById(a).style.display='block';
+	document.getElementById(a).style.display='block';
 // Get the modal
-var modal = document.getElementById(a);
+	let modal = document.getElementById(a);
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+	window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
 }//od window.onclick
 }//od function schovej
