@@ -25,11 +25,11 @@ echo '
 <input id="ustanova" type="text" name="ustanova" value="" required ></input>
 <label for= "stevMaticnaId">matična številka</label>
 <input id="stevMaticnaId"  type="number" name="stevMaticna"  ></input>';
-/*	if ($_SESSION["pristop"] >= 4){
+	if ($_SESSION["pristop"] >= 4){
 	echo '	
 	<label for= "priimekId">priimek</label>
-	<input id="priimekId"  type="number" name="priimek"  ></input>';
-	}*/
+	<input id="priimekId"  type="text" name="priimek"  ></input>';
+	}
 
 echo '
 <input   type="hidden" name="doBaze" value="vyber" readonly ></input>
