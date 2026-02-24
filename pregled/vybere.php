@@ -15,7 +15,7 @@ require_once 'vnosVrstice.php';
 <?php
 require_once('../skupne/aktivace.php');
 if($gdpr==1){
-if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {
+if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] >= 3) {
 echo '<div id="kontejner">';
 echo '<form action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'" method="post" autocomplete="off">';
  
