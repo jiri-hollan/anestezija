@@ -3,7 +3,7 @@
  <div class="navbar" id="navbar" >
 <?php
 require_once('../skupne/home.php');
-echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
+echo '<button class="" id="buttonDomov" onclick="window.location.href=' . "'" . $home . "'" . ';"> Domov </button>';
 ?>
      <span class="" id="odjava" onclick="odjavaFunction()">RESET</span>
 <!-- Funkcija novBolnikFunction shrani formu u bazo in skoči na vpis novega bolnika -->
@@ -14,12 +14,12 @@ echo '<button class=""id="buttonDomov" onclick="window.location.href=' . "'" . $
 require_once('../skupne/aktivace.php');
 if($gdpr==1){
 if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] == 3) {	
-echo '
-<button class="dropbtn">najdi</button>
+echo '<button class="dropbtn" onclick="window.location.href=' . "'" . 'vybere.php'. "'". ';">najdi</button>';
+/*
 <div class="dropdown-content">
 <a href="vybere.php">matična št.</a>
 </div>
-';
+';*/
 }
   }
 ?> 
