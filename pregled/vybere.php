@@ -26,9 +26,9 @@ echo '
 <label for= "stevMaticnaId">matična številka</label>
 <input id="stevMaticnaId"  type="number" name="stevMaticna"  ></input>';
 	if ($_SESSION["pristop"] >= 4){
-	echo '	
+	/*echo '	
 	<label for= "priimekId">priimek</label>
-	<input id="priimekId"  type="text" name="priimek"  ></input>';
+	<input id="priimekId"  type="text" name="priimek"  ></input>';*/
 	}
 
 echo '
