@@ -2,10 +2,11 @@
 @session_start();
 require_once 'sabloni/zahlavi.php';
 require_once 'vnosVrstice.php';
-?>
+
+echo'
  <body onload="stolpciFunction()">
- <a id="buttonNazaj" href="bolnik.php" >Nazaj</a>
-<?php
+ <a id="buttonNazaj" href="bolnik.php" >Nazaj</a>';
+
 require_once('../skupne/aktivace.php');
 if($gdpr==1){
 if (isset($_SESSION["pristop"]) && $_SESSION["pristop"] >= 3) {
