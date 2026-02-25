@@ -5,13 +5,6 @@ require_once 'vnosVrstice.php';
 ?>
  <body onload="stolpciFunction()">
  <a id="buttonNazaj" href="bolnik.php" >Nazaj</a>
-<script>
- function stolpciFunction() {
- const poljeJS = ["pregledId", "datPregleda", "imeZdravnika"];
- const poljeJSON = JSON.stringify(poljeJS);
- document.getElementById("data").value = poljeJSON;
- }
-</script>
 <?php
 require_once('../skupne/aktivace.php');
 if($gdpr==1){

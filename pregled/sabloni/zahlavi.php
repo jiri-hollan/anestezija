@@ -9,5 +9,6 @@ echo'
 <title>Pregled</title>
 <link rel="shortcut icon" href="../favicon.ico?'.time().'">
 <link rel="stylesheet" type="text/css" href="css/baze.css?'.time().'">
+<script src="js/vybere.js?'.time().'"></script>
 </head>';
 ?>
