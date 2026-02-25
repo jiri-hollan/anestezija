@@ -18,7 +18,7 @@ echo '
 <label for= "ustanova">bolnišnica:</label>
 <input id="ustanova" type="text" name="ustanova" value="" required ></input>
 <label for= "stevMaticnaId">matična številka</label>
-<input id="stevMaticnaId"  type="number" name="stevMaticna"  ></input>';
+<input id="stevMaticnaId"  type="number" name="stevMaticna" required ></input>';
 
 echo '
 <input   type="hidden" name="doBaze" value="vyber" readonly ></input>
@@ -27,10 +27,10 @@ echo '
 	if ($_SESSION["pristop"] >= 4){
 echo '<form action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'" method="post" autocomplete="off">';
 echo '
-<input id="data1" type="hidden" name="data" value="" style="width:90%;"></input><br>
+<input id="data1" type="hidden" name="data" value="" style="width:90%;"></input>
 <input id="ustanova1" type="hidden"  name="ustanova" value="" required ></input>
 <label for= "priimekId">priimek</label>
-<input id="priimekId"  type="text" name="priimek"  ></input>';
+<input id="priimekId"  type="text" name="priimek" required ></input>';
 	
 echo '
 <input   type="hidden" name="doBaze" value="vyber" readonly ></input>
