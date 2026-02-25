@@ -27,7 +27,7 @@ echo '
 	if ($_SESSION["pristop"] >= 4){
 echo '<form action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'" method="post" autocomplete="off">';
 echo '
-<input id="data" type="hidden" name="data" value="" style="width:90%;"></input><br>
+<input id="data1" type="hidden" name="data" value="" style="width:90%;"></input><br>
 <input id="ustanova1" type="hidden"  name="ustanova" value="" required ></input>
 <label for= "priimekId">priimek</label>
 <input id="priimekId"  type="text" name="priimek"  ></input>';
