@@ -3,10 +3,10 @@
 require_once 'sabloni/zahlavi.php';
 require_once 'vnosVrstice.php';
 ?>
- <body onload="stolpciFuncton()">
+ <body onload="stolpciFunction()">
  <a id="buttonNazaj" href="bolnik.php" >Nazaj</a>
 <script>
- function stolpciFuncton() {
+ function stolpciFunction() {
  const poljeJS = ["pregledId", "datPregleda", "imeZdravnika"];
  const poljeJSON = JSON.stringify(poljeJS);
  document.getElementById("data").value = poljeJSON;
