@@ -343,7 +343,7 @@ function opisFunction(m, l, n)
 }else {
   m = "<span class='izvid0'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
     }*/
-  m = "<span class='izvid0'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";	
+  m = "<span class='izvid'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";	
 return m;
 
 }
@@ -371,7 +371,7 @@ let m =	izvidi.length + 30 * novaLinija;
 //alert(m  + 'manj kot 800 ' + izvidi);
 	izvidi =  "<span class='izvid0'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 
     }*/
-	izvidi =  "<span class='izvid0'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 	
+	izvidi =  "<span class='izvid'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 	
 return izvidi;
 
 }
