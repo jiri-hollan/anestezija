@@ -324,7 +324,7 @@ switch (a) {
 //....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
 function opisFunction(m, l, n)
 {
-if (m.length == 0) {
+/*if (m.length == 0) {
 	  m = "";
 }else if (m.length > 120){
 	//alert(m.length + 'več kot 120 ' + m);
@@ -337,7 +337,8 @@ if (m.length == 0) {
 	m = "<span class='izvid1'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid1' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
 }else {
   m = "<span class='izvid0'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
-    }
+    }*/
+  m = "<span class='izvid0'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";	
 return m;
 
 }
@@ -346,7 +347,7 @@ return m;
 function izvidiFunction(izvidi, novaLinija)
 {
 let m =	izvidi.length + 30 * novaLinija;
-if (izvidi.length == 0) {
+/*if (izvidi.length == 0) {
 	  m = "";
 }else if (m > 1600){
 //alert(m + 'več kot 1600 ' + izvidi);
@@ -364,7 +365,8 @@ if (izvidi.length == 0) {
 }else {
 //alert(m  + 'manj kot 800 ' + izvidi);
 	izvidi =  "<span class='izvid0'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 
-    }
+    }*/
+	izvidi =  "<span class='izvid0'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 	
 return izvidi;
 
 }
