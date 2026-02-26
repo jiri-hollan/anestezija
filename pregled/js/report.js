@@ -243,29 +243,41 @@ let alergija = document.getElementById("alergija").value;
 document.getElementById("alergijaR").innerHTML= alergija;
 
 //....................EKG....................................................................
-
+let dolzina = 0;
 let ekg = document.getElementById("ekg").value;
 ekg = opisFunction(ekg, "<hr>", "EKG:");
+dolzina = ekg.length;
+//console.log(dolzina);
 //alert(ekg);
 //...........................RTG................................................................
 let rtg = document.getElementById("rtg").value;
 rtg = opisFunction(rtg, "<hr>", "RTG:");
-
+dolzina += rtg.length;
+//console.log(dolzina);
 //..............pridružene bolezni........................................................
 let prid = document.getElementById("dgPridruzene").value;
 prid = opisFunction(prid, "<hr>", "Pridružene bolezni:" );
-
+dolzina += prid.length;
+//console.log(dolzina);
 //................................... predhodna terapija.........................................
 let pred = document.getElementById("terPredhodna").value;
 pred = opisFunction(pred, "<hr>", "Predhodna terapija:" );
-
+dolzina += pred.length;
 //..................Izvidi in opombe...........................................................
 let izvidi = document.getElementById("izvidiInOpombe").value;
 izvidi = izvidi.replace(/^\s*$(?:\r\n?|\n)/gm, "");
 izvidi = izvidi.replace(/\n/g, "<br>&emsp;&emsp;");
 const novaLinija = (izvidi.match(new RegExp("<br>", "g")) || []).length;
-izvidi = izvidiFunction(izvidi, novaLinija );
-
+izvidi = izvidiFunction(izvidi);
+dolzina += izvidi.length + 30 * novaLinija;
+console.log(dolzina);
+let velikost = dolzinaFunction(dolzina);
+console.log(velikost);
+ekg = ekg.replace('izvid', velikost);
+rtg = rtg.replace('izvid', velikost);
+prid = prid.replace('izvid', velikost);
+pred = pred.replace('izvid', velikost);
+izvidi = izvidi.replace('izvid', velikost);
 //..................Sklep...........................................................
 let sklep = document.getElementById("sklep").value;
 sklep = sklepFunction(sklep, "Sklep:" );
@@ -322,52 +334,33 @@ switch (a) {
  //....konec report function..............................
  
 //....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
-function opisFunction(m, l, n)
-{
-if (m.length == 0) {
-	  m = "";
-}else if (m.length > 120){
-	//alert(m.length + 'več kot 120 ' + m);
-	m = "<span class='izvid3'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid3' class='besedilo'> &emsp;"  + m + "<br></span>"; 	  
-}else if (m.length > 100){
-	//alert(m.length + 'več kot 100 ' + m);
-	m = "<span class='izvid2'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid2' class='besedilo'> &emsp;"  + m + "<br></span>"; 
-}else if (m.length > 70){
-	//alert(m.length + 'več kot 70 ' + m);
-	m = "<span class='izvid1'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  +  "<span class='izvid1' class='besedilo'> &emsp;"  + m + "<br></span>"; 	
-}else {
-  m = "<span class='izvid0'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
-    }
-return m;
-
+function opisFunction(opis, l, n){
+	opis = "<span >" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='izvid' class='besedilo'>" + opis + "</span>" + "</br>";	
+	return opis;
 }
- 
+
 //............................................izvidiFunction ureja besedilni opis stanja...................................
-function izvidiFunction(izvidi, novaLinija)
-{
-let m =	izvidi.length + 30 * novaLinija;
-if (izvidi.length == 0) {
-	  m = "";
-}else if (m > 1600){
-//alert(m + 'več kot 1600 ' + izvidi);
-	izvidi = "<span class='izvid4' class='besedilo'><hr> &emsp;"  + izvidi + "<br></span>"; 	  
-}else if (m > 1400){
-//alert(m + 'več kot 1400 ' + izvidi);
-	izvidi =  "<span class='izvid3' class='besedilo'><hr> &emsp;"  + izvidi + "<br></span>"; 
-}else if (m  > 1200){
-//alert(m  + 'več kot 1200 ' + izvidi);
-	izvidi =  "<span class='izvid2' class='besedilo'><hr> &emsp;"  + izvidi + "<br></span>"; 
-}else if (m  > 1000){
-//alert(m  + 'več kot 800 ' + izvidi);
-	izvidi =  "<span class='izvid1' class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 
-        
-}else {
-//alert(m  + 'manj kot 800 ' + izvidi);
-	izvidi =  "<span class='izvid0'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 
-    }
-return izvidi;
+function izvidiFunction(izvidi){
+	izvidi =  "<span class='izvid'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 	
+	return izvidi;
 
 }
+
+
+//........................dolzinaFunction določi velikost fonta na temelju seštevka dolžin................................
+ function dolzinaFunction(dolzina = 0){
+	let velikost = 'izvid';
+	if (dolzina > 2500){
+		velikost = 'izvid4';
+	}else if (dolzina > 2200){
+		velikost = 'izvid3';
+	}else if (dolzina > 1700){
+		velikost = 'izvid2';
+	}else if (dolzina > 1500){
+		velikost = 'izvid1';
+	}
+	return velikost;
+ }
 //.......................................SklepFunction..............................
 function sklepFunction(m,n)
 {
