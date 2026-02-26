@@ -271,6 +271,7 @@ const novaLinija = (izvidi.match(new RegExp("<br>", "g")) || []).length;
 izvidi = izvidiFunction(izvidi, novaLinija );
 dolzina += izvidi.length + 30 * novaLinija;
 console.log(dolzina);
+dolzinaFunction(dolzina);
 //..................Sklep...........................................................
 let sklep = document.getElementById("sklep").value;
 sklep = sklepFunction(sklep, "Sklep:" );
@@ -347,7 +348,7 @@ function opisFunction(m, l, n)
 return m;
 
 }
- 
+
 //............................................izvidiFunction ureja besedilni opis stanja...................................
 function izvidiFunction(izvidi, novaLinija)
 {
@@ -375,6 +376,21 @@ let m =	izvidi.length + 30 * novaLinija;
 return izvidi;
 
 }
+
+
+//........................dolzinaFunction določi velikost fonta na temelju seštevka dolžin................................
+ function dolzinaFunction(dolzina = 0){
+	let velikost = 'izvid';
+	if (dolzina > 2500){
+		velikost = 'izvid4';
+	}else if (dolzina > 2000){
+		velikost = 'izvid3';
+	}else if (dolzina > 1500){
+		velikost = 'izvid2';
+	}else if (dolzina > 1000){
+		velikost = 'izvid1';
+	}		
+ }
 //.......................................SklepFunction..............................
 function sklepFunction(m,n)
 {
