@@ -352,11 +352,11 @@ function izvidiFunction(izvidi){
 	let velikost = 'izvid';
 	if (dolzina > 2500){
 		velikost = 'izvid4';
-	}else if (dolzina > 2000){
+	}else if (dolzina > 2200){
 		velikost = 'izvid3';
-	}else if (dolzina > 1500){
+	}else if (dolzina > 1700){
 		velikost = 'izvid2';
-	}else if (dolzina > 1000){
+	}else if (dolzina > 1500){
 		velikost = 'izvid1';
 	}
 	return velikost;
