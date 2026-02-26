@@ -273,6 +273,10 @@ dolzina += izvidi.length + 30 * novaLinija;
 console.log(dolzina);
 let velikost = dolzinaFunction(dolzina);
 console.log(velikost);
+ekg = ekg.replace('izvid', velikost);
+rtg = rtg.replace('izvid', velikost);
+prid = prid.replace('izvid', velikost);
+pred = pred.replace('izvid', velikost);
 izvidi = izvidi.replace('izvid', velikost);
 //..................Sklep...........................................................
 let sklep = document.getElementById("sklep").value;
@@ -331,7 +335,7 @@ switch (a) {
  
 //....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
 function opisFunction(opis, l, n){
-	opis = "<span class='izvid'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + opis + "</span>" + "</br>";	
+	opis = "<span >" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='izvid' class='besedilo'>" + opis + "</span>" + "</br>";	
 	return opis;
 }
 
