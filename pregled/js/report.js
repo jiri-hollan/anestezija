@@ -328,21 +328,15 @@ switch (a) {
  //....konec report function..............................
  
 //....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
-function opisFunction(m, l, n)
-{
-
-  m = "<span class='izvid'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";	
-return m;
-
+function opisFunction(opis, l, n){
+	opis = "<span class='izvid'>" +  l + "</span><span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + opis + "</span>" + "</br>";	
+	return opis;
 }
 
 //............................................izvidiFunction ureja besedilni opis stanja...................................
-function izvidiFunction(izvidi, novaLinija)
-{
-let m =	izvidi.length + 30 * novaLinija;
-
+function izvidiFunction(izvidi, novaLinija){
 	izvidi =  "<span class='izvid'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 	
-return izvidi;
+	return izvidi;
 
 }
 
