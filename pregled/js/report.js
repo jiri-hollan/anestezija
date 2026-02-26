@@ -271,7 +271,8 @@ const novaLinija = (izvidi.match(new RegExp("<br>", "g")) || []).length;
 izvidi = izvidiFunction(izvidi);
 dolzina += izvidi.length + 30 * novaLinija;
 console.log(dolzina);
-dolzinaFunction(dolzina);
+let velikost = dolzinaFunction(dolzina);
+console.log(velikost);
 //..................Sklep...........................................................
 let sklep = document.getElementById("sklep").value;
 sklep = sklepFunction(sklep, "Sklep:" );
@@ -352,7 +353,8 @@ function izvidiFunction(izvidi){
 		velikost = 'izvid2';
 	}else if (dolzina > 1000){
 		velikost = 'izvid1';
-	}		
+	}
+	return velikost;
  }
 //.......................................SklepFunction..............................
 function sklepFunction(m,n)
