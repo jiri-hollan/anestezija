@@ -273,6 +273,7 @@ dolzina += izvidi.length + 30 * novaLinija;
 console.log(dolzina);
 let velikost = dolzinaFunction(dolzina);
 console.log(velikost);
+izvidi = izvidi.replace('izvid', velikost);
 //..................Sklep...........................................................
 let sklep = document.getElementById("sklep").value;
 sklep = sklepFunction(sklep, "Sklep:" );
