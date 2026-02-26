@@ -243,29 +243,34 @@ let alergija = document.getElementById("alergija").value;
 document.getElementById("alergijaR").innerHTML= alergija;
 
 //....................EKG....................................................................
-
+let dolzina = 0;
 let ekg = document.getElementById("ekg").value;
 ekg = opisFunction(ekg, "<hr>", "EKG:");
+dolzina = ekg.length;
+//console.log(dolzina);
 //alert(ekg);
 //...........................RTG................................................................
 let rtg = document.getElementById("rtg").value;
 rtg = opisFunction(rtg, "<hr>", "RTG:");
-
+dolzina += rtg.length;
+//console.log(dolzina);
 //..............pridružene bolezni........................................................
 let prid = document.getElementById("dgPridruzene").value;
 prid = opisFunction(prid, "<hr>", "Pridružene bolezni:" );
-
+dolzina += prid.length;
+//console.log(dolzina);
 //................................... predhodna terapija.........................................
 let pred = document.getElementById("terPredhodna").value;
 pred = opisFunction(pred, "<hr>", "Predhodna terapija:" );
-
+dolzina += pred.length;
 //..................Izvidi in opombe...........................................................
 let izvidi = document.getElementById("izvidiInOpombe").value;
 izvidi = izvidi.replace(/^\s*$(?:\r\n?|\n)/gm, "");
 izvidi = izvidi.replace(/\n/g, "<br>&emsp;&emsp;");
 const novaLinija = (izvidi.match(new RegExp("<br>", "g")) || []).length;
 izvidi = izvidiFunction(izvidi, novaLinija );
-
+dolzina += izvidi.length + 30 * novaLinija;
+console.log(dolzina);
 //..................Sklep...........................................................
 let sklep = document.getElementById("sklep").value;
 sklep = sklepFunction(sklep, "Sklep:" );
