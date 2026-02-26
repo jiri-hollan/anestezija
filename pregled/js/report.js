@@ -268,7 +268,7 @@ let izvidi = document.getElementById("izvidiInOpombe").value;
 izvidi = izvidi.replace(/^\s*$(?:\r\n?|\n)/gm, "");
 izvidi = izvidi.replace(/\n/g, "<br>&emsp;&emsp;");
 const novaLinija = (izvidi.match(new RegExp("<br>", "g")) || []).length;
-izvidi = izvidiFunction(izvidi, novaLinija );
+izvidi = izvidiFunction(izvidi);
 dolzina += izvidi.length + 30 * novaLinija;
 console.log(dolzina);
 dolzinaFunction(dolzina);
@@ -334,7 +334,7 @@ function opisFunction(opis, l, n){
 }
 
 //............................................izvidiFunction ureja besedilni opis stanja...................................
-function izvidiFunction(izvidi, novaLinija){
+function izvidiFunction(izvidi){
 	izvidi =  "<span class='izvid'  class='besedilo'><hr> &emsp;"  + izvidi + "<br><br></span>"; 	
 	return izvidi;
 
