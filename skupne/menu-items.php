@@ -1,12 +1,22 @@
 <?php
+     $icNavodila = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="2.5" width="12" height="15" rx="1.5"></rect><line x1="7" y1="7" x2="13" y2="7"></line><line x1="7" y1="10.3" x2="13" y2="10.3"></line><line x1="7" y1="13.6" x2="10.5" y2="13.6"></line></svg>';
+     $icPregled = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10c2.5-4 5.5-6 8-6s5.5 2 8 6c-2.5 4-5.5 6-8 6s-5.5-2-8-6Z"></path><circle cx="10" cy="10" r="2.2"></circle></svg>';
+     $icGlobus = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="7.5"></circle><ellipse cx="10" cy="10" rx="3.2" ry="7.5"></ellipse><line x1="2.5" y1="10" x2="17.5" y2="10"></line></svg>';
+     $icKoledar = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="4" width="14" height="13" rx="1.5"></rect><line x1="3" y1="7.5" x2="17" y2="7.5"></line><circle cx="7" cy="11.5" r="1"></circle></svg>';
+     $icDelo = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="2.5" width="12" height="15" rx="1.5"></rect><path d="M7 7.2l1.3 1.3 2.4-2.5"></path><line x1="7" y1="12.3" x2="13" y2="12.3"></line></svg>';
+     $icStatistika = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="5" y1="15" x2="5" y2="10"></line><line x1="10" y1="15" x2="10" y2="6"></line><line x1="15" y1="15" x2="15" y2="12"></line></svg>';
+     $icServis = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4l3 3-8 8-3.6.6.6-3.6 8-8Z"></path></svg>';
+     $icNastavitve = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="3" y1="6" x2="17" y2="6"></line><circle cx="12" cy="6" r="1.8"></circle><line x1="3" y1="10.5" x2="17" y2="10.5"></line><circle cx="7" cy="10.5" r="1.8"></circle><line x1="3" y1="15" x2="17" y2="15"></line><circle cx="14" cy="15" r="1.8"></circle></svg>';
+     $icAdmin = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="10" cy="5" rx="6.5" ry="2.3"></ellipse><path d="M3.5 5v10c0 1.27 2.9 2.3 6.5 2.3s6.5-1.03 6.5-2.3V5"></path><path d="M3.5 10c0 1.27 2.9 2.3 6.5 2.3s6.5-1.03 6.5-2.3"></path></svg>';
+
      $a0= '
-      <li><a href="../navodila/menuNavodila.php">Navodila</a> </li>
-      <li><span onclick=sbFunction("spomin")>Pregled</span>  </li>
-	  <li><a href="../frontend/interevropa.php">INTEREVROPA</a> </li>'; 
-	 $a1= '<li><a href="../oddelek/razpisMeseci.php?pogled=dez">Dežurstva</a> </li> 
-	       <li><a href="deloMenu.php">delo</a> </li>';
-	 $a2= '<li><a href="../statistika/statistikaMenu.php">statistika</a> </li>'; 
-	 $a3= '<li><a href="../servis/menuUpload.php">servis</a> </li>
-	       <li><a href="../servis/nastavitveMenu.php">nastavitve</a> </li>';
-	 $a4= '<li><a href="../admin/databazeMenu.php">database P</a> </li>';	 
+      <li><a href="../navodila/menuNavodila.php"><span class="ic">'.$icNavodila.'</span><span class="txt"><strong>Navodila</strong><small>Klinična navodila in doziranje</small></span></a></li>
+      <li><span class="chip-btn" tabindex="0" role="button" onclick=sbFunction("spomin")><span class="ic">'.$icPregled.'</span><span class="txt"><strong>Pregled</strong><small>Pregled in evidenca bolnikov</small></span></span></li>
+	  <li><a href="../frontend/interevropa.php"><span class="ic">'.$icGlobus.'</span><span class="txt"><strong>InterEvropa</strong><small>Podatki za tuje in EU paciente</small></span></a></li>';
+	 $a1= '<li><a href="../oddelek/razpisMeseci.php?pogled=dez"><span class="ic">'.$icKoledar.'</span><span class="txt"><strong>Dežurstva</strong><small>Razpored po mesecih</small></span></a></li>
+	       <li><a href="deloMenu.php"><span class="ic">'.$icDelo.'</span><span class="txt"><strong>Delo</strong><small>Evidenca opravljenega dela</small></span></a></li>';
+	 $a2= '<li><a href="../statistika/statistikaMenu.php"><span class="ic">'.$icStatistika.'</span><span class="txt"><strong>Statistika</strong><small>Poročila in analiza dela</small></span></a></li>';
+	 $a3= '<li><a href="../servis/menuUpload.php"><span class="ic">'.$icServis.'</span><span class="txt"><strong>Servis</strong><small>Nalaganje in vzdrževanje gradiv</small></span></a></li>
+	       <li><a href="../servis/nastavitveMenu.php"><span class="ic">'.$icNastavitve.'</span><span class="txt"><strong>Nastavitve</strong><small>Sistemske nastavitve modula</small></span></a></li>';
+	 $a4= '<li><a href="../admin/databazeMenu.php"><span class="ic">'.$icAdmin.'</span><span class="txt"><strong>Administracija</strong><small>Uporabniki, kriteriji, pregledovalci</small></span></a></li>';
 ?>
