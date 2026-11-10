@@ -11,7 +11,7 @@
 
      $a0= '
       <li><a href="../navodila/menuNavodila.php"><span class="ic">'.$icNavodila.'</span><span class="txt"><strong>Navodila</strong><small>Klinična navodila in doziranje</small></span></a></li>
-      <li><span class="chip-btn" tabindex="0" role="button" onclick=sbFunction("spomin")><span class="ic">'.$icPregled.'</span><span class="txt"><strong>Pregled</strong><small>Pregled in evidenca bolnikov</small></span></span></li>
+      <li><span class="chip-btn" tabindex="0" role="button" onclick=sbFunction("spomin")><span class="ic">'.$icPregled.'</span><span class="txt"><strong>Pregled</strong><small>Anesteziološki pregled in statistika</small></span></span></li>
 	  <li><a href="../frontend/interevropa.php"><span class="ic">'.$icGlobus.'</span><span class="txt"><strong>InterEvropa</strong><small>Razpored in dopusti</small></span></a></li>';
 	 $a1= '<li><a href="../oddelek/razpisMeseci.php?pogled=dez"><span class="ic">'.$icKoledar.'</span><span class="txt"><strong>Dežurstva</strong><small>Razpored po mesecih</small></span></a></li>
 	       <li><a href="deloMenu.php"><span class="ic">'.$icDelo.'</span><span class="txt"><strong>Delo</strong><small>Evidenca opravljenega dela</small></span></a></li>';
