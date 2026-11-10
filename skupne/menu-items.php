@@ -11,12 +11,15 @@
 
      $a0= '
       <li><a href="../navodila/menuNavodila.php"><span class="ic">'.$icNavodila.'</span><span class="txt"><strong>Navodila</strong><small>Klinična navodila in doziranje</small></span></a></li>
-      <li><span class="chip-btn" tabindex="0" role="button" onclick=sbFunction("spomin")><span class="ic">'.$icPregled.'</span><span class="txt"><strong>Pregled</strong><small>Anesteziološki pregled in statistika</small></span></span></li>
+      <li><a href="../frontend/pregledMenu.php"><span class="ic">'.$icPregled.'</span><span class="txt"><strong>Pregled</strong><small>Pregled bolnika in statistika</small></span></a></li>
 	  <li><a href="../frontend/interevropa.php"><span class="ic">'.$icGlobus.'</span><span class="txt"><strong>InterEvropa</strong><small>Razpored in dopusti</small></span></a></li>';
 	 $a1= '<li><a href="../oddelek/razpisMeseci.php?pogled=dez"><span class="ic">'.$icKoledar.'</span><span class="txt"><strong>Dežurstva</strong><small>Razpored po mesecih</small></span></a></li>
 	       <li><a href="deloMenu.php"><span class="ic">'.$icDelo.'</span><span class="txt"><strong>Delo</strong><small>Evidenca opravljenega dela</small></span></a></li>';
-	 $a2= '<li><a href="../statistika/statistikaMenu.php"><span class="ic">'.$icStatistika.'</span><span class="txt"><strong>Statistika</strong><small>Poročila in analiza dela</small></span></a></li>';
+	 // Statistika ni več na začetni strani — prikaže se v podmeniju Pregled (frontend/pregledMenu.php).
+	 $a2= '';
+	 $aStatistika= '<li><a href="../statistika/statistikaMenu.php"><span class="ic">'.$icStatistika.'</span><span class="txt"><strong>Statistika</strong><small>Poročila in analiza dela</small></span></a></li>';
 	 $a3= '<li><a href="../servis/menuUpload.php"><span class="ic">'.$icServis.'</span><span class="txt"><strong>Servis</strong><small>Nalaganje in vzdrževanje gradiv</small></span></a></li>
 	       <li><a href="../servis/nastavitveMenu.php"><span class="ic">'.$icNastavitve.'</span><span class="txt"><strong>Nastavitve</strong><small>Sistemske nastavitve modula</small></span></a></li>';
 	 $a4= '<li><a href="../admin/databazeMenu.php"><span class="ic">'.$icAdmin.'</span><span class="txt"><strong>Administracija</strong><small>Uporabniki, kriteriji, pregledovalci</small></span></a></li>';
+	 $aPregledBolnika= '<li><span class="chip-btn" tabindex="0" role="button" onclick=sbFunction("spomin")><span class="ic">'.$icPregled.'</span><span class="txt"><strong>Pregled bolnika</strong><small>Anesteziološki pregled</small></span></span></li>';
 ?>
